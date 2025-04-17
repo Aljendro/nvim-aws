@@ -3,1113 +3,1113 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DATAZONE service functions
+--- AWS datazone service functions
 local M = {}
 
 --- AWS datazone accept-predictions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_predictions(input)
-	return common.execute_aws_command_with_input({ "datazone", "accept-predictions" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "accept-predictions" }, input)
 end
 
 --- AWS datazone accept-subscription-request operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_subscription_request(input)
-	return common.execute_aws_command_with_input({ "datazone", "accept-subscription-request" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "accept-subscription-request" }, input)
 end
 
 --- AWS datazone add-entity-owner operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_entity_owner(input)
-	return common.execute_aws_command_with_input({ "datazone", "add-entity-owner" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "add-entity-owner" }, input)
 end
 
 --- AWS datazone add-policy-grant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_policy_grant(input)
-	return common.execute_aws_command_with_input({ "datazone", "add-policy-grant" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "add-policy-grant" }, input)
 end
 
 --- AWS datazone associate-environment-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_environment_role(input)
-	return common.execute_aws_command_with_input({ "datazone", "associate-environment-role" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "associate-environment-role" }, input)
 end
 
 --- AWS datazone cancel-metadata-generation-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_metadata_generation_run(input)
-	return common.execute_aws_command_with_input({ "datazone", "cancel-metadata-generation-run" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "cancel-metadata-generation-run" }, input)
 end
 
 --- AWS datazone cancel-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_subscription(input)
-	return common.execute_aws_command_with_input({ "datazone", "cancel-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "cancel-subscription" }, input)
 end
 
 --- AWS datazone create-asset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_asset(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-asset" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-asset" }, input)
 end
 
 --- AWS datazone create-asset-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_asset_filter(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-asset-filter" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-asset-filter" }, input)
 end
 
 --- AWS datazone create-asset-revision operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_asset_revision(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-asset-revision" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-asset-revision" }, input)
 end
 
 --- AWS datazone create-asset-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_asset_type(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-asset-type" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-asset-type" }, input)
 end
 
 --- AWS datazone create-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_connection(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-connection" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-connection" }, input)
 end
 
 --- AWS datazone create-data-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_product(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-data-product" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-data-product" }, input)
 end
 
 --- AWS datazone create-data-product-revision operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_product_revision(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-data-product-revision" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-data-product-revision" }, input)
 end
 
 --- AWS datazone create-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_source(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-data-source" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-data-source" }, input)
 end
 
 --- AWS datazone create-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_domain(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-domain" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-domain" }, input)
 end
 
 --- AWS datazone create-domain-unit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_domain_unit(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-domain-unit" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-domain-unit" }, input)
 end
 
 --- AWS datazone create-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_environment(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-environment" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-environment" }, input)
 end
 
 --- AWS datazone create-environment-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_environment_action(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-environment-action" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-environment-action" }, input)
 end
 
 --- AWS datazone create-environment-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_environment_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-environment-profile" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-environment-profile" }, input)
 end
 
 --- AWS datazone create-form-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_form_type(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-form-type" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-form-type" }, input)
 end
 
 --- AWS datazone create-glossary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_glossary(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-glossary" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-glossary" }, input)
 end
 
 --- AWS datazone create-glossary-term operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_glossary_term(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-glossary-term" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-glossary-term" }, input)
 end
 
 --- AWS datazone create-group-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_group_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-group-profile" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-group-profile" }, input)
 end
 
 --- AWS datazone create-listing-change-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_listing_change_set(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-listing-change-set" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-listing-change-set" }, input)
 end
 
 --- AWS datazone create-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_project(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-project" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-project" }, input)
 end
 
 --- AWS datazone create-project-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_project_membership(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-project-membership" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-project-membership" }, input)
 end
 
 --- AWS datazone create-project-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_project_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-project-profile" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-project-profile" }, input)
 end
 
 --- AWS datazone create-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_rule(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-rule" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-rule" }, input)
 end
 
 --- AWS datazone create-subscription-grant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_subscription_grant(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-subscription-grant" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-subscription-grant" }, input)
 end
 
 --- AWS datazone create-subscription-request operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_subscription_request(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-subscription-request" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-subscription-request" }, input)
 end
 
 --- AWS datazone create-subscription-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_subscription_target(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-subscription-target" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-subscription-target" }, input)
 end
 
 --- AWS datazone create-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "create-user-profile" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "create-user-profile" }, input)
 end
 
 --- AWS datazone delete-asset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_asset(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-asset" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-asset" }, input)
 end
 
 --- AWS datazone delete-asset-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_asset_filter(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-asset-filter" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-asset-filter" }, input)
 end
 
 --- AWS datazone delete-asset-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_asset_type(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-asset-type" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-asset-type" }, input)
 end
 
 --- AWS datazone delete-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connection(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-connection" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-connection" }, input)
 end
 
 --- AWS datazone delete-data-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_product(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-data-product" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-data-product" }, input)
 end
 
 --- AWS datazone delete-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_source(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-data-source" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-data-source" }, input)
 end
 
 --- AWS datazone delete-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_domain(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-domain" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-domain" }, input)
 end
 
 --- AWS datazone delete-domain-unit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_domain_unit(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-domain-unit" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-domain-unit" }, input)
 end
 
 --- AWS datazone delete-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_environment(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-environment" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-environment" }, input)
 end
 
 --- AWS datazone delete-environment-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_environment_action(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-environment-action" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-environment-action" }, input)
 end
 
 --- AWS datazone delete-environment-blueprint-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_environment_blueprint_configuration(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-environment-blueprint-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-environment-blueprint-configuration" }, input)
 end
 
 --- AWS datazone delete-environment-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_environment_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-environment-profile" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-environment-profile" }, input)
 end
 
 --- AWS datazone delete-form-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_form_type(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-form-type" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-form-type" }, input)
 end
 
 --- AWS datazone delete-glossary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_glossary(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-glossary" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-glossary" }, input)
 end
 
 --- AWS datazone delete-glossary-term operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_glossary_term(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-glossary-term" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-glossary-term" }, input)
 end
 
 --- AWS datazone delete-listing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_listing(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-listing" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-listing" }, input)
 end
 
 --- AWS datazone delete-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_project(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-project" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-project" }, input)
 end
 
 --- AWS datazone delete-project-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_project_membership(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-project-membership" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-project-membership" }, input)
 end
 
 --- AWS datazone delete-project-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_project_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-project-profile" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-project-profile" }, input)
 end
 
 --- AWS datazone delete-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_rule(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-rule" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-rule" }, input)
 end
 
 --- AWS datazone delete-subscription-grant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_subscription_grant(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-subscription-grant" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-subscription-grant" }, input)
 end
 
 --- AWS datazone delete-subscription-request operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_subscription_request(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-subscription-request" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-subscription-request" }, input)
 end
 
 --- AWS datazone delete-subscription-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_subscription_target(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-subscription-target" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-subscription-target" }, input)
 end
 
 --- AWS datazone delete-time-series-data-points operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_time_series_data_points(input)
-	return common.execute_aws_command_with_input({ "datazone", "delete-time-series-data-points" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "delete-time-series-data-points" }, input)
 end
 
 --- AWS datazone disassociate-environment-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_environment_role(input)
-	return common.execute_aws_command_with_input({ "datazone", "disassociate-environment-role" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "disassociate-environment-role" }, input)
 end
 
 --- AWS datazone get-asset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_asset(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-asset" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-asset" }, input)
 end
 
 --- AWS datazone get-asset-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_asset_filter(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-asset-filter" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-asset-filter" }, input)
 end
 
 --- AWS datazone get-asset-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_asset_type(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-asset-type" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-asset-type" }, input)
 end
 
 --- AWS datazone get-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_connection(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-connection" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-connection" }, input)
 end
 
 --- AWS datazone get-data-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_product(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-data-product" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-data-product" }, input)
 end
 
 --- AWS datazone get-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_source(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-data-source" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-data-source" }, input)
 end
 
 --- AWS datazone get-data-source-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_source_run(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-data-source-run" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-data-source-run" }, input)
 end
 
 --- AWS datazone get-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_domain(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-domain" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-domain" }, input)
 end
 
 --- AWS datazone get-domain-unit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_domain_unit(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-domain-unit" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-domain-unit" }, input)
 end
 
 --- AWS datazone get-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_environment(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-environment" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-environment" }, input)
 end
 
 --- AWS datazone get-environment-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_environment_action(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-environment-action" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-environment-action" }, input)
 end
 
 --- AWS datazone get-environment-blueprint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_environment_blueprint(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-environment-blueprint" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-environment-blueprint" }, input)
 end
 
 --- AWS datazone get-environment-blueprint-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_environment_blueprint_configuration(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-environment-blueprint-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-environment-blueprint-configuration" }, input)
 end
 
 --- AWS datazone get-environment-credentials operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_environment_credentials(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-environment-credentials" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-environment-credentials" }, input)
 end
 
 --- AWS datazone get-environment-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_environment_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-environment-profile" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-environment-profile" }, input)
 end
 
 --- AWS datazone get-form-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_form_type(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-form-type" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-form-type" }, input)
 end
 
 --- AWS datazone get-glossary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_glossary(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-glossary" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-glossary" }, input)
 end
 
 --- AWS datazone get-glossary-term operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_glossary_term(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-glossary-term" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-glossary-term" }, input)
 end
 
 --- AWS datazone get-group-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_group_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-group-profile" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-group-profile" }, input)
 end
 
 --- AWS datazone get-iam-portal-login-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_iam_portal_login_url(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-iam-portal-login-url" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-iam-portal-login-url" }, input)
 end
 
 --- AWS datazone get-job-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_job_run(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-job-run" }, input)
-end
-
---- AWS datazone get-lineage-node operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_lineage_node(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-lineage-node" }, input)
-end
-
---- AWS datazone get-listing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_listing(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-listing" }, input)
-end
-
---- AWS datazone get-metadata-generation-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_metadata_generation_run(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-metadata-generation-run" }, input)
-end
-
---- AWS datazone get-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_project(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-project" }, input)
-end
-
---- AWS datazone get-project-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_project_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-project-profile" }, input)
-end
-
---- AWS datazone get-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_rule(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-rule" }, input)
-end
-
---- AWS datazone get-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_subscription(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-subscription" }, input)
-end
-
---- AWS datazone get-subscription-grant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_subscription_grant(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-subscription-grant" }, input)
-end
-
---- AWS datazone get-subscription-request-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_subscription_request_details(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-subscription-request-details" }, input)
-end
-
---- AWS datazone get-subscription-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_subscription_target(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-subscription-target" }, input)
-end
-
---- AWS datazone get-time-series-data-point operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_time_series_data_point(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-time-series-data-point" }, input)
-end
-
---- AWS datazone get-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_user_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "get-user-profile" }, input)
-end
-
---- AWS datazone list-asset-filters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_asset_filters(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-asset-filters" }, input)
-end
-
---- AWS datazone list-asset-revisions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_asset_revisions(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-asset-revisions" }, input)
-end
-
---- AWS datazone list-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_connections(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-connections" }, input)
-end
-
---- AWS datazone list-data-product-revisions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_data_product_revisions(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-data-product-revisions" }, input)
-end
-
---- AWS datazone list-data-source-run-activities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_data_source_run_activities(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-data-source-run-activities" }, input)
-end
-
---- AWS datazone list-data-source-runs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_data_source_runs(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-data-source-runs" }, input)
-end
-
---- AWS datazone list-data-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_data_sources(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-data-sources" }, input)
-end
-
---- AWS datazone list-domain-units-for-parent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_domain_units_for_parent(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-domain-units-for-parent" }, input)
-end
-
---- AWS datazone list-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_domains(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-domains" }, input)
-end
-
---- AWS datazone list-entity-owners operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_entity_owners(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-entity-owners" }, input)
-end
-
---- AWS datazone list-environment-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_environment_actions(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-environment-actions" }, input)
-end
-
---- AWS datazone list-environment-blueprint-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_environment_blueprint_configurations(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-environment-blueprint-configurations" }, input)
-end
-
---- AWS datazone list-environment-blueprints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_environment_blueprints(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-environment-blueprints" }, input)
-end
-
---- AWS datazone list-environment-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_environment_profiles(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-environment-profiles" }, input)
-end
-
---- AWS datazone list-environments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_environments(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-environments" }, input)
-end
-
---- AWS datazone list-job-runs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_job_runs(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-job-runs" }, input)
-end
-
---- AWS datazone list-lineage-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_lineage_events(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-lineage-events" }, input)
-end
-
---- AWS datazone list-lineage-node-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_lineage_node_history(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-lineage-node-history" }, input)
-end
-
---- AWS datazone list-metadata-generation-runs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_metadata_generation_runs(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-metadata-generation-runs" }, input)
-end
-
---- AWS datazone list-notifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_notifications(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-notifications" }, input)
-end
-
---- AWS datazone list-policy-grants operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_policy_grants(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-policy-grants" }, input)
-end
-
---- AWS datazone list-project-memberships operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_project_memberships(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-project-memberships" }, input)
-end
-
---- AWS datazone list-project-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_project_profiles(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-project-profiles" }, input)
-end
-
---- AWS datazone list-projects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_projects(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-projects" }, input)
-end
-
---- AWS datazone list-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_rules(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-rules" }, input)
-end
-
---- AWS datazone list-subscription-grants operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_subscription_grants(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-subscription-grants" }, input)
-end
-
---- AWS datazone list-subscription-requests operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_subscription_requests(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-subscription-requests" }, input)
-end
-
---- AWS datazone list-subscription-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_subscription_targets(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-subscription-targets" }, input)
-end
-
---- AWS datazone list-subscriptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_subscriptions(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-subscriptions" }, input)
-end
-
---- AWS datazone list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-tags-for-resource" }, input)
-end
-
---- AWS datazone list-time-series-data-points operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_time_series_data_points(input)
-	return common.execute_aws_command_with_input({ "datazone", "list-time-series-data-points" }, input)
-end
-
---- AWS datazone post-lineage-event operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.post_lineage_event(input)
-	return common.execute_aws_command_with_input({ "datazone", "post-lineage-event" }, input)
-end
-
---- AWS datazone post-time-series-data-points operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.post_time_series_data_points(input)
-	return common.execute_aws_command_with_input({ "datazone", "post-time-series-data-points" }, input)
-end
-
---- AWS datazone put-environment-blueprint-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_environment_blueprint_configuration(input)
-	return common.execute_aws_command_with_input({ "datazone", "put-environment-blueprint-configuration" }, input)
-end
-
---- AWS datazone reject-predictions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.reject_predictions(input)
-	return common.execute_aws_command_with_input({ "datazone", "reject-predictions" }, input)
-end
-
---- AWS datazone reject-subscription-request operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.reject_subscription_request(input)
-	return common.execute_aws_command_with_input({ "datazone", "reject-subscription-request" }, input)
-end
-
---- AWS datazone remove-entity-owner operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.remove_entity_owner(input)
-	return common.execute_aws_command_with_input({ "datazone", "remove-entity-owner" }, input)
-end
-
---- AWS datazone remove-policy-grant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.remove_policy_grant(input)
-	return common.execute_aws_command_with_input({ "datazone", "remove-policy-grant" }, input)
-end
-
---- AWS datazone revoke-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.revoke_subscription(input)
-	return common.execute_aws_command_with_input({ "datazone", "revoke-subscription" }, input)
-end
-
---- AWS datazone search operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.search(input)
-	return common.execute_aws_command_with_input({ "datazone", "search" }, input)
-end
-
---- AWS datazone search-group-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.search_group_profiles(input)
-	return common.execute_aws_command_with_input({ "datazone", "search-group-profiles" }, input)
-end
-
---- AWS datazone search-listings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.search_listings(input)
-	return common.execute_aws_command_with_input({ "datazone", "search-listings" }, input)
-end
-
---- AWS datazone search-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.search_types(input)
-	return common.execute_aws_command_with_input({ "datazone", "search-types" }, input)
-end
-
---- AWS datazone search-user-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.search_user_profiles(input)
-	return common.execute_aws_command_with_input({ "datazone", "search-user-profiles" }, input)
-end
-
---- AWS datazone start-data-source-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_data_source_run(input)
-	return common.execute_aws_command_with_input({ "datazone", "start-data-source-run" }, input)
-end
-
---- AWS datazone start-metadata-generation-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_metadata_generation_run(input)
-	return common.execute_aws_command_with_input({ "datazone", "start-metadata-generation-run" }, input)
-end
-
---- AWS datazone tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "datazone", "tag-resource" }, input)
-end
-
---- AWS datazone untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "datazone", "untag-resource" }, input)
-end
-
---- AWS datazone update-asset-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_asset_filter(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-asset-filter" }, input)
-end
-
---- AWS datazone update-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_connection(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-connection" }, input)
-end
-
---- AWS datazone update-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_data_source(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-data-source" }, input)
-end
-
---- AWS datazone update-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_domain(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-domain" }, input)
-end
-
---- AWS datazone update-domain-unit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_domain_unit(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-domain-unit" }, input)
-end
-
---- AWS datazone update-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_environment(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-environment" }, input)
-end
-
---- AWS datazone update-environment-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_environment_action(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-environment-action" }, input)
-end
-
---- AWS datazone update-environment-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_environment_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-environment-profile" }, input)
-end
-
---- AWS datazone update-glossary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_glossary(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-glossary" }, input)
-end
-
---- AWS datazone update-glossary-term operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_glossary_term(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-glossary-term" }, input)
-end
-
---- AWS datazone update-group-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_group_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-group-profile" }, input)
-end
-
---- AWS datazone update-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_project(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-project" }, input)
-end
-
---- AWS datazone update-project-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_project_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-project-profile" }, input)
-end
-
---- AWS datazone update-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_rule(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-rule" }, input)
-end
-
---- AWS datazone update-subscription-grant-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_subscription_grant_status(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-subscription-grant-status" }, input)
-end
-
---- AWS datazone update-subscription-request operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_subscription_request(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-subscription-request" }, input)
-end
-
---- AWS datazone update-subscription-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_subscription_target(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-subscription-target" }, input)
-end
-
---- AWS datazone update-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_user_profile(input)
-	return common.execute_aws_command_with_input({ "datazone", "update-user-profile" }, input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-job-run" }, input)
 end
 
 --- AWS datazone get-lineage-event operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_lineage_event(input)
-	return common.execute_aws_command_with_raw_input({ "datazone", "get-lineage-event" }, input)
+	return common.execute_aws_command({ "datazone", "get-lineage-event" }, input)
+end
+
+--- AWS datazone get-lineage-node operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_lineage_node(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-lineage-node" }, input)
+end
+
+--- AWS datazone get-listing operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_listing(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-listing" }, input)
+end
+
+--- AWS datazone get-metadata-generation-run operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_metadata_generation_run(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-metadata-generation-run" }, input)
+end
+
+--- AWS datazone get-project operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_project(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-project" }, input)
+end
+
+--- AWS datazone get-project-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_project_profile(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-project-profile" }, input)
+end
+
+--- AWS datazone get-rule operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_rule(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-rule" }, input)
+end
+
+--- AWS datazone get-subscription operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_subscription(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-subscription" }, input)
+end
+
+--- AWS datazone get-subscription-grant operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_subscription_grant(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-subscription-grant" }, input)
+end
+
+--- AWS datazone get-subscription-request-details operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_subscription_request_details(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-subscription-request-details" }, input)
+end
+
+--- AWS datazone get-subscription-target operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_subscription_target(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-subscription-target" }, input)
+end
+
+--- AWS datazone get-time-series-data-point operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_time_series_data_point(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-time-series-data-point" }, input)
+end
+
+--- AWS datazone get-user-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_user_profile(input)
+	return common.execute_aws_command_skeleton({ "datazone", "get-user-profile" }, input)
+end
+
+--- AWS datazone list-asset-filters operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_asset_filters(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-asset-filters" }, input)
+end
+
+--- AWS datazone list-asset-revisions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_asset_revisions(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-asset-revisions" }, input)
+end
+
+--- AWS datazone list-connections operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_connections(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-connections" }, input)
+end
+
+--- AWS datazone list-data-product-revisions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_data_product_revisions(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-data-product-revisions" }, input)
+end
+
+--- AWS datazone list-data-source-run-activities operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_data_source_run_activities(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-data-source-run-activities" }, input)
+end
+
+--- AWS datazone list-data-source-runs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_data_source_runs(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-data-source-runs" }, input)
+end
+
+--- AWS datazone list-data-sources operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_data_sources(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-data-sources" }, input)
+end
+
+--- AWS datazone list-domain-units-for-parent operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_domain_units_for_parent(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-domain-units-for-parent" }, input)
+end
+
+--- AWS datazone list-domains operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_domains(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-domains" }, input)
+end
+
+--- AWS datazone list-entity-owners operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_entity_owners(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-entity-owners" }, input)
+end
+
+--- AWS datazone list-environment-actions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_environment_actions(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-environment-actions" }, input)
+end
+
+--- AWS datazone list-environment-blueprint-configurations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_environment_blueprint_configurations(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-environment-blueprint-configurations" }, input)
+end
+
+--- AWS datazone list-environment-blueprints operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_environment_blueprints(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-environment-blueprints" }, input)
+end
+
+--- AWS datazone list-environment-profiles operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_environment_profiles(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-environment-profiles" }, input)
+end
+
+--- AWS datazone list-environments operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_environments(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-environments" }, input)
+end
+
+--- AWS datazone list-job-runs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_job_runs(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-job-runs" }, input)
+end
+
+--- AWS datazone list-lineage-events operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_lineage_events(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-lineage-events" }, input)
+end
+
+--- AWS datazone list-lineage-node-history operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_lineage_node_history(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-lineage-node-history" }, input)
+end
+
+--- AWS datazone list-metadata-generation-runs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_metadata_generation_runs(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-metadata-generation-runs" }, input)
+end
+
+--- AWS datazone list-notifications operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_notifications(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-notifications" }, input)
+end
+
+--- AWS datazone list-policy-grants operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_policy_grants(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-policy-grants" }, input)
+end
+
+--- AWS datazone list-project-memberships operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_project_memberships(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-project-memberships" }, input)
+end
+
+--- AWS datazone list-project-profiles operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_project_profiles(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-project-profiles" }, input)
+end
+
+--- AWS datazone list-projects operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_projects(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-projects" }, input)
+end
+
+--- AWS datazone list-rules operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_rules(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-rules" }, input)
+end
+
+--- AWS datazone list-subscription-grants operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_subscription_grants(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-subscription-grants" }, input)
+end
+
+--- AWS datazone list-subscription-requests operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_subscription_requests(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-subscription-requests" }, input)
+end
+
+--- AWS datazone list-subscription-targets operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_subscription_targets(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-subscription-targets" }, input)
+end
+
+--- AWS datazone list-subscriptions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_subscriptions(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-subscriptions" }, input)
+end
+
+--- AWS datazone list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-tags-for-resource" }, input)
+end
+
+--- AWS datazone list-time-series-data-points operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_time_series_data_points(input)
+	return common.execute_aws_command_skeleton({ "datazone", "list-time-series-data-points" }, input)
+end
+
+--- AWS datazone post-lineage-event operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.post_lineage_event(input)
+	return common.execute_aws_command_skeleton({ "datazone", "post-lineage-event" }, input)
+end
+
+--- AWS datazone post-time-series-data-points operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.post_time_series_data_points(input)
+	return common.execute_aws_command_skeleton({ "datazone", "post-time-series-data-points" }, input)
+end
+
+--- AWS datazone put-environment-blueprint-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_environment_blueprint_configuration(input)
+	return common.execute_aws_command_skeleton({ "datazone", "put-environment-blueprint-configuration" }, input)
+end
+
+--- AWS datazone reject-predictions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.reject_predictions(input)
+	return common.execute_aws_command_skeleton({ "datazone", "reject-predictions" }, input)
+end
+
+--- AWS datazone reject-subscription-request operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.reject_subscription_request(input)
+	return common.execute_aws_command_skeleton({ "datazone", "reject-subscription-request" }, input)
+end
+
+--- AWS datazone remove-entity-owner operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.remove_entity_owner(input)
+	return common.execute_aws_command_skeleton({ "datazone", "remove-entity-owner" }, input)
+end
+
+--- AWS datazone remove-policy-grant operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.remove_policy_grant(input)
+	return common.execute_aws_command_skeleton({ "datazone", "remove-policy-grant" }, input)
+end
+
+--- AWS datazone revoke-subscription operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.revoke_subscription(input)
+	return common.execute_aws_command_skeleton({ "datazone", "revoke-subscription" }, input)
+end
+
+--- AWS datazone search operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.search(input)
+	return common.execute_aws_command_skeleton({ "datazone", "search" }, input)
+end
+
+--- AWS datazone search-group-profiles operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.search_group_profiles(input)
+	return common.execute_aws_command_skeleton({ "datazone", "search-group-profiles" }, input)
+end
+
+--- AWS datazone search-listings operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.search_listings(input)
+	return common.execute_aws_command_skeleton({ "datazone", "search-listings" }, input)
+end
+
+--- AWS datazone search-types operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.search_types(input)
+	return common.execute_aws_command_skeleton({ "datazone", "search-types" }, input)
+end
+
+--- AWS datazone search-user-profiles operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.search_user_profiles(input)
+	return common.execute_aws_command_skeleton({ "datazone", "search-user-profiles" }, input)
+end
+
+--- AWS datazone start-data-source-run operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_data_source_run(input)
+	return common.execute_aws_command_skeleton({ "datazone", "start-data-source-run" }, input)
+end
+
+--- AWS datazone start-metadata-generation-run operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_metadata_generation_run(input)
+	return common.execute_aws_command_skeleton({ "datazone", "start-metadata-generation-run" }, input)
+end
+
+--- AWS datazone tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "datazone", "tag-resource" }, input)
+end
+
+--- AWS datazone untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "datazone", "untag-resource" }, input)
+end
+
+--- AWS datazone update-asset-filter operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_asset_filter(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-asset-filter" }, input)
+end
+
+--- AWS datazone update-connection operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_connection(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-connection" }, input)
+end
+
+--- AWS datazone update-data-source operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_data_source(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-data-source" }, input)
+end
+
+--- AWS datazone update-domain operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_domain(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-domain" }, input)
+end
+
+--- AWS datazone update-domain-unit operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_domain_unit(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-domain-unit" }, input)
+end
+
+--- AWS datazone update-environment operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_environment(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-environment" }, input)
+end
+
+--- AWS datazone update-environment-action operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_environment_action(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-environment-action" }, input)
+end
+
+--- AWS datazone update-environment-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_environment_profile(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-environment-profile" }, input)
+end
+
+--- AWS datazone update-glossary operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_glossary(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-glossary" }, input)
+end
+
+--- AWS datazone update-glossary-term operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_glossary_term(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-glossary-term" }, input)
+end
+
+--- AWS datazone update-group-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_group_profile(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-group-profile" }, input)
+end
+
+--- AWS datazone update-project operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_project(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-project" }, input)
+end
+
+--- AWS datazone update-project-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_project_profile(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-project-profile" }, input)
+end
+
+--- AWS datazone update-rule operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_rule(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-rule" }, input)
+end
+
+--- AWS datazone update-subscription-grant-status operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_subscription_grant_status(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-subscription-grant-status" }, input)
+end
+
+--- AWS datazone update-subscription-request operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_subscription_request(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-subscription-request" }, input)
+end
+
+--- AWS datazone update-subscription-target operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_subscription_target(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-subscription-target" }, input)
+end
+
+--- AWS datazone update-user-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_user_profile(input)
+	return common.execute_aws_command_skeleton({ "datazone", "update-user-profile" }, input)
 end
 
 return M

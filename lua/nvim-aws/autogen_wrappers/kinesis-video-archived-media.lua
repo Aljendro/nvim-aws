@@ -3,49 +3,49 @@
 
 local common = require("nvim-aws.common")
 
---- AWS KINESIS-VIDEO-ARCHIVED-MEDIA service functions
+--- AWS kinesis-video-archived-media service functions
 local M = {}
 
+--- AWS kinesis-video-archived-media get-clip operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_clip(input)
+	return common.execute_aws_command({ "kinesis-video-archived-media", "get-clip" }, input)
+end
+
 --- AWS kinesis-video-archived-media get-dash-streaming-session-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_dash_streaming_session_url(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-dash-streaming-session-url" }, input)
+	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "get-dash-streaming-session-url" }, input)
 end
 
 --- AWS kinesis-video-archived-media get-hls-streaming-session-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_hls_streaming_session_url(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-hls-streaming-session-url" }, input)
+	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "get-hls-streaming-session-url" }, input)
 end
 
 --- AWS kinesis-video-archived-media get-images operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_images(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-archived-media", "get-images" }, input)
-end
-
---- AWS kinesis-video-archived-media list-fragments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_fragments(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-archived-media", "list-fragments" }, input)
-end
-
---- AWS kinesis-video-archived-media get-clip operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_clip(input)
-	return common.execute_aws_command_with_raw_input({ "kinesis-video-archived-media", "get-clip" }, input)
+	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "get-images" }, input)
 end
 
 --- AWS kinesis-video-archived-media get-media-for-fragment-list operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_media_for_fragment_list(input)
-	return common.execute_aws_command_with_raw_input({ "kinesis-video-archived-media", "get-media-for-fragment-list" }, input)
+	return common.execute_aws_command({ "kinesis-video-archived-media", "get-media-for-fragment-list" }, input)
+end
+
+--- AWS kinesis-video-archived-media list-fragments operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_fragments(input)
+	return common.execute_aws_command_skeleton({ "kinesis-video-archived-media", "list-fragments" }, input)
 end
 
 return M

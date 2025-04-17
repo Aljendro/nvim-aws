@@ -3,315 +3,315 @@
 
 local common = require("nvim-aws.common")
 
---- AWS APPCONFIG service functions
+--- AWS appconfig service functions
 local M = {}
 
 --- AWS appconfig create-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_application(input)
-	return common.execute_aws_command_with_input({ "appconfig", "create-application" }, input)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-application" }, input)
 end
 
 --- AWS appconfig create-configuration-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_configuration_profile(input)
-	return common.execute_aws_command_with_input({ "appconfig", "create-configuration-profile" }, input)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-configuration-profile" }, input)
 end
 
 --- AWS appconfig create-deployment-strategy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_deployment_strategy(input)
-	return common.execute_aws_command_with_input({ "appconfig", "create-deployment-strategy" }, input)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-deployment-strategy" }, input)
 end
 
 --- AWS appconfig create-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_environment(input)
-	return common.execute_aws_command_with_input({ "appconfig", "create-environment" }, input)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-environment" }, input)
 end
 
 --- AWS appconfig create-extension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_extension(input)
-	return common.execute_aws_command_with_input({ "appconfig", "create-extension" }, input)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-extension" }, input)
 end
 
 --- AWS appconfig create-extension-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_extension_association(input)
-	return common.execute_aws_command_with_input({ "appconfig", "create-extension-association" }, input)
-end
-
---- AWS appconfig delete-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_application(input)
-	return common.execute_aws_command_with_input({ "appconfig", "delete-application" }, input)
-end
-
---- AWS appconfig delete-configuration-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_configuration_profile(input)
-	return common.execute_aws_command_with_input({ "appconfig", "delete-configuration-profile" }, input)
-end
-
---- AWS appconfig delete-deployment-strategy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_deployment_strategy(input)
-	return common.execute_aws_command_with_input({ "appconfig", "delete-deployment-strategy" }, input)
-end
-
---- AWS appconfig delete-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_environment(input)
-	return common.execute_aws_command_with_input({ "appconfig", "delete-environment" }, input)
-end
-
---- AWS appconfig delete-extension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_extension(input)
-	return common.execute_aws_command_with_input({ "appconfig", "delete-extension" }, input)
-end
-
---- AWS appconfig delete-extension-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_extension_association(input)
-	return common.execute_aws_command_with_input({ "appconfig", "delete-extension-association" }, input)
-end
-
---- AWS appconfig delete-hosted-configuration-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_hosted_configuration_version(input)
-	return common.execute_aws_command_with_input({ "appconfig", "delete-hosted-configuration-version" }, input)
-end
-
---- AWS appconfig get-account-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_account_settings(input)
-	return common.execute_aws_command_with_input({ "appconfig", "get-account-settings" }, input)
-end
-
---- AWS appconfig get-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_application(input)
-	return common.execute_aws_command_with_input({ "appconfig", "get-application" }, input)
-end
-
---- AWS appconfig get-configuration-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_configuration_profile(input)
-	return common.execute_aws_command_with_input({ "appconfig", "get-configuration-profile" }, input)
-end
-
---- AWS appconfig get-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_deployment(input)
-	return common.execute_aws_command_with_input({ "appconfig", "get-deployment" }, input)
-end
-
---- AWS appconfig get-deployment-strategy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_deployment_strategy(input)
-	return common.execute_aws_command_with_input({ "appconfig", "get-deployment-strategy" }, input)
-end
-
---- AWS appconfig get-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_environment(input)
-	return common.execute_aws_command_with_input({ "appconfig", "get-environment" }, input)
-end
-
---- AWS appconfig get-extension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_extension(input)
-	return common.execute_aws_command_with_input({ "appconfig", "get-extension" }, input)
-end
-
---- AWS appconfig get-extension-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_extension_association(input)
-	return common.execute_aws_command_with_input({ "appconfig", "get-extension-association" }, input)
-end
-
---- AWS appconfig list-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_applications(input)
-	return common.execute_aws_command_with_input({ "appconfig", "list-applications" }, input)
-end
-
---- AWS appconfig list-configuration-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_configuration_profiles(input)
-	return common.execute_aws_command_with_input({ "appconfig", "list-configuration-profiles" }, input)
-end
-
---- AWS appconfig list-deployment-strategies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_deployment_strategies(input)
-	return common.execute_aws_command_with_input({ "appconfig", "list-deployment-strategies" }, input)
-end
-
---- AWS appconfig list-deployments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_deployments(input)
-	return common.execute_aws_command_with_input({ "appconfig", "list-deployments" }, input)
-end
-
---- AWS appconfig list-environments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_environments(input)
-	return common.execute_aws_command_with_input({ "appconfig", "list-environments" }, input)
-end
-
---- AWS appconfig list-extension-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_extension_associations(input)
-	return common.execute_aws_command_with_input({ "appconfig", "list-extension-associations" }, input)
-end
-
---- AWS appconfig list-extensions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_extensions(input)
-	return common.execute_aws_command_with_input({ "appconfig", "list-extensions" }, input)
-end
-
---- AWS appconfig list-hosted-configuration-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_hosted_configuration_versions(input)
-	return common.execute_aws_command_with_input({ "appconfig", "list-hosted-configuration-versions" }, input)
-end
-
---- AWS appconfig list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "appconfig", "list-tags-for-resource" }, input)
-end
-
---- AWS appconfig start-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_deployment(input)
-	return common.execute_aws_command_with_input({ "appconfig", "start-deployment" }, input)
-end
-
---- AWS appconfig stop-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_deployment(input)
-	return common.execute_aws_command_with_input({ "appconfig", "stop-deployment" }, input)
-end
-
---- AWS appconfig tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "appconfig", "tag-resource" }, input)
-end
-
---- AWS appconfig untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "appconfig", "untag-resource" }, input)
-end
-
---- AWS appconfig update-account-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_account_settings(input)
-	return common.execute_aws_command_with_input({ "appconfig", "update-account-settings" }, input)
-end
-
---- AWS appconfig update-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_application(input)
-	return common.execute_aws_command_with_input({ "appconfig", "update-application" }, input)
-end
-
---- AWS appconfig update-configuration-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_configuration_profile(input)
-	return common.execute_aws_command_with_input({ "appconfig", "update-configuration-profile" }, input)
-end
-
---- AWS appconfig update-deployment-strategy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_deployment_strategy(input)
-	return common.execute_aws_command_with_input({ "appconfig", "update-deployment-strategy" }, input)
-end
-
---- AWS appconfig update-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_environment(input)
-	return common.execute_aws_command_with_input({ "appconfig", "update-environment" }, input)
-end
-
---- AWS appconfig update-extension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_extension(input)
-	return common.execute_aws_command_with_input({ "appconfig", "update-extension" }, input)
-end
-
---- AWS appconfig update-extension-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_extension_association(input)
-	return common.execute_aws_command_with_input({ "appconfig", "update-extension-association" }, input)
-end
-
---- AWS appconfig validate-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.validate_configuration(input)
-	return common.execute_aws_command_with_input({ "appconfig", "validate-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "appconfig", "create-extension-association" }, input)
 end
 
 --- AWS appconfig create-hosted-configuration-version operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_hosted_configuration_version(input)
-	return common.execute_aws_command_with_raw_input({ "appconfig", "create-hosted-configuration-version" }, input)
+	return common.execute_aws_command({ "appconfig", "create-hosted-configuration-version" }, input)
+end
+
+--- AWS appconfig delete-application operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_application(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-application" }, input)
+end
+
+--- AWS appconfig delete-configuration-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_configuration_profile(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-configuration-profile" }, input)
+end
+
+--- AWS appconfig delete-deployment-strategy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_deployment_strategy(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-deployment-strategy" }, input)
+end
+
+--- AWS appconfig delete-environment operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_environment(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-environment" }, input)
+end
+
+--- AWS appconfig delete-extension operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_extension(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-extension" }, input)
+end
+
+--- AWS appconfig delete-extension-association operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_extension_association(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-extension-association" }, input)
+end
+
+--- AWS appconfig delete-hosted-configuration-version operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_hosted_configuration_version(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "delete-hosted-configuration-version" }, input)
+end
+
+--- AWS appconfig get-account-settings operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_account_settings(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-account-settings" }, input)
+end
+
+--- AWS appconfig get-application operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_application(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-application" }, input)
+end
+
+--- AWS appconfig get-configuration-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_configuration_profile(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-configuration-profile" }, input)
+end
+
+--- AWS appconfig get-deployment operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_deployment(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-deployment" }, input)
+end
+
+--- AWS appconfig get-deployment-strategy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_deployment_strategy(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-deployment-strategy" }, input)
+end
+
+--- AWS appconfig get-environment operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_environment(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-environment" }, input)
+end
+
+--- AWS appconfig get-extension operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_extension(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-extension" }, input)
+end
+
+--- AWS appconfig get-extension-association operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_extension_association(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "get-extension-association" }, input)
 end
 
 --- AWS appconfig get-hosted-configuration-version operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_hosted_configuration_version(input)
-	return common.execute_aws_command_with_raw_input({ "appconfig", "get-hosted-configuration-version" }, input)
+	return common.execute_aws_command({ "appconfig", "get-hosted-configuration-version" }, input)
+end
+
+--- AWS appconfig list-applications operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_applications(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-applications" }, input)
+end
+
+--- AWS appconfig list-configuration-profiles operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_configuration_profiles(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-configuration-profiles" }, input)
+end
+
+--- AWS appconfig list-deployment-strategies operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_deployment_strategies(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-deployment-strategies" }, input)
+end
+
+--- AWS appconfig list-deployments operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_deployments(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-deployments" }, input)
+end
+
+--- AWS appconfig list-environments operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_environments(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-environments" }, input)
+end
+
+--- AWS appconfig list-extension-associations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_extension_associations(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-extension-associations" }, input)
+end
+
+--- AWS appconfig list-extensions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_extensions(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-extensions" }, input)
+end
+
+--- AWS appconfig list-hosted-configuration-versions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_hosted_configuration_versions(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-hosted-configuration-versions" }, input)
+end
+
+--- AWS appconfig list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "list-tags-for-resource" }, input)
+end
+
+--- AWS appconfig start-deployment operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_deployment(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "start-deployment" }, input)
+end
+
+--- AWS appconfig stop-deployment operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_deployment(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "stop-deployment" }, input)
+end
+
+--- AWS appconfig tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "tag-resource" }, input)
+end
+
+--- AWS appconfig untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "untag-resource" }, input)
+end
+
+--- AWS appconfig update-account-settings operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_account_settings(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-account-settings" }, input)
+end
+
+--- AWS appconfig update-application operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_application(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-application" }, input)
+end
+
+--- AWS appconfig update-configuration-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_configuration_profile(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-configuration-profile" }, input)
+end
+
+--- AWS appconfig update-deployment-strategy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_deployment_strategy(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-deployment-strategy" }, input)
+end
+
+--- AWS appconfig update-environment operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_environment(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-environment" }, input)
+end
+
+--- AWS appconfig update-extension operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_extension(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-extension" }, input)
+end
+
+--- AWS appconfig update-extension-association operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_extension_association(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "update-extension-association" }, input)
+end
+
+--- AWS appconfig validate-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.validate_configuration(input)
+	return common.execute_aws_command_skeleton({ "appconfig", "validate-configuration" }, input)
 end
 
 return M

@@ -3,210 +3,210 @@
 
 local common = require("nvim-aws.common")
 
---- AWS GREENGRASSV2 service functions
+--- AWS greengrassv2 service functions
 local M = {}
 
 --- AWS greengrassv2 associate-service-role-to-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_service_role_to_account(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "associate-service-role-to-account" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "associate-service-role-to-account" }, input)
 end
 
 --- AWS greengrassv2 batch-associate-client-device-with-core-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_associate_client_device_with_core_device(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "batch-associate-client-device-with-core-device" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "batch-associate-client-device-with-core-device" }, input)
 end
 
 --- AWS greengrassv2 batch-disassociate-client-device-from-core-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_disassociate_client_device_from_core_device(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "batch-disassociate-client-device-from-core-device" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "batch-disassociate-client-device-from-core-device" }, input)
 end
 
 --- AWS greengrassv2 cancel-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_deployment(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "cancel-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "cancel-deployment" }, input)
 end
 
 --- AWS greengrassv2 create-component-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_component_version(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "create-component-version" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "create-component-version" }, input)
 end
 
 --- AWS greengrassv2 create-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_deployment(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "create-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "create-deployment" }, input)
 end
 
 --- AWS greengrassv2 delete-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_component(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "delete-component" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "delete-component" }, input)
 end
 
 --- AWS greengrassv2 delete-core-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_core_device(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "delete-core-device" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "delete-core-device" }, input)
 end
 
 --- AWS greengrassv2 delete-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_deployment(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "delete-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "delete-deployment" }, input)
 end
 
 --- AWS greengrassv2 describe-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_component(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "describe-component" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "describe-component" }, input)
 end
 
 --- AWS greengrassv2 disassociate-service-role-from-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_service_role_from_account(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "disassociate-service-role-from-account" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "disassociate-service-role-from-account" }, input)
 end
 
 --- AWS greengrassv2 get-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_component(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "get-component" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "get-component" }, input)
 end
 
 --- AWS greengrassv2 get-component-version-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_component_version_artifact(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "get-component-version-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "get-component-version-artifact" }, input)
 end
 
 --- AWS greengrassv2 get-connectivity-info operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_connectivity_info(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "get-connectivity-info" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "get-connectivity-info" }, input)
 end
 
 --- AWS greengrassv2 get-core-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_core_device(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "get-core-device" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "get-core-device" }, input)
 end
 
 --- AWS greengrassv2 get-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_deployment(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "get-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "get-deployment" }, input)
 end
 
 --- AWS greengrassv2 get-service-role-for-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_service_role_for_account(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "get-service-role-for-account" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "get-service-role-for-account" }, input)
 end
 
 --- AWS greengrassv2 list-client-devices-associated-with-core-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_client_devices_associated_with_core_device(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "list-client-devices-associated-with-core-device" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "list-client-devices-associated-with-core-device" }, input)
 end
 
 --- AWS greengrassv2 list-component-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_component_versions(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "list-component-versions" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "list-component-versions" }, input)
 end
 
 --- AWS greengrassv2 list-components operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_components(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "list-components" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "list-components" }, input)
 end
 
 --- AWS greengrassv2 list-core-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_core_devices(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "list-core-devices" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "list-core-devices" }, input)
 end
 
 --- AWS greengrassv2 list-deployments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_deployments(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "list-deployments" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "list-deployments" }, input)
 end
 
 --- AWS greengrassv2 list-effective-deployments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_effective_deployments(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "list-effective-deployments" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "list-effective-deployments" }, input)
 end
 
 --- AWS greengrassv2 list-installed-components operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_installed_components(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "list-installed-components" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "list-installed-components" }, input)
 end
 
 --- AWS greengrassv2 list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "list-tags-for-resource" }, input)
 end
 
 --- AWS greengrassv2 resolve-component-candidates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resolve_component_candidates(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "resolve-component-candidates" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "resolve-component-candidates" }, input)
 end
 
 --- AWS greengrassv2 tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "tag-resource" }, input)
 end
 
 --- AWS greengrassv2 untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "untag-resource" }, input)
 end
 
 --- AWS greengrassv2 update-connectivity-info operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_connectivity_info(input)
-	return common.execute_aws_command_with_input({ "greengrassv2", "update-connectivity-info" }, input)
+	return common.execute_aws_command_skeleton({ "greengrassv2", "update-connectivity-info" }, input)
 end
 
 return M

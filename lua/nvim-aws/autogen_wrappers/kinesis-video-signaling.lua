@@ -3,21 +3,21 @@
 
 local common = require("nvim-aws.common")
 
---- AWS KINESIS-VIDEO-SIGNALING service functions
+--- AWS kinesis-video-signaling service functions
 local M = {}
 
 --- AWS kinesis-video-signaling get-ice-server-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ice_server_config(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-signaling", "get-ice-server-config" }, input)
+	return common.execute_aws_command_skeleton({ "kinesis-video-signaling", "get-ice-server-config" }, input)
 end
 
 --- AWS kinesis-video-signaling send-alexa-offer-to-master operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_alexa_offer_to_master(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-signaling", "send-alexa-offer-to-master" }, input)
+	return common.execute_aws_command_skeleton({ "kinesis-video-signaling", "send-alexa-offer-to-master" }, input)
 end
 
 return M

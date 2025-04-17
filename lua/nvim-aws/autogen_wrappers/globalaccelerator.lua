@@ -3,399 +3,399 @@
 
 local common = require("nvim-aws.common")
 
---- AWS GLOBALACCELERATOR service functions
+--- AWS globalaccelerator service functions
 local M = {}
 
 --- AWS globalaccelerator add-custom-routing-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_custom_routing_endpoints(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "add-custom-routing-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "add-custom-routing-endpoints" }, input)
 end
 
 --- AWS globalaccelerator add-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_endpoints(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "add-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "add-endpoints" }, input)
 end
 
 --- AWS globalaccelerator advertise-byoip-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.advertise_byoip_cidr(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "advertise-byoip-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "advertise-byoip-cidr" }, input)
 end
 
 --- AWS globalaccelerator allow-custom-routing-traffic operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.allow_custom_routing_traffic(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "allow-custom-routing-traffic" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "allow-custom-routing-traffic" }, input)
 end
 
 --- AWS globalaccelerator create-accelerator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_accelerator(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "create-accelerator" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "create-accelerator" }, input)
 end
 
 --- AWS globalaccelerator create-cross-account-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cross_account_attachment(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "create-cross-account-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "create-cross-account-attachment" }, input)
 end
 
 --- AWS globalaccelerator create-custom-routing-accelerator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_custom_routing_accelerator(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "create-custom-routing-accelerator" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "create-custom-routing-accelerator" }, input)
 end
 
 --- AWS globalaccelerator create-custom-routing-endpoint-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_custom_routing_endpoint_group(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "create-custom-routing-endpoint-group" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "create-custom-routing-endpoint-group" }, input)
 end
 
 --- AWS globalaccelerator create-custom-routing-listener operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_custom_routing_listener(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "create-custom-routing-listener" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "create-custom-routing-listener" }, input)
 end
 
 --- AWS globalaccelerator create-endpoint-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_endpoint_group(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "create-endpoint-group" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "create-endpoint-group" }, input)
 end
 
 --- AWS globalaccelerator create-listener operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_listener(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "create-listener" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "create-listener" }, input)
 end
 
 --- AWS globalaccelerator delete-accelerator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_accelerator(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-accelerator" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "delete-accelerator" }, input)
 end
 
 --- AWS globalaccelerator delete-cross-account-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cross_account_attachment(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-cross-account-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "delete-cross-account-attachment" }, input)
 end
 
 --- AWS globalaccelerator delete-custom-routing-accelerator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_routing_accelerator(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-custom-routing-accelerator" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "delete-custom-routing-accelerator" }, input)
 end
 
 --- AWS globalaccelerator delete-custom-routing-endpoint-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_routing_endpoint_group(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-custom-routing-endpoint-group" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "delete-custom-routing-endpoint-group" }, input)
 end
 
 --- AWS globalaccelerator delete-custom-routing-listener operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_routing_listener(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-custom-routing-listener" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "delete-custom-routing-listener" }, input)
 end
 
 --- AWS globalaccelerator delete-endpoint-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_endpoint_group(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-endpoint-group" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "delete-endpoint-group" }, input)
 end
 
 --- AWS globalaccelerator delete-listener operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_listener(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "delete-listener" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "delete-listener" }, input)
 end
 
 --- AWS globalaccelerator deny-custom-routing-traffic operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deny_custom_routing_traffic(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "deny-custom-routing-traffic" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "deny-custom-routing-traffic" }, input)
 end
 
 --- AWS globalaccelerator deprovision-byoip-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deprovision_byoip_cidr(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "deprovision-byoip-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "deprovision-byoip-cidr" }, input)
 end
 
 --- AWS globalaccelerator describe-accelerator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_accelerator(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-accelerator" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "describe-accelerator" }, input)
 end
 
 --- AWS globalaccelerator describe-accelerator-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_accelerator_attributes(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-accelerator-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "describe-accelerator-attributes" }, input)
 end
 
 --- AWS globalaccelerator describe-cross-account-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cross_account_attachment(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-cross-account-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "describe-cross-account-attachment" }, input)
 end
 
 --- AWS globalaccelerator describe-custom-routing-accelerator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_custom_routing_accelerator(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-custom-routing-accelerator" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "describe-custom-routing-accelerator" }, input)
 end
 
 --- AWS globalaccelerator describe-custom-routing-accelerator-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_custom_routing_accelerator_attributes(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-custom-routing-accelerator-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "describe-custom-routing-accelerator-attributes" }, input)
 end
 
 --- AWS globalaccelerator describe-custom-routing-endpoint-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_custom_routing_endpoint_group(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-custom-routing-endpoint-group" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "describe-custom-routing-endpoint-group" }, input)
 end
 
 --- AWS globalaccelerator describe-custom-routing-listener operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_custom_routing_listener(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-custom-routing-listener" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "describe-custom-routing-listener" }, input)
 end
 
 --- AWS globalaccelerator describe-endpoint-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoint_group(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-endpoint-group" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "describe-endpoint-group" }, input)
 end
 
 --- AWS globalaccelerator describe-listener operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_listener(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "describe-listener" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "describe-listener" }, input)
 end
 
 --- AWS globalaccelerator list-accelerators operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_accelerators(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-accelerators" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-accelerators" }, input)
 end
 
 --- AWS globalaccelerator list-byoip-cidrs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_byoip_cidrs(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-byoip-cidrs" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-byoip-cidrs" }, input)
 end
 
 --- AWS globalaccelerator list-cross-account-attachments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_cross_account_attachments(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-cross-account-attachments" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-cross-account-attachments" }, input)
 end
 
 --- AWS globalaccelerator list-cross-account-resource-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_cross_account_resource_accounts(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-cross-account-resource-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-cross-account-resource-accounts" }, input)
 end
 
 --- AWS globalaccelerator list-cross-account-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_cross_account_resources(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-cross-account-resources" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-cross-account-resources" }, input)
 end
 
 --- AWS globalaccelerator list-custom-routing-accelerators operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_custom_routing_accelerators(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-custom-routing-accelerators" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-custom-routing-accelerators" }, input)
 end
 
 --- AWS globalaccelerator list-custom-routing-endpoint-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_custom_routing_endpoint_groups(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-custom-routing-endpoint-groups" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-custom-routing-endpoint-groups" }, input)
 end
 
 --- AWS globalaccelerator list-custom-routing-listeners operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_custom_routing_listeners(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-custom-routing-listeners" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-custom-routing-listeners" }, input)
 end
 
 --- AWS globalaccelerator list-custom-routing-port-mappings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_custom_routing_port_mappings(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-custom-routing-port-mappings" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-custom-routing-port-mappings" }, input)
 end
 
 --- AWS globalaccelerator list-custom-routing-port-mappings-by-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_custom_routing_port_mappings_by_destination(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-custom-routing-port-mappings-by-destination" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-custom-routing-port-mappings-by-destination" }, input)
 end
 
 --- AWS globalaccelerator list-endpoint-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_endpoint_groups(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-endpoint-groups" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-endpoint-groups" }, input)
 end
 
 --- AWS globalaccelerator list-listeners operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_listeners(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-listeners" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-listeners" }, input)
 end
 
 --- AWS globalaccelerator list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "list-tags-for-resource" }, input)
 end
 
 --- AWS globalaccelerator provision-byoip-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.provision_byoip_cidr(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "provision-byoip-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "provision-byoip-cidr" }, input)
 end
 
 --- AWS globalaccelerator remove-custom-routing-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_custom_routing_endpoints(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "remove-custom-routing-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "remove-custom-routing-endpoints" }, input)
 end
 
 --- AWS globalaccelerator remove-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_endpoints(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "remove-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "remove-endpoints" }, input)
 end
 
 --- AWS globalaccelerator tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "tag-resource" }, input)
 end
 
 --- AWS globalaccelerator untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "untag-resource" }, input)
 end
 
 --- AWS globalaccelerator update-accelerator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_accelerator(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "update-accelerator" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "update-accelerator" }, input)
 end
 
 --- AWS globalaccelerator update-accelerator-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_accelerator_attributes(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "update-accelerator-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "update-accelerator-attributes" }, input)
 end
 
 --- AWS globalaccelerator update-cross-account-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_cross_account_attachment(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "update-cross-account-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "update-cross-account-attachment" }, input)
 end
 
 --- AWS globalaccelerator update-custom-routing-accelerator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_custom_routing_accelerator(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "update-custom-routing-accelerator" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "update-custom-routing-accelerator" }, input)
 end
 
 --- AWS globalaccelerator update-custom-routing-accelerator-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_custom_routing_accelerator_attributes(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "update-custom-routing-accelerator-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "update-custom-routing-accelerator-attributes" }, input)
 end
 
 --- AWS globalaccelerator update-custom-routing-listener operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_custom_routing_listener(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "update-custom-routing-listener" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "update-custom-routing-listener" }, input)
 end
 
 --- AWS globalaccelerator update-endpoint-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_endpoint_group(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "update-endpoint-group" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "update-endpoint-group" }, input)
 end
 
 --- AWS globalaccelerator update-listener operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_listener(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "update-listener" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "update-listener" }, input)
 end
 
 --- AWS globalaccelerator withdraw-byoip-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.withdraw_byoip_cidr(input)
-	return common.execute_aws_command_with_input({ "globalaccelerator", "withdraw-byoip-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "globalaccelerator", "withdraw-byoip-cidr" }, input)
 end
 
 return M

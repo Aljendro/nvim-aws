@@ -3,35 +3,35 @@
 
 local common = require("nvim-aws.common")
 
---- AWS EC2-INSTANCE-CONNECT service functions
+--- AWS ec2-instance-connect service functions
 local M = {}
 
+--- AWS ec2-instance-connect open-tunnel operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.open_tunnel(input)
+	return common.execute_aws_command({ "ec2-instance-connect", "open-tunnel" }, input)
+end
+
 --- AWS ec2-instance-connect send-serial-console-ssh-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_serial_console_ssh_public_key(input)
-	return common.execute_aws_command_with_input({ "ec2-instance-connect", "send-serial-console-ssh-public-key" }, input)
+	return common.execute_aws_command_skeleton({ "ec2-instance-connect", "send-serial-console-ssh-public-key" }, input)
 end
 
 --- AWS ec2-instance-connect send-ssh-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_ssh_public_key(input)
-	return common.execute_aws_command_with_input({ "ec2-instance-connect", "send-ssh-public-key" }, input)
-end
-
---- AWS ec2-instance-connect open-tunnel operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.open_tunnel(input)
-	return common.execute_aws_command_with_raw_input({ "ec2-instance-connect", "open-tunnel" }, input)
+	return common.execute_aws_command_skeleton({ "ec2-instance-connect", "send-ssh-public-key" }, input)
 end
 
 --- AWS ec2-instance-connect ssh operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.ssh(input)
-	return common.execute_aws_command_with_raw_input({ "ec2-instance-connect", "ssh" }, input)
+	return common.execute_aws_command({ "ec2-instance-connect", "ssh" }, input)
 end
 
 return M

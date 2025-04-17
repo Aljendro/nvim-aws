@@ -3,651 +3,651 @@
 
 local common = require("nvim-aws.common")
 
---- AWS WORKMAIL service functions
+--- AWS workmail service functions
 local M = {}
 
 --- AWS workmail associate-delegate-to-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_delegate_to_resource(input)
-	return common.execute_aws_command_with_input({ "workmail", "associate-delegate-to-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "associate-delegate-to-resource" }, input)
 end
 
 --- AWS workmail associate-member-to-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_member_to_group(input)
-	return common.execute_aws_command_with_input({ "workmail", "associate-member-to-group" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "associate-member-to-group" }, input)
 end
 
 --- AWS workmail assume-impersonation-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assume_impersonation_role(input)
-	return common.execute_aws_command_with_input({ "workmail", "assume-impersonation-role" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "assume-impersonation-role" }, input)
 end
 
 --- AWS workmail cancel-mailbox-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_mailbox_export_job(input)
-	return common.execute_aws_command_with_input({ "workmail", "cancel-mailbox-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "cancel-mailbox-export-job" }, input)
 end
 
 --- AWS workmail create-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_alias(input)
-	return common.execute_aws_command_with_input({ "workmail", "create-alias" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "create-alias" }, input)
 end
 
 --- AWS workmail create-availability-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_availability_configuration(input)
-	return common.execute_aws_command_with_input({ "workmail", "create-availability-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "create-availability-configuration" }, input)
 end
 
 --- AWS workmail create-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_group(input)
-	return common.execute_aws_command_with_input({ "workmail", "create-group" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "create-group" }, input)
 end
 
 --- AWS workmail create-identity-center-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_identity_center_application(input)
-	return common.execute_aws_command_with_input({ "workmail", "create-identity-center-application" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "create-identity-center-application" }, input)
 end
 
 --- AWS workmail create-impersonation-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_impersonation_role(input)
-	return common.execute_aws_command_with_input({ "workmail", "create-impersonation-role" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "create-impersonation-role" }, input)
 end
 
 --- AWS workmail create-mobile-device-access-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_mobile_device_access_rule(input)
-	return common.execute_aws_command_with_input({ "workmail", "create-mobile-device-access-rule" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "create-mobile-device-access-rule" }, input)
 end
 
 --- AWS workmail create-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_organization(input)
-	return common.execute_aws_command_with_input({ "workmail", "create-organization" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "create-organization" }, input)
 end
 
 --- AWS workmail create-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_resource(input)
-	return common.execute_aws_command_with_input({ "workmail", "create-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "create-resource" }, input)
 end
 
 --- AWS workmail create-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user(input)
-	return common.execute_aws_command_with_input({ "workmail", "create-user" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "create-user" }, input)
 end
 
 --- AWS workmail delete-access-control-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_access_control_rule(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-access-control-rule" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-access-control-rule" }, input)
 end
 
 --- AWS workmail delete-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_alias(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-alias" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-alias" }, input)
 end
 
 --- AWS workmail delete-availability-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_availability_configuration(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-availability-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-availability-configuration" }, input)
 end
 
 --- AWS workmail delete-email-monitoring-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_email_monitoring_configuration(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-email-monitoring-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-email-monitoring-configuration" }, input)
 end
 
 --- AWS workmail delete-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_group(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-group" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-group" }, input)
 end
 
 --- AWS workmail delete-identity-center-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_identity_center_application(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-identity-center-application" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-identity-center-application" }, input)
 end
 
 --- AWS workmail delete-identity-provider-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_identity_provider_configuration(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-identity-provider-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-identity-provider-configuration" }, input)
 end
 
 --- AWS workmail delete-impersonation-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_impersonation_role(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-impersonation-role" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-impersonation-role" }, input)
 end
 
 --- AWS workmail delete-mailbox-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_mailbox_permissions(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-mailbox-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-mailbox-permissions" }, input)
 end
 
 --- AWS workmail delete-mobile-device-access-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_mobile_device_access_override(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-mobile-device-access-override" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-mobile-device-access-override" }, input)
 end
 
 --- AWS workmail delete-mobile-device-access-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_mobile_device_access_rule(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-mobile-device-access-rule" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-mobile-device-access-rule" }, input)
 end
 
 --- AWS workmail delete-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_organization(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-organization" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-organization" }, input)
 end
 
 --- AWS workmail delete-personal-access-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_personal_access_token(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-personal-access-token" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-personal-access-token" }, input)
 end
 
 --- AWS workmail delete-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-resource" }, input)
 end
 
 --- AWS workmail delete-retention-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_retention_policy(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-retention-policy" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-retention-policy" }, input)
 end
 
 --- AWS workmail delete-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user(input)
-	return common.execute_aws_command_with_input({ "workmail", "delete-user" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "delete-user" }, input)
 end
 
 --- AWS workmail deregister-from-work-mail operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_from_work_mail(input)
-	return common.execute_aws_command_with_input({ "workmail", "deregister-from-work-mail" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "deregister-from-work-mail" }, input)
 end
 
 --- AWS workmail deregister-mail-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_mail_domain(input)
-	return common.execute_aws_command_with_input({ "workmail", "deregister-mail-domain" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "deregister-mail-domain" }, input)
 end
 
 --- AWS workmail describe-email-monitoring-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_email_monitoring_configuration(input)
-	return common.execute_aws_command_with_input({ "workmail", "describe-email-monitoring-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "describe-email-monitoring-configuration" }, input)
 end
 
 --- AWS workmail describe-entity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_entity(input)
-	return common.execute_aws_command_with_input({ "workmail", "describe-entity" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "describe-entity" }, input)
 end
 
 --- AWS workmail describe-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_group(input)
-	return common.execute_aws_command_with_input({ "workmail", "describe-group" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "describe-group" }, input)
 end
 
 --- AWS workmail describe-identity-provider-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_identity_provider_configuration(input)
-	return common.execute_aws_command_with_input({ "workmail", "describe-identity-provider-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "describe-identity-provider-configuration" }, input)
 end
 
 --- AWS workmail describe-inbound-dmarc-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_inbound_dmarc_settings(input)
-	return common.execute_aws_command_with_input({ "workmail", "describe-inbound-dmarc-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "describe-inbound-dmarc-settings" }, input)
 end
 
 --- AWS workmail describe-mailbox-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_mailbox_export_job(input)
-	return common.execute_aws_command_with_input({ "workmail", "describe-mailbox-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "describe-mailbox-export-job" }, input)
 end
 
 --- AWS workmail describe-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organization(input)
-	return common.execute_aws_command_with_input({ "workmail", "describe-organization" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "describe-organization" }, input)
 end
 
 --- AWS workmail describe-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_resource(input)
-	return common.execute_aws_command_with_input({ "workmail", "describe-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "describe-resource" }, input)
 end
 
 --- AWS workmail describe-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_user(input)
-	return common.execute_aws_command_with_input({ "workmail", "describe-user" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "describe-user" }, input)
 end
 
 --- AWS workmail disassociate-delegate-from-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_delegate_from_resource(input)
-	return common.execute_aws_command_with_input({ "workmail", "disassociate-delegate-from-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "disassociate-delegate-from-resource" }, input)
 end
 
 --- AWS workmail disassociate-member-from-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_member_from_group(input)
-	return common.execute_aws_command_with_input({ "workmail", "disassociate-member-from-group" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "disassociate-member-from-group" }, input)
 end
 
 --- AWS workmail get-access-control-effect operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_access_control_effect(input)
-	return common.execute_aws_command_with_input({ "workmail", "get-access-control-effect" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "get-access-control-effect" }, input)
 end
 
 --- AWS workmail get-default-retention-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_default_retention_policy(input)
-	return common.execute_aws_command_with_input({ "workmail", "get-default-retention-policy" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "get-default-retention-policy" }, input)
 end
 
 --- AWS workmail get-impersonation-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_impersonation_role(input)
-	return common.execute_aws_command_with_input({ "workmail", "get-impersonation-role" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "get-impersonation-role" }, input)
 end
 
 --- AWS workmail get-impersonation-role-effect operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_impersonation_role_effect(input)
-	return common.execute_aws_command_with_input({ "workmail", "get-impersonation-role-effect" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "get-impersonation-role-effect" }, input)
 end
 
 --- AWS workmail get-mail-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_mail_domain(input)
-	return common.execute_aws_command_with_input({ "workmail", "get-mail-domain" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "get-mail-domain" }, input)
 end
 
 --- AWS workmail get-mailbox-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_mailbox_details(input)
-	return common.execute_aws_command_with_input({ "workmail", "get-mailbox-details" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "get-mailbox-details" }, input)
 end
 
 --- AWS workmail get-mobile-device-access-effect operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_mobile_device_access_effect(input)
-	return common.execute_aws_command_with_input({ "workmail", "get-mobile-device-access-effect" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "get-mobile-device-access-effect" }, input)
 end
 
 --- AWS workmail get-mobile-device-access-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_mobile_device_access_override(input)
-	return common.execute_aws_command_with_input({ "workmail", "get-mobile-device-access-override" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "get-mobile-device-access-override" }, input)
 end
 
 --- AWS workmail get-personal-access-token-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_personal_access_token_metadata(input)
-	return common.execute_aws_command_with_input({ "workmail", "get-personal-access-token-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "get-personal-access-token-metadata" }, input)
 end
 
 --- AWS workmail list-access-control-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_access_control_rules(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-access-control-rules" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-access-control-rules" }, input)
 end
 
 --- AWS workmail list-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_aliases(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-aliases" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-aliases" }, input)
 end
 
 --- AWS workmail list-availability-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_availability_configurations(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-availability-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-availability-configurations" }, input)
 end
 
 --- AWS workmail list-group-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_group_members(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-group-members" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-group-members" }, input)
 end
 
 --- AWS workmail list-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_groups(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-groups" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-groups" }, input)
 end
 
 --- AWS workmail list-groups-for-entity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_groups_for_entity(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-groups-for-entity" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-groups-for-entity" }, input)
 end
 
 --- AWS workmail list-impersonation-roles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_impersonation_roles(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-impersonation-roles" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-impersonation-roles" }, input)
 end
 
 --- AWS workmail list-mail-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_mail_domains(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-mail-domains" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-mail-domains" }, input)
 end
 
 --- AWS workmail list-mailbox-export-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_mailbox_export_jobs(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-mailbox-export-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-mailbox-export-jobs" }, input)
 end
 
 --- AWS workmail list-mailbox-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_mailbox_permissions(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-mailbox-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-mailbox-permissions" }, input)
 end
 
 --- AWS workmail list-mobile-device-access-overrides operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_mobile_device_access_overrides(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-mobile-device-access-overrides" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-mobile-device-access-overrides" }, input)
 end
 
 --- AWS workmail list-mobile-device-access-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_mobile_device_access_rules(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-mobile-device-access-rules" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-mobile-device-access-rules" }, input)
 end
 
 --- AWS workmail list-organizations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_organizations(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-organizations" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-organizations" }, input)
 end
 
 --- AWS workmail list-personal-access-tokens operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_personal_access_tokens(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-personal-access-tokens" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-personal-access-tokens" }, input)
 end
 
 --- AWS workmail list-resource-delegates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_delegates(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-resource-delegates" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-resource-delegates" }, input)
 end
 
 --- AWS workmail list-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resources(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-resources" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-resources" }, input)
 end
 
 --- AWS workmail list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-tags-for-resource" }, input)
 end
 
 --- AWS workmail list-users operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_users(input)
-	return common.execute_aws_command_with_input({ "workmail", "list-users" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "list-users" }, input)
 end
 
 --- AWS workmail put-access-control-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_access_control_rule(input)
-	return common.execute_aws_command_with_input({ "workmail", "put-access-control-rule" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "put-access-control-rule" }, input)
 end
 
 --- AWS workmail put-email-monitoring-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_email_monitoring_configuration(input)
-	return common.execute_aws_command_with_input({ "workmail", "put-email-monitoring-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "put-email-monitoring-configuration" }, input)
 end
 
 --- AWS workmail put-identity-provider-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_identity_provider_configuration(input)
-	return common.execute_aws_command_with_input({ "workmail", "put-identity-provider-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "put-identity-provider-configuration" }, input)
 end
 
 --- AWS workmail put-inbound-dmarc-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_inbound_dmarc_settings(input)
-	return common.execute_aws_command_with_input({ "workmail", "put-inbound-dmarc-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "put-inbound-dmarc-settings" }, input)
 end
 
 --- AWS workmail put-mailbox-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_mailbox_permissions(input)
-	return common.execute_aws_command_with_input({ "workmail", "put-mailbox-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "put-mailbox-permissions" }, input)
 end
 
 --- AWS workmail put-mobile-device-access-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_mobile_device_access_override(input)
-	return common.execute_aws_command_with_input({ "workmail", "put-mobile-device-access-override" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "put-mobile-device-access-override" }, input)
 end
 
 --- AWS workmail put-retention-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_retention_policy(input)
-	return common.execute_aws_command_with_input({ "workmail", "put-retention-policy" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "put-retention-policy" }, input)
 end
 
 --- AWS workmail register-mail-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_mail_domain(input)
-	return common.execute_aws_command_with_input({ "workmail", "register-mail-domain" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "register-mail-domain" }, input)
 end
 
 --- AWS workmail register-to-work-mail operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_to_work_mail(input)
-	return common.execute_aws_command_with_input({ "workmail", "register-to-work-mail" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "register-to-work-mail" }, input)
 end
 
 --- AWS workmail reset-password operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_password(input)
-	return common.execute_aws_command_with_input({ "workmail", "reset-password" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "reset-password" }, input)
 end
 
 --- AWS workmail start-mailbox-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_mailbox_export_job(input)
-	return common.execute_aws_command_with_input({ "workmail", "start-mailbox-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "start-mailbox-export-job" }, input)
 end
 
 --- AWS workmail tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "workmail", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "tag-resource" }, input)
 end
 
 --- AWS workmail test-availability-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_availability_configuration(input)
-	return common.execute_aws_command_with_input({ "workmail", "test-availability-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "test-availability-configuration" }, input)
 end
 
 --- AWS workmail untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "workmail", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "untag-resource" }, input)
 end
 
 --- AWS workmail update-availability-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_availability_configuration(input)
-	return common.execute_aws_command_with_input({ "workmail", "update-availability-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "update-availability-configuration" }, input)
 end
 
 --- AWS workmail update-default-mail-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_default_mail_domain(input)
-	return common.execute_aws_command_with_input({ "workmail", "update-default-mail-domain" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "update-default-mail-domain" }, input)
 end
 
 --- AWS workmail update-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_group(input)
-	return common.execute_aws_command_with_input({ "workmail", "update-group" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "update-group" }, input)
 end
 
 --- AWS workmail update-impersonation-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_impersonation_role(input)
-	return common.execute_aws_command_with_input({ "workmail", "update-impersonation-role" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "update-impersonation-role" }, input)
 end
 
 --- AWS workmail update-mailbox-quota operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_mailbox_quota(input)
-	return common.execute_aws_command_with_input({ "workmail", "update-mailbox-quota" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "update-mailbox-quota" }, input)
 end
 
 --- AWS workmail update-mobile-device-access-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_mobile_device_access_rule(input)
-	return common.execute_aws_command_with_input({ "workmail", "update-mobile-device-access-rule" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "update-mobile-device-access-rule" }, input)
 end
 
 --- AWS workmail update-primary-email-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_primary_email_address(input)
-	return common.execute_aws_command_with_input({ "workmail", "update-primary-email-address" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "update-primary-email-address" }, input)
 end
 
 --- AWS workmail update-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resource(input)
-	return common.execute_aws_command_with_input({ "workmail", "update-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "update-resource" }, input)
 end
 
 --- AWS workmail update-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user(input)
-	return common.execute_aws_command_with_input({ "workmail", "update-user" }, input)
+	return common.execute_aws_command_skeleton({ "workmail", "update-user" }, input)
 end
 
 return M

@@ -3,413 +3,413 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLEANROOMSML service functions
+--- AWS cleanroomsml service functions
 local M = {}
 
 --- AWS cleanroomsml cancel-trained-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_trained_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "cancel-trained-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "cancel-trained-model" }, input)
 end
 
 --- AWS cleanroomsml cancel-trained-model-inference-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_trained_model_inference_job(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "cancel-trained-model-inference-job" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "cancel-trained-model-inference-job" }, input)
 end
 
 --- AWS cleanroomsml create-audience-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_audience_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "create-audience-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "create-audience-model" }, input)
 end
 
 --- AWS cleanroomsml create-configured-audience-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_configured_audience_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "create-configured-audience-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "create-configured-audience-model" }, input)
 end
 
 --- AWS cleanroomsml create-configured-model-algorithm operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_configured_model_algorithm(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "create-configured-model-algorithm" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "create-configured-model-algorithm" }, input)
 end
 
 --- AWS cleanroomsml create-configured-model-algorithm-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_configured_model_algorithm_association(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "create-configured-model-algorithm-association" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "create-configured-model-algorithm-association" }, input)
 end
 
 --- AWS cleanroomsml create-ml-input-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ml_input_channel(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "create-ml-input-channel" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "create-ml-input-channel" }, input)
 end
 
 --- AWS cleanroomsml create-trained-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_trained_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "create-trained-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "create-trained-model" }, input)
 end
 
 --- AWS cleanroomsml create-training-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_training_dataset(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "create-training-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "create-training-dataset" }, input)
 end
 
 --- AWS cleanroomsml delete-audience-generation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_audience_generation_job(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-audience-generation-job" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "delete-audience-generation-job" }, input)
 end
 
 --- AWS cleanroomsml delete-audience-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_audience_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-audience-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "delete-audience-model" }, input)
 end
 
 --- AWS cleanroomsml delete-configured-audience-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configured_audience_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-configured-audience-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "delete-configured-audience-model" }, input)
 end
 
 --- AWS cleanroomsml delete-configured-audience-model-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configured_audience_model_policy(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-configured-audience-model-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "delete-configured-audience-model-policy" }, input)
 end
 
 --- AWS cleanroomsml delete-configured-model-algorithm operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configured_model_algorithm(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-configured-model-algorithm" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "delete-configured-model-algorithm" }, input)
 end
 
 --- AWS cleanroomsml delete-configured-model-algorithm-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configured_model_algorithm_association(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-configured-model-algorithm-association" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "delete-configured-model-algorithm-association" }, input)
 end
 
 --- AWS cleanroomsml delete-ml-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ml_configuration(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-ml-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "delete-ml-configuration" }, input)
 end
 
 --- AWS cleanroomsml delete-ml-input-channel-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ml_input_channel_data(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-ml-input-channel-data" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "delete-ml-input-channel-data" }, input)
 end
 
 --- AWS cleanroomsml delete-trained-model-output operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_trained_model_output(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-trained-model-output" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "delete-trained-model-output" }, input)
 end
 
 --- AWS cleanroomsml delete-training-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_training_dataset(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "delete-training-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "delete-training-dataset" }, input)
 end
 
 --- AWS cleanroomsml get-audience-generation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_audience_generation_job(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-audience-generation-job" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-audience-generation-job" }, input)
 end
 
 --- AWS cleanroomsml get-audience-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_audience_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-audience-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-audience-model" }, input)
 end
 
 --- AWS cleanroomsml get-collaboration-configured-model-algorithm-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_collaboration_configured_model_algorithm_association(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-collaboration-configured-model-algorithm-association" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-collaboration-configured-model-algorithm-association" }, input)
 end
 
 --- AWS cleanroomsml get-collaboration-ml-input-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_collaboration_ml_input_channel(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-collaboration-ml-input-channel" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-collaboration-ml-input-channel" }, input)
 end
 
 --- AWS cleanroomsml get-collaboration-trained-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_collaboration_trained_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-collaboration-trained-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-collaboration-trained-model" }, input)
 end
 
 --- AWS cleanroomsml get-configured-audience-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_configured_audience_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-configured-audience-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-configured-audience-model" }, input)
 end
 
 --- AWS cleanroomsml get-configured-audience-model-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_configured_audience_model_policy(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-configured-audience-model-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-configured-audience-model-policy" }, input)
 end
 
 --- AWS cleanroomsml get-configured-model-algorithm operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_configured_model_algorithm(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-configured-model-algorithm" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-configured-model-algorithm" }, input)
 end
 
 --- AWS cleanroomsml get-configured-model-algorithm-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_configured_model_algorithm_association(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-configured-model-algorithm-association" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-configured-model-algorithm-association" }, input)
 end
 
 --- AWS cleanroomsml get-ml-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ml_configuration(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-ml-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-ml-configuration" }, input)
 end
 
 --- AWS cleanroomsml get-ml-input-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ml_input_channel(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-ml-input-channel" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-ml-input-channel" }, input)
 end
 
 --- AWS cleanroomsml get-trained-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_trained_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-trained-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-trained-model" }, input)
 end
 
 --- AWS cleanroomsml get-trained-model-inference-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_trained_model_inference_job(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-trained-model-inference-job" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-trained-model-inference-job" }, input)
 end
 
 --- AWS cleanroomsml get-training-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_training_dataset(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "get-training-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "get-training-dataset" }, input)
 end
 
 --- AWS cleanroomsml list-audience-export-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_audience_export_jobs(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-audience-export-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-audience-export-jobs" }, input)
 end
 
 --- AWS cleanroomsml list-audience-generation-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_audience_generation_jobs(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-audience-generation-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-audience-generation-jobs" }, input)
 end
 
 --- AWS cleanroomsml list-audience-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_audience_models(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-audience-models" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-audience-models" }, input)
 end
 
 --- AWS cleanroomsml list-collaboration-configured-model-algorithm-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_collaboration_configured_model_algorithm_associations(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-collaboration-configured-model-algorithm-associations" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-collaboration-configured-model-algorithm-associations" }, input)
 end
 
 --- AWS cleanroomsml list-collaboration-ml-input-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_collaboration_ml_input_channels(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-collaboration-ml-input-channels" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-collaboration-ml-input-channels" }, input)
 end
 
 --- AWS cleanroomsml list-collaboration-trained-model-export-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_collaboration_trained_model_export_jobs(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-collaboration-trained-model-export-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-collaboration-trained-model-export-jobs" }, input)
 end
 
 --- AWS cleanroomsml list-collaboration-trained-model-inference-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_collaboration_trained_model_inference_jobs(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-collaboration-trained-model-inference-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-collaboration-trained-model-inference-jobs" }, input)
 end
 
 --- AWS cleanroomsml list-collaboration-trained-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_collaboration_trained_models(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-collaboration-trained-models" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-collaboration-trained-models" }, input)
 end
 
 --- AWS cleanroomsml list-configured-audience-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_configured_audience_models(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-configured-audience-models" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-configured-audience-models" }, input)
 end
 
 --- AWS cleanroomsml list-configured-model-algorithm-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_configured_model_algorithm_associations(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-configured-model-algorithm-associations" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-configured-model-algorithm-associations" }, input)
 end
 
 --- AWS cleanroomsml list-configured-model-algorithms operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_configured_model_algorithms(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-configured-model-algorithms" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-configured-model-algorithms" }, input)
 end
 
 --- AWS cleanroomsml list-ml-input-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ml_input_channels(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-ml-input-channels" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-ml-input-channels" }, input)
 end
 
 --- AWS cleanroomsml list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-tags-for-resource" }, input)
 end
 
 --- AWS cleanroomsml list-trained-model-inference-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_trained_model_inference_jobs(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-trained-model-inference-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-trained-model-inference-jobs" }, input)
 end
 
 --- AWS cleanroomsml list-trained-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_trained_models(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-trained-models" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-trained-models" }, input)
 end
 
 --- AWS cleanroomsml list-training-datasets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_training_datasets(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "list-training-datasets" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "list-training-datasets" }, input)
 end
 
 --- AWS cleanroomsml put-configured-audience-model-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_configured_audience_model_policy(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "put-configured-audience-model-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "put-configured-audience-model-policy" }, input)
 end
 
 --- AWS cleanroomsml put-ml-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_ml_configuration(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "put-ml-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "put-ml-configuration" }, input)
 end
 
 --- AWS cleanroomsml start-audience-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_audience_export_job(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "start-audience-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "start-audience-export-job" }, input)
 end
 
 --- AWS cleanroomsml start-audience-generation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_audience_generation_job(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "start-audience-generation-job" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "start-audience-generation-job" }, input)
 end
 
 --- AWS cleanroomsml start-trained-model-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_trained_model_export_job(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "start-trained-model-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "start-trained-model-export-job" }, input)
 end
 
 --- AWS cleanroomsml start-trained-model-inference-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_trained_model_inference_job(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "start-trained-model-inference-job" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "start-trained-model-inference-job" }, input)
 end
 
 --- AWS cleanroomsml tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "tag-resource" }, input)
 end
 
 --- AWS cleanroomsml untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "untag-resource" }, input)
 end
 
 --- AWS cleanroomsml update-configured-audience-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_configured_audience_model(input)
-	return common.execute_aws_command_with_input({ "cleanroomsml", "update-configured-audience-model" }, input)
+	return common.execute_aws_command_skeleton({ "cleanroomsml", "update-configured-audience-model" }, input)
 end
 
 return M

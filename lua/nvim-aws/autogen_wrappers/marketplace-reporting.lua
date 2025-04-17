@@ -3,14 +3,14 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MARKETPLACE-REPORTING service functions
+--- AWS marketplace-reporting service functions
 local M = {}
 
 --- AWS marketplace-reporting get-buyer-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_buyer_dashboard(input)
-	return common.execute_aws_command_with_input({ "marketplace-reporting", "get-buyer-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-reporting", "get-buyer-dashboard" }, input)
 end
 
 return M

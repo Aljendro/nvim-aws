@@ -3,28 +3,28 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MARKETPLACE-AGREEMENT service functions
+--- AWS marketplace-agreement service functions
 local M = {}
 
 --- AWS marketplace-agreement describe-agreement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_agreement(input)
-	return common.execute_aws_command_with_input({ "marketplace-agreement", "describe-agreement" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-agreement", "describe-agreement" }, input)
 end
 
 --- AWS marketplace-agreement get-agreement-terms operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_agreement_terms(input)
-	return common.execute_aws_command_with_input({ "marketplace-agreement", "get-agreement-terms" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-agreement", "get-agreement-terms" }, input)
 end
 
 --- AWS marketplace-agreement search-agreements operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_agreements(input)
-	return common.execute_aws_command_with_input({ "marketplace-agreement", "search-agreements" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-agreement", "search-agreements" }, input)
 end
 
 return M

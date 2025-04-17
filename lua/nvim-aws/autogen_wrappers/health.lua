@@ -3,105 +3,105 @@
 
 local common = require("nvim-aws.common")
 
---- AWS HEALTH service functions
+--- AWS health service functions
 local M = {}
 
 --- AWS health describe-affected-accounts-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_affected_accounts_for_organization(input)
-	return common.execute_aws_command_with_input({ "health", "describe-affected-accounts-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-affected-accounts-for-organization" }, input)
 end
 
 --- AWS health describe-affected-entities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_affected_entities(input)
-	return common.execute_aws_command_with_input({ "health", "describe-affected-entities" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-affected-entities" }, input)
 end
 
 --- AWS health describe-affected-entities-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_affected_entities_for_organization(input)
-	return common.execute_aws_command_with_input({ "health", "describe-affected-entities-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-affected-entities-for-organization" }, input)
 end
 
 --- AWS health describe-entity-aggregates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_entity_aggregates(input)
-	return common.execute_aws_command_with_input({ "health", "describe-entity-aggregates" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-entity-aggregates" }, input)
 end
 
 --- AWS health describe-entity-aggregates-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_entity_aggregates_for_organization(input)
-	return common.execute_aws_command_with_input({ "health", "describe-entity-aggregates-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-entity-aggregates-for-organization" }, input)
 end
 
 --- AWS health describe-event-aggregates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_aggregates(input)
-	return common.execute_aws_command_with_input({ "health", "describe-event-aggregates" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-event-aggregates" }, input)
 end
 
 --- AWS health describe-event-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_details(input)
-	return common.execute_aws_command_with_input({ "health", "describe-event-details" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-event-details" }, input)
 end
 
 --- AWS health describe-event-details-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_details_for_organization(input)
-	return common.execute_aws_command_with_input({ "health", "describe-event-details-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-event-details-for-organization" }, input)
 end
 
 --- AWS health describe-event-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_types(input)
-	return common.execute_aws_command_with_input({ "health", "describe-event-types" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-event-types" }, input)
 end
 
 --- AWS health describe-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_events(input)
-	return common.execute_aws_command_with_input({ "health", "describe-events" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-events" }, input)
 end
 
 --- AWS health describe-events-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_events_for_organization(input)
-	return common.execute_aws_command_with_input({ "health", "describe-events-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-events-for-organization" }, input)
 end
 
 --- AWS health describe-health-service-status-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_health_service_status_for_organization(input)
-	return common.execute_aws_command_with_input({ "health", "describe-health-service-status-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "health", "describe-health-service-status-for-organization" }, input)
 end
 
 --- AWS health disable-health-service-access-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_health_service_access_for_organization(input)
-	return common.execute_aws_command_with_input({ "health", "disable-health-service-access-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "health", "disable-health-service-access-for-organization" }, input)
 end
 
 --- AWS health enable-health-service-access-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_health_service_access_for_organization(input)
-	return common.execute_aws_command_with_input({ "health", "enable-health-service-access-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "health", "enable-health-service-access-for-organization" }, input)
 end
 
 return M

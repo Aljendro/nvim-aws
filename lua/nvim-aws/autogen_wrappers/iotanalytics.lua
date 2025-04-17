@@ -3,245 +3,245 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IOTANALYTICS service functions
+--- AWS iotanalytics service functions
 local M = {}
 
 --- AWS iotanalytics batch-put-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_put_message(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "batch-put-message" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "batch-put-message" }, input)
 end
 
 --- AWS iotanalytics cancel-pipeline-reprocessing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_pipeline_reprocessing(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "cancel-pipeline-reprocessing" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "cancel-pipeline-reprocessing" }, input)
 end
 
 --- AWS iotanalytics create-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_channel(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "create-channel" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "create-channel" }, input)
 end
 
 --- AWS iotanalytics create-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dataset(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "create-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "create-dataset" }, input)
 end
 
 --- AWS iotanalytics create-dataset-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dataset_content(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "create-dataset-content" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "create-dataset-content" }, input)
 end
 
 --- AWS iotanalytics create-datastore operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_datastore(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "create-datastore" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "create-datastore" }, input)
 end
 
 --- AWS iotanalytics create-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_pipeline(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "create-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "create-pipeline" }, input)
 end
 
 --- AWS iotanalytics delete-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "delete-channel" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "delete-channel" }, input)
 end
 
 --- AWS iotanalytics delete-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dataset(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "delete-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "delete-dataset" }, input)
 end
 
 --- AWS iotanalytics delete-dataset-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dataset_content(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "delete-dataset-content" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "delete-dataset-content" }, input)
 end
 
 --- AWS iotanalytics delete-datastore operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_datastore(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "delete-datastore" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "delete-datastore" }, input)
 end
 
 --- AWS iotanalytics delete-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_pipeline(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "delete-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "delete-pipeline" }, input)
 end
 
 --- AWS iotanalytics describe-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_channel(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "describe-channel" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "describe-channel" }, input)
 end
 
 --- AWS iotanalytics describe-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_dataset(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "describe-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "describe-dataset" }, input)
 end
 
 --- AWS iotanalytics describe-datastore operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_datastore(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "describe-datastore" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "describe-datastore" }, input)
 end
 
 --- AWS iotanalytics describe-logging-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_logging_options(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "describe-logging-options" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "describe-logging-options" }, input)
 end
 
 --- AWS iotanalytics describe-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_pipeline(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "describe-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "describe-pipeline" }, input)
 end
 
 --- AWS iotanalytics get-dataset-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_dataset_content(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "get-dataset-content" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "get-dataset-content" }, input)
 end
 
 --- AWS iotanalytics list-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channels(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "list-channels" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "list-channels" }, input)
 end
 
 --- AWS iotanalytics list-dataset-contents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_dataset_contents(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "list-dataset-contents" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "list-dataset-contents" }, input)
 end
 
 --- AWS iotanalytics list-datasets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_datasets(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "list-datasets" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "list-datasets" }, input)
 end
 
 --- AWS iotanalytics list-datastores operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_datastores(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "list-datastores" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "list-datastores" }, input)
 end
 
 --- AWS iotanalytics list-pipelines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pipelines(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "list-pipelines" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "list-pipelines" }, input)
 end
 
 --- AWS iotanalytics list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "list-tags-for-resource" }, input)
 end
 
 --- AWS iotanalytics put-logging-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_logging_options(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "put-logging-options" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "put-logging-options" }, input)
 end
 
 --- AWS iotanalytics run-pipeline-activity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.run_pipeline_activity(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "run-pipeline-activity" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "run-pipeline-activity" }, input)
 end
 
 --- AWS iotanalytics sample-channel-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.sample_channel_data(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "sample-channel-data" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "sample-channel-data" }, input)
 end
 
 --- AWS iotanalytics start-pipeline-reprocessing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_pipeline_reprocessing(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "start-pipeline-reprocessing" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "start-pipeline-reprocessing" }, input)
 end
 
 --- AWS iotanalytics tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "tag-resource" }, input)
 end
 
 --- AWS iotanalytics untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "untag-resource" }, input)
 end
 
 --- AWS iotanalytics update-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_channel(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "update-channel" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "update-channel" }, input)
 end
 
 --- AWS iotanalytics update-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_dataset(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "update-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "update-dataset" }, input)
 end
 
 --- AWS iotanalytics update-datastore operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_datastore(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "update-datastore" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "update-datastore" }, input)
 end
 
 --- AWS iotanalytics update-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_pipeline(input)
-	return common.execute_aws_command_with_input({ "iotanalytics", "update-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "iotanalytics", "update-pipeline" }, input)
 end
 
 return M

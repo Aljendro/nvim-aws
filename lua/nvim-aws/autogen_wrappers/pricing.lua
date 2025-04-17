@@ -3,42 +3,42 @@
 
 local common = require("nvim-aws.common")
 
---- AWS PRICING service functions
+--- AWS pricing service functions
 local M = {}
 
 --- AWS pricing describe-services operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_services(input)
-	return common.execute_aws_command_with_input({ "pricing", "describe-services" }, input)
+	return common.execute_aws_command_skeleton({ "pricing", "describe-services" }, input)
 end
 
 --- AWS pricing get-attribute-values operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_attribute_values(input)
-	return common.execute_aws_command_with_input({ "pricing", "get-attribute-values" }, input)
+	return common.execute_aws_command_skeleton({ "pricing", "get-attribute-values" }, input)
 end
 
 --- AWS pricing get-price-list-file-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_price_list_file_url(input)
-	return common.execute_aws_command_with_input({ "pricing", "get-price-list-file-url" }, input)
+	return common.execute_aws_command_skeleton({ "pricing", "get-price-list-file-url" }, input)
 end
 
 --- AWS pricing get-products operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_products(input)
-	return common.execute_aws_command_with_input({ "pricing", "get-products" }, input)
+	return common.execute_aws_command_skeleton({ "pricing", "get-products" }, input)
 end
 
 --- AWS pricing list-price-lists operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_price_lists(input)
-	return common.execute_aws_command_with_input({ "pricing", "list-price-lists" }, input)
+	return common.execute_aws_command_skeleton({ "pricing", "list-price-lists" }, input)
 end
 
 return M

@@ -3,56 +3,56 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IOT-DATA service functions
+--- AWS iot-data service functions
 local M = {}
 
---- AWS iot-data get-retained-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_retained_message(input)
-	return common.execute_aws_command_with_input({ "iot-data", "get-retained-message" }, input)
-end
-
---- AWS iot-data list-named-shadows-for-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_named_shadows_for_thing(input)
-	return common.execute_aws_command_with_input({ "iot-data", "list-named-shadows-for-thing" }, input)
-end
-
---- AWS iot-data list-retained-messages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_retained_messages(input)
-	return common.execute_aws_command_with_input({ "iot-data", "list-retained-messages" }, input)
-end
-
---- AWS iot-data publish operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.publish(input)
-	return common.execute_aws_command_with_input({ "iot-data", "publish" }, input)
-end
-
 --- AWS iot-data delete-thing-shadow operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_thing_shadow(input)
-	return common.execute_aws_command_with_raw_input({ "iot-data", "delete-thing-shadow" }, input)
+	return common.execute_aws_command({ "iot-data", "delete-thing-shadow" }, input)
+end
+
+--- AWS iot-data get-retained-message operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_retained_message(input)
+	return common.execute_aws_command_skeleton({ "iot-data", "get-retained-message" }, input)
 end
 
 --- AWS iot-data get-thing-shadow operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_thing_shadow(input)
-	return common.execute_aws_command_with_raw_input({ "iot-data", "get-thing-shadow" }, input)
+	return common.execute_aws_command({ "iot-data", "get-thing-shadow" }, input)
+end
+
+--- AWS iot-data list-named-shadows-for-thing operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_named_shadows_for_thing(input)
+	return common.execute_aws_command_skeleton({ "iot-data", "list-named-shadows-for-thing" }, input)
+end
+
+--- AWS iot-data list-retained-messages operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_retained_messages(input)
+	return common.execute_aws_command_skeleton({ "iot-data", "list-retained-messages" }, input)
+end
+
+--- AWS iot-data publish operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.publish(input)
+	return common.execute_aws_command_skeleton({ "iot-data", "publish" }, input)
 end
 
 --- AWS iot-data update-thing-shadow operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_thing_shadow(input)
-	return common.execute_aws_command_with_raw_input({ "iot-data", "update-thing-shadow" }, input)
+	return common.execute_aws_command({ "iot-data", "update-thing-shadow" }, input)
 end
 
 return M

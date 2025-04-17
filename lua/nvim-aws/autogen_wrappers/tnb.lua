@@ -3,238 +3,238 @@
 
 local common = require("nvim-aws.common")
 
---- AWS TNB service functions
+--- AWS tnb service functions
 local M = {}
 
 --- AWS tnb cancel-sol-network-operation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_sol_network_operation(input)
-	return common.execute_aws_command_with_input({ "tnb", "cancel-sol-network-operation" }, input)
+	return common.execute_aws_command_skeleton({ "tnb", "cancel-sol-network-operation" }, input)
 end
 
 --- AWS tnb create-sol-function-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_sol_function_package(input)
-	return common.execute_aws_command_with_input({ "tnb", "create-sol-function-package" }, input)
+	return common.execute_aws_command_skeleton({ "tnb", "create-sol-function-package" }, input)
 end
 
 --- AWS tnb create-sol-network-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_sol_network_instance(input)
-	return common.execute_aws_command_with_input({ "tnb", "create-sol-network-instance" }, input)
+	return common.execute_aws_command_skeleton({ "tnb", "create-sol-network-instance" }, input)
 end
 
 --- AWS tnb create-sol-network-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_sol_network_package(input)
-	return common.execute_aws_command_with_input({ "tnb", "create-sol-network-package" }, input)
+	return common.execute_aws_command_skeleton({ "tnb", "create-sol-network-package" }, input)
 end
 
 --- AWS tnb delete-sol-function-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_sol_function_package(input)
-	return common.execute_aws_command_with_input({ "tnb", "delete-sol-function-package" }, input)
+	return common.execute_aws_command_skeleton({ "tnb", "delete-sol-function-package" }, input)
 end
 
 --- AWS tnb delete-sol-network-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_sol_network_instance(input)
-	return common.execute_aws_command_with_input({ "tnb", "delete-sol-network-instance" }, input)
+	return common.execute_aws_command_skeleton({ "tnb", "delete-sol-network-instance" }, input)
 end
 
 --- AWS tnb delete-sol-network-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_sol_network_package(input)
-	return common.execute_aws_command_with_input({ "tnb", "delete-sol-network-package" }, input)
+	return common.execute_aws_command_skeleton({ "tnb", "delete-sol-network-package" }, input)
 end
 
 --- AWS tnb get-sol-function-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sol_function_instance(input)
-	return common.execute_aws_command_with_input({ "tnb", "get-sol-function-instance" }, input)
+	return common.execute_aws_command_skeleton({ "tnb", "get-sol-function-instance" }, input)
 end
 
 --- AWS tnb get-sol-function-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sol_function_package(input)
-	return common.execute_aws_command_with_input({ "tnb", "get-sol-function-package" }, input)
-end
-
---- AWS tnb get-sol-network-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_sol_network_instance(input)
-	return common.execute_aws_command_with_input({ "tnb", "get-sol-network-instance" }, input)
-end
-
---- AWS tnb get-sol-network-operation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_sol_network_operation(input)
-	return common.execute_aws_command_with_input({ "tnb", "get-sol-network-operation" }, input)
-end
-
---- AWS tnb get-sol-network-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_sol_network_package(input)
-	return common.execute_aws_command_with_input({ "tnb", "get-sol-network-package" }, input)
-end
-
---- AWS tnb instantiate-sol-network-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.instantiate_sol_network_instance(input)
-	return common.execute_aws_command_with_input({ "tnb", "instantiate-sol-network-instance" }, input)
-end
-
---- AWS tnb list-sol-function-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_sol_function_instances(input)
-	return common.execute_aws_command_with_input({ "tnb", "list-sol-function-instances" }, input)
-end
-
---- AWS tnb list-sol-function-packages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_sol_function_packages(input)
-	return common.execute_aws_command_with_input({ "tnb", "list-sol-function-packages" }, input)
-end
-
---- AWS tnb list-sol-network-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_sol_network_instances(input)
-	return common.execute_aws_command_with_input({ "tnb", "list-sol-network-instances" }, input)
-end
-
---- AWS tnb list-sol-network-operations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_sol_network_operations(input)
-	return common.execute_aws_command_with_input({ "tnb", "list-sol-network-operations" }, input)
-end
-
---- AWS tnb list-sol-network-packages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_sol_network_packages(input)
-	return common.execute_aws_command_with_input({ "tnb", "list-sol-network-packages" }, input)
-end
-
---- AWS tnb list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "tnb", "list-tags-for-resource" }, input)
-end
-
---- AWS tnb put-sol-function-package-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_sol_function_package_content(input)
-	return common.execute_aws_command_with_input({ "tnb", "put-sol-function-package-content" }, input)
-end
-
---- AWS tnb put-sol-network-package-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_sol_network_package_content(input)
-	return common.execute_aws_command_with_input({ "tnb", "put-sol-network-package-content" }, input)
-end
-
---- AWS tnb tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "tnb", "tag-resource" }, input)
-end
-
---- AWS tnb terminate-sol-network-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.terminate_sol_network_instance(input)
-	return common.execute_aws_command_with_input({ "tnb", "terminate-sol-network-instance" }, input)
-end
-
---- AWS tnb untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "tnb", "untag-resource" }, input)
-end
-
---- AWS tnb update-sol-function-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_sol_function_package(input)
-	return common.execute_aws_command_with_input({ "tnb", "update-sol-function-package" }, input)
-end
-
---- AWS tnb update-sol-network-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_sol_network_instance(input)
-	return common.execute_aws_command_with_input({ "tnb", "update-sol-network-instance" }, input)
-end
-
---- AWS tnb update-sol-network-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_sol_network_package(input)
-	return common.execute_aws_command_with_input({ "tnb", "update-sol-network-package" }, input)
-end
-
---- AWS tnb validate-sol-function-package-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.validate_sol_function_package_content(input)
-	return common.execute_aws_command_with_input({ "tnb", "validate-sol-function-package-content" }, input)
-end
-
---- AWS tnb validate-sol-network-package-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.validate_sol_network_package_content(input)
-	return common.execute_aws_command_with_input({ "tnb", "validate-sol-network-package-content" }, input)
+	return common.execute_aws_command_skeleton({ "tnb", "get-sol-function-package" }, input)
 end
 
 --- AWS tnb get-sol-function-package-content operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sol_function_package_content(input)
-	return common.execute_aws_command_with_raw_input({ "tnb", "get-sol-function-package-content" }, input)
+	return common.execute_aws_command({ "tnb", "get-sol-function-package-content" }, input)
 end
 
 --- AWS tnb get-sol-function-package-descriptor operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sol_function_package_descriptor(input)
-	return common.execute_aws_command_with_raw_input({ "tnb", "get-sol-function-package-descriptor" }, input)
+	return common.execute_aws_command({ "tnb", "get-sol-function-package-descriptor" }, input)
+end
+
+--- AWS tnb get-sol-network-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_sol_network_instance(input)
+	return common.execute_aws_command_skeleton({ "tnb", "get-sol-network-instance" }, input)
+end
+
+--- AWS tnb get-sol-network-operation operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_sol_network_operation(input)
+	return common.execute_aws_command_skeleton({ "tnb", "get-sol-network-operation" }, input)
+end
+
+--- AWS tnb get-sol-network-package operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_sol_network_package(input)
+	return common.execute_aws_command_skeleton({ "tnb", "get-sol-network-package" }, input)
 end
 
 --- AWS tnb get-sol-network-package-content operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sol_network_package_content(input)
-	return common.execute_aws_command_with_raw_input({ "tnb", "get-sol-network-package-content" }, input)
+	return common.execute_aws_command({ "tnb", "get-sol-network-package-content" }, input)
 end
 
 --- AWS tnb get-sol-network-package-descriptor operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sol_network_package_descriptor(input)
-	return common.execute_aws_command_with_raw_input({ "tnb", "get-sol-network-package-descriptor" }, input)
+	return common.execute_aws_command({ "tnb", "get-sol-network-package-descriptor" }, input)
+end
+
+--- AWS tnb instantiate-sol-network-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.instantiate_sol_network_instance(input)
+	return common.execute_aws_command_skeleton({ "tnb", "instantiate-sol-network-instance" }, input)
+end
+
+--- AWS tnb list-sol-function-instances operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_sol_function_instances(input)
+	return common.execute_aws_command_skeleton({ "tnb", "list-sol-function-instances" }, input)
+end
+
+--- AWS tnb list-sol-function-packages operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_sol_function_packages(input)
+	return common.execute_aws_command_skeleton({ "tnb", "list-sol-function-packages" }, input)
+end
+
+--- AWS tnb list-sol-network-instances operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_sol_network_instances(input)
+	return common.execute_aws_command_skeleton({ "tnb", "list-sol-network-instances" }, input)
+end
+
+--- AWS tnb list-sol-network-operations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_sol_network_operations(input)
+	return common.execute_aws_command_skeleton({ "tnb", "list-sol-network-operations" }, input)
+end
+
+--- AWS tnb list-sol-network-packages operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_sol_network_packages(input)
+	return common.execute_aws_command_skeleton({ "tnb", "list-sol-network-packages" }, input)
+end
+
+--- AWS tnb list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "tnb", "list-tags-for-resource" }, input)
+end
+
+--- AWS tnb put-sol-function-package-content operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_sol_function_package_content(input)
+	return common.execute_aws_command_skeleton({ "tnb", "put-sol-function-package-content" }, input)
+end
+
+--- AWS tnb put-sol-network-package-content operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_sol_network_package_content(input)
+	return common.execute_aws_command_skeleton({ "tnb", "put-sol-network-package-content" }, input)
+end
+
+--- AWS tnb tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "tnb", "tag-resource" }, input)
+end
+
+--- AWS tnb terminate-sol-network-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.terminate_sol_network_instance(input)
+	return common.execute_aws_command_skeleton({ "tnb", "terminate-sol-network-instance" }, input)
+end
+
+--- AWS tnb untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "tnb", "untag-resource" }, input)
+end
+
+--- AWS tnb update-sol-function-package operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_sol_function_package(input)
+	return common.execute_aws_command_skeleton({ "tnb", "update-sol-function-package" }, input)
+end
+
+--- AWS tnb update-sol-network-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_sol_network_instance(input)
+	return common.execute_aws_command_skeleton({ "tnb", "update-sol-network-instance" }, input)
+end
+
+--- AWS tnb update-sol-network-package operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_sol_network_package(input)
+	return common.execute_aws_command_skeleton({ "tnb", "update-sol-network-package" }, input)
+end
+
+--- AWS tnb validate-sol-function-package-content operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.validate_sol_function_package_content(input)
+	return common.execute_aws_command_skeleton({ "tnb", "validate-sol-function-package-content" }, input)
+end
+
+--- AWS tnb validate-sol-network-package-content operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.validate_sol_network_package_content(input)
+	return common.execute_aws_command_skeleton({ "tnb", "validate-sol-network-package-content" }, input)
 end
 
 return M

@@ -3,322 +3,322 @@
 
 local common = require("nvim-aws.common")
 
---- AWS FINSPACE service functions
+--- AWS finspace service functions
 local M = {}
 
 --- AWS finspace create-kx-changeset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_kx_changeset(input)
-	return common.execute_aws_command_with_input({ "finspace", "create-kx-changeset" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "create-kx-changeset" }, input)
 end
 
 --- AWS finspace create-kx-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_kx_cluster(input)
-	return common.execute_aws_command_with_input({ "finspace", "create-kx-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "create-kx-cluster" }, input)
 end
 
 --- AWS finspace create-kx-database operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_kx_database(input)
-	return common.execute_aws_command_with_input({ "finspace", "create-kx-database" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "create-kx-database" }, input)
 end
 
 --- AWS finspace create-kx-dataview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_kx_dataview(input)
-	return common.execute_aws_command_with_input({ "finspace", "create-kx-dataview" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "create-kx-dataview" }, input)
 end
 
 --- AWS finspace create-kx-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_kx_environment(input)
-	return common.execute_aws_command_with_input({ "finspace", "create-kx-environment" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "create-kx-environment" }, input)
 end
 
 --- AWS finspace create-kx-scaling-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_kx_scaling_group(input)
-	return common.execute_aws_command_with_input({ "finspace", "create-kx-scaling-group" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "create-kx-scaling-group" }, input)
 end
 
 --- AWS finspace create-kx-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_kx_user(input)
-	return common.execute_aws_command_with_input({ "finspace", "create-kx-user" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "create-kx-user" }, input)
 end
 
 --- AWS finspace create-kx-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_kx_volume(input)
-	return common.execute_aws_command_with_input({ "finspace", "create-kx-volume" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "create-kx-volume" }, input)
 end
 
 --- AWS finspace delete-kx-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_kx_cluster(input)
-	return common.execute_aws_command_with_input({ "finspace", "delete-kx-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "delete-kx-cluster" }, input)
 end
 
 --- AWS finspace delete-kx-cluster-node operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_kx_cluster_node(input)
-	return common.execute_aws_command_with_input({ "finspace", "delete-kx-cluster-node" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "delete-kx-cluster-node" }, input)
 end
 
 --- AWS finspace delete-kx-database operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_kx_database(input)
-	return common.execute_aws_command_with_input({ "finspace", "delete-kx-database" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "delete-kx-database" }, input)
 end
 
 --- AWS finspace delete-kx-dataview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_kx_dataview(input)
-	return common.execute_aws_command_with_input({ "finspace", "delete-kx-dataview" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "delete-kx-dataview" }, input)
 end
 
 --- AWS finspace delete-kx-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_kx_environment(input)
-	return common.execute_aws_command_with_input({ "finspace", "delete-kx-environment" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "delete-kx-environment" }, input)
 end
 
 --- AWS finspace delete-kx-scaling-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_kx_scaling_group(input)
-	return common.execute_aws_command_with_input({ "finspace", "delete-kx-scaling-group" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "delete-kx-scaling-group" }, input)
 end
 
 --- AWS finspace delete-kx-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_kx_user(input)
-	return common.execute_aws_command_with_input({ "finspace", "delete-kx-user" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "delete-kx-user" }, input)
 end
 
 --- AWS finspace delete-kx-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_kx_volume(input)
-	return common.execute_aws_command_with_input({ "finspace", "delete-kx-volume" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "delete-kx-volume" }, input)
 end
 
 --- AWS finspace get-kx-changeset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_kx_changeset(input)
-	return common.execute_aws_command_with_input({ "finspace", "get-kx-changeset" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "get-kx-changeset" }, input)
 end
 
 --- AWS finspace get-kx-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_kx_cluster(input)
-	return common.execute_aws_command_with_input({ "finspace", "get-kx-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "get-kx-cluster" }, input)
 end
 
 --- AWS finspace get-kx-connection-string operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_kx_connection_string(input)
-	return common.execute_aws_command_with_input({ "finspace", "get-kx-connection-string" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "get-kx-connection-string" }, input)
 end
 
 --- AWS finspace get-kx-database operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_kx_database(input)
-	return common.execute_aws_command_with_input({ "finspace", "get-kx-database" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "get-kx-database" }, input)
 end
 
 --- AWS finspace get-kx-dataview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_kx_dataview(input)
-	return common.execute_aws_command_with_input({ "finspace", "get-kx-dataview" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "get-kx-dataview" }, input)
 end
 
 --- AWS finspace get-kx-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_kx_environment(input)
-	return common.execute_aws_command_with_input({ "finspace", "get-kx-environment" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "get-kx-environment" }, input)
 end
 
 --- AWS finspace get-kx-scaling-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_kx_scaling_group(input)
-	return common.execute_aws_command_with_input({ "finspace", "get-kx-scaling-group" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "get-kx-scaling-group" }, input)
 end
 
 --- AWS finspace get-kx-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_kx_user(input)
-	return common.execute_aws_command_with_input({ "finspace", "get-kx-user" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "get-kx-user" }, input)
 end
 
 --- AWS finspace get-kx-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_kx_volume(input)
-	return common.execute_aws_command_with_input({ "finspace", "get-kx-volume" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "get-kx-volume" }, input)
 end
 
 --- AWS finspace list-kx-changesets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_kx_changesets(input)
-	return common.execute_aws_command_with_input({ "finspace", "list-kx-changesets" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "list-kx-changesets" }, input)
 end
 
 --- AWS finspace list-kx-cluster-nodes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_kx_cluster_nodes(input)
-	return common.execute_aws_command_with_input({ "finspace", "list-kx-cluster-nodes" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "list-kx-cluster-nodes" }, input)
 end
 
 --- AWS finspace list-kx-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_kx_clusters(input)
-	return common.execute_aws_command_with_input({ "finspace", "list-kx-clusters" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "list-kx-clusters" }, input)
 end
 
 --- AWS finspace list-kx-databases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_kx_databases(input)
-	return common.execute_aws_command_with_input({ "finspace", "list-kx-databases" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "list-kx-databases" }, input)
 end
 
 --- AWS finspace list-kx-dataviews operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_kx_dataviews(input)
-	return common.execute_aws_command_with_input({ "finspace", "list-kx-dataviews" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "list-kx-dataviews" }, input)
 end
 
 --- AWS finspace list-kx-environments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_kx_environments(input)
-	return common.execute_aws_command_with_input({ "finspace", "list-kx-environments" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "list-kx-environments" }, input)
 end
 
 --- AWS finspace list-kx-scaling-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_kx_scaling_groups(input)
-	return common.execute_aws_command_with_input({ "finspace", "list-kx-scaling-groups" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "list-kx-scaling-groups" }, input)
 end
 
 --- AWS finspace list-kx-users operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_kx_users(input)
-	return common.execute_aws_command_with_input({ "finspace", "list-kx-users" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "list-kx-users" }, input)
 end
 
 --- AWS finspace list-kx-volumes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_kx_volumes(input)
-	return common.execute_aws_command_with_input({ "finspace", "list-kx-volumes" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "list-kx-volumes" }, input)
 end
 
 --- AWS finspace list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "finspace", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "list-tags-for-resource" }, input)
 end
 
 --- AWS finspace tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "finspace", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "tag-resource" }, input)
 end
 
 --- AWS finspace untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "finspace", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "untag-resource" }, input)
 end
 
 --- AWS finspace update-kx-cluster-code-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_kx_cluster_code_configuration(input)
-	return common.execute_aws_command_with_input({ "finspace", "update-kx-cluster-code-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "update-kx-cluster-code-configuration" }, input)
 end
 
 --- AWS finspace update-kx-cluster-databases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_kx_cluster_databases(input)
-	return common.execute_aws_command_with_input({ "finspace", "update-kx-cluster-databases" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "update-kx-cluster-databases" }, input)
 end
 
 --- AWS finspace update-kx-database operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_kx_database(input)
-	return common.execute_aws_command_with_input({ "finspace", "update-kx-database" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "update-kx-database" }, input)
 end
 
 --- AWS finspace update-kx-dataview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_kx_dataview(input)
-	return common.execute_aws_command_with_input({ "finspace", "update-kx-dataview" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "update-kx-dataview" }, input)
 end
 
 --- AWS finspace update-kx-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_kx_environment(input)
-	return common.execute_aws_command_with_input({ "finspace", "update-kx-environment" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "update-kx-environment" }, input)
 end
 
 --- AWS finspace update-kx-environment-network operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_kx_environment_network(input)
-	return common.execute_aws_command_with_input({ "finspace", "update-kx-environment-network" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "update-kx-environment-network" }, input)
 end
 
 --- AWS finspace update-kx-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_kx_user(input)
-	return common.execute_aws_command_with_input({ "finspace", "update-kx-user" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "update-kx-user" }, input)
 end
 
 --- AWS finspace update-kx-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_kx_volume(input)
-	return common.execute_aws_command_with_input({ "finspace", "update-kx-volume" }, input)
+	return common.execute_aws_command_skeleton({ "finspace", "update-kx-volume" }, input)
 end
 
 return M

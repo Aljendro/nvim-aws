@@ -3,42 +3,42 @@
 
 local common = require("nvim-aws.common")
 
---- AWS GEO-ROUTES service functions
+--- AWS geo-routes service functions
 local M = {}
 
 --- AWS geo-routes calculate-isolines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.calculate_isolines(input)
-	return common.execute_aws_command_with_input({ "geo-routes", "calculate-isolines" }, input)
+	return common.execute_aws_command_skeleton({ "geo-routes", "calculate-isolines" }, input)
 end
 
 --- AWS geo-routes calculate-route-matrix operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.calculate_route_matrix(input)
-	return common.execute_aws_command_with_input({ "geo-routes", "calculate-route-matrix" }, input)
+	return common.execute_aws_command_skeleton({ "geo-routes", "calculate-route-matrix" }, input)
 end
 
 --- AWS geo-routes calculate-routes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.calculate_routes(input)
-	return common.execute_aws_command_with_input({ "geo-routes", "calculate-routes" }, input)
+	return common.execute_aws_command_skeleton({ "geo-routes", "calculate-routes" }, input)
 end
 
 --- AWS geo-routes optimize-waypoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.optimize_waypoints(input)
-	return common.execute_aws_command_with_input({ "geo-routes", "optimize-waypoints" }, input)
+	return common.execute_aws_command_skeleton({ "geo-routes", "optimize-waypoints" }, input)
 end
 
 --- AWS geo-routes snap-to-roads operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.snap_to_roads(input)
-	return common.execute_aws_command_with_input({ "geo-routes", "snap-to-roads" }, input)
+	return common.execute_aws_command_skeleton({ "geo-routes", "snap-to-roads" }, input)
 end
 
 return M

@@ -3,546 +3,546 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DEVICEFARM service functions
+--- AWS devicefarm service functions
 local M = {}
 
 --- AWS devicefarm create-device-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_device_pool(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "create-device-pool" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-device-pool" }, input)
 end
 
 --- AWS devicefarm create-instance-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_instance_profile(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "create-instance-profile" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-instance-profile" }, input)
 end
 
 --- AWS devicefarm create-network-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_network_profile(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "create-network-profile" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-network-profile" }, input)
 end
 
 --- AWS devicefarm create-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_project(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "create-project" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-project" }, input)
 end
 
 --- AWS devicefarm create-remote-access-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_remote_access_session(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "create-remote-access-session" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-remote-access-session" }, input)
 end
 
 --- AWS devicefarm create-test-grid-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_test_grid_project(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "create-test-grid-project" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-test-grid-project" }, input)
 end
 
 --- AWS devicefarm create-test-grid-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_test_grid_url(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "create-test-grid-url" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-test-grid-url" }, input)
 end
 
 --- AWS devicefarm create-upload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_upload(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "create-upload" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-upload" }, input)
 end
 
 --- AWS devicefarm create-vpce-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpce_configuration(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "create-vpce-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "create-vpce-configuration" }, input)
 end
 
 --- AWS devicefarm delete-device-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_device_pool(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "delete-device-pool" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-device-pool" }, input)
 end
 
 --- AWS devicefarm delete-instance-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_instance_profile(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "delete-instance-profile" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-instance-profile" }, input)
 end
 
 --- AWS devicefarm delete-network-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_profile(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "delete-network-profile" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-network-profile" }, input)
 end
 
 --- AWS devicefarm delete-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_project(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "delete-project" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-project" }, input)
 end
 
 --- AWS devicefarm delete-remote-access-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_remote_access_session(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "delete-remote-access-session" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-remote-access-session" }, input)
 end
 
 --- AWS devicefarm delete-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_run(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "delete-run" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-run" }, input)
 end
 
 --- AWS devicefarm delete-test-grid-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_test_grid_project(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "delete-test-grid-project" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-test-grid-project" }, input)
 end
 
 --- AWS devicefarm delete-upload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_upload(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "delete-upload" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-upload" }, input)
 end
 
 --- AWS devicefarm delete-vpce-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpce_configuration(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "delete-vpce-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "delete-vpce-configuration" }, input)
 end
 
 --- AWS devicefarm get-account-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_account_settings(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-account-settings" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-account-settings" }, input)
 end
 
 --- AWS devicefarm get-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_device(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-device" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-device" }, input)
 end
 
 --- AWS devicefarm get-device-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_device_instance(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-device-instance" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-device-instance" }, input)
 end
 
 --- AWS devicefarm get-device-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_device_pool(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-device-pool" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-device-pool" }, input)
 end
 
 --- AWS devicefarm get-device-pool-compatibility operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_device_pool_compatibility(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-device-pool-compatibility" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-device-pool-compatibility" }, input)
 end
 
 --- AWS devicefarm get-instance-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_instance_profile(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-instance-profile" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-instance-profile" }, input)
 end
 
 --- AWS devicefarm get-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_job(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-job" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-job" }, input)
 end
 
 --- AWS devicefarm get-network-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_network_profile(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-network-profile" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-network-profile" }, input)
 end
 
 --- AWS devicefarm get-offering-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_offering_status(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-offering-status" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-offering-status" }, input)
 end
 
 --- AWS devicefarm get-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_project(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-project" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-project" }, input)
 end
 
 --- AWS devicefarm get-remote-access-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_remote_access_session(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-remote-access-session" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-remote-access-session" }, input)
 end
 
 --- AWS devicefarm get-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_run(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-run" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-run" }, input)
 end
 
 --- AWS devicefarm get-suite operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_suite(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-suite" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-suite" }, input)
 end
 
 --- AWS devicefarm get-test operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_test(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-test" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-test" }, input)
 end
 
 --- AWS devicefarm get-test-grid-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_test_grid_project(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-test-grid-project" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-test-grid-project" }, input)
 end
 
 --- AWS devicefarm get-test-grid-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_test_grid_session(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-test-grid-session" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-test-grid-session" }, input)
 end
 
 --- AWS devicefarm get-upload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_upload(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-upload" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-upload" }, input)
 end
 
 --- AWS devicefarm get-vpce-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_vpce_configuration(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "get-vpce-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "get-vpce-configuration" }, input)
 end
 
 --- AWS devicefarm install-to-remote-access-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.install_to_remote_access_session(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "install-to-remote-access-session" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "install-to-remote-access-session" }, input)
 end
 
 --- AWS devicefarm list-artifacts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_artifacts(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-artifacts" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-artifacts" }, input)
 end
 
 --- AWS devicefarm list-device-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_device_instances(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-device-instances" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-device-instances" }, input)
 end
 
 --- AWS devicefarm list-device-pools operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_device_pools(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-device-pools" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-device-pools" }, input)
 end
 
 --- AWS devicefarm list-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_devices(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-devices" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-devices" }, input)
 end
 
 --- AWS devicefarm list-instance-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_instance_profiles(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-instance-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-instance-profiles" }, input)
 end
 
 --- AWS devicefarm list-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_jobs(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-jobs" }, input)
 end
 
 --- AWS devicefarm list-network-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_network_profiles(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-network-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-network-profiles" }, input)
 end
 
 --- AWS devicefarm list-offering-promotions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_offering_promotions(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-offering-promotions" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-offering-promotions" }, input)
 end
 
 --- AWS devicefarm list-offering-transactions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_offering_transactions(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-offering-transactions" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-offering-transactions" }, input)
 end
 
 --- AWS devicefarm list-offerings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_offerings(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-offerings" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-offerings" }, input)
 end
 
 --- AWS devicefarm list-projects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_projects(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-projects" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-projects" }, input)
 end
 
 --- AWS devicefarm list-remote-access-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_remote_access_sessions(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-remote-access-sessions" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-remote-access-sessions" }, input)
 end
 
 --- AWS devicefarm list-runs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_runs(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-runs" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-runs" }, input)
 end
 
 --- AWS devicefarm list-samples operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_samples(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-samples" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-samples" }, input)
 end
 
 --- AWS devicefarm list-suites operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_suites(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-suites" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-suites" }, input)
 end
 
 --- AWS devicefarm list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-tags-for-resource" }, input)
 end
 
 --- AWS devicefarm list-test-grid-projects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_test_grid_projects(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-test-grid-projects" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-projects" }, input)
 end
 
 --- AWS devicefarm list-test-grid-session-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_test_grid_session_actions(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-test-grid-session-actions" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-session-actions" }, input)
 end
 
 --- AWS devicefarm list-test-grid-session-artifacts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_test_grid_session_artifacts(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-test-grid-session-artifacts" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-session-artifacts" }, input)
 end
 
 --- AWS devicefarm list-test-grid-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_test_grid_sessions(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-test-grid-sessions" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-test-grid-sessions" }, input)
 end
 
 --- AWS devicefarm list-tests operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tests(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-tests" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-tests" }, input)
 end
 
 --- AWS devicefarm list-unique-problems operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_unique_problems(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-unique-problems" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-unique-problems" }, input)
 end
 
 --- AWS devicefarm list-uploads operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_uploads(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-uploads" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-uploads" }, input)
 end
 
 --- AWS devicefarm list-vpce-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_vpce_configurations(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "list-vpce-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "list-vpce-configurations" }, input)
 end
 
 --- AWS devicefarm purchase-offering operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.purchase_offering(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "purchase-offering" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "purchase-offering" }, input)
 end
 
 --- AWS devicefarm renew-offering operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.renew_offering(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "renew-offering" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "renew-offering" }, input)
 end
 
 --- AWS devicefarm schedule-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.schedule_run(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "schedule-run" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "schedule-run" }, input)
 end
 
 --- AWS devicefarm stop-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_job(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "stop-job" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "stop-job" }, input)
 end
 
 --- AWS devicefarm stop-remote-access-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_remote_access_session(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "stop-remote-access-session" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "stop-remote-access-session" }, input)
 end
 
 --- AWS devicefarm stop-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_run(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "stop-run" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "stop-run" }, input)
 end
 
 --- AWS devicefarm tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "tag-resource" }, input)
 end
 
 --- AWS devicefarm untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "untag-resource" }, input)
 end
 
 --- AWS devicefarm update-device-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_device_instance(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "update-device-instance" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-device-instance" }, input)
 end
 
 --- AWS devicefarm update-device-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_device_pool(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "update-device-pool" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-device-pool" }, input)
 end
 
 --- AWS devicefarm update-instance-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_instance_profile(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "update-instance-profile" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-instance-profile" }, input)
 end
 
 --- AWS devicefarm update-network-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_network_profile(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "update-network-profile" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-network-profile" }, input)
 end
 
 --- AWS devicefarm update-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_project(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "update-project" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-project" }, input)
 end
 
 --- AWS devicefarm update-test-grid-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_test_grid_project(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "update-test-grid-project" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-test-grid-project" }, input)
 end
 
 --- AWS devicefarm update-upload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_upload(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "update-upload" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-upload" }, input)
 end
 
 --- AWS devicefarm update-vpce-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_vpce_configuration(input)
-	return common.execute_aws_command_with_input({ "devicefarm", "update-vpce-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "devicefarm", "update-vpce-configuration" }, input)
 end
 
 return M

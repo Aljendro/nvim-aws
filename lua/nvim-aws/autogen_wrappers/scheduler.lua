@@ -3,91 +3,91 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SCHEDULER service functions
+--- AWS scheduler service functions
 local M = {}
 
 --- AWS scheduler create-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_schedule(input)
-	return common.execute_aws_command_with_input({ "scheduler", "create-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "create-schedule" }, input)
 end
 
 --- AWS scheduler create-schedule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_schedule_group(input)
-	return common.execute_aws_command_with_input({ "scheduler", "create-schedule-group" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "create-schedule-group" }, input)
 end
 
 --- AWS scheduler delete-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_schedule(input)
-	return common.execute_aws_command_with_input({ "scheduler", "delete-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "delete-schedule" }, input)
 end
 
 --- AWS scheduler delete-schedule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_schedule_group(input)
-	return common.execute_aws_command_with_input({ "scheduler", "delete-schedule-group" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "delete-schedule-group" }, input)
 end
 
 --- AWS scheduler get-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_schedule(input)
-	return common.execute_aws_command_with_input({ "scheduler", "get-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "get-schedule" }, input)
 end
 
 --- AWS scheduler get-schedule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_schedule_group(input)
-	return common.execute_aws_command_with_input({ "scheduler", "get-schedule-group" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "get-schedule-group" }, input)
 end
 
 --- AWS scheduler list-schedule-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_schedule_groups(input)
-	return common.execute_aws_command_with_input({ "scheduler", "list-schedule-groups" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "list-schedule-groups" }, input)
 end
 
 --- AWS scheduler list-schedules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_schedules(input)
-	return common.execute_aws_command_with_input({ "scheduler", "list-schedules" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "list-schedules" }, input)
 end
 
 --- AWS scheduler list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "scheduler", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "list-tags-for-resource" }, input)
 end
 
 --- AWS scheduler tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "scheduler", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "tag-resource" }, input)
 end
 
 --- AWS scheduler untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "scheduler", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "untag-resource" }, input)
 end
 
 --- AWS scheduler update-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_schedule(input)
-	return common.execute_aws_command_with_input({ "scheduler", "update-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "scheduler", "update-schedule" }, input)
 end
 
 return M

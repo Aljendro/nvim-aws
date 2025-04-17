@@ -3,126 +3,126 @@
 
 local common = require("nvim-aws.common")
 
---- AWS TIMESTREAM-INFLUXDB service functions
+--- AWS timestream-influxdb service functions
 local M = {}
 
 --- AWS timestream-influxdb create-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_db_cluster(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "create-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "create-db-cluster" }, input)
 end
 
 --- AWS timestream-influxdb create-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_db_instance(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "create-db-instance" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "create-db-instance" }, input)
 end
 
 --- AWS timestream-influxdb create-db-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_db_parameter_group(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "create-db-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "create-db-parameter-group" }, input)
 end
 
 --- AWS timestream-influxdb delete-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_db_cluster(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "delete-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "delete-db-cluster" }, input)
 end
 
 --- AWS timestream-influxdb delete-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_db_instance(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "delete-db-instance" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "delete-db-instance" }, input)
 end
 
 --- AWS timestream-influxdb get-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_db_cluster(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "get-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "get-db-cluster" }, input)
 end
 
 --- AWS timestream-influxdb get-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_db_instance(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "get-db-instance" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "get-db-instance" }, input)
 end
 
 --- AWS timestream-influxdb get-db-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_db_parameter_group(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "get-db-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "get-db-parameter-group" }, input)
 end
 
 --- AWS timestream-influxdb list-db-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_db_clusters(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "list-db-clusters" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "list-db-clusters" }, input)
 end
 
 --- AWS timestream-influxdb list-db-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_db_instances(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "list-db-instances" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "list-db-instances" }, input)
 end
 
 --- AWS timestream-influxdb list-db-instances-for-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_db_instances_for_cluster(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "list-db-instances-for-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "list-db-instances-for-cluster" }, input)
 end
 
 --- AWS timestream-influxdb list-db-parameter-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_db_parameter_groups(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "list-db-parameter-groups" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "list-db-parameter-groups" }, input)
 end
 
 --- AWS timestream-influxdb list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "list-tags-for-resource" }, input)
 end
 
 --- AWS timestream-influxdb tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "tag-resource" }, input)
 end
 
 --- AWS timestream-influxdb untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "untag-resource" }, input)
 end
 
 --- AWS timestream-influxdb update-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_db_cluster(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "update-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "update-db-cluster" }, input)
 end
 
 --- AWS timestream-influxdb update-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_db_instance(input)
-	return common.execute_aws_command_with_input({ "timestream-influxdb", "update-db-instance" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-influxdb", "update-db-instance" }, input)
 end
 
 return M

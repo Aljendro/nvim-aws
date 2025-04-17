@@ -3,301 +3,301 @@
 
 local common = require("nvim-aws.common")
 
---- AWS ROBOMAKER service functions
+--- AWS robomaker service functions
 local M = {}
 
 --- AWS robomaker batch-delete-worlds operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_worlds(input)
-	return common.execute_aws_command_with_input({ "robomaker", "batch-delete-worlds" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "batch-delete-worlds" }, input)
 end
 
 --- AWS robomaker batch-describe-simulation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_describe_simulation_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "batch-describe-simulation-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "batch-describe-simulation-job" }, input)
 end
 
 --- AWS robomaker cancel-simulation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_simulation_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "cancel-simulation-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "cancel-simulation-job" }, input)
 end
 
 --- AWS robomaker cancel-simulation-job-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_simulation_job_batch(input)
-	return common.execute_aws_command_with_input({ "robomaker", "cancel-simulation-job-batch" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "cancel-simulation-job-batch" }, input)
 end
 
 --- AWS robomaker cancel-world-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_world_export_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "cancel-world-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "cancel-world-export-job" }, input)
 end
 
 --- AWS robomaker cancel-world-generation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_world_generation_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "cancel-world-generation-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "cancel-world-generation-job" }, input)
 end
 
 --- AWS robomaker create-robot-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_robot_application(input)
-	return common.execute_aws_command_with_input({ "robomaker", "create-robot-application" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-robot-application" }, input)
 end
 
 --- AWS robomaker create-robot-application-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_robot_application_version(input)
-	return common.execute_aws_command_with_input({ "robomaker", "create-robot-application-version" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-robot-application-version" }, input)
 end
 
 --- AWS robomaker create-simulation-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_simulation_application(input)
-	return common.execute_aws_command_with_input({ "robomaker", "create-simulation-application" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-simulation-application" }, input)
 end
 
 --- AWS robomaker create-simulation-application-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_simulation_application_version(input)
-	return common.execute_aws_command_with_input({ "robomaker", "create-simulation-application-version" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-simulation-application-version" }, input)
 end
 
 --- AWS robomaker create-simulation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_simulation_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "create-simulation-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-simulation-job" }, input)
 end
 
 --- AWS robomaker create-world-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_world_export_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "create-world-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-world-export-job" }, input)
 end
 
 --- AWS robomaker create-world-generation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_world_generation_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "create-world-generation-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-world-generation-job" }, input)
 end
 
 --- AWS robomaker create-world-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_world_template(input)
-	return common.execute_aws_command_with_input({ "robomaker", "create-world-template" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "create-world-template" }, input)
 end
 
 --- AWS robomaker delete-robot-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_robot_application(input)
-	return common.execute_aws_command_with_input({ "robomaker", "delete-robot-application" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "delete-robot-application" }, input)
 end
 
 --- AWS robomaker delete-simulation-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_simulation_application(input)
-	return common.execute_aws_command_with_input({ "robomaker", "delete-simulation-application" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "delete-simulation-application" }, input)
 end
 
 --- AWS robomaker delete-world-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_world_template(input)
-	return common.execute_aws_command_with_input({ "robomaker", "delete-world-template" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "delete-world-template" }, input)
 end
 
 --- AWS robomaker describe-robot-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_robot_application(input)
-	return common.execute_aws_command_with_input({ "robomaker", "describe-robot-application" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-robot-application" }, input)
 end
 
 --- AWS robomaker describe-simulation-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_simulation_application(input)
-	return common.execute_aws_command_with_input({ "robomaker", "describe-simulation-application" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-simulation-application" }, input)
 end
 
 --- AWS robomaker describe-simulation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_simulation_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "describe-simulation-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-simulation-job" }, input)
 end
 
 --- AWS robomaker describe-simulation-job-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_simulation_job_batch(input)
-	return common.execute_aws_command_with_input({ "robomaker", "describe-simulation-job-batch" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-simulation-job-batch" }, input)
 end
 
 --- AWS robomaker describe-world operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_world(input)
-	return common.execute_aws_command_with_input({ "robomaker", "describe-world" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-world" }, input)
 end
 
 --- AWS robomaker describe-world-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_world_export_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "describe-world-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-world-export-job" }, input)
 end
 
 --- AWS robomaker describe-world-generation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_world_generation_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "describe-world-generation-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-world-generation-job" }, input)
 end
 
 --- AWS robomaker describe-world-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_world_template(input)
-	return common.execute_aws_command_with_input({ "robomaker", "describe-world-template" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "describe-world-template" }, input)
 end
 
 --- AWS robomaker get-world-template-body operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_world_template_body(input)
-	return common.execute_aws_command_with_input({ "robomaker", "get-world-template-body" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "get-world-template-body" }, input)
 end
 
 --- AWS robomaker list-robot-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_robot_applications(input)
-	return common.execute_aws_command_with_input({ "robomaker", "list-robot-applications" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-robot-applications" }, input)
 end
 
 --- AWS robomaker list-simulation-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_simulation_applications(input)
-	return common.execute_aws_command_with_input({ "robomaker", "list-simulation-applications" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-simulation-applications" }, input)
 end
 
 --- AWS robomaker list-simulation-job-batches operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_simulation_job_batches(input)
-	return common.execute_aws_command_with_input({ "robomaker", "list-simulation-job-batches" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-simulation-job-batches" }, input)
 end
 
 --- AWS robomaker list-simulation-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_simulation_jobs(input)
-	return common.execute_aws_command_with_input({ "robomaker", "list-simulation-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-simulation-jobs" }, input)
 end
 
 --- AWS robomaker list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "robomaker", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-tags-for-resource" }, input)
 end
 
 --- AWS robomaker list-world-export-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_world_export_jobs(input)
-	return common.execute_aws_command_with_input({ "robomaker", "list-world-export-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-world-export-jobs" }, input)
 end
 
 --- AWS robomaker list-world-generation-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_world_generation_jobs(input)
-	return common.execute_aws_command_with_input({ "robomaker", "list-world-generation-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-world-generation-jobs" }, input)
 end
 
 --- AWS robomaker list-world-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_world_templates(input)
-	return common.execute_aws_command_with_input({ "robomaker", "list-world-templates" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-world-templates" }, input)
 end
 
 --- AWS robomaker list-worlds operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_worlds(input)
-	return common.execute_aws_command_with_input({ "robomaker", "list-worlds" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "list-worlds" }, input)
 end
 
 --- AWS robomaker restart-simulation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restart_simulation_job(input)
-	return common.execute_aws_command_with_input({ "robomaker", "restart-simulation-job" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "restart-simulation-job" }, input)
 end
 
 --- AWS robomaker start-simulation-job-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_simulation_job_batch(input)
-	return common.execute_aws_command_with_input({ "robomaker", "start-simulation-job-batch" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "start-simulation-job-batch" }, input)
 end
 
 --- AWS robomaker tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "robomaker", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "tag-resource" }, input)
 end
 
 --- AWS robomaker untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "robomaker", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "untag-resource" }, input)
 end
 
 --- AWS robomaker update-robot-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_robot_application(input)
-	return common.execute_aws_command_with_input({ "robomaker", "update-robot-application" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "update-robot-application" }, input)
 end
 
 --- AWS robomaker update-simulation-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_simulation_application(input)
-	return common.execute_aws_command_with_input({ "robomaker", "update-simulation-application" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "update-simulation-application" }, input)
 end
 
 --- AWS robomaker update-world-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_world_template(input)
-	return common.execute_aws_command_with_input({ "robomaker", "update-world-template" }, input)
+	return common.execute_aws_command_skeleton({ "robomaker", "update-world-template" }, input)
 end
 
 return M

@@ -3,469 +3,469 @@
 
 local common = require("nvim-aws.common")
 
---- AWS KENDRA service functions
+--- AWS kendra service functions
 local M = {}
 
 --- AWS kendra associate-entities-to-experience operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_entities_to_experience(input)
-	return common.execute_aws_command_with_input({ "kendra", "associate-entities-to-experience" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "associate-entities-to-experience" }, input)
 end
 
 --- AWS kendra associate-personas-to-entities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_personas_to_entities(input)
-	return common.execute_aws_command_with_input({ "kendra", "associate-personas-to-entities" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "associate-personas-to-entities" }, input)
 end
 
 --- AWS kendra batch-delete-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_document(input)
-	return common.execute_aws_command_with_input({ "kendra", "batch-delete-document" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "batch-delete-document" }, input)
 end
 
 --- AWS kendra batch-delete-featured-results-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_featured_results_set(input)
-	return common.execute_aws_command_with_input({ "kendra", "batch-delete-featured-results-set" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "batch-delete-featured-results-set" }, input)
 end
 
 --- AWS kendra batch-get-document-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_document_status(input)
-	return common.execute_aws_command_with_input({ "kendra", "batch-get-document-status" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "batch-get-document-status" }, input)
 end
 
 --- AWS kendra batch-put-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_put_document(input)
-	return common.execute_aws_command_with_input({ "kendra", "batch-put-document" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "batch-put-document" }, input)
 end
 
 --- AWS kendra clear-query-suggestions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.clear_query_suggestions(input)
-	return common.execute_aws_command_with_input({ "kendra", "clear-query-suggestions" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "clear-query-suggestions" }, input)
 end
 
 --- AWS kendra create-access-control-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_access_control_configuration(input)
-	return common.execute_aws_command_with_input({ "kendra", "create-access-control-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "create-access-control-configuration" }, input)
 end
 
 --- AWS kendra create-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_source(input)
-	return common.execute_aws_command_with_input({ "kendra", "create-data-source" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "create-data-source" }, input)
 end
 
 --- AWS kendra create-experience operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_experience(input)
-	return common.execute_aws_command_with_input({ "kendra", "create-experience" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "create-experience" }, input)
 end
 
 --- AWS kendra create-faq operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_faq(input)
-	return common.execute_aws_command_with_input({ "kendra", "create-faq" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "create-faq" }, input)
 end
 
 --- AWS kendra create-featured-results-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_featured_results_set(input)
-	return common.execute_aws_command_with_input({ "kendra", "create-featured-results-set" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "create-featured-results-set" }, input)
 end
 
 --- AWS kendra create-index operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_index(input)
-	return common.execute_aws_command_with_input({ "kendra", "create-index" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "create-index" }, input)
 end
 
 --- AWS kendra create-query-suggestions-block-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_query_suggestions_block_list(input)
-	return common.execute_aws_command_with_input({ "kendra", "create-query-suggestions-block-list" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "create-query-suggestions-block-list" }, input)
 end
 
 --- AWS kendra create-thesaurus operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_thesaurus(input)
-	return common.execute_aws_command_with_input({ "kendra", "create-thesaurus" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "create-thesaurus" }, input)
 end
 
 --- AWS kendra delete-access-control-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_access_control_configuration(input)
-	return common.execute_aws_command_with_input({ "kendra", "delete-access-control-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "delete-access-control-configuration" }, input)
 end
 
 --- AWS kendra delete-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_source(input)
-	return common.execute_aws_command_with_input({ "kendra", "delete-data-source" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "delete-data-source" }, input)
 end
 
 --- AWS kendra delete-experience operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_experience(input)
-	return common.execute_aws_command_with_input({ "kendra", "delete-experience" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "delete-experience" }, input)
 end
 
 --- AWS kendra delete-faq operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_faq(input)
-	return common.execute_aws_command_with_input({ "kendra", "delete-faq" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "delete-faq" }, input)
 end
 
 --- AWS kendra delete-index operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_index(input)
-	return common.execute_aws_command_with_input({ "kendra", "delete-index" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "delete-index" }, input)
 end
 
 --- AWS kendra delete-principal-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_principal_mapping(input)
-	return common.execute_aws_command_with_input({ "kendra", "delete-principal-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "delete-principal-mapping" }, input)
 end
 
 --- AWS kendra delete-query-suggestions-block-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_query_suggestions_block_list(input)
-	return common.execute_aws_command_with_input({ "kendra", "delete-query-suggestions-block-list" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "delete-query-suggestions-block-list" }, input)
 end
 
 --- AWS kendra delete-thesaurus operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_thesaurus(input)
-	return common.execute_aws_command_with_input({ "kendra", "delete-thesaurus" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "delete-thesaurus" }, input)
 end
 
 --- AWS kendra describe-access-control-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_access_control_configuration(input)
-	return common.execute_aws_command_with_input({ "kendra", "describe-access-control-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "describe-access-control-configuration" }, input)
 end
 
 --- AWS kendra describe-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_source(input)
-	return common.execute_aws_command_with_input({ "kendra", "describe-data-source" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "describe-data-source" }, input)
 end
 
 --- AWS kendra describe-experience operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_experience(input)
-	return common.execute_aws_command_with_input({ "kendra", "describe-experience" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "describe-experience" }, input)
 end
 
 --- AWS kendra describe-faq operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_faq(input)
-	return common.execute_aws_command_with_input({ "kendra", "describe-faq" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "describe-faq" }, input)
 end
 
 --- AWS kendra describe-featured-results-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_featured_results_set(input)
-	return common.execute_aws_command_with_input({ "kendra", "describe-featured-results-set" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "describe-featured-results-set" }, input)
 end
 
 --- AWS kendra describe-index operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_index(input)
-	return common.execute_aws_command_with_input({ "kendra", "describe-index" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "describe-index" }, input)
 end
 
 --- AWS kendra describe-principal-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_principal_mapping(input)
-	return common.execute_aws_command_with_input({ "kendra", "describe-principal-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "describe-principal-mapping" }, input)
 end
 
 --- AWS kendra describe-query-suggestions-block-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_query_suggestions_block_list(input)
-	return common.execute_aws_command_with_input({ "kendra", "describe-query-suggestions-block-list" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "describe-query-suggestions-block-list" }, input)
 end
 
 --- AWS kendra describe-query-suggestions-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_query_suggestions_config(input)
-	return common.execute_aws_command_with_input({ "kendra", "describe-query-suggestions-config" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "describe-query-suggestions-config" }, input)
 end
 
 --- AWS kendra describe-thesaurus operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_thesaurus(input)
-	return common.execute_aws_command_with_input({ "kendra", "describe-thesaurus" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "describe-thesaurus" }, input)
 end
 
 --- AWS kendra disassociate-entities-from-experience operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_entities_from_experience(input)
-	return common.execute_aws_command_with_input({ "kendra", "disassociate-entities-from-experience" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "disassociate-entities-from-experience" }, input)
 end
 
 --- AWS kendra disassociate-personas-from-entities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_personas_from_entities(input)
-	return common.execute_aws_command_with_input({ "kendra", "disassociate-personas-from-entities" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "disassociate-personas-from-entities" }, input)
 end
 
 --- AWS kendra get-query-suggestions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_query_suggestions(input)
-	return common.execute_aws_command_with_input({ "kendra", "get-query-suggestions" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "get-query-suggestions" }, input)
 end
 
 --- AWS kendra get-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_snapshots(input)
-	return common.execute_aws_command_with_input({ "kendra", "get-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "get-snapshots" }, input)
 end
 
 --- AWS kendra list-access-control-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_access_control_configurations(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-access-control-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-access-control-configurations" }, input)
 end
 
 --- AWS kendra list-data-source-sync-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_data_source_sync_jobs(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-data-source-sync-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-data-source-sync-jobs" }, input)
 end
 
 --- AWS kendra list-data-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_data_sources(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-data-sources" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-data-sources" }, input)
 end
 
 --- AWS kendra list-entity-personas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_entity_personas(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-entity-personas" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-entity-personas" }, input)
 end
 
 --- AWS kendra list-experience-entities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_experience_entities(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-experience-entities" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-experience-entities" }, input)
 end
 
 --- AWS kendra list-experiences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_experiences(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-experiences" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-experiences" }, input)
 end
 
 --- AWS kendra list-faqs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_faqs(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-faqs" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-faqs" }, input)
 end
 
 --- AWS kendra list-featured-results-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_featured_results_sets(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-featured-results-sets" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-featured-results-sets" }, input)
 end
 
 --- AWS kendra list-groups-older-than-ordering-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_groups_older_than_ordering_id(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-groups-older-than-ordering-id" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-groups-older-than-ordering-id" }, input)
 end
 
 --- AWS kendra list-indices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_indices(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-indices" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-indices" }, input)
 end
 
 --- AWS kendra list-query-suggestions-block-lists operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_query_suggestions_block_lists(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-query-suggestions-block-lists" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-query-suggestions-block-lists" }, input)
 end
 
 --- AWS kendra list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-tags-for-resource" }, input)
 end
 
 --- AWS kendra list-thesauri operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_thesauri(input)
-	return common.execute_aws_command_with_input({ "kendra", "list-thesauri" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "list-thesauri" }, input)
 end
 
 --- AWS kendra put-principal-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_principal_mapping(input)
-	return common.execute_aws_command_with_input({ "kendra", "put-principal-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "put-principal-mapping" }, input)
 end
 
 --- AWS kendra query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.query(input)
-	return common.execute_aws_command_with_input({ "kendra", "query" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "query" }, input)
 end
 
 --- AWS kendra retrieve operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.retrieve(input)
-	return common.execute_aws_command_with_input({ "kendra", "retrieve" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "retrieve" }, input)
 end
 
 --- AWS kendra start-data-source-sync-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_data_source_sync_job(input)
-	return common.execute_aws_command_with_input({ "kendra", "start-data-source-sync-job" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "start-data-source-sync-job" }, input)
 end
 
 --- AWS kendra stop-data-source-sync-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_data_source_sync_job(input)
-	return common.execute_aws_command_with_input({ "kendra", "stop-data-source-sync-job" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "stop-data-source-sync-job" }, input)
 end
 
 --- AWS kendra submit-feedback operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.submit_feedback(input)
-	return common.execute_aws_command_with_input({ "kendra", "submit-feedback" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "submit-feedback" }, input)
 end
 
 --- AWS kendra tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "kendra", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "tag-resource" }, input)
 end
 
 --- AWS kendra untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "kendra", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "untag-resource" }, input)
 end
 
 --- AWS kendra update-access-control-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_access_control_configuration(input)
-	return common.execute_aws_command_with_input({ "kendra", "update-access-control-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "update-access-control-configuration" }, input)
 end
 
 --- AWS kendra update-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_data_source(input)
-	return common.execute_aws_command_with_input({ "kendra", "update-data-source" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "update-data-source" }, input)
 end
 
 --- AWS kendra update-experience operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_experience(input)
-	return common.execute_aws_command_with_input({ "kendra", "update-experience" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "update-experience" }, input)
 end
 
 --- AWS kendra update-featured-results-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_featured_results_set(input)
-	return common.execute_aws_command_with_input({ "kendra", "update-featured-results-set" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "update-featured-results-set" }, input)
 end
 
 --- AWS kendra update-index operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_index(input)
-	return common.execute_aws_command_with_input({ "kendra", "update-index" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "update-index" }, input)
 end
 
 --- AWS kendra update-query-suggestions-block-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_query_suggestions_block_list(input)
-	return common.execute_aws_command_with_input({ "kendra", "update-query-suggestions-block-list" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "update-query-suggestions-block-list" }, input)
 end
 
 --- AWS kendra update-query-suggestions-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_query_suggestions_config(input)
-	return common.execute_aws_command_with_input({ "kendra", "update-query-suggestions-config" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "update-query-suggestions-config" }, input)
 end
 
 --- AWS kendra update-thesaurus operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_thesaurus(input)
-	return common.execute_aws_command_with_input({ "kendra", "update-thesaurus" }, input)
+	return common.execute_aws_command_skeleton({ "kendra", "update-thesaurus" }, input)
 end
 
 return M

@@ -3,168 +3,168 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SQS service functions
+--- AWS sqs service functions
 local M = {}
 
 --- AWS sqs add-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_permission(input)
-	return common.execute_aws_command_with_input({ "sqs", "add-permission" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "add-permission" }, input)
 end
 
 --- AWS sqs cancel-message-move-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_message_move_task(input)
-	return common.execute_aws_command_with_input({ "sqs", "cancel-message-move-task" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "cancel-message-move-task" }, input)
 end
 
 --- AWS sqs change-message-visibility operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.change_message_visibility(input)
-	return common.execute_aws_command_with_input({ "sqs", "change-message-visibility" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "change-message-visibility" }, input)
 end
 
 --- AWS sqs change-message-visibility-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.change_message_visibility_batch(input)
-	return common.execute_aws_command_with_input({ "sqs", "change-message-visibility-batch" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "change-message-visibility-batch" }, input)
 end
 
 --- AWS sqs create-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_queue(input)
-	return common.execute_aws_command_with_input({ "sqs", "create-queue" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "create-queue" }, input)
 end
 
 --- AWS sqs delete-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_message(input)
-	return common.execute_aws_command_with_input({ "sqs", "delete-message" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "delete-message" }, input)
 end
 
 --- AWS sqs delete-message-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_message_batch(input)
-	return common.execute_aws_command_with_input({ "sqs", "delete-message-batch" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "delete-message-batch" }, input)
 end
 
 --- AWS sqs delete-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_queue(input)
-	return common.execute_aws_command_with_input({ "sqs", "delete-queue" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "delete-queue" }, input)
 end
 
 --- AWS sqs get-queue-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_queue_attributes(input)
-	return common.execute_aws_command_with_input({ "sqs", "get-queue-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "get-queue-attributes" }, input)
 end
 
 --- AWS sqs get-queue-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_queue_url(input)
-	return common.execute_aws_command_with_input({ "sqs", "get-queue-url" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "get-queue-url" }, input)
 end
 
 --- AWS sqs list-dead-letter-source-queues operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_dead_letter_source_queues(input)
-	return common.execute_aws_command_with_input({ "sqs", "list-dead-letter-source-queues" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "list-dead-letter-source-queues" }, input)
 end
 
 --- AWS sqs list-message-move-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_message_move_tasks(input)
-	return common.execute_aws_command_with_input({ "sqs", "list-message-move-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "list-message-move-tasks" }, input)
 end
 
 --- AWS sqs list-queue-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_queue_tags(input)
-	return common.execute_aws_command_with_input({ "sqs", "list-queue-tags" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "list-queue-tags" }, input)
 end
 
 --- AWS sqs list-queues operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_queues(input)
-	return common.execute_aws_command_with_input({ "sqs", "list-queues" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "list-queues" }, input)
 end
 
 --- AWS sqs purge-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.purge_queue(input)
-	return common.execute_aws_command_with_input({ "sqs", "purge-queue" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "purge-queue" }, input)
 end
 
 --- AWS sqs receive-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.receive_message(input)
-	return common.execute_aws_command_with_input({ "sqs", "receive-message" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "receive-message" }, input)
 end
 
 --- AWS sqs remove-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_permission(input)
-	return common.execute_aws_command_with_input({ "sqs", "remove-permission" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "remove-permission" }, input)
 end
 
 --- AWS sqs send-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_message(input)
-	return common.execute_aws_command_with_input({ "sqs", "send-message" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "send-message" }, input)
 end
 
 --- AWS sqs send-message-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_message_batch(input)
-	return common.execute_aws_command_with_input({ "sqs", "send-message-batch" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "send-message-batch" }, input)
 end
 
 --- AWS sqs set-queue-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_queue_attributes(input)
-	return common.execute_aws_command_with_input({ "sqs", "set-queue-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "set-queue-attributes" }, input)
 end
 
 --- AWS sqs start-message-move-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_message_move_task(input)
-	return common.execute_aws_command_with_input({ "sqs", "start-message-move-task" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "start-message-move-task" }, input)
 end
 
 --- AWS sqs tag-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_queue(input)
-	return common.execute_aws_command_with_input({ "sqs", "tag-queue" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "tag-queue" }, input)
 end
 
 --- AWS sqs untag-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_queue(input)
-	return common.execute_aws_command_with_input({ "sqs", "untag-queue" }, input)
+	return common.execute_aws_command_skeleton({ "sqs", "untag-queue" }, input)
 end
 
 return M

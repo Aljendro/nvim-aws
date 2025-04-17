@@ -3,105 +3,105 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SSM-QUICKSETUP service functions
+--- AWS ssm-quicksetup service functions
 local M = {}
 
 --- AWS ssm-quicksetup create-configuration-manager operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_configuration_manager(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "create-configuration-manager" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "create-configuration-manager" }, input)
 end
 
 --- AWS ssm-quicksetup delete-configuration-manager operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configuration_manager(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "delete-configuration-manager" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "delete-configuration-manager" }, input)
 end
 
 --- AWS ssm-quicksetup get-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_configuration(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "get-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "get-configuration" }, input)
 end
 
 --- AWS ssm-quicksetup get-configuration-manager operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_configuration_manager(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "get-configuration-manager" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "get-configuration-manager" }, input)
 end
 
 --- AWS ssm-quicksetup get-service-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_service_settings(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "get-service-settings" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "get-service-settings" }, input)
 end
 
 --- AWS ssm-quicksetup list-configuration-managers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_configuration_managers(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "list-configuration-managers" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "list-configuration-managers" }, input)
 end
 
 --- AWS ssm-quicksetup list-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_configurations(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "list-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "list-configurations" }, input)
 end
 
 --- AWS ssm-quicksetup list-quick-setup-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_quick_setup_types(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "list-quick-setup-types" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "list-quick-setup-types" }, input)
 end
 
 --- AWS ssm-quicksetup list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "list-tags-for-resource" }, input)
 end
 
 --- AWS ssm-quicksetup tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "tag-resource" }, input)
 end
 
 --- AWS ssm-quicksetup untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "untag-resource" }, input)
 end
 
 --- AWS ssm-quicksetup update-configuration-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_configuration_definition(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "update-configuration-definition" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "update-configuration-definition" }, input)
 end
 
 --- AWS ssm-quicksetup update-configuration-manager operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_configuration_manager(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "update-configuration-manager" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "update-configuration-manager" }, input)
 end
 
 --- AWS ssm-quicksetup update-service-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_service_settings(input)
-	return common.execute_aws_command_with_input({ "ssm-quicksetup", "update-service-settings" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-quicksetup", "update-service-settings" }, input)
 end
 
 return M

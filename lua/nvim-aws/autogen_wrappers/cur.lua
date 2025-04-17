@@ -3,56 +3,56 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CUR service functions
+--- AWS cur service functions
 local M = {}
 
 --- AWS cur delete-report-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_report_definition(input)
-	return common.execute_aws_command_with_input({ "cur", "delete-report-definition" }, input)
+	return common.execute_aws_command_skeleton({ "cur", "delete-report-definition" }, input)
 end
 
 --- AWS cur describe-report-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_report_definitions(input)
-	return common.execute_aws_command_with_input({ "cur", "describe-report-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "cur", "describe-report-definitions" }, input)
 end
 
 --- AWS cur list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "cur", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cur", "list-tags-for-resource" }, input)
 end
 
 --- AWS cur modify-report-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_report_definition(input)
-	return common.execute_aws_command_with_input({ "cur", "modify-report-definition" }, input)
+	return common.execute_aws_command_skeleton({ "cur", "modify-report-definition" }, input)
 end
 
 --- AWS cur put-report-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_report_definition(input)
-	return common.execute_aws_command_with_input({ "cur", "put-report-definition" }, input)
+	return common.execute_aws_command_skeleton({ "cur", "put-report-definition" }, input)
 end
 
 --- AWS cur tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "cur", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cur", "tag-resource" }, input)
 end
 
 --- AWS cur untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "cur", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cur", "untag-resource" }, input)
 end
 
 return M

@@ -3,35 +3,35 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MIGRATIONHUB-CONFIG service functions
+--- AWS migrationhub-config service functions
 local M = {}
 
 --- AWS migrationhub-config create-home-region-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_home_region_control(input)
-	return common.execute_aws_command_with_input({ "migrationhub-config", "create-home-region-control" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhub-config", "create-home-region-control" }, input)
 end
 
 --- AWS migrationhub-config delete-home-region-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_home_region_control(input)
-	return common.execute_aws_command_with_input({ "migrationhub-config", "delete-home-region-control" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhub-config", "delete-home-region-control" }, input)
 end
 
 --- AWS migrationhub-config describe-home-region-controls operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_home_region_controls(input)
-	return common.execute_aws_command_with_input({ "migrationhub-config", "describe-home-region-controls" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhub-config", "describe-home-region-controls" }, input)
 end
 
 --- AWS migrationhub-config get-home-region operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_home_region(input)
-	return common.execute_aws_command_with_input({ "migrationhub-config", "get-home-region" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhub-config", "get-home-region" }, input)
 end
 
 return M

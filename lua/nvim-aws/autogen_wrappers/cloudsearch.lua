@@ -3,189 +3,189 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLOUDSEARCH service functions
+--- AWS cloudsearch service functions
 local M = {}
 
 --- AWS cloudsearch build-suggesters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.build_suggesters(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "build-suggesters" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "build-suggesters" }, input)
 end
 
 --- AWS cloudsearch create-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_domain(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "create-domain" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "create-domain" }, input)
 end
 
 --- AWS cloudsearch define-analysis-scheme operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.define_analysis_scheme(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "define-analysis-scheme" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "define-analysis-scheme" }, input)
 end
 
 --- AWS cloudsearch define-expression operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.define_expression(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "define-expression" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "define-expression" }, input)
 end
 
 --- AWS cloudsearch define-index-field operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.define_index_field(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "define-index-field" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "define-index-field" }, input)
 end
 
 --- AWS cloudsearch define-suggester operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.define_suggester(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "define-suggester" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "define-suggester" }, input)
 end
 
 --- AWS cloudsearch delete-analysis-scheme operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_analysis_scheme(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "delete-analysis-scheme" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "delete-analysis-scheme" }, input)
 end
 
 --- AWS cloudsearch delete-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_domain(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "delete-domain" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "delete-domain" }, input)
 end
 
 --- AWS cloudsearch delete-expression operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_expression(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "delete-expression" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "delete-expression" }, input)
 end
 
 --- AWS cloudsearch delete-index-field operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_index_field(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "delete-index-field" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "delete-index-field" }, input)
 end
 
 --- AWS cloudsearch delete-suggester operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_suggester(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "delete-suggester" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "delete-suggester" }, input)
 end
 
 --- AWS cloudsearch describe-analysis-schemes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_analysis_schemes(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "describe-analysis-schemes" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "describe-analysis-schemes" }, input)
 end
 
 --- AWS cloudsearch describe-availability-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_availability_options(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "describe-availability-options" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "describe-availability-options" }, input)
 end
 
 --- AWS cloudsearch describe-domain-endpoint-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_domain_endpoint_options(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "describe-domain-endpoint-options" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "describe-domain-endpoint-options" }, input)
 end
 
 --- AWS cloudsearch describe-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_domains(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "describe-domains" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "describe-domains" }, input)
 end
 
 --- AWS cloudsearch describe-expressions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_expressions(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "describe-expressions" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "describe-expressions" }, input)
 end
 
 --- AWS cloudsearch describe-index-fields operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_index_fields(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "describe-index-fields" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "describe-index-fields" }, input)
 end
 
 --- AWS cloudsearch describe-scaling-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_scaling_parameters(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "describe-scaling-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "describe-scaling-parameters" }, input)
 end
 
 --- AWS cloudsearch describe-service-access-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_service_access_policies(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "describe-service-access-policies" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "describe-service-access-policies" }, input)
 end
 
 --- AWS cloudsearch describe-suggesters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_suggesters(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "describe-suggesters" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "describe-suggesters" }, input)
 end
 
 --- AWS cloudsearch index-documents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.index_documents(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "index-documents" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "index-documents" }, input)
 end
 
 --- AWS cloudsearch list-domain-names operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_domain_names(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "list-domain-names" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "list-domain-names" }, input)
 end
 
 --- AWS cloudsearch update-availability-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_availability_options(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "update-availability-options" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "update-availability-options" }, input)
 end
 
 --- AWS cloudsearch update-domain-endpoint-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_domain_endpoint_options(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "update-domain-endpoint-options" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "update-domain-endpoint-options" }, input)
 end
 
 --- AWS cloudsearch update-scaling-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_scaling_parameters(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "update-scaling-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "update-scaling-parameters" }, input)
 end
 
 --- AWS cloudsearch update-service-access-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_service_access_policies(input)
-	return common.execute_aws_command_with_input({ "cloudsearch", "update-service-access-policies" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearch", "update-service-access-policies" }, input)
 end
 
 return M

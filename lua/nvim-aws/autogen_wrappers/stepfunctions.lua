@@ -3,266 +3,266 @@
 
 local common = require("nvim-aws.common")
 
---- AWS STEPFUNCTIONS service functions
+--- AWS stepfunctions service functions
 local M = {}
 
 --- AWS stepfunctions create-activity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_activity(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "create-activity" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "create-activity" }, input)
 end
 
 --- AWS stepfunctions create-state-machine operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_state_machine(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "create-state-machine" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "create-state-machine" }, input)
 end
 
 --- AWS stepfunctions create-state-machine-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_state_machine_alias(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "create-state-machine-alias" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "create-state-machine-alias" }, input)
 end
 
 --- AWS stepfunctions delete-activity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_activity(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "delete-activity" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-activity" }, input)
 end
 
 --- AWS stepfunctions delete-state-machine operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_state_machine(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "delete-state-machine" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-state-machine" }, input)
 end
 
 --- AWS stepfunctions delete-state-machine-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_state_machine_alias(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "delete-state-machine-alias" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-state-machine-alias" }, input)
 end
 
 --- AWS stepfunctions delete-state-machine-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_state_machine_version(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "delete-state-machine-version" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "delete-state-machine-version" }, input)
 end
 
 --- AWS stepfunctions describe-activity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_activity(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "describe-activity" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-activity" }, input)
 end
 
 --- AWS stepfunctions describe-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_execution(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "describe-execution" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-execution" }, input)
 end
 
 --- AWS stepfunctions describe-map-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_map_run(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "describe-map-run" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-map-run" }, input)
 end
 
 --- AWS stepfunctions describe-state-machine operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_state_machine(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "describe-state-machine" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-state-machine" }, input)
 end
 
 --- AWS stepfunctions describe-state-machine-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_state_machine_alias(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "describe-state-machine-alias" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-state-machine-alias" }, input)
 end
 
 --- AWS stepfunctions describe-state-machine-for-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_state_machine_for_execution(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "describe-state-machine-for-execution" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "describe-state-machine-for-execution" }, input)
 end
 
 --- AWS stepfunctions get-activity-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_activity_task(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "get-activity-task" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "get-activity-task" }, input)
 end
 
 --- AWS stepfunctions get-execution-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_execution_history(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "get-execution-history" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "get-execution-history" }, input)
 end
 
 --- AWS stepfunctions list-activities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_activities(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "list-activities" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-activities" }, input)
 end
 
 --- AWS stepfunctions list-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_executions(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "list-executions" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-executions" }, input)
 end
 
 --- AWS stepfunctions list-map-runs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_map_runs(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "list-map-runs" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-map-runs" }, input)
 end
 
 --- AWS stepfunctions list-state-machine-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_state_machine_aliases(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "list-state-machine-aliases" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-state-machine-aliases" }, input)
 end
 
 --- AWS stepfunctions list-state-machine-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_state_machine_versions(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "list-state-machine-versions" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-state-machine-versions" }, input)
 end
 
 --- AWS stepfunctions list-state-machines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_state_machines(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "list-state-machines" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-state-machines" }, input)
 end
 
 --- AWS stepfunctions list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "list-tags-for-resource" }, input)
 end
 
 --- AWS stepfunctions publish-state-machine-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.publish_state_machine_version(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "publish-state-machine-version" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "publish-state-machine-version" }, input)
 end
 
 --- AWS stepfunctions redrive-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.redrive_execution(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "redrive-execution" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "redrive-execution" }, input)
 end
 
 --- AWS stepfunctions send-task-failure operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_task_failure(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "send-task-failure" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "send-task-failure" }, input)
 end
 
 --- AWS stepfunctions send-task-heartbeat operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_task_heartbeat(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "send-task-heartbeat" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "send-task-heartbeat" }, input)
 end
 
 --- AWS stepfunctions send-task-success operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_task_success(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "send-task-success" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "send-task-success" }, input)
 end
 
 --- AWS stepfunctions start-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_execution(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "start-execution" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "start-execution" }, input)
 end
 
 --- AWS stepfunctions start-sync-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_sync_execution(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "start-sync-execution" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "start-sync-execution" }, input)
 end
 
 --- AWS stepfunctions stop-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_execution(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "stop-execution" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "stop-execution" }, input)
 end
 
 --- AWS stepfunctions tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "tag-resource" }, input)
 end
 
 --- AWS stepfunctions test-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_state(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "test-state" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "test-state" }, input)
 end
 
 --- AWS stepfunctions untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "untag-resource" }, input)
 end
 
 --- AWS stepfunctions update-map-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_map_run(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "update-map-run" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "update-map-run" }, input)
 end
 
 --- AWS stepfunctions update-state-machine operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_state_machine(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "update-state-machine" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "update-state-machine" }, input)
 end
 
 --- AWS stepfunctions update-state-machine-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_state_machine_alias(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "update-state-machine-alias" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "update-state-machine-alias" }, input)
 end
 
 --- AWS stepfunctions validate-state-machine-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.validate_state_machine_definition(input)
-	return common.execute_aws_command_with_input({ "stepfunctions", "validate-state-machine-definition" }, input)
+	return common.execute_aws_command_skeleton({ "stepfunctions", "validate-state-machine-definition" }, input)
 end
 
 return M

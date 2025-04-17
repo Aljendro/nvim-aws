@@ -3,203 +3,203 @@
 
 local common = require("nvim-aws.common")
 
---- AWS AMP service functions
+--- AWS amp service functions
 local M = {}
 
 --- AWS amp create-alert-manager-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_alert_manager_definition(input)
-	return common.execute_aws_command_with_input({ "amp", "create-alert-manager-definition" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "create-alert-manager-definition" }, input)
 end
 
 --- AWS amp create-logging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_logging_configuration(input)
-	return common.execute_aws_command_with_input({ "amp", "create-logging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "create-logging-configuration" }, input)
 end
 
 --- AWS amp create-rule-groups-namespace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_rule_groups_namespace(input)
-	return common.execute_aws_command_with_input({ "amp", "create-rule-groups-namespace" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "create-rule-groups-namespace" }, input)
 end
 
 --- AWS amp create-scraper operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_scraper(input)
-	return common.execute_aws_command_with_input({ "amp", "create-scraper" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "create-scraper" }, input)
 end
 
 --- AWS amp create-workspace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workspace(input)
-	return common.execute_aws_command_with_input({ "amp", "create-workspace" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "create-workspace" }, input)
 end
 
 --- AWS amp delete-alert-manager-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_alert_manager_definition(input)
-	return common.execute_aws_command_with_input({ "amp", "delete-alert-manager-definition" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "delete-alert-manager-definition" }, input)
 end
 
 --- AWS amp delete-logging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_logging_configuration(input)
-	return common.execute_aws_command_with_input({ "amp", "delete-logging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "delete-logging-configuration" }, input)
 end
 
 --- AWS amp delete-rule-groups-namespace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_rule_groups_namespace(input)
-	return common.execute_aws_command_with_input({ "amp", "delete-rule-groups-namespace" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "delete-rule-groups-namespace" }, input)
 end
 
 --- AWS amp delete-scraper operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_scraper(input)
-	return common.execute_aws_command_with_input({ "amp", "delete-scraper" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "delete-scraper" }, input)
 end
 
 --- AWS amp delete-workspace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workspace(input)
-	return common.execute_aws_command_with_input({ "amp", "delete-workspace" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "delete-workspace" }, input)
 end
 
 --- AWS amp describe-alert-manager-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_alert_manager_definition(input)
-	return common.execute_aws_command_with_input({ "amp", "describe-alert-manager-definition" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "describe-alert-manager-definition" }, input)
 end
 
 --- AWS amp describe-logging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_logging_configuration(input)
-	return common.execute_aws_command_with_input({ "amp", "describe-logging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "describe-logging-configuration" }, input)
 end
 
 --- AWS amp describe-rule-groups-namespace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_rule_groups_namespace(input)
-	return common.execute_aws_command_with_input({ "amp", "describe-rule-groups-namespace" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "describe-rule-groups-namespace" }, input)
 end
 
 --- AWS amp describe-scraper operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_scraper(input)
-	return common.execute_aws_command_with_input({ "amp", "describe-scraper" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "describe-scraper" }, input)
 end
 
 --- AWS amp describe-workspace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspace(input)
-	return common.execute_aws_command_with_input({ "amp", "describe-workspace" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "describe-workspace" }, input)
 end
 
 --- AWS amp get-default-scraper-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_default_scraper_configuration(input)
-	return common.execute_aws_command_with_input({ "amp", "get-default-scraper-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "get-default-scraper-configuration" }, input)
 end
 
 --- AWS amp list-rule-groups-namespaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_rule_groups_namespaces(input)
-	return common.execute_aws_command_with_input({ "amp", "list-rule-groups-namespaces" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "list-rule-groups-namespaces" }, input)
 end
 
 --- AWS amp list-scrapers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_scrapers(input)
-	return common.execute_aws_command_with_input({ "amp", "list-scrapers" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "list-scrapers" }, input)
 end
 
 --- AWS amp list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "amp", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "list-tags-for-resource" }, input)
 end
 
 --- AWS amp list-workspaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workspaces(input)
-	return common.execute_aws_command_with_input({ "amp", "list-workspaces" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "list-workspaces" }, input)
 end
 
 --- AWS amp put-alert-manager-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_alert_manager_definition(input)
-	return common.execute_aws_command_with_input({ "amp", "put-alert-manager-definition" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "put-alert-manager-definition" }, input)
 end
 
 --- AWS amp put-rule-groups-namespace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_rule_groups_namespace(input)
-	return common.execute_aws_command_with_input({ "amp", "put-rule-groups-namespace" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "put-rule-groups-namespace" }, input)
 end
 
 --- AWS amp tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "amp", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "tag-resource" }, input)
 end
 
 --- AWS amp untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "amp", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "untag-resource" }, input)
 end
 
 --- AWS amp update-logging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_logging_configuration(input)
-	return common.execute_aws_command_with_input({ "amp", "update-logging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "update-logging-configuration" }, input)
 end
 
 --- AWS amp update-scraper operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_scraper(input)
-	return common.execute_aws_command_with_input({ "amp", "update-scraper" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "update-scraper" }, input)
 end
 
 --- AWS amp update-workspace-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workspace_alias(input)
-	return common.execute_aws_command_with_input({ "amp", "update-workspace-alias" }, input)
+	return common.execute_aws_command_skeleton({ "amp", "update-workspace-alias" }, input)
 end
 
 --- AWS amp wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "amp", "wait" }, input)
+	return common.execute_aws_command({ "amp", "wait" }, input)
 end
 
 return M

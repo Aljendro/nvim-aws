@@ -3,84 +3,84 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MWAA service functions
+--- AWS mwaa service functions
 local M = {}
 
 --- AWS mwaa create-cli-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cli_token(input)
-	return common.execute_aws_command_with_input({ "mwaa", "create-cli-token" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "create-cli-token" }, input)
 end
 
 --- AWS mwaa create-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_environment(input)
-	return common.execute_aws_command_with_input({ "mwaa", "create-environment" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "create-environment" }, input)
 end
 
 --- AWS mwaa create-web-login-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_web_login_token(input)
-	return common.execute_aws_command_with_input({ "mwaa", "create-web-login-token" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "create-web-login-token" }, input)
 end
 
 --- AWS mwaa delete-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_environment(input)
-	return common.execute_aws_command_with_input({ "mwaa", "delete-environment" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "delete-environment" }, input)
 end
 
 --- AWS mwaa get-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_environment(input)
-	return common.execute_aws_command_with_input({ "mwaa", "get-environment" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "get-environment" }, input)
 end
 
 --- AWS mwaa invoke-rest-api operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.invoke_rest_api(input)
-	return common.execute_aws_command_with_input({ "mwaa", "invoke-rest-api" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "invoke-rest-api" }, input)
 end
 
 --- AWS mwaa list-environments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_environments(input)
-	return common.execute_aws_command_with_input({ "mwaa", "list-environments" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "list-environments" }, input)
 end
 
 --- AWS mwaa list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "mwaa", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "list-tags-for-resource" }, input)
 end
 
 --- AWS mwaa tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "mwaa", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "tag-resource" }, input)
 end
 
 --- AWS mwaa untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "mwaa", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "untag-resource" }, input)
 end
 
 --- AWS mwaa update-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_environment(input)
-	return common.execute_aws_command_with_input({ "mwaa", "update-environment" }, input)
+	return common.execute_aws_command_skeleton({ "mwaa", "update-environment" }, input)
 end
 
 return M

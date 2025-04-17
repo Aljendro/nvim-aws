@@ -3,42 +3,42 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CONTROLCATALOG service functions
+--- AWS controlcatalog service functions
 local M = {}
 
 --- AWS controlcatalog get-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_control(input)
-	return common.execute_aws_command_with_input({ "controlcatalog", "get-control" }, input)
+	return common.execute_aws_command_skeleton({ "controlcatalog", "get-control" }, input)
 end
 
 --- AWS controlcatalog list-common-controls operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_common_controls(input)
-	return common.execute_aws_command_with_input({ "controlcatalog", "list-common-controls" }, input)
+	return common.execute_aws_command_skeleton({ "controlcatalog", "list-common-controls" }, input)
 end
 
 --- AWS controlcatalog list-controls operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_controls(input)
-	return common.execute_aws_command_with_input({ "controlcatalog", "list-controls" }, input)
+	return common.execute_aws_command_skeleton({ "controlcatalog", "list-controls" }, input)
 end
 
 --- AWS controlcatalog list-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_domains(input)
-	return common.execute_aws_command_with_input({ "controlcatalog", "list-domains" }, input)
+	return common.execute_aws_command_skeleton({ "controlcatalog", "list-domains" }, input)
 end
 
 --- AWS controlcatalog list-objectives operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_objectives(input)
-	return common.execute_aws_command_with_input({ "controlcatalog", "list-objectives" }, input)
+	return common.execute_aws_command_skeleton({ "controlcatalog", "list-objectives" }, input)
 end
 
 return M

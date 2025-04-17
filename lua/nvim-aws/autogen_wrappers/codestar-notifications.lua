@@ -3,98 +3,98 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CODESTAR-NOTIFICATIONS service functions
+--- AWS codestar-notifications service functions
 local M = {}
 
 --- AWS codestar-notifications create-notification-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_notification_rule(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "create-notification-rule" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "create-notification-rule" }, input)
 end
 
 --- AWS codestar-notifications delete-notification-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_notification_rule(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "delete-notification-rule" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "delete-notification-rule" }, input)
 end
 
 --- AWS codestar-notifications delete-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_target(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "delete-target" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "delete-target" }, input)
 end
 
 --- AWS codestar-notifications describe-notification-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_notification_rule(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "describe-notification-rule" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "describe-notification-rule" }, input)
 end
 
 --- AWS codestar-notifications list-event-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_event_types(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "list-event-types" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "list-event-types" }, input)
 end
 
 --- AWS codestar-notifications list-notification-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_notification_rules(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "list-notification-rules" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "list-notification-rules" }, input)
 end
 
 --- AWS codestar-notifications list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "list-tags-for-resource" }, input)
 end
 
 --- AWS codestar-notifications list-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_targets(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "list-targets" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "list-targets" }, input)
 end
 
 --- AWS codestar-notifications subscribe operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.subscribe(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "subscribe" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "subscribe" }, input)
 end
 
 --- AWS codestar-notifications tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "tag-resource" }, input)
 end
 
 --- AWS codestar-notifications unsubscribe operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unsubscribe(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "unsubscribe" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "unsubscribe" }, input)
 end
 
 --- AWS codestar-notifications untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "untag-resource" }, input)
 end
 
 --- AWS codestar-notifications update-notification-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_notification_rule(input)
-	return common.execute_aws_command_with_input({ "codestar-notifications", "update-notification-rule" }, input)
+	return common.execute_aws_command_skeleton({ "codestar-notifications", "update-notification-rule" }, input)
 end
 
 return M

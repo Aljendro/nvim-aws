@@ -3,98 +3,98 @@
 
 local common = require("nvim-aws.common")
 
---- AWS BRAKET service functions
+--- AWS braket service functions
 local M = {}
 
 --- AWS braket cancel-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_job(input)
-	return common.execute_aws_command_with_input({ "braket", "cancel-job" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "cancel-job" }, input)
 end
 
 --- AWS braket cancel-quantum-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_quantum_task(input)
-	return common.execute_aws_command_with_input({ "braket", "cancel-quantum-task" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "cancel-quantum-task" }, input)
 end
 
 --- AWS braket create-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_job(input)
-	return common.execute_aws_command_with_input({ "braket", "create-job" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "create-job" }, input)
 end
 
 --- AWS braket create-quantum-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_quantum_task(input)
-	return common.execute_aws_command_with_input({ "braket", "create-quantum-task" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "create-quantum-task" }, input)
 end
 
 --- AWS braket get-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_device(input)
-	return common.execute_aws_command_with_input({ "braket", "get-device" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "get-device" }, input)
 end
 
 --- AWS braket get-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_job(input)
-	return common.execute_aws_command_with_input({ "braket", "get-job" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "get-job" }, input)
 end
 
 --- AWS braket get-quantum-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_quantum_task(input)
-	return common.execute_aws_command_with_input({ "braket", "get-quantum-task" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "get-quantum-task" }, input)
 end
 
 --- AWS braket list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "braket", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "list-tags-for-resource" }, input)
 end
 
 --- AWS braket search-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_devices(input)
-	return common.execute_aws_command_with_input({ "braket", "search-devices" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "search-devices" }, input)
 end
 
 --- AWS braket search-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_jobs(input)
-	return common.execute_aws_command_with_input({ "braket", "search-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "search-jobs" }, input)
 end
 
 --- AWS braket search-quantum-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_quantum_tasks(input)
-	return common.execute_aws_command_with_input({ "braket", "search-quantum-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "search-quantum-tasks" }, input)
 end
 
 --- AWS braket tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "braket", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "tag-resource" }, input)
 end
 
 --- AWS braket untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "braket", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "braket", "untag-resource" }, input)
 end
 
 return M

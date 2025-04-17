@@ -3,350 +3,350 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DEPLOY service functions
+--- AWS deploy service functions
 local M = {}
 
 --- AWS deploy add-tags-to-on-premises-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_tags_to_on_premises_instances(input)
-	return common.execute_aws_command_with_input({ "deploy", "add-tags-to-on-premises-instances" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "add-tags-to-on-premises-instances" }, input)
 end
 
 --- AWS deploy batch-get-application-revisions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_application_revisions(input)
-	return common.execute_aws_command_with_input({ "deploy", "batch-get-application-revisions" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "batch-get-application-revisions" }, input)
 end
 
 --- AWS deploy batch-get-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_applications(input)
-	return common.execute_aws_command_with_input({ "deploy", "batch-get-applications" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "batch-get-applications" }, input)
 end
 
 --- AWS deploy batch-get-deployment-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_deployment_groups(input)
-	return common.execute_aws_command_with_input({ "deploy", "batch-get-deployment-groups" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "batch-get-deployment-groups" }, input)
 end
 
 --- AWS deploy batch-get-deployment-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_deployment_targets(input)
-	return common.execute_aws_command_with_input({ "deploy", "batch-get-deployment-targets" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "batch-get-deployment-targets" }, input)
 end
 
 --- AWS deploy batch-get-deployments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_deployments(input)
-	return common.execute_aws_command_with_input({ "deploy", "batch-get-deployments" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "batch-get-deployments" }, input)
 end
 
 --- AWS deploy batch-get-on-premises-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_on_premises_instances(input)
-	return common.execute_aws_command_with_input({ "deploy", "batch-get-on-premises-instances" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "batch-get-on-premises-instances" }, input)
 end
 
 --- AWS deploy continue-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.continue_deployment(input)
-	return common.execute_aws_command_with_input({ "deploy", "continue-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "continue-deployment" }, input)
 end
 
 --- AWS deploy create-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_application(input)
-	return common.execute_aws_command_with_input({ "deploy", "create-application" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "create-application" }, input)
 end
 
 --- AWS deploy create-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_deployment(input)
-	return common.execute_aws_command_with_input({ "deploy", "create-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "create-deployment" }, input)
 end
 
 --- AWS deploy create-deployment-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_deployment_config(input)
-	return common.execute_aws_command_with_input({ "deploy", "create-deployment-config" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "create-deployment-config" }, input)
 end
 
 --- AWS deploy create-deployment-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_deployment_group(input)
-	return common.execute_aws_command_with_input({ "deploy", "create-deployment-group" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "create-deployment-group" }, input)
 end
 
 --- AWS deploy delete-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_application(input)
-	return common.execute_aws_command_with_input({ "deploy", "delete-application" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "delete-application" }, input)
 end
 
 --- AWS deploy delete-deployment-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_deployment_config(input)
-	return common.execute_aws_command_with_input({ "deploy", "delete-deployment-config" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "delete-deployment-config" }, input)
 end
 
 --- AWS deploy delete-deployment-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_deployment_group(input)
-	return common.execute_aws_command_with_input({ "deploy", "delete-deployment-group" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "delete-deployment-group" }, input)
 end
 
 --- AWS deploy delete-git-hub-account-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_git_hub_account_token(input)
-	return common.execute_aws_command_with_input({ "deploy", "delete-git-hub-account-token" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "delete-git-hub-account-token" }, input)
 end
 
 --- AWS deploy delete-resources-by-external-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resources_by_external_id(input)
-	return common.execute_aws_command_with_input({ "deploy", "delete-resources-by-external-id" }, input)
-end
-
---- AWS deploy deregister-on-premises-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.deregister_on_premises_instance(input)
-	return common.execute_aws_command_with_input({ "deploy", "deregister-on-premises-instance" }, input)
-end
-
---- AWS deploy get-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_application(input)
-	return common.execute_aws_command_with_input({ "deploy", "get-application" }, input)
-end
-
---- AWS deploy get-application-revision operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_application_revision(input)
-	return common.execute_aws_command_with_input({ "deploy", "get-application-revision" }, input)
-end
-
---- AWS deploy get-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_deployment(input)
-	return common.execute_aws_command_with_input({ "deploy", "get-deployment" }, input)
-end
-
---- AWS deploy get-deployment-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_deployment_config(input)
-	return common.execute_aws_command_with_input({ "deploy", "get-deployment-config" }, input)
-end
-
---- AWS deploy get-deployment-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_deployment_group(input)
-	return common.execute_aws_command_with_input({ "deploy", "get-deployment-group" }, input)
-end
-
---- AWS deploy get-deployment-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_deployment_target(input)
-	return common.execute_aws_command_with_input({ "deploy", "get-deployment-target" }, input)
-end
-
---- AWS deploy get-on-premises-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_on_premises_instance(input)
-	return common.execute_aws_command_with_input({ "deploy", "get-on-premises-instance" }, input)
-end
-
---- AWS deploy list-application-revisions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_application_revisions(input)
-	return common.execute_aws_command_with_input({ "deploy", "list-application-revisions" }, input)
-end
-
---- AWS deploy list-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_applications(input)
-	return common.execute_aws_command_with_input({ "deploy", "list-applications" }, input)
-end
-
---- AWS deploy list-deployment-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_deployment_configs(input)
-	return common.execute_aws_command_with_input({ "deploy", "list-deployment-configs" }, input)
-end
-
---- AWS deploy list-deployment-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_deployment_groups(input)
-	return common.execute_aws_command_with_input({ "deploy", "list-deployment-groups" }, input)
-end
-
---- AWS deploy list-deployment-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_deployment_targets(input)
-	return common.execute_aws_command_with_input({ "deploy", "list-deployment-targets" }, input)
-end
-
---- AWS deploy list-deployments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_deployments(input)
-	return common.execute_aws_command_with_input({ "deploy", "list-deployments" }, input)
-end
-
---- AWS deploy list-git-hub-account-token-names operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_git_hub_account_token_names(input)
-	return common.execute_aws_command_with_input({ "deploy", "list-git-hub-account-token-names" }, input)
-end
-
---- AWS deploy list-on-premises-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_on_premises_instances(input)
-	return common.execute_aws_command_with_input({ "deploy", "list-on-premises-instances" }, input)
-end
-
---- AWS deploy list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "deploy", "list-tags-for-resource" }, input)
-end
-
---- AWS deploy put-lifecycle-event-hook-execution-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_lifecycle_event_hook_execution_status(input)
-	return common.execute_aws_command_with_input({ "deploy", "put-lifecycle-event-hook-execution-status" }, input)
-end
-
---- AWS deploy register-application-revision operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.register_application_revision(input)
-	return common.execute_aws_command_with_input({ "deploy", "register-application-revision" }, input)
-end
-
---- AWS deploy register-on-premises-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.register_on_premises_instance(input)
-	return common.execute_aws_command_with_input({ "deploy", "register-on-premises-instance" }, input)
-end
-
---- AWS deploy remove-tags-from-on-premises-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.remove_tags_from_on_premises_instances(input)
-	return common.execute_aws_command_with_input({ "deploy", "remove-tags-from-on-premises-instances" }, input)
-end
-
---- AWS deploy stop-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_deployment(input)
-	return common.execute_aws_command_with_input({ "deploy", "stop-deployment" }, input)
-end
-
---- AWS deploy tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "deploy", "tag-resource" }, input)
-end
-
---- AWS deploy untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "deploy", "untag-resource" }, input)
-end
-
---- AWS deploy update-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_application(input)
-	return common.execute_aws_command_with_input({ "deploy", "update-application" }, input)
-end
-
---- AWS deploy update-deployment-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_deployment_group(input)
-	return common.execute_aws_command_with_input({ "deploy", "update-deployment-group" }, input)
+	return common.execute_aws_command_skeleton({ "deploy", "delete-resources-by-external-id" }, input)
 end
 
 --- AWS deploy deregister operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister(input)
-	return common.execute_aws_command_with_raw_input({ "deploy", "deregister" }, input)
+	return common.execute_aws_command({ "deploy", "deregister" }, input)
+end
+
+--- AWS deploy deregister-on-premises-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.deregister_on_premises_instance(input)
+	return common.execute_aws_command_skeleton({ "deploy", "deregister-on-premises-instance" }, input)
+end
+
+--- AWS deploy get-application operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_application(input)
+	return common.execute_aws_command_skeleton({ "deploy", "get-application" }, input)
+end
+
+--- AWS deploy get-application-revision operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_application_revision(input)
+	return common.execute_aws_command_skeleton({ "deploy", "get-application-revision" }, input)
+end
+
+--- AWS deploy get-deployment operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_deployment(input)
+	return common.execute_aws_command_skeleton({ "deploy", "get-deployment" }, input)
+end
+
+--- AWS deploy get-deployment-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_deployment_config(input)
+	return common.execute_aws_command_skeleton({ "deploy", "get-deployment-config" }, input)
+end
+
+--- AWS deploy get-deployment-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_deployment_group(input)
+	return common.execute_aws_command_skeleton({ "deploy", "get-deployment-group" }, input)
+end
+
+--- AWS deploy get-deployment-target operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_deployment_target(input)
+	return common.execute_aws_command_skeleton({ "deploy", "get-deployment-target" }, input)
+end
+
+--- AWS deploy get-on-premises-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_on_premises_instance(input)
+	return common.execute_aws_command_skeleton({ "deploy", "get-on-premises-instance" }, input)
 end
 
 --- AWS deploy install operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.install(input)
-	return common.execute_aws_command_with_raw_input({ "deploy", "install" }, input)
+	return common.execute_aws_command({ "deploy", "install" }, input)
+end
+
+--- AWS deploy list-application-revisions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_application_revisions(input)
+	return common.execute_aws_command_skeleton({ "deploy", "list-application-revisions" }, input)
+end
+
+--- AWS deploy list-applications operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_applications(input)
+	return common.execute_aws_command_skeleton({ "deploy", "list-applications" }, input)
+end
+
+--- AWS deploy list-deployment-configs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_deployment_configs(input)
+	return common.execute_aws_command_skeleton({ "deploy", "list-deployment-configs" }, input)
+end
+
+--- AWS deploy list-deployment-groups operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_deployment_groups(input)
+	return common.execute_aws_command_skeleton({ "deploy", "list-deployment-groups" }, input)
+end
+
+--- AWS deploy list-deployment-targets operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_deployment_targets(input)
+	return common.execute_aws_command_skeleton({ "deploy", "list-deployment-targets" }, input)
+end
+
+--- AWS deploy list-deployments operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_deployments(input)
+	return common.execute_aws_command_skeleton({ "deploy", "list-deployments" }, input)
+end
+
+--- AWS deploy list-git-hub-account-token-names operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_git_hub_account_token_names(input)
+	return common.execute_aws_command_skeleton({ "deploy", "list-git-hub-account-token-names" }, input)
+end
+
+--- AWS deploy list-on-premises-instances operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_on_premises_instances(input)
+	return common.execute_aws_command_skeleton({ "deploy", "list-on-premises-instances" }, input)
+end
+
+--- AWS deploy list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "deploy", "list-tags-for-resource" }, input)
 end
 
 --- AWS deploy push operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.push(input)
-	return common.execute_aws_command_with_raw_input({ "deploy", "push" }, input)
+	return common.execute_aws_command({ "deploy", "push" }, input)
+end
+
+--- AWS deploy put-lifecycle-event-hook-execution-status operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_lifecycle_event_hook_execution_status(input)
+	return common.execute_aws_command_skeleton({ "deploy", "put-lifecycle-event-hook-execution-status" }, input)
 end
 
 --- AWS deploy register operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register(input)
-	return common.execute_aws_command_with_raw_input({ "deploy", "register" }, input)
+	return common.execute_aws_command({ "deploy", "register" }, input)
+end
+
+--- AWS deploy register-application-revision operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.register_application_revision(input)
+	return common.execute_aws_command_skeleton({ "deploy", "register-application-revision" }, input)
+end
+
+--- AWS deploy register-on-premises-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.register_on_premises_instance(input)
+	return common.execute_aws_command_skeleton({ "deploy", "register-on-premises-instance" }, input)
+end
+
+--- AWS deploy remove-tags-from-on-premises-instances operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.remove_tags_from_on_premises_instances(input)
+	return common.execute_aws_command_skeleton({ "deploy", "remove-tags-from-on-premises-instances" }, input)
+end
+
+--- AWS deploy stop-deployment operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_deployment(input)
+	return common.execute_aws_command_skeleton({ "deploy", "stop-deployment" }, input)
+end
+
+--- AWS deploy tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "deploy", "tag-resource" }, input)
 end
 
 --- AWS deploy uninstall operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.uninstall(input)
-	return common.execute_aws_command_with_raw_input({ "deploy", "uninstall" }, input)
+	return common.execute_aws_command({ "deploy", "uninstall" }, input)
+end
+
+--- AWS deploy untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "deploy", "untag-resource" }, input)
+end
+
+--- AWS deploy update-application operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_application(input)
+	return common.execute_aws_command_skeleton({ "deploy", "update-application" }, input)
+end
+
+--- AWS deploy update-deployment-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_deployment_group(input)
+	return common.execute_aws_command_skeleton({ "deploy", "update-deployment-group" }, input)
 end
 
 --- AWS deploy wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "deploy", "wait" }, input)
+	return common.execute_aws_command({ "deploy", "wait" }, input)
 end
 
 return M

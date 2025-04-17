@@ -3,798 +3,798 @@
 
 local common = require("nvim-aws.common")
 
---- AWS COGNITO-IDP service functions
+--- AWS cognito-idp service functions
 local M = {}
 
 --- AWS cognito-idp add-custom-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_custom_attributes(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "add-custom-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "add-custom-attributes" }, input)
 end
 
 --- AWS cognito-idp admin-add-user-to-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_add_user_to_group(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-add-user-to-group" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-add-user-to-group" }, input)
 end
 
 --- AWS cognito-idp admin-confirm-sign-up operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_confirm_sign_up(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-confirm-sign-up" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-confirm-sign-up" }, input)
 end
 
 --- AWS cognito-idp admin-create-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_create_user(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-create-user" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-create-user" }, input)
 end
 
 --- AWS cognito-idp admin-delete-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_delete_user(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-delete-user" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-delete-user" }, input)
 end
 
 --- AWS cognito-idp admin-delete-user-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_delete_user_attributes(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-delete-user-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-delete-user-attributes" }, input)
 end
 
 --- AWS cognito-idp admin-disable-provider-for-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_disable_provider_for_user(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-disable-provider-for-user" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-disable-provider-for-user" }, input)
 end
 
 --- AWS cognito-idp admin-disable-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_disable_user(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-disable-user" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-disable-user" }, input)
 end
 
 --- AWS cognito-idp admin-enable-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_enable_user(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-enable-user" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-enable-user" }, input)
 end
 
 --- AWS cognito-idp admin-forget-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_forget_device(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-forget-device" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-forget-device" }, input)
 end
 
 --- AWS cognito-idp admin-get-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_get_device(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-get-device" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-get-device" }, input)
 end
 
 --- AWS cognito-idp admin-get-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_get_user(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-get-user" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-get-user" }, input)
 end
 
 --- AWS cognito-idp admin-initiate-auth operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_initiate_auth(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-initiate-auth" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-initiate-auth" }, input)
 end
 
 --- AWS cognito-idp admin-link-provider-for-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_link_provider_for_user(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-link-provider-for-user" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-link-provider-for-user" }, input)
 end
 
 --- AWS cognito-idp admin-list-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_list_devices(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-list-devices" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-list-devices" }, input)
 end
 
 --- AWS cognito-idp admin-list-groups-for-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_list_groups_for_user(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-list-groups-for-user" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-list-groups-for-user" }, input)
 end
 
 --- AWS cognito-idp admin-list-user-auth-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_list_user_auth_events(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-list-user-auth-events" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-list-user-auth-events" }, input)
 end
 
 --- AWS cognito-idp admin-remove-user-from-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_remove_user_from_group(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-remove-user-from-group" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-remove-user-from-group" }, input)
 end
 
 --- AWS cognito-idp admin-reset-user-password operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_reset_user_password(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-reset-user-password" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-reset-user-password" }, input)
 end
 
 --- AWS cognito-idp admin-respond-to-auth-challenge operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_respond_to_auth_challenge(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-respond-to-auth-challenge" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-respond-to-auth-challenge" }, input)
 end
 
 --- AWS cognito-idp admin-set-user-mfa-preference operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_set_user_mfa_preference(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-set-user-mfa-preference" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-set-user-mfa-preference" }, input)
 end
 
 --- AWS cognito-idp admin-set-user-password operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_set_user_password(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-set-user-password" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-set-user-password" }, input)
 end
 
 --- AWS cognito-idp admin-set-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_set_user_settings(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-set-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-set-user-settings" }, input)
 end
 
 --- AWS cognito-idp admin-update-auth-event-feedback operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_update_auth_event_feedback(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-update-auth-event-feedback" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-update-auth-event-feedback" }, input)
 end
 
 --- AWS cognito-idp admin-update-device-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_update_device_status(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-update-device-status" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-update-device-status" }, input)
 end
 
 --- AWS cognito-idp admin-update-user-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_update_user_attributes(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-update-user-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-update-user-attributes" }, input)
 end
 
 --- AWS cognito-idp admin-user-global-sign-out operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.admin_user_global_sign_out(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "admin-user-global-sign-out" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "admin-user-global-sign-out" }, input)
 end
 
 --- AWS cognito-idp associate-software-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_software_token(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "associate-software-token" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "associate-software-token" }, input)
 end
 
 --- AWS cognito-idp change-password operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.change_password(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "change-password" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "change-password" }, input)
 end
 
 --- AWS cognito-idp complete-web-authn-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.complete_web_authn_registration(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "complete-web-authn-registration" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "complete-web-authn-registration" }, input)
 end
 
 --- AWS cognito-idp confirm-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.confirm_device(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "confirm-device" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "confirm-device" }, input)
 end
 
 --- AWS cognito-idp confirm-forgot-password operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.confirm_forgot_password(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "confirm-forgot-password" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "confirm-forgot-password" }, input)
 end
 
 --- AWS cognito-idp confirm-sign-up operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.confirm_sign_up(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "confirm-sign-up" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "confirm-sign-up" }, input)
 end
 
 --- AWS cognito-idp create-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_group(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "create-group" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "create-group" }, input)
 end
 
 --- AWS cognito-idp create-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_identity_provider(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "create-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "create-identity-provider" }, input)
 end
 
 --- AWS cognito-idp create-managed-login-branding operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_managed_login_branding(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "create-managed-login-branding" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "create-managed-login-branding" }, input)
 end
 
 --- AWS cognito-idp create-resource-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_resource_server(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "create-resource-server" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "create-resource-server" }, input)
 end
 
 --- AWS cognito-idp create-user-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user_import_job(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "create-user-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "create-user-import-job" }, input)
 end
 
 --- AWS cognito-idp create-user-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user_pool(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "create-user-pool" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "create-user-pool" }, input)
 end
 
 --- AWS cognito-idp create-user-pool-client operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user_pool_client(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "create-user-pool-client" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "create-user-pool-client" }, input)
 end
 
 --- AWS cognito-idp create-user-pool-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user_pool_domain(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "create-user-pool-domain" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "create-user-pool-domain" }, input)
 end
 
 --- AWS cognito-idp delete-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_group(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "delete-group" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "delete-group" }, input)
 end
 
 --- AWS cognito-idp delete-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_identity_provider(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "delete-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "delete-identity-provider" }, input)
 end
 
 --- AWS cognito-idp delete-managed-login-branding operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_managed_login_branding(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "delete-managed-login-branding" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "delete-managed-login-branding" }, input)
 end
 
 --- AWS cognito-idp delete-resource-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_server(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "delete-resource-server" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "delete-resource-server" }, input)
 end
 
 --- AWS cognito-idp delete-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "delete-user" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "delete-user" }, input)
 end
 
 --- AWS cognito-idp delete-user-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user_attributes(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "delete-user-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "delete-user-attributes" }, input)
 end
 
 --- AWS cognito-idp delete-user-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user_pool(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "delete-user-pool" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "delete-user-pool" }, input)
 end
 
 --- AWS cognito-idp delete-user-pool-client operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user_pool_client(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "delete-user-pool-client" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "delete-user-pool-client" }, input)
 end
 
 --- AWS cognito-idp delete-user-pool-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user_pool_domain(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "delete-user-pool-domain" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "delete-user-pool-domain" }, input)
 end
 
 --- AWS cognito-idp delete-web-authn-credential operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_web_authn_credential(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "delete-web-authn-credential" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "delete-web-authn-credential" }, input)
 end
 
 --- AWS cognito-idp describe-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_identity_provider(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "describe-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "describe-identity-provider" }, input)
 end
 
 --- AWS cognito-idp describe-managed-login-branding operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_managed_login_branding(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "describe-managed-login-branding" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "describe-managed-login-branding" }, input)
 end
 
 --- AWS cognito-idp describe-managed-login-branding-by-client operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_managed_login_branding_by_client(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "describe-managed-login-branding-by-client" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "describe-managed-login-branding-by-client" }, input)
 end
 
 --- AWS cognito-idp describe-resource-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_resource_server(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "describe-resource-server" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "describe-resource-server" }, input)
 end
 
 --- AWS cognito-idp describe-risk-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_risk_configuration(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "describe-risk-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "describe-risk-configuration" }, input)
 end
 
 --- AWS cognito-idp describe-user-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_user_import_job(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "describe-user-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "describe-user-import-job" }, input)
 end
 
 --- AWS cognito-idp describe-user-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_user_pool(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "describe-user-pool" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "describe-user-pool" }, input)
 end
 
 --- AWS cognito-idp describe-user-pool-client operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_user_pool_client(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "describe-user-pool-client" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "describe-user-pool-client" }, input)
 end
 
 --- AWS cognito-idp describe-user-pool-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_user_pool_domain(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "describe-user-pool-domain" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "describe-user-pool-domain" }, input)
 end
 
 --- AWS cognito-idp forget-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.forget_device(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "forget-device" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "forget-device" }, input)
 end
 
 --- AWS cognito-idp forgot-password operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.forgot_password(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "forgot-password" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "forgot-password" }, input)
 end
 
 --- AWS cognito-idp get-csv-header operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_csv_header(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-csv-header" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-csv-header" }, input)
 end
 
 --- AWS cognito-idp get-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_device(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-device" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-device" }, input)
 end
 
 --- AWS cognito-idp get-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_group(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-group" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-group" }, input)
 end
 
 --- AWS cognito-idp get-identity-provider-by-identifier operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_identity_provider_by_identifier(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-identity-provider-by-identifier" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-identity-provider-by-identifier" }, input)
 end
 
 --- AWS cognito-idp get-log-delivery-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_log_delivery_configuration(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-log-delivery-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-log-delivery-configuration" }, input)
 end
 
 --- AWS cognito-idp get-signing-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_signing_certificate(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-signing-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-signing-certificate" }, input)
 end
 
 --- AWS cognito-idp get-ui-customization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ui_customization(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-ui-customization" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-ui-customization" }, input)
 end
 
 --- AWS cognito-idp get-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_user(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-user" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-user" }, input)
 end
 
 --- AWS cognito-idp get-user-attribute-verification-code operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_user_attribute_verification_code(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-user-attribute-verification-code" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-user-attribute-verification-code" }, input)
 end
 
 --- AWS cognito-idp get-user-auth-factors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_user_auth_factors(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-user-auth-factors" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-user-auth-factors" }, input)
 end
 
 --- AWS cognito-idp get-user-pool-mfa-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_user_pool_mfa_config(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "get-user-pool-mfa-config" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "get-user-pool-mfa-config" }, input)
 end
 
 --- AWS cognito-idp global-sign-out operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.global_sign_out(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "global-sign-out" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "global-sign-out" }, input)
 end
 
 --- AWS cognito-idp initiate-auth operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.initiate_auth(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "initiate-auth" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "initiate-auth" }, input)
 end
 
 --- AWS cognito-idp list-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_devices(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-devices" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-devices" }, input)
 end
 
 --- AWS cognito-idp list-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_groups(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-groups" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-groups" }, input)
 end
 
 --- AWS cognito-idp list-identity-providers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_identity_providers(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-identity-providers" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-identity-providers" }, input)
 end
 
 --- AWS cognito-idp list-resource-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_servers(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-resource-servers" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-resource-servers" }, input)
 end
 
 --- AWS cognito-idp list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-tags-for-resource" }, input)
 end
 
 --- AWS cognito-idp list-user-import-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_user_import_jobs(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-user-import-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-user-import-jobs" }, input)
 end
 
 --- AWS cognito-idp list-user-pool-clients operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_user_pool_clients(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-user-pool-clients" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-user-pool-clients" }, input)
 end
 
 --- AWS cognito-idp list-user-pools operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_user_pools(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-user-pools" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-user-pools" }, input)
 end
 
 --- AWS cognito-idp list-users operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_users(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-users" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-users" }, input)
 end
 
 --- AWS cognito-idp list-users-in-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_users_in_group(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-users-in-group" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-users-in-group" }, input)
 end
 
 --- AWS cognito-idp list-web-authn-credentials operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_web_authn_credentials(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "list-web-authn-credentials" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "list-web-authn-credentials" }, input)
 end
 
 --- AWS cognito-idp resend-confirmation-code operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resend_confirmation_code(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "resend-confirmation-code" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "resend-confirmation-code" }, input)
 end
 
 --- AWS cognito-idp respond-to-auth-challenge operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.respond_to_auth_challenge(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "respond-to-auth-challenge" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "respond-to-auth-challenge" }, input)
 end
 
 --- AWS cognito-idp revoke-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_token(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "revoke-token" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "revoke-token" }, input)
 end
 
 --- AWS cognito-idp set-log-delivery-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_log_delivery_configuration(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "set-log-delivery-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "set-log-delivery-configuration" }, input)
 end
 
 --- AWS cognito-idp set-risk-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_risk_configuration(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "set-risk-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "set-risk-configuration" }, input)
 end
 
 --- AWS cognito-idp set-ui-customization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_ui_customization(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "set-ui-customization" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "set-ui-customization" }, input)
 end
 
 --- AWS cognito-idp set-user-mfa-preference operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_user_mfa_preference(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "set-user-mfa-preference" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "set-user-mfa-preference" }, input)
 end
 
 --- AWS cognito-idp set-user-pool-mfa-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_user_pool_mfa_config(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "set-user-pool-mfa-config" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "set-user-pool-mfa-config" }, input)
 end
 
 --- AWS cognito-idp set-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_user_settings(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "set-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "set-user-settings" }, input)
 end
 
 --- AWS cognito-idp sign-up operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.sign_up(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "sign-up" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "sign-up" }, input)
 end
 
 --- AWS cognito-idp start-user-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_user_import_job(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "start-user-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "start-user-import-job" }, input)
 end
 
 --- AWS cognito-idp start-web-authn-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_web_authn_registration(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "start-web-authn-registration" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "start-web-authn-registration" }, input)
 end
 
 --- AWS cognito-idp stop-user-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_user_import_job(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "stop-user-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "stop-user-import-job" }, input)
 end
 
 --- AWS cognito-idp tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "tag-resource" }, input)
 end
 
 --- AWS cognito-idp untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "untag-resource" }, input)
 end
 
 --- AWS cognito-idp update-auth-event-feedback operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_auth_event_feedback(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "update-auth-event-feedback" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "update-auth-event-feedback" }, input)
 end
 
 --- AWS cognito-idp update-device-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_device_status(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "update-device-status" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "update-device-status" }, input)
 end
 
 --- AWS cognito-idp update-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_group(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "update-group" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "update-group" }, input)
 end
 
 --- AWS cognito-idp update-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_identity_provider(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "update-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "update-identity-provider" }, input)
 end
 
 --- AWS cognito-idp update-managed-login-branding operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_managed_login_branding(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "update-managed-login-branding" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "update-managed-login-branding" }, input)
 end
 
 --- AWS cognito-idp update-resource-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resource_server(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "update-resource-server" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "update-resource-server" }, input)
 end
 
 --- AWS cognito-idp update-user-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user_attributes(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "update-user-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "update-user-attributes" }, input)
 end
 
 --- AWS cognito-idp update-user-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user_pool(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "update-user-pool" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "update-user-pool" }, input)
 end
 
 --- AWS cognito-idp update-user-pool-client operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user_pool_client(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "update-user-pool-client" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "update-user-pool-client" }, input)
 end
 
 --- AWS cognito-idp update-user-pool-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user_pool_domain(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "update-user-pool-domain" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "update-user-pool-domain" }, input)
 end
 
 --- AWS cognito-idp verify-software-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify_software_token(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "verify-software-token" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "verify-software-token" }, input)
 end
 
 --- AWS cognito-idp verify-user-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify_user_attribute(input)
-	return common.execute_aws_command_with_input({ "cognito-idp", "verify-user-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "cognito-idp", "verify-user-attribute" }, input)
 end
 
 return M

@@ -3,224 +3,224 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SECURITYLAKE service functions
+--- AWS securitylake service functions
 local M = {}
 
 --- AWS securitylake create-aws-log-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_aws_log_source(input)
-	return common.execute_aws_command_with_input({ "securitylake", "create-aws-log-source" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "create-aws-log-source" }, input)
 end
 
 --- AWS securitylake create-custom-log-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_custom_log_source(input)
-	return common.execute_aws_command_with_input({ "securitylake", "create-custom-log-source" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "create-custom-log-source" }, input)
 end
 
 --- AWS securitylake create-data-lake operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_lake(input)
-	return common.execute_aws_command_with_input({ "securitylake", "create-data-lake" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "create-data-lake" }, input)
 end
 
 --- AWS securitylake create-data-lake-exception-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_lake_exception_subscription(input)
-	return common.execute_aws_command_with_input({ "securitylake", "create-data-lake-exception-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "create-data-lake-exception-subscription" }, input)
 end
 
 --- AWS securitylake create-data-lake-organization-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_lake_organization_configuration(input)
-	return common.execute_aws_command_with_input({ "securitylake", "create-data-lake-organization-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "create-data-lake-organization-configuration" }, input)
 end
 
 --- AWS securitylake create-subscriber operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_subscriber(input)
-	return common.execute_aws_command_with_input({ "securitylake", "create-subscriber" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "create-subscriber" }, input)
 end
 
 --- AWS securitylake create-subscriber-notification operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_subscriber_notification(input)
-	return common.execute_aws_command_with_input({ "securitylake", "create-subscriber-notification" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "create-subscriber-notification" }, input)
 end
 
 --- AWS securitylake delete-aws-log-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_aws_log_source(input)
-	return common.execute_aws_command_with_input({ "securitylake", "delete-aws-log-source" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "delete-aws-log-source" }, input)
 end
 
 --- AWS securitylake delete-custom-log-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_log_source(input)
-	return common.execute_aws_command_with_input({ "securitylake", "delete-custom-log-source" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "delete-custom-log-source" }, input)
 end
 
 --- AWS securitylake delete-data-lake operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_lake(input)
-	return common.execute_aws_command_with_input({ "securitylake", "delete-data-lake" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "delete-data-lake" }, input)
 end
 
 --- AWS securitylake delete-data-lake-exception-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_lake_exception_subscription(input)
-	return common.execute_aws_command_with_input({ "securitylake", "delete-data-lake-exception-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "delete-data-lake-exception-subscription" }, input)
 end
 
 --- AWS securitylake delete-data-lake-organization-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_lake_organization_configuration(input)
-	return common.execute_aws_command_with_input({ "securitylake", "delete-data-lake-organization-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "delete-data-lake-organization-configuration" }, input)
 end
 
 --- AWS securitylake delete-subscriber operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_subscriber(input)
-	return common.execute_aws_command_with_input({ "securitylake", "delete-subscriber" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "delete-subscriber" }, input)
 end
 
 --- AWS securitylake delete-subscriber-notification operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_subscriber_notification(input)
-	return common.execute_aws_command_with_input({ "securitylake", "delete-subscriber-notification" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "delete-subscriber-notification" }, input)
 end
 
 --- AWS securitylake deregister-data-lake-delegated-administrator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_data_lake_delegated_administrator(input)
-	return common.execute_aws_command_with_input({ "securitylake", "deregister-data-lake-delegated-administrator" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "deregister-data-lake-delegated-administrator" }, input)
 end
 
 --- AWS securitylake get-data-lake-exception-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_lake_exception_subscription(input)
-	return common.execute_aws_command_with_input({ "securitylake", "get-data-lake-exception-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "get-data-lake-exception-subscription" }, input)
 end
 
 --- AWS securitylake get-data-lake-organization-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_lake_organization_configuration(input)
-	return common.execute_aws_command_with_input({ "securitylake", "get-data-lake-organization-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "get-data-lake-organization-configuration" }, input)
 end
 
 --- AWS securitylake get-data-lake-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_lake_sources(input)
-	return common.execute_aws_command_with_input({ "securitylake", "get-data-lake-sources" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "get-data-lake-sources" }, input)
 end
 
 --- AWS securitylake get-subscriber operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_subscriber(input)
-	return common.execute_aws_command_with_input({ "securitylake", "get-subscriber" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "get-subscriber" }, input)
 end
 
 --- AWS securitylake list-data-lake-exceptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_data_lake_exceptions(input)
-	return common.execute_aws_command_with_input({ "securitylake", "list-data-lake-exceptions" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "list-data-lake-exceptions" }, input)
 end
 
 --- AWS securitylake list-data-lakes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_data_lakes(input)
-	return common.execute_aws_command_with_input({ "securitylake", "list-data-lakes" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "list-data-lakes" }, input)
 end
 
 --- AWS securitylake list-log-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_log_sources(input)
-	return common.execute_aws_command_with_input({ "securitylake", "list-log-sources" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "list-log-sources" }, input)
 end
 
 --- AWS securitylake list-subscribers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_subscribers(input)
-	return common.execute_aws_command_with_input({ "securitylake", "list-subscribers" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "list-subscribers" }, input)
 end
 
 --- AWS securitylake list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "securitylake", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "list-tags-for-resource" }, input)
 end
 
 --- AWS securitylake register-data-lake-delegated-administrator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_data_lake_delegated_administrator(input)
-	return common.execute_aws_command_with_input({ "securitylake", "register-data-lake-delegated-administrator" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "register-data-lake-delegated-administrator" }, input)
 end
 
 --- AWS securitylake tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "securitylake", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "tag-resource" }, input)
 end
 
 --- AWS securitylake untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "securitylake", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "untag-resource" }, input)
 end
 
 --- AWS securitylake update-data-lake operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_data_lake(input)
-	return common.execute_aws_command_with_input({ "securitylake", "update-data-lake" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "update-data-lake" }, input)
 end
 
 --- AWS securitylake update-data-lake-exception-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_data_lake_exception_subscription(input)
-	return common.execute_aws_command_with_input({ "securitylake", "update-data-lake-exception-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "update-data-lake-exception-subscription" }, input)
 end
 
 --- AWS securitylake update-subscriber operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_subscriber(input)
-	return common.execute_aws_command_with_input({ "securitylake", "update-subscriber" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "update-subscriber" }, input)
 end
 
 --- AWS securitylake update-subscriber-notification operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_subscriber_notification(input)
-	return common.execute_aws_command_with_input({ "securitylake", "update-subscriber-notification" }, input)
+	return common.execute_aws_command_skeleton({ "securitylake", "update-subscriber-notification" }, input)
 end
 
 return M

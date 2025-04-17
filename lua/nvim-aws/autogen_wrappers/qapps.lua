@@ -3,252 +3,252 @@
 
 local common = require("nvim-aws.common")
 
---- AWS QAPPS service functions
+--- AWS qapps service functions
 local M = {}
 
 --- AWS qapps associate-library-item-review operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_library_item_review(input)
-	return common.execute_aws_command_with_input({ "qapps", "associate-library-item-review" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "associate-library-item-review" }, input)
 end
 
 --- AWS qapps associate-q-app-with-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_q_app_with_user(input)
-	return common.execute_aws_command_with_input({ "qapps", "associate-q-app-with-user" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "associate-q-app-with-user" }, input)
 end
 
 --- AWS qapps batch-create-category operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_create_category(input)
-	return common.execute_aws_command_with_input({ "qapps", "batch-create-category" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "batch-create-category" }, input)
 end
 
 --- AWS qapps batch-delete-category operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_category(input)
-	return common.execute_aws_command_with_input({ "qapps", "batch-delete-category" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "batch-delete-category" }, input)
 end
 
 --- AWS qapps batch-update-category operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_update_category(input)
-	return common.execute_aws_command_with_input({ "qapps", "batch-update-category" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "batch-update-category" }, input)
 end
 
 --- AWS qapps create-library-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_library_item(input)
-	return common.execute_aws_command_with_input({ "qapps", "create-library-item" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "create-library-item" }, input)
 end
 
 --- AWS qapps create-presigned-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_presigned_url(input)
-	return common.execute_aws_command_with_input({ "qapps", "create-presigned-url" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "create-presigned-url" }, input)
 end
 
 --- AWS qapps create-q-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_q_app(input)
-	return common.execute_aws_command_with_input({ "qapps", "create-q-app" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "create-q-app" }, input)
 end
 
 --- AWS qapps delete-library-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_library_item(input)
-	return common.execute_aws_command_with_input({ "qapps", "delete-library-item" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "delete-library-item" }, input)
 end
 
 --- AWS qapps delete-q-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_q_app(input)
-	return common.execute_aws_command_with_input({ "qapps", "delete-q-app" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "delete-q-app" }, input)
 end
 
 --- AWS qapps describe-q-app-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_q_app_permissions(input)
-	return common.execute_aws_command_with_input({ "qapps", "describe-q-app-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "describe-q-app-permissions" }, input)
 end
 
 --- AWS qapps disassociate-library-item-review operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_library_item_review(input)
-	return common.execute_aws_command_with_input({ "qapps", "disassociate-library-item-review" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "disassociate-library-item-review" }, input)
 end
 
 --- AWS qapps disassociate-q-app-from-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_q_app_from_user(input)
-	return common.execute_aws_command_with_input({ "qapps", "disassociate-q-app-from-user" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "disassociate-q-app-from-user" }, input)
 end
 
 --- AWS qapps export-q-app-session-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_q_app_session_data(input)
-	return common.execute_aws_command_with_input({ "qapps", "export-q-app-session-data" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "export-q-app-session-data" }, input)
 end
 
 --- AWS qapps get-library-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_library_item(input)
-	return common.execute_aws_command_with_input({ "qapps", "get-library-item" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "get-library-item" }, input)
 end
 
 --- AWS qapps get-q-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_q_app(input)
-	return common.execute_aws_command_with_input({ "qapps", "get-q-app" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "get-q-app" }, input)
 end
 
 --- AWS qapps get-q-app-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_q_app_session(input)
-	return common.execute_aws_command_with_input({ "qapps", "get-q-app-session" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "get-q-app-session" }, input)
 end
 
 --- AWS qapps get-q-app-session-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_q_app_session_metadata(input)
-	return common.execute_aws_command_with_input({ "qapps", "get-q-app-session-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "get-q-app-session-metadata" }, input)
 end
 
 --- AWS qapps import-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_document(input)
-	return common.execute_aws_command_with_input({ "qapps", "import-document" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "import-document" }, input)
 end
 
 --- AWS qapps list-categories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_categories(input)
-	return common.execute_aws_command_with_input({ "qapps", "list-categories" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "list-categories" }, input)
 end
 
 --- AWS qapps list-library-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_library_items(input)
-	return common.execute_aws_command_with_input({ "qapps", "list-library-items" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "list-library-items" }, input)
 end
 
 --- AWS qapps list-q-app-session-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_q_app_session_data(input)
-	return common.execute_aws_command_with_input({ "qapps", "list-q-app-session-data" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "list-q-app-session-data" }, input)
 end
 
 --- AWS qapps list-q-apps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_q_apps(input)
-	return common.execute_aws_command_with_input({ "qapps", "list-q-apps" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "list-q-apps" }, input)
 end
 
 --- AWS qapps list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "qapps", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "list-tags-for-resource" }, input)
 end
 
 --- AWS qapps predict-q-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.predict_q_app(input)
-	return common.execute_aws_command_with_input({ "qapps", "predict-q-app" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "predict-q-app" }, input)
 end
 
 --- AWS qapps start-q-app-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_q_app_session(input)
-	return common.execute_aws_command_with_input({ "qapps", "start-q-app-session" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "start-q-app-session" }, input)
 end
 
 --- AWS qapps stop-q-app-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_q_app_session(input)
-	return common.execute_aws_command_with_input({ "qapps", "stop-q-app-session" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "stop-q-app-session" }, input)
 end
 
 --- AWS qapps tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "qapps", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "tag-resource" }, input)
 end
 
 --- AWS qapps untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "qapps", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "untag-resource" }, input)
 end
 
 --- AWS qapps update-library-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_library_item(input)
-	return common.execute_aws_command_with_input({ "qapps", "update-library-item" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "update-library-item" }, input)
 end
 
 --- AWS qapps update-library-item-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_library_item_metadata(input)
-	return common.execute_aws_command_with_input({ "qapps", "update-library-item-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "update-library-item-metadata" }, input)
 end
 
 --- AWS qapps update-q-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_q_app(input)
-	return common.execute_aws_command_with_input({ "qapps", "update-q-app" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "update-q-app" }, input)
 end
 
 --- AWS qapps update-q-app-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_q_app_permissions(input)
-	return common.execute_aws_command_with_input({ "qapps", "update-q-app-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "update-q-app-permissions" }, input)
 end
 
 --- AWS qapps update-q-app-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_q_app_session(input)
-	return common.execute_aws_command_with_input({ "qapps", "update-q-app-session" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "update-q-app-session" }, input)
 end
 
 --- AWS qapps update-q-app-session-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_q_app_session_metadata(input)
-	return common.execute_aws_command_with_input({ "qapps", "update-q-app-session-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "qapps", "update-q-app-session-metadata" }, input)
 end
 
 return M

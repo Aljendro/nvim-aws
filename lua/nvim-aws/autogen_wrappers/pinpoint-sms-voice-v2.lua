@@ -3,637 +3,637 @@
 
 local common = require("nvim-aws.common")
 
---- AWS PINPOINT-SMS-VOICE-V2 service functions
+--- AWS pinpoint-sms-voice-v2 service functions
 local M = {}
 
 --- AWS pinpoint-sms-voice-v2 associate-origination-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_origination_identity(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "associate-origination-identity" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "associate-origination-identity" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 associate-protect-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_protect_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "associate-protect-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "associate-protect-configuration" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 create-configuration-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_configuration_set(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-configuration-set" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "create-configuration-set" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 create-event-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_event_destination(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-event-destination" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "create-event-destination" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 create-opt-out-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_opt_out_list(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-opt-out-list" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "create-opt-out-list" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 create-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_pool(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-pool" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "create-pool" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 create-protect-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_protect_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-protect-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "create-protect-configuration" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 create-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_registration(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-registration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "create-registration" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 create-registration-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_registration_association(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-registration-association" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "create-registration-association" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 create-registration-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_registration_attachment(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-registration-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "create-registration-attachment" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 create-registration-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_registration_version(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-registration-version" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "create-registration-version" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 create-verified-destination-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_verified_destination_number(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "create-verified-destination-number" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "create-verified-destination-number" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-account-default-protect-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_account_default_protect_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-account-default-protect-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-account-default-protect-configuration" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-configuration-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configuration_set(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-configuration-set" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-configuration-set" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-default-message-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_default_message_type(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-default-message-type" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-default-message-type" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-default-sender-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_default_sender_id(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-default-sender-id" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-default-sender-id" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-event-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_event_destination(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-event-destination" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-event-destination" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-keyword operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_keyword(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-keyword" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-keyword" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-media-message-spend-limit-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_media_message_spend_limit_override(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-media-message-spend-limit-override" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-media-message-spend-limit-override" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-opt-out-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_opt_out_list(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-opt-out-list" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-opt-out-list" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-opted-out-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_opted_out_number(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-opted-out-number" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-opted-out-number" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_pool(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-pool" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-pool" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-protect-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_protect_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-protect-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-protect-configuration" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-protect-configuration-rule-set-number-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_protect_configuration_rule_set_number_override(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-protect-configuration-rule-set-number-override" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-protect-configuration-rule-set-number-override" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_registration(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-registration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-registration" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-registration-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_registration_attachment(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-registration-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-registration-attachment" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-registration-field-value operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_registration_field_value(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-registration-field-value" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-registration-field-value" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-resource-policy" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-text-message-spend-limit-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_text_message_spend_limit_override(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-text-message-spend-limit-override" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-text-message-spend-limit-override" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-verified-destination-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_verified_destination_number(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-verified-destination-number" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-verified-destination-number" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 delete-voice-message-spend-limit-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_voice_message_spend_limit_override(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "delete-voice-message-spend-limit-override" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "delete-voice-message-spend-limit-override" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-account-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_attributes(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-account-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-account-attributes" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-account-limits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_limits(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-account-limits" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-account-limits" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-configuration-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_configuration_sets(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-configuration-sets" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-configuration-sets" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-keywords operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_keywords(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-keywords" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-keywords" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-opt-out-lists operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_opt_out_lists(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-opt-out-lists" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-opt-out-lists" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-opted-out-numbers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_opted_out_numbers(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-opted-out-numbers" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-opted-out-numbers" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-phone-numbers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_phone_numbers(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-phone-numbers" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-phone-numbers" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-pools operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_pools(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-pools" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-pools" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-protect-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_protect_configurations(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-protect-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-protect-configurations" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-registration-attachments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_registration_attachments(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-attachments" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-registration-attachments" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-registration-field-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_registration_field_definitions(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-field-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-registration-field-definitions" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-registration-field-values operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_registration_field_values(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-field-values" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-registration-field-values" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-registration-section-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_registration_section_definitions(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-section-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-registration-section-definitions" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-registration-type-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_registration_type_definitions(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-type-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-registration-type-definitions" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-registration-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_registration_versions(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registration-versions" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-registration-versions" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-registrations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_registrations(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-registrations" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-registrations" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-sender-ids operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_sender_ids(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-sender-ids" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-sender-ids" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-spend-limits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_spend_limits(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-spend-limits" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-spend-limits" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 describe-verified-destination-numbers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_verified_destination_numbers(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "describe-verified-destination-numbers" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "describe-verified-destination-numbers" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 disassociate-origination-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_origination_identity(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "disassociate-origination-identity" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "disassociate-origination-identity" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 disassociate-protect-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_protect_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "disassociate-protect-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "disassociate-protect-configuration" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 discard-registration-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.discard_registration_version(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "discard-registration-version" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "discard-registration-version" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 get-protect-configuration-country-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_protect_configuration_country_rule_set(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "get-protect-configuration-country-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "get-protect-configuration-country-rule-set" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 get-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_policy(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "get-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "get-resource-policy" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 list-pool-origination-identities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pool_origination_identities(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "list-pool-origination-identities" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "list-pool-origination-identities" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 list-protect-configuration-rule-set-number-overrides operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_protect_configuration_rule_set_number_overrides(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "list-protect-configuration-rule-set-number-overrides" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "list-protect-configuration-rule-set-number-overrides" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 list-registration-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_registration_associations(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "list-registration-associations" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "list-registration-associations" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "list-tags-for-resource" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 put-keyword operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_keyword(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-keyword" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "put-keyword" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 put-message-feedback operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_message_feedback(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-message-feedback" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "put-message-feedback" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 put-opted-out-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_opted_out_number(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-opted-out-number" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "put-opted-out-number" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 put-protect-configuration-rule-set-number-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_protect_configuration_rule_set_number_override(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-protect-configuration-rule-set-number-override" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "put-protect-configuration-rule-set-number-override" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 put-registration-field-value operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_registration_field_value(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-registration-field-value" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "put-registration-field-value" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "put-resource-policy" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 release-phone-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.release_phone_number(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "release-phone-number" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "release-phone-number" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 release-sender-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.release_sender_id(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "release-sender-id" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "release-sender-id" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 request-phone-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.request_phone_number(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "request-phone-number" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "request-phone-number" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 request-sender-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.request_sender_id(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "request-sender-id" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "request-sender-id" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 send-destination-number-verification-code operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_destination_number_verification_code(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "send-destination-number-verification-code" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "send-destination-number-verification-code" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 send-media-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_media_message(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "send-media-message" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "send-media-message" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 send-text-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_text_message(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "send-text-message" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "send-text-message" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 send-voice-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_voice_message(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "send-voice-message" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "send-voice-message" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 set-account-default-protect-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_account_default_protect_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-account-default-protect-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "set-account-default-protect-configuration" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 set-default-message-feedback-enabled operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_default_message_feedback_enabled(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-default-message-feedback-enabled" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "set-default-message-feedback-enabled" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 set-default-message-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_default_message_type(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-default-message-type" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "set-default-message-type" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 set-default-sender-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_default_sender_id(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-default-sender-id" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "set-default-sender-id" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 set-media-message-spend-limit-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_media_message_spend_limit_override(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-media-message-spend-limit-override" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "set-media-message-spend-limit-override" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 set-text-message-spend-limit-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_text_message_spend_limit_override(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-text-message-spend-limit-override" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "set-text-message-spend-limit-override" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 set-voice-message-spend-limit-override operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_voice_message_spend_limit_override(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "set-voice-message-spend-limit-override" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "set-voice-message-spend-limit-override" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 submit-registration-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.submit_registration_version(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "submit-registration-version" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "submit-registration-version" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "tag-resource" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "untag-resource" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 update-event-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_event_destination(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-event-destination" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "update-event-destination" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 update-phone-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_phone_number(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-phone-number" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "update-phone-number" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 update-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_pool(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-pool" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "update-pool" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 update-protect-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_protect_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-protect-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "update-protect-configuration" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 update-protect-configuration-country-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_protect_configuration_country_rule_set(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-protect-configuration-country-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "update-protect-configuration-country-rule-set" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 update-sender-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_sender_id(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "update-sender-id" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "update-sender-id" }, input)
 end
 
 --- AWS pinpoint-sms-voice-v2 verify-destination-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify_destination_number(input)
-	return common.execute_aws_command_with_input({ "pinpoint-sms-voice-v2", "verify-destination-number" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint-sms-voice-v2", "verify-destination-number" }, input)
 end
 
 return M

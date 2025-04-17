@@ -3,105 +3,105 @@
 
 local common = require("nvim-aws.common")
 
---- AWS OSIS service functions
+--- AWS osis service functions
 local M = {}
 
 --- AWS osis create-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_pipeline(input)
-	return common.execute_aws_command_with_input({ "osis", "create-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "create-pipeline" }, input)
 end
 
 --- AWS osis delete-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_pipeline(input)
-	return common.execute_aws_command_with_input({ "osis", "delete-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "delete-pipeline" }, input)
 end
 
 --- AWS osis get-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_pipeline(input)
-	return common.execute_aws_command_with_input({ "osis", "get-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "get-pipeline" }, input)
 end
 
 --- AWS osis get-pipeline-blueprint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_pipeline_blueprint(input)
-	return common.execute_aws_command_with_input({ "osis", "get-pipeline-blueprint" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "get-pipeline-blueprint" }, input)
 end
 
 --- AWS osis get-pipeline-change-progress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_pipeline_change_progress(input)
-	return common.execute_aws_command_with_input({ "osis", "get-pipeline-change-progress" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "get-pipeline-change-progress" }, input)
 end
 
 --- AWS osis list-pipeline-blueprints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pipeline_blueprints(input)
-	return common.execute_aws_command_with_input({ "osis", "list-pipeline-blueprints" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "list-pipeline-blueprints" }, input)
 end
 
 --- AWS osis list-pipelines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pipelines(input)
-	return common.execute_aws_command_with_input({ "osis", "list-pipelines" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "list-pipelines" }, input)
 end
 
 --- AWS osis list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "osis", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "list-tags-for-resource" }, input)
 end
 
 --- AWS osis start-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_pipeline(input)
-	return common.execute_aws_command_with_input({ "osis", "start-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "start-pipeline" }, input)
 end
 
 --- AWS osis stop-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_pipeline(input)
-	return common.execute_aws_command_with_input({ "osis", "stop-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "stop-pipeline" }, input)
 end
 
 --- AWS osis tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "osis", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "tag-resource" }, input)
 end
 
 --- AWS osis untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "osis", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "untag-resource" }, input)
 end
 
 --- AWS osis update-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_pipeline(input)
-	return common.execute_aws_command_with_input({ "osis", "update-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "update-pipeline" }, input)
 end
 
 --- AWS osis validate-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.validate_pipeline(input)
-	return common.execute_aws_command_with_input({ "osis", "validate-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "osis", "validate-pipeline" }, input)
 end
 
 return M

@@ -3,798 +3,798 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DMS service functions
+--- AWS dms service functions
 local M = {}
 
 --- AWS dms add-tags-to-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_tags_to_resource(input)
-	return common.execute_aws_command_with_input({ "dms", "add-tags-to-resource" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "add-tags-to-resource" }, input)
 end
 
 --- AWS dms apply-pending-maintenance-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.apply_pending_maintenance_action(input)
-	return common.execute_aws_command_with_input({ "dms", "apply-pending-maintenance-action" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "apply-pending-maintenance-action" }, input)
 end
 
 --- AWS dms batch-start-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_start_recommendations(input)
-	return common.execute_aws_command_with_input({ "dms", "batch-start-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "batch-start-recommendations" }, input)
 end
 
 --- AWS dms cancel-replication-task-assessment-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_replication_task_assessment_run(input)
-	return common.execute_aws_command_with_input({ "dms", "cancel-replication-task-assessment-run" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "cancel-replication-task-assessment-run" }, input)
 end
 
 --- AWS dms create-data-migration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_migration(input)
-	return common.execute_aws_command_with_input({ "dms", "create-data-migration" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-data-migration" }, input)
 end
 
 --- AWS dms create-data-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_provider(input)
-	return common.execute_aws_command_with_input({ "dms", "create-data-provider" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-data-provider" }, input)
 end
 
 --- AWS dms create-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_endpoint(input)
-	return common.execute_aws_command_with_input({ "dms", "create-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-endpoint" }, input)
 end
 
 --- AWS dms create-event-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_event_subscription(input)
-	return common.execute_aws_command_with_input({ "dms", "create-event-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-event-subscription" }, input)
 end
 
 --- AWS dms create-fleet-advisor-collector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_fleet_advisor_collector(input)
-	return common.execute_aws_command_with_input({ "dms", "create-fleet-advisor-collector" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-fleet-advisor-collector" }, input)
 end
 
 --- AWS dms create-instance-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_instance_profile(input)
-	return common.execute_aws_command_with_input({ "dms", "create-instance-profile" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-instance-profile" }, input)
 end
 
 --- AWS dms create-migration-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_migration_project(input)
-	return common.execute_aws_command_with_input({ "dms", "create-migration-project" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-migration-project" }, input)
 end
 
 --- AWS dms create-replication-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_replication_config(input)
-	return common.execute_aws_command_with_input({ "dms", "create-replication-config" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-replication-config" }, input)
 end
 
 --- AWS dms create-replication-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_replication_instance(input)
-	return common.execute_aws_command_with_input({ "dms", "create-replication-instance" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-replication-instance" }, input)
 end
 
 --- AWS dms create-replication-subnet-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_replication_subnet_group(input)
-	return common.execute_aws_command_with_input({ "dms", "create-replication-subnet-group" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-replication-subnet-group" }, input)
 end
 
 --- AWS dms create-replication-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_replication_task(input)
-	return common.execute_aws_command_with_input({ "dms", "create-replication-task" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "create-replication-task" }, input)
 end
 
 --- AWS dms delete-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_certificate(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-certificate" }, input)
 end
 
 --- AWS dms delete-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connection(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-connection" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-connection" }, input)
 end
 
 --- AWS dms delete-data-migration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_migration(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-data-migration" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-data-migration" }, input)
 end
 
 --- AWS dms delete-data-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_provider(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-data-provider" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-data-provider" }, input)
 end
 
 --- AWS dms delete-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_endpoint(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-endpoint" }, input)
 end
 
 --- AWS dms delete-event-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_event_subscription(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-event-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-event-subscription" }, input)
 end
 
 --- AWS dms delete-fleet-advisor-collector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_fleet_advisor_collector(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-fleet-advisor-collector" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-fleet-advisor-collector" }, input)
 end
 
 --- AWS dms delete-fleet-advisor-databases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_fleet_advisor_databases(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-fleet-advisor-databases" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-fleet-advisor-databases" }, input)
 end
 
 --- AWS dms delete-instance-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_instance_profile(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-instance-profile" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-instance-profile" }, input)
 end
 
 --- AWS dms delete-migration-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_migration_project(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-migration-project" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-migration-project" }, input)
 end
 
 --- AWS dms delete-replication-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_replication_config(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-replication-config" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-replication-config" }, input)
 end
 
 --- AWS dms delete-replication-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_replication_instance(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-replication-instance" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-replication-instance" }, input)
 end
 
 --- AWS dms delete-replication-subnet-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_replication_subnet_group(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-replication-subnet-group" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-replication-subnet-group" }, input)
 end
 
 --- AWS dms delete-replication-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_replication_task(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-replication-task" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-replication-task" }, input)
 end
 
 --- AWS dms delete-replication-task-assessment-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_replication_task_assessment_run(input)
-	return common.execute_aws_command_with_input({ "dms", "delete-replication-task-assessment-run" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "delete-replication-task-assessment-run" }, input)
 end
 
 --- AWS dms describe-account-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_attributes(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-account-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-account-attributes" }, input)
 end
 
 --- AWS dms describe-applicable-individual-assessments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_applicable_individual_assessments(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-applicable-individual-assessments" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-applicable-individual-assessments" }, input)
 end
 
 --- AWS dms describe-certificates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_certificates(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-certificates" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-certificates" }, input)
 end
 
 --- AWS dms describe-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_connections(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-connections" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-connections" }, input)
 end
 
 --- AWS dms describe-conversion-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_conversion_configuration(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-conversion-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-conversion-configuration" }, input)
 end
 
 --- AWS dms describe-data-migrations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_migrations(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-data-migrations" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-data-migrations" }, input)
 end
 
 --- AWS dms describe-data-providers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_providers(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-data-providers" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-data-providers" }, input)
 end
 
 --- AWS dms describe-endpoint-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoint_settings(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-endpoint-settings" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-endpoint-settings" }, input)
 end
 
 --- AWS dms describe-endpoint-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoint_types(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-endpoint-types" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-endpoint-types" }, input)
 end
 
 --- AWS dms describe-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoints(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-endpoints" }, input)
 end
 
 --- AWS dms describe-engine-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_engine_versions(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-engine-versions" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-engine-versions" }, input)
 end
 
 --- AWS dms describe-event-categories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_categories(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-event-categories" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-event-categories" }, input)
 end
 
 --- AWS dms describe-event-subscriptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_subscriptions(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-event-subscriptions" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-event-subscriptions" }, input)
 end
 
 --- AWS dms describe-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_events(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-events" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-events" }, input)
 end
 
 --- AWS dms describe-extension-pack-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_extension_pack_associations(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-extension-pack-associations" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-extension-pack-associations" }, input)
 end
 
 --- AWS dms describe-fleet-advisor-collectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_advisor_collectors(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-fleet-advisor-collectors" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-fleet-advisor-collectors" }, input)
 end
 
 --- AWS dms describe-fleet-advisor-databases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_advisor_databases(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-fleet-advisor-databases" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-fleet-advisor-databases" }, input)
 end
 
 --- AWS dms describe-fleet-advisor-lsa-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_advisor_lsa_analysis(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-fleet-advisor-lsa-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-fleet-advisor-lsa-analysis" }, input)
 end
 
 --- AWS dms describe-fleet-advisor-schema-object-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_advisor_schema_object_summary(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-fleet-advisor-schema-object-summary" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-fleet-advisor-schema-object-summary" }, input)
 end
 
 --- AWS dms describe-fleet-advisor-schemas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_advisor_schemas(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-fleet-advisor-schemas" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-fleet-advisor-schemas" }, input)
 end
 
 --- AWS dms describe-instance-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_profiles(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-instance-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-instance-profiles" }, input)
 end
 
 --- AWS dms describe-metadata-model-assessments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_metadata_model_assessments(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-metadata-model-assessments" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-metadata-model-assessments" }, input)
 end
 
 --- AWS dms describe-metadata-model-conversions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_metadata_model_conversions(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-metadata-model-conversions" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-metadata-model-conversions" }, input)
 end
 
 --- AWS dms describe-metadata-model-exports-as-script operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_metadata_model_exports_as_script(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-metadata-model-exports-as-script" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-metadata-model-exports-as-script" }, input)
 end
 
 --- AWS dms describe-metadata-model-exports-to-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_metadata_model_exports_to_target(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-metadata-model-exports-to-target" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-metadata-model-exports-to-target" }, input)
 end
 
 --- AWS dms describe-metadata-model-imports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_metadata_model_imports(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-metadata-model-imports" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-metadata-model-imports" }, input)
 end
 
 --- AWS dms describe-migration-projects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_migration_projects(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-migration-projects" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-migration-projects" }, input)
 end
 
 --- AWS dms describe-orderable-replication-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_orderable_replication_instances(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-orderable-replication-instances" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-orderable-replication-instances" }, input)
 end
 
 --- AWS dms describe-pending-maintenance-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_pending_maintenance_actions(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-pending-maintenance-actions" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-pending-maintenance-actions" }, input)
 end
 
 --- AWS dms describe-recommendation-limitations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_recommendation_limitations(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-recommendation-limitations" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-recommendation-limitations" }, input)
 end
 
 --- AWS dms describe-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_recommendations(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-recommendations" }, input)
 end
 
 --- AWS dms describe-refresh-schemas-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_refresh_schemas_status(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-refresh-schemas-status" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-refresh-schemas-status" }, input)
 end
 
 --- AWS dms describe-replication-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_configs(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-replication-configs" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-replication-configs" }, input)
 end
 
 --- AWS dms describe-replication-instance-task-logs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_instance_task_logs(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-replication-instance-task-logs" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-replication-instance-task-logs" }, input)
 end
 
 --- AWS dms describe-replication-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_instances(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-replication-instances" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-replication-instances" }, input)
 end
 
 --- AWS dms describe-replication-subnet-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_subnet_groups(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-replication-subnet-groups" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-replication-subnet-groups" }, input)
 end
 
 --- AWS dms describe-replication-table-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_table_statistics(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-replication-table-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-replication-table-statistics" }, input)
 end
 
 --- AWS dms describe-replication-task-assessment-results operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_task_assessment_results(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-replication-task-assessment-results" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-replication-task-assessment-results" }, input)
 end
 
 --- AWS dms describe-replication-task-assessment-runs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_task_assessment_runs(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-replication-task-assessment-runs" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-replication-task-assessment-runs" }, input)
 end
 
 --- AWS dms describe-replication-task-individual-assessments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_task_individual_assessments(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-replication-task-individual-assessments" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-replication-task-individual-assessments" }, input)
 end
 
 --- AWS dms describe-replication-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_tasks(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-replication-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-replication-tasks" }, input)
 end
 
 --- AWS dms describe-replications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replications(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-replications" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-replications" }, input)
 end
 
 --- AWS dms describe-schemas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_schemas(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-schemas" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-schemas" }, input)
 end
 
 --- AWS dms describe-table-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_table_statistics(input)
-	return common.execute_aws_command_with_input({ "dms", "describe-table-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "describe-table-statistics" }, input)
 end
 
 --- AWS dms export-metadata-model-assessment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_metadata_model_assessment(input)
-	return common.execute_aws_command_with_input({ "dms", "export-metadata-model-assessment" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "export-metadata-model-assessment" }, input)
 end
 
 --- AWS dms import-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_certificate(input)
-	return common.execute_aws_command_with_input({ "dms", "import-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "import-certificate" }, input)
 end
 
 --- AWS dms list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "dms", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "list-tags-for-resource" }, input)
 end
 
 --- AWS dms modify-conversion-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_conversion_configuration(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-conversion-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-conversion-configuration" }, input)
 end
 
 --- AWS dms modify-data-migration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_data_migration(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-data-migration" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-data-migration" }, input)
 end
 
 --- AWS dms modify-data-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_data_provider(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-data-provider" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-data-provider" }, input)
 end
 
 --- AWS dms modify-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_endpoint(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-endpoint" }, input)
 end
 
 --- AWS dms modify-event-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_event_subscription(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-event-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-event-subscription" }, input)
 end
 
 --- AWS dms modify-instance-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_profile(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-instance-profile" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-instance-profile" }, input)
 end
 
 --- AWS dms modify-migration-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_migration_project(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-migration-project" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-migration-project" }, input)
 end
 
 --- AWS dms modify-replication-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_replication_config(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-replication-config" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-replication-config" }, input)
 end
 
 --- AWS dms modify-replication-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_replication_instance(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-replication-instance" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-replication-instance" }, input)
 end
 
 --- AWS dms modify-replication-subnet-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_replication_subnet_group(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-replication-subnet-group" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-replication-subnet-group" }, input)
 end
 
 --- AWS dms modify-replication-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_replication_task(input)
-	return common.execute_aws_command_with_input({ "dms", "modify-replication-task" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "modify-replication-task" }, input)
 end
 
 --- AWS dms move-replication-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.move_replication_task(input)
-	return common.execute_aws_command_with_input({ "dms", "move-replication-task" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "move-replication-task" }, input)
 end
 
 --- AWS dms reboot-replication-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reboot_replication_instance(input)
-	return common.execute_aws_command_with_input({ "dms", "reboot-replication-instance" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "reboot-replication-instance" }, input)
 end
 
 --- AWS dms refresh-schemas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.refresh_schemas(input)
-	return common.execute_aws_command_with_input({ "dms", "refresh-schemas" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "refresh-schemas" }, input)
 end
 
 --- AWS dms reload-replication-tables operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reload_replication_tables(input)
-	return common.execute_aws_command_with_input({ "dms", "reload-replication-tables" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "reload-replication-tables" }, input)
 end
 
 --- AWS dms reload-tables operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reload_tables(input)
-	return common.execute_aws_command_with_input({ "dms", "reload-tables" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "reload-tables" }, input)
 end
 
 --- AWS dms remove-tags-from-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_tags_from_resource(input)
-	return common.execute_aws_command_with_input({ "dms", "remove-tags-from-resource" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "remove-tags-from-resource" }, input)
 end
 
 --- AWS dms run-fleet-advisor-lsa-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.run_fleet_advisor_lsa_analysis(input)
-	return common.execute_aws_command_with_input({ "dms", "run-fleet-advisor-lsa-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "run-fleet-advisor-lsa-analysis" }, input)
 end
 
 --- AWS dms start-data-migration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_data_migration(input)
-	return common.execute_aws_command_with_input({ "dms", "start-data-migration" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-data-migration" }, input)
 end
 
 --- AWS dms start-extension-pack-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_extension_pack_association(input)
-	return common.execute_aws_command_with_input({ "dms", "start-extension-pack-association" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-extension-pack-association" }, input)
 end
 
 --- AWS dms start-metadata-model-assessment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_metadata_model_assessment(input)
-	return common.execute_aws_command_with_input({ "dms", "start-metadata-model-assessment" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-metadata-model-assessment" }, input)
 end
 
 --- AWS dms start-metadata-model-conversion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_metadata_model_conversion(input)
-	return common.execute_aws_command_with_input({ "dms", "start-metadata-model-conversion" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-metadata-model-conversion" }, input)
 end
 
 --- AWS dms start-metadata-model-export-as-script operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_metadata_model_export_as_script(input)
-	return common.execute_aws_command_with_input({ "dms", "start-metadata-model-export-as-script" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-metadata-model-export-as-script" }, input)
 end
 
 --- AWS dms start-metadata-model-export-to-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_metadata_model_export_to_target(input)
-	return common.execute_aws_command_with_input({ "dms", "start-metadata-model-export-to-target" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-metadata-model-export-to-target" }, input)
 end
 
 --- AWS dms start-metadata-model-import operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_metadata_model_import(input)
-	return common.execute_aws_command_with_input({ "dms", "start-metadata-model-import" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-metadata-model-import" }, input)
 end
 
 --- AWS dms start-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_recommendations(input)
-	return common.execute_aws_command_with_input({ "dms", "start-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-recommendations" }, input)
 end
 
 --- AWS dms start-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_replication(input)
-	return common.execute_aws_command_with_input({ "dms", "start-replication" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-replication" }, input)
 end
 
 --- AWS dms start-replication-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_replication_task(input)
-	return common.execute_aws_command_with_input({ "dms", "start-replication-task" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-replication-task" }, input)
 end
 
 --- AWS dms start-replication-task-assessment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_replication_task_assessment(input)
-	return common.execute_aws_command_with_input({ "dms", "start-replication-task-assessment" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-replication-task-assessment" }, input)
 end
 
 --- AWS dms start-replication-task-assessment-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_replication_task_assessment_run(input)
-	return common.execute_aws_command_with_input({ "dms", "start-replication-task-assessment-run" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "start-replication-task-assessment-run" }, input)
 end
 
 --- AWS dms stop-data-migration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_data_migration(input)
-	return common.execute_aws_command_with_input({ "dms", "stop-data-migration" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "stop-data-migration" }, input)
 end
 
 --- AWS dms stop-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_replication(input)
-	return common.execute_aws_command_with_input({ "dms", "stop-replication" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "stop-replication" }, input)
 end
 
 --- AWS dms stop-replication-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_replication_task(input)
-	return common.execute_aws_command_with_input({ "dms", "stop-replication-task" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "stop-replication-task" }, input)
 end
 
 --- AWS dms test-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_connection(input)
-	return common.execute_aws_command_with_input({ "dms", "test-connection" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "test-connection" }, input)
 end
 
 --- AWS dms update-subscriptions-to-event-bridge operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_subscriptions_to_event_bridge(input)
-	return common.execute_aws_command_with_input({ "dms", "update-subscriptions-to-event-bridge" }, input)
+	return common.execute_aws_command_skeleton({ "dms", "update-subscriptions-to-event-bridge" }, input)
 end
 
 --- AWS dms wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "dms", "wait" }, input)
+	return common.execute_aws_command({ "dms", "wait" }, input)
 end
 
 return M

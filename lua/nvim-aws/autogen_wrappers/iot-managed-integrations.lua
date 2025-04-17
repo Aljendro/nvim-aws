@@ -3,406 +3,406 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IOT-MANAGED-INTEGRATIONS service functions
+--- AWS iot-managed-integrations service functions
 local M = {}
 
 --- AWS iot-managed-integrations create-credential-locker operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_credential_locker(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "create-credential-locker" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-credential-locker" }, input)
 end
 
 --- AWS iot-managed-integrations create-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_destination(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "create-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-destination" }, input)
 end
 
 --- AWS iot-managed-integrations create-event-log-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_event_log_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "create-event-log-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-event-log-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations create-managed-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_managed_thing(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "create-managed-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-managed-thing" }, input)
 end
 
 --- AWS iot-managed-integrations create-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "create-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-notification-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations create-ota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ota_task(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "create-ota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-ota-task" }, input)
 end
 
 --- AWS iot-managed-integrations create-ota-task-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ota_task_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "create-ota-task-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-ota-task-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations create-provisioning-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_provisioning_profile(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "create-provisioning-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "create-provisioning-profile" }, input)
 end
 
 --- AWS iot-managed-integrations delete-credential-locker operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_credential_locker(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "delete-credential-locker" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-credential-locker" }, input)
 end
 
 --- AWS iot-managed-integrations delete-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_destination(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "delete-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-destination" }, input)
 end
 
 --- AWS iot-managed-integrations delete-event-log-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_event_log_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "delete-event-log-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-event-log-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations delete-managed-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_managed_thing(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "delete-managed-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-managed-thing" }, input)
 end
 
 --- AWS iot-managed-integrations delete-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "delete-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-notification-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations delete-ota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ota_task(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "delete-ota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-ota-task" }, input)
 end
 
 --- AWS iot-managed-integrations delete-ota-task-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ota_task_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "delete-ota-task-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-ota-task-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations delete-provisioning-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_provisioning_profile(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "delete-provisioning-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "delete-provisioning-profile" }, input)
 end
 
 --- AWS iot-managed-integrations get-credential-locker operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_credential_locker(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-credential-locker" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-credential-locker" }, input)
 end
 
 --- AWS iot-managed-integrations get-custom-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_custom_endpoint(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-custom-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-custom-endpoint" }, input)
 end
 
 --- AWS iot-managed-integrations get-default-encryption-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_default_encryption_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-default-encryption-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-default-encryption-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations get-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_destination(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-destination" }, input)
 end
 
 --- AWS iot-managed-integrations get-device-discovery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_device_discovery(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-device-discovery" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-device-discovery" }, input)
 end
 
 --- AWS iot-managed-integrations get-event-log-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_event_log_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-event-log-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-event-log-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations get-hub-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_hub_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-hub-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-hub-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations get-managed-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_thing(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-managed-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing" }, input)
 end
 
 --- AWS iot-managed-integrations get-managed-thing-capabilities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_thing_capabilities(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-managed-thing-capabilities" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-capabilities" }, input)
 end
 
 --- AWS iot-managed-integrations get-managed-thing-connectivity-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_thing_connectivity_data(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-managed-thing-connectivity-data" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-connectivity-data" }, input)
 end
 
 --- AWS iot-managed-integrations get-managed-thing-meta-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_thing_meta_data(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-managed-thing-meta-data" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-meta-data" }, input)
 end
 
 --- AWS iot-managed-integrations get-managed-thing-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_thing_state(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-managed-thing-state" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-managed-thing-state" }, input)
 end
 
 --- AWS iot-managed-integrations get-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-notification-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations get-ota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ota_task(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-ota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-ota-task" }, input)
 end
 
 --- AWS iot-managed-integrations get-ota-task-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ota_task_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-ota-task-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-ota-task-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations get-provisioning-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_provisioning_profile(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-provisioning-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-provisioning-profile" }, input)
 end
 
 --- AWS iot-managed-integrations get-runtime-log-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_runtime_log_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-runtime-log-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-runtime-log-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations get-schema-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_schema_version(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "get-schema-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "get-schema-version" }, input)
 end
 
 --- AWS iot-managed-integrations list-credential-lockers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_credential_lockers(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-credential-lockers" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-credential-lockers" }, input)
 end
 
 --- AWS iot-managed-integrations list-destinations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_destinations(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-destinations" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-destinations" }, input)
 end
 
 --- AWS iot-managed-integrations list-event-log-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_event_log_configurations(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-event-log-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-event-log-configurations" }, input)
 end
 
 --- AWS iot-managed-integrations list-managed-thing-schemas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_thing_schemas(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-managed-thing-schemas" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-managed-thing-schemas" }, input)
 end
 
 --- AWS iot-managed-integrations list-managed-things operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_things(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-managed-things" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-managed-things" }, input)
 end
 
 --- AWS iot-managed-integrations list-notification-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_notification_configurations(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-notification-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-notification-configurations" }, input)
 end
 
 --- AWS iot-managed-integrations list-ota-task-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ota_task_configurations(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-ota-task-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-ota-task-configurations" }, input)
 end
 
 --- AWS iot-managed-integrations list-ota-task-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ota_task_executions(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-ota-task-executions" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-ota-task-executions" }, input)
 end
 
 --- AWS iot-managed-integrations list-ota-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ota_tasks(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-ota-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-ota-tasks" }, input)
 end
 
 --- AWS iot-managed-integrations list-provisioning-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_provisioning_profiles(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-provisioning-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-provisioning-profiles" }, input)
 end
 
 --- AWS iot-managed-integrations list-schema-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_schema_versions(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "list-schema-versions" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "list-schema-versions" }, input)
 end
 
 --- AWS iot-managed-integrations put-default-encryption-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_default_encryption_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "put-default-encryption-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "put-default-encryption-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations put-hub-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_hub_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "put-hub-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "put-hub-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations put-runtime-log-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_runtime_log_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "put-runtime-log-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "put-runtime-log-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations register-custom-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_custom_endpoint(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "register-custom-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "register-custom-endpoint" }, input)
 end
 
 --- AWS iot-managed-integrations reset-runtime-log-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_runtime_log_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "reset-runtime-log-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "reset-runtime-log-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations send-managed-thing-command operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_managed_thing_command(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "send-managed-thing-command" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "send-managed-thing-command" }, input)
 end
 
 --- AWS iot-managed-integrations start-device-discovery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_device_discovery(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "start-device-discovery" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "start-device-discovery" }, input)
 end
 
 --- AWS iot-managed-integrations update-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_destination(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "update-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-destination" }, input)
 end
 
 --- AWS iot-managed-integrations update-event-log-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_event_log_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "update-event-log-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-event-log-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations update-managed-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_managed_thing(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "update-managed-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-managed-thing" }, input)
 end
 
 --- AWS iot-managed-integrations update-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "update-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-notification-configuration" }, input)
 end
 
 --- AWS iot-managed-integrations update-ota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_ota_task(input)
-	return common.execute_aws_command_with_input({ "iot-managed-integrations", "update-ota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot-managed-integrations", "update-ota-task" }, input)
 end
 
 return M

@@ -3,434 +3,434 @@
 
 local common = require("nvim-aws.common")
 
---- AWS EMR service functions
+--- AWS emr service functions
 local M = {}
 
 --- AWS emr add-instance-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_instance_fleet(input)
-	return common.execute_aws_command_with_input({ "emr", "add-instance-fleet" }, input)
-end
-
---- AWS emr add-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.add_tags(input)
-	return common.execute_aws_command_with_input({ "emr", "add-tags" }, input)
-end
-
---- AWS emr cancel-steps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.cancel_steps(input)
-	return common.execute_aws_command_with_input({ "emr", "cancel-steps" }, input)
-end
-
---- AWS emr create-security-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.create_security_configuration(input)
-	return common.execute_aws_command_with_input({ "emr", "create-security-configuration" }, input)
-end
-
---- AWS emr create-studio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.create_studio(input)
-	return common.execute_aws_command_with_input({ "emr", "create-studio" }, input)
-end
-
---- AWS emr create-studio-session-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.create_studio_session_mapping(input)
-	return common.execute_aws_command_with_input({ "emr", "create-studio-session-mapping" }, input)
-end
-
---- AWS emr delete-security-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_security_configuration(input)
-	return common.execute_aws_command_with_input({ "emr", "delete-security-configuration" }, input)
-end
-
---- AWS emr delete-studio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_studio(input)
-	return common.execute_aws_command_with_input({ "emr", "delete-studio" }, input)
-end
-
---- AWS emr delete-studio-session-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_studio_session_mapping(input)
-	return common.execute_aws_command_with_input({ "emr", "delete-studio-session-mapping" }, input)
-end
-
---- AWS emr describe-notebook-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_notebook_execution(input)
-	return common.execute_aws_command_with_input({ "emr", "describe-notebook-execution" }, input)
-end
-
---- AWS emr describe-release-label operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_release_label(input)
-	return common.execute_aws_command_with_input({ "emr", "describe-release-label" }, input)
-end
-
---- AWS emr describe-security-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_security_configuration(input)
-	return common.execute_aws_command_with_input({ "emr", "describe-security-configuration" }, input)
-end
-
---- AWS emr describe-step operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_step(input)
-	return common.execute_aws_command_with_input({ "emr", "describe-step" }, input)
-end
-
---- AWS emr describe-studio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_studio(input)
-	return common.execute_aws_command_with_input({ "emr", "describe-studio" }, input)
-end
-
---- AWS emr get-auto-termination-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_auto_termination_policy(input)
-	return common.execute_aws_command_with_input({ "emr", "get-auto-termination-policy" }, input)
-end
-
---- AWS emr get-block-public-access-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_block_public_access_configuration(input)
-	return common.execute_aws_command_with_input({ "emr", "get-block-public-access-configuration" }, input)
-end
-
---- AWS emr get-cluster-session-credentials operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_cluster_session_credentials(input)
-	return common.execute_aws_command_with_input({ "emr", "get-cluster-session-credentials" }, input)
-end
-
---- AWS emr get-managed-scaling-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_managed_scaling_policy(input)
-	return common.execute_aws_command_with_input({ "emr", "get-managed-scaling-policy" }, input)
-end
-
---- AWS emr get-studio-session-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_studio_session_mapping(input)
-	return common.execute_aws_command_with_input({ "emr", "get-studio-session-mapping" }, input)
-end
-
---- AWS emr list-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_clusters(input)
-	return common.execute_aws_command_with_input({ "emr", "list-clusters" }, input)
-end
-
---- AWS emr list-instance-fleets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_instance_fleets(input)
-	return common.execute_aws_command_with_input({ "emr", "list-instance-fleets" }, input)
-end
-
---- AWS emr list-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_instances(input)
-	return common.execute_aws_command_with_input({ "emr", "list-instances" }, input)
-end
-
---- AWS emr list-notebook-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_notebook_executions(input)
-	return common.execute_aws_command_with_input({ "emr", "list-notebook-executions" }, input)
-end
-
---- AWS emr list-release-labels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_release_labels(input)
-	return common.execute_aws_command_with_input({ "emr", "list-release-labels" }, input)
-end
-
---- AWS emr list-security-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_security_configurations(input)
-	return common.execute_aws_command_with_input({ "emr", "list-security-configurations" }, input)
-end
-
---- AWS emr list-steps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_steps(input)
-	return common.execute_aws_command_with_input({ "emr", "list-steps" }, input)
-end
-
---- AWS emr list-studio-session-mappings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_studio_session_mappings(input)
-	return common.execute_aws_command_with_input({ "emr", "list-studio-session-mappings" }, input)
-end
-
---- AWS emr list-studios operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_studios(input)
-	return common.execute_aws_command_with_input({ "emr", "list-studios" }, input)
-end
-
---- AWS emr list-supported-instance-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_supported_instance_types(input)
-	return common.execute_aws_command_with_input({ "emr", "list-supported-instance-types" }, input)
-end
-
---- AWS emr modify-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.modify_cluster(input)
-	return common.execute_aws_command_with_input({ "emr", "modify-cluster" }, input)
-end
-
---- AWS emr modify-instance-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.modify_instance_fleet(input)
-	return common.execute_aws_command_with_input({ "emr", "modify-instance-fleet" }, input)
-end
-
---- AWS emr modify-instance-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.modify_instance_groups(input)
-	return common.execute_aws_command_with_input({ "emr", "modify-instance-groups" }, input)
-end
-
---- AWS emr put-auto-scaling-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_auto_scaling_policy(input)
-	return common.execute_aws_command_with_input({ "emr", "put-auto-scaling-policy" }, input)
-end
-
---- AWS emr put-auto-termination-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_auto_termination_policy(input)
-	return common.execute_aws_command_with_input({ "emr", "put-auto-termination-policy" }, input)
-end
-
---- AWS emr put-block-public-access-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_block_public_access_configuration(input)
-	return common.execute_aws_command_with_input({ "emr", "put-block-public-access-configuration" }, input)
-end
-
---- AWS emr put-managed-scaling-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_managed_scaling_policy(input)
-	return common.execute_aws_command_with_input({ "emr", "put-managed-scaling-policy" }, input)
-end
-
---- AWS emr remove-auto-scaling-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.remove_auto_scaling_policy(input)
-	return common.execute_aws_command_with_input({ "emr", "remove-auto-scaling-policy" }, input)
-end
-
---- AWS emr remove-auto-termination-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.remove_auto_termination_policy(input)
-	return common.execute_aws_command_with_input({ "emr", "remove-auto-termination-policy" }, input)
-end
-
---- AWS emr remove-managed-scaling-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.remove_managed_scaling_policy(input)
-	return common.execute_aws_command_with_input({ "emr", "remove-managed-scaling-policy" }, input)
-end
-
---- AWS emr remove-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.remove_tags(input)
-	return common.execute_aws_command_with_input({ "emr", "remove-tags" }, input)
-end
-
---- AWS emr start-notebook-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_notebook_execution(input)
-	return common.execute_aws_command_with_input({ "emr", "start-notebook-execution" }, input)
-end
-
---- AWS emr stop-notebook-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_notebook_execution(input)
-	return common.execute_aws_command_with_input({ "emr", "stop-notebook-execution" }, input)
-end
-
---- AWS emr update-studio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_studio(input)
-	return common.execute_aws_command_with_input({ "emr", "update-studio" }, input)
-end
-
---- AWS emr update-studio-session-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_studio_session_mapping(input)
-	return common.execute_aws_command_with_input({ "emr", "update-studio-session-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "emr", "add-instance-fleet" }, input)
 end
 
 --- AWS emr add-instance-groups operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_instance_groups(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "add-instance-groups" }, input)
+	return common.execute_aws_command({ "emr", "add-instance-groups" }, input)
 end
 
 --- AWS emr add-steps operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_steps(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "add-steps" }, input)
+	return common.execute_aws_command({ "emr", "add-steps" }, input)
+end
+
+--- AWS emr add-tags operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.add_tags(input)
+	return common.execute_aws_command_skeleton({ "emr", "add-tags" }, input)
+end
+
+--- AWS emr cancel-steps operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.cancel_steps(input)
+	return common.execute_aws_command_skeleton({ "emr", "cancel-steps" }, input)
 end
 
 --- AWS emr create-cluster operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "create-cluster" }, input)
+	return common.execute_aws_command({ "emr", "create-cluster" }, input)
 end
 
 --- AWS emr create-default-roles operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_default_roles(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "create-default-roles" }, input)
+	return common.execute_aws_command({ "emr", "create-default-roles" }, input)
 end
 
 --- AWS emr create-hbase-backup operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_hbase_backup(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "create-hbase-backup" }, input)
+	return common.execute_aws_command({ "emr", "create-hbase-backup" }, input)
+end
+
+--- AWS emr create-security-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.create_security_configuration(input)
+	return common.execute_aws_command_skeleton({ "emr", "create-security-configuration" }, input)
+end
+
+--- AWS emr create-studio operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.create_studio(input)
+	return common.execute_aws_command_skeleton({ "emr", "create-studio" }, input)
+end
+
+--- AWS emr create-studio-session-mapping operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.create_studio_session_mapping(input)
+	return common.execute_aws_command_skeleton({ "emr", "create-studio-session-mapping" }, input)
+end
+
+--- AWS emr delete-security-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_security_configuration(input)
+	return common.execute_aws_command_skeleton({ "emr", "delete-security-configuration" }, input)
+end
+
+--- AWS emr delete-studio operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_studio(input)
+	return common.execute_aws_command_skeleton({ "emr", "delete-studio" }, input)
+end
+
+--- AWS emr delete-studio-session-mapping operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_studio_session_mapping(input)
+	return common.execute_aws_command_skeleton({ "emr", "delete-studio-session-mapping" }, input)
 end
 
 --- AWS emr describe-cluster operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "describe-cluster" }, input)
+	return common.execute_aws_command({ "emr", "describe-cluster" }, input)
+end
+
+--- AWS emr describe-notebook-execution operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.describe_notebook_execution(input)
+	return common.execute_aws_command_skeleton({ "emr", "describe-notebook-execution" }, input)
+end
+
+--- AWS emr describe-release-label operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.describe_release_label(input)
+	return common.execute_aws_command_skeleton({ "emr", "describe-release-label" }, input)
+end
+
+--- AWS emr describe-security-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.describe_security_configuration(input)
+	return common.execute_aws_command_skeleton({ "emr", "describe-security-configuration" }, input)
+end
+
+--- AWS emr describe-step operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.describe_step(input)
+	return common.execute_aws_command_skeleton({ "emr", "describe-step" }, input)
+end
+
+--- AWS emr describe-studio operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.describe_studio(input)
+	return common.execute_aws_command_skeleton({ "emr", "describe-studio" }, input)
 end
 
 --- AWS emr disable-hbase-backups operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_hbase_backups(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "disable-hbase-backups" }, input)
+	return common.execute_aws_command({ "emr", "disable-hbase-backups" }, input)
 end
 
 --- AWS emr get operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "get" }, input)
+	return common.execute_aws_command({ "emr", "get" }, input)
+end
+
+--- AWS emr get-auto-termination-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_auto_termination_policy(input)
+	return common.execute_aws_command_skeleton({ "emr", "get-auto-termination-policy" }, input)
+end
+
+--- AWS emr get-block-public-access-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_block_public_access_configuration(input)
+	return common.execute_aws_command_skeleton({ "emr", "get-block-public-access-configuration" }, input)
+end
+
+--- AWS emr get-cluster-session-credentials operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_cluster_session_credentials(input)
+	return common.execute_aws_command_skeleton({ "emr", "get-cluster-session-credentials" }, input)
+end
+
+--- AWS emr get-managed-scaling-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_managed_scaling_policy(input)
+	return common.execute_aws_command_skeleton({ "emr", "get-managed-scaling-policy" }, input)
+end
+
+--- AWS emr get-studio-session-mapping operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_studio_session_mapping(input)
+	return common.execute_aws_command_skeleton({ "emr", "get-studio-session-mapping" }, input)
 end
 
 --- AWS emr install-applications operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.install_applications(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "install-applications" }, input)
+	return common.execute_aws_command({ "emr", "install-applications" }, input)
+end
+
+--- AWS emr list-clusters operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_clusters(input)
+	return common.execute_aws_command_skeleton({ "emr", "list-clusters" }, input)
+end
+
+--- AWS emr list-instance-fleets operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_instance_fleets(input)
+	return common.execute_aws_command_skeleton({ "emr", "list-instance-fleets" }, input)
+end
+
+--- AWS emr list-instances operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_instances(input)
+	return common.execute_aws_command_skeleton({ "emr", "list-instances" }, input)
+end
+
+--- AWS emr list-notebook-executions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_notebook_executions(input)
+	return common.execute_aws_command_skeleton({ "emr", "list-notebook-executions" }, input)
+end
+
+--- AWS emr list-release-labels operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_release_labels(input)
+	return common.execute_aws_command_skeleton({ "emr", "list-release-labels" }, input)
+end
+
+--- AWS emr list-security-configurations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_security_configurations(input)
+	return common.execute_aws_command_skeleton({ "emr", "list-security-configurations" }, input)
+end
+
+--- AWS emr list-steps operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_steps(input)
+	return common.execute_aws_command_skeleton({ "emr", "list-steps" }, input)
+end
+
+--- AWS emr list-studio-session-mappings operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_studio_session_mappings(input)
+	return common.execute_aws_command_skeleton({ "emr", "list-studio-session-mappings" }, input)
+end
+
+--- AWS emr list-studios operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_studios(input)
+	return common.execute_aws_command_skeleton({ "emr", "list-studios" }, input)
+end
+
+--- AWS emr list-supported-instance-types operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_supported_instance_types(input)
+	return common.execute_aws_command_skeleton({ "emr", "list-supported-instance-types" }, input)
+end
+
+--- AWS emr modify-cluster operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.modify_cluster(input)
+	return common.execute_aws_command_skeleton({ "emr", "modify-cluster" }, input)
 end
 
 --- AWS emr modify-cluster-attributes operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_cluster_attributes(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "modify-cluster-attributes" }, input)
+	return common.execute_aws_command({ "emr", "modify-cluster-attributes" }, input)
+end
+
+--- AWS emr modify-instance-fleet operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.modify_instance_fleet(input)
+	return common.execute_aws_command_skeleton({ "emr", "modify-instance-fleet" }, input)
+end
+
+--- AWS emr modify-instance-groups operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.modify_instance_groups(input)
+	return common.execute_aws_command_skeleton({ "emr", "modify-instance-groups" }, input)
 end
 
 --- AWS emr put operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "put" }, input)
+	return common.execute_aws_command({ "emr", "put" }, input)
+end
+
+--- AWS emr put-auto-scaling-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_auto_scaling_policy(input)
+	return common.execute_aws_command_skeleton({ "emr", "put-auto-scaling-policy" }, input)
+end
+
+--- AWS emr put-auto-termination-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_auto_termination_policy(input)
+	return common.execute_aws_command_skeleton({ "emr", "put-auto-termination-policy" }, input)
+end
+
+--- AWS emr put-block-public-access-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_block_public_access_configuration(input)
+	return common.execute_aws_command_skeleton({ "emr", "put-block-public-access-configuration" }, input)
+end
+
+--- AWS emr put-managed-scaling-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_managed_scaling_policy(input)
+	return common.execute_aws_command_skeleton({ "emr", "put-managed-scaling-policy" }, input)
+end
+
+--- AWS emr remove-auto-scaling-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.remove_auto_scaling_policy(input)
+	return common.execute_aws_command_skeleton({ "emr", "remove-auto-scaling-policy" }, input)
+end
+
+--- AWS emr remove-auto-termination-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.remove_auto_termination_policy(input)
+	return common.execute_aws_command_skeleton({ "emr", "remove-auto-termination-policy" }, input)
+end
+
+--- AWS emr remove-managed-scaling-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.remove_managed_scaling_policy(input)
+	return common.execute_aws_command_skeleton({ "emr", "remove-managed-scaling-policy" }, input)
+end
+
+--- AWS emr remove-tags operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.remove_tags(input)
+	return common.execute_aws_command_skeleton({ "emr", "remove-tags" }, input)
 end
 
 --- AWS emr restore-from-hbase-backup operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_from_hbase_backup(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "restore-from-hbase-backup" }, input)
+	return common.execute_aws_command({ "emr", "restore-from-hbase-backup" }, input)
 end
 
 --- AWS emr schedule-hbase-backup operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.schedule_hbase_backup(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "schedule-hbase-backup" }, input)
+	return common.execute_aws_command({ "emr", "schedule-hbase-backup" }, input)
 end
 
 --- AWS emr socks operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.socks(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "socks" }, input)
+	return common.execute_aws_command({ "emr", "socks" }, input)
 end
 
 --- AWS emr ssh operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.ssh(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "ssh" }, input)
+	return common.execute_aws_command({ "emr", "ssh" }, input)
+end
+
+--- AWS emr start-notebook-execution operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_notebook_execution(input)
+	return common.execute_aws_command_skeleton({ "emr", "start-notebook-execution" }, input)
+end
+
+--- AWS emr stop-notebook-execution operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_notebook_execution(input)
+	return common.execute_aws_command_skeleton({ "emr", "stop-notebook-execution" }, input)
 end
 
 --- AWS emr terminate-clusters operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.terminate_clusters(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "terminate-clusters" }, input)
+	return common.execute_aws_command({ "emr", "terminate-clusters" }, input)
+end
+
+--- AWS emr update-studio operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_studio(input)
+	return common.execute_aws_command_skeleton({ "emr", "update-studio" }, input)
+end
+
+--- AWS emr update-studio-session-mapping operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_studio_session_mapping(input)
+	return common.execute_aws_command_skeleton({ "emr", "update-studio-session-mapping" }, input)
 end
 
 --- AWS emr wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "emr", "wait" }, input)
+	return common.execute_aws_command({ "emr", "wait" }, input)
 end
 
 return M

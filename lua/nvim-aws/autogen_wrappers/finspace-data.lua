@@ -3,7 +3,7 @@
 
 local common = require("nvim-aws.common")
 
---- AWS FINSPACE-DATA service functions
+--- AWS finspace-data service functions
 local M = {}
 
 return M

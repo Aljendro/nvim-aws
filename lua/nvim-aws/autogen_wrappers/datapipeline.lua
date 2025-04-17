@@ -3,147 +3,147 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DATAPIPELINE service functions
+--- AWS datapipeline service functions
 local M = {}
 
 --- AWS datapipeline activate-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.activate_pipeline(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "activate-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "activate-pipeline" }, input)
 end
 
 --- AWS datapipeline add-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_tags(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "add-tags" }, input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "add-tags" }, input)
 end
 
 --- AWS datapipeline create-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_pipeline(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "create-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "create-pipeline" }, input)
 end
 
 --- AWS datapipeline deactivate-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deactivate_pipeline(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "deactivate-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "deactivate-pipeline" }, input)
 end
 
 --- AWS datapipeline delete-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_pipeline(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "delete-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "delete-pipeline" }, input)
 end
 
 --- AWS datapipeline describe-objects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_objects(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "describe-objects" }, input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "describe-objects" }, input)
 end
 
 --- AWS datapipeline describe-pipelines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_pipelines(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "describe-pipelines" }, input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "describe-pipelines" }, input)
 end
 
 --- AWS datapipeline evaluate-expression operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.evaluate_expression(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "evaluate-expression" }, input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "evaluate-expression" }, input)
 end
 
 --- AWS datapipeline get-pipeline-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_pipeline_definition(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "get-pipeline-definition" }, input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "get-pipeline-definition" }, input)
 end
 
 --- AWS datapipeline list-pipelines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pipelines(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "list-pipelines" }, input)
-end
-
---- AWS datapipeline poll-for-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.poll_for_task(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "poll-for-task" }, input)
-end
-
---- AWS datapipeline put-pipeline-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_pipeline_definition(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "put-pipeline-definition" }, input)
-end
-
---- AWS datapipeline query-objects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.query_objects(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "query-objects" }, input)
-end
-
---- AWS datapipeline remove-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.remove_tags(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "remove-tags" }, input)
-end
-
---- AWS datapipeline report-task-progress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.report_task_progress(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "report-task-progress" }, input)
-end
-
---- AWS datapipeline report-task-runner-heartbeat operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.report_task_runner_heartbeat(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "report-task-runner-heartbeat" }, input)
-end
-
---- AWS datapipeline set-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.set_status(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "set-status" }, input)
-end
-
---- AWS datapipeline set-task-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.set_task_status(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "set-task-status" }, input)
-end
-
---- AWS datapipeline validate-pipeline-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.validate_pipeline_definition(input)
-	return common.execute_aws_command_with_input({ "datapipeline", "validate-pipeline-definition" }, input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "list-pipelines" }, input)
 end
 
 --- AWS datapipeline list-runs operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_runs(input)
-	return common.execute_aws_command_with_raw_input({ "datapipeline", "list-runs" }, input)
+	return common.execute_aws_command({ "datapipeline", "list-runs" }, input)
+end
+
+--- AWS datapipeline poll-for-task operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.poll_for_task(input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "poll-for-task" }, input)
+end
+
+--- AWS datapipeline put-pipeline-definition operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_pipeline_definition(input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "put-pipeline-definition" }, input)
+end
+
+--- AWS datapipeline query-objects operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.query_objects(input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "query-objects" }, input)
+end
+
+--- AWS datapipeline remove-tags operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.remove_tags(input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "remove-tags" }, input)
+end
+
+--- AWS datapipeline report-task-progress operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.report_task_progress(input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "report-task-progress" }, input)
+end
+
+--- AWS datapipeline report-task-runner-heartbeat operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.report_task_runner_heartbeat(input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "report-task-runner-heartbeat" }, input)
+end
+
+--- AWS datapipeline set-status operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.set_status(input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "set-status" }, input)
+end
+
+--- AWS datapipeline set-task-status operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.set_task_status(input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "set-task-status" }, input)
+end
+
+--- AWS datapipeline validate-pipeline-definition operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.validate_pipeline_definition(input)
+	return common.execute_aws_command_skeleton({ "datapipeline", "validate-pipeline-definition" }, input)
 end
 
 return M

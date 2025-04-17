@@ -3,252 +3,252 @@
 
 local common = require("nvim-aws.common")
 
---- AWS NOTIFICATIONS service functions
+--- AWS notifications service functions
 local M = {}
 
 --- AWS notifications associate-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_channel(input)
-	return common.execute_aws_command_with_input({ "notifications", "associate-channel" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "associate-channel" }, input)
 end
 
 --- AWS notifications associate-managed-notification-account-contact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_managed_notification_account_contact(input)
-	return common.execute_aws_command_with_input({ "notifications", "associate-managed-notification-account-contact" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "associate-managed-notification-account-contact" }, input)
 end
 
 --- AWS notifications associate-managed-notification-additional-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_managed_notification_additional_channel(input)
-	return common.execute_aws_command_with_input({ "notifications", "associate-managed-notification-additional-channel" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "associate-managed-notification-additional-channel" }, input)
 end
 
 --- AWS notifications create-event-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_event_rule(input)
-	return common.execute_aws_command_with_input({ "notifications", "create-event-rule" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "create-event-rule" }, input)
 end
 
 --- AWS notifications create-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "notifications", "create-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "create-notification-configuration" }, input)
 end
 
 --- AWS notifications delete-event-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_event_rule(input)
-	return common.execute_aws_command_with_input({ "notifications", "delete-event-rule" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "delete-event-rule" }, input)
 end
 
 --- AWS notifications delete-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "notifications", "delete-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "delete-notification-configuration" }, input)
 end
 
 --- AWS notifications deregister-notification-hub operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_notification_hub(input)
-	return common.execute_aws_command_with_input({ "notifications", "deregister-notification-hub" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "deregister-notification-hub" }, input)
 end
 
 --- AWS notifications disable-notifications-access-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_notifications_access_for_organization(input)
-	return common.execute_aws_command_with_input({ "notifications", "disable-notifications-access-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "disable-notifications-access-for-organization" }, input)
 end
 
 --- AWS notifications disassociate-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_channel(input)
-	return common.execute_aws_command_with_input({ "notifications", "disassociate-channel" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "disassociate-channel" }, input)
 end
 
 --- AWS notifications disassociate-managed-notification-account-contact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_managed_notification_account_contact(input)
-	return common.execute_aws_command_with_input({ "notifications", "disassociate-managed-notification-account-contact" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "disassociate-managed-notification-account-contact" }, input)
 end
 
 --- AWS notifications disassociate-managed-notification-additional-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_managed_notification_additional_channel(input)
-	return common.execute_aws_command_with_input({ "notifications", "disassociate-managed-notification-additional-channel" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "disassociate-managed-notification-additional-channel" }, input)
 end
 
 --- AWS notifications enable-notifications-access-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_notifications_access_for_organization(input)
-	return common.execute_aws_command_with_input({ "notifications", "enable-notifications-access-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "enable-notifications-access-for-organization" }, input)
 end
 
 --- AWS notifications get-event-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_event_rule(input)
-	return common.execute_aws_command_with_input({ "notifications", "get-event-rule" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "get-event-rule" }, input)
 end
 
 --- AWS notifications get-managed-notification-child-event operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_notification_child_event(input)
-	return common.execute_aws_command_with_input({ "notifications", "get-managed-notification-child-event" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "get-managed-notification-child-event" }, input)
 end
 
 --- AWS notifications get-managed-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "notifications", "get-managed-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "get-managed-notification-configuration" }, input)
 end
 
 --- AWS notifications get-managed-notification-event operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_notification_event(input)
-	return common.execute_aws_command_with_input({ "notifications", "get-managed-notification-event" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "get-managed-notification-event" }, input)
 end
 
 --- AWS notifications get-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "notifications", "get-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "get-notification-configuration" }, input)
 end
 
 --- AWS notifications get-notification-event operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_notification_event(input)
-	return common.execute_aws_command_with_input({ "notifications", "get-notification-event" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "get-notification-event" }, input)
 end
 
 --- AWS notifications get-notifications-access-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_notifications_access_for_organization(input)
-	return common.execute_aws_command_with_input({ "notifications", "get-notifications-access-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "get-notifications-access-for-organization" }, input)
 end
 
 --- AWS notifications list-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channels(input)
-	return common.execute_aws_command_with_input({ "notifications", "list-channels" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "list-channels" }, input)
 end
 
 --- AWS notifications list-event-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_event_rules(input)
-	return common.execute_aws_command_with_input({ "notifications", "list-event-rules" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "list-event-rules" }, input)
 end
 
 --- AWS notifications list-managed-notification-channel-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_notification_channel_associations(input)
-	return common.execute_aws_command_with_input({ "notifications", "list-managed-notification-channel-associations" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "list-managed-notification-channel-associations" }, input)
 end
 
 --- AWS notifications list-managed-notification-child-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_notification_child_events(input)
-	return common.execute_aws_command_with_input({ "notifications", "list-managed-notification-child-events" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "list-managed-notification-child-events" }, input)
 end
 
 --- AWS notifications list-managed-notification-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_notification_configurations(input)
-	return common.execute_aws_command_with_input({ "notifications", "list-managed-notification-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "list-managed-notification-configurations" }, input)
 end
 
 --- AWS notifications list-managed-notification-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_notification_events(input)
-	return common.execute_aws_command_with_input({ "notifications", "list-managed-notification-events" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "list-managed-notification-events" }, input)
 end
 
 --- AWS notifications list-notification-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_notification_configurations(input)
-	return common.execute_aws_command_with_input({ "notifications", "list-notification-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "list-notification-configurations" }, input)
 end
 
 --- AWS notifications list-notification-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_notification_events(input)
-	return common.execute_aws_command_with_input({ "notifications", "list-notification-events" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "list-notification-events" }, input)
 end
 
 --- AWS notifications list-notification-hubs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_notification_hubs(input)
-	return common.execute_aws_command_with_input({ "notifications", "list-notification-hubs" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "list-notification-hubs" }, input)
 end
 
 --- AWS notifications list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "notifications", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "list-tags-for-resource" }, input)
 end
 
 --- AWS notifications register-notification-hub operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_notification_hub(input)
-	return common.execute_aws_command_with_input({ "notifications", "register-notification-hub" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "register-notification-hub" }, input)
 end
 
 --- AWS notifications tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "notifications", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "tag-resource" }, input)
 end
 
 --- AWS notifications untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "notifications", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "untag-resource" }, input)
 end
 
 --- AWS notifications update-event-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_event_rule(input)
-	return common.execute_aws_command_with_input({ "notifications", "update-event-rule" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "update-event-rule" }, input)
 end
 
 --- AWS notifications update-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "notifications", "update-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "notifications", "update-notification-configuration" }, input)
 end
 
 return M

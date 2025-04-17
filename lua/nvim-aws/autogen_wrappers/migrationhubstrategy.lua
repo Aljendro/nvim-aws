@@ -3,161 +3,161 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MIGRATIONHUBSTRATEGY service functions
+--- AWS migrationhubstrategy service functions
 local M = {}
 
 --- AWS migrationhubstrategy get-application-component-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_application_component_details(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-application-component-details" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "get-application-component-details" }, input)
 end
 
 --- AWS migrationhubstrategy get-application-component-strategies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_application_component_strategies(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-application-component-strategies" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "get-application-component-strategies" }, input)
 end
 
 --- AWS migrationhubstrategy get-assessment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_assessment(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-assessment" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "get-assessment" }, input)
 end
 
 --- AWS migrationhubstrategy get-import-file-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_import_file_task(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-import-file-task" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "get-import-file-task" }, input)
 end
 
 --- AWS migrationhubstrategy get-latest-assessment-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_latest_assessment_id(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-latest-assessment-id" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "get-latest-assessment-id" }, input)
 end
 
 --- AWS migrationhubstrategy get-portfolio-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_portfolio_preferences(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-portfolio-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "get-portfolio-preferences" }, input)
 end
 
 --- AWS migrationhubstrategy get-portfolio-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_portfolio_summary(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-portfolio-summary" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "get-portfolio-summary" }, input)
 end
 
 --- AWS migrationhubstrategy get-recommendation-report-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recommendation_report_details(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-recommendation-report-details" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "get-recommendation-report-details" }, input)
 end
 
 --- AWS migrationhubstrategy get-server-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_server_details(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-server-details" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "get-server-details" }, input)
 end
 
 --- AWS migrationhubstrategy get-server-strategies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_server_strategies(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "get-server-strategies" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "get-server-strategies" }, input)
 end
 
 --- AWS migrationhubstrategy list-analyzable-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_analyzable_servers(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "list-analyzable-servers" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "list-analyzable-servers" }, input)
 end
 
 --- AWS migrationhubstrategy list-application-components operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_application_components(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "list-application-components" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "list-application-components" }, input)
 end
 
 --- AWS migrationhubstrategy list-collectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_collectors(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "list-collectors" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "list-collectors" }, input)
 end
 
 --- AWS migrationhubstrategy list-import-file-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_import_file_task(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "list-import-file-task" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "list-import-file-task" }, input)
 end
 
 --- AWS migrationhubstrategy list-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_servers(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "list-servers" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "list-servers" }, input)
 end
 
 --- AWS migrationhubstrategy put-portfolio-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_portfolio_preferences(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "put-portfolio-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "put-portfolio-preferences" }, input)
 end
 
 --- AWS migrationhubstrategy start-assessment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_assessment(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "start-assessment" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "start-assessment" }, input)
 end
 
 --- AWS migrationhubstrategy start-import-file-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_import_file_task(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "start-import-file-task" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "start-import-file-task" }, input)
 end
 
 --- AWS migrationhubstrategy start-recommendation-report-generation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_recommendation_report_generation(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "start-recommendation-report-generation" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "start-recommendation-report-generation" }, input)
 end
 
 --- AWS migrationhubstrategy stop-assessment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_assessment(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "stop-assessment" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "stop-assessment" }, input)
 end
 
 --- AWS migrationhubstrategy update-application-component-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_application_component_config(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "update-application-component-config" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "update-application-component-config" }, input)
 end
 
 --- AWS migrationhubstrategy update-server-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_server_config(input)
-	return common.execute_aws_command_with_input({ "migrationhubstrategy", "update-server-config" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhubstrategy", "update-server-config" }, input)
 end
 
 return M

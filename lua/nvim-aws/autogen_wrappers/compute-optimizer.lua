@@ -3,203 +3,203 @@
 
 local common = require("nvim-aws.common")
 
---- AWS COMPUTE-OPTIMIZER service functions
+--- AWS compute-optimizer service functions
 local M = {}
 
 --- AWS compute-optimizer delete-recommendation-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_recommendation_preferences(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "delete-recommendation-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "delete-recommendation-preferences" }, input)
 end
 
 --- AWS compute-optimizer describe-recommendation-export-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_recommendation_export_jobs(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "describe-recommendation-export-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "describe-recommendation-export-jobs" }, input)
 end
 
 --- AWS compute-optimizer export-auto-scaling-group-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_auto_scaling_group_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "export-auto-scaling-group-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "export-auto-scaling-group-recommendations" }, input)
 end
 
 --- AWS compute-optimizer export-ebs-volume-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_ebs_volume_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "export-ebs-volume-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "export-ebs-volume-recommendations" }, input)
 end
 
 --- AWS compute-optimizer export-ec2-instance-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_ec2_instance_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "export-ec2-instance-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "export-ec2-instance-recommendations" }, input)
 end
 
 --- AWS compute-optimizer export-ecs-service-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_ecs_service_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "export-ecs-service-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "export-ecs-service-recommendations" }, input)
 end
 
 --- AWS compute-optimizer export-idle-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_idle_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "export-idle-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "export-idle-recommendations" }, input)
 end
 
 --- AWS compute-optimizer export-lambda-function-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_lambda_function_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "export-lambda-function-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "export-lambda-function-recommendations" }, input)
 end
 
 --- AWS compute-optimizer export-license-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_license_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "export-license-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "export-license-recommendations" }, input)
 end
 
 --- AWS compute-optimizer export-rds-database-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_rds_database_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "export-rds-database-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "export-rds-database-recommendations" }, input)
 end
 
 --- AWS compute-optimizer get-auto-scaling-group-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_auto_scaling_group_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-auto-scaling-group-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-auto-scaling-group-recommendations" }, input)
 end
 
 --- AWS compute-optimizer get-ebs-volume-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ebs_volume_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-ebs-volume-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-ebs-volume-recommendations" }, input)
 end
 
 --- AWS compute-optimizer get-ec2-instance-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ec2_instance_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-ec2-instance-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-ec2-instance-recommendations" }, input)
 end
 
 --- AWS compute-optimizer get-ec2-recommendation-projected-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ec2_recommendation_projected_metrics(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-ec2-recommendation-projected-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-ec2-recommendation-projected-metrics" }, input)
 end
 
 --- AWS compute-optimizer get-ecs-service-recommendation-projected-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ecs_service_recommendation_projected_metrics(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-ecs-service-recommendation-projected-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-ecs-service-recommendation-projected-metrics" }, input)
 end
 
 --- AWS compute-optimizer get-ecs-service-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ecs_service_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-ecs-service-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-ecs-service-recommendations" }, input)
 end
 
 --- AWS compute-optimizer get-effective-recommendation-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_effective_recommendation_preferences(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-effective-recommendation-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-effective-recommendation-preferences" }, input)
 end
 
 --- AWS compute-optimizer get-enrollment-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_enrollment_status(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-enrollment-status" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-enrollment-status" }, input)
 end
 
 --- AWS compute-optimizer get-enrollment-statuses-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_enrollment_statuses_for_organization(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-enrollment-statuses-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-enrollment-statuses-for-organization" }, input)
 end
 
 --- AWS compute-optimizer get-idle-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_idle_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-idle-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-idle-recommendations" }, input)
 end
 
 --- AWS compute-optimizer get-lambda-function-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_lambda_function_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-lambda-function-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-lambda-function-recommendations" }, input)
 end
 
 --- AWS compute-optimizer get-license-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_license_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-license-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-license-recommendations" }, input)
 end
 
 --- AWS compute-optimizer get-rds-database-recommendation-projected-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_rds_database_recommendation_projected_metrics(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-rds-database-recommendation-projected-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-rds-database-recommendation-projected-metrics" }, input)
 end
 
 --- AWS compute-optimizer get-rds-database-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_rds_database_recommendations(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-rds-database-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-rds-database-recommendations" }, input)
 end
 
 --- AWS compute-optimizer get-recommendation-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recommendation_preferences(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-recommendation-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-recommendation-preferences" }, input)
 end
 
 --- AWS compute-optimizer get-recommendation-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recommendation_summaries(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "get-recommendation-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "get-recommendation-summaries" }, input)
 end
 
 --- AWS compute-optimizer put-recommendation-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_recommendation_preferences(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "put-recommendation-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "put-recommendation-preferences" }, input)
 end
 
 --- AWS compute-optimizer update-enrollment-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_enrollment_status(input)
-	return common.execute_aws_command_with_input({ "compute-optimizer", "update-enrollment-status" }, input)
+	return common.execute_aws_command_skeleton({ "compute-optimizer", "update-enrollment-status" }, input)
 end
 
 return M

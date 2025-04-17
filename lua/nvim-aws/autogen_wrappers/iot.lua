@@ -3,1869 +3,1869 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IOT service functions
+--- AWS iot service functions
 local M = {}
 
 --- AWS iot accept-certificate-transfer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_certificate_transfer(input)
-	return common.execute_aws_command_with_input({ "iot", "accept-certificate-transfer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "accept-certificate-transfer" }, input)
 end
 
 --- AWS iot add-thing-to-billing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_thing_to_billing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "add-thing-to-billing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "add-thing-to-billing-group" }, input)
 end
 
 --- AWS iot add-thing-to-thing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_thing_to_thing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "add-thing-to-thing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "add-thing-to-thing-group" }, input)
 end
 
 --- AWS iot associate-sbom-with-package-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_sbom_with_package_version(input)
-	return common.execute_aws_command_with_input({ "iot", "associate-sbom-with-package-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "associate-sbom-with-package-version" }, input)
 end
 
 --- AWS iot associate-targets-with-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_targets_with_job(input)
-	return common.execute_aws_command_with_input({ "iot", "associate-targets-with-job" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "associate-targets-with-job" }, input)
 end
 
 --- AWS iot attach-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_policy(input)
-	return common.execute_aws_command_with_input({ "iot", "attach-policy" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "attach-policy" }, input)
 end
 
 --- AWS iot attach-security-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_security_profile(input)
-	return common.execute_aws_command_with_input({ "iot", "attach-security-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "attach-security-profile" }, input)
 end
 
 --- AWS iot attach-thing-principal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_thing_principal(input)
-	return common.execute_aws_command_with_input({ "iot", "attach-thing-principal" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "attach-thing-principal" }, input)
 end
 
 --- AWS iot cancel-audit-mitigation-actions-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_audit_mitigation_actions_task(input)
-	return common.execute_aws_command_with_input({ "iot", "cancel-audit-mitigation-actions-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "cancel-audit-mitigation-actions-task" }, input)
 end
 
 --- AWS iot cancel-audit-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_audit_task(input)
-	return common.execute_aws_command_with_input({ "iot", "cancel-audit-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "cancel-audit-task" }, input)
 end
 
 --- AWS iot cancel-certificate-transfer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_certificate_transfer(input)
-	return common.execute_aws_command_with_input({ "iot", "cancel-certificate-transfer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "cancel-certificate-transfer" }, input)
 end
 
 --- AWS iot cancel-detect-mitigation-actions-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_detect_mitigation_actions_task(input)
-	return common.execute_aws_command_with_input({ "iot", "cancel-detect-mitigation-actions-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "cancel-detect-mitigation-actions-task" }, input)
 end
 
 --- AWS iot cancel-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_job(input)
-	return common.execute_aws_command_with_input({ "iot", "cancel-job" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "cancel-job" }, input)
 end
 
 --- AWS iot cancel-job-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_job_execution(input)
-	return common.execute_aws_command_with_input({ "iot", "cancel-job-execution" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "cancel-job-execution" }, input)
 end
 
 --- AWS iot clear-default-authorizer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.clear_default_authorizer(input)
-	return common.execute_aws_command_with_input({ "iot", "clear-default-authorizer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "clear-default-authorizer" }, input)
 end
 
 --- AWS iot confirm-topic-rule-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.confirm_topic_rule_destination(input)
-	return common.execute_aws_command_with_input({ "iot", "confirm-topic-rule-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "confirm-topic-rule-destination" }, input)
 end
 
 --- AWS iot create-audit-suppression operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_audit_suppression(input)
-	return common.execute_aws_command_with_input({ "iot", "create-audit-suppression" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-audit-suppression" }, input)
 end
 
 --- AWS iot create-authorizer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_authorizer(input)
-	return common.execute_aws_command_with_input({ "iot", "create-authorizer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-authorizer" }, input)
 end
 
 --- AWS iot create-billing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_billing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "create-billing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-billing-group" }, input)
 end
 
 --- AWS iot create-certificate-from-csr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_certificate_from_csr(input)
-	return common.execute_aws_command_with_input({ "iot", "create-certificate-from-csr" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-certificate-from-csr" }, input)
 end
 
 --- AWS iot create-certificate-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_certificate_provider(input)
-	return common.execute_aws_command_with_input({ "iot", "create-certificate-provider" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-certificate-provider" }, input)
 end
 
 --- AWS iot create-command operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_command(input)
-	return common.execute_aws_command_with_input({ "iot", "create-command" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-command" }, input)
 end
 
 --- AWS iot create-custom-metric operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_custom_metric(input)
-	return common.execute_aws_command_with_input({ "iot", "create-custom-metric" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-custom-metric" }, input)
 end
 
 --- AWS iot create-dimension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dimension(input)
-	return common.execute_aws_command_with_input({ "iot", "create-dimension" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-dimension" }, input)
 end
 
 --- AWS iot create-domain-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_domain_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "create-domain-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-domain-configuration" }, input)
 end
 
 --- AWS iot create-dynamic-thing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dynamic_thing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "create-dynamic-thing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-dynamic-thing-group" }, input)
 end
 
 --- AWS iot create-fleet-metric operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_fleet_metric(input)
-	return common.execute_aws_command_with_input({ "iot", "create-fleet-metric" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-fleet-metric" }, input)
 end
 
 --- AWS iot create-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_job(input)
-	return common.execute_aws_command_with_input({ "iot", "create-job" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-job" }, input)
 end
 
 --- AWS iot create-job-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_job_template(input)
-	return common.execute_aws_command_with_input({ "iot", "create-job-template" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-job-template" }, input)
 end
 
 --- AWS iot create-keys-and-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_keys_and_certificate(input)
-	return common.execute_aws_command_with_input({ "iot", "create-keys-and-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-keys-and-certificate" }, input)
 end
 
 --- AWS iot create-mitigation-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_mitigation_action(input)
-	return common.execute_aws_command_with_input({ "iot", "create-mitigation-action" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-mitigation-action" }, input)
 end
 
 --- AWS iot create-ota-update operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ota_update(input)
-	return common.execute_aws_command_with_input({ "iot", "create-ota-update" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-ota-update" }, input)
 end
 
 --- AWS iot create-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_package(input)
-	return common.execute_aws_command_with_input({ "iot", "create-package" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-package" }, input)
 end
 
 --- AWS iot create-package-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_package_version(input)
-	return common.execute_aws_command_with_input({ "iot", "create-package-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-package-version" }, input)
 end
 
 --- AWS iot create-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_policy(input)
-	return common.execute_aws_command_with_input({ "iot", "create-policy" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-policy" }, input)
 end
 
 --- AWS iot create-policy-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_policy_version(input)
-	return common.execute_aws_command_with_input({ "iot", "create-policy-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-policy-version" }, input)
 end
 
 --- AWS iot create-provisioning-claim operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_provisioning_claim(input)
-	return common.execute_aws_command_with_input({ "iot", "create-provisioning-claim" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-provisioning-claim" }, input)
 end
 
 --- AWS iot create-provisioning-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_provisioning_template(input)
-	return common.execute_aws_command_with_input({ "iot", "create-provisioning-template" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-provisioning-template" }, input)
 end
 
 --- AWS iot create-provisioning-template-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_provisioning_template_version(input)
-	return common.execute_aws_command_with_input({ "iot", "create-provisioning-template-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-provisioning-template-version" }, input)
 end
 
 --- AWS iot create-role-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_role_alias(input)
-	return common.execute_aws_command_with_input({ "iot", "create-role-alias" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-role-alias" }, input)
 end
 
 --- AWS iot create-scheduled-audit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_scheduled_audit(input)
-	return common.execute_aws_command_with_input({ "iot", "create-scheduled-audit" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-scheduled-audit" }, input)
 end
 
 --- AWS iot create-security-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_security_profile(input)
-	return common.execute_aws_command_with_input({ "iot", "create-security-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-security-profile" }, input)
 end
 
 --- AWS iot create-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_stream(input)
-	return common.execute_aws_command_with_input({ "iot", "create-stream" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-stream" }, input)
 end
 
 --- AWS iot create-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_thing(input)
-	return common.execute_aws_command_with_input({ "iot", "create-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-thing" }, input)
 end
 
 --- AWS iot create-thing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_thing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "create-thing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-thing-group" }, input)
 end
 
 --- AWS iot create-thing-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_thing_type(input)
-	return common.execute_aws_command_with_input({ "iot", "create-thing-type" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-thing-type" }, input)
 end
 
 --- AWS iot create-topic-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_topic_rule(input)
-	return common.execute_aws_command_with_input({ "iot", "create-topic-rule" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-topic-rule" }, input)
 end
 
 --- AWS iot create-topic-rule-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_topic_rule_destination(input)
-	return common.execute_aws_command_with_input({ "iot", "create-topic-rule-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "create-topic-rule-destination" }, input)
 end
 
 --- AWS iot delete-account-audit-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_account_audit_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-account-audit-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-account-audit-configuration" }, input)
 end
 
 --- AWS iot delete-audit-suppression operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_audit_suppression(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-audit-suppression" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-audit-suppression" }, input)
 end
 
 --- AWS iot delete-authorizer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_authorizer(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-authorizer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-authorizer" }, input)
 end
 
 --- AWS iot delete-billing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_billing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-billing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-billing-group" }, input)
 end
 
 --- AWS iot delete-ca-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ca_certificate(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-ca-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-ca-certificate" }, input)
 end
 
 --- AWS iot delete-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_certificate(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-certificate" }, input)
 end
 
 --- AWS iot delete-certificate-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_certificate_provider(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-certificate-provider" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-certificate-provider" }, input)
 end
 
 --- AWS iot delete-command operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_command(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-command" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-command" }, input)
 end
 
 --- AWS iot delete-command-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_command_execution(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-command-execution" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-command-execution" }, input)
 end
 
 --- AWS iot delete-custom-metric operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_metric(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-custom-metric" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-custom-metric" }, input)
 end
 
 --- AWS iot delete-dimension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dimension(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-dimension" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-dimension" }, input)
 end
 
 --- AWS iot delete-domain-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_domain_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-domain-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-domain-configuration" }, input)
 end
 
 --- AWS iot delete-dynamic-thing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dynamic_thing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-dynamic-thing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-dynamic-thing-group" }, input)
 end
 
 --- AWS iot delete-fleet-metric operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_fleet_metric(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-fleet-metric" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-fleet-metric" }, input)
 end
 
 --- AWS iot delete-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_job(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-job" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-job" }, input)
 end
 
 --- AWS iot delete-job-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_job_execution(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-job-execution" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-job-execution" }, input)
 end
 
 --- AWS iot delete-job-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_job_template(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-job-template" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-job-template" }, input)
 end
 
 --- AWS iot delete-mitigation-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_mitigation_action(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-mitigation-action" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-mitigation-action" }, input)
 end
 
 --- AWS iot delete-ota-update operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ota_update(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-ota-update" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-ota-update" }, input)
 end
 
 --- AWS iot delete-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_package(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-package" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-package" }, input)
 end
 
 --- AWS iot delete-package-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_package_version(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-package-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-package-version" }, input)
 end
 
 --- AWS iot delete-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_policy(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-policy" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-policy" }, input)
 end
 
 --- AWS iot delete-policy-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_policy_version(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-policy-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-policy-version" }, input)
 end
 
 --- AWS iot delete-provisioning-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_provisioning_template(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-provisioning-template" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-provisioning-template" }, input)
 end
 
 --- AWS iot delete-provisioning-template-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_provisioning_template_version(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-provisioning-template-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-provisioning-template-version" }, input)
 end
 
 --- AWS iot delete-registration-code operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_registration_code(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-registration-code" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-registration-code" }, input)
 end
 
 --- AWS iot delete-role-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_role_alias(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-role-alias" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-role-alias" }, input)
 end
 
 --- AWS iot delete-scheduled-audit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_scheduled_audit(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-scheduled-audit" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-scheduled-audit" }, input)
 end
 
 --- AWS iot delete-security-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_security_profile(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-security-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-security-profile" }, input)
 end
 
 --- AWS iot delete-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_stream(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-stream" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-stream" }, input)
 end
 
 --- AWS iot delete-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_thing(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-thing" }, input)
 end
 
 --- AWS iot delete-thing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_thing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-thing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-thing-group" }, input)
 end
 
 --- AWS iot delete-thing-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_thing_type(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-thing-type" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-thing-type" }, input)
 end
 
 --- AWS iot delete-topic-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_topic_rule(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-topic-rule" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-topic-rule" }, input)
 end
 
 --- AWS iot delete-topic-rule-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_topic_rule_destination(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-topic-rule-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-topic-rule-destination" }, input)
 end
 
 --- AWS iot delete-v2-logging-level operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_v2_logging_level(input)
-	return common.execute_aws_command_with_input({ "iot", "delete-v2-logging-level" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "delete-v2-logging-level" }, input)
 end
 
 --- AWS iot deprecate-thing-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deprecate_thing_type(input)
-	return common.execute_aws_command_with_input({ "iot", "deprecate-thing-type" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "deprecate-thing-type" }, input)
 end
 
 --- AWS iot describe-account-audit-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_audit_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-account-audit-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-account-audit-configuration" }, input)
 end
 
 --- AWS iot describe-audit-finding operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_audit_finding(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-audit-finding" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-audit-finding" }, input)
 end
 
 --- AWS iot describe-audit-mitigation-actions-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_audit_mitigation_actions_task(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-audit-mitigation-actions-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-audit-mitigation-actions-task" }, input)
 end
 
 --- AWS iot describe-audit-suppression operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_audit_suppression(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-audit-suppression" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-audit-suppression" }, input)
 end
 
 --- AWS iot describe-audit-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_audit_task(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-audit-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-audit-task" }, input)
 end
 
 --- AWS iot describe-authorizer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_authorizer(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-authorizer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-authorizer" }, input)
 end
 
 --- AWS iot describe-billing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_billing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-billing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-billing-group" }, input)
 end
 
 --- AWS iot describe-ca-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ca_certificate(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-ca-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-ca-certificate" }, input)
 end
 
 --- AWS iot describe-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_certificate(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-certificate" }, input)
 end
 
 --- AWS iot describe-certificate-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_certificate_provider(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-certificate-provider" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-certificate-provider" }, input)
 end
 
 --- AWS iot describe-custom-metric operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_custom_metric(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-custom-metric" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-custom-metric" }, input)
 end
 
 --- AWS iot describe-default-authorizer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_default_authorizer(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-default-authorizer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-default-authorizer" }, input)
 end
 
 --- AWS iot describe-detect-mitigation-actions-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_detect_mitigation_actions_task(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-detect-mitigation-actions-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-detect-mitigation-actions-task" }, input)
 end
 
 --- AWS iot describe-dimension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_dimension(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-dimension" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-dimension" }, input)
 end
 
 --- AWS iot describe-domain-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_domain_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-domain-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-domain-configuration" }, input)
 end
 
 --- AWS iot describe-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoint(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-endpoint" }, input)
 end
 
 --- AWS iot describe-event-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_configurations(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-event-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-event-configurations" }, input)
 end
 
 --- AWS iot describe-fleet-metric operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_metric(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-fleet-metric" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-fleet-metric" }, input)
 end
 
 --- AWS iot describe-index operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_index(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-index" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-index" }, input)
 end
 
 --- AWS iot describe-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_job(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-job" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-job" }, input)
 end
 
 --- AWS iot describe-job-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_job_execution(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-job-execution" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-job-execution" }, input)
 end
 
 --- AWS iot describe-job-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_job_template(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-job-template" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-job-template" }, input)
 end
 
 --- AWS iot describe-managed-job-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_managed_job_template(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-managed-job-template" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-managed-job-template" }, input)
 end
 
 --- AWS iot describe-mitigation-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_mitigation_action(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-mitigation-action" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-mitigation-action" }, input)
 end
 
 --- AWS iot describe-provisioning-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_provisioning_template(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-provisioning-template" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-provisioning-template" }, input)
 end
 
 --- AWS iot describe-provisioning-template-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_provisioning_template_version(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-provisioning-template-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-provisioning-template-version" }, input)
 end
 
 --- AWS iot describe-role-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_role_alias(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-role-alias" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-role-alias" }, input)
 end
 
 --- AWS iot describe-scheduled-audit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_scheduled_audit(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-scheduled-audit" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-scheduled-audit" }, input)
 end
 
 --- AWS iot describe-security-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_security_profile(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-security-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-security-profile" }, input)
 end
 
 --- AWS iot describe-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_stream(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-stream" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-stream" }, input)
 end
 
 --- AWS iot describe-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_thing(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-thing" }, input)
 end
 
 --- AWS iot describe-thing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_thing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-thing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-thing-group" }, input)
 end
 
 --- AWS iot describe-thing-registration-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_thing_registration_task(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-thing-registration-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-thing-registration-task" }, input)
 end
 
 --- AWS iot describe-thing-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_thing_type(input)
-	return common.execute_aws_command_with_input({ "iot", "describe-thing-type" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "describe-thing-type" }, input)
 end
 
 --- AWS iot detach-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_policy(input)
-	return common.execute_aws_command_with_input({ "iot", "detach-policy" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "detach-policy" }, input)
 end
 
 --- AWS iot detach-security-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_security_profile(input)
-	return common.execute_aws_command_with_input({ "iot", "detach-security-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "detach-security-profile" }, input)
 end
 
 --- AWS iot detach-thing-principal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_thing_principal(input)
-	return common.execute_aws_command_with_input({ "iot", "detach-thing-principal" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "detach-thing-principal" }, input)
 end
 
 --- AWS iot disable-topic-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_topic_rule(input)
-	return common.execute_aws_command_with_input({ "iot", "disable-topic-rule" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "disable-topic-rule" }, input)
 end
 
 --- AWS iot disassociate-sbom-from-package-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_sbom_from_package_version(input)
-	return common.execute_aws_command_with_input({ "iot", "disassociate-sbom-from-package-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "disassociate-sbom-from-package-version" }, input)
 end
 
 --- AWS iot enable-topic-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_topic_rule(input)
-	return common.execute_aws_command_with_input({ "iot", "enable-topic-rule" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "enable-topic-rule" }, input)
 end
 
 --- AWS iot get-behavior-model-training-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_behavior_model_training_summaries(input)
-	return common.execute_aws_command_with_input({ "iot", "get-behavior-model-training-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-behavior-model-training-summaries" }, input)
 end
 
 --- AWS iot get-buckets-aggregation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_buckets_aggregation(input)
-	return common.execute_aws_command_with_input({ "iot", "get-buckets-aggregation" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-buckets-aggregation" }, input)
 end
 
 --- AWS iot get-cardinality operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cardinality(input)
-	return common.execute_aws_command_with_input({ "iot", "get-cardinality" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-cardinality" }, input)
 end
 
 --- AWS iot get-command operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_command(input)
-	return common.execute_aws_command_with_input({ "iot", "get-command" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-command" }, input)
 end
 
 --- AWS iot get-command-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_command_execution(input)
-	return common.execute_aws_command_with_input({ "iot", "get-command-execution" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-command-execution" }, input)
 end
 
 --- AWS iot get-effective-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_effective_policies(input)
-	return common.execute_aws_command_with_input({ "iot", "get-effective-policies" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-effective-policies" }, input)
 end
 
 --- AWS iot get-indexing-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_indexing_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "get-indexing-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-indexing-configuration" }, input)
 end
 
 --- AWS iot get-job-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_job_document(input)
-	return common.execute_aws_command_with_input({ "iot", "get-job-document" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-job-document" }, input)
 end
 
 --- AWS iot get-logging-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_logging_options(input)
-	return common.execute_aws_command_with_input({ "iot", "get-logging-options" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-logging-options" }, input)
 end
 
 --- AWS iot get-ota-update operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ota_update(input)
-	return common.execute_aws_command_with_input({ "iot", "get-ota-update" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-ota-update" }, input)
 end
 
 --- AWS iot get-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_package(input)
-	return common.execute_aws_command_with_input({ "iot", "get-package" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-package" }, input)
 end
 
 --- AWS iot get-package-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_package_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "get-package-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-package-configuration" }, input)
 end
 
 --- AWS iot get-package-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_package_version(input)
-	return common.execute_aws_command_with_input({ "iot", "get-package-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-package-version" }, input)
 end
 
 --- AWS iot get-percentiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_percentiles(input)
-	return common.execute_aws_command_with_input({ "iot", "get-percentiles" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-percentiles" }, input)
 end
 
 --- AWS iot get-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_policy(input)
-	return common.execute_aws_command_with_input({ "iot", "get-policy" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-policy" }, input)
 end
 
 --- AWS iot get-policy-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_policy_version(input)
-	return common.execute_aws_command_with_input({ "iot", "get-policy-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-policy-version" }, input)
 end
 
 --- AWS iot get-registration-code operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_registration_code(input)
-	return common.execute_aws_command_with_input({ "iot", "get-registration-code" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-registration-code" }, input)
 end
 
 --- AWS iot get-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_statistics(input)
-	return common.execute_aws_command_with_input({ "iot", "get-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-statistics" }, input)
 end
 
 --- AWS iot get-thing-connectivity-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_thing_connectivity_data(input)
-	return common.execute_aws_command_with_input({ "iot", "get-thing-connectivity-data" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-thing-connectivity-data" }, input)
 end
 
 --- AWS iot get-topic-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_topic_rule(input)
-	return common.execute_aws_command_with_input({ "iot", "get-topic-rule" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-topic-rule" }, input)
 end
 
 --- AWS iot get-topic-rule-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_topic_rule_destination(input)
-	return common.execute_aws_command_with_input({ "iot", "get-topic-rule-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-topic-rule-destination" }, input)
 end
 
 --- AWS iot get-v2-logging-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_v2_logging_options(input)
-	return common.execute_aws_command_with_input({ "iot", "get-v2-logging-options" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "get-v2-logging-options" }, input)
 end
 
 --- AWS iot list-active-violations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_active_violations(input)
-	return common.execute_aws_command_with_input({ "iot", "list-active-violations" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-active-violations" }, input)
 end
 
 --- AWS iot list-attached-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_attached_policies(input)
-	return common.execute_aws_command_with_input({ "iot", "list-attached-policies" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-attached-policies" }, input)
 end
 
 --- AWS iot list-audit-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_audit_findings(input)
-	return common.execute_aws_command_with_input({ "iot", "list-audit-findings" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-audit-findings" }, input)
 end
 
 --- AWS iot list-audit-mitigation-actions-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_audit_mitigation_actions_executions(input)
-	return common.execute_aws_command_with_input({ "iot", "list-audit-mitigation-actions-executions" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-audit-mitigation-actions-executions" }, input)
 end
 
 --- AWS iot list-audit-mitigation-actions-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_audit_mitigation_actions_tasks(input)
-	return common.execute_aws_command_with_input({ "iot", "list-audit-mitigation-actions-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-audit-mitigation-actions-tasks" }, input)
 end
 
 --- AWS iot list-audit-suppressions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_audit_suppressions(input)
-	return common.execute_aws_command_with_input({ "iot", "list-audit-suppressions" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-audit-suppressions" }, input)
 end
 
 --- AWS iot list-audit-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_audit_tasks(input)
-	return common.execute_aws_command_with_input({ "iot", "list-audit-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-audit-tasks" }, input)
 end
 
 --- AWS iot list-authorizers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_authorizers(input)
-	return common.execute_aws_command_with_input({ "iot", "list-authorizers" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-authorizers" }, input)
 end
 
 --- AWS iot list-billing-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_billing_groups(input)
-	return common.execute_aws_command_with_input({ "iot", "list-billing-groups" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-billing-groups" }, input)
 end
 
 --- AWS iot list-ca-certificates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ca_certificates(input)
-	return common.execute_aws_command_with_input({ "iot", "list-ca-certificates" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-ca-certificates" }, input)
 end
 
 --- AWS iot list-certificate-providers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_certificate_providers(input)
-	return common.execute_aws_command_with_input({ "iot", "list-certificate-providers" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-certificate-providers" }, input)
 end
 
 --- AWS iot list-certificates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_certificates(input)
-	return common.execute_aws_command_with_input({ "iot", "list-certificates" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-certificates" }, input)
 end
 
 --- AWS iot list-certificates-by-ca operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_certificates_by_ca(input)
-	return common.execute_aws_command_with_input({ "iot", "list-certificates-by-ca" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-certificates-by-ca" }, input)
 end
 
 --- AWS iot list-command-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_command_executions(input)
-	return common.execute_aws_command_with_input({ "iot", "list-command-executions" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-command-executions" }, input)
 end
 
 --- AWS iot list-commands operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_commands(input)
-	return common.execute_aws_command_with_input({ "iot", "list-commands" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-commands" }, input)
 end
 
 --- AWS iot list-custom-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_custom_metrics(input)
-	return common.execute_aws_command_with_input({ "iot", "list-custom-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-custom-metrics" }, input)
 end
 
 --- AWS iot list-detect-mitigation-actions-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_detect_mitigation_actions_executions(input)
-	return common.execute_aws_command_with_input({ "iot", "list-detect-mitigation-actions-executions" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-detect-mitigation-actions-executions" }, input)
 end
 
 --- AWS iot list-detect-mitigation-actions-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_detect_mitigation_actions_tasks(input)
-	return common.execute_aws_command_with_input({ "iot", "list-detect-mitigation-actions-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-detect-mitigation-actions-tasks" }, input)
 end
 
 --- AWS iot list-dimensions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_dimensions(input)
-	return common.execute_aws_command_with_input({ "iot", "list-dimensions" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-dimensions" }, input)
 end
 
 --- AWS iot list-domain-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_domain_configurations(input)
-	return common.execute_aws_command_with_input({ "iot", "list-domain-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-domain-configurations" }, input)
 end
 
 --- AWS iot list-fleet-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_fleet_metrics(input)
-	return common.execute_aws_command_with_input({ "iot", "list-fleet-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-fleet-metrics" }, input)
 end
 
 --- AWS iot list-indices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_indices(input)
-	return common.execute_aws_command_with_input({ "iot", "list-indices" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-indices" }, input)
 end
 
 --- AWS iot list-job-executions-for-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_job_executions_for_job(input)
-	return common.execute_aws_command_with_input({ "iot", "list-job-executions-for-job" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-job-executions-for-job" }, input)
 end
 
 --- AWS iot list-job-executions-for-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_job_executions_for_thing(input)
-	return common.execute_aws_command_with_input({ "iot", "list-job-executions-for-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-job-executions-for-thing" }, input)
 end
 
 --- AWS iot list-job-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_job_templates(input)
-	return common.execute_aws_command_with_input({ "iot", "list-job-templates" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-job-templates" }, input)
 end
 
 --- AWS iot list-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_jobs(input)
-	return common.execute_aws_command_with_input({ "iot", "list-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-jobs" }, input)
 end
 
 --- AWS iot list-managed-job-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_job_templates(input)
-	return common.execute_aws_command_with_input({ "iot", "list-managed-job-templates" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-managed-job-templates" }, input)
 end
 
 --- AWS iot list-metric-values operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_metric_values(input)
-	return common.execute_aws_command_with_input({ "iot", "list-metric-values" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-metric-values" }, input)
 end
 
 --- AWS iot list-mitigation-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_mitigation_actions(input)
-	return common.execute_aws_command_with_input({ "iot", "list-mitigation-actions" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-mitigation-actions" }, input)
 end
 
 --- AWS iot list-ota-updates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ota_updates(input)
-	return common.execute_aws_command_with_input({ "iot", "list-ota-updates" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-ota-updates" }, input)
 end
 
 --- AWS iot list-outgoing-certificates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_outgoing_certificates(input)
-	return common.execute_aws_command_with_input({ "iot", "list-outgoing-certificates" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-outgoing-certificates" }, input)
 end
 
 --- AWS iot list-package-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_package_versions(input)
-	return common.execute_aws_command_with_input({ "iot", "list-package-versions" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-package-versions" }, input)
 end
 
 --- AWS iot list-packages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_packages(input)
-	return common.execute_aws_command_with_input({ "iot", "list-packages" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-packages" }, input)
 end
 
 --- AWS iot list-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_policies(input)
-	return common.execute_aws_command_with_input({ "iot", "list-policies" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-policies" }, input)
 end
 
 --- AWS iot list-policy-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_policy_versions(input)
-	return common.execute_aws_command_with_input({ "iot", "list-policy-versions" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-policy-versions" }, input)
 end
 
 --- AWS iot list-principal-things operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_principal_things(input)
-	return common.execute_aws_command_with_input({ "iot", "list-principal-things" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-principal-things" }, input)
 end
 
 --- AWS iot list-principal-things-v2 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_principal_things_v2(input)
-	return common.execute_aws_command_with_input({ "iot", "list-principal-things-v2" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-principal-things-v2" }, input)
 end
 
 --- AWS iot list-provisioning-template-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_provisioning_template_versions(input)
-	return common.execute_aws_command_with_input({ "iot", "list-provisioning-template-versions" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-provisioning-template-versions" }, input)
 end
 
 --- AWS iot list-provisioning-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_provisioning_templates(input)
-	return common.execute_aws_command_with_input({ "iot", "list-provisioning-templates" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-provisioning-templates" }, input)
 end
 
 --- AWS iot list-related-resources-for-audit-finding operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_related_resources_for_audit_finding(input)
-	return common.execute_aws_command_with_input({ "iot", "list-related-resources-for-audit-finding" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-related-resources-for-audit-finding" }, input)
 end
 
 --- AWS iot list-role-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_role_aliases(input)
-	return common.execute_aws_command_with_input({ "iot", "list-role-aliases" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-role-aliases" }, input)
 end
 
 --- AWS iot list-sbom-validation-results operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_sbom_validation_results(input)
-	return common.execute_aws_command_with_input({ "iot", "list-sbom-validation-results" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-sbom-validation-results" }, input)
 end
 
 --- AWS iot list-scheduled-audits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_scheduled_audits(input)
-	return common.execute_aws_command_with_input({ "iot", "list-scheduled-audits" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-scheduled-audits" }, input)
 end
 
 --- AWS iot list-security-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_security_profiles(input)
-	return common.execute_aws_command_with_input({ "iot", "list-security-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-security-profiles" }, input)
 end
 
 --- AWS iot list-security-profiles-for-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_security_profiles_for_target(input)
-	return common.execute_aws_command_with_input({ "iot", "list-security-profiles-for-target" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-security-profiles-for-target" }, input)
 end
 
 --- AWS iot list-streams operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_streams(input)
-	return common.execute_aws_command_with_input({ "iot", "list-streams" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-streams" }, input)
 end
 
 --- AWS iot list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "iot", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-tags-for-resource" }, input)
 end
 
 --- AWS iot list-targets-for-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_targets_for_policy(input)
-	return common.execute_aws_command_with_input({ "iot", "list-targets-for-policy" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-targets-for-policy" }, input)
 end
 
 --- AWS iot list-targets-for-security-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_targets_for_security_profile(input)
-	return common.execute_aws_command_with_input({ "iot", "list-targets-for-security-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-targets-for-security-profile" }, input)
 end
 
 --- AWS iot list-thing-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_thing_groups(input)
-	return common.execute_aws_command_with_input({ "iot", "list-thing-groups" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-thing-groups" }, input)
 end
 
 --- AWS iot list-thing-groups-for-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_thing_groups_for_thing(input)
-	return common.execute_aws_command_with_input({ "iot", "list-thing-groups-for-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-thing-groups-for-thing" }, input)
 end
 
 --- AWS iot list-thing-principals operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_thing_principals(input)
-	return common.execute_aws_command_with_input({ "iot", "list-thing-principals" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-thing-principals" }, input)
 end
 
 --- AWS iot list-thing-principals-v2 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_thing_principals_v2(input)
-	return common.execute_aws_command_with_input({ "iot", "list-thing-principals-v2" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-thing-principals-v2" }, input)
 end
 
 --- AWS iot list-thing-registration-task-reports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_thing_registration_task_reports(input)
-	return common.execute_aws_command_with_input({ "iot", "list-thing-registration-task-reports" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-thing-registration-task-reports" }, input)
 end
 
 --- AWS iot list-thing-registration-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_thing_registration_tasks(input)
-	return common.execute_aws_command_with_input({ "iot", "list-thing-registration-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-thing-registration-tasks" }, input)
 end
 
 --- AWS iot list-thing-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_thing_types(input)
-	return common.execute_aws_command_with_input({ "iot", "list-thing-types" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-thing-types" }, input)
 end
 
 --- AWS iot list-things operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_things(input)
-	return common.execute_aws_command_with_input({ "iot", "list-things" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-things" }, input)
 end
 
 --- AWS iot list-things-in-billing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_things_in_billing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "list-things-in-billing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-things-in-billing-group" }, input)
 end
 
 --- AWS iot list-things-in-thing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_things_in_thing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "list-things-in-thing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-things-in-thing-group" }, input)
 end
 
 --- AWS iot list-topic-rule-destinations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_topic_rule_destinations(input)
-	return common.execute_aws_command_with_input({ "iot", "list-topic-rule-destinations" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-topic-rule-destinations" }, input)
 end
 
 --- AWS iot list-topic-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_topic_rules(input)
-	return common.execute_aws_command_with_input({ "iot", "list-topic-rules" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-topic-rules" }, input)
 end
 
 --- AWS iot list-v2-logging-levels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_v2_logging_levels(input)
-	return common.execute_aws_command_with_input({ "iot", "list-v2-logging-levels" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-v2-logging-levels" }, input)
 end
 
 --- AWS iot list-violation-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_violation_events(input)
-	return common.execute_aws_command_with_input({ "iot", "list-violation-events" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "list-violation-events" }, input)
 end
 
 --- AWS iot put-verification-state-on-violation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_verification_state_on_violation(input)
-	return common.execute_aws_command_with_input({ "iot", "put-verification-state-on-violation" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "put-verification-state-on-violation" }, input)
 end
 
 --- AWS iot register-ca-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_ca_certificate(input)
-	return common.execute_aws_command_with_input({ "iot", "register-ca-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "register-ca-certificate" }, input)
 end
 
 --- AWS iot register-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_certificate(input)
-	return common.execute_aws_command_with_input({ "iot", "register-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "register-certificate" }, input)
 end
 
 --- AWS iot register-certificate-without-ca operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_certificate_without_ca(input)
-	return common.execute_aws_command_with_input({ "iot", "register-certificate-without-ca" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "register-certificate-without-ca" }, input)
 end
 
 --- AWS iot register-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_thing(input)
-	return common.execute_aws_command_with_input({ "iot", "register-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "register-thing" }, input)
 end
 
 --- AWS iot reject-certificate-transfer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_certificate_transfer(input)
-	return common.execute_aws_command_with_input({ "iot", "reject-certificate-transfer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "reject-certificate-transfer" }, input)
 end
 
 --- AWS iot remove-thing-from-billing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_thing_from_billing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "remove-thing-from-billing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "remove-thing-from-billing-group" }, input)
 end
 
 --- AWS iot remove-thing-from-thing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_thing_from_thing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "remove-thing-from-thing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "remove-thing-from-thing-group" }, input)
 end
 
 --- AWS iot replace-topic-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replace_topic_rule(input)
-	return common.execute_aws_command_with_input({ "iot", "replace-topic-rule" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "replace-topic-rule" }, input)
 end
 
 --- AWS iot search-index operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_index(input)
-	return common.execute_aws_command_with_input({ "iot", "search-index" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "search-index" }, input)
 end
 
 --- AWS iot set-default-authorizer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_default_authorizer(input)
-	return common.execute_aws_command_with_input({ "iot", "set-default-authorizer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "set-default-authorizer" }, input)
 end
 
 --- AWS iot set-default-policy-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_default_policy_version(input)
-	return common.execute_aws_command_with_input({ "iot", "set-default-policy-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "set-default-policy-version" }, input)
 end
 
 --- AWS iot set-logging-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_logging_options(input)
-	return common.execute_aws_command_with_input({ "iot", "set-logging-options" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "set-logging-options" }, input)
 end
 
 --- AWS iot set-v2-logging-level operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_v2_logging_level(input)
-	return common.execute_aws_command_with_input({ "iot", "set-v2-logging-level" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "set-v2-logging-level" }, input)
 end
 
 --- AWS iot set-v2-logging-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_v2_logging_options(input)
-	return common.execute_aws_command_with_input({ "iot", "set-v2-logging-options" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "set-v2-logging-options" }, input)
 end
 
 --- AWS iot start-audit-mitigation-actions-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_audit_mitigation_actions_task(input)
-	return common.execute_aws_command_with_input({ "iot", "start-audit-mitigation-actions-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "start-audit-mitigation-actions-task" }, input)
 end
 
 --- AWS iot start-detect-mitigation-actions-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_detect_mitigation_actions_task(input)
-	return common.execute_aws_command_with_input({ "iot", "start-detect-mitigation-actions-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "start-detect-mitigation-actions-task" }, input)
 end
 
 --- AWS iot start-on-demand-audit-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_on_demand_audit_task(input)
-	return common.execute_aws_command_with_input({ "iot", "start-on-demand-audit-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "start-on-demand-audit-task" }, input)
 end
 
 --- AWS iot start-thing-registration-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_thing_registration_task(input)
-	return common.execute_aws_command_with_input({ "iot", "start-thing-registration-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "start-thing-registration-task" }, input)
 end
 
 --- AWS iot stop-thing-registration-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_thing_registration_task(input)
-	return common.execute_aws_command_with_input({ "iot", "stop-thing-registration-task" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "stop-thing-registration-task" }, input)
 end
 
 --- AWS iot tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "iot", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "tag-resource" }, input)
 end
 
 --- AWS iot test-authorization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_authorization(input)
-	return common.execute_aws_command_with_input({ "iot", "test-authorization" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "test-authorization" }, input)
 end
 
 --- AWS iot test-invoke-authorizer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_invoke_authorizer(input)
-	return common.execute_aws_command_with_input({ "iot", "test-invoke-authorizer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "test-invoke-authorizer" }, input)
 end
 
 --- AWS iot transfer-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.transfer_certificate(input)
-	return common.execute_aws_command_with_input({ "iot", "transfer-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "transfer-certificate" }, input)
 end
 
 --- AWS iot untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "iot", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "untag-resource" }, input)
 end
 
 --- AWS iot update-account-audit-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_account_audit_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "update-account-audit-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-account-audit-configuration" }, input)
 end
 
 --- AWS iot update-audit-suppression operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_audit_suppression(input)
-	return common.execute_aws_command_with_input({ "iot", "update-audit-suppression" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-audit-suppression" }, input)
 end
 
 --- AWS iot update-authorizer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_authorizer(input)
-	return common.execute_aws_command_with_input({ "iot", "update-authorizer" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-authorizer" }, input)
 end
 
 --- AWS iot update-billing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_billing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "update-billing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-billing-group" }, input)
 end
 
 --- AWS iot update-ca-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_ca_certificate(input)
-	return common.execute_aws_command_with_input({ "iot", "update-ca-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-ca-certificate" }, input)
 end
 
 --- AWS iot update-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_certificate(input)
-	return common.execute_aws_command_with_input({ "iot", "update-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-certificate" }, input)
 end
 
 --- AWS iot update-certificate-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_certificate_provider(input)
-	return common.execute_aws_command_with_input({ "iot", "update-certificate-provider" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-certificate-provider" }, input)
 end
 
 --- AWS iot update-command operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_command(input)
-	return common.execute_aws_command_with_input({ "iot", "update-command" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-command" }, input)
 end
 
 --- AWS iot update-custom-metric operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_custom_metric(input)
-	return common.execute_aws_command_with_input({ "iot", "update-custom-metric" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-custom-metric" }, input)
 end
 
 --- AWS iot update-dimension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_dimension(input)
-	return common.execute_aws_command_with_input({ "iot", "update-dimension" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-dimension" }, input)
 end
 
 --- AWS iot update-domain-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_domain_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "update-domain-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-domain-configuration" }, input)
 end
 
 --- AWS iot update-dynamic-thing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_dynamic_thing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "update-dynamic-thing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-dynamic-thing-group" }, input)
 end
 
 --- AWS iot update-event-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_event_configurations(input)
-	return common.execute_aws_command_with_input({ "iot", "update-event-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-event-configurations" }, input)
 end
 
 --- AWS iot update-fleet-metric operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_fleet_metric(input)
-	return common.execute_aws_command_with_input({ "iot", "update-fleet-metric" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-fleet-metric" }, input)
 end
 
 --- AWS iot update-indexing-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_indexing_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "update-indexing-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-indexing-configuration" }, input)
 end
 
 --- AWS iot update-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_job(input)
-	return common.execute_aws_command_with_input({ "iot", "update-job" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-job" }, input)
 end
 
 --- AWS iot update-mitigation-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_mitigation_action(input)
-	return common.execute_aws_command_with_input({ "iot", "update-mitigation-action" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-mitigation-action" }, input)
 end
 
 --- AWS iot update-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_package(input)
-	return common.execute_aws_command_with_input({ "iot", "update-package" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-package" }, input)
 end
 
 --- AWS iot update-package-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_package_configuration(input)
-	return common.execute_aws_command_with_input({ "iot", "update-package-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-package-configuration" }, input)
 end
 
 --- AWS iot update-package-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_package_version(input)
-	return common.execute_aws_command_with_input({ "iot", "update-package-version" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-package-version" }, input)
 end
 
 --- AWS iot update-provisioning-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_provisioning_template(input)
-	return common.execute_aws_command_with_input({ "iot", "update-provisioning-template" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-provisioning-template" }, input)
 end
 
 --- AWS iot update-role-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_role_alias(input)
-	return common.execute_aws_command_with_input({ "iot", "update-role-alias" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-role-alias" }, input)
 end
 
 --- AWS iot update-scheduled-audit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_scheduled_audit(input)
-	return common.execute_aws_command_with_input({ "iot", "update-scheduled-audit" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-scheduled-audit" }, input)
 end
 
 --- AWS iot update-security-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_security_profile(input)
-	return common.execute_aws_command_with_input({ "iot", "update-security-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-security-profile" }, input)
 end
 
 --- AWS iot update-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_stream(input)
-	return common.execute_aws_command_with_input({ "iot", "update-stream" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-stream" }, input)
 end
 
 --- AWS iot update-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_thing(input)
-	return common.execute_aws_command_with_input({ "iot", "update-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-thing" }, input)
 end
 
 --- AWS iot update-thing-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_thing_group(input)
-	return common.execute_aws_command_with_input({ "iot", "update-thing-group" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-thing-group" }, input)
 end
 
 --- AWS iot update-thing-groups-for-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_thing_groups_for_thing(input)
-	return common.execute_aws_command_with_input({ "iot", "update-thing-groups-for-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-thing-groups-for-thing" }, input)
 end
 
 --- AWS iot update-thing-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_thing_type(input)
-	return common.execute_aws_command_with_input({ "iot", "update-thing-type" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-thing-type" }, input)
 end
 
 --- AWS iot update-topic-rule-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_topic_rule_destination(input)
-	return common.execute_aws_command_with_input({ "iot", "update-topic-rule-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "update-topic-rule-destination" }, input)
 end
 
 --- AWS iot validate-security-profile-behaviors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.validate_security_profile_behaviors(input)
-	return common.execute_aws_command_with_input({ "iot", "validate-security-profile-behaviors" }, input)
+	return common.execute_aws_command_skeleton({ "iot", "validate-security-profile-behaviors" }, input)
 end
 
 return M

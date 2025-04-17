@@ -3,217 +3,217 @@
 
 local common = require("nvim-aws.common")
 
---- AWS B2BI service functions
+--- AWS b2bi service functions
 local M = {}
 
 --- AWS b2bi create-capability operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_capability(input)
-	return common.execute_aws_command_with_input({ "b2bi", "create-capability" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "create-capability" }, input)
 end
 
 --- AWS b2bi create-partnership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_partnership(input)
-	return common.execute_aws_command_with_input({ "b2bi", "create-partnership" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "create-partnership" }, input)
 end
 
 --- AWS b2bi create-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_profile(input)
-	return common.execute_aws_command_with_input({ "b2bi", "create-profile" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "create-profile" }, input)
 end
 
 --- AWS b2bi create-starter-mapping-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_starter_mapping_template(input)
-	return common.execute_aws_command_with_input({ "b2bi", "create-starter-mapping-template" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "create-starter-mapping-template" }, input)
 end
 
 --- AWS b2bi create-transformer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transformer(input)
-	return common.execute_aws_command_with_input({ "b2bi", "create-transformer" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "create-transformer" }, input)
 end
 
 --- AWS b2bi delete-capability operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_capability(input)
-	return common.execute_aws_command_with_input({ "b2bi", "delete-capability" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "delete-capability" }, input)
 end
 
 --- AWS b2bi delete-partnership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_partnership(input)
-	return common.execute_aws_command_with_input({ "b2bi", "delete-partnership" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "delete-partnership" }, input)
 end
 
 --- AWS b2bi delete-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_profile(input)
-	return common.execute_aws_command_with_input({ "b2bi", "delete-profile" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "delete-profile" }, input)
 end
 
 --- AWS b2bi delete-transformer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transformer(input)
-	return common.execute_aws_command_with_input({ "b2bi", "delete-transformer" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "delete-transformer" }, input)
 end
 
 --- AWS b2bi generate-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_mapping(input)
-	return common.execute_aws_command_with_input({ "b2bi", "generate-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "generate-mapping" }, input)
 end
 
 --- AWS b2bi get-capability operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_capability(input)
-	return common.execute_aws_command_with_input({ "b2bi", "get-capability" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "get-capability" }, input)
 end
 
 --- AWS b2bi get-partnership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_partnership(input)
-	return common.execute_aws_command_with_input({ "b2bi", "get-partnership" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "get-partnership" }, input)
 end
 
 --- AWS b2bi get-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_profile(input)
-	return common.execute_aws_command_with_input({ "b2bi", "get-profile" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "get-profile" }, input)
 end
 
 --- AWS b2bi get-transformer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transformer(input)
-	return common.execute_aws_command_with_input({ "b2bi", "get-transformer" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "get-transformer" }, input)
 end
 
 --- AWS b2bi get-transformer-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transformer_job(input)
-	return common.execute_aws_command_with_input({ "b2bi", "get-transformer-job" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "get-transformer-job" }, input)
 end
 
 --- AWS b2bi list-capabilities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_capabilities(input)
-	return common.execute_aws_command_with_input({ "b2bi", "list-capabilities" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "list-capabilities" }, input)
 end
 
 --- AWS b2bi list-partnerships operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_partnerships(input)
-	return common.execute_aws_command_with_input({ "b2bi", "list-partnerships" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "list-partnerships" }, input)
 end
 
 --- AWS b2bi list-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_profiles(input)
-	return common.execute_aws_command_with_input({ "b2bi", "list-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "list-profiles" }, input)
 end
 
 --- AWS b2bi list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "b2bi", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "list-tags-for-resource" }, input)
 end
 
 --- AWS b2bi list-transformers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_transformers(input)
-	return common.execute_aws_command_with_input({ "b2bi", "list-transformers" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "list-transformers" }, input)
 end
 
 --- AWS b2bi start-transformer-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_transformer_job(input)
-	return common.execute_aws_command_with_input({ "b2bi", "start-transformer-job" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "start-transformer-job" }, input)
 end
 
 --- AWS b2bi tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "b2bi", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "tag-resource" }, input)
 end
 
 --- AWS b2bi test-conversion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_conversion(input)
-	return common.execute_aws_command_with_input({ "b2bi", "test-conversion" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "test-conversion" }, input)
 end
 
 --- AWS b2bi test-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_mapping(input)
-	return common.execute_aws_command_with_input({ "b2bi", "test-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "test-mapping" }, input)
 end
 
 --- AWS b2bi test-parsing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_parsing(input)
-	return common.execute_aws_command_with_input({ "b2bi", "test-parsing" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "test-parsing" }, input)
 end
 
 --- AWS b2bi untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "b2bi", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "untag-resource" }, input)
 end
 
 --- AWS b2bi update-capability operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_capability(input)
-	return common.execute_aws_command_with_input({ "b2bi", "update-capability" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "update-capability" }, input)
 end
 
 --- AWS b2bi update-partnership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_partnership(input)
-	return common.execute_aws_command_with_input({ "b2bi", "update-partnership" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "update-partnership" }, input)
 end
 
 --- AWS b2bi update-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_profile(input)
-	return common.execute_aws_command_with_input({ "b2bi", "update-profile" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "update-profile" }, input)
 end
 
 --- AWS b2bi update-transformer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_transformer(input)
-	return common.execute_aws_command_with_input({ "b2bi", "update-transformer" }, input)
+	return common.execute_aws_command_skeleton({ "b2bi", "update-transformer" }, input)
 end
 
 return M

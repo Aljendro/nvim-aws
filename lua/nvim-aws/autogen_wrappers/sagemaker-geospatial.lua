@@ -3,140 +3,140 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SAGEMAKER-GEOSPATIAL service functions
+--- AWS sagemaker-geospatial service functions
 local M = {}
 
 --- AWS sagemaker-geospatial delete-earth-observation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_earth_observation_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "delete-earth-observation-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "delete-earth-observation-job" }, input)
 end
 
 --- AWS sagemaker-geospatial delete-vector-enrichment-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vector_enrichment_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "delete-vector-enrichment-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "delete-vector-enrichment-job" }, input)
 end
 
 --- AWS sagemaker-geospatial export-earth-observation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_earth_observation_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "export-earth-observation-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "export-earth-observation-job" }, input)
 end
 
 --- AWS sagemaker-geospatial export-vector-enrichment-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_vector_enrichment_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "export-vector-enrichment-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "export-vector-enrichment-job" }, input)
 end
 
 --- AWS sagemaker-geospatial get-earth-observation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_earth_observation_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "get-earth-observation-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "get-earth-observation-job" }, input)
 end
 
 --- AWS sagemaker-geospatial get-raster-data-collection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_raster_data_collection(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "get-raster-data-collection" }, input)
-end
-
---- AWS sagemaker-geospatial get-vector-enrichment-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_vector_enrichment_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "get-vector-enrichment-job" }, input)
-end
-
---- AWS sagemaker-geospatial list-earth-observation-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_earth_observation_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "list-earth-observation-jobs" }, input)
-end
-
---- AWS sagemaker-geospatial list-raster-data-collections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_raster_data_collections(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "list-raster-data-collections" }, input)
-end
-
---- AWS sagemaker-geospatial list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "list-tags-for-resource" }, input)
-end
-
---- AWS sagemaker-geospatial list-vector-enrichment-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_vector_enrichment_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "list-vector-enrichment-jobs" }, input)
-end
-
---- AWS sagemaker-geospatial search-raster-data-collection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.search_raster_data_collection(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "search-raster-data-collection" }, input)
-end
-
---- AWS sagemaker-geospatial start-earth-observation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_earth_observation_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "start-earth-observation-job" }, input)
-end
-
---- AWS sagemaker-geospatial start-vector-enrichment-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_vector_enrichment_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "start-vector-enrichment-job" }, input)
-end
-
---- AWS sagemaker-geospatial stop-earth-observation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_earth_observation_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "stop-earth-observation-job" }, input)
-end
-
---- AWS sagemaker-geospatial stop-vector-enrichment-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_vector_enrichment_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "stop-vector-enrichment-job" }, input)
-end
-
---- AWS sagemaker-geospatial tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "tag-resource" }, input)
-end
-
---- AWS sagemaker-geospatial untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "sagemaker-geospatial", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "get-raster-data-collection" }, input)
 end
 
 --- AWS sagemaker-geospatial get-tile operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_tile(input)
-	return common.execute_aws_command_with_raw_input({ "sagemaker-geospatial", "get-tile" }, input)
+	return common.execute_aws_command({ "sagemaker-geospatial", "get-tile" }, input)
+end
+
+--- AWS sagemaker-geospatial get-vector-enrichment-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_vector_enrichment_job(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "get-vector-enrichment-job" }, input)
+end
+
+--- AWS sagemaker-geospatial list-earth-observation-jobs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_earth_observation_jobs(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "list-earth-observation-jobs" }, input)
+end
+
+--- AWS sagemaker-geospatial list-raster-data-collections operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_raster_data_collections(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "list-raster-data-collections" }, input)
+end
+
+--- AWS sagemaker-geospatial list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "list-tags-for-resource" }, input)
+end
+
+--- AWS sagemaker-geospatial list-vector-enrichment-jobs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_vector_enrichment_jobs(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "list-vector-enrichment-jobs" }, input)
+end
+
+--- AWS sagemaker-geospatial search-raster-data-collection operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.search_raster_data_collection(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "search-raster-data-collection" }, input)
+end
+
+--- AWS sagemaker-geospatial start-earth-observation-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_earth_observation_job(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "start-earth-observation-job" }, input)
+end
+
+--- AWS sagemaker-geospatial start-vector-enrichment-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_vector_enrichment_job(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "start-vector-enrichment-job" }, input)
+end
+
+--- AWS sagemaker-geospatial stop-earth-observation-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_earth_observation_job(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "stop-earth-observation-job" }, input)
+end
+
+--- AWS sagemaker-geospatial stop-vector-enrichment-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_vector_enrichment_job(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "stop-vector-enrichment-job" }, input)
+end
+
+--- AWS sagemaker-geospatial tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "tag-resource" }, input)
+end
+
+--- AWS sagemaker-geospatial untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-geospatial", "untag-resource" }, input)
 end
 
 return M

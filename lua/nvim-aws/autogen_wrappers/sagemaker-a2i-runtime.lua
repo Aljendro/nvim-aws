@@ -3,42 +3,42 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SAGEMAKER-A2I-RUNTIME service functions
+--- AWS sagemaker-a2i-runtime service functions
 local M = {}
 
 --- AWS sagemaker-a2i-runtime delete-human-loop operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_human_loop(input)
-	return common.execute_aws_command_with_input({ "sagemaker-a2i-runtime", "delete-human-loop" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "delete-human-loop" }, input)
 end
 
 --- AWS sagemaker-a2i-runtime describe-human-loop operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_human_loop(input)
-	return common.execute_aws_command_with_input({ "sagemaker-a2i-runtime", "describe-human-loop" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "describe-human-loop" }, input)
 end
 
 --- AWS sagemaker-a2i-runtime list-human-loops operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_human_loops(input)
-	return common.execute_aws_command_with_input({ "sagemaker-a2i-runtime", "list-human-loops" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "list-human-loops" }, input)
 end
 
 --- AWS sagemaker-a2i-runtime start-human-loop operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_human_loop(input)
-	return common.execute_aws_command_with_input({ "sagemaker-a2i-runtime", "start-human-loop" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "start-human-loop" }, input)
 end
 
 --- AWS sagemaker-a2i-runtime stop-human-loop operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_human_loop(input)
-	return common.execute_aws_command_with_input({ "sagemaker-a2i-runtime", "stop-human-loop" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-a2i-runtime", "stop-human-loop" }, input)
 end
 
 return M

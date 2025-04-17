@@ -3,168 +3,168 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SECRETSMANAGER service functions
+--- AWS secretsmanager service functions
 local M = {}
 
 --- AWS secretsmanager batch-get-secret-value operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_secret_value(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "batch-get-secret-value" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "batch-get-secret-value" }, input)
 end
 
 --- AWS secretsmanager cancel-rotate-secret operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_rotate_secret(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "cancel-rotate-secret" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "cancel-rotate-secret" }, input)
 end
 
 --- AWS secretsmanager create-secret operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_secret(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "create-secret" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "create-secret" }, input)
 end
 
 --- AWS secretsmanager delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "delete-resource-policy" }, input)
 end
 
 --- AWS secretsmanager delete-secret operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_secret(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "delete-secret" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "delete-secret" }, input)
 end
 
 --- AWS secretsmanager describe-secret operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_secret(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "describe-secret" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "describe-secret" }, input)
 end
 
 --- AWS secretsmanager get-random-password operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_random_password(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "get-random-password" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "get-random-password" }, input)
 end
 
 --- AWS secretsmanager get-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_policy(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "get-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "get-resource-policy" }, input)
 end
 
 --- AWS secretsmanager get-secret-value operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_secret_value(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "get-secret-value" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "get-secret-value" }, input)
 end
 
 --- AWS secretsmanager list-secret-version-ids operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_secret_version_ids(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "list-secret-version-ids" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "list-secret-version-ids" }, input)
 end
 
 --- AWS secretsmanager list-secrets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_secrets(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "list-secrets" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "list-secrets" }, input)
 end
 
 --- AWS secretsmanager put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "put-resource-policy" }, input)
 end
 
 --- AWS secretsmanager put-secret-value operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_secret_value(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "put-secret-value" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "put-secret-value" }, input)
 end
 
 --- AWS secretsmanager remove-regions-from-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_regions_from_replication(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "remove-regions-from-replication" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "remove-regions-from-replication" }, input)
 end
 
 --- AWS secretsmanager replicate-secret-to-regions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replicate_secret_to_regions(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "replicate-secret-to-regions" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "replicate-secret-to-regions" }, input)
 end
 
 --- AWS secretsmanager restore-secret operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_secret(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "restore-secret" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "restore-secret" }, input)
 end
 
 --- AWS secretsmanager rotate-secret operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.rotate_secret(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "rotate-secret" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "rotate-secret" }, input)
 end
 
 --- AWS secretsmanager stop-replication-to-replica operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_replication_to_replica(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "stop-replication-to-replica" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "stop-replication-to-replica" }, input)
 end
 
 --- AWS secretsmanager tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "tag-resource" }, input)
 end
 
 --- AWS secretsmanager untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "untag-resource" }, input)
 end
 
 --- AWS secretsmanager update-secret operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_secret(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "update-secret" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "update-secret" }, input)
 end
 
 --- AWS secretsmanager update-secret-version-stage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_secret_version_stage(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "update-secret-version-stage" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "update-secret-version-stage" }, input)
 end
 
 --- AWS secretsmanager validate-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.validate_resource_policy(input)
-	return common.execute_aws_command_with_input({ "secretsmanager", "validate-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "secretsmanager", "validate-resource-policy" }, input)
 end
 
 return M

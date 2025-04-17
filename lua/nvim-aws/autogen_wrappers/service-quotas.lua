@@ -3,140 +3,140 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SERVICE-QUOTAS service functions
+--- AWS service-quotas service functions
 local M = {}
 
 --- AWS service-quotas associate-service-quota-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_service_quota_template(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "associate-service-quota-template" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "associate-service-quota-template" }, input)
 end
 
 --- AWS service-quotas delete-service-quota-increase-request-from-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_service_quota_increase_request_from_template(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "delete-service-quota-increase-request-from-template" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "delete-service-quota-increase-request-from-template" }, input)
 end
 
 --- AWS service-quotas disassociate-service-quota-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_service_quota_template(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "disassociate-service-quota-template" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "disassociate-service-quota-template" }, input)
 end
 
 --- AWS service-quotas get-association-for-service-quota-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_association_for_service_quota_template(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "get-association-for-service-quota-template" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "get-association-for-service-quota-template" }, input)
 end
 
 --- AWS service-quotas get-aws-default-service-quota operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_aws_default_service_quota(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "get-aws-default-service-quota" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "get-aws-default-service-quota" }, input)
 end
 
 --- AWS service-quotas get-requested-service-quota-change operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_requested_service_quota_change(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "get-requested-service-quota-change" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "get-requested-service-quota-change" }, input)
 end
 
 --- AWS service-quotas get-service-quota operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_service_quota(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "get-service-quota" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "get-service-quota" }, input)
 end
 
 --- AWS service-quotas get-service-quota-increase-request-from-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_service_quota_increase_request_from_template(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "get-service-quota-increase-request-from-template" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "get-service-quota-increase-request-from-template" }, input)
 end
 
 --- AWS service-quotas list-aws-default-service-quotas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_aws_default_service_quotas(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "list-aws-default-service-quotas" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "list-aws-default-service-quotas" }, input)
 end
 
 --- AWS service-quotas list-requested-service-quota-change-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_requested_service_quota_change_history(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "list-requested-service-quota-change-history" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "list-requested-service-quota-change-history" }, input)
 end
 
 --- AWS service-quotas list-requested-service-quota-change-history-by-quota operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_requested_service_quota_change_history_by_quota(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "list-requested-service-quota-change-history-by-quota" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "list-requested-service-quota-change-history-by-quota" }, input)
 end
 
 --- AWS service-quotas list-service-quota-increase-requests-in-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_service_quota_increase_requests_in_template(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "list-service-quota-increase-requests-in-template" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "list-service-quota-increase-requests-in-template" }, input)
 end
 
 --- AWS service-quotas list-service-quotas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_service_quotas(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "list-service-quotas" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "list-service-quotas" }, input)
 end
 
 --- AWS service-quotas list-services operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_services(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "list-services" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "list-services" }, input)
 end
 
 --- AWS service-quotas list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "list-tags-for-resource" }, input)
 end
 
 --- AWS service-quotas put-service-quota-increase-request-into-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_service_quota_increase_request_into_template(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "put-service-quota-increase-request-into-template" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "put-service-quota-increase-request-into-template" }, input)
 end
 
 --- AWS service-quotas request-service-quota-increase operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.request_service_quota_increase(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "request-service-quota-increase" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "request-service-quota-increase" }, input)
 end
 
 --- AWS service-quotas tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "tag-resource" }, input)
 end
 
 --- AWS service-quotas untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "service-quotas", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "service-quotas", "untag-resource" }, input)
 end
 
 return M

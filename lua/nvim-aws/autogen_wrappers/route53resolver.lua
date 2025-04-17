@@ -3,483 +3,483 @@
 
 local common = require("nvim-aws.common")
 
---- AWS ROUTE53RESOLVER service functions
+--- AWS route53resolver service functions
 local M = {}
 
 --- AWS route53resolver associate-firewall-rule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_firewall_rule_group(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "associate-firewall-rule-group" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "associate-firewall-rule-group" }, input)
 end
 
 --- AWS route53resolver associate-resolver-endpoint-ip-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_resolver_endpoint_ip_address(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "associate-resolver-endpoint-ip-address" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "associate-resolver-endpoint-ip-address" }, input)
 end
 
 --- AWS route53resolver associate-resolver-query-log-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_resolver_query_log_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "associate-resolver-query-log-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "associate-resolver-query-log-config" }, input)
 end
 
 --- AWS route53resolver associate-resolver-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_resolver_rule(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "associate-resolver-rule" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "associate-resolver-rule" }, input)
 end
 
 --- AWS route53resolver create-firewall-domain-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_firewall_domain_list(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "create-firewall-domain-list" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "create-firewall-domain-list" }, input)
 end
 
 --- AWS route53resolver create-firewall-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_firewall_rule(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "create-firewall-rule" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "create-firewall-rule" }, input)
 end
 
 --- AWS route53resolver create-firewall-rule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_firewall_rule_group(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "create-firewall-rule-group" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "create-firewall-rule-group" }, input)
 end
 
 --- AWS route53resolver create-outpost-resolver operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_outpost_resolver(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "create-outpost-resolver" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "create-outpost-resolver" }, input)
 end
 
 --- AWS route53resolver create-resolver-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_resolver_endpoint(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "create-resolver-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "create-resolver-endpoint" }, input)
 end
 
 --- AWS route53resolver create-resolver-query-log-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_resolver_query_log_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "create-resolver-query-log-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "create-resolver-query-log-config" }, input)
 end
 
 --- AWS route53resolver create-resolver-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_resolver_rule(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "create-resolver-rule" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "create-resolver-rule" }, input)
 end
 
 --- AWS route53resolver delete-firewall-domain-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_firewall_domain_list(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "delete-firewall-domain-list" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "delete-firewall-domain-list" }, input)
 end
 
 --- AWS route53resolver delete-firewall-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_firewall_rule(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "delete-firewall-rule" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "delete-firewall-rule" }, input)
 end
 
 --- AWS route53resolver delete-firewall-rule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_firewall_rule_group(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "delete-firewall-rule-group" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "delete-firewall-rule-group" }, input)
 end
 
 --- AWS route53resolver delete-outpost-resolver operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_outpost_resolver(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "delete-outpost-resolver" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "delete-outpost-resolver" }, input)
 end
 
 --- AWS route53resolver delete-resolver-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resolver_endpoint(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "delete-resolver-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "delete-resolver-endpoint" }, input)
 end
 
 --- AWS route53resolver delete-resolver-query-log-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resolver_query_log_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "delete-resolver-query-log-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "delete-resolver-query-log-config" }, input)
 end
 
 --- AWS route53resolver delete-resolver-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resolver_rule(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "delete-resolver-rule" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "delete-resolver-rule" }, input)
 end
 
 --- AWS route53resolver disassociate-firewall-rule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_firewall_rule_group(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "disassociate-firewall-rule-group" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "disassociate-firewall-rule-group" }, input)
 end
 
 --- AWS route53resolver disassociate-resolver-endpoint-ip-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_resolver_endpoint_ip_address(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "disassociate-resolver-endpoint-ip-address" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "disassociate-resolver-endpoint-ip-address" }, input)
 end
 
 --- AWS route53resolver disassociate-resolver-query-log-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_resolver_query_log_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "disassociate-resolver-query-log-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "disassociate-resolver-query-log-config" }, input)
 end
 
 --- AWS route53resolver disassociate-resolver-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_resolver_rule(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "disassociate-resolver-rule" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "disassociate-resolver-rule" }, input)
 end
 
 --- AWS route53resolver get-firewall-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_firewall_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-firewall-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-firewall-config" }, input)
 end
 
 --- AWS route53resolver get-firewall-domain-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_firewall_domain_list(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-firewall-domain-list" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-firewall-domain-list" }, input)
 end
 
 --- AWS route53resolver get-firewall-rule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_firewall_rule_group(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-firewall-rule-group" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-firewall-rule-group" }, input)
 end
 
 --- AWS route53resolver get-firewall-rule-group-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_firewall_rule_group_association(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-firewall-rule-group-association" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-firewall-rule-group-association" }, input)
 end
 
 --- AWS route53resolver get-firewall-rule-group-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_firewall_rule_group_policy(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-firewall-rule-group-policy" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-firewall-rule-group-policy" }, input)
 end
 
 --- AWS route53resolver get-outpost-resolver operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_outpost_resolver(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-outpost-resolver" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-outpost-resolver" }, input)
 end
 
 --- AWS route53resolver get-resolver-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resolver_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-resolver-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-resolver-config" }, input)
 end
 
 --- AWS route53resolver get-resolver-dnssec-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resolver_dnssec_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-resolver-dnssec-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-resolver-dnssec-config" }, input)
 end
 
 --- AWS route53resolver get-resolver-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resolver_endpoint(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-resolver-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-resolver-endpoint" }, input)
 end
 
 --- AWS route53resolver get-resolver-query-log-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resolver_query_log_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-resolver-query-log-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-resolver-query-log-config" }, input)
 end
 
 --- AWS route53resolver get-resolver-query-log-config-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resolver_query_log_config_association(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-resolver-query-log-config-association" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-resolver-query-log-config-association" }, input)
 end
 
 --- AWS route53resolver get-resolver-query-log-config-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resolver_query_log_config_policy(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-resolver-query-log-config-policy" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-resolver-query-log-config-policy" }, input)
 end
 
 --- AWS route53resolver get-resolver-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resolver_rule(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-resolver-rule" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-resolver-rule" }, input)
 end
 
 --- AWS route53resolver get-resolver-rule-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resolver_rule_association(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-resolver-rule-association" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-resolver-rule-association" }, input)
 end
 
 --- AWS route53resolver get-resolver-rule-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resolver_rule_policy(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "get-resolver-rule-policy" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "get-resolver-rule-policy" }, input)
 end
 
 --- AWS route53resolver import-firewall-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_firewall_domains(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "import-firewall-domains" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "import-firewall-domains" }, input)
 end
 
 --- AWS route53resolver list-firewall-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_firewall_configs(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-firewall-configs" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-firewall-configs" }, input)
 end
 
 --- AWS route53resolver list-firewall-domain-lists operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_firewall_domain_lists(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-firewall-domain-lists" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-firewall-domain-lists" }, input)
 end
 
 --- AWS route53resolver list-firewall-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_firewall_domains(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-firewall-domains" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-firewall-domains" }, input)
 end
 
 --- AWS route53resolver list-firewall-rule-group-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_firewall_rule_group_associations(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-firewall-rule-group-associations" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-firewall-rule-group-associations" }, input)
 end
 
 --- AWS route53resolver list-firewall-rule-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_firewall_rule_groups(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-firewall-rule-groups" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-firewall-rule-groups" }, input)
 end
 
 --- AWS route53resolver list-firewall-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_firewall_rules(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-firewall-rules" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-firewall-rules" }, input)
 end
 
 --- AWS route53resolver list-outpost-resolvers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_outpost_resolvers(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-outpost-resolvers" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-outpost-resolvers" }, input)
 end
 
 --- AWS route53resolver list-resolver-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resolver_configs(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-resolver-configs" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-resolver-configs" }, input)
 end
 
 --- AWS route53resolver list-resolver-dnssec-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resolver_dnssec_configs(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-resolver-dnssec-configs" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-resolver-dnssec-configs" }, input)
 end
 
 --- AWS route53resolver list-resolver-endpoint-ip-addresses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resolver_endpoint_ip_addresses(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-resolver-endpoint-ip-addresses" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-resolver-endpoint-ip-addresses" }, input)
 end
 
 --- AWS route53resolver list-resolver-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resolver_endpoints(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-resolver-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-resolver-endpoints" }, input)
 end
 
 --- AWS route53resolver list-resolver-query-log-config-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resolver_query_log_config_associations(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-resolver-query-log-config-associations" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-resolver-query-log-config-associations" }, input)
 end
 
 --- AWS route53resolver list-resolver-query-log-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resolver_query_log_configs(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-resolver-query-log-configs" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-resolver-query-log-configs" }, input)
 end
 
 --- AWS route53resolver list-resolver-rule-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resolver_rule_associations(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-resolver-rule-associations" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-resolver-rule-associations" }, input)
 end
 
 --- AWS route53resolver list-resolver-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resolver_rules(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-resolver-rules" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-resolver-rules" }, input)
 end
 
 --- AWS route53resolver list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "list-tags-for-resource" }, input)
 end
 
 --- AWS route53resolver put-firewall-rule-group-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_firewall_rule_group_policy(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "put-firewall-rule-group-policy" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "put-firewall-rule-group-policy" }, input)
 end
 
 --- AWS route53resolver put-resolver-query-log-config-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resolver_query_log_config_policy(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "put-resolver-query-log-config-policy" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "put-resolver-query-log-config-policy" }, input)
 end
 
 --- AWS route53resolver put-resolver-rule-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resolver_rule_policy(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "put-resolver-rule-policy" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "put-resolver-rule-policy" }, input)
 end
 
 --- AWS route53resolver tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "tag-resource" }, input)
 end
 
 --- AWS route53resolver untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "untag-resource" }, input)
 end
 
 --- AWS route53resolver update-firewall-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_firewall_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "update-firewall-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "update-firewall-config" }, input)
 end
 
 --- AWS route53resolver update-firewall-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_firewall_domains(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "update-firewall-domains" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "update-firewall-domains" }, input)
 end
 
 --- AWS route53resolver update-firewall-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_firewall_rule(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "update-firewall-rule" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "update-firewall-rule" }, input)
 end
 
 --- AWS route53resolver update-firewall-rule-group-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_firewall_rule_group_association(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "update-firewall-rule-group-association" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "update-firewall-rule-group-association" }, input)
 end
 
 --- AWS route53resolver update-outpost-resolver operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_outpost_resolver(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "update-outpost-resolver" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "update-outpost-resolver" }, input)
 end
 
 --- AWS route53resolver update-resolver-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resolver_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "update-resolver-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "update-resolver-config" }, input)
 end
 
 --- AWS route53resolver update-resolver-dnssec-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resolver_dnssec_config(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "update-resolver-dnssec-config" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "update-resolver-dnssec-config" }, input)
 end
 
 --- AWS route53resolver update-resolver-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resolver_endpoint(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "update-resolver-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "update-resolver-endpoint" }, input)
 end
 
 --- AWS route53resolver update-resolver-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resolver_rule(input)
-	return common.execute_aws_command_with_input({ "route53resolver", "update-resolver-rule" }, input)
+	return common.execute_aws_command_skeleton({ "route53resolver", "update-resolver-rule" }, input)
 end
 
 return M

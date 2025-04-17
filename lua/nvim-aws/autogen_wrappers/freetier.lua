@@ -3,14 +3,14 @@
 
 local common = require("nvim-aws.common")
 
---- AWS FREETIER service functions
+--- AWS freetier service functions
 local M = {}
 
 --- AWS freetier get-free-tier-usage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_free_tier_usage(input)
-	return common.execute_aws_command_with_input({ "freetier", "get-free-tier-usage" }, input)
+	return common.execute_aws_command_skeleton({ "freetier", "get-free-tier-usage" }, input)
 end
 
 return M

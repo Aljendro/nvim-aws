@@ -3,42 +3,42 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IOT-JOBS-DATA service functions
+--- AWS iot-jobs-data service functions
 local M = {}
 
 --- AWS iot-jobs-data describe-job-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_job_execution(input)
-	return common.execute_aws_command_with_input({ "iot-jobs-data", "describe-job-execution" }, input)
+	return common.execute_aws_command_skeleton({ "iot-jobs-data", "describe-job-execution" }, input)
 end
 
 --- AWS iot-jobs-data get-pending-job-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_pending_job_executions(input)
-	return common.execute_aws_command_with_input({ "iot-jobs-data", "get-pending-job-executions" }, input)
+	return common.execute_aws_command_skeleton({ "iot-jobs-data", "get-pending-job-executions" }, input)
 end
 
 --- AWS iot-jobs-data start-command-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_command_execution(input)
-	return common.execute_aws_command_with_input({ "iot-jobs-data", "start-command-execution" }, input)
+	return common.execute_aws_command_skeleton({ "iot-jobs-data", "start-command-execution" }, input)
 end
 
 --- AWS iot-jobs-data start-next-pending-job-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_next_pending_job_execution(input)
-	return common.execute_aws_command_with_input({ "iot-jobs-data", "start-next-pending-job-execution" }, input)
+	return common.execute_aws_command_skeleton({ "iot-jobs-data", "start-next-pending-job-execution" }, input)
 end
 
 --- AWS iot-jobs-data update-job-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_job_execution(input)
-	return common.execute_aws_command_with_input({ "iot-jobs-data", "update-job-execution" }, input)
+	return common.execute_aws_command_skeleton({ "iot-jobs-data", "update-job-execution" }, input)
 end
 
 return M

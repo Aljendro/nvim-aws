@@ -3,49 +3,49 @@
 
 local common = require("nvim-aws.common")
 
---- AWS BEDROCK-RUNTIME service functions
+--- AWS bedrock-runtime service functions
 local M = {}
 
 --- AWS bedrock-runtime apply-guardrail operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.apply_guardrail(input)
-	return common.execute_aws_command_with_input({ "bedrock-runtime", "apply-guardrail" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-runtime", "apply-guardrail" }, input)
 end
 
 --- AWS bedrock-runtime converse operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.converse(input)
-	return common.execute_aws_command_with_input({ "bedrock-runtime", "converse" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-runtime", "converse" }, input)
 end
 
 --- AWS bedrock-runtime get-async-invoke operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_async_invoke(input)
-	return common.execute_aws_command_with_input({ "bedrock-runtime", "get-async-invoke" }, input)
-end
-
---- AWS bedrock-runtime list-async-invokes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_async_invokes(input)
-	return common.execute_aws_command_with_input({ "bedrock-runtime", "list-async-invokes" }, input)
-end
-
---- AWS bedrock-runtime start-async-invoke operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_async_invoke(input)
-	return common.execute_aws_command_with_input({ "bedrock-runtime", "start-async-invoke" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-runtime", "get-async-invoke" }, input)
 end
 
 --- AWS bedrock-runtime invoke-model operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.invoke_model(input)
-	return common.execute_aws_command_with_raw_input({ "bedrock-runtime", "invoke-model" }, input)
+	return common.execute_aws_command({ "bedrock-runtime", "invoke-model" }, input)
+end
+
+--- AWS bedrock-runtime list-async-invokes operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_async_invokes(input)
+	return common.execute_aws_command_skeleton({ "bedrock-runtime", "list-async-invokes" }, input)
+end
+
+--- AWS bedrock-runtime start-async-invoke operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_async_invoke(input)
+	return common.execute_aws_command_skeleton({ "bedrock-runtime", "start-async-invoke" }, input)
 end
 
 return M

@@ -3,637 +3,637 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IOTSITEWISE service functions
+--- AWS iotsitewise service functions
 local M = {}
 
 --- AWS iotsitewise associate-assets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_assets(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "associate-assets" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "associate-assets" }, input)
 end
 
 --- AWS iotsitewise associate-time-series-to-asset-property operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_time_series_to_asset_property(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "associate-time-series-to-asset-property" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "associate-time-series-to-asset-property" }, input)
 end
 
 --- AWS iotsitewise batch-associate-project-assets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_associate_project_assets(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "batch-associate-project-assets" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "batch-associate-project-assets" }, input)
 end
 
 --- AWS iotsitewise batch-disassociate-project-assets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_disassociate_project_assets(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "batch-disassociate-project-assets" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "batch-disassociate-project-assets" }, input)
 end
 
 --- AWS iotsitewise batch-get-asset-property-aggregates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_asset_property_aggregates(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "batch-get-asset-property-aggregates" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "batch-get-asset-property-aggregates" }, input)
 end
 
 --- AWS iotsitewise batch-get-asset-property-value operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_asset_property_value(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "batch-get-asset-property-value" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "batch-get-asset-property-value" }, input)
 end
 
 --- AWS iotsitewise batch-get-asset-property-value-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_asset_property_value_history(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "batch-get-asset-property-value-history" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "batch-get-asset-property-value-history" }, input)
 end
 
 --- AWS iotsitewise batch-put-asset-property-value operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_put_asset_property_value(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "batch-put-asset-property-value" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "batch-put-asset-property-value" }, input)
 end
 
 --- AWS iotsitewise create-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_access_policy(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "create-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "create-access-policy" }, input)
 end
 
 --- AWS iotsitewise create-asset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_asset(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "create-asset" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "create-asset" }, input)
 end
 
 --- AWS iotsitewise create-asset-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_asset_model(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "create-asset-model" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "create-asset-model" }, input)
 end
 
 --- AWS iotsitewise create-asset-model-composite-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_asset_model_composite_model(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "create-asset-model-composite-model" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "create-asset-model-composite-model" }, input)
 end
 
 --- AWS iotsitewise create-bulk-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_bulk_import_job(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "create-bulk-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "create-bulk-import-job" }, input)
 end
 
 --- AWS iotsitewise create-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dashboard(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "create-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "create-dashboard" }, input)
 end
 
 --- AWS iotsitewise create-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dataset(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "create-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "create-dataset" }, input)
 end
 
 --- AWS iotsitewise create-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_gateway(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "create-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "create-gateway" }, input)
 end
 
 --- AWS iotsitewise create-portal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_portal(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "create-portal" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "create-portal" }, input)
 end
 
 --- AWS iotsitewise create-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_project(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "create-project" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "create-project" }, input)
 end
 
 --- AWS iotsitewise delete-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_access_policy(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "delete-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "delete-access-policy" }, input)
 end
 
 --- AWS iotsitewise delete-asset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_asset(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "delete-asset" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "delete-asset" }, input)
 end
 
 --- AWS iotsitewise delete-asset-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_asset_model(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "delete-asset-model" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "delete-asset-model" }, input)
 end
 
 --- AWS iotsitewise delete-asset-model-composite-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_asset_model_composite_model(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "delete-asset-model-composite-model" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "delete-asset-model-composite-model" }, input)
 end
 
 --- AWS iotsitewise delete-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dashboard(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "delete-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "delete-dashboard" }, input)
 end
 
 --- AWS iotsitewise delete-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dataset(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "delete-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "delete-dataset" }, input)
 end
 
 --- AWS iotsitewise delete-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_gateway(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "delete-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "delete-gateway" }, input)
 end
 
 --- AWS iotsitewise delete-portal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_portal(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "delete-portal" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "delete-portal" }, input)
 end
 
 --- AWS iotsitewise delete-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_project(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "delete-project" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "delete-project" }, input)
 end
 
 --- AWS iotsitewise delete-time-series operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_time_series(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "delete-time-series" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "delete-time-series" }, input)
 end
 
 --- AWS iotsitewise describe-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_access_policy(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-access-policy" }, input)
 end
 
 --- AWS iotsitewise describe-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_action(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-action" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-action" }, input)
 end
 
 --- AWS iotsitewise describe-asset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_asset(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-asset" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-asset" }, input)
 end
 
 --- AWS iotsitewise describe-asset-composite-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_asset_composite_model(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-asset-composite-model" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-asset-composite-model" }, input)
 end
 
 --- AWS iotsitewise describe-asset-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_asset_model(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-asset-model" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-asset-model" }, input)
 end
 
 --- AWS iotsitewise describe-asset-model-composite-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_asset_model_composite_model(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-asset-model-composite-model" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-asset-model-composite-model" }, input)
 end
 
 --- AWS iotsitewise describe-asset-property operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_asset_property(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-asset-property" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-asset-property" }, input)
 end
 
 --- AWS iotsitewise describe-bulk-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_bulk_import_job(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-bulk-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-bulk-import-job" }, input)
 end
 
 --- AWS iotsitewise describe-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_dashboard(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-dashboard" }, input)
 end
 
 --- AWS iotsitewise describe-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_dataset(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-dataset" }, input)
 end
 
 --- AWS iotsitewise describe-default-encryption-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_default_encryption_configuration(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-default-encryption-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-default-encryption-configuration" }, input)
 end
 
 --- AWS iotsitewise describe-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_gateway(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-gateway" }, input)
 end
 
 --- AWS iotsitewise describe-gateway-capability-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_gateway_capability_configuration(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-gateway-capability-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-gateway-capability-configuration" }, input)
 end
 
 --- AWS iotsitewise describe-logging-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_logging_options(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-logging-options" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-logging-options" }, input)
 end
 
 --- AWS iotsitewise describe-portal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_portal(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-portal" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-portal" }, input)
 end
 
 --- AWS iotsitewise describe-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_project(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-project" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-project" }, input)
 end
 
 --- AWS iotsitewise describe-storage-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_storage_configuration(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-storage-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-storage-configuration" }, input)
 end
 
 --- AWS iotsitewise describe-time-series operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_time_series(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "describe-time-series" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "describe-time-series" }, input)
 end
 
 --- AWS iotsitewise disassociate-assets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_assets(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "disassociate-assets" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "disassociate-assets" }, input)
 end
 
 --- AWS iotsitewise disassociate-time-series-from-asset-property operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_time_series_from_asset_property(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "disassociate-time-series-from-asset-property" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "disassociate-time-series-from-asset-property" }, input)
 end
 
 --- AWS iotsitewise execute-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.execute_action(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "execute-action" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "execute-action" }, input)
 end
 
 --- AWS iotsitewise execute-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.execute_query(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "execute-query" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "execute-query" }, input)
 end
 
 --- AWS iotsitewise get-asset-property-aggregates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_asset_property_aggregates(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "get-asset-property-aggregates" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "get-asset-property-aggregates" }, input)
 end
 
 --- AWS iotsitewise get-asset-property-value operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_asset_property_value(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "get-asset-property-value" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "get-asset-property-value" }, input)
 end
 
 --- AWS iotsitewise get-asset-property-value-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_asset_property_value_history(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "get-asset-property-value-history" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "get-asset-property-value-history" }, input)
 end
 
 --- AWS iotsitewise get-interpolated-asset-property-values operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_interpolated_asset_property_values(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "get-interpolated-asset-property-values" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "get-interpolated-asset-property-values" }, input)
 end
 
 --- AWS iotsitewise list-access-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_access_policies(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-access-policies" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-access-policies" }, input)
 end
 
 --- AWS iotsitewise list-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_actions(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-actions" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-actions" }, input)
 end
 
 --- AWS iotsitewise list-asset-model-composite-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_asset_model_composite_models(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-asset-model-composite-models" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-asset-model-composite-models" }, input)
 end
 
 --- AWS iotsitewise list-asset-model-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_asset_model_properties(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-asset-model-properties" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-asset-model-properties" }, input)
 end
 
 --- AWS iotsitewise list-asset-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_asset_models(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-asset-models" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-asset-models" }, input)
 end
 
 --- AWS iotsitewise list-asset-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_asset_properties(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-asset-properties" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-asset-properties" }, input)
 end
 
 --- AWS iotsitewise list-asset-relationships operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_asset_relationships(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-asset-relationships" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-asset-relationships" }, input)
 end
 
 --- AWS iotsitewise list-assets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_assets(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-assets" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-assets" }, input)
 end
 
 --- AWS iotsitewise list-associated-assets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_associated_assets(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-associated-assets" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-associated-assets" }, input)
 end
 
 --- AWS iotsitewise list-bulk-import-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bulk_import_jobs(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-bulk-import-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-bulk-import-jobs" }, input)
 end
 
 --- AWS iotsitewise list-composition-relationships operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_composition_relationships(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-composition-relationships" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-composition-relationships" }, input)
 end
 
 --- AWS iotsitewise list-dashboards operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_dashboards(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-dashboards" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-dashboards" }, input)
 end
 
 --- AWS iotsitewise list-datasets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_datasets(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-datasets" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-datasets" }, input)
 end
 
 --- AWS iotsitewise list-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_gateways(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-gateways" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-gateways" }, input)
 end
 
 --- AWS iotsitewise list-portals operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_portals(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-portals" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-portals" }, input)
 end
 
 --- AWS iotsitewise list-project-assets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_project_assets(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-project-assets" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-project-assets" }, input)
 end
 
 --- AWS iotsitewise list-projects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_projects(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-projects" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-projects" }, input)
 end
 
 --- AWS iotsitewise list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-tags-for-resource" }, input)
 end
 
 --- AWS iotsitewise list-time-series operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_time_series(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "list-time-series" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "list-time-series" }, input)
 end
 
 --- AWS iotsitewise put-default-encryption-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_default_encryption_configuration(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "put-default-encryption-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "put-default-encryption-configuration" }, input)
 end
 
 --- AWS iotsitewise put-logging-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_logging_options(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "put-logging-options" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "put-logging-options" }, input)
 end
 
 --- AWS iotsitewise put-storage-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_storage_configuration(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "put-storage-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "put-storage-configuration" }, input)
 end
 
 --- AWS iotsitewise tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "tag-resource" }, input)
 end
 
 --- AWS iotsitewise untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "untag-resource" }, input)
 end
 
 --- AWS iotsitewise update-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_access_policy(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-access-policy" }, input)
 end
 
 --- AWS iotsitewise update-asset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_asset(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-asset" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-asset" }, input)
 end
 
 --- AWS iotsitewise update-asset-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_asset_model(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-asset-model" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-asset-model" }, input)
 end
 
 --- AWS iotsitewise update-asset-model-composite-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_asset_model_composite_model(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-asset-model-composite-model" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-asset-model-composite-model" }, input)
 end
 
 --- AWS iotsitewise update-asset-property operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_asset_property(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-asset-property" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-asset-property" }, input)
 end
 
 --- AWS iotsitewise update-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_dashboard(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-dashboard" }, input)
 end
 
 --- AWS iotsitewise update-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_dataset(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-dataset" }, input)
 end
 
 --- AWS iotsitewise update-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_gateway(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-gateway" }, input)
 end
 
 --- AWS iotsitewise update-gateway-capability-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_gateway_capability_configuration(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-gateway-capability-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-gateway-capability-configuration" }, input)
 end
 
 --- AWS iotsitewise update-portal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_portal(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-portal" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-portal" }, input)
 end
 
 --- AWS iotsitewise update-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_project(input)
-	return common.execute_aws_command_with_input({ "iotsitewise", "update-project" }, input)
+	return common.execute_aws_command_skeleton({ "iotsitewise", "update-project" }, input)
 end
 
 --- AWS iotsitewise wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "iotsitewise", "wait" }, input)
+	return common.execute_aws_command({ "iotsitewise", "wait" }, input)
 end
 
 return M

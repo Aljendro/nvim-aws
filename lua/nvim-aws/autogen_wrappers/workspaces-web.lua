@@ -3,483 +3,483 @@
 
 local common = require("nvim-aws.common")
 
---- AWS WORKSPACES-WEB service functions
+--- AWS workspaces-web service functions
 local M = {}
 
 --- AWS workspaces-web associate-browser-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_browser_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "associate-browser-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "associate-browser-settings" }, input)
 end
 
 --- AWS workspaces-web associate-data-protection-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_data_protection_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "associate-data-protection-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "associate-data-protection-settings" }, input)
 end
 
 --- AWS workspaces-web associate-ip-access-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_ip_access_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "associate-ip-access-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "associate-ip-access-settings" }, input)
 end
 
 --- AWS workspaces-web associate-network-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_network_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "associate-network-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "associate-network-settings" }, input)
 end
 
 --- AWS workspaces-web associate-trust-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_trust_store(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "associate-trust-store" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "associate-trust-store" }, input)
 end
 
 --- AWS workspaces-web associate-user-access-logging-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_user_access_logging_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "associate-user-access-logging-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "associate-user-access-logging-settings" }, input)
 end
 
 --- AWS workspaces-web associate-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_user_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "associate-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "associate-user-settings" }, input)
 end
 
 --- AWS workspaces-web create-browser-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_browser_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "create-browser-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "create-browser-settings" }, input)
 end
 
 --- AWS workspaces-web create-data-protection-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_protection_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "create-data-protection-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "create-data-protection-settings" }, input)
 end
 
 --- AWS workspaces-web create-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_identity_provider(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "create-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "create-identity-provider" }, input)
 end
 
 --- AWS workspaces-web create-ip-access-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ip_access_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "create-ip-access-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "create-ip-access-settings" }, input)
 end
 
 --- AWS workspaces-web create-network-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_network_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "create-network-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "create-network-settings" }, input)
 end
 
 --- AWS workspaces-web create-portal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_portal(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "create-portal" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "create-portal" }, input)
 end
 
 --- AWS workspaces-web create-trust-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_trust_store(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "create-trust-store" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "create-trust-store" }, input)
 end
 
 --- AWS workspaces-web create-user-access-logging-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user_access_logging_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "create-user-access-logging-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "create-user-access-logging-settings" }, input)
 end
 
 --- AWS workspaces-web create-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "create-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "create-user-settings" }, input)
 end
 
 --- AWS workspaces-web delete-browser-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_browser_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "delete-browser-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "delete-browser-settings" }, input)
 end
 
 --- AWS workspaces-web delete-data-protection-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_protection_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "delete-data-protection-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "delete-data-protection-settings" }, input)
 end
 
 --- AWS workspaces-web delete-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_identity_provider(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "delete-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "delete-identity-provider" }, input)
 end
 
 --- AWS workspaces-web delete-ip-access-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ip_access_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "delete-ip-access-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "delete-ip-access-settings" }, input)
 end
 
 --- AWS workspaces-web delete-network-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "delete-network-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "delete-network-settings" }, input)
 end
 
 --- AWS workspaces-web delete-portal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_portal(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "delete-portal" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "delete-portal" }, input)
 end
 
 --- AWS workspaces-web delete-trust-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_trust_store(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "delete-trust-store" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "delete-trust-store" }, input)
 end
 
 --- AWS workspaces-web delete-user-access-logging-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user_access_logging_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "delete-user-access-logging-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "delete-user-access-logging-settings" }, input)
 end
 
 --- AWS workspaces-web delete-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "delete-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "delete-user-settings" }, input)
 end
 
 --- AWS workspaces-web disassociate-browser-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_browser_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "disassociate-browser-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "disassociate-browser-settings" }, input)
 end
 
 --- AWS workspaces-web disassociate-data-protection-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_data_protection_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "disassociate-data-protection-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "disassociate-data-protection-settings" }, input)
 end
 
 --- AWS workspaces-web disassociate-ip-access-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_ip_access_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "disassociate-ip-access-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "disassociate-ip-access-settings" }, input)
 end
 
 --- AWS workspaces-web disassociate-network-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_network_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "disassociate-network-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "disassociate-network-settings" }, input)
 end
 
 --- AWS workspaces-web disassociate-trust-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_trust_store(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "disassociate-trust-store" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "disassociate-trust-store" }, input)
 end
 
 --- AWS workspaces-web disassociate-user-access-logging-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_user_access_logging_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "disassociate-user-access-logging-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "disassociate-user-access-logging-settings" }, input)
 end
 
 --- AWS workspaces-web disassociate-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_user_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "disassociate-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "disassociate-user-settings" }, input)
 end
 
 --- AWS workspaces-web expire-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.expire_session(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "expire-session" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "expire-session" }, input)
 end
 
 --- AWS workspaces-web get-browser-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_browser_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-browser-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-browser-settings" }, input)
 end
 
 --- AWS workspaces-web get-data-protection-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_protection_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-data-protection-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-data-protection-settings" }, input)
 end
 
 --- AWS workspaces-web get-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_identity_provider(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-identity-provider" }, input)
 end
 
 --- AWS workspaces-web get-ip-access-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ip_access_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-ip-access-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-ip-access-settings" }, input)
 end
 
 --- AWS workspaces-web get-network-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_network_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-network-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-network-settings" }, input)
 end
 
 --- AWS workspaces-web get-portal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_portal(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-portal" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-portal" }, input)
 end
 
 --- AWS workspaces-web get-portal-service-provider-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_portal_service_provider_metadata(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-portal-service-provider-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-portal-service-provider-metadata" }, input)
 end
 
 --- AWS workspaces-web get-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_session(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-session" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-session" }, input)
 end
 
 --- AWS workspaces-web get-trust-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_trust_store(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-trust-store" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-trust-store" }, input)
 end
 
 --- AWS workspaces-web get-trust-store-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_trust_store_certificate(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-trust-store-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-trust-store-certificate" }, input)
 end
 
 --- AWS workspaces-web get-user-access-logging-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_user_access_logging_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-user-access-logging-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-user-access-logging-settings" }, input)
 end
 
 --- AWS workspaces-web get-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_user_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "get-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "get-user-settings" }, input)
 end
 
 --- AWS workspaces-web list-browser-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_browser_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-browser-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-browser-settings" }, input)
 end
 
 --- AWS workspaces-web list-data-protection-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_data_protection_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-data-protection-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-data-protection-settings" }, input)
 end
 
 --- AWS workspaces-web list-identity-providers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_identity_providers(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-identity-providers" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-identity-providers" }, input)
 end
 
 --- AWS workspaces-web list-ip-access-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ip_access_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-ip-access-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-ip-access-settings" }, input)
 end
 
 --- AWS workspaces-web list-network-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_network_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-network-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-network-settings" }, input)
 end
 
 --- AWS workspaces-web list-portals operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_portals(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-portals" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-portals" }, input)
 end
 
 --- AWS workspaces-web list-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_sessions(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-sessions" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-sessions" }, input)
 end
 
 --- AWS workspaces-web list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-tags-for-resource" }, input)
 end
 
 --- AWS workspaces-web list-trust-store-certificates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_trust_store_certificates(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-trust-store-certificates" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-trust-store-certificates" }, input)
 end
 
 --- AWS workspaces-web list-trust-stores operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_trust_stores(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-trust-stores" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-trust-stores" }, input)
 end
 
 --- AWS workspaces-web list-user-access-logging-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_user_access_logging_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-user-access-logging-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-user-access-logging-settings" }, input)
 end
 
 --- AWS workspaces-web list-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_user_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "list-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "list-user-settings" }, input)
 end
 
 --- AWS workspaces-web tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "tag-resource" }, input)
 end
 
 --- AWS workspaces-web untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "untag-resource" }, input)
 end
 
 --- AWS workspaces-web update-browser-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_browser_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "update-browser-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "update-browser-settings" }, input)
 end
 
 --- AWS workspaces-web update-data-protection-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_data_protection_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "update-data-protection-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "update-data-protection-settings" }, input)
 end
 
 --- AWS workspaces-web update-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_identity_provider(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "update-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "update-identity-provider" }, input)
 end
 
 --- AWS workspaces-web update-ip-access-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_ip_access_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "update-ip-access-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "update-ip-access-settings" }, input)
 end
 
 --- AWS workspaces-web update-network-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_network_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "update-network-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "update-network-settings" }, input)
 end
 
 --- AWS workspaces-web update-portal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_portal(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "update-portal" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "update-portal" }, input)
 end
 
 --- AWS workspaces-web update-trust-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_trust_store(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "update-trust-store" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "update-trust-store" }, input)
 end
 
 --- AWS workspaces-web update-user-access-logging-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user_access_logging_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "update-user-access-logging-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "update-user-access-logging-settings" }, input)
 end
 
 --- AWS workspaces-web update-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user_settings(input)
-	return common.execute_aws_command_with_input({ "workspaces-web", "update-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces-web", "update-user-settings" }, input)
 end
 
 return M

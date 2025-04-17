@@ -3,196 +3,196 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SNOWBALL service functions
+--- AWS snowball service functions
 local M = {}
 
 --- AWS snowball cancel-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_cluster(input)
-	return common.execute_aws_command_with_input({ "snowball", "cancel-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "cancel-cluster" }, input)
 end
 
 --- AWS snowball cancel-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_job(input)
-	return common.execute_aws_command_with_input({ "snowball", "cancel-job" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "cancel-job" }, input)
 end
 
 --- AWS snowball create-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_address(input)
-	return common.execute_aws_command_with_input({ "snowball", "create-address" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "create-address" }, input)
 end
 
 --- AWS snowball create-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster(input)
-	return common.execute_aws_command_with_input({ "snowball", "create-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "create-cluster" }, input)
 end
 
 --- AWS snowball create-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_job(input)
-	return common.execute_aws_command_with_input({ "snowball", "create-job" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "create-job" }, input)
 end
 
 --- AWS snowball create-long-term-pricing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_long_term_pricing(input)
-	return common.execute_aws_command_with_input({ "snowball", "create-long-term-pricing" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "create-long-term-pricing" }, input)
 end
 
 --- AWS snowball create-return-shipping-label operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_return_shipping_label(input)
-	return common.execute_aws_command_with_input({ "snowball", "create-return-shipping-label" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "create-return-shipping-label" }, input)
 end
 
 --- AWS snowball describe-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_address(input)
-	return common.execute_aws_command_with_input({ "snowball", "describe-address" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "describe-address" }, input)
 end
 
 --- AWS snowball describe-addresses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_addresses(input)
-	return common.execute_aws_command_with_input({ "snowball", "describe-addresses" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "describe-addresses" }, input)
 end
 
 --- AWS snowball describe-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster(input)
-	return common.execute_aws_command_with_input({ "snowball", "describe-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "describe-cluster" }, input)
 end
 
 --- AWS snowball describe-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_job(input)
-	return common.execute_aws_command_with_input({ "snowball", "describe-job" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "describe-job" }, input)
 end
 
 --- AWS snowball describe-return-shipping-label operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_return_shipping_label(input)
-	return common.execute_aws_command_with_input({ "snowball", "describe-return-shipping-label" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "describe-return-shipping-label" }, input)
 end
 
 --- AWS snowball get-job-manifest operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_job_manifest(input)
-	return common.execute_aws_command_with_input({ "snowball", "get-job-manifest" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "get-job-manifest" }, input)
 end
 
 --- AWS snowball get-job-unlock-code operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_job_unlock_code(input)
-	return common.execute_aws_command_with_input({ "snowball", "get-job-unlock-code" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "get-job-unlock-code" }, input)
 end
 
 --- AWS snowball get-snowball-usage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_snowball_usage(input)
-	return common.execute_aws_command_with_input({ "snowball", "get-snowball-usage" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "get-snowball-usage" }, input)
 end
 
 --- AWS snowball get-software-updates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_software_updates(input)
-	return common.execute_aws_command_with_input({ "snowball", "get-software-updates" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "get-software-updates" }, input)
 end
 
 --- AWS snowball list-cluster-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_cluster_jobs(input)
-	return common.execute_aws_command_with_input({ "snowball", "list-cluster-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "list-cluster-jobs" }, input)
 end
 
 --- AWS snowball list-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_clusters(input)
-	return common.execute_aws_command_with_input({ "snowball", "list-clusters" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "list-clusters" }, input)
 end
 
 --- AWS snowball list-compatible-images operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_compatible_images(input)
-	return common.execute_aws_command_with_input({ "snowball", "list-compatible-images" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "list-compatible-images" }, input)
 end
 
 --- AWS snowball list-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_jobs(input)
-	return common.execute_aws_command_with_input({ "snowball", "list-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "list-jobs" }, input)
 end
 
 --- AWS snowball list-long-term-pricing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_long_term_pricing(input)
-	return common.execute_aws_command_with_input({ "snowball", "list-long-term-pricing" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "list-long-term-pricing" }, input)
 end
 
 --- AWS snowball list-pickup-locations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pickup_locations(input)
-	return common.execute_aws_command_with_input({ "snowball", "list-pickup-locations" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "list-pickup-locations" }, input)
 end
 
 --- AWS snowball list-service-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_service_versions(input)
-	return common.execute_aws_command_with_input({ "snowball", "list-service-versions" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "list-service-versions" }, input)
 end
 
 --- AWS snowball update-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_cluster(input)
-	return common.execute_aws_command_with_input({ "snowball", "update-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "update-cluster" }, input)
 end
 
 --- AWS snowball update-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_job(input)
-	return common.execute_aws_command_with_input({ "snowball", "update-job" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "update-job" }, input)
 end
 
 --- AWS snowball update-job-shipment-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_job_shipment_state(input)
-	return common.execute_aws_command_with_input({ "snowball", "update-job-shipment-state" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "update-job-shipment-state" }, input)
 end
 
 --- AWS snowball update-long-term-pricing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_long_term_pricing(input)
-	return common.execute_aws_command_with_input({ "snowball", "update-long-term-pricing" }, input)
+	return common.execute_aws_command_skeleton({ "snowball", "update-long-term-pricing" }, input)
 end
 
 return M

@@ -3,14 +3,14 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CONNECT-CONTACT-LENS service functions
+--- AWS connect-contact-lens service functions
 local M = {}
 
 --- AWS connect-contact-lens list-realtime-contact-analysis-segments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_realtime_contact_analysis_segments(input)
-	return common.execute_aws_command_with_input({ "connect-contact-lens", "list-realtime-contact-analysis-segments" }, input)
+	return common.execute_aws_command_skeleton({ "connect-contact-lens", "list-realtime-contact-analysis-segments" }, input)
 end
 
 return M

@@ -3,413 +3,413 @@
 
 local common = require("nvim-aws.common")
 
---- AWS EVENTS service functions
+--- AWS events service functions
 local M = {}
 
 --- AWS events activate-event-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.activate_event_source(input)
-	return common.execute_aws_command_with_input({ "events", "activate-event-source" }, input)
+	return common.execute_aws_command_skeleton({ "events", "activate-event-source" }, input)
 end
 
 --- AWS events cancel-replay operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_replay(input)
-	return common.execute_aws_command_with_input({ "events", "cancel-replay" }, input)
+	return common.execute_aws_command_skeleton({ "events", "cancel-replay" }, input)
 end
 
 --- AWS events create-api-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_api_destination(input)
-	return common.execute_aws_command_with_input({ "events", "create-api-destination" }, input)
+	return common.execute_aws_command_skeleton({ "events", "create-api-destination" }, input)
 end
 
 --- AWS events create-archive operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_archive(input)
-	return common.execute_aws_command_with_input({ "events", "create-archive" }, input)
+	return common.execute_aws_command_skeleton({ "events", "create-archive" }, input)
 end
 
 --- AWS events create-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_connection(input)
-	return common.execute_aws_command_with_input({ "events", "create-connection" }, input)
+	return common.execute_aws_command_skeleton({ "events", "create-connection" }, input)
 end
 
 --- AWS events create-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_endpoint(input)
-	return common.execute_aws_command_with_input({ "events", "create-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "events", "create-endpoint" }, input)
 end
 
 --- AWS events create-event-bus operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_event_bus(input)
-	return common.execute_aws_command_with_input({ "events", "create-event-bus" }, input)
+	return common.execute_aws_command_skeleton({ "events", "create-event-bus" }, input)
 end
 
 --- AWS events create-partner-event-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_partner_event_source(input)
-	return common.execute_aws_command_with_input({ "events", "create-partner-event-source" }, input)
+	return common.execute_aws_command_skeleton({ "events", "create-partner-event-source" }, input)
 end
 
 --- AWS events deactivate-event-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deactivate_event_source(input)
-	return common.execute_aws_command_with_input({ "events", "deactivate-event-source" }, input)
+	return common.execute_aws_command_skeleton({ "events", "deactivate-event-source" }, input)
 end
 
 --- AWS events deauthorize-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deauthorize_connection(input)
-	return common.execute_aws_command_with_input({ "events", "deauthorize-connection" }, input)
+	return common.execute_aws_command_skeleton({ "events", "deauthorize-connection" }, input)
 end
 
 --- AWS events delete-api-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_api_destination(input)
-	return common.execute_aws_command_with_input({ "events", "delete-api-destination" }, input)
+	return common.execute_aws_command_skeleton({ "events", "delete-api-destination" }, input)
 end
 
 --- AWS events delete-archive operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_archive(input)
-	return common.execute_aws_command_with_input({ "events", "delete-archive" }, input)
+	return common.execute_aws_command_skeleton({ "events", "delete-archive" }, input)
 end
 
 --- AWS events delete-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connection(input)
-	return common.execute_aws_command_with_input({ "events", "delete-connection" }, input)
+	return common.execute_aws_command_skeleton({ "events", "delete-connection" }, input)
 end
 
 --- AWS events delete-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_endpoint(input)
-	return common.execute_aws_command_with_input({ "events", "delete-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "events", "delete-endpoint" }, input)
 end
 
 --- AWS events delete-event-bus operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_event_bus(input)
-	return common.execute_aws_command_with_input({ "events", "delete-event-bus" }, input)
+	return common.execute_aws_command_skeleton({ "events", "delete-event-bus" }, input)
 end
 
 --- AWS events delete-partner-event-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_partner_event_source(input)
-	return common.execute_aws_command_with_input({ "events", "delete-partner-event-source" }, input)
+	return common.execute_aws_command_skeleton({ "events", "delete-partner-event-source" }, input)
 end
 
 --- AWS events delete-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_rule(input)
-	return common.execute_aws_command_with_input({ "events", "delete-rule" }, input)
+	return common.execute_aws_command_skeleton({ "events", "delete-rule" }, input)
 end
 
 --- AWS events describe-api-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_api_destination(input)
-	return common.execute_aws_command_with_input({ "events", "describe-api-destination" }, input)
+	return common.execute_aws_command_skeleton({ "events", "describe-api-destination" }, input)
 end
 
 --- AWS events describe-archive operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_archive(input)
-	return common.execute_aws_command_with_input({ "events", "describe-archive" }, input)
+	return common.execute_aws_command_skeleton({ "events", "describe-archive" }, input)
 end
 
 --- AWS events describe-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_connection(input)
-	return common.execute_aws_command_with_input({ "events", "describe-connection" }, input)
+	return common.execute_aws_command_skeleton({ "events", "describe-connection" }, input)
 end
 
 --- AWS events describe-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoint(input)
-	return common.execute_aws_command_with_input({ "events", "describe-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "events", "describe-endpoint" }, input)
 end
 
 --- AWS events describe-event-bus operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_bus(input)
-	return common.execute_aws_command_with_input({ "events", "describe-event-bus" }, input)
+	return common.execute_aws_command_skeleton({ "events", "describe-event-bus" }, input)
 end
 
 --- AWS events describe-event-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_source(input)
-	return common.execute_aws_command_with_input({ "events", "describe-event-source" }, input)
+	return common.execute_aws_command_skeleton({ "events", "describe-event-source" }, input)
 end
 
 --- AWS events describe-partner-event-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_partner_event_source(input)
-	return common.execute_aws_command_with_input({ "events", "describe-partner-event-source" }, input)
+	return common.execute_aws_command_skeleton({ "events", "describe-partner-event-source" }, input)
 end
 
 --- AWS events describe-replay operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replay(input)
-	return common.execute_aws_command_with_input({ "events", "describe-replay" }, input)
+	return common.execute_aws_command_skeleton({ "events", "describe-replay" }, input)
 end
 
 --- AWS events describe-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_rule(input)
-	return common.execute_aws_command_with_input({ "events", "describe-rule" }, input)
+	return common.execute_aws_command_skeleton({ "events", "describe-rule" }, input)
 end
 
 --- AWS events disable-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_rule(input)
-	return common.execute_aws_command_with_input({ "events", "disable-rule" }, input)
+	return common.execute_aws_command_skeleton({ "events", "disable-rule" }, input)
 end
 
 --- AWS events enable-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_rule(input)
-	return common.execute_aws_command_with_input({ "events", "enable-rule" }, input)
+	return common.execute_aws_command_skeleton({ "events", "enable-rule" }, input)
 end
 
 --- AWS events list-api-destinations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_api_destinations(input)
-	return common.execute_aws_command_with_input({ "events", "list-api-destinations" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-api-destinations" }, input)
 end
 
 --- AWS events list-archives operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_archives(input)
-	return common.execute_aws_command_with_input({ "events", "list-archives" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-archives" }, input)
 end
 
 --- AWS events list-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_connections(input)
-	return common.execute_aws_command_with_input({ "events", "list-connections" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-connections" }, input)
 end
 
 --- AWS events list-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_endpoints(input)
-	return common.execute_aws_command_with_input({ "events", "list-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-endpoints" }, input)
 end
 
 --- AWS events list-event-buses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_event_buses(input)
-	return common.execute_aws_command_with_input({ "events", "list-event-buses" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-event-buses" }, input)
 end
 
 --- AWS events list-event-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_event_sources(input)
-	return common.execute_aws_command_with_input({ "events", "list-event-sources" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-event-sources" }, input)
 end
 
 --- AWS events list-partner-event-source-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_partner_event_source_accounts(input)
-	return common.execute_aws_command_with_input({ "events", "list-partner-event-source-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-partner-event-source-accounts" }, input)
 end
 
 --- AWS events list-partner-event-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_partner_event_sources(input)
-	return common.execute_aws_command_with_input({ "events", "list-partner-event-sources" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-partner-event-sources" }, input)
 end
 
 --- AWS events list-replays operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_replays(input)
-	return common.execute_aws_command_with_input({ "events", "list-replays" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-replays" }, input)
 end
 
 --- AWS events list-rule-names-by-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_rule_names_by_target(input)
-	return common.execute_aws_command_with_input({ "events", "list-rule-names-by-target" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-rule-names-by-target" }, input)
 end
 
 --- AWS events list-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_rules(input)
-	return common.execute_aws_command_with_input({ "events", "list-rules" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-rules" }, input)
 end
 
 --- AWS events list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "events", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-tags-for-resource" }, input)
 end
 
 --- AWS events list-targets-by-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_targets_by_rule(input)
-	return common.execute_aws_command_with_input({ "events", "list-targets-by-rule" }, input)
+	return common.execute_aws_command_skeleton({ "events", "list-targets-by-rule" }, input)
 end
 
 --- AWS events put-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_events(input)
-	return common.execute_aws_command_with_input({ "events", "put-events" }, input)
+	return common.execute_aws_command_skeleton({ "events", "put-events" }, input)
 end
 
 --- AWS events put-partner-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_partner_events(input)
-	return common.execute_aws_command_with_input({ "events", "put-partner-events" }, input)
+	return common.execute_aws_command_skeleton({ "events", "put-partner-events" }, input)
 end
 
 --- AWS events put-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_permission(input)
-	return common.execute_aws_command_with_input({ "events", "put-permission" }, input)
+	return common.execute_aws_command_skeleton({ "events", "put-permission" }, input)
 end
 
 --- AWS events put-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_rule(input)
-	return common.execute_aws_command_with_input({ "events", "put-rule" }, input)
+	return common.execute_aws_command_skeleton({ "events", "put-rule" }, input)
 end
 
 --- AWS events put-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_targets(input)
-	return common.execute_aws_command_with_input({ "events", "put-targets" }, input)
+	return common.execute_aws_command_skeleton({ "events", "put-targets" }, input)
 end
 
 --- AWS events remove-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_permission(input)
-	return common.execute_aws_command_with_input({ "events", "remove-permission" }, input)
+	return common.execute_aws_command_skeleton({ "events", "remove-permission" }, input)
 end
 
 --- AWS events remove-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_targets(input)
-	return common.execute_aws_command_with_input({ "events", "remove-targets" }, input)
+	return common.execute_aws_command_skeleton({ "events", "remove-targets" }, input)
 end
 
 --- AWS events start-replay operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_replay(input)
-	return common.execute_aws_command_with_input({ "events", "start-replay" }, input)
+	return common.execute_aws_command_skeleton({ "events", "start-replay" }, input)
 end
 
 --- AWS events tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "events", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "events", "tag-resource" }, input)
 end
 
 --- AWS events test-event-pattern operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_event_pattern(input)
-	return common.execute_aws_command_with_input({ "events", "test-event-pattern" }, input)
+	return common.execute_aws_command_skeleton({ "events", "test-event-pattern" }, input)
 end
 
 --- AWS events untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "events", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "events", "untag-resource" }, input)
 end
 
 --- AWS events update-api-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_api_destination(input)
-	return common.execute_aws_command_with_input({ "events", "update-api-destination" }, input)
+	return common.execute_aws_command_skeleton({ "events", "update-api-destination" }, input)
 end
 
 --- AWS events update-archive operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_archive(input)
-	return common.execute_aws_command_with_input({ "events", "update-archive" }, input)
+	return common.execute_aws_command_skeleton({ "events", "update-archive" }, input)
 end
 
 --- AWS events update-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_connection(input)
-	return common.execute_aws_command_with_input({ "events", "update-connection" }, input)
+	return common.execute_aws_command_skeleton({ "events", "update-connection" }, input)
 end
 
 --- AWS events update-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_endpoint(input)
-	return common.execute_aws_command_with_input({ "events", "update-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "events", "update-endpoint" }, input)
 end
 
 --- AWS events update-event-bus operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_event_bus(input)
-	return common.execute_aws_command_with_input({ "events", "update-event-bus" }, input)
+	return common.execute_aws_command_skeleton({ "events", "update-event-bus" }, input)
 end
 
 --- AWS events wizard operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wizard(input)
-	return common.execute_aws_command_with_raw_input({ "events", "wizard" }, input)
+	return common.execute_aws_command({ "events", "wizard" }, input)
 end
 
 return M

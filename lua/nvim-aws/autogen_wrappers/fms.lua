@@ -3,301 +3,301 @@
 
 local common = require("nvim-aws.common")
 
---- AWS FMS service functions
+--- AWS fms service functions
 local M = {}
 
 --- AWS fms associate-admin-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_admin_account(input)
-	return common.execute_aws_command_with_input({ "fms", "associate-admin-account" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "associate-admin-account" }, input)
 end
 
 --- AWS fms associate-third-party-firewall operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_third_party_firewall(input)
-	return common.execute_aws_command_with_input({ "fms", "associate-third-party-firewall" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "associate-third-party-firewall" }, input)
 end
 
 --- AWS fms batch-associate-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_associate_resource(input)
-	return common.execute_aws_command_with_input({ "fms", "batch-associate-resource" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "batch-associate-resource" }, input)
 end
 
 --- AWS fms batch-disassociate-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_disassociate_resource(input)
-	return common.execute_aws_command_with_input({ "fms", "batch-disassociate-resource" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "batch-disassociate-resource" }, input)
 end
 
 --- AWS fms delete-apps-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_apps_list(input)
-	return common.execute_aws_command_with_input({ "fms", "delete-apps-list" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "delete-apps-list" }, input)
 end
 
 --- AWS fms delete-notification-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_notification_channel(input)
-	return common.execute_aws_command_with_input({ "fms", "delete-notification-channel" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "delete-notification-channel" }, input)
 end
 
 --- AWS fms delete-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_policy(input)
-	return common.execute_aws_command_with_input({ "fms", "delete-policy" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "delete-policy" }, input)
 end
 
 --- AWS fms delete-protocols-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_protocols_list(input)
-	return common.execute_aws_command_with_input({ "fms", "delete-protocols-list" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "delete-protocols-list" }, input)
 end
 
 --- AWS fms delete-resource-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_set(input)
-	return common.execute_aws_command_with_input({ "fms", "delete-resource-set" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "delete-resource-set" }, input)
 end
 
 --- AWS fms disassociate-admin-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_admin_account(input)
-	return common.execute_aws_command_with_input({ "fms", "disassociate-admin-account" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "disassociate-admin-account" }, input)
 end
 
 --- AWS fms disassociate-third-party-firewall operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_third_party_firewall(input)
-	return common.execute_aws_command_with_input({ "fms", "disassociate-third-party-firewall" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "disassociate-third-party-firewall" }, input)
 end
 
 --- AWS fms get-admin-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_admin_account(input)
-	return common.execute_aws_command_with_input({ "fms", "get-admin-account" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-admin-account" }, input)
 end
 
 --- AWS fms get-admin-scope operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_admin_scope(input)
-	return common.execute_aws_command_with_input({ "fms", "get-admin-scope" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-admin-scope" }, input)
 end
 
 --- AWS fms get-apps-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_apps_list(input)
-	return common.execute_aws_command_with_input({ "fms", "get-apps-list" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-apps-list" }, input)
 end
 
 --- AWS fms get-compliance-detail operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_compliance_detail(input)
-	return common.execute_aws_command_with_input({ "fms", "get-compliance-detail" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-compliance-detail" }, input)
 end
 
 --- AWS fms get-notification-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_notification_channel(input)
-	return common.execute_aws_command_with_input({ "fms", "get-notification-channel" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-notification-channel" }, input)
 end
 
 --- AWS fms get-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_policy(input)
-	return common.execute_aws_command_with_input({ "fms", "get-policy" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-policy" }, input)
 end
 
 --- AWS fms get-protection-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_protection_status(input)
-	return common.execute_aws_command_with_input({ "fms", "get-protection-status" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-protection-status" }, input)
 end
 
 --- AWS fms get-protocols-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_protocols_list(input)
-	return common.execute_aws_command_with_input({ "fms", "get-protocols-list" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-protocols-list" }, input)
 end
 
 --- AWS fms get-resource-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_set(input)
-	return common.execute_aws_command_with_input({ "fms", "get-resource-set" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-resource-set" }, input)
 end
 
 --- AWS fms get-third-party-firewall-association-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_third_party_firewall_association_status(input)
-	return common.execute_aws_command_with_input({ "fms", "get-third-party-firewall-association-status" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-third-party-firewall-association-status" }, input)
 end
 
 --- AWS fms get-violation-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_violation_details(input)
-	return common.execute_aws_command_with_input({ "fms", "get-violation-details" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "get-violation-details" }, input)
 end
 
 --- AWS fms list-admin-accounts-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_admin_accounts_for_organization(input)
-	return common.execute_aws_command_with_input({ "fms", "list-admin-accounts-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-admin-accounts-for-organization" }, input)
 end
 
 --- AWS fms list-admins-managing-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_admins_managing_account(input)
-	return common.execute_aws_command_with_input({ "fms", "list-admins-managing-account" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-admins-managing-account" }, input)
 end
 
 --- AWS fms list-apps-lists operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_apps_lists(input)
-	return common.execute_aws_command_with_input({ "fms", "list-apps-lists" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-apps-lists" }, input)
 end
 
 --- AWS fms list-compliance-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_compliance_status(input)
-	return common.execute_aws_command_with_input({ "fms", "list-compliance-status" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-compliance-status" }, input)
 end
 
 --- AWS fms list-discovered-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_discovered_resources(input)
-	return common.execute_aws_command_with_input({ "fms", "list-discovered-resources" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-discovered-resources" }, input)
 end
 
 --- AWS fms list-member-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_member_accounts(input)
-	return common.execute_aws_command_with_input({ "fms", "list-member-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-member-accounts" }, input)
 end
 
 --- AWS fms list-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_policies(input)
-	return common.execute_aws_command_with_input({ "fms", "list-policies" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-policies" }, input)
 end
 
 --- AWS fms list-protocols-lists operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_protocols_lists(input)
-	return common.execute_aws_command_with_input({ "fms", "list-protocols-lists" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-protocols-lists" }, input)
 end
 
 --- AWS fms list-resource-set-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_set_resources(input)
-	return common.execute_aws_command_with_input({ "fms", "list-resource-set-resources" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-resource-set-resources" }, input)
 end
 
 --- AWS fms list-resource-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_sets(input)
-	return common.execute_aws_command_with_input({ "fms", "list-resource-sets" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-resource-sets" }, input)
 end
 
 --- AWS fms list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "fms", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-tags-for-resource" }, input)
 end
 
 --- AWS fms list-third-party-firewall-firewall-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_third_party_firewall_firewall_policies(input)
-	return common.execute_aws_command_with_input({ "fms", "list-third-party-firewall-firewall-policies" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "list-third-party-firewall-firewall-policies" }, input)
 end
 
 --- AWS fms put-admin-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_admin_account(input)
-	return common.execute_aws_command_with_input({ "fms", "put-admin-account" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "put-admin-account" }, input)
 end
 
 --- AWS fms put-apps-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_apps_list(input)
-	return common.execute_aws_command_with_input({ "fms", "put-apps-list" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "put-apps-list" }, input)
 end
 
 --- AWS fms put-notification-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_notification_channel(input)
-	return common.execute_aws_command_with_input({ "fms", "put-notification-channel" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "put-notification-channel" }, input)
 end
 
 --- AWS fms put-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_policy(input)
-	return common.execute_aws_command_with_input({ "fms", "put-policy" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "put-policy" }, input)
 end
 
 --- AWS fms put-protocols-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_protocols_list(input)
-	return common.execute_aws_command_with_input({ "fms", "put-protocols-list" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "put-protocols-list" }, input)
 end
 
 --- AWS fms put-resource-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_set(input)
-	return common.execute_aws_command_with_input({ "fms", "put-resource-set" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "put-resource-set" }, input)
 end
 
 --- AWS fms tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "fms", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "tag-resource" }, input)
 end
 
 --- AWS fms untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "fms", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "fms", "untag-resource" }, input)
 end
 
 return M

@@ -3,126 +3,126 @@
 
 local common = require("nvim-aws.common")
 
---- AWS LICENSE-MANAGER-USER-SUBSCRIPTIONS service functions
+--- AWS license-manager-user-subscriptions service functions
 local M = {}
 
 --- AWS license-manager-user-subscriptions associate-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_user(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "associate-user" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "associate-user" }, input)
 end
 
 --- AWS license-manager-user-subscriptions create-license-server-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_license_server_endpoint(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "create-license-server-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "create-license-server-endpoint" }, input)
 end
 
 --- AWS license-manager-user-subscriptions delete-license-server-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_license_server_endpoint(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "delete-license-server-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "delete-license-server-endpoint" }, input)
 end
 
 --- AWS license-manager-user-subscriptions deregister-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_identity_provider(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "deregister-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "deregister-identity-provider" }, input)
 end
 
 --- AWS license-manager-user-subscriptions disassociate-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_user(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "disassociate-user" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "disassociate-user" }, input)
 end
 
 --- AWS license-manager-user-subscriptions list-identity-providers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_identity_providers(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-identity-providers" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "list-identity-providers" }, input)
 end
 
 --- AWS license-manager-user-subscriptions list-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_instances(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-instances" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "list-instances" }, input)
 end
 
 --- AWS license-manager-user-subscriptions list-license-server-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_license_server_endpoints(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-license-server-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "list-license-server-endpoints" }, input)
 end
 
 --- AWS license-manager-user-subscriptions list-product-subscriptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_product_subscriptions(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-product-subscriptions" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "list-product-subscriptions" }, input)
 end
 
 --- AWS license-manager-user-subscriptions list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "list-tags-for-resource" }, input)
 end
 
 --- AWS license-manager-user-subscriptions list-user-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_user_associations(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "list-user-associations" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "list-user-associations" }, input)
 end
 
 --- AWS license-manager-user-subscriptions register-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_identity_provider(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "register-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "register-identity-provider" }, input)
 end
 
 --- AWS license-manager-user-subscriptions start-product-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_product_subscription(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "start-product-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "start-product-subscription" }, input)
 end
 
 --- AWS license-manager-user-subscriptions stop-product-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_product_subscription(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "stop-product-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "stop-product-subscription" }, input)
 end
 
 --- AWS license-manager-user-subscriptions tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "tag-resource" }, input)
 end
 
 --- AWS license-manager-user-subscriptions untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "untag-resource" }, input)
 end
 
 --- AWS license-manager-user-subscriptions update-identity-provider-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_identity_provider_settings(input)
-	return common.execute_aws_command_with_input({ "license-manager-user-subscriptions", "update-identity-provider-settings" }, input)
+	return common.execute_aws_command_skeleton({ "license-manager-user-subscriptions", "update-identity-provider-settings" }, input)
 end
 
 return M

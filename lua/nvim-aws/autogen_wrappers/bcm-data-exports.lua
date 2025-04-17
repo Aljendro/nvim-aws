@@ -3,91 +3,91 @@
 
 local common = require("nvim-aws.common")
 
---- AWS BCM-DATA-EXPORTS service functions
+--- AWS bcm-data-exports service functions
 local M = {}
 
 --- AWS bcm-data-exports create-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_export(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "create-export" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "create-export" }, input)
 end
 
 --- AWS bcm-data-exports delete-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_export(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "delete-export" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "delete-export" }, input)
 end
 
 --- AWS bcm-data-exports get-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_execution(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "get-execution" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "get-execution" }, input)
 end
 
 --- AWS bcm-data-exports get-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_export(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "get-export" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "get-export" }, input)
 end
 
 --- AWS bcm-data-exports get-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_table(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "get-table" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "get-table" }, input)
 end
 
 --- AWS bcm-data-exports list-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_executions(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "list-executions" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-executions" }, input)
 end
 
 --- AWS bcm-data-exports list-exports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_exports(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "list-exports" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-exports" }, input)
 end
 
 --- AWS bcm-data-exports list-tables operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tables(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "list-tables" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-tables" }, input)
 end
 
 --- AWS bcm-data-exports list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "list-tags-for-resource" }, input)
 end
 
 --- AWS bcm-data-exports tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "tag-resource" }, input)
 end
 
 --- AWS bcm-data-exports untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "untag-resource" }, input)
 end
 
 --- AWS bcm-data-exports update-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_export(input)
-	return common.execute_aws_command_with_input({ "bcm-data-exports", "update-export" }, input)
+	return common.execute_aws_command_skeleton({ "bcm-data-exports", "update-export" }, input)
 end
 
 return M

@@ -3,49 +3,49 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLOUDFRONT-KEYVALUESTORE service functions
+--- AWS cloudfront-keyvaluestore service functions
 local M = {}
 
 --- AWS cloudfront-keyvaluestore delete-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_key(input)
-	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "delete-key" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront-keyvaluestore", "delete-key" }, input)
 end
 
 --- AWS cloudfront-keyvaluestore describe-key-value-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_key_value_store(input)
-	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "describe-key-value-store" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront-keyvaluestore", "describe-key-value-store" }, input)
 end
 
 --- AWS cloudfront-keyvaluestore get-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_key(input)
-	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "get-key" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront-keyvaluestore", "get-key" }, input)
 end
 
 --- AWS cloudfront-keyvaluestore list-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_keys(input)
-	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "list-keys" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront-keyvaluestore", "list-keys" }, input)
 end
 
 --- AWS cloudfront-keyvaluestore put-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_key(input)
-	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "put-key" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront-keyvaluestore", "put-key" }, input)
 end
 
 --- AWS cloudfront-keyvaluestore update-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_keys(input)
-	return common.execute_aws_command_with_input({ "cloudfront-keyvaluestore", "update-keys" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront-keyvaluestore", "update-keys" }, input)
 end
 
 return M

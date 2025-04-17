@@ -3,630 +3,630 @@
 
 local common = require("nvim-aws.common")
 
---- AWS WORKSPACES service functions
+--- AWS workspaces service functions
 local M = {}
 
 --- AWS workspaces accept-account-link-invitation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_account_link_invitation(input)
-	return common.execute_aws_command_with_input({ "workspaces", "accept-account-link-invitation" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "accept-account-link-invitation" }, input)
 end
 
 --- AWS workspaces associate-connection-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_connection_alias(input)
-	return common.execute_aws_command_with_input({ "workspaces", "associate-connection-alias" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "associate-connection-alias" }, input)
 end
 
 --- AWS workspaces associate-ip-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_ip_groups(input)
-	return common.execute_aws_command_with_input({ "workspaces", "associate-ip-groups" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "associate-ip-groups" }, input)
 end
 
 --- AWS workspaces associate-workspace-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_workspace_application(input)
-	return common.execute_aws_command_with_input({ "workspaces", "associate-workspace-application" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "associate-workspace-application" }, input)
 end
 
 --- AWS workspaces authorize-ip-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.authorize_ip_rules(input)
-	return common.execute_aws_command_with_input({ "workspaces", "authorize-ip-rules" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "authorize-ip-rules" }, input)
 end
 
 --- AWS workspaces copy-workspace-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_workspace_image(input)
-	return common.execute_aws_command_with_input({ "workspaces", "copy-workspace-image" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "copy-workspace-image" }, input)
 end
 
 --- AWS workspaces create-account-link-invitation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_account_link_invitation(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-account-link-invitation" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-account-link-invitation" }, input)
 end
 
 --- AWS workspaces create-connect-client-add-in operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_connect_client_add_in(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-connect-client-add-in" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-connect-client-add-in" }, input)
 end
 
 --- AWS workspaces create-connection-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_connection_alias(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-connection-alias" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-connection-alias" }, input)
 end
 
 --- AWS workspaces create-ip-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ip_group(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-ip-group" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-ip-group" }, input)
 end
 
 --- AWS workspaces create-standby-workspaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_standby_workspaces(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-standby-workspaces" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-standby-workspaces" }, input)
 end
 
 --- AWS workspaces create-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_tags(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-tags" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-tags" }, input)
 end
 
 --- AWS workspaces create-updated-workspace-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_updated_workspace_image(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-updated-workspace-image" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-updated-workspace-image" }, input)
 end
 
 --- AWS workspaces create-workspace-bundle operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workspace_bundle(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-workspace-bundle" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-workspace-bundle" }, input)
 end
 
 --- AWS workspaces create-workspace-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workspace_image(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-workspace-image" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-workspace-image" }, input)
 end
 
 --- AWS workspaces create-workspaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workspaces(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-workspaces" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-workspaces" }, input)
 end
 
 --- AWS workspaces create-workspaces-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workspaces_pool(input)
-	return common.execute_aws_command_with_input({ "workspaces", "create-workspaces-pool" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "create-workspaces-pool" }, input)
 end
 
 --- AWS workspaces delete-account-link-invitation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_account_link_invitation(input)
-	return common.execute_aws_command_with_input({ "workspaces", "delete-account-link-invitation" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "delete-account-link-invitation" }, input)
 end
 
 --- AWS workspaces delete-client-branding operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_client_branding(input)
-	return common.execute_aws_command_with_input({ "workspaces", "delete-client-branding" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "delete-client-branding" }, input)
 end
 
 --- AWS workspaces delete-connect-client-add-in operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connect_client_add_in(input)
-	return common.execute_aws_command_with_input({ "workspaces", "delete-connect-client-add-in" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "delete-connect-client-add-in" }, input)
 end
 
 --- AWS workspaces delete-connection-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connection_alias(input)
-	return common.execute_aws_command_with_input({ "workspaces", "delete-connection-alias" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "delete-connection-alias" }, input)
 end
 
 --- AWS workspaces delete-ip-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ip_group(input)
-	return common.execute_aws_command_with_input({ "workspaces", "delete-ip-group" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "delete-ip-group" }, input)
 end
 
 --- AWS workspaces delete-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_tags(input)
-	return common.execute_aws_command_with_input({ "workspaces", "delete-tags" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "delete-tags" }, input)
 end
 
 --- AWS workspaces delete-workspace-bundle operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workspace_bundle(input)
-	return common.execute_aws_command_with_input({ "workspaces", "delete-workspace-bundle" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "delete-workspace-bundle" }, input)
 end
 
 --- AWS workspaces delete-workspace-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workspace_image(input)
-	return common.execute_aws_command_with_input({ "workspaces", "delete-workspace-image" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "delete-workspace-image" }, input)
 end
 
 --- AWS workspaces deploy-workspace-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deploy_workspace_applications(input)
-	return common.execute_aws_command_with_input({ "workspaces", "deploy-workspace-applications" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "deploy-workspace-applications" }, input)
 end
 
 --- AWS workspaces deregister-workspace-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_workspace_directory(input)
-	return common.execute_aws_command_with_input({ "workspaces", "deregister-workspace-directory" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "deregister-workspace-directory" }, input)
 end
 
 --- AWS workspaces describe-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-account" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-account" }, input)
 end
 
 --- AWS workspaces describe-account-modifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_modifications(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-account-modifications" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-account-modifications" }, input)
 end
 
 --- AWS workspaces describe-application-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_application_associations(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-application-associations" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-application-associations" }, input)
 end
 
 --- AWS workspaces describe-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_applications(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-applications" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-applications" }, input)
 end
 
 --- AWS workspaces describe-bundle-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_bundle_associations(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-bundle-associations" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-bundle-associations" }, input)
 end
 
 --- AWS workspaces describe-client-branding operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_client_branding(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-client-branding" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-client-branding" }, input)
 end
 
 --- AWS workspaces describe-client-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_client_properties(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-client-properties" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-client-properties" }, input)
 end
 
 --- AWS workspaces describe-connect-client-add-ins operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_connect_client_add_ins(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-connect-client-add-ins" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-connect-client-add-ins" }, input)
 end
 
 --- AWS workspaces describe-connection-alias-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_connection_alias_permissions(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-connection-alias-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-connection-alias-permissions" }, input)
 end
 
 --- AWS workspaces describe-connection-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_connection_aliases(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-connection-aliases" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-connection-aliases" }, input)
 end
 
 --- AWS workspaces describe-image-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_image_associations(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-image-associations" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-image-associations" }, input)
 end
 
 --- AWS workspaces describe-ip-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ip_groups(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-ip-groups" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-ip-groups" }, input)
 end
 
 --- AWS workspaces describe-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_tags(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-tags" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-tags" }, input)
 end
 
 --- AWS workspaces describe-workspace-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspace_associations(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-associations" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-workspace-associations" }, input)
 end
 
 --- AWS workspaces describe-workspace-bundles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspace_bundles(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-bundles" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-workspace-bundles" }, input)
 end
 
 --- AWS workspaces describe-workspace-directories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspace_directories(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-directories" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-workspace-directories" }, input)
 end
 
 --- AWS workspaces describe-workspace-image-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspace_image_permissions(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-image-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-workspace-image-permissions" }, input)
 end
 
 --- AWS workspaces describe-workspace-images operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspace_images(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-images" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-workspace-images" }, input)
 end
 
 --- AWS workspaces describe-workspace-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspace_snapshots(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-workspace-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-workspace-snapshots" }, input)
 end
 
 --- AWS workspaces describe-workspaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspaces(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-workspaces" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-workspaces" }, input)
 end
 
 --- AWS workspaces describe-workspaces-connection-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspaces_connection_status(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-workspaces-connection-status" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-workspaces-connection-status" }, input)
 end
 
 --- AWS workspaces describe-workspaces-pool-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspaces_pool_sessions(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-workspaces-pool-sessions" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-workspaces-pool-sessions" }, input)
 end
 
 --- AWS workspaces describe-workspaces-pools operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspaces_pools(input)
-	return common.execute_aws_command_with_input({ "workspaces", "describe-workspaces-pools" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "describe-workspaces-pools" }, input)
 end
 
 --- AWS workspaces disassociate-connection-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_connection_alias(input)
-	return common.execute_aws_command_with_input({ "workspaces", "disassociate-connection-alias" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "disassociate-connection-alias" }, input)
 end
 
 --- AWS workspaces disassociate-ip-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_ip_groups(input)
-	return common.execute_aws_command_with_input({ "workspaces", "disassociate-ip-groups" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "disassociate-ip-groups" }, input)
 end
 
 --- AWS workspaces disassociate-workspace-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_workspace_application(input)
-	return common.execute_aws_command_with_input({ "workspaces", "disassociate-workspace-application" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "disassociate-workspace-application" }, input)
 end
 
 --- AWS workspaces get-account-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_account_link(input)
-	return common.execute_aws_command_with_input({ "workspaces", "get-account-link" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "get-account-link" }, input)
 end
 
 --- AWS workspaces import-client-branding operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_client_branding(input)
-	return common.execute_aws_command_with_input({ "workspaces", "import-client-branding" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "import-client-branding" }, input)
 end
 
 --- AWS workspaces import-workspace-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_workspace_image(input)
-	return common.execute_aws_command_with_input({ "workspaces", "import-workspace-image" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "import-workspace-image" }, input)
 end
 
 --- AWS workspaces list-account-links operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_account_links(input)
-	return common.execute_aws_command_with_input({ "workspaces", "list-account-links" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "list-account-links" }, input)
 end
 
 --- AWS workspaces list-available-management-cidr-ranges operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_available_management_cidr_ranges(input)
-	return common.execute_aws_command_with_input({ "workspaces", "list-available-management-cidr-ranges" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "list-available-management-cidr-ranges" }, input)
 end
 
 --- AWS workspaces migrate-workspace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.migrate_workspace(input)
-	return common.execute_aws_command_with_input({ "workspaces", "migrate-workspace" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "migrate-workspace" }, input)
 end
 
 --- AWS workspaces modify-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_account(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-account" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-account" }, input)
 end
 
 --- AWS workspaces modify-certificate-based-auth-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_certificate_based_auth_properties(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-certificate-based-auth-properties" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-certificate-based-auth-properties" }, input)
 end
 
 --- AWS workspaces modify-client-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_client_properties(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-client-properties" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-client-properties" }, input)
 end
 
 --- AWS workspaces modify-endpoint-encryption-mode operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_endpoint_encryption_mode(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-endpoint-encryption-mode" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-endpoint-encryption-mode" }, input)
 end
 
 --- AWS workspaces modify-saml-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_saml_properties(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-saml-properties" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-saml-properties" }, input)
 end
 
 --- AWS workspaces modify-selfservice-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_selfservice_permissions(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-selfservice-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-selfservice-permissions" }, input)
 end
 
 --- AWS workspaces modify-streaming-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_streaming_properties(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-streaming-properties" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-streaming-properties" }, input)
 end
 
 --- AWS workspaces modify-workspace-access-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_workspace_access_properties(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-workspace-access-properties" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-workspace-access-properties" }, input)
 end
 
 --- AWS workspaces modify-workspace-creation-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_workspace_creation_properties(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-workspace-creation-properties" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-workspace-creation-properties" }, input)
 end
 
 --- AWS workspaces modify-workspace-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_workspace_properties(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-workspace-properties" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-workspace-properties" }, input)
 end
 
 --- AWS workspaces modify-workspace-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_workspace_state(input)
-	return common.execute_aws_command_with_input({ "workspaces", "modify-workspace-state" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "modify-workspace-state" }, input)
 end
 
 --- AWS workspaces reboot-workspaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reboot_workspaces(input)
-	return common.execute_aws_command_with_input({ "workspaces", "reboot-workspaces" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "reboot-workspaces" }, input)
 end
 
 --- AWS workspaces rebuild-workspaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.rebuild_workspaces(input)
-	return common.execute_aws_command_with_input({ "workspaces", "rebuild-workspaces" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "rebuild-workspaces" }, input)
 end
 
 --- AWS workspaces register-workspace-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_workspace_directory(input)
-	return common.execute_aws_command_with_input({ "workspaces", "register-workspace-directory" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "register-workspace-directory" }, input)
 end
 
 --- AWS workspaces reject-account-link-invitation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_account_link_invitation(input)
-	return common.execute_aws_command_with_input({ "workspaces", "reject-account-link-invitation" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "reject-account-link-invitation" }, input)
 end
 
 --- AWS workspaces restore-workspace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_workspace(input)
-	return common.execute_aws_command_with_input({ "workspaces", "restore-workspace" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "restore-workspace" }, input)
 end
 
 --- AWS workspaces revoke-ip-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_ip_rules(input)
-	return common.execute_aws_command_with_input({ "workspaces", "revoke-ip-rules" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "revoke-ip-rules" }, input)
 end
 
 --- AWS workspaces start-workspaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_workspaces(input)
-	return common.execute_aws_command_with_input({ "workspaces", "start-workspaces" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "start-workspaces" }, input)
 end
 
 --- AWS workspaces start-workspaces-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_workspaces_pool(input)
-	return common.execute_aws_command_with_input({ "workspaces", "start-workspaces-pool" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "start-workspaces-pool" }, input)
 end
 
 --- AWS workspaces stop-workspaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_workspaces(input)
-	return common.execute_aws_command_with_input({ "workspaces", "stop-workspaces" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "stop-workspaces" }, input)
 end
 
 --- AWS workspaces stop-workspaces-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_workspaces_pool(input)
-	return common.execute_aws_command_with_input({ "workspaces", "stop-workspaces-pool" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "stop-workspaces-pool" }, input)
 end
 
 --- AWS workspaces terminate-workspaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.terminate_workspaces(input)
-	return common.execute_aws_command_with_input({ "workspaces", "terminate-workspaces" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "terminate-workspaces" }, input)
 end
 
 --- AWS workspaces terminate-workspaces-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.terminate_workspaces_pool(input)
-	return common.execute_aws_command_with_input({ "workspaces", "terminate-workspaces-pool" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "terminate-workspaces-pool" }, input)
 end
 
 --- AWS workspaces terminate-workspaces-pool-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.terminate_workspaces_pool_session(input)
-	return common.execute_aws_command_with_input({ "workspaces", "terminate-workspaces-pool-session" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "terminate-workspaces-pool-session" }, input)
 end
 
 --- AWS workspaces update-connect-client-add-in operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_connect_client_add_in(input)
-	return common.execute_aws_command_with_input({ "workspaces", "update-connect-client-add-in" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "update-connect-client-add-in" }, input)
 end
 
 --- AWS workspaces update-connection-alias-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_connection_alias_permission(input)
-	return common.execute_aws_command_with_input({ "workspaces", "update-connection-alias-permission" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "update-connection-alias-permission" }, input)
 end
 
 --- AWS workspaces update-rules-of-ip-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_rules_of_ip_group(input)
-	return common.execute_aws_command_with_input({ "workspaces", "update-rules-of-ip-group" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "update-rules-of-ip-group" }, input)
 end
 
 --- AWS workspaces update-workspace-bundle operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workspace_bundle(input)
-	return common.execute_aws_command_with_input({ "workspaces", "update-workspace-bundle" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "update-workspace-bundle" }, input)
 end
 
 --- AWS workspaces update-workspace-image-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workspace_image_permission(input)
-	return common.execute_aws_command_with_input({ "workspaces", "update-workspace-image-permission" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "update-workspace-image-permission" }, input)
 end
 
 --- AWS workspaces update-workspaces-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workspaces_pool(input)
-	return common.execute_aws_command_with_input({ "workspaces", "update-workspaces-pool" }, input)
+	return common.execute_aws_command_skeleton({ "workspaces", "update-workspaces-pool" }, input)
 end
 
 return M

@@ -3,140 +3,140 @@
 
 local common = require("nvim-aws.common")
 
---- AWS TIMESTREAM-WRITE service functions
+--- AWS timestream-write service functions
 local M = {}
 
 --- AWS timestream-write create-batch-load-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_batch_load_task(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "create-batch-load-task" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "create-batch-load-task" }, input)
 end
 
 --- AWS timestream-write create-database operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_database(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "create-database" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "create-database" }, input)
 end
 
 --- AWS timestream-write create-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_table(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "create-table" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "create-table" }, input)
 end
 
 --- AWS timestream-write delete-database operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_database(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "delete-database" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "delete-database" }, input)
 end
 
 --- AWS timestream-write delete-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_table(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "delete-table" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "delete-table" }, input)
 end
 
 --- AWS timestream-write describe-batch-load-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_batch_load_task(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "describe-batch-load-task" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "describe-batch-load-task" }, input)
 end
 
 --- AWS timestream-write describe-database operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_database(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "describe-database" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "describe-database" }, input)
 end
 
 --- AWS timestream-write describe-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoints(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "describe-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "describe-endpoints" }, input)
 end
 
 --- AWS timestream-write describe-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_table(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "describe-table" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "describe-table" }, input)
 end
 
 --- AWS timestream-write list-batch-load-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_batch_load_tasks(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "list-batch-load-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "list-batch-load-tasks" }, input)
 end
 
 --- AWS timestream-write list-databases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_databases(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "list-databases" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "list-databases" }, input)
 end
 
 --- AWS timestream-write list-tables operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tables(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "list-tables" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "list-tables" }, input)
 end
 
 --- AWS timestream-write list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "list-tags-for-resource" }, input)
 end
 
 --- AWS timestream-write resume-batch-load-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resume_batch_load_task(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "resume-batch-load-task" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "resume-batch-load-task" }, input)
 end
 
 --- AWS timestream-write tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "tag-resource" }, input)
 end
 
 --- AWS timestream-write untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "untag-resource" }, input)
 end
 
 --- AWS timestream-write update-database operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_database(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "update-database" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "update-database" }, input)
 end
 
 --- AWS timestream-write update-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_table(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "update-table" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "update-table" }, input)
 end
 
 --- AWS timestream-write write-records operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.write_records(input)
-	return common.execute_aws_command_with_input({ "timestream-write", "write-records" }, input)
+	return common.execute_aws_command_skeleton({ "timestream-write", "write-records" }, input)
 end
 
 return M

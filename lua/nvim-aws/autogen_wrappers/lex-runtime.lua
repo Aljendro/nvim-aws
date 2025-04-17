@@ -3,42 +3,42 @@
 
 local common = require("nvim-aws.common")
 
---- AWS LEX-RUNTIME service functions
+--- AWS lex-runtime service functions
 local M = {}
 
 --- AWS lex-runtime delete-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_session(input)
-	return common.execute_aws_command_with_input({ "lex-runtime", "delete-session" }, input)
+	return common.execute_aws_command_skeleton({ "lex-runtime", "delete-session" }, input)
 end
 
 --- AWS lex-runtime get-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_session(input)
-	return common.execute_aws_command_with_input({ "lex-runtime", "get-session" }, input)
-end
-
---- AWS lex-runtime post-text operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.post_text(input)
-	return common.execute_aws_command_with_input({ "lex-runtime", "post-text" }, input)
+	return common.execute_aws_command_skeleton({ "lex-runtime", "get-session" }, input)
 end
 
 --- AWS lex-runtime post-content operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.post_content(input)
-	return common.execute_aws_command_with_raw_input({ "lex-runtime", "post-content" }, input)
+	return common.execute_aws_command({ "lex-runtime", "post-content" }, input)
+end
+
+--- AWS lex-runtime post-text operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.post_text(input)
+	return common.execute_aws_command_skeleton({ "lex-runtime", "post-text" }, input)
 end
 
 --- AWS lex-runtime put-session operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_session(input)
-	return common.execute_aws_command_with_raw_input({ "lex-runtime", "put-session" }, input)
+	return common.execute_aws_command({ "lex-runtime", "put-session" }, input)
 end
 
 return M

@@ -3,182 +3,182 @@
 
 local common = require("nvim-aws.common")
 
---- AWS GRAFANA service functions
+--- AWS grafana service functions
 local M = {}
 
 --- AWS grafana associate-license operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_license(input)
-	return common.execute_aws_command_with_input({ "grafana", "associate-license" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "associate-license" }, input)
 end
 
 --- AWS grafana create-workspace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workspace(input)
-	return common.execute_aws_command_with_input({ "grafana", "create-workspace" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "create-workspace" }, input)
 end
 
 --- AWS grafana create-workspace-api-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workspace_api_key(input)
-	return common.execute_aws_command_with_input({ "grafana", "create-workspace-api-key" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "create-workspace-api-key" }, input)
 end
 
 --- AWS grafana create-workspace-service-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workspace_service_account(input)
-	return common.execute_aws_command_with_input({ "grafana", "create-workspace-service-account" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "create-workspace-service-account" }, input)
 end
 
 --- AWS grafana create-workspace-service-account-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workspace_service_account_token(input)
-	return common.execute_aws_command_with_input({ "grafana", "create-workspace-service-account-token" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "create-workspace-service-account-token" }, input)
 end
 
 --- AWS grafana delete-workspace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workspace(input)
-	return common.execute_aws_command_with_input({ "grafana", "delete-workspace" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace" }, input)
 end
 
 --- AWS grafana delete-workspace-api-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workspace_api_key(input)
-	return common.execute_aws_command_with_input({ "grafana", "delete-workspace-api-key" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace-api-key" }, input)
 end
 
 --- AWS grafana delete-workspace-service-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workspace_service_account(input)
-	return common.execute_aws_command_with_input({ "grafana", "delete-workspace-service-account" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace-service-account" }, input)
 end
 
 --- AWS grafana delete-workspace-service-account-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workspace_service_account_token(input)
-	return common.execute_aws_command_with_input({ "grafana", "delete-workspace-service-account-token" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "delete-workspace-service-account-token" }, input)
 end
 
 --- AWS grafana describe-workspace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspace(input)
-	return common.execute_aws_command_with_input({ "grafana", "describe-workspace" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "describe-workspace" }, input)
 end
 
 --- AWS grafana describe-workspace-authentication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspace_authentication(input)
-	return common.execute_aws_command_with_input({ "grafana", "describe-workspace-authentication" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "describe-workspace-authentication" }, input)
 end
 
 --- AWS grafana describe-workspace-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workspace_configuration(input)
-	return common.execute_aws_command_with_input({ "grafana", "describe-workspace-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "describe-workspace-configuration" }, input)
 end
 
 --- AWS grafana disassociate-license operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_license(input)
-	return common.execute_aws_command_with_input({ "grafana", "disassociate-license" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "disassociate-license" }, input)
 end
 
 --- AWS grafana list-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_permissions(input)
-	return common.execute_aws_command_with_input({ "grafana", "list-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "list-permissions" }, input)
 end
 
 --- AWS grafana list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "grafana", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "list-tags-for-resource" }, input)
 end
 
 --- AWS grafana list-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_versions(input)
-	return common.execute_aws_command_with_input({ "grafana", "list-versions" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "list-versions" }, input)
 end
 
 --- AWS grafana list-workspace-service-account-tokens operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workspace_service_account_tokens(input)
-	return common.execute_aws_command_with_input({ "grafana", "list-workspace-service-account-tokens" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "list-workspace-service-account-tokens" }, input)
 end
 
 --- AWS grafana list-workspace-service-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workspace_service_accounts(input)
-	return common.execute_aws_command_with_input({ "grafana", "list-workspace-service-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "list-workspace-service-accounts" }, input)
 end
 
 --- AWS grafana list-workspaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workspaces(input)
-	return common.execute_aws_command_with_input({ "grafana", "list-workspaces" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "list-workspaces" }, input)
 end
 
 --- AWS grafana tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "grafana", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "tag-resource" }, input)
 end
 
 --- AWS grafana untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "grafana", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "untag-resource" }, input)
 end
 
 --- AWS grafana update-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_permissions(input)
-	return common.execute_aws_command_with_input({ "grafana", "update-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "update-permissions" }, input)
 end
 
 --- AWS grafana update-workspace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workspace(input)
-	return common.execute_aws_command_with_input({ "grafana", "update-workspace" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "update-workspace" }, input)
 end
 
 --- AWS grafana update-workspace-authentication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workspace_authentication(input)
-	return common.execute_aws_command_with_input({ "grafana", "update-workspace-authentication" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "update-workspace-authentication" }, input)
 end
 
 --- AWS grafana update-workspace-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workspace_configuration(input)
-	return common.execute_aws_command_with_input({ "grafana", "update-workspace-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "grafana", "update-workspace-configuration" }, input)
 end
 
 return M

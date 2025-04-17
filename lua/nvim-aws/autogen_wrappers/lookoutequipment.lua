@@ -3,350 +3,350 @@
 
 local common = require("nvim-aws.common")
 
---- AWS LOOKOUTEQUIPMENT service functions
+--- AWS lookoutequipment service functions
 local M = {}
 
 --- AWS lookoutequipment create-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dataset(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "create-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "create-dataset" }, input)
 end
 
 --- AWS lookoutequipment create-inference-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_inference_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "create-inference-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "create-inference-scheduler" }, input)
 end
 
 --- AWS lookoutequipment create-label operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_label(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "create-label" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "create-label" }, input)
 end
 
 --- AWS lookoutequipment create-label-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_label_group(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "create-label-group" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "create-label-group" }, input)
 end
 
 --- AWS lookoutequipment create-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_model(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "create-model" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "create-model" }, input)
 end
 
 --- AWS lookoutequipment create-retraining-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_retraining_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "create-retraining-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "create-retraining-scheduler" }, input)
 end
 
 --- AWS lookoutequipment delete-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dataset(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "delete-dataset" }, input)
 end
 
 --- AWS lookoutequipment delete-inference-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_inference_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-inference-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "delete-inference-scheduler" }, input)
 end
 
 --- AWS lookoutequipment delete-label operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_label(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-label" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "delete-label" }, input)
 end
 
 --- AWS lookoutequipment delete-label-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_label_group(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-label-group" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "delete-label-group" }, input)
 end
 
 --- AWS lookoutequipment delete-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_model(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-model" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "delete-model" }, input)
 end
 
 --- AWS lookoutequipment delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "delete-resource-policy" }, input)
 end
 
 --- AWS lookoutequipment delete-retraining-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_retraining_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "delete-retraining-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "delete-retraining-scheduler" }, input)
 end
 
 --- AWS lookoutequipment describe-data-ingestion-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_ingestion_job(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-data-ingestion-job" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "describe-data-ingestion-job" }, input)
 end
 
 --- AWS lookoutequipment describe-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_dataset(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "describe-dataset" }, input)
 end
 
 --- AWS lookoutequipment describe-inference-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_inference_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-inference-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "describe-inference-scheduler" }, input)
 end
 
 --- AWS lookoutequipment describe-label operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_label(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-label" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "describe-label" }, input)
 end
 
 --- AWS lookoutequipment describe-label-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_label_group(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-label-group" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "describe-label-group" }, input)
 end
 
 --- AWS lookoutequipment describe-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_model(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-model" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "describe-model" }, input)
 end
 
 --- AWS lookoutequipment describe-model-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_model_version(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-model-version" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "describe-model-version" }, input)
 end
 
 --- AWS lookoutequipment describe-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_resource_policy(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "describe-resource-policy" }, input)
 end
 
 --- AWS lookoutequipment describe-retraining-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_retraining_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "describe-retraining-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "describe-retraining-scheduler" }, input)
 end
 
 --- AWS lookoutequipment import-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_dataset(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "import-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "import-dataset" }, input)
 end
 
 --- AWS lookoutequipment import-model-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_model_version(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "import-model-version" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "import-model-version" }, input)
 end
 
 --- AWS lookoutequipment list-data-ingestion-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_data_ingestion_jobs(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-data-ingestion-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-data-ingestion-jobs" }, input)
 end
 
 --- AWS lookoutequipment list-datasets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_datasets(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-datasets" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-datasets" }, input)
 end
 
 --- AWS lookoutequipment list-inference-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_inference_events(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-inference-events" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-inference-events" }, input)
 end
 
 --- AWS lookoutequipment list-inference-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_inference_executions(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-inference-executions" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-inference-executions" }, input)
 end
 
 --- AWS lookoutequipment list-inference-schedulers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_inference_schedulers(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-inference-schedulers" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-inference-schedulers" }, input)
 end
 
 --- AWS lookoutequipment list-label-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_label_groups(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-label-groups" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-label-groups" }, input)
 end
 
 --- AWS lookoutequipment list-labels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_labels(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-labels" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-labels" }, input)
 end
 
 --- AWS lookoutequipment list-model-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_model_versions(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-model-versions" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-model-versions" }, input)
 end
 
 --- AWS lookoutequipment list-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_models(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-models" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-models" }, input)
 end
 
 --- AWS lookoutequipment list-retraining-schedulers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_retraining_schedulers(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-retraining-schedulers" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-retraining-schedulers" }, input)
 end
 
 --- AWS lookoutequipment list-sensor-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_sensor_statistics(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-sensor-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-sensor-statistics" }, input)
 end
 
 --- AWS lookoutequipment list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "list-tags-for-resource" }, input)
 end
 
 --- AWS lookoutequipment put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "put-resource-policy" }, input)
 end
 
 --- AWS lookoutequipment start-data-ingestion-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_data_ingestion_job(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "start-data-ingestion-job" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "start-data-ingestion-job" }, input)
 end
 
 --- AWS lookoutequipment start-inference-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_inference_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "start-inference-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "start-inference-scheduler" }, input)
 end
 
 --- AWS lookoutequipment start-retraining-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_retraining_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "start-retraining-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "start-retraining-scheduler" }, input)
 end
 
 --- AWS lookoutequipment stop-inference-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_inference_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "stop-inference-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "stop-inference-scheduler" }, input)
 end
 
 --- AWS lookoutequipment stop-retraining-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_retraining_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "stop-retraining-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "stop-retraining-scheduler" }, input)
 end
 
 --- AWS lookoutequipment tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "tag-resource" }, input)
 end
 
 --- AWS lookoutequipment untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "untag-resource" }, input)
 end
 
 --- AWS lookoutequipment update-active-model-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_active_model_version(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "update-active-model-version" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "update-active-model-version" }, input)
 end
 
 --- AWS lookoutequipment update-inference-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_inference_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "update-inference-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "update-inference-scheduler" }, input)
 end
 
 --- AWS lookoutequipment update-label-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_label_group(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "update-label-group" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "update-label-group" }, input)
 end
 
 --- AWS lookoutequipment update-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_model(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "update-model" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "update-model" }, input)
 end
 
 --- AWS lookoutequipment update-retraining-scheduler operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_retraining_scheduler(input)
-	return common.execute_aws_command_with_input({ "lookoutequipment", "update-retraining-scheduler" }, input)
+	return common.execute_aws_command_skeleton({ "lookoutequipment", "update-retraining-scheduler" }, input)
 end
 
 return M

@@ -3,441 +3,441 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CHIME service functions
+--- AWS chime service functions
 local M = {}
 
 --- AWS chime associate-phone-number-with-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_phone_number_with_user(input)
-	return common.execute_aws_command_with_input({ "chime", "associate-phone-number-with-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "associate-phone-number-with-user" }, input)
 end
 
 --- AWS chime associate-signin-delegate-groups-with-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_signin_delegate_groups_with_account(input)
-	return common.execute_aws_command_with_input({ "chime", "associate-signin-delegate-groups-with-account" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "associate-signin-delegate-groups-with-account" }, input)
 end
 
 --- AWS chime batch-create-room-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_create_room_membership(input)
-	return common.execute_aws_command_with_input({ "chime", "batch-create-room-membership" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "batch-create-room-membership" }, input)
 end
 
 --- AWS chime batch-delete-phone-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_phone_number(input)
-	return common.execute_aws_command_with_input({ "chime", "batch-delete-phone-number" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "batch-delete-phone-number" }, input)
 end
 
 --- AWS chime batch-suspend-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_suspend_user(input)
-	return common.execute_aws_command_with_input({ "chime", "batch-suspend-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "batch-suspend-user" }, input)
 end
 
 --- AWS chime batch-unsuspend-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_unsuspend_user(input)
-	return common.execute_aws_command_with_input({ "chime", "batch-unsuspend-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "batch-unsuspend-user" }, input)
 end
 
 --- AWS chime batch-update-phone-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_update_phone_number(input)
-	return common.execute_aws_command_with_input({ "chime", "batch-update-phone-number" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "batch-update-phone-number" }, input)
 end
 
 --- AWS chime batch-update-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_update_user(input)
-	return common.execute_aws_command_with_input({ "chime", "batch-update-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "batch-update-user" }, input)
 end
 
 --- AWS chime create-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_account(input)
-	return common.execute_aws_command_with_input({ "chime", "create-account" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "create-account" }, input)
 end
 
 --- AWS chime create-bot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_bot(input)
-	return common.execute_aws_command_with_input({ "chime", "create-bot" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "create-bot" }, input)
 end
 
 --- AWS chime create-meeting-dial-out operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_meeting_dial_out(input)
-	return common.execute_aws_command_with_input({ "chime", "create-meeting-dial-out" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "create-meeting-dial-out" }, input)
 end
 
 --- AWS chime create-phone-number-order operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_phone_number_order(input)
-	return common.execute_aws_command_with_input({ "chime", "create-phone-number-order" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "create-phone-number-order" }, input)
 end
 
 --- AWS chime create-room operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_room(input)
-	return common.execute_aws_command_with_input({ "chime", "create-room" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "create-room" }, input)
 end
 
 --- AWS chime create-room-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_room_membership(input)
-	return common.execute_aws_command_with_input({ "chime", "create-room-membership" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "create-room-membership" }, input)
 end
 
 --- AWS chime create-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user(input)
-	return common.execute_aws_command_with_input({ "chime", "create-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "create-user" }, input)
 end
 
 --- AWS chime delete-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_account(input)
-	return common.execute_aws_command_with_input({ "chime", "delete-account" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "delete-account" }, input)
 end
 
 --- AWS chime delete-events-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_events_configuration(input)
-	return common.execute_aws_command_with_input({ "chime", "delete-events-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "delete-events-configuration" }, input)
 end
 
 --- AWS chime delete-phone-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_phone_number(input)
-	return common.execute_aws_command_with_input({ "chime", "delete-phone-number" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "delete-phone-number" }, input)
 end
 
 --- AWS chime delete-room operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_room(input)
-	return common.execute_aws_command_with_input({ "chime", "delete-room" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "delete-room" }, input)
 end
 
 --- AWS chime delete-room-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_room_membership(input)
-	return common.execute_aws_command_with_input({ "chime", "delete-room-membership" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "delete-room-membership" }, input)
 end
 
 --- AWS chime disassociate-phone-number-from-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_phone_number_from_user(input)
-	return common.execute_aws_command_with_input({ "chime", "disassociate-phone-number-from-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "disassociate-phone-number-from-user" }, input)
 end
 
 --- AWS chime disassociate-signin-delegate-groups-from-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_signin_delegate_groups_from_account(input)
-	return common.execute_aws_command_with_input({ "chime", "disassociate-signin-delegate-groups-from-account" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "disassociate-signin-delegate-groups-from-account" }, input)
 end
 
 --- AWS chime get-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_account(input)
-	return common.execute_aws_command_with_input({ "chime", "get-account" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-account" }, input)
 end
 
 --- AWS chime get-account-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_account_settings(input)
-	return common.execute_aws_command_with_input({ "chime", "get-account-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-account-settings" }, input)
 end
 
 --- AWS chime get-bot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_bot(input)
-	return common.execute_aws_command_with_input({ "chime", "get-bot" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-bot" }, input)
 end
 
 --- AWS chime get-events-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_events_configuration(input)
-	return common.execute_aws_command_with_input({ "chime", "get-events-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-events-configuration" }, input)
 end
 
 --- AWS chime get-global-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_global_settings(input)
-	return common.execute_aws_command_with_input({ "chime", "get-global-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-global-settings" }, input)
 end
 
 --- AWS chime get-phone-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_phone_number(input)
-	return common.execute_aws_command_with_input({ "chime", "get-phone-number" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-phone-number" }, input)
 end
 
 --- AWS chime get-phone-number-order operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_phone_number_order(input)
-	return common.execute_aws_command_with_input({ "chime", "get-phone-number-order" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-phone-number-order" }, input)
 end
 
 --- AWS chime get-phone-number-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_phone_number_settings(input)
-	return common.execute_aws_command_with_input({ "chime", "get-phone-number-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-phone-number-settings" }, input)
 end
 
 --- AWS chime get-retention-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_retention_settings(input)
-	return common.execute_aws_command_with_input({ "chime", "get-retention-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-retention-settings" }, input)
 end
 
 --- AWS chime get-room operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_room(input)
-	return common.execute_aws_command_with_input({ "chime", "get-room" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-room" }, input)
 end
 
 --- AWS chime get-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_user(input)
-	return common.execute_aws_command_with_input({ "chime", "get-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-user" }, input)
 end
 
 --- AWS chime get-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_user_settings(input)
-	return common.execute_aws_command_with_input({ "chime", "get-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "get-user-settings" }, input)
 end
 
 --- AWS chime invite-users operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.invite_users(input)
-	return common.execute_aws_command_with_input({ "chime", "invite-users" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "invite-users" }, input)
 end
 
 --- AWS chime list-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_accounts(input)
-	return common.execute_aws_command_with_input({ "chime", "list-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "list-accounts" }, input)
 end
 
 --- AWS chime list-bots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bots(input)
-	return common.execute_aws_command_with_input({ "chime", "list-bots" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "list-bots" }, input)
 end
 
 --- AWS chime list-phone-number-orders operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_phone_number_orders(input)
-	return common.execute_aws_command_with_input({ "chime", "list-phone-number-orders" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "list-phone-number-orders" }, input)
 end
 
 --- AWS chime list-phone-numbers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_phone_numbers(input)
-	return common.execute_aws_command_with_input({ "chime", "list-phone-numbers" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "list-phone-numbers" }, input)
 end
 
 --- AWS chime list-room-memberships operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_room_memberships(input)
-	return common.execute_aws_command_with_input({ "chime", "list-room-memberships" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "list-room-memberships" }, input)
 end
 
 --- AWS chime list-rooms operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_rooms(input)
-	return common.execute_aws_command_with_input({ "chime", "list-rooms" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "list-rooms" }, input)
 end
 
 --- AWS chime list-supported-phone-number-countries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_supported_phone_number_countries(input)
-	return common.execute_aws_command_with_input({ "chime", "list-supported-phone-number-countries" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "list-supported-phone-number-countries" }, input)
 end
 
 --- AWS chime list-users operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_users(input)
-	return common.execute_aws_command_with_input({ "chime", "list-users" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "list-users" }, input)
 end
 
 --- AWS chime logout-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.logout_user(input)
-	return common.execute_aws_command_with_input({ "chime", "logout-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "logout-user" }, input)
 end
 
 --- AWS chime put-events-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_events_configuration(input)
-	return common.execute_aws_command_with_input({ "chime", "put-events-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "put-events-configuration" }, input)
 end
 
 --- AWS chime put-retention-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_retention_settings(input)
-	return common.execute_aws_command_with_input({ "chime", "put-retention-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "put-retention-settings" }, input)
 end
 
 --- AWS chime redact-conversation-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.redact_conversation_message(input)
-	return common.execute_aws_command_with_input({ "chime", "redact-conversation-message" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "redact-conversation-message" }, input)
 end
 
 --- AWS chime redact-room-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.redact_room_message(input)
-	return common.execute_aws_command_with_input({ "chime", "redact-room-message" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "redact-room-message" }, input)
 end
 
 --- AWS chime regenerate-security-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.regenerate_security_token(input)
-	return common.execute_aws_command_with_input({ "chime", "regenerate-security-token" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "regenerate-security-token" }, input)
 end
 
 --- AWS chime reset-personal-pin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_personal_pin(input)
-	return common.execute_aws_command_with_input({ "chime", "reset-personal-pin" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "reset-personal-pin" }, input)
 end
 
 --- AWS chime restore-phone-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_phone_number(input)
-	return common.execute_aws_command_with_input({ "chime", "restore-phone-number" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "restore-phone-number" }, input)
 end
 
 --- AWS chime search-available-phone-numbers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_available_phone_numbers(input)
-	return common.execute_aws_command_with_input({ "chime", "search-available-phone-numbers" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "search-available-phone-numbers" }, input)
 end
 
 --- AWS chime update-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_account(input)
-	return common.execute_aws_command_with_input({ "chime", "update-account" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "update-account" }, input)
 end
 
 --- AWS chime update-account-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_account_settings(input)
-	return common.execute_aws_command_with_input({ "chime", "update-account-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "update-account-settings" }, input)
 end
 
 --- AWS chime update-bot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_bot(input)
-	return common.execute_aws_command_with_input({ "chime", "update-bot" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "update-bot" }, input)
 end
 
 --- AWS chime update-global-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_global_settings(input)
-	return common.execute_aws_command_with_input({ "chime", "update-global-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "update-global-settings" }, input)
 end
 
 --- AWS chime update-phone-number operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_phone_number(input)
-	return common.execute_aws_command_with_input({ "chime", "update-phone-number" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "update-phone-number" }, input)
 end
 
 --- AWS chime update-phone-number-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_phone_number_settings(input)
-	return common.execute_aws_command_with_input({ "chime", "update-phone-number-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "update-phone-number-settings" }, input)
 end
 
 --- AWS chime update-room operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_room(input)
-	return common.execute_aws_command_with_input({ "chime", "update-room" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "update-room" }, input)
 end
 
 --- AWS chime update-room-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_room_membership(input)
-	return common.execute_aws_command_with_input({ "chime", "update-room-membership" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "update-room-membership" }, input)
 end
 
 --- AWS chime update-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user(input)
-	return common.execute_aws_command_with_input({ "chime", "update-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "update-user" }, input)
 end
 
 --- AWS chime update-user-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user_settings(input)
-	return common.execute_aws_command_with_input({ "chime", "update-user-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime", "update-user-settings" }, input)
 end
 
 return M

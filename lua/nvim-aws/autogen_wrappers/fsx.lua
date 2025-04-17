@@ -3,322 +3,322 @@
 
 local common = require("nvim-aws.common")
 
---- AWS FSX service functions
+--- AWS fsx service functions
 local M = {}
 
 --- AWS fsx associate-file-system-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_file_system_aliases(input)
-	return common.execute_aws_command_with_input({ "fsx", "associate-file-system-aliases" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "associate-file-system-aliases" }, input)
 end
 
 --- AWS fsx cancel-data-repository-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_data_repository_task(input)
-	return common.execute_aws_command_with_input({ "fsx", "cancel-data-repository-task" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "cancel-data-repository-task" }, input)
 end
 
 --- AWS fsx copy-backup operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_backup(input)
-	return common.execute_aws_command_with_input({ "fsx", "copy-backup" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "copy-backup" }, input)
 end
 
 --- AWS fsx copy-snapshot-and-update-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_snapshot_and_update_volume(input)
-	return common.execute_aws_command_with_input({ "fsx", "copy-snapshot-and-update-volume" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "copy-snapshot-and-update-volume" }, input)
 end
 
 --- AWS fsx create-backup operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_backup(input)
-	return common.execute_aws_command_with_input({ "fsx", "create-backup" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "create-backup" }, input)
 end
 
 --- AWS fsx create-data-repository-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_repository_association(input)
-	return common.execute_aws_command_with_input({ "fsx", "create-data-repository-association" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "create-data-repository-association" }, input)
 end
 
 --- AWS fsx create-data-repository-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_repository_task(input)
-	return common.execute_aws_command_with_input({ "fsx", "create-data-repository-task" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "create-data-repository-task" }, input)
 end
 
 --- AWS fsx create-file-cache operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_file_cache(input)
-	return common.execute_aws_command_with_input({ "fsx", "create-file-cache" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "create-file-cache" }, input)
 end
 
 --- AWS fsx create-file-system operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_file_system(input)
-	return common.execute_aws_command_with_input({ "fsx", "create-file-system" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "create-file-system" }, input)
 end
 
 --- AWS fsx create-file-system-from-backup operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_file_system_from_backup(input)
-	return common.execute_aws_command_with_input({ "fsx", "create-file-system-from-backup" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "create-file-system-from-backup" }, input)
 end
 
 --- AWS fsx create-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_snapshot(input)
-	return common.execute_aws_command_with_input({ "fsx", "create-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "create-snapshot" }, input)
 end
 
 --- AWS fsx create-storage-virtual-machine operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_storage_virtual_machine(input)
-	return common.execute_aws_command_with_input({ "fsx", "create-storage-virtual-machine" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "create-storage-virtual-machine" }, input)
 end
 
 --- AWS fsx create-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_volume(input)
-	return common.execute_aws_command_with_input({ "fsx", "create-volume" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "create-volume" }, input)
 end
 
 --- AWS fsx create-volume-from-backup operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_volume_from_backup(input)
-	return common.execute_aws_command_with_input({ "fsx", "create-volume-from-backup" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "create-volume-from-backup" }, input)
 end
 
 --- AWS fsx delete-backup operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backup(input)
-	return common.execute_aws_command_with_input({ "fsx", "delete-backup" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "delete-backup" }, input)
 end
 
 --- AWS fsx delete-data-repository-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_repository_association(input)
-	return common.execute_aws_command_with_input({ "fsx", "delete-data-repository-association" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "delete-data-repository-association" }, input)
 end
 
 --- AWS fsx delete-file-cache operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_file_cache(input)
-	return common.execute_aws_command_with_input({ "fsx", "delete-file-cache" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "delete-file-cache" }, input)
 end
 
 --- AWS fsx delete-file-system operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_file_system(input)
-	return common.execute_aws_command_with_input({ "fsx", "delete-file-system" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "delete-file-system" }, input)
 end
 
 --- AWS fsx delete-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_snapshot(input)
-	return common.execute_aws_command_with_input({ "fsx", "delete-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "delete-snapshot" }, input)
 end
 
 --- AWS fsx delete-storage-virtual-machine operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_storage_virtual_machine(input)
-	return common.execute_aws_command_with_input({ "fsx", "delete-storage-virtual-machine" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "delete-storage-virtual-machine" }, input)
 end
 
 --- AWS fsx delete-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_volume(input)
-	return common.execute_aws_command_with_input({ "fsx", "delete-volume" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "delete-volume" }, input)
 end
 
 --- AWS fsx describe-backups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_backups(input)
-	return common.execute_aws_command_with_input({ "fsx", "describe-backups" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "describe-backups" }, input)
 end
 
 --- AWS fsx describe-data-repository-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_repository_associations(input)
-	return common.execute_aws_command_with_input({ "fsx", "describe-data-repository-associations" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "describe-data-repository-associations" }, input)
 end
 
 --- AWS fsx describe-data-repository-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_repository_tasks(input)
-	return common.execute_aws_command_with_input({ "fsx", "describe-data-repository-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "describe-data-repository-tasks" }, input)
 end
 
 --- AWS fsx describe-file-caches operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_file_caches(input)
-	return common.execute_aws_command_with_input({ "fsx", "describe-file-caches" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "describe-file-caches" }, input)
 end
 
 --- AWS fsx describe-file-system-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_file_system_aliases(input)
-	return common.execute_aws_command_with_input({ "fsx", "describe-file-system-aliases" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "describe-file-system-aliases" }, input)
 end
 
 --- AWS fsx describe-file-systems operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_file_systems(input)
-	return common.execute_aws_command_with_input({ "fsx", "describe-file-systems" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "describe-file-systems" }, input)
 end
 
 --- AWS fsx describe-shared-vpc-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_shared_vpc_configuration(input)
-	return common.execute_aws_command_with_input({ "fsx", "describe-shared-vpc-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "describe-shared-vpc-configuration" }, input)
 end
 
 --- AWS fsx describe-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_snapshots(input)
-	return common.execute_aws_command_with_input({ "fsx", "describe-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "describe-snapshots" }, input)
 end
 
 --- AWS fsx describe-storage-virtual-machines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_storage_virtual_machines(input)
-	return common.execute_aws_command_with_input({ "fsx", "describe-storage-virtual-machines" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "describe-storage-virtual-machines" }, input)
 end
 
 --- AWS fsx describe-volumes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_volumes(input)
-	return common.execute_aws_command_with_input({ "fsx", "describe-volumes" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "describe-volumes" }, input)
 end
 
 --- AWS fsx disassociate-file-system-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_file_system_aliases(input)
-	return common.execute_aws_command_with_input({ "fsx", "disassociate-file-system-aliases" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "disassociate-file-system-aliases" }, input)
 end
 
 --- AWS fsx list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "fsx", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "list-tags-for-resource" }, input)
 end
 
 --- AWS fsx release-file-system-nfs-v3-locks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.release_file_system_nfs_v3_locks(input)
-	return common.execute_aws_command_with_input({ "fsx", "release-file-system-nfs-v3-locks" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "release-file-system-nfs-v3-locks" }, input)
 end
 
 --- AWS fsx restore-volume-from-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_volume_from_snapshot(input)
-	return common.execute_aws_command_with_input({ "fsx", "restore-volume-from-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "restore-volume-from-snapshot" }, input)
 end
 
 --- AWS fsx start-misconfigured-state-recovery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_misconfigured_state_recovery(input)
-	return common.execute_aws_command_with_input({ "fsx", "start-misconfigured-state-recovery" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "start-misconfigured-state-recovery" }, input)
 end
 
 --- AWS fsx tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "fsx", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "tag-resource" }, input)
 end
 
 --- AWS fsx untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "fsx", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "untag-resource" }, input)
 end
 
 --- AWS fsx update-data-repository-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_data_repository_association(input)
-	return common.execute_aws_command_with_input({ "fsx", "update-data-repository-association" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "update-data-repository-association" }, input)
 end
 
 --- AWS fsx update-file-cache operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_file_cache(input)
-	return common.execute_aws_command_with_input({ "fsx", "update-file-cache" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "update-file-cache" }, input)
 end
 
 --- AWS fsx update-file-system operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_file_system(input)
-	return common.execute_aws_command_with_input({ "fsx", "update-file-system" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "update-file-system" }, input)
 end
 
 --- AWS fsx update-shared-vpc-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_shared_vpc_configuration(input)
-	return common.execute_aws_command_with_input({ "fsx", "update-shared-vpc-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "update-shared-vpc-configuration" }, input)
 end
 
 --- AWS fsx update-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_snapshot(input)
-	return common.execute_aws_command_with_input({ "fsx", "update-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "update-snapshot" }, input)
 end
 
 --- AWS fsx update-storage-virtual-machine operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_storage_virtual_machine(input)
-	return common.execute_aws_command_with_input({ "fsx", "update-storage-virtual-machine" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "update-storage-virtual-machine" }, input)
 end
 
 --- AWS fsx update-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_volume(input)
-	return common.execute_aws_command_with_input({ "fsx", "update-volume" }, input)
+	return common.execute_aws_command_skeleton({ "fsx", "update-volume" }, input)
 end
 
 return M

@@ -3,14 +3,14 @@
 
 local common = require("nvim-aws.common")
 
---- AWS KINESIS-VIDEO-MEDIA service functions
+--- AWS kinesis-video-media service functions
 local M = {}
 
 --- AWS kinesis-video-media get-media operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_media(input)
-	return common.execute_aws_command_with_raw_input({ "kinesis-video-media", "get-media" }, input)
+	return common.execute_aws_command({ "kinesis-video-media", "get-media" }, input)
 end
 
 return M

@@ -3,42 +3,42 @@
 
 local common = require("nvim-aws.common")
 
---- AWS BEDROCK-DATA-AUTOMATION-RUNTIME service functions
+--- AWS bedrock-data-automation-runtime service functions
 local M = {}
 
 --- AWS bedrock-data-automation-runtime get-data-automation-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_automation_status(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation-runtime", "get-data-automation-status" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "get-data-automation-status" }, input)
 end
 
 --- AWS bedrock-data-automation-runtime invoke-data-automation-async operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.invoke_data_automation_async(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation-runtime", "invoke-data-automation-async" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "invoke-data-automation-async" }, input)
 end
 
 --- AWS bedrock-data-automation-runtime list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation-runtime", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "list-tags-for-resource" }, input)
 end
 
 --- AWS bedrock-data-automation-runtime tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation-runtime", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "tag-resource" }, input)
 end
 
 --- AWS bedrock-data-automation-runtime untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation-runtime", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation-runtime", "untag-resource" }, input)
 end
 
 return M

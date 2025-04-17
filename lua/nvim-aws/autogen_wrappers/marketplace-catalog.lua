@@ -3,98 +3,98 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MARKETPLACE-CATALOG service functions
+--- AWS marketplace-catalog service functions
 local M = {}
 
 --- AWS marketplace-catalog batch-describe-entities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_describe_entities(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "batch-describe-entities" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "batch-describe-entities" }, input)
 end
 
 --- AWS marketplace-catalog cancel-change-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_change_set(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "cancel-change-set" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "cancel-change-set" }, input)
 end
 
 --- AWS marketplace-catalog delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "delete-resource-policy" }, input)
 end
 
 --- AWS marketplace-catalog describe-change-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_change_set(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "describe-change-set" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "describe-change-set" }, input)
 end
 
 --- AWS marketplace-catalog describe-entity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_entity(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "describe-entity" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "describe-entity" }, input)
 end
 
 --- AWS marketplace-catalog get-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_policy(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "get-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "get-resource-policy" }, input)
 end
 
 --- AWS marketplace-catalog list-change-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_change_sets(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "list-change-sets" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "list-change-sets" }, input)
 end
 
 --- AWS marketplace-catalog list-entities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_entities(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "list-entities" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "list-entities" }, input)
 end
 
 --- AWS marketplace-catalog list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "list-tags-for-resource" }, input)
 end
 
 --- AWS marketplace-catalog put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "put-resource-policy" }, input)
 end
 
 --- AWS marketplace-catalog start-change-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_change_set(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "start-change-set" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "start-change-set" }, input)
 end
 
 --- AWS marketplace-catalog tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "tag-resource" }, input)
 end
 
 --- AWS marketplace-catalog untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "marketplace-catalog", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "marketplace-catalog", "untag-resource" }, input)
 end
 
 return M

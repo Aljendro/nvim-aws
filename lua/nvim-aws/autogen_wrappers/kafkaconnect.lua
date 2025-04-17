@@ -3,133 +3,133 @@
 
 local common = require("nvim-aws.common")
 
---- AWS KAFKACONNECT service functions
+--- AWS kafkaconnect service functions
 local M = {}
 
 --- AWS kafkaconnect create-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_connector(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "create-connector" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "create-connector" }, input)
 end
 
 --- AWS kafkaconnect create-custom-plugin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_custom_plugin(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "create-custom-plugin" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "create-custom-plugin" }, input)
 end
 
 --- AWS kafkaconnect create-worker-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_worker_configuration(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "create-worker-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "create-worker-configuration" }, input)
 end
 
 --- AWS kafkaconnect delete-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connector(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "delete-connector" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "delete-connector" }, input)
 end
 
 --- AWS kafkaconnect delete-custom-plugin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_plugin(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "delete-custom-plugin" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "delete-custom-plugin" }, input)
 end
 
 --- AWS kafkaconnect delete-worker-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_worker_configuration(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "delete-worker-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "delete-worker-configuration" }, input)
 end
 
 --- AWS kafkaconnect describe-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_connector(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "describe-connector" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "describe-connector" }, input)
 end
 
 --- AWS kafkaconnect describe-connector-operation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_connector_operation(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "describe-connector-operation" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "describe-connector-operation" }, input)
 end
 
 --- AWS kafkaconnect describe-custom-plugin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_custom_plugin(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "describe-custom-plugin" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "describe-custom-plugin" }, input)
 end
 
 --- AWS kafkaconnect describe-worker-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_worker_configuration(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "describe-worker-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "describe-worker-configuration" }, input)
 end
 
 --- AWS kafkaconnect list-connector-operations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_connector_operations(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "list-connector-operations" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "list-connector-operations" }, input)
 end
 
 --- AWS kafkaconnect list-connectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_connectors(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "list-connectors" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "list-connectors" }, input)
 end
 
 --- AWS kafkaconnect list-custom-plugins operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_custom_plugins(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "list-custom-plugins" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "list-custom-plugins" }, input)
 end
 
 --- AWS kafkaconnect list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "list-tags-for-resource" }, input)
 end
 
 --- AWS kafkaconnect list-worker-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_worker_configurations(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "list-worker-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "list-worker-configurations" }, input)
 end
 
 --- AWS kafkaconnect tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "tag-resource" }, input)
 end
 
 --- AWS kafkaconnect untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "untag-resource" }, input)
 end
 
 --- AWS kafkaconnect update-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_connector(input)
-	return common.execute_aws_command_with_input({ "kafkaconnect", "update-connector" }, input)
+	return common.execute_aws_command_skeleton({ "kafkaconnect", "update-connector" }, input)
 end
 
 return M

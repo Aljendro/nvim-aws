@@ -3,861 +3,861 @@
 
 local common = require("nvim-aws.common")
 
---- AWS PINPOINT service functions
+--- AWS pinpoint service functions
 local M = {}
 
 --- AWS pinpoint create-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_app(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-app" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-app" }, input)
 end
 
 --- AWS pinpoint create-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_campaign(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-campaign" }, input)
 end
 
 --- AWS pinpoint create-email-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_email_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-email-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-email-template" }, input)
 end
 
 --- AWS pinpoint create-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_export_job(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-export-job" }, input)
 end
 
 --- AWS pinpoint create-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_import_job(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-import-job" }, input)
 end
 
 --- AWS pinpoint create-in-app-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_in_app_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-in-app-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-in-app-template" }, input)
 end
 
 --- AWS pinpoint create-journey operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_journey(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-journey" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-journey" }, input)
 end
 
 --- AWS pinpoint create-push-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_push_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-push-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-push-template" }, input)
 end
 
 --- AWS pinpoint create-recommender-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_recommender_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-recommender-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-recommender-configuration" }, input)
 end
 
 --- AWS pinpoint create-segment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_segment(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-segment" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-segment" }, input)
 end
 
 --- AWS pinpoint create-sms-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_sms_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-sms-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-sms-template" }, input)
 end
 
 --- AWS pinpoint create-voice-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_voice_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "create-voice-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "create-voice-template" }, input)
 end
 
 --- AWS pinpoint delete-adm-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_adm_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-adm-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-adm-channel" }, input)
 end
 
 --- AWS pinpoint delete-apns-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_apns_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-apns-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-apns-channel" }, input)
 end
 
 --- AWS pinpoint delete-apns-sandbox-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_apns_sandbox_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-apns-sandbox-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-apns-sandbox-channel" }, input)
 end
 
 --- AWS pinpoint delete-apns-voip-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_apns_voip_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-apns-voip-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-apns-voip-channel" }, input)
 end
 
 --- AWS pinpoint delete-apns-voip-sandbox-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_apns_voip_sandbox_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-apns-voip-sandbox-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-apns-voip-sandbox-channel" }, input)
 end
 
 --- AWS pinpoint delete-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_app(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-app" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-app" }, input)
 end
 
 --- AWS pinpoint delete-baidu-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_baidu_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-baidu-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-baidu-channel" }, input)
 end
 
 --- AWS pinpoint delete-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_campaign(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-campaign" }, input)
 end
 
 --- AWS pinpoint delete-email-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_email_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-email-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-email-channel" }, input)
 end
 
 --- AWS pinpoint delete-email-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_email_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-email-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-email-template" }, input)
 end
 
 --- AWS pinpoint delete-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_endpoint(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-endpoint" }, input)
 end
 
 --- AWS pinpoint delete-event-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_event_stream(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-event-stream" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-event-stream" }, input)
 end
 
 --- AWS pinpoint delete-gcm-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_gcm_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-gcm-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-gcm-channel" }, input)
 end
 
 --- AWS pinpoint delete-in-app-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_in_app_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-in-app-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-in-app-template" }, input)
 end
 
 --- AWS pinpoint delete-journey operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_journey(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-journey" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-journey" }, input)
 end
 
 --- AWS pinpoint delete-push-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_push_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-push-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-push-template" }, input)
 end
 
 --- AWS pinpoint delete-recommender-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_recommender_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-recommender-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-recommender-configuration" }, input)
 end
 
 --- AWS pinpoint delete-segment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_segment(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-segment" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-segment" }, input)
 end
 
 --- AWS pinpoint delete-sms-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_sms_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-sms-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-sms-channel" }, input)
 end
 
 --- AWS pinpoint delete-sms-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_sms_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-sms-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-sms-template" }, input)
 end
 
 --- AWS pinpoint delete-user-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user_endpoints(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-user-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-user-endpoints" }, input)
 end
 
 --- AWS pinpoint delete-voice-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_voice_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-voice-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-voice-channel" }, input)
 end
 
 --- AWS pinpoint delete-voice-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_voice_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "delete-voice-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "delete-voice-template" }, input)
 end
 
 --- AWS pinpoint get-adm-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_adm_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-adm-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-adm-channel" }, input)
 end
 
 --- AWS pinpoint get-apns-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_apns_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-apns-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-apns-channel" }, input)
 end
 
 --- AWS pinpoint get-apns-sandbox-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_apns_sandbox_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-apns-sandbox-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-apns-sandbox-channel" }, input)
 end
 
 --- AWS pinpoint get-apns-voip-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_apns_voip_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-apns-voip-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-apns-voip-channel" }, input)
 end
 
 --- AWS pinpoint get-apns-voip-sandbox-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_apns_voip_sandbox_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-apns-voip-sandbox-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-apns-voip-sandbox-channel" }, input)
 end
 
 --- AWS pinpoint get-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_app(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-app" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-app" }, input)
 end
 
 --- AWS pinpoint get-application-date-range-kpi operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_application_date_range_kpi(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-application-date-range-kpi" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-application-date-range-kpi" }, input)
 end
 
 --- AWS pinpoint get-application-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_application_settings(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-application-settings" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-application-settings" }, input)
 end
 
 --- AWS pinpoint get-apps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_apps(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-apps" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-apps" }, input)
 end
 
 --- AWS pinpoint get-baidu-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_baidu_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-baidu-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-baidu-channel" }, input)
 end
 
 --- AWS pinpoint get-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_campaign(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-campaign" }, input)
 end
 
 --- AWS pinpoint get-campaign-activities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_campaign_activities(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-campaign-activities" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-campaign-activities" }, input)
 end
 
 --- AWS pinpoint get-campaign-date-range-kpi operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_campaign_date_range_kpi(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-campaign-date-range-kpi" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-campaign-date-range-kpi" }, input)
 end
 
 --- AWS pinpoint get-campaign-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_campaign_version(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-campaign-version" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-campaign-version" }, input)
 end
 
 --- AWS pinpoint get-campaign-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_campaign_versions(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-campaign-versions" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-campaign-versions" }, input)
 end
 
 --- AWS pinpoint get-campaigns operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_campaigns(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-campaigns" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-campaigns" }, input)
 end
 
 --- AWS pinpoint get-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_channels(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-channels" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-channels" }, input)
 end
 
 --- AWS pinpoint get-email-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_email_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-email-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-email-channel" }, input)
 end
 
 --- AWS pinpoint get-email-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_email_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-email-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-email-template" }, input)
 end
 
 --- AWS pinpoint get-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_endpoint(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-endpoint" }, input)
 end
 
 --- AWS pinpoint get-event-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_event_stream(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-event-stream" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-event-stream" }, input)
 end
 
 --- AWS pinpoint get-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_export_job(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-export-job" }, input)
 end
 
 --- AWS pinpoint get-export-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_export_jobs(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-export-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-export-jobs" }, input)
 end
 
 --- AWS pinpoint get-gcm-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_gcm_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-gcm-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-gcm-channel" }, input)
 end
 
 --- AWS pinpoint get-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_import_job(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-import-job" }, input)
 end
 
 --- AWS pinpoint get-import-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_import_jobs(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-import-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-import-jobs" }, input)
 end
 
 --- AWS pinpoint get-in-app-messages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_in_app_messages(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-in-app-messages" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-in-app-messages" }, input)
 end
 
 --- AWS pinpoint get-in-app-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_in_app_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-in-app-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-in-app-template" }, input)
 end
 
 --- AWS pinpoint get-journey operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_journey(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-journey" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-journey" }, input)
 end
 
 --- AWS pinpoint get-journey-date-range-kpi operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_journey_date_range_kpi(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-journey-date-range-kpi" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-journey-date-range-kpi" }, input)
 end
 
 --- AWS pinpoint get-journey-execution-activity-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_journey_execution_activity_metrics(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-journey-execution-activity-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-journey-execution-activity-metrics" }, input)
 end
 
 --- AWS pinpoint get-journey-execution-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_journey_execution_metrics(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-journey-execution-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-journey-execution-metrics" }, input)
 end
 
 --- AWS pinpoint get-journey-run-execution-activity-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_journey_run_execution_activity_metrics(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-journey-run-execution-activity-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-journey-run-execution-activity-metrics" }, input)
 end
 
 --- AWS pinpoint get-journey-run-execution-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_journey_run_execution_metrics(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-journey-run-execution-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-journey-run-execution-metrics" }, input)
 end
 
 --- AWS pinpoint get-journey-runs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_journey_runs(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-journey-runs" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-journey-runs" }, input)
 end
 
 --- AWS pinpoint get-push-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_push_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-push-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-push-template" }, input)
 end
 
 --- AWS pinpoint get-recommender-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recommender_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-recommender-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-recommender-configuration" }, input)
 end
 
 --- AWS pinpoint get-recommender-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recommender_configurations(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-recommender-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-recommender-configurations" }, input)
 end
 
 --- AWS pinpoint get-segment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_segment(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-segment" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-segment" }, input)
 end
 
 --- AWS pinpoint get-segment-export-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_segment_export_jobs(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-segment-export-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-segment-export-jobs" }, input)
 end
 
 --- AWS pinpoint get-segment-import-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_segment_import_jobs(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-segment-import-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-segment-import-jobs" }, input)
 end
 
 --- AWS pinpoint get-segment-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_segment_version(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-segment-version" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-segment-version" }, input)
 end
 
 --- AWS pinpoint get-segment-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_segment_versions(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-segment-versions" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-segment-versions" }, input)
 end
 
 --- AWS pinpoint get-segments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_segments(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-segments" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-segments" }, input)
 end
 
 --- AWS pinpoint get-sms-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sms_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-sms-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-sms-channel" }, input)
 end
 
 --- AWS pinpoint get-sms-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sms_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-sms-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-sms-template" }, input)
 end
 
 --- AWS pinpoint get-user-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_user_endpoints(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-user-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-user-endpoints" }, input)
 end
 
 --- AWS pinpoint get-voice-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_voice_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-voice-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-voice-channel" }, input)
 end
 
 --- AWS pinpoint get-voice-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_voice_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "get-voice-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "get-voice-template" }, input)
 end
 
 --- AWS pinpoint list-journeys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_journeys(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "list-journeys" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "list-journeys" }, input)
 end
 
 --- AWS pinpoint list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "list-tags-for-resource" }, input)
 end
 
 --- AWS pinpoint list-template-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_template_versions(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "list-template-versions" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "list-template-versions" }, input)
 end
 
 --- AWS pinpoint list-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_templates(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "list-templates" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "list-templates" }, input)
 end
 
 --- AWS pinpoint phone-number-validate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.phone_number_validate(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "phone-number-validate" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "phone-number-validate" }, input)
 end
 
 --- AWS pinpoint put-event-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_event_stream(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "put-event-stream" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "put-event-stream" }, input)
 end
 
 --- AWS pinpoint put-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_events(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "put-events" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "put-events" }, input)
 end
 
 --- AWS pinpoint remove-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_attributes(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "remove-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "remove-attributes" }, input)
 end
 
 --- AWS pinpoint send-messages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_messages(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "send-messages" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "send-messages" }, input)
 end
 
 --- AWS pinpoint send-otp-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_otp_message(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "send-otp-message" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "send-otp-message" }, input)
 end
 
 --- AWS pinpoint send-users-messages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_users_messages(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "send-users-messages" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "send-users-messages" }, input)
 end
 
 --- AWS pinpoint tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "tag-resource" }, input)
 end
 
 --- AWS pinpoint untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "untag-resource" }, input)
 end
 
 --- AWS pinpoint update-adm-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_adm_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-adm-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-adm-channel" }, input)
 end
 
 --- AWS pinpoint update-apns-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_apns_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-apns-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-apns-channel" }, input)
 end
 
 --- AWS pinpoint update-apns-sandbox-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_apns_sandbox_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-apns-sandbox-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-apns-sandbox-channel" }, input)
 end
 
 --- AWS pinpoint update-apns-voip-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_apns_voip_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-apns-voip-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-apns-voip-channel" }, input)
 end
 
 --- AWS pinpoint update-apns-voip-sandbox-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_apns_voip_sandbox_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-apns-voip-sandbox-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-apns-voip-sandbox-channel" }, input)
 end
 
 --- AWS pinpoint update-application-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_application_settings(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-application-settings" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-application-settings" }, input)
 end
 
 --- AWS pinpoint update-baidu-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_baidu_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-baidu-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-baidu-channel" }, input)
 end
 
 --- AWS pinpoint update-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_campaign(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-campaign" }, input)
 end
 
 --- AWS pinpoint update-email-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_email_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-email-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-email-channel" }, input)
 end
 
 --- AWS pinpoint update-email-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_email_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-email-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-email-template" }, input)
 end
 
 --- AWS pinpoint update-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_endpoint(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-endpoint" }, input)
 end
 
 --- AWS pinpoint update-endpoints-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_endpoints_batch(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-endpoints-batch" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-endpoints-batch" }, input)
 end
 
 --- AWS pinpoint update-gcm-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_gcm_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-gcm-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-gcm-channel" }, input)
 end
 
 --- AWS pinpoint update-in-app-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_in_app_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-in-app-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-in-app-template" }, input)
 end
 
 --- AWS pinpoint update-journey operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_journey(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-journey" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-journey" }, input)
 end
 
 --- AWS pinpoint update-journey-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_journey_state(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-journey-state" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-journey-state" }, input)
 end
 
 --- AWS pinpoint update-push-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_push_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-push-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-push-template" }, input)
 end
 
 --- AWS pinpoint update-recommender-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_recommender_configuration(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-recommender-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-recommender-configuration" }, input)
 end
 
 --- AWS pinpoint update-segment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_segment(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-segment" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-segment" }, input)
 end
 
 --- AWS pinpoint update-sms-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_sms_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-sms-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-sms-channel" }, input)
 end
 
 --- AWS pinpoint update-sms-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_sms_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-sms-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-sms-template" }, input)
 end
 
 --- AWS pinpoint update-template-active-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_template_active_version(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-template-active-version" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-template-active-version" }, input)
 end
 
 --- AWS pinpoint update-voice-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_voice_channel(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-voice-channel" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-voice-channel" }, input)
 end
 
 --- AWS pinpoint update-voice-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_voice_template(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "update-voice-template" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "update-voice-template" }, input)
 end
 
 --- AWS pinpoint verify-otp-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify_otp_message(input)
-	return common.execute_aws_command_with_input({ "pinpoint", "verify-otp-message" }, input)
+	return common.execute_aws_command_skeleton({ "pinpoint", "verify-otp-message" }, input)
 end
 
 return M

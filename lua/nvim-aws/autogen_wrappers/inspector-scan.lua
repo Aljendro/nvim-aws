@@ -3,14 +3,14 @@
 
 local common = require("nvim-aws.common")
 
---- AWS INSPECTOR-SCAN service functions
+--- AWS inspector-scan service functions
 local M = {}
 
 --- AWS inspector-scan scan-sbom operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.scan_sbom(input)
-	return common.execute_aws_command_with_input({ "inspector-scan", "scan-sbom" }, input)
+	return common.execute_aws_command_skeleton({ "inspector-scan", "scan-sbom" }, input)
 end
 
 return M

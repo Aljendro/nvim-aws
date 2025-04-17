@@ -3,217 +3,217 @@
 
 local common = require("nvim-aws.common")
 
---- AWS KINESISVIDEO service functions
+--- AWS kinesisvideo service functions
 local M = {}
 
 --- AWS kinesisvideo create-signaling-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_signaling_channel(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "create-signaling-channel" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "create-signaling-channel" }, input)
 end
 
 --- AWS kinesisvideo create-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_stream(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "create-stream" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "create-stream" }, input)
 end
 
 --- AWS kinesisvideo delete-edge-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_edge_configuration(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "delete-edge-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "delete-edge-configuration" }, input)
 end
 
 --- AWS kinesisvideo delete-signaling-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_signaling_channel(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "delete-signaling-channel" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "delete-signaling-channel" }, input)
 end
 
 --- AWS kinesisvideo delete-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_stream(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "delete-stream" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "delete-stream" }, input)
 end
 
 --- AWS kinesisvideo describe-edge-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_edge_configuration(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "describe-edge-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "describe-edge-configuration" }, input)
 end
 
 --- AWS kinesisvideo describe-image-generation-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_image_generation_configuration(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "describe-image-generation-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "describe-image-generation-configuration" }, input)
 end
 
 --- AWS kinesisvideo describe-mapped-resource-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_mapped_resource_configuration(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "describe-mapped-resource-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "describe-mapped-resource-configuration" }, input)
 end
 
 --- AWS kinesisvideo describe-media-storage-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_media_storage_configuration(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "describe-media-storage-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "describe-media-storage-configuration" }, input)
 end
 
 --- AWS kinesisvideo describe-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "describe-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "describe-notification-configuration" }, input)
 end
 
 --- AWS kinesisvideo describe-signaling-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_signaling_channel(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "describe-signaling-channel" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "describe-signaling-channel" }, input)
 end
 
 --- AWS kinesisvideo describe-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_stream(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "describe-stream" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "describe-stream" }, input)
 end
 
 --- AWS kinesisvideo get-data-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_endpoint(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "get-data-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "get-data-endpoint" }, input)
 end
 
 --- AWS kinesisvideo get-signaling-channel-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_signaling_channel_endpoint(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "get-signaling-channel-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "get-signaling-channel-endpoint" }, input)
 end
 
 --- AWS kinesisvideo list-edge-agent-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_edge_agent_configurations(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "list-edge-agent-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "list-edge-agent-configurations" }, input)
 end
 
 --- AWS kinesisvideo list-signaling-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_signaling_channels(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "list-signaling-channels" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "list-signaling-channels" }, input)
 end
 
 --- AWS kinesisvideo list-streams operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_streams(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "list-streams" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "list-streams" }, input)
 end
 
 --- AWS kinesisvideo list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "list-tags-for-resource" }, input)
 end
 
 --- AWS kinesisvideo list-tags-for-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_stream(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "list-tags-for-stream" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "list-tags-for-stream" }, input)
 end
 
 --- AWS kinesisvideo start-edge-configuration-update operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_edge_configuration_update(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "start-edge-configuration-update" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "start-edge-configuration-update" }, input)
 end
 
 --- AWS kinesisvideo tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "tag-resource" }, input)
 end
 
 --- AWS kinesisvideo tag-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_stream(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "tag-stream" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "tag-stream" }, input)
 end
 
 --- AWS kinesisvideo untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "untag-resource" }, input)
 end
 
 --- AWS kinesisvideo untag-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_stream(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "untag-stream" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "untag-stream" }, input)
 end
 
 --- AWS kinesisvideo update-data-retention operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_data_retention(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "update-data-retention" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "update-data-retention" }, input)
 end
 
 --- AWS kinesisvideo update-image-generation-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_image_generation_configuration(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "update-image-generation-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "update-image-generation-configuration" }, input)
 end
 
 --- AWS kinesisvideo update-media-storage-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_media_storage_configuration(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "update-media-storage-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "update-media-storage-configuration" }, input)
 end
 
 --- AWS kinesisvideo update-notification-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_notification_configuration(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "update-notification-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "update-notification-configuration" }, input)
 end
 
 --- AWS kinesisvideo update-signaling-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_signaling_channel(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "update-signaling-channel" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "update-signaling-channel" }, input)
 end
 
 --- AWS kinesisvideo update-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_stream(input)
-	return common.execute_aws_command_with_input({ "kinesisvideo", "update-stream" }, input)
+	return common.execute_aws_command_skeleton({ "kinesisvideo", "update-stream" }, input)
 end
 
 return M

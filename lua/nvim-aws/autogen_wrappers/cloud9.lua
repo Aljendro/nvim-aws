@@ -3,98 +3,98 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLOUD9 service functions
+--- AWS cloud9 service functions
 local M = {}
 
 --- AWS cloud9 create-environment-ec2 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_environment_ec2(input)
-	return common.execute_aws_command_with_input({ "cloud9", "create-environment-ec2" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "create-environment-ec2" }, input)
 end
 
 --- AWS cloud9 create-environment-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_environment_membership(input)
-	return common.execute_aws_command_with_input({ "cloud9", "create-environment-membership" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "create-environment-membership" }, input)
 end
 
 --- AWS cloud9 delete-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_environment(input)
-	return common.execute_aws_command_with_input({ "cloud9", "delete-environment" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "delete-environment" }, input)
 end
 
 --- AWS cloud9 delete-environment-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_environment_membership(input)
-	return common.execute_aws_command_with_input({ "cloud9", "delete-environment-membership" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "delete-environment-membership" }, input)
 end
 
 --- AWS cloud9 describe-environment-memberships operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_environment_memberships(input)
-	return common.execute_aws_command_with_input({ "cloud9", "describe-environment-memberships" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "describe-environment-memberships" }, input)
 end
 
 --- AWS cloud9 describe-environment-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_environment_status(input)
-	return common.execute_aws_command_with_input({ "cloud9", "describe-environment-status" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "describe-environment-status" }, input)
 end
 
 --- AWS cloud9 describe-environments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_environments(input)
-	return common.execute_aws_command_with_input({ "cloud9", "describe-environments" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "describe-environments" }, input)
 end
 
 --- AWS cloud9 list-environments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_environments(input)
-	return common.execute_aws_command_with_input({ "cloud9", "list-environments" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "list-environments" }, input)
 end
 
 --- AWS cloud9 list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "cloud9", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "list-tags-for-resource" }, input)
 end
 
 --- AWS cloud9 tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "cloud9", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "tag-resource" }, input)
 end
 
 --- AWS cloud9 untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "cloud9", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "untag-resource" }, input)
 end
 
 --- AWS cloud9 update-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_environment(input)
-	return common.execute_aws_command_with_input({ "cloud9", "update-environment" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "update-environment" }, input)
 end
 
 --- AWS cloud9 update-environment-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_environment_membership(input)
-	return common.execute_aws_command_with_input({ "cloud9", "update-environment-membership" }, input)
+	return common.execute_aws_command_skeleton({ "cloud9", "update-environment-membership" }, input)
 end
 
 return M

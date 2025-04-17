@@ -3,98 +3,98 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DSQL service functions
+--- AWS dsql service functions
 local M = {}
 
 --- AWS dsql create-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster(input)
-	return common.execute_aws_command_with_input({ "dsql", "create-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "dsql", "create-cluster" }, input)
 end
 
 --- AWS dsql create-multi-region-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_multi_region_clusters(input)
-	return common.execute_aws_command_with_input({ "dsql", "create-multi-region-clusters" }, input)
+	return common.execute_aws_command_skeleton({ "dsql", "create-multi-region-clusters" }, input)
 end
 
 --- AWS dsql delete-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cluster(input)
-	return common.execute_aws_command_with_input({ "dsql", "delete-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "dsql", "delete-cluster" }, input)
 end
 
 --- AWS dsql delete-multi-region-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_multi_region_clusters(input)
-	return common.execute_aws_command_with_input({ "dsql", "delete-multi-region-clusters" }, input)
-end
-
---- AWS dsql get-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_cluster(input)
-	return common.execute_aws_command_with_input({ "dsql", "get-cluster" }, input)
-end
-
---- AWS dsql list-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_clusters(input)
-	return common.execute_aws_command_with_input({ "dsql", "list-clusters" }, input)
-end
-
---- AWS dsql list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "dsql", "list-tags-for-resource" }, input)
-end
-
---- AWS dsql tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "dsql", "tag-resource" }, input)
-end
-
---- AWS dsql untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "dsql", "untag-resource" }, input)
-end
-
---- AWS dsql update-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_cluster(input)
-	return common.execute_aws_command_with_input({ "dsql", "update-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "dsql", "delete-multi-region-clusters" }, input)
 end
 
 --- AWS dsql generate-db-connect-admin-auth-token operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_db_connect_admin_auth_token(input)
-	return common.execute_aws_command_with_raw_input({ "dsql", "generate-db-connect-admin-auth-token" }, input)
+	return common.execute_aws_command({ "dsql", "generate-db-connect-admin-auth-token" }, input)
 end
 
 --- AWS dsql generate-db-connect-auth-token operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_db_connect_auth_token(input)
-	return common.execute_aws_command_with_raw_input({ "dsql", "generate-db-connect-auth-token" }, input)
+	return common.execute_aws_command({ "dsql", "generate-db-connect-auth-token" }, input)
+end
+
+--- AWS dsql get-cluster operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_cluster(input)
+	return common.execute_aws_command_skeleton({ "dsql", "get-cluster" }, input)
+end
+
+--- AWS dsql list-clusters operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_clusters(input)
+	return common.execute_aws_command_skeleton({ "dsql", "list-clusters" }, input)
+end
+
+--- AWS dsql list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "dsql", "list-tags-for-resource" }, input)
+end
+
+--- AWS dsql tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "dsql", "tag-resource" }, input)
+end
+
+--- AWS dsql untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "dsql", "untag-resource" }, input)
+end
+
+--- AWS dsql update-cluster operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_cluster(input)
+	return common.execute_aws_command_skeleton({ "dsql", "update-cluster" }, input)
 end
 
 --- AWS dsql wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "dsql", "wait" }, input)
+	return common.execute_aws_command({ "dsql", "wait" }, input)
 end
 
 return M

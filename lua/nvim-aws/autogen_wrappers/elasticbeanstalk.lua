@@ -3,343 +3,343 @@
 
 local common = require("nvim-aws.common")
 
---- AWS ELASTICBEANSTALK service functions
+--- AWS elasticbeanstalk service functions
 local M = {}
 
 --- AWS elasticbeanstalk abort-environment-update operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.abort_environment_update(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "abort-environment-update" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "abort-environment-update" }, input)
 end
 
 --- AWS elasticbeanstalk apply-environment-managed-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.apply_environment_managed_action(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "apply-environment-managed-action" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "apply-environment-managed-action" }, input)
 end
 
 --- AWS elasticbeanstalk associate-environment-operations-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_environment_operations_role(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "associate-environment-operations-role" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "associate-environment-operations-role" }, input)
 end
 
 --- AWS elasticbeanstalk check-dns-availability operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.check_dns_availability(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "check-dns-availability" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "check-dns-availability" }, input)
 end
 
 --- AWS elasticbeanstalk compose-environments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.compose_environments(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "compose-environments" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "compose-environments" }, input)
 end
 
 --- AWS elasticbeanstalk create-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_application(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-application" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-application" }, input)
 end
 
 --- AWS elasticbeanstalk create-application-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_application_version(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-application-version" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-application-version" }, input)
 end
 
 --- AWS elasticbeanstalk create-configuration-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_configuration_template(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-configuration-template" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-configuration-template" }, input)
 end
 
 --- AWS elasticbeanstalk create-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_environment(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-environment" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-environment" }, input)
 end
 
 --- AWS elasticbeanstalk create-platform-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_platform_version(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-platform-version" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-platform-version" }, input)
 end
 
 --- AWS elasticbeanstalk create-storage-location operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_storage_location(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "create-storage-location" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "create-storage-location" }, input)
 end
 
 --- AWS elasticbeanstalk delete-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_application(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "delete-application" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-application" }, input)
 end
 
 --- AWS elasticbeanstalk delete-application-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_application_version(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "delete-application-version" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-application-version" }, input)
 end
 
 --- AWS elasticbeanstalk delete-configuration-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configuration_template(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "delete-configuration-template" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-configuration-template" }, input)
 end
 
 --- AWS elasticbeanstalk delete-environment-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_environment_configuration(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "delete-environment-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-environment-configuration" }, input)
 end
 
 --- AWS elasticbeanstalk delete-platform-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_platform_version(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "delete-platform-version" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "delete-platform-version" }, input)
 end
 
 --- AWS elasticbeanstalk describe-account-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_attributes(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-account-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-account-attributes" }, input)
 end
 
 --- AWS elasticbeanstalk describe-application-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_application_versions(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-application-versions" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-application-versions" }, input)
 end
 
 --- AWS elasticbeanstalk describe-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_applications(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-applications" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-applications" }, input)
 end
 
 --- AWS elasticbeanstalk describe-configuration-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_configuration_options(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-configuration-options" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-configuration-options" }, input)
 end
 
 --- AWS elasticbeanstalk describe-configuration-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_configuration_settings(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-configuration-settings" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-configuration-settings" }, input)
 end
 
 --- AWS elasticbeanstalk describe-environment-health operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_environment_health(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-environment-health" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-health" }, input)
 end
 
 --- AWS elasticbeanstalk describe-environment-managed-action-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_environment_managed_action_history(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-environment-managed-action-history" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-managed-action-history" }, input)
 end
 
 --- AWS elasticbeanstalk describe-environment-managed-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_environment_managed_actions(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-environment-managed-actions" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-managed-actions" }, input)
 end
 
 --- AWS elasticbeanstalk describe-environment-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_environment_resources(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-environment-resources" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environment-resources" }, input)
 end
 
 --- AWS elasticbeanstalk describe-environments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_environments(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-environments" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-environments" }, input)
 end
 
 --- AWS elasticbeanstalk describe-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_events(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-events" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-events" }, input)
 end
 
 --- AWS elasticbeanstalk describe-instances-health operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instances_health(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-instances-health" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-instances-health" }, input)
 end
 
 --- AWS elasticbeanstalk describe-platform-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_platform_version(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "describe-platform-version" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "describe-platform-version" }, input)
 end
 
 --- AWS elasticbeanstalk disassociate-environment-operations-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_environment_operations_role(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "disassociate-environment-operations-role" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "disassociate-environment-operations-role" }, input)
 end
 
 --- AWS elasticbeanstalk list-available-solution-stacks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_available_solution_stacks(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "list-available-solution-stacks" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-available-solution-stacks" }, input)
 end
 
 --- AWS elasticbeanstalk list-platform-branches operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_platform_branches(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "list-platform-branches" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-platform-branches" }, input)
 end
 
 --- AWS elasticbeanstalk list-platform-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_platform_versions(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "list-platform-versions" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-platform-versions" }, input)
 end
 
 --- AWS elasticbeanstalk list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "list-tags-for-resource" }, input)
 end
 
 --- AWS elasticbeanstalk rebuild-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.rebuild_environment(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "rebuild-environment" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "rebuild-environment" }, input)
 end
 
 --- AWS elasticbeanstalk request-environment-info operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.request_environment_info(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "request-environment-info" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "request-environment-info" }, input)
 end
 
 --- AWS elasticbeanstalk restart-app-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restart_app_server(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "restart-app-server" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "restart-app-server" }, input)
 end
 
 --- AWS elasticbeanstalk retrieve-environment-info operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.retrieve_environment_info(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "retrieve-environment-info" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "retrieve-environment-info" }, input)
 end
 
 --- AWS elasticbeanstalk swap-environment-cnames operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.swap_environment_cnames(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "swap-environment-cnames" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "swap-environment-cnames" }, input)
 end
 
 --- AWS elasticbeanstalk terminate-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.terminate_environment(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "terminate-environment" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "terminate-environment" }, input)
 end
 
 --- AWS elasticbeanstalk update-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_application(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-application" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-application" }, input)
 end
 
 --- AWS elasticbeanstalk update-application-resource-lifecycle operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_application_resource_lifecycle(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-application-resource-lifecycle" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-application-resource-lifecycle" }, input)
 end
 
 --- AWS elasticbeanstalk update-application-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_application_version(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-application-version" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-application-version" }, input)
 end
 
 --- AWS elasticbeanstalk update-configuration-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_configuration_template(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-configuration-template" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-configuration-template" }, input)
 end
 
 --- AWS elasticbeanstalk update-environment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_environment(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-environment" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-environment" }, input)
 end
 
 --- AWS elasticbeanstalk update-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "update-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "update-tags-for-resource" }, input)
 end
 
 --- AWS elasticbeanstalk validate-configuration-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.validate_configuration_settings(input)
-	return common.execute_aws_command_with_input({ "elasticbeanstalk", "validate-configuration-settings" }, input)
+	return common.execute_aws_command_skeleton({ "elasticbeanstalk", "validate-configuration-settings" }, input)
 end
 
 --- AWS elasticbeanstalk wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "elasticbeanstalk", "wait" }, input)
+	return common.execute_aws_command({ "elasticbeanstalk", "wait" }, input)
 end
 
 return M

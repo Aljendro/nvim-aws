@@ -3,875 +3,875 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLOUDFRONT service functions
+--- AWS cloudfront service functions
 local M = {}
 
 --- AWS cloudfront associate-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_alias(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "associate-alias" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "associate-alias" }, input)
 end
 
 --- AWS cloudfront copy-distribution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_distribution(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "copy-distribution" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "copy-distribution" }, input)
 end
 
 --- AWS cloudfront create-anycast-ip-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_anycast_ip_list(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-anycast-ip-list" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-anycast-ip-list" }, input)
 end
 
 --- AWS cloudfront create-cache-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cache_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-cache-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-cache-policy" }, input)
 end
 
 --- AWS cloudfront create-cloud-front-origin-access-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cloud_front_origin_access_identity(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-cloud-front-origin-access-identity" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-cloud-front-origin-access-identity" }, input)
 end
 
 --- AWS cloudfront create-continuous-deployment-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_continuous_deployment_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-continuous-deployment-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-continuous-deployment-policy" }, input)
 end
 
 --- AWS cloudfront create-distribution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_distribution(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-distribution" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-distribution" }, input)
 end
 
 --- AWS cloudfront create-distribution-with-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_distribution_with_tags(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-distribution-with-tags" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-distribution-with-tags" }, input)
 end
 
 --- AWS cloudfront create-field-level-encryption-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_field_level_encryption_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-field-level-encryption-config" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-field-level-encryption-config" }, input)
 end
 
 --- AWS cloudfront create-field-level-encryption-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_field_level_encryption_profile(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-field-level-encryption-profile" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-field-level-encryption-profile" }, input)
 end
 
 --- AWS cloudfront create-function operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_function(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-function" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-function" }, input)
 end
 
 --- AWS cloudfront create-invalidation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_invalidation(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-invalidation" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-invalidation" }, input)
 end
 
 --- AWS cloudfront create-key-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_key_group(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-key-group" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-key-group" }, input)
 end
 
 --- AWS cloudfront create-key-value-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_key_value_store(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-key-value-store" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-key-value-store" }, input)
 end
 
 --- AWS cloudfront create-monitoring-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_monitoring_subscription(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-monitoring-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-monitoring-subscription" }, input)
 end
 
 --- AWS cloudfront create-origin-access-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_origin_access_control(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-origin-access-control" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-origin-access-control" }, input)
 end
 
 --- AWS cloudfront create-origin-request-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_origin_request_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-origin-request-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-origin-request-policy" }, input)
 end
 
 --- AWS cloudfront create-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_public_key(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-public-key" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-public-key" }, input)
 end
 
 --- AWS cloudfront create-realtime-log-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_realtime_log_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-realtime-log-config" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-realtime-log-config" }, input)
 end
 
 --- AWS cloudfront create-response-headers-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_response_headers_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-response-headers-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-response-headers-policy" }, input)
 end
 
 --- AWS cloudfront create-streaming-distribution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_streaming_distribution(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-streaming-distribution" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-streaming-distribution" }, input)
 end
 
 --- AWS cloudfront create-streaming-distribution-with-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_streaming_distribution_with_tags(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-streaming-distribution-with-tags" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-streaming-distribution-with-tags" }, input)
 end
 
 --- AWS cloudfront create-vpc-origin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_origin(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "create-vpc-origin" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "create-vpc-origin" }, input)
 end
 
 --- AWS cloudfront delete-anycast-ip-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_anycast_ip_list(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-anycast-ip-list" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-anycast-ip-list" }, input)
 end
 
 --- AWS cloudfront delete-cache-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cache_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-cache-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-cache-policy" }, input)
 end
 
 --- AWS cloudfront delete-cloud-front-origin-access-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cloud_front_origin_access_identity(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-cloud-front-origin-access-identity" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-cloud-front-origin-access-identity" }, input)
 end
 
 --- AWS cloudfront delete-continuous-deployment-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_continuous_deployment_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-continuous-deployment-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-continuous-deployment-policy" }, input)
 end
 
 --- AWS cloudfront delete-distribution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_distribution(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-distribution" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-distribution" }, input)
 end
 
 --- AWS cloudfront delete-field-level-encryption-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_field_level_encryption_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-field-level-encryption-config" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-field-level-encryption-config" }, input)
 end
 
 --- AWS cloudfront delete-field-level-encryption-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_field_level_encryption_profile(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-field-level-encryption-profile" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-field-level-encryption-profile" }, input)
 end
 
 --- AWS cloudfront delete-function operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_function(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-function" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-function" }, input)
 end
 
 --- AWS cloudfront delete-key-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_key_group(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-key-group" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-key-group" }, input)
 end
 
 --- AWS cloudfront delete-key-value-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_key_value_store(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-key-value-store" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-key-value-store" }, input)
 end
 
 --- AWS cloudfront delete-monitoring-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_monitoring_subscription(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-monitoring-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-monitoring-subscription" }, input)
 end
 
 --- AWS cloudfront delete-origin-access-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_origin_access_control(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-origin-access-control" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-origin-access-control" }, input)
 end
 
 --- AWS cloudfront delete-origin-request-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_origin_request_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-origin-request-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-origin-request-policy" }, input)
 end
 
 --- AWS cloudfront delete-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_public_key(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-public-key" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-public-key" }, input)
 end
 
 --- AWS cloudfront delete-realtime-log-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_realtime_log_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-realtime-log-config" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-realtime-log-config" }, input)
 end
 
 --- AWS cloudfront delete-response-headers-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_response_headers_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-response-headers-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-response-headers-policy" }, input)
 end
 
 --- AWS cloudfront delete-streaming-distribution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_streaming_distribution(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-streaming-distribution" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-streaming-distribution" }, input)
 end
 
 --- AWS cloudfront delete-vpc-origin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_origin(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "delete-vpc-origin" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "delete-vpc-origin" }, input)
 end
 
 --- AWS cloudfront describe-function operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_function(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "describe-function" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "describe-function" }, input)
 end
 
 --- AWS cloudfront describe-key-value-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_key_value_store(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "describe-key-value-store" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "describe-key-value-store" }, input)
 end
 
 --- AWS cloudfront get-anycast-ip-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_anycast_ip_list(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-anycast-ip-list" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-anycast-ip-list" }, input)
 end
 
 --- AWS cloudfront get-cache-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cache_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-cache-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-cache-policy" }, input)
 end
 
 --- AWS cloudfront get-cache-policy-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cache_policy_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-cache-policy-config" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-cache-policy-config" }, input)
 end
 
 --- AWS cloudfront get-cloud-front-origin-access-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cloud_front_origin_access_identity(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-cloud-front-origin-access-identity" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-cloud-front-origin-access-identity" }, input)
 end
 
 --- AWS cloudfront get-cloud-front-origin-access-identity-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cloud_front_origin_access_identity_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-cloud-front-origin-access-identity-config" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-cloud-front-origin-access-identity-config" }, input)
 end
 
 --- AWS cloudfront get-continuous-deployment-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_continuous_deployment_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-continuous-deployment-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-continuous-deployment-policy" }, input)
 end
 
 --- AWS cloudfront get-continuous-deployment-policy-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_continuous_deployment_policy_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-continuous-deployment-policy-config" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-continuous-deployment-policy-config" }, input)
 end
 
 --- AWS cloudfront get-distribution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_distribution(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-distribution" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-distribution" }, input)
 end
 
 --- AWS cloudfront get-distribution-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_distribution_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-distribution-config" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-distribution-config" }, input)
 end
 
 --- AWS cloudfront get-field-level-encryption operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_field_level_encryption(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-field-level-encryption" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-field-level-encryption" }, input)
 end
 
 --- AWS cloudfront get-field-level-encryption-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_field_level_encryption_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-field-level-encryption-config" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-field-level-encryption-config" }, input)
 end
 
 --- AWS cloudfront get-field-level-encryption-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_field_level_encryption_profile(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-field-level-encryption-profile" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-field-level-encryption-profile" }, input)
 end
 
 --- AWS cloudfront get-field-level-encryption-profile-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_field_level_encryption_profile_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-field-level-encryption-profile-config" }, input)
-end
-
---- AWS cloudfront get-invalidation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_invalidation(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-invalidation" }, input)
-end
-
---- AWS cloudfront get-key-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_key_group(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-key-group" }, input)
-end
-
---- AWS cloudfront get-key-group-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_key_group_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-key-group-config" }, input)
-end
-
---- AWS cloudfront get-monitoring-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_monitoring_subscription(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-monitoring-subscription" }, input)
-end
-
---- AWS cloudfront get-origin-access-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_origin_access_control(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-origin-access-control" }, input)
-end
-
---- AWS cloudfront get-origin-access-control-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_origin_access_control_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-origin-access-control-config" }, input)
-end
-
---- AWS cloudfront get-origin-request-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_origin_request_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-origin-request-policy" }, input)
-end
-
---- AWS cloudfront get-origin-request-policy-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_origin_request_policy_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-origin-request-policy-config" }, input)
-end
-
---- AWS cloudfront get-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_public_key(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-public-key" }, input)
-end
-
---- AWS cloudfront get-public-key-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_public_key_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-public-key-config" }, input)
-end
-
---- AWS cloudfront get-realtime-log-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_realtime_log_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-realtime-log-config" }, input)
-end
-
---- AWS cloudfront get-response-headers-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_response_headers_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-response-headers-policy" }, input)
-end
-
---- AWS cloudfront get-response-headers-policy-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_response_headers_policy_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-response-headers-policy-config" }, input)
-end
-
---- AWS cloudfront get-streaming-distribution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_streaming_distribution(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-streaming-distribution" }, input)
-end
-
---- AWS cloudfront get-streaming-distribution-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_streaming_distribution_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-streaming-distribution-config" }, input)
-end
-
---- AWS cloudfront get-vpc-origin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_vpc_origin(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "get-vpc-origin" }, input)
-end
-
---- AWS cloudfront list-anycast-ip-lists operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_anycast_ip_lists(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-anycast-ip-lists" }, input)
-end
-
---- AWS cloudfront list-cache-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_cache_policies(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-cache-policies" }, input)
-end
-
---- AWS cloudfront list-cloud-front-origin-access-identities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_cloud_front_origin_access_identities(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-cloud-front-origin-access-identities" }, input)
-end
-
---- AWS cloudfront list-conflicting-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_conflicting_aliases(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-conflicting-aliases" }, input)
-end
-
---- AWS cloudfront list-continuous-deployment-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_continuous_deployment_policies(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-continuous-deployment-policies" }, input)
-end
-
---- AWS cloudfront list-distributions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_distributions(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions" }, input)
-end
-
---- AWS cloudfront list-distributions-by-anycast-ip-list-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_distributions_by_anycast_ip_list_id(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-anycast-ip-list-id" }, input)
-end
-
---- AWS cloudfront list-distributions-by-cache-policy-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_distributions_by_cache_policy_id(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-cache-policy-id" }, input)
-end
-
---- AWS cloudfront list-distributions-by-key-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_distributions_by_key_group(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-key-group" }, input)
-end
-
---- AWS cloudfront list-distributions-by-origin-request-policy-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_distributions_by_origin_request_policy_id(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-origin-request-policy-id" }, input)
-end
-
---- AWS cloudfront list-distributions-by-realtime-log-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_distributions_by_realtime_log_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-realtime-log-config" }, input)
-end
-
---- AWS cloudfront list-distributions-by-response-headers-policy-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_distributions_by_response_headers_policy_id(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-response-headers-policy-id" }, input)
-end
-
---- AWS cloudfront list-distributions-by-vpc-origin-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_distributions_by_vpc_origin_id(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-vpc-origin-id" }, input)
-end
-
---- AWS cloudfront list-distributions-by-web-acl-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_distributions_by_web_acl_id(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-distributions-by-web-acl-id" }, input)
-end
-
---- AWS cloudfront list-field-level-encryption-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_field_level_encryption_configs(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-field-level-encryption-configs" }, input)
-end
-
---- AWS cloudfront list-field-level-encryption-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_field_level_encryption_profiles(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-field-level-encryption-profiles" }, input)
-end
-
---- AWS cloudfront list-functions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_functions(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-functions" }, input)
-end
-
---- AWS cloudfront list-invalidations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_invalidations(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-invalidations" }, input)
-end
-
---- AWS cloudfront list-key-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_key_groups(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-key-groups" }, input)
-end
-
---- AWS cloudfront list-key-value-stores operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_key_value_stores(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-key-value-stores" }, input)
-end
-
---- AWS cloudfront list-origin-access-controls operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_origin_access_controls(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-origin-access-controls" }, input)
-end
-
---- AWS cloudfront list-origin-request-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_origin_request_policies(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-origin-request-policies" }, input)
-end
-
---- AWS cloudfront list-public-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_public_keys(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-public-keys" }, input)
-end
-
---- AWS cloudfront list-realtime-log-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_realtime_log_configs(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-realtime-log-configs" }, input)
-end
-
---- AWS cloudfront list-response-headers-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_response_headers_policies(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-response-headers-policies" }, input)
-end
-
---- AWS cloudfront list-streaming-distributions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_streaming_distributions(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-streaming-distributions" }, input)
-end
-
---- AWS cloudfront list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-tags-for-resource" }, input)
-end
-
---- AWS cloudfront list-vpc-origins operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_vpc_origins(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "list-vpc-origins" }, input)
-end
-
---- AWS cloudfront publish-function operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.publish_function(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "publish-function" }, input)
-end
-
---- AWS cloudfront tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "tag-resource" }, input)
-end
-
---- AWS cloudfront test-function operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.test_function(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "test-function" }, input)
-end
-
---- AWS cloudfront untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "untag-resource" }, input)
-end
-
---- AWS cloudfront update-cache-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_cache_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-cache-policy" }, input)
-end
-
---- AWS cloudfront update-cloud-front-origin-access-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_cloud_front_origin_access_identity(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-cloud-front-origin-access-identity" }, input)
-end
-
---- AWS cloudfront update-continuous-deployment-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_continuous_deployment_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-continuous-deployment-policy" }, input)
-end
-
---- AWS cloudfront update-distribution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_distribution(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-distribution" }, input)
-end
-
---- AWS cloudfront update-distribution-with-staging-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_distribution_with_staging_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-distribution-with-staging-config" }, input)
-end
-
---- AWS cloudfront update-field-level-encryption-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_field_level_encryption_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-field-level-encryption-config" }, input)
-end
-
---- AWS cloudfront update-field-level-encryption-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_field_level_encryption_profile(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-field-level-encryption-profile" }, input)
-end
-
---- AWS cloudfront update-function operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_function(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-function" }, input)
-end
-
---- AWS cloudfront update-key-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_key_group(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-key-group" }, input)
-end
-
---- AWS cloudfront update-key-value-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_key_value_store(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-key-value-store" }, input)
-end
-
---- AWS cloudfront update-origin-access-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_origin_access_control(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-origin-access-control" }, input)
-end
-
---- AWS cloudfront update-origin-request-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_origin_request_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-origin-request-policy" }, input)
-end
-
---- AWS cloudfront update-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_public_key(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-public-key" }, input)
-end
-
---- AWS cloudfront update-realtime-log-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_realtime_log_config(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-realtime-log-config" }, input)
-end
-
---- AWS cloudfront update-response-headers-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_response_headers_policy(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-response-headers-policy" }, input)
-end
-
---- AWS cloudfront update-streaming-distribution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_streaming_distribution(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-streaming-distribution" }, input)
-end
-
---- AWS cloudfront update-vpc-origin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_vpc_origin(input)
-	return common.execute_aws_command_with_input({ "cloudfront", "update-vpc-origin" }, input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-field-level-encryption-profile-config" }, input)
 end
 
 --- AWS cloudfront get-function operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_function(input)
-	return common.execute_aws_command_with_raw_input({ "cloudfront", "get-function" }, input)
+	return common.execute_aws_command({ "cloudfront", "get-function" }, input)
+end
+
+--- AWS cloudfront get-invalidation operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_invalidation(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-invalidation" }, input)
+end
+
+--- AWS cloudfront get-key-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_key_group(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-key-group" }, input)
+end
+
+--- AWS cloudfront get-key-group-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_key_group_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-key-group-config" }, input)
+end
+
+--- AWS cloudfront get-monitoring-subscription operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_monitoring_subscription(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-monitoring-subscription" }, input)
+end
+
+--- AWS cloudfront get-origin-access-control operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_origin_access_control(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-origin-access-control" }, input)
+end
+
+--- AWS cloudfront get-origin-access-control-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_origin_access_control_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-origin-access-control-config" }, input)
+end
+
+--- AWS cloudfront get-origin-request-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_origin_request_policy(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-origin-request-policy" }, input)
+end
+
+--- AWS cloudfront get-origin-request-policy-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_origin_request_policy_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-origin-request-policy-config" }, input)
+end
+
+--- AWS cloudfront get-public-key operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_public_key(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-public-key" }, input)
+end
+
+--- AWS cloudfront get-public-key-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_public_key_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-public-key-config" }, input)
+end
+
+--- AWS cloudfront get-realtime-log-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_realtime_log_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-realtime-log-config" }, input)
+end
+
+--- AWS cloudfront get-response-headers-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_response_headers_policy(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-response-headers-policy" }, input)
+end
+
+--- AWS cloudfront get-response-headers-policy-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_response_headers_policy_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-response-headers-policy-config" }, input)
+end
+
+--- AWS cloudfront get-streaming-distribution operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_streaming_distribution(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-streaming-distribution" }, input)
+end
+
+--- AWS cloudfront get-streaming-distribution-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_streaming_distribution_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-streaming-distribution-config" }, input)
+end
+
+--- AWS cloudfront get-vpc-origin operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_vpc_origin(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "get-vpc-origin" }, input)
+end
+
+--- AWS cloudfront list-anycast-ip-lists operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_anycast_ip_lists(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-anycast-ip-lists" }, input)
+end
+
+--- AWS cloudfront list-cache-policies operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_cache_policies(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-cache-policies" }, input)
+end
+
+--- AWS cloudfront list-cloud-front-origin-access-identities operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_cloud_front_origin_access_identities(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-cloud-front-origin-access-identities" }, input)
+end
+
+--- AWS cloudfront list-conflicting-aliases operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_conflicting_aliases(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-conflicting-aliases" }, input)
+end
+
+--- AWS cloudfront list-continuous-deployment-policies operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_continuous_deployment_policies(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-continuous-deployment-policies" }, input)
+end
+
+--- AWS cloudfront list-distributions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_distributions(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-distributions" }, input)
+end
+
+--- AWS cloudfront list-distributions-by-anycast-ip-list-id operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_distributions_by_anycast_ip_list_id(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-distributions-by-anycast-ip-list-id" }, input)
+end
+
+--- AWS cloudfront list-distributions-by-cache-policy-id operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_distributions_by_cache_policy_id(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-distributions-by-cache-policy-id" }, input)
+end
+
+--- AWS cloudfront list-distributions-by-key-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_distributions_by_key_group(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-distributions-by-key-group" }, input)
+end
+
+--- AWS cloudfront list-distributions-by-origin-request-policy-id operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_distributions_by_origin_request_policy_id(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-distributions-by-origin-request-policy-id" }, input)
+end
+
+--- AWS cloudfront list-distributions-by-realtime-log-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_distributions_by_realtime_log_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-distributions-by-realtime-log-config" }, input)
+end
+
+--- AWS cloudfront list-distributions-by-response-headers-policy-id operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_distributions_by_response_headers_policy_id(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-distributions-by-response-headers-policy-id" }, input)
+end
+
+--- AWS cloudfront list-distributions-by-vpc-origin-id operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_distributions_by_vpc_origin_id(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-distributions-by-vpc-origin-id" }, input)
+end
+
+--- AWS cloudfront list-distributions-by-web-acl-id operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_distributions_by_web_acl_id(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-distributions-by-web-acl-id" }, input)
+end
+
+--- AWS cloudfront list-field-level-encryption-configs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_field_level_encryption_configs(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-field-level-encryption-configs" }, input)
+end
+
+--- AWS cloudfront list-field-level-encryption-profiles operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_field_level_encryption_profiles(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-field-level-encryption-profiles" }, input)
+end
+
+--- AWS cloudfront list-functions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_functions(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-functions" }, input)
+end
+
+--- AWS cloudfront list-invalidations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_invalidations(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-invalidations" }, input)
+end
+
+--- AWS cloudfront list-key-groups operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_key_groups(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-key-groups" }, input)
+end
+
+--- AWS cloudfront list-key-value-stores operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_key_value_stores(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-key-value-stores" }, input)
+end
+
+--- AWS cloudfront list-origin-access-controls operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_origin_access_controls(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-origin-access-controls" }, input)
+end
+
+--- AWS cloudfront list-origin-request-policies operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_origin_request_policies(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-origin-request-policies" }, input)
+end
+
+--- AWS cloudfront list-public-keys operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_public_keys(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-public-keys" }, input)
+end
+
+--- AWS cloudfront list-realtime-log-configs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_realtime_log_configs(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-realtime-log-configs" }, input)
+end
+
+--- AWS cloudfront list-response-headers-policies operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_response_headers_policies(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-response-headers-policies" }, input)
+end
+
+--- AWS cloudfront list-streaming-distributions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_streaming_distributions(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-streaming-distributions" }, input)
+end
+
+--- AWS cloudfront list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-tags-for-resource" }, input)
+end
+
+--- AWS cloudfront list-vpc-origins operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_vpc_origins(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "list-vpc-origins" }, input)
+end
+
+--- AWS cloudfront publish-function operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.publish_function(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "publish-function" }, input)
 end
 
 --- AWS cloudfront sign operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.sign(input)
-	return common.execute_aws_command_with_raw_input({ "cloudfront", "sign" }, input)
+	return common.execute_aws_command({ "cloudfront", "sign" }, input)
+end
+
+--- AWS cloudfront tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "tag-resource" }, input)
+end
+
+--- AWS cloudfront test-function operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.test_function(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "test-function" }, input)
+end
+
+--- AWS cloudfront untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "untag-resource" }, input)
+end
+
+--- AWS cloudfront update-cache-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_cache_policy(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-cache-policy" }, input)
+end
+
+--- AWS cloudfront update-cloud-front-origin-access-identity operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_cloud_front_origin_access_identity(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-cloud-front-origin-access-identity" }, input)
+end
+
+--- AWS cloudfront update-continuous-deployment-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_continuous_deployment_policy(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-continuous-deployment-policy" }, input)
+end
+
+--- AWS cloudfront update-distribution operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_distribution(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-distribution" }, input)
+end
+
+--- AWS cloudfront update-distribution-with-staging-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_distribution_with_staging_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-distribution-with-staging-config" }, input)
+end
+
+--- AWS cloudfront update-field-level-encryption-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_field_level_encryption_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-field-level-encryption-config" }, input)
+end
+
+--- AWS cloudfront update-field-level-encryption-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_field_level_encryption_profile(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-field-level-encryption-profile" }, input)
+end
+
+--- AWS cloudfront update-function operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_function(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-function" }, input)
+end
+
+--- AWS cloudfront update-key-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_key_group(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-key-group" }, input)
+end
+
+--- AWS cloudfront update-key-value-store operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_key_value_store(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-key-value-store" }, input)
+end
+
+--- AWS cloudfront update-origin-access-control operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_origin_access_control(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-origin-access-control" }, input)
+end
+
+--- AWS cloudfront update-origin-request-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_origin_request_policy(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-origin-request-policy" }, input)
+end
+
+--- AWS cloudfront update-public-key operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_public_key(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-public-key" }, input)
+end
+
+--- AWS cloudfront update-realtime-log-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_realtime_log_config(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-realtime-log-config" }, input)
+end
+
+--- AWS cloudfront update-response-headers-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_response_headers_policy(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-response-headers-policy" }, input)
+end
+
+--- AWS cloudfront update-streaming-distribution operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_streaming_distribution(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-streaming-distribution" }, input)
+end
+
+--- AWS cloudfront update-vpc-origin operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_vpc_origin(input)
+	return common.execute_aws_command_skeleton({ "cloudfront", "update-vpc-origin" }, input)
 end
 
 --- AWS cloudfront wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "cloudfront", "wait" }, input)
+	return common.execute_aws_command({ "cloudfront", "wait" }, input)
 end
 
 return M

@@ -3,70 +3,70 @@
 
 local common = require("nvim-aws.common")
 
---- AWS KENDRA-RANKING service functions
+--- AWS kendra-ranking service functions
 local M = {}
 
 --- AWS kendra-ranking create-rescore-execution-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_rescore_execution_plan(input)
-	return common.execute_aws_command_with_input({ "kendra-ranking", "create-rescore-execution-plan" }, input)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "create-rescore-execution-plan" }, input)
 end
 
 --- AWS kendra-ranking delete-rescore-execution-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_rescore_execution_plan(input)
-	return common.execute_aws_command_with_input({ "kendra-ranking", "delete-rescore-execution-plan" }, input)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "delete-rescore-execution-plan" }, input)
 end
 
 --- AWS kendra-ranking describe-rescore-execution-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_rescore_execution_plan(input)
-	return common.execute_aws_command_with_input({ "kendra-ranking", "describe-rescore-execution-plan" }, input)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "describe-rescore-execution-plan" }, input)
 end
 
 --- AWS kendra-ranking list-rescore-execution-plans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_rescore_execution_plans(input)
-	return common.execute_aws_command_with_input({ "kendra-ranking", "list-rescore-execution-plans" }, input)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "list-rescore-execution-plans" }, input)
 end
 
 --- AWS kendra-ranking list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "kendra-ranking", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "list-tags-for-resource" }, input)
 end
 
 --- AWS kendra-ranking rescore operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.rescore(input)
-	return common.execute_aws_command_with_input({ "kendra-ranking", "rescore" }, input)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "rescore" }, input)
 end
 
 --- AWS kendra-ranking tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "kendra-ranking", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "tag-resource" }, input)
 end
 
 --- AWS kendra-ranking untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "kendra-ranking", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "untag-resource" }, input)
 end
 
 --- AWS kendra-ranking update-rescore-execution-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_rescore_execution_plan(input)
-	return common.execute_aws_command_with_input({ "kendra-ranking", "update-rescore-execution-plan" }, input)
+	return common.execute_aws_command_skeleton({ "kendra-ranking", "update-rescore-execution-plan" }, input)
 end
 
 return M

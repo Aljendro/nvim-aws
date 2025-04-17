@@ -3,203 +3,203 @@
 
 local common = require("nvim-aws.common")
 
---- AWS EFS service functions
+--- AWS efs service functions
 local M = {}
 
 --- AWS efs create-access-point operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_access_point(input)
-	return common.execute_aws_command_with_input({ "efs", "create-access-point" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "create-access-point" }, input)
 end
 
 --- AWS efs create-file-system operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_file_system(input)
-	return common.execute_aws_command_with_input({ "efs", "create-file-system" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "create-file-system" }, input)
 end
 
 --- AWS efs create-mount-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_mount_target(input)
-	return common.execute_aws_command_with_input({ "efs", "create-mount-target" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "create-mount-target" }, input)
 end
 
 --- AWS efs create-replication-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_replication_configuration(input)
-	return common.execute_aws_command_with_input({ "efs", "create-replication-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "create-replication-configuration" }, input)
 end
 
 --- AWS efs delete-access-point operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_access_point(input)
-	return common.execute_aws_command_with_input({ "efs", "delete-access-point" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "delete-access-point" }, input)
 end
 
 --- AWS efs delete-file-system operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_file_system(input)
-	return common.execute_aws_command_with_input({ "efs", "delete-file-system" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "delete-file-system" }, input)
 end
 
 --- AWS efs delete-file-system-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_file_system_policy(input)
-	return common.execute_aws_command_with_input({ "efs", "delete-file-system-policy" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "delete-file-system-policy" }, input)
 end
 
 --- AWS efs delete-mount-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_mount_target(input)
-	return common.execute_aws_command_with_input({ "efs", "delete-mount-target" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "delete-mount-target" }, input)
 end
 
 --- AWS efs delete-replication-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_replication_configuration(input)
-	return common.execute_aws_command_with_input({ "efs", "delete-replication-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "delete-replication-configuration" }, input)
 end
 
 --- AWS efs describe-access-points operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_access_points(input)
-	return common.execute_aws_command_with_input({ "efs", "describe-access-points" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "describe-access-points" }, input)
 end
 
 --- AWS efs describe-account-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_preferences(input)
-	return common.execute_aws_command_with_input({ "efs", "describe-account-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "describe-account-preferences" }, input)
 end
 
 --- AWS efs describe-backup-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_backup_policy(input)
-	return common.execute_aws_command_with_input({ "efs", "describe-backup-policy" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "describe-backup-policy" }, input)
 end
 
 --- AWS efs describe-file-system-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_file_system_policy(input)
-	return common.execute_aws_command_with_input({ "efs", "describe-file-system-policy" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "describe-file-system-policy" }, input)
 end
 
 --- AWS efs describe-file-systems operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_file_systems(input)
-	return common.execute_aws_command_with_input({ "efs", "describe-file-systems" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "describe-file-systems" }, input)
 end
 
 --- AWS efs describe-lifecycle-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_lifecycle_configuration(input)
-	return common.execute_aws_command_with_input({ "efs", "describe-lifecycle-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "describe-lifecycle-configuration" }, input)
 end
 
 --- AWS efs describe-mount-target-security-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_mount_target_security_groups(input)
-	return common.execute_aws_command_with_input({ "efs", "describe-mount-target-security-groups" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "describe-mount-target-security-groups" }, input)
 end
 
 --- AWS efs describe-mount-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_mount_targets(input)
-	return common.execute_aws_command_with_input({ "efs", "describe-mount-targets" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "describe-mount-targets" }, input)
 end
 
 --- AWS efs describe-replication-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_configurations(input)
-	return common.execute_aws_command_with_input({ "efs", "describe-replication-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "describe-replication-configurations" }, input)
 end
 
 --- AWS efs list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "efs", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "list-tags-for-resource" }, input)
 end
 
 --- AWS efs modify-mount-target-security-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_mount_target_security_groups(input)
-	return common.execute_aws_command_with_input({ "efs", "modify-mount-target-security-groups" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "modify-mount-target-security-groups" }, input)
 end
 
 --- AWS efs put-account-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_account_preferences(input)
-	return common.execute_aws_command_with_input({ "efs", "put-account-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "put-account-preferences" }, input)
 end
 
 --- AWS efs put-backup-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_backup_policy(input)
-	return common.execute_aws_command_with_input({ "efs", "put-backup-policy" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "put-backup-policy" }, input)
 end
 
 --- AWS efs put-file-system-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_file_system_policy(input)
-	return common.execute_aws_command_with_input({ "efs", "put-file-system-policy" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "put-file-system-policy" }, input)
 end
 
 --- AWS efs put-lifecycle-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_lifecycle_configuration(input)
-	return common.execute_aws_command_with_input({ "efs", "put-lifecycle-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "put-lifecycle-configuration" }, input)
 end
 
 --- AWS efs tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "efs", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "tag-resource" }, input)
 end
 
 --- AWS efs untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "efs", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "untag-resource" }, input)
 end
 
 --- AWS efs update-file-system operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_file_system(input)
-	return common.execute_aws_command_with_input({ "efs", "update-file-system" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "update-file-system" }, input)
 end
 
 --- AWS efs update-file-system-protection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_file_system_protection(input)
-	return common.execute_aws_command_with_input({ "efs", "update-file-system-protection" }, input)
+	return common.execute_aws_command_skeleton({ "efs", "update-file-system-protection" }, input)
 end
 
 return M

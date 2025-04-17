@@ -3,70 +3,70 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DLM service functions
+--- AWS dlm service functions
 local M = {}
 
+--- AWS dlm create-default-role operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.create_default_role(input)
+	return common.execute_aws_command({ "dlm", "create-default-role" }, input)
+end
+
 --- AWS dlm create-lifecycle-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_lifecycle_policy(input)
-	return common.execute_aws_command_with_input({ "dlm", "create-lifecycle-policy" }, input)
+	return common.execute_aws_command_skeleton({ "dlm", "create-lifecycle-policy" }, input)
 end
 
 --- AWS dlm delete-lifecycle-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_lifecycle_policy(input)
-	return common.execute_aws_command_with_input({ "dlm", "delete-lifecycle-policy" }, input)
+	return common.execute_aws_command_skeleton({ "dlm", "delete-lifecycle-policy" }, input)
 end
 
 --- AWS dlm get-lifecycle-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_lifecycle_policies(input)
-	return common.execute_aws_command_with_input({ "dlm", "get-lifecycle-policies" }, input)
+	return common.execute_aws_command_skeleton({ "dlm", "get-lifecycle-policies" }, input)
 end
 
 --- AWS dlm get-lifecycle-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_lifecycle_policy(input)
-	return common.execute_aws_command_with_input({ "dlm", "get-lifecycle-policy" }, input)
+	return common.execute_aws_command_skeleton({ "dlm", "get-lifecycle-policy" }, input)
 end
 
 --- AWS dlm list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "dlm", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "dlm", "list-tags-for-resource" }, input)
 end
 
 --- AWS dlm tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "dlm", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "dlm", "tag-resource" }, input)
 end
 
 --- AWS dlm untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "dlm", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "dlm", "untag-resource" }, input)
 end
 
 --- AWS dlm update-lifecycle-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_lifecycle_policy(input)
-	return common.execute_aws_command_with_input({ "dlm", "update-lifecycle-policy" }, input)
-end
-
---- AWS dlm create-default-role operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.create_default_role(input)
-	return common.execute_aws_command_with_raw_input({ "dlm", "create-default-role" }, input)
+	return common.execute_aws_command_skeleton({ "dlm", "update-lifecycle-policy" }, input)
 end
 
 return M

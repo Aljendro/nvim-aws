@@ -3,231 +3,231 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SSM-INCIDENTS service functions
+--- AWS ssm-incidents service functions
 local M = {}
 
 --- AWS ssm-incidents batch-get-incident-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_incident_findings(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "batch-get-incident-findings" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "batch-get-incident-findings" }, input)
 end
 
 --- AWS ssm-incidents create-replication-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_replication_set(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "create-replication-set" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "create-replication-set" }, input)
 end
 
 --- AWS ssm-incidents create-response-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_response_plan(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "create-response-plan" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "create-response-plan" }, input)
 end
 
 --- AWS ssm-incidents create-timeline-event operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_timeline_event(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "create-timeline-event" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "create-timeline-event" }, input)
 end
 
 --- AWS ssm-incidents delete-incident-record operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_incident_record(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "delete-incident-record" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-incident-record" }, input)
 end
 
 --- AWS ssm-incidents delete-replication-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_replication_set(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "delete-replication-set" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-replication-set" }, input)
 end
 
 --- AWS ssm-incidents delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-resource-policy" }, input)
 end
 
 --- AWS ssm-incidents delete-response-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_response_plan(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "delete-response-plan" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-response-plan" }, input)
 end
 
 --- AWS ssm-incidents delete-timeline-event operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_timeline_event(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "delete-timeline-event" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "delete-timeline-event" }, input)
 end
 
 --- AWS ssm-incidents get-incident-record operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_incident_record(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "get-incident-record" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-incident-record" }, input)
 end
 
 --- AWS ssm-incidents get-replication-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_replication_set(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "get-replication-set" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-replication-set" }, input)
 end
 
 --- AWS ssm-incidents get-resource-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_policies(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "get-resource-policies" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-resource-policies" }, input)
 end
 
 --- AWS ssm-incidents get-response-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_response_plan(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "get-response-plan" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-response-plan" }, input)
 end
 
 --- AWS ssm-incidents get-timeline-event operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_timeline_event(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "get-timeline-event" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "get-timeline-event" }, input)
 end
 
 --- AWS ssm-incidents list-incident-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_incident_findings(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "list-incident-findings" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-incident-findings" }, input)
 end
 
 --- AWS ssm-incidents list-incident-records operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_incident_records(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "list-incident-records" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-incident-records" }, input)
 end
 
 --- AWS ssm-incidents list-related-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_related_items(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "list-related-items" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-related-items" }, input)
 end
 
 --- AWS ssm-incidents list-replication-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_replication_sets(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "list-replication-sets" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-replication-sets" }, input)
 end
 
 --- AWS ssm-incidents list-response-plans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_response_plans(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "list-response-plans" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-response-plans" }, input)
 end
 
 --- AWS ssm-incidents list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-tags-for-resource" }, input)
 end
 
 --- AWS ssm-incidents list-timeline-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_timeline_events(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "list-timeline-events" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "list-timeline-events" }, input)
 end
 
 --- AWS ssm-incidents put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "put-resource-policy" }, input)
 end
 
 --- AWS ssm-incidents start-incident operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_incident(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "start-incident" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "start-incident" }, input)
 end
 
 --- AWS ssm-incidents tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "tag-resource" }, input)
 end
 
 --- AWS ssm-incidents untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "untag-resource" }, input)
 end
 
 --- AWS ssm-incidents update-deletion-protection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_deletion_protection(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "update-deletion-protection" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-deletion-protection" }, input)
 end
 
 --- AWS ssm-incidents update-incident-record operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_incident_record(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "update-incident-record" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-incident-record" }, input)
 end
 
 --- AWS ssm-incidents update-related-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_related_items(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "update-related-items" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-related-items" }, input)
 end
 
 --- AWS ssm-incidents update-replication-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_replication_set(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "update-replication-set" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-replication-set" }, input)
 end
 
 --- AWS ssm-incidents update-response-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_response_plan(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "update-response-plan" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-response-plan" }, input)
 end
 
 --- AWS ssm-incidents update-timeline-event operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_timeline_event(input)
-	return common.execute_aws_command_with_input({ "ssm-incidents", "update-timeline-event" }, input)
+	return common.execute_aws_command_skeleton({ "ssm-incidents", "update-timeline-event" }, input)
 end
 
 --- AWS ssm-incidents wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "ssm-incidents", "wait" }, input)
+	return common.execute_aws_command({ "ssm-incidents", "wait" }, input)
 end
 
 return M

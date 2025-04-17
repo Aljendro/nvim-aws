@@ -3,119 +3,119 @@
 
 local common = require("nvim-aws.common")
 
---- AWS EMR-SERVERLESS service functions
+--- AWS emr-serverless service functions
 local M = {}
 
 --- AWS emr-serverless cancel-job-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_job_run(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "cancel-job-run" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "cancel-job-run" }, input)
 end
 
 --- AWS emr-serverless create-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_application(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "create-application" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "create-application" }, input)
 end
 
 --- AWS emr-serverless delete-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_application(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "delete-application" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "delete-application" }, input)
 end
 
 --- AWS emr-serverless get-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_application(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "get-application" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "get-application" }, input)
 end
 
 --- AWS emr-serverless get-dashboard-for-job-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_dashboard_for_job_run(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "get-dashboard-for-job-run" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "get-dashboard-for-job-run" }, input)
 end
 
 --- AWS emr-serverless get-job-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_job_run(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "get-job-run" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "get-job-run" }, input)
 end
 
 --- AWS emr-serverless list-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_applications(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "list-applications" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "list-applications" }, input)
 end
 
 --- AWS emr-serverless list-job-run-attempts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_job_run_attempts(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "list-job-run-attempts" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "list-job-run-attempts" }, input)
 end
 
 --- AWS emr-serverless list-job-runs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_job_runs(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "list-job-runs" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "list-job-runs" }, input)
 end
 
 --- AWS emr-serverless list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "list-tags-for-resource" }, input)
 end
 
 --- AWS emr-serverless start-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_application(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "start-application" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "start-application" }, input)
 end
 
 --- AWS emr-serverless start-job-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_job_run(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "start-job-run" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "start-job-run" }, input)
 end
 
 --- AWS emr-serverless stop-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_application(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "stop-application" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "stop-application" }, input)
 end
 
 --- AWS emr-serverless tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "tag-resource" }, input)
 end
 
 --- AWS emr-serverless untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "untag-resource" }, input)
 end
 
 --- AWS emr-serverless update-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_application(input)
-	return common.execute_aws_command_with_input({ "emr-serverless", "update-application" }, input)
+	return common.execute_aws_command_skeleton({ "emr-serverless", "update-application" }, input)
 end
 
 return M

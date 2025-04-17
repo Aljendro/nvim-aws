@@ -3,756 +3,756 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IOTWIRELESS service functions
+--- AWS iotwireless service functions
 local M = {}
 
 --- AWS iotwireless associate-aws-account-with-partner-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_aws_account_with_partner_account(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "associate-aws-account-with-partner-account" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-aws-account-with-partner-account" }, input)
 end
 
 --- AWS iotwireless associate-multicast-group-with-fuota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_multicast_group_with_fuota_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "associate-multicast-group-with-fuota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-multicast-group-with-fuota-task" }, input)
 end
 
 --- AWS iotwireless associate-wireless-device-with-fuota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_wireless_device_with_fuota_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "associate-wireless-device-with-fuota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-device-with-fuota-task" }, input)
 end
 
 --- AWS iotwireless associate-wireless-device-with-multicast-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_wireless_device_with_multicast_group(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "associate-wireless-device-with-multicast-group" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-device-with-multicast-group" }, input)
 end
 
 --- AWS iotwireless associate-wireless-device-with-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_wireless_device_with_thing(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "associate-wireless-device-with-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-device-with-thing" }, input)
 end
 
 --- AWS iotwireless associate-wireless-gateway-with-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_wireless_gateway_with_certificate(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "associate-wireless-gateway-with-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-gateway-with-certificate" }, input)
 end
 
 --- AWS iotwireless associate-wireless-gateway-with-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_wireless_gateway_with_thing(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "associate-wireless-gateway-with-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "associate-wireless-gateway-with-thing" }, input)
 end
 
 --- AWS iotwireless cancel-multicast-group-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_multicast_group_session(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "cancel-multicast-group-session" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "cancel-multicast-group-session" }, input)
 end
 
 --- AWS iotwireless create-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_destination(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "create-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-destination" }, input)
 end
 
 --- AWS iotwireless create-device-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_device_profile(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "create-device-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-device-profile" }, input)
 end
 
 --- AWS iotwireless create-fuota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_fuota_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "create-fuota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-fuota-task" }, input)
 end
 
 --- AWS iotwireless create-multicast-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_multicast_group(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "create-multicast-group" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-multicast-group" }, input)
 end
 
 --- AWS iotwireless create-network-analyzer-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_network_analyzer_configuration(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "create-network-analyzer-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-network-analyzer-configuration" }, input)
 end
 
 --- AWS iotwireless create-service-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_service_profile(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "create-service-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-service-profile" }, input)
 end
 
 --- AWS iotwireless create-wireless-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_wireless_device(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "create-wireless-device" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-device" }, input)
 end
 
 --- AWS iotwireless create-wireless-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_wireless_gateway(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "create-wireless-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-gateway" }, input)
 end
 
 --- AWS iotwireless create-wireless-gateway-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_wireless_gateway_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "create-wireless-gateway-task" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-gateway-task" }, input)
 end
 
 --- AWS iotwireless create-wireless-gateway-task-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_wireless_gateway_task_definition(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "create-wireless-gateway-task-definition" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "create-wireless-gateway-task-definition" }, input)
 end
 
 --- AWS iotwireless delete-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_destination(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-destination" }, input)
 end
 
 --- AWS iotwireless delete-device-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_device_profile(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-device-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-device-profile" }, input)
 end
 
 --- AWS iotwireless delete-fuota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_fuota_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-fuota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-fuota-task" }, input)
 end
 
 --- AWS iotwireless delete-multicast-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_multicast_group(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-multicast-group" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-multicast-group" }, input)
 end
 
 --- AWS iotwireless delete-network-analyzer-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_analyzer_configuration(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-network-analyzer-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-network-analyzer-configuration" }, input)
 end
 
 --- AWS iotwireless delete-queued-messages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_queued_messages(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-queued-messages" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-queued-messages" }, input)
 end
 
 --- AWS iotwireless delete-service-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_service_profile(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-service-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-service-profile" }, input)
 end
 
 --- AWS iotwireless delete-wireless-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_wireless_device(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-wireless-device" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-device" }, input)
 end
 
 --- AWS iotwireless delete-wireless-device-import-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_wireless_device_import_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-wireless-device-import-task" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-device-import-task" }, input)
 end
 
 --- AWS iotwireless delete-wireless-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_wireless_gateway(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-wireless-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-gateway" }, input)
 end
 
 --- AWS iotwireless delete-wireless-gateway-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_wireless_gateway_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-wireless-gateway-task" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-gateway-task" }, input)
 end
 
 --- AWS iotwireless delete-wireless-gateway-task-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_wireless_gateway_task_definition(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "delete-wireless-gateway-task-definition" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "delete-wireless-gateway-task-definition" }, input)
 end
 
 --- AWS iotwireless deregister-wireless-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_wireless_device(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "deregister-wireless-device" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "deregister-wireless-device" }, input)
 end
 
 --- AWS iotwireless disassociate-aws-account-from-partner-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_aws_account_from_partner_account(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "disassociate-aws-account-from-partner-account" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-aws-account-from-partner-account" }, input)
 end
 
 --- AWS iotwireless disassociate-multicast-group-from-fuota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_multicast_group_from_fuota_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "disassociate-multicast-group-from-fuota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-multicast-group-from-fuota-task" }, input)
 end
 
 --- AWS iotwireless disassociate-wireless-device-from-fuota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_wireless_device_from_fuota_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "disassociate-wireless-device-from-fuota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-device-from-fuota-task" }, input)
 end
 
 --- AWS iotwireless disassociate-wireless-device-from-multicast-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_wireless_device_from_multicast_group(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "disassociate-wireless-device-from-multicast-group" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-device-from-multicast-group" }, input)
 end
 
 --- AWS iotwireless disassociate-wireless-device-from-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_wireless_device_from_thing(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "disassociate-wireless-device-from-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-device-from-thing" }, input)
 end
 
 --- AWS iotwireless disassociate-wireless-gateway-from-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_wireless_gateway_from_certificate(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "disassociate-wireless-gateway-from-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-gateway-from-certificate" }, input)
 end
 
 --- AWS iotwireless disassociate-wireless-gateway-from-thing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_wireless_gateway_from_thing(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "disassociate-wireless-gateway-from-thing" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "disassociate-wireless-gateway-from-thing" }, input)
 end
 
 --- AWS iotwireless get-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_destination(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-destination" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-destination" }, input)
 end
 
 --- AWS iotwireless get-device-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_device_profile(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-device-profile" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-device-profile" }, input)
 end
 
 --- AWS iotwireless get-event-configuration-by-resource-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_event_configuration_by_resource_types(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-event-configuration-by-resource-types" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-event-configuration-by-resource-types" }, input)
 end
 
 --- AWS iotwireless get-fuota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_fuota_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-fuota-task" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-fuota-task" }, input)
 end
 
 --- AWS iotwireless get-log-levels-by-resource-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_log_levels_by_resource_types(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-log-levels-by-resource-types" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-log-levels-by-resource-types" }, input)
 end
 
 --- AWS iotwireless get-metric-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_metric_configuration(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-metric-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-metric-configuration" }, input)
 end
 
 --- AWS iotwireless get-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_metrics(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-metrics" }, input)
 end
 
 --- AWS iotwireless get-multicast-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_multicast_group(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-multicast-group" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-multicast-group" }, input)
 end
 
 --- AWS iotwireless get-multicast-group-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_multicast_group_session(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-multicast-group-session" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-multicast-group-session" }, input)
 end
 
 --- AWS iotwireless get-network-analyzer-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_network_analyzer_configuration(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-network-analyzer-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-network-analyzer-configuration" }, input)
 end
 
 --- AWS iotwireless get-partner-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_partner_account(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-partner-account" }, input)
-end
-
---- AWS iotwireless get-resource-event-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_resource_event_configuration(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-resource-event-configuration" }, input)
-end
-
---- AWS iotwireless get-resource-log-level operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_resource_log_level(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-resource-log-level" }, input)
-end
-
---- AWS iotwireless get-service-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_service_endpoint(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-service-endpoint" }, input)
-end
-
---- AWS iotwireless get-service-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_service_profile(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-service-profile" }, input)
-end
-
---- AWS iotwireless get-wireless-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_wireless_device(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-wireless-device" }, input)
-end
-
---- AWS iotwireless get-wireless-device-import-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_wireless_device_import_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-wireless-device-import-task" }, input)
-end
-
---- AWS iotwireless get-wireless-device-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_wireless_device_statistics(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-wireless-device-statistics" }, input)
-end
-
---- AWS iotwireless get-wireless-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_wireless_gateway(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-wireless-gateway" }, input)
-end
-
---- AWS iotwireless get-wireless-gateway-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_wireless_gateway_certificate(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-wireless-gateway-certificate" }, input)
-end
-
---- AWS iotwireless get-wireless-gateway-firmware-information operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_wireless_gateway_firmware_information(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-wireless-gateway-firmware-information" }, input)
-end
-
---- AWS iotwireless get-wireless-gateway-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_wireless_gateway_statistics(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-wireless-gateway-statistics" }, input)
-end
-
---- AWS iotwireless get-wireless-gateway-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_wireless_gateway_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-wireless-gateway-task" }, input)
-end
-
---- AWS iotwireless get-wireless-gateway-task-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_wireless_gateway_task_definition(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "get-wireless-gateway-task-definition" }, input)
-end
-
---- AWS iotwireless list-destinations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_destinations(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-destinations" }, input)
-end
-
---- AWS iotwireless list-device-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_device_profiles(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-device-profiles" }, input)
-end
-
---- AWS iotwireless list-devices-for-wireless-device-import-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_devices_for_wireless_device_import_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-devices-for-wireless-device-import-task" }, input)
-end
-
---- AWS iotwireless list-event-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_event_configurations(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-event-configurations" }, input)
-end
-
---- AWS iotwireless list-fuota-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_fuota_tasks(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-fuota-tasks" }, input)
-end
-
---- AWS iotwireless list-multicast-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_multicast_groups(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-multicast-groups" }, input)
-end
-
---- AWS iotwireless list-multicast-groups-by-fuota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_multicast_groups_by_fuota_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-multicast-groups-by-fuota-task" }, input)
-end
-
---- AWS iotwireless list-network-analyzer-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_network_analyzer_configurations(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-network-analyzer-configurations" }, input)
-end
-
---- AWS iotwireless list-partner-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_partner_accounts(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-partner-accounts" }, input)
-end
-
---- AWS iotwireless list-queued-messages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_queued_messages(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-queued-messages" }, input)
-end
-
---- AWS iotwireless list-service-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_service_profiles(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-service-profiles" }, input)
-end
-
---- AWS iotwireless list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-tags-for-resource" }, input)
-end
-
---- AWS iotwireless list-wireless-device-import-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_wireless_device_import_tasks(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-wireless-device-import-tasks" }, input)
-end
-
---- AWS iotwireless list-wireless-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_wireless_devices(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-wireless-devices" }, input)
-end
-
---- AWS iotwireless list-wireless-gateway-task-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_wireless_gateway_task_definitions(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-wireless-gateway-task-definitions" }, input)
-end
-
---- AWS iotwireless list-wireless-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_wireless_gateways(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "list-wireless-gateways" }, input)
-end
-
---- AWS iotwireless put-resource-log-level operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_resource_log_level(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "put-resource-log-level" }, input)
-end
-
---- AWS iotwireless reset-all-resource-log-levels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.reset_all_resource_log_levels(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "reset-all-resource-log-levels" }, input)
-end
-
---- AWS iotwireless reset-resource-log-level operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.reset_resource_log_level(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "reset-resource-log-level" }, input)
-end
-
---- AWS iotwireless send-data-to-multicast-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.send_data_to_multicast_group(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "send-data-to-multicast-group" }, input)
-end
-
---- AWS iotwireless send-data-to-wireless-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.send_data_to_wireless_device(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "send-data-to-wireless-device" }, input)
-end
-
---- AWS iotwireless start-bulk-associate-wireless-device-with-multicast-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_bulk_associate_wireless_device_with_multicast_group(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "start-bulk-associate-wireless-device-with-multicast-group" }, input)
-end
-
---- AWS iotwireless start-bulk-disassociate-wireless-device-from-multicast-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_bulk_disassociate_wireless_device_from_multicast_group(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "start-bulk-disassociate-wireless-device-from-multicast-group" }, input)
-end
-
---- AWS iotwireless start-fuota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_fuota_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "start-fuota-task" }, input)
-end
-
---- AWS iotwireless start-multicast-group-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_multicast_group_session(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "start-multicast-group-session" }, input)
-end
-
---- AWS iotwireless start-single-wireless-device-import-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_single_wireless_device_import_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "start-single-wireless-device-import-task" }, input)
-end
-
---- AWS iotwireless start-wireless-device-import-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_wireless_device_import_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "start-wireless-device-import-task" }, input)
-end
-
---- AWS iotwireless tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "tag-resource" }, input)
-end
-
---- AWS iotwireless test-wireless-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.test_wireless_device(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "test-wireless-device" }, input)
-end
-
---- AWS iotwireless untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "untag-resource" }, input)
-end
-
---- AWS iotwireless update-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_destination(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-destination" }, input)
-end
-
---- AWS iotwireless update-event-configuration-by-resource-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_event_configuration_by_resource_types(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-event-configuration-by-resource-types" }, input)
-end
-
---- AWS iotwireless update-fuota-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_fuota_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-fuota-task" }, input)
-end
-
---- AWS iotwireless update-log-levels-by-resource-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_log_levels_by_resource_types(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-log-levels-by-resource-types" }, input)
-end
-
---- AWS iotwireless update-metric-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_metric_configuration(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-metric-configuration" }, input)
-end
-
---- AWS iotwireless update-multicast-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_multicast_group(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-multicast-group" }, input)
-end
-
---- AWS iotwireless update-network-analyzer-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_network_analyzer_configuration(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-network-analyzer-configuration" }, input)
-end
-
---- AWS iotwireless update-partner-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_partner_account(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-partner-account" }, input)
-end
-
---- AWS iotwireless update-resource-event-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_resource_event_configuration(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-resource-event-configuration" }, input)
-end
-
---- AWS iotwireless update-resource-position operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_resource_position(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-resource-position" }, input)
-end
-
---- AWS iotwireless update-wireless-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_wireless_device(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-wireless-device" }, input)
-end
-
---- AWS iotwireless update-wireless-device-import-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_wireless_device_import_task(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-wireless-device-import-task" }, input)
-end
-
---- AWS iotwireless update-wireless-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_wireless_gateway(input)
-	return common.execute_aws_command_with_input({ "iotwireless", "update-wireless-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-partner-account" }, input)
 end
 
 --- AWS iotwireless get-position-estimate operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_position_estimate(input)
-	return common.execute_aws_command_with_raw_input({ "iotwireless", "get-position-estimate" }, input)
+	return common.execute_aws_command({ "iotwireless", "get-position-estimate" }, input)
+end
+
+--- AWS iotwireless get-resource-event-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_resource_event_configuration(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-resource-event-configuration" }, input)
+end
+
+--- AWS iotwireless get-resource-log-level operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_resource_log_level(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-resource-log-level" }, input)
 end
 
 --- AWS iotwireless get-resource-position operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_position(input)
-	return common.execute_aws_command_with_raw_input({ "iotwireless", "get-resource-position" }, input)
+	return common.execute_aws_command({ "iotwireless", "get-resource-position" }, input)
+end
+
+--- AWS iotwireless get-service-endpoint operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_service_endpoint(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-service-endpoint" }, input)
+end
+
+--- AWS iotwireless get-service-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_service_profile(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-service-profile" }, input)
+end
+
+--- AWS iotwireless get-wireless-device operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_wireless_device(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-device" }, input)
+end
+
+--- AWS iotwireless get-wireless-device-import-task operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_wireless_device_import_task(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-device-import-task" }, input)
+end
+
+--- AWS iotwireless get-wireless-device-statistics operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_wireless_device_statistics(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-device-statistics" }, input)
+end
+
+--- AWS iotwireless get-wireless-gateway operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_wireless_gateway(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway" }, input)
+end
+
+--- AWS iotwireless get-wireless-gateway-certificate operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_wireless_gateway_certificate(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-certificate" }, input)
+end
+
+--- AWS iotwireless get-wireless-gateway-firmware-information operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_wireless_gateway_firmware_information(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-firmware-information" }, input)
+end
+
+--- AWS iotwireless get-wireless-gateway-statistics operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_wireless_gateway_statistics(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-statistics" }, input)
+end
+
+--- AWS iotwireless get-wireless-gateway-task operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_wireless_gateway_task(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-task" }, input)
+end
+
+--- AWS iotwireless get-wireless-gateway-task-definition operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_wireless_gateway_task_definition(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "get-wireless-gateway-task-definition" }, input)
+end
+
+--- AWS iotwireless list-destinations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_destinations(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-destinations" }, input)
+end
+
+--- AWS iotwireless list-device-profiles operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_device_profiles(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-device-profiles" }, input)
+end
+
+--- AWS iotwireless list-devices-for-wireless-device-import-task operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_devices_for_wireless_device_import_task(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-devices-for-wireless-device-import-task" }, input)
+end
+
+--- AWS iotwireless list-event-configurations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_event_configurations(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-event-configurations" }, input)
+end
+
+--- AWS iotwireless list-fuota-tasks operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_fuota_tasks(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-fuota-tasks" }, input)
+end
+
+--- AWS iotwireless list-multicast-groups operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_multicast_groups(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-multicast-groups" }, input)
+end
+
+--- AWS iotwireless list-multicast-groups-by-fuota-task operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_multicast_groups_by_fuota_task(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-multicast-groups-by-fuota-task" }, input)
+end
+
+--- AWS iotwireless list-network-analyzer-configurations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_network_analyzer_configurations(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-network-analyzer-configurations" }, input)
+end
+
+--- AWS iotwireless list-partner-accounts operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_partner_accounts(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-partner-accounts" }, input)
+end
+
+--- AWS iotwireless list-queued-messages operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_queued_messages(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-queued-messages" }, input)
+end
+
+--- AWS iotwireless list-service-profiles operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_service_profiles(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-service-profiles" }, input)
+end
+
+--- AWS iotwireless list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-tags-for-resource" }, input)
+end
+
+--- AWS iotwireless list-wireless-device-import-tasks operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_wireless_device_import_tasks(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-device-import-tasks" }, input)
+end
+
+--- AWS iotwireless list-wireless-devices operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_wireless_devices(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-devices" }, input)
+end
+
+--- AWS iotwireless list-wireless-gateway-task-definitions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_wireless_gateway_task_definitions(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-gateway-task-definitions" }, input)
+end
+
+--- AWS iotwireless list-wireless-gateways operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_wireless_gateways(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "list-wireless-gateways" }, input)
+end
+
+--- AWS iotwireless put-resource-log-level operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_resource_log_level(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "put-resource-log-level" }, input)
+end
+
+--- AWS iotwireless reset-all-resource-log-levels operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.reset_all_resource_log_levels(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "reset-all-resource-log-levels" }, input)
+end
+
+--- AWS iotwireless reset-resource-log-level operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.reset_resource_log_level(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "reset-resource-log-level" }, input)
+end
+
+--- AWS iotwireless send-data-to-multicast-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.send_data_to_multicast_group(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "send-data-to-multicast-group" }, input)
+end
+
+--- AWS iotwireless send-data-to-wireless-device operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.send_data_to_wireless_device(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "send-data-to-wireless-device" }, input)
+end
+
+--- AWS iotwireless start-bulk-associate-wireless-device-with-multicast-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_bulk_associate_wireless_device_with_multicast_group(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-bulk-associate-wireless-device-with-multicast-group" }, input)
+end
+
+--- AWS iotwireless start-bulk-disassociate-wireless-device-from-multicast-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_bulk_disassociate_wireless_device_from_multicast_group(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-bulk-disassociate-wireless-device-from-multicast-group" }, input)
+end
+
+--- AWS iotwireless start-fuota-task operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_fuota_task(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-fuota-task" }, input)
+end
+
+--- AWS iotwireless start-multicast-group-session operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_multicast_group_session(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-multicast-group-session" }, input)
+end
+
+--- AWS iotwireless start-single-wireless-device-import-task operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_single_wireless_device_import_task(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-single-wireless-device-import-task" }, input)
+end
+
+--- AWS iotwireless start-wireless-device-import-task operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_wireless_device_import_task(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "start-wireless-device-import-task" }, input)
+end
+
+--- AWS iotwireless tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "tag-resource" }, input)
+end
+
+--- AWS iotwireless test-wireless-device operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.test_wireless_device(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "test-wireless-device" }, input)
+end
+
+--- AWS iotwireless untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "untag-resource" }, input)
+end
+
+--- AWS iotwireless update-destination operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_destination(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-destination" }, input)
+end
+
+--- AWS iotwireless update-event-configuration-by-resource-types operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_event_configuration_by_resource_types(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-event-configuration-by-resource-types" }, input)
+end
+
+--- AWS iotwireless update-fuota-task operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_fuota_task(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-fuota-task" }, input)
+end
+
+--- AWS iotwireless update-log-levels-by-resource-types operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_log_levels_by_resource_types(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-log-levels-by-resource-types" }, input)
+end
+
+--- AWS iotwireless update-metric-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_metric_configuration(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-metric-configuration" }, input)
+end
+
+--- AWS iotwireless update-multicast-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_multicast_group(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-multicast-group" }, input)
+end
+
+--- AWS iotwireless update-network-analyzer-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_network_analyzer_configuration(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-network-analyzer-configuration" }, input)
+end
+
+--- AWS iotwireless update-partner-account operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_partner_account(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-partner-account" }, input)
+end
+
+--- AWS iotwireless update-resource-event-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_resource_event_configuration(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-resource-event-configuration" }, input)
+end
+
+--- AWS iotwireless update-resource-position operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_resource_position(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-resource-position" }, input)
+end
+
+--- AWS iotwireless update-wireless-device operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_wireless_device(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-wireless-device" }, input)
+end
+
+--- AWS iotwireless update-wireless-device-import-task operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_wireless_device_import_task(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-wireless-device-import-task" }, input)
+end
+
+--- AWS iotwireless update-wireless-gateway operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_wireless_gateway(input)
+	return common.execute_aws_command_skeleton({ "iotwireless", "update-wireless-gateway" }, input)
 end
 
 return M

@@ -3,28 +3,28 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SAGEMAKER-EDGE service functions
+--- AWS sagemaker-edge service functions
 local M = {}
 
 --- AWS sagemaker-edge get-deployments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_deployments(input)
-	return common.execute_aws_command_with_input({ "sagemaker-edge", "get-deployments" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-edge", "get-deployments" }, input)
 end
 
 --- AWS sagemaker-edge get-device-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_device_registration(input)
-	return common.execute_aws_command_with_input({ "sagemaker-edge", "get-device-registration" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-edge", "get-device-registration" }, input)
 end
 
 --- AWS sagemaker-edge send-heartbeat operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_heartbeat(input)
-	return common.execute_aws_command_with_input({ "sagemaker-edge", "send-heartbeat" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-edge", "send-heartbeat" }, input)
 end
 
 return M

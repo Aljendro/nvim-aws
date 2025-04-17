@@ -3,252 +3,252 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SHIELD service functions
+--- AWS shield service functions
 local M = {}
 
 --- AWS shield associate-drt-log-bucket operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_drt_log_bucket(input)
-	return common.execute_aws_command_with_input({ "shield", "associate-drt-log-bucket" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "associate-drt-log-bucket" }, input)
 end
 
 --- AWS shield associate-drt-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_drt_role(input)
-	return common.execute_aws_command_with_input({ "shield", "associate-drt-role" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "associate-drt-role" }, input)
 end
 
 --- AWS shield associate-health-check operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_health_check(input)
-	return common.execute_aws_command_with_input({ "shield", "associate-health-check" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "associate-health-check" }, input)
 end
 
 --- AWS shield associate-proactive-engagement-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_proactive_engagement_details(input)
-	return common.execute_aws_command_with_input({ "shield", "associate-proactive-engagement-details" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "associate-proactive-engagement-details" }, input)
 end
 
 --- AWS shield create-protection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_protection(input)
-	return common.execute_aws_command_with_input({ "shield", "create-protection" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "create-protection" }, input)
 end
 
 --- AWS shield create-protection-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_protection_group(input)
-	return common.execute_aws_command_with_input({ "shield", "create-protection-group" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "create-protection-group" }, input)
 end
 
 --- AWS shield create-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_subscription(input)
-	return common.execute_aws_command_with_input({ "shield", "create-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "create-subscription" }, input)
 end
 
 --- AWS shield delete-protection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_protection(input)
-	return common.execute_aws_command_with_input({ "shield", "delete-protection" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "delete-protection" }, input)
 end
 
 --- AWS shield delete-protection-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_protection_group(input)
-	return common.execute_aws_command_with_input({ "shield", "delete-protection-group" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "delete-protection-group" }, input)
 end
 
 --- AWS shield describe-attack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_attack(input)
-	return common.execute_aws_command_with_input({ "shield", "describe-attack" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "describe-attack" }, input)
 end
 
 --- AWS shield describe-attack-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_attack_statistics(input)
-	return common.execute_aws_command_with_input({ "shield", "describe-attack-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "describe-attack-statistics" }, input)
 end
 
 --- AWS shield describe-drt-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_drt_access(input)
-	return common.execute_aws_command_with_input({ "shield", "describe-drt-access" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "describe-drt-access" }, input)
 end
 
 --- AWS shield describe-emergency-contact-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_emergency_contact_settings(input)
-	return common.execute_aws_command_with_input({ "shield", "describe-emergency-contact-settings" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "describe-emergency-contact-settings" }, input)
 end
 
 --- AWS shield describe-protection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_protection(input)
-	return common.execute_aws_command_with_input({ "shield", "describe-protection" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "describe-protection" }, input)
 end
 
 --- AWS shield describe-protection-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_protection_group(input)
-	return common.execute_aws_command_with_input({ "shield", "describe-protection-group" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "describe-protection-group" }, input)
 end
 
 --- AWS shield describe-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_subscription(input)
-	return common.execute_aws_command_with_input({ "shield", "describe-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "describe-subscription" }, input)
 end
 
 --- AWS shield disable-application-layer-automatic-response operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_application_layer_automatic_response(input)
-	return common.execute_aws_command_with_input({ "shield", "disable-application-layer-automatic-response" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "disable-application-layer-automatic-response" }, input)
 end
 
 --- AWS shield disable-proactive-engagement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_proactive_engagement(input)
-	return common.execute_aws_command_with_input({ "shield", "disable-proactive-engagement" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "disable-proactive-engagement" }, input)
 end
 
 --- AWS shield disassociate-drt-log-bucket operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_drt_log_bucket(input)
-	return common.execute_aws_command_with_input({ "shield", "disassociate-drt-log-bucket" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "disassociate-drt-log-bucket" }, input)
 end
 
 --- AWS shield disassociate-drt-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_drt_role(input)
-	return common.execute_aws_command_with_input({ "shield", "disassociate-drt-role" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "disassociate-drt-role" }, input)
 end
 
 --- AWS shield disassociate-health-check operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_health_check(input)
-	return common.execute_aws_command_with_input({ "shield", "disassociate-health-check" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "disassociate-health-check" }, input)
 end
 
 --- AWS shield enable-application-layer-automatic-response operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_application_layer_automatic_response(input)
-	return common.execute_aws_command_with_input({ "shield", "enable-application-layer-automatic-response" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "enable-application-layer-automatic-response" }, input)
 end
 
 --- AWS shield enable-proactive-engagement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_proactive_engagement(input)
-	return common.execute_aws_command_with_input({ "shield", "enable-proactive-engagement" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "enable-proactive-engagement" }, input)
 end
 
 --- AWS shield get-subscription-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_subscription_state(input)
-	return common.execute_aws_command_with_input({ "shield", "get-subscription-state" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "get-subscription-state" }, input)
 end
 
 --- AWS shield list-attacks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_attacks(input)
-	return common.execute_aws_command_with_input({ "shield", "list-attacks" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "list-attacks" }, input)
 end
 
 --- AWS shield list-protection-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_protection_groups(input)
-	return common.execute_aws_command_with_input({ "shield", "list-protection-groups" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "list-protection-groups" }, input)
 end
 
 --- AWS shield list-protections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_protections(input)
-	return common.execute_aws_command_with_input({ "shield", "list-protections" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "list-protections" }, input)
 end
 
 --- AWS shield list-resources-in-protection-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resources_in_protection_group(input)
-	return common.execute_aws_command_with_input({ "shield", "list-resources-in-protection-group" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "list-resources-in-protection-group" }, input)
 end
 
 --- AWS shield list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "shield", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "list-tags-for-resource" }, input)
 end
 
 --- AWS shield tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "shield", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "tag-resource" }, input)
 end
 
 --- AWS shield untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "shield", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "untag-resource" }, input)
 end
 
 --- AWS shield update-application-layer-automatic-response operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_application_layer_automatic_response(input)
-	return common.execute_aws_command_with_input({ "shield", "update-application-layer-automatic-response" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "update-application-layer-automatic-response" }, input)
 end
 
 --- AWS shield update-emergency-contact-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_emergency_contact_settings(input)
-	return common.execute_aws_command_with_input({ "shield", "update-emergency-contact-settings" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "update-emergency-contact-settings" }, input)
 end
 
 --- AWS shield update-protection-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_protection_group(input)
-	return common.execute_aws_command_with_input({ "shield", "update-protection-group" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "update-protection-group" }, input)
 end
 
 --- AWS shield update-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_subscription(input)
-	return common.execute_aws_command_with_input({ "shield", "update-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "shield", "update-subscription" }, input)
 end
 
 return M

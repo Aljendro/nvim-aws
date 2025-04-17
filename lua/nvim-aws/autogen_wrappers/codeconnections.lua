@@ -3,196 +3,196 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CODECONNECTIONS service functions
+--- AWS codeconnections service functions
 local M = {}
 
 --- AWS codeconnections create-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_connection(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "create-connection" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "create-connection" }, input)
 end
 
 --- AWS codeconnections create-host operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_host(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "create-host" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "create-host" }, input)
 end
 
 --- AWS codeconnections create-repository-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_repository_link(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "create-repository-link" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "create-repository-link" }, input)
 end
 
 --- AWS codeconnections create-sync-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_sync_configuration(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "create-sync-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "create-sync-configuration" }, input)
 end
 
 --- AWS codeconnections delete-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connection(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "delete-connection" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "delete-connection" }, input)
 end
 
 --- AWS codeconnections delete-host operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_host(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "delete-host" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "delete-host" }, input)
 end
 
 --- AWS codeconnections delete-repository-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_repository_link(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "delete-repository-link" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "delete-repository-link" }, input)
 end
 
 --- AWS codeconnections delete-sync-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_sync_configuration(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "delete-sync-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "delete-sync-configuration" }, input)
 end
 
 --- AWS codeconnections get-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_connection(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "get-connection" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "get-connection" }, input)
 end
 
 --- AWS codeconnections get-host operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_host(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "get-host" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "get-host" }, input)
 end
 
 --- AWS codeconnections get-repository-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_repository_link(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "get-repository-link" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "get-repository-link" }, input)
 end
 
 --- AWS codeconnections get-repository-sync-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_repository_sync_status(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "get-repository-sync-status" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "get-repository-sync-status" }, input)
 end
 
 --- AWS codeconnections get-resource-sync-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_sync_status(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "get-resource-sync-status" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "get-resource-sync-status" }, input)
 end
 
 --- AWS codeconnections get-sync-blocker-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sync_blocker_summary(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "get-sync-blocker-summary" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "get-sync-blocker-summary" }, input)
 end
 
 --- AWS codeconnections get-sync-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sync_configuration(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "get-sync-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "get-sync-configuration" }, input)
 end
 
 --- AWS codeconnections list-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_connections(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "list-connections" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "list-connections" }, input)
 end
 
 --- AWS codeconnections list-hosts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_hosts(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "list-hosts" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "list-hosts" }, input)
 end
 
 --- AWS codeconnections list-repository-links operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_repository_links(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "list-repository-links" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "list-repository-links" }, input)
 end
 
 --- AWS codeconnections list-repository-sync-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_repository_sync_definitions(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "list-repository-sync-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "list-repository-sync-definitions" }, input)
 end
 
 --- AWS codeconnections list-sync-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_sync_configurations(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "list-sync-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "list-sync-configurations" }, input)
 end
 
 --- AWS codeconnections list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "list-tags-for-resource" }, input)
 end
 
 --- AWS codeconnections tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "tag-resource" }, input)
 end
 
 --- AWS codeconnections untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "untag-resource" }, input)
 end
 
 --- AWS codeconnections update-host operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_host(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "update-host" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "update-host" }, input)
 end
 
 --- AWS codeconnections update-repository-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_repository_link(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "update-repository-link" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "update-repository-link" }, input)
 end
 
 --- AWS codeconnections update-sync-blocker operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_sync_blocker(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "update-sync-blocker" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "update-sync-blocker" }, input)
 end
 
 --- AWS codeconnections update-sync-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_sync_configuration(input)
-	return common.execute_aws_command_with_input({ "codeconnections", "update-sync-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "codeconnections", "update-sync-configuration" }, input)
 end
 
 return M

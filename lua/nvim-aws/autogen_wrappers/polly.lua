@@ -3,70 +3,70 @@
 
 local common = require("nvim-aws.common")
 
---- AWS POLLY service functions
+--- AWS polly service functions
 local M = {}
 
 --- AWS polly delete-lexicon operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_lexicon(input)
-	return common.execute_aws_command_with_input({ "polly", "delete-lexicon" }, input)
+	return common.execute_aws_command_skeleton({ "polly", "delete-lexicon" }, input)
 end
 
 --- AWS polly describe-voices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_voices(input)
-	return common.execute_aws_command_with_input({ "polly", "describe-voices" }, input)
+	return common.execute_aws_command_skeleton({ "polly", "describe-voices" }, input)
 end
 
 --- AWS polly get-lexicon operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_lexicon(input)
-	return common.execute_aws_command_with_input({ "polly", "get-lexicon" }, input)
+	return common.execute_aws_command_skeleton({ "polly", "get-lexicon" }, input)
 end
 
 --- AWS polly get-speech-synthesis-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_speech_synthesis_task(input)
-	return common.execute_aws_command_with_input({ "polly", "get-speech-synthesis-task" }, input)
+	return common.execute_aws_command_skeleton({ "polly", "get-speech-synthesis-task" }, input)
 end
 
 --- AWS polly list-lexicons operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_lexicons(input)
-	return common.execute_aws_command_with_input({ "polly", "list-lexicons" }, input)
+	return common.execute_aws_command_skeleton({ "polly", "list-lexicons" }, input)
 end
 
 --- AWS polly list-speech-synthesis-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_speech_synthesis_tasks(input)
-	return common.execute_aws_command_with_input({ "polly", "list-speech-synthesis-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "polly", "list-speech-synthesis-tasks" }, input)
 end
 
 --- AWS polly put-lexicon operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_lexicon(input)
-	return common.execute_aws_command_with_input({ "polly", "put-lexicon" }, input)
+	return common.execute_aws_command_skeleton({ "polly", "put-lexicon" }, input)
 end
 
 --- AWS polly start-speech-synthesis-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_speech_synthesis_task(input)
-	return common.execute_aws_command_with_input({ "polly", "start-speech-synthesis-task" }, input)
+	return common.execute_aws_command_skeleton({ "polly", "start-speech-synthesis-task" }, input)
 end
 
 --- AWS polly synthesize-speech operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.synthesize_speech(input)
-	return common.execute_aws_command_with_raw_input({ "polly", "synthesize-speech" }, input)
+	return common.execute_aws_command({ "polly", "synthesize-speech" }, input)
 end
 
 return M

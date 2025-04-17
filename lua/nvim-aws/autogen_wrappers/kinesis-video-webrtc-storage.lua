@@ -3,21 +3,21 @@
 
 local common = require("nvim-aws.common")
 
---- AWS KINESIS-VIDEO-WEBRTC-STORAGE service functions
+--- AWS kinesis-video-webrtc-storage service functions
 local M = {}
 
 --- AWS kinesis-video-webrtc-storage join-storage-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.join_storage_session(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-webrtc-storage", "join-storage-session" }, input)
+	return common.execute_aws_command_skeleton({ "kinesis-video-webrtc-storage", "join-storage-session" }, input)
 end
 
 --- AWS kinesis-video-webrtc-storage join-storage-session-as-viewer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.join_storage_session_as_viewer(input)
-	return common.execute_aws_command_with_input({ "kinesis-video-webrtc-storage", "join-storage-session-as-viewer" }, input)
+	return common.execute_aws_command_skeleton({ "kinesis-video-webrtc-storage", "join-storage-session-as-viewer" }, input)
 end
 
 return M

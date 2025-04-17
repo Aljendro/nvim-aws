@@ -3,84 +3,84 @@
 
 local common = require("nvim-aws.common")
 
---- AWS REDSHIFT-DATA service functions
+--- AWS redshift-data service functions
 local M = {}
 
 --- AWS redshift-data batch-execute-statement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_execute_statement(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "batch-execute-statement" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "batch-execute-statement" }, input)
 end
 
 --- AWS redshift-data cancel-statement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_statement(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "cancel-statement" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "cancel-statement" }, input)
 end
 
 --- AWS redshift-data describe-statement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_statement(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "describe-statement" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "describe-statement" }, input)
 end
 
 --- AWS redshift-data describe-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_table(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "describe-table" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "describe-table" }, input)
 end
 
 --- AWS redshift-data execute-statement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.execute_statement(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "execute-statement" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "execute-statement" }, input)
 end
 
 --- AWS redshift-data get-statement-result operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_statement_result(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "get-statement-result" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "get-statement-result" }, input)
 end
 
 --- AWS redshift-data get-statement-result-v2 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_statement_result_v2(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "get-statement-result-v2" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "get-statement-result-v2" }, input)
 end
 
 --- AWS redshift-data list-databases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_databases(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "list-databases" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "list-databases" }, input)
 end
 
 --- AWS redshift-data list-schemas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_schemas(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "list-schemas" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "list-schemas" }, input)
 end
 
 --- AWS redshift-data list-statements operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_statements(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "list-statements" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "list-statements" }, input)
 end
 
 --- AWS redshift-data list-tables operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tables(input)
-	return common.execute_aws_command_with_input({ "redshift-data", "list-tables" }, input)
+	return common.execute_aws_command_skeleton({ "redshift-data", "list-tables" }, input)
 end
 
 return M

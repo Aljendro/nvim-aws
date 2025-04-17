@@ -3,378 +3,378 @@
 
 local common = require("nvim-aws.common")
 
---- AWS KMS service functions
+--- AWS kms service functions
 local M = {}
 
 --- AWS kms cancel-key-deletion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_key_deletion(input)
-	return common.execute_aws_command_with_input({ "kms", "cancel-key-deletion" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "cancel-key-deletion" }, input)
 end
 
 --- AWS kms connect-custom-key-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.connect_custom_key_store(input)
-	return common.execute_aws_command_with_input({ "kms", "connect-custom-key-store" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "connect-custom-key-store" }, input)
 end
 
 --- AWS kms create-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_alias(input)
-	return common.execute_aws_command_with_input({ "kms", "create-alias" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "create-alias" }, input)
 end
 
 --- AWS kms create-custom-key-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_custom_key_store(input)
-	return common.execute_aws_command_with_input({ "kms", "create-custom-key-store" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "create-custom-key-store" }, input)
 end
 
 --- AWS kms create-grant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_grant(input)
-	return common.execute_aws_command_with_input({ "kms", "create-grant" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "create-grant" }, input)
 end
 
 --- AWS kms create-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_key(input)
-	return common.execute_aws_command_with_input({ "kms", "create-key" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "create-key" }, input)
 end
 
 --- AWS kms decrypt operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.decrypt(input)
-	return common.execute_aws_command_with_input({ "kms", "decrypt" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "decrypt" }, input)
 end
 
 --- AWS kms delete-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_alias(input)
-	return common.execute_aws_command_with_input({ "kms", "delete-alias" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "delete-alias" }, input)
 end
 
 --- AWS kms delete-custom-key-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_key_store(input)
-	return common.execute_aws_command_with_input({ "kms", "delete-custom-key-store" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "delete-custom-key-store" }, input)
 end
 
 --- AWS kms delete-imported-key-material operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_imported_key_material(input)
-	return common.execute_aws_command_with_input({ "kms", "delete-imported-key-material" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "delete-imported-key-material" }, input)
 end
 
 --- AWS kms derive-shared-secret operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.derive_shared_secret(input)
-	return common.execute_aws_command_with_input({ "kms", "derive-shared-secret" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "derive-shared-secret" }, input)
 end
 
 --- AWS kms describe-custom-key-stores operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_custom_key_stores(input)
-	return common.execute_aws_command_with_input({ "kms", "describe-custom-key-stores" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "describe-custom-key-stores" }, input)
 end
 
 --- AWS kms describe-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_key(input)
-	return common.execute_aws_command_with_input({ "kms", "describe-key" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "describe-key" }, input)
 end
 
 --- AWS kms disable-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_key(input)
-	return common.execute_aws_command_with_input({ "kms", "disable-key" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "disable-key" }, input)
 end
 
 --- AWS kms disable-key-rotation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_key_rotation(input)
-	return common.execute_aws_command_with_input({ "kms", "disable-key-rotation" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "disable-key-rotation" }, input)
 end
 
 --- AWS kms disconnect-custom-key-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disconnect_custom_key_store(input)
-	return common.execute_aws_command_with_input({ "kms", "disconnect-custom-key-store" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "disconnect-custom-key-store" }, input)
 end
 
 --- AWS kms enable-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_key(input)
-	return common.execute_aws_command_with_input({ "kms", "enable-key" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "enable-key" }, input)
 end
 
 --- AWS kms enable-key-rotation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_key_rotation(input)
-	return common.execute_aws_command_with_input({ "kms", "enable-key-rotation" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "enable-key-rotation" }, input)
 end
 
 --- AWS kms encrypt operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.encrypt(input)
-	return common.execute_aws_command_with_input({ "kms", "encrypt" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "encrypt" }, input)
 end
 
 --- AWS kms generate-data-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_data_key(input)
-	return common.execute_aws_command_with_input({ "kms", "generate-data-key" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "generate-data-key" }, input)
 end
 
 --- AWS kms generate-data-key-pair operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_data_key_pair(input)
-	return common.execute_aws_command_with_input({ "kms", "generate-data-key-pair" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "generate-data-key-pair" }, input)
 end
 
 --- AWS kms generate-data-key-pair-without-plaintext operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_data_key_pair_without_plaintext(input)
-	return common.execute_aws_command_with_input({ "kms", "generate-data-key-pair-without-plaintext" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "generate-data-key-pair-without-plaintext" }, input)
 end
 
 --- AWS kms generate-data-key-without-plaintext operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_data_key_without_plaintext(input)
-	return common.execute_aws_command_with_input({ "kms", "generate-data-key-without-plaintext" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "generate-data-key-without-plaintext" }, input)
 end
 
 --- AWS kms generate-mac operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_mac(input)
-	return common.execute_aws_command_with_input({ "kms", "generate-mac" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "generate-mac" }, input)
 end
 
 --- AWS kms generate-random operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_random(input)
-	return common.execute_aws_command_with_input({ "kms", "generate-random" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "generate-random" }, input)
 end
 
 --- AWS kms get-key-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_key_policy(input)
-	return common.execute_aws_command_with_input({ "kms", "get-key-policy" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "get-key-policy" }, input)
 end
 
 --- AWS kms get-key-rotation-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_key_rotation_status(input)
-	return common.execute_aws_command_with_input({ "kms", "get-key-rotation-status" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "get-key-rotation-status" }, input)
 end
 
 --- AWS kms get-parameters-for-import operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_parameters_for_import(input)
-	return common.execute_aws_command_with_input({ "kms", "get-parameters-for-import" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "get-parameters-for-import" }, input)
 end
 
 --- AWS kms get-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_public_key(input)
-	return common.execute_aws_command_with_input({ "kms", "get-public-key" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "get-public-key" }, input)
 end
 
 --- AWS kms import-key-material operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_key_material(input)
-	return common.execute_aws_command_with_input({ "kms", "import-key-material" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "import-key-material" }, input)
 end
 
 --- AWS kms list-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_aliases(input)
-	return common.execute_aws_command_with_input({ "kms", "list-aliases" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "list-aliases" }, input)
 end
 
 --- AWS kms list-grants operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_grants(input)
-	return common.execute_aws_command_with_input({ "kms", "list-grants" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "list-grants" }, input)
 end
 
 --- AWS kms list-key-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_key_policies(input)
-	return common.execute_aws_command_with_input({ "kms", "list-key-policies" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "list-key-policies" }, input)
 end
 
 --- AWS kms list-key-rotations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_key_rotations(input)
-	return common.execute_aws_command_with_input({ "kms", "list-key-rotations" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "list-key-rotations" }, input)
 end
 
 --- AWS kms list-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_keys(input)
-	return common.execute_aws_command_with_input({ "kms", "list-keys" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "list-keys" }, input)
 end
 
 --- AWS kms list-resource-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_tags(input)
-	return common.execute_aws_command_with_input({ "kms", "list-resource-tags" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "list-resource-tags" }, input)
 end
 
 --- AWS kms list-retirable-grants operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_retirable_grants(input)
-	return common.execute_aws_command_with_input({ "kms", "list-retirable-grants" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "list-retirable-grants" }, input)
 end
 
 --- AWS kms put-key-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_key_policy(input)
-	return common.execute_aws_command_with_input({ "kms", "put-key-policy" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "put-key-policy" }, input)
 end
 
 --- AWS kms re-encrypt operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.re_encrypt(input)
-	return common.execute_aws_command_with_input({ "kms", "re-encrypt" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "re-encrypt" }, input)
 end
 
 --- AWS kms replicate-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replicate_key(input)
-	return common.execute_aws_command_with_input({ "kms", "replicate-key" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "replicate-key" }, input)
 end
 
 --- AWS kms retire-grant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.retire_grant(input)
-	return common.execute_aws_command_with_input({ "kms", "retire-grant" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "retire-grant" }, input)
 end
 
 --- AWS kms revoke-grant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_grant(input)
-	return common.execute_aws_command_with_input({ "kms", "revoke-grant" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "revoke-grant" }, input)
 end
 
 --- AWS kms rotate-key-on-demand operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.rotate_key_on_demand(input)
-	return common.execute_aws_command_with_input({ "kms", "rotate-key-on-demand" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "rotate-key-on-demand" }, input)
 end
 
 --- AWS kms schedule-key-deletion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.schedule_key_deletion(input)
-	return common.execute_aws_command_with_input({ "kms", "schedule-key-deletion" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "schedule-key-deletion" }, input)
 end
 
 --- AWS kms sign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.sign(input)
-	return common.execute_aws_command_with_input({ "kms", "sign" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "sign" }, input)
 end
 
 --- AWS kms tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "kms", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "tag-resource" }, input)
 end
 
 --- AWS kms untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "kms", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "untag-resource" }, input)
 end
 
 --- AWS kms update-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_alias(input)
-	return common.execute_aws_command_with_input({ "kms", "update-alias" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "update-alias" }, input)
 end
 
 --- AWS kms update-custom-key-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_custom_key_store(input)
-	return common.execute_aws_command_with_input({ "kms", "update-custom-key-store" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "update-custom-key-store" }, input)
 end
 
 --- AWS kms update-key-description operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_key_description(input)
-	return common.execute_aws_command_with_input({ "kms", "update-key-description" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "update-key-description" }, input)
 end
 
 --- AWS kms update-primary-region operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_primary_region(input)
-	return common.execute_aws_command_with_input({ "kms", "update-primary-region" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "update-primary-region" }, input)
 end
 
 --- AWS kms verify operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify(input)
-	return common.execute_aws_command_with_input({ "kms", "verify" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "verify" }, input)
 end
 
 --- AWS kms verify-mac operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify_mac(input)
-	return common.execute_aws_command_with_input({ "kms", "verify-mac" }, input)
+	return common.execute_aws_command_skeleton({ "kms", "verify-mac" }, input)
 end
 
 return M

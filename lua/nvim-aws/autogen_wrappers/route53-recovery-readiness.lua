@@ -3,231 +3,231 @@
 
 local common = require("nvim-aws.common")
 
---- AWS ROUTE53-RECOVERY-READINESS service functions
+--- AWS route53-recovery-readiness service functions
 local M = {}
 
 --- AWS route53-recovery-readiness create-cell operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cell(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "create-cell" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "create-cell" }, input)
 end
 
 --- AWS route53-recovery-readiness create-cross-account-authorization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cross_account_authorization(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "create-cross-account-authorization" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "create-cross-account-authorization" }, input)
 end
 
 --- AWS route53-recovery-readiness create-readiness-check operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_readiness_check(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "create-readiness-check" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "create-readiness-check" }, input)
 end
 
 --- AWS route53-recovery-readiness create-recovery-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_recovery_group(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "create-recovery-group" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "create-recovery-group" }, input)
 end
 
 --- AWS route53-recovery-readiness create-resource-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_resource_set(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "create-resource-set" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "create-resource-set" }, input)
 end
 
 --- AWS route53-recovery-readiness delete-cell operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cell(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "delete-cell" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "delete-cell" }, input)
 end
 
 --- AWS route53-recovery-readiness delete-cross-account-authorization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cross_account_authorization(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "delete-cross-account-authorization" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "delete-cross-account-authorization" }, input)
 end
 
 --- AWS route53-recovery-readiness delete-readiness-check operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_readiness_check(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "delete-readiness-check" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "delete-readiness-check" }, input)
 end
 
 --- AWS route53-recovery-readiness delete-recovery-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_recovery_group(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "delete-recovery-group" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "delete-recovery-group" }, input)
 end
 
 --- AWS route53-recovery-readiness delete-resource-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_set(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "delete-resource-set" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "delete-resource-set" }, input)
 end
 
 --- AWS route53-recovery-readiness get-architecture-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_architecture_recommendations(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-architecture-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "get-architecture-recommendations" }, input)
 end
 
 --- AWS route53-recovery-readiness get-cell operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cell(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-cell" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "get-cell" }, input)
 end
 
 --- AWS route53-recovery-readiness get-cell-readiness-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cell_readiness_summary(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-cell-readiness-summary" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "get-cell-readiness-summary" }, input)
 end
 
 --- AWS route53-recovery-readiness get-readiness-check operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_readiness_check(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-readiness-check" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "get-readiness-check" }, input)
 end
 
 --- AWS route53-recovery-readiness get-readiness-check-resource-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_readiness_check_resource_status(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-readiness-check-resource-status" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "get-readiness-check-resource-status" }, input)
 end
 
 --- AWS route53-recovery-readiness get-readiness-check-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_readiness_check_status(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-readiness-check-status" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "get-readiness-check-status" }, input)
 end
 
 --- AWS route53-recovery-readiness get-recovery-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recovery_group(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-recovery-group" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "get-recovery-group" }, input)
 end
 
 --- AWS route53-recovery-readiness get-recovery-group-readiness-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recovery_group_readiness_summary(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-recovery-group-readiness-summary" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "get-recovery-group-readiness-summary" }, input)
 end
 
 --- AWS route53-recovery-readiness get-resource-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_set(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "get-resource-set" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "get-resource-set" }, input)
 end
 
 --- AWS route53-recovery-readiness list-cells operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_cells(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-cells" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "list-cells" }, input)
 end
 
 --- AWS route53-recovery-readiness list-cross-account-authorizations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_cross_account_authorizations(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-cross-account-authorizations" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "list-cross-account-authorizations" }, input)
 end
 
 --- AWS route53-recovery-readiness list-readiness-checks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_readiness_checks(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-readiness-checks" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "list-readiness-checks" }, input)
 end
 
 --- AWS route53-recovery-readiness list-recovery-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recovery_groups(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-recovery-groups" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "list-recovery-groups" }, input)
 end
 
 --- AWS route53-recovery-readiness list-resource-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_sets(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-resource-sets" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "list-resource-sets" }, input)
 end
 
 --- AWS route53-recovery-readiness list-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_rules(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-rules" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "list-rules" }, input)
 end
 
 --- AWS route53-recovery-readiness list-tags-for-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resources(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "list-tags-for-resources" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "list-tags-for-resources" }, input)
 end
 
 --- AWS route53-recovery-readiness tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "tag-resource" }, input)
 end
 
 --- AWS route53-recovery-readiness untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "untag-resource" }, input)
 end
 
 --- AWS route53-recovery-readiness update-cell operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_cell(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "update-cell" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "update-cell" }, input)
 end
 
 --- AWS route53-recovery-readiness update-readiness-check operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_readiness_check(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "update-readiness-check" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "update-readiness-check" }, input)
 end
 
 --- AWS route53-recovery-readiness update-recovery-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_recovery_group(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "update-recovery-group" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "update-recovery-group" }, input)
 end
 
 --- AWS route53-recovery-readiness update-resource-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resource_set(input)
-	return common.execute_aws_command_with_input({ "route53-recovery-readiness", "update-resource-set" }, input)
+	return common.execute_aws_command_skeleton({ "route53-recovery-readiness", "update-resource-set" }, input)
 end
 
 return M

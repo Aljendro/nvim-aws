@@ -3,203 +3,203 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CONTROLTOWER service functions
+--- AWS controltower service functions
 local M = {}
 
 --- AWS controltower create-landing-zone operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_landing_zone(input)
-	return common.execute_aws_command_with_input({ "controltower", "create-landing-zone" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "create-landing-zone" }, input)
 end
 
 --- AWS controltower delete-landing-zone operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_landing_zone(input)
-	return common.execute_aws_command_with_input({ "controltower", "delete-landing-zone" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "delete-landing-zone" }, input)
 end
 
 --- AWS controltower disable-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_baseline(input)
-	return common.execute_aws_command_with_input({ "controltower", "disable-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "disable-baseline" }, input)
 end
 
 --- AWS controltower disable-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_control(input)
-	return common.execute_aws_command_with_input({ "controltower", "disable-control" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "disable-control" }, input)
 end
 
 --- AWS controltower enable-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_baseline(input)
-	return common.execute_aws_command_with_input({ "controltower", "enable-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "enable-baseline" }, input)
 end
 
 --- AWS controltower enable-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_control(input)
-	return common.execute_aws_command_with_input({ "controltower", "enable-control" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "enable-control" }, input)
 end
 
 --- AWS controltower get-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_baseline(input)
-	return common.execute_aws_command_with_input({ "controltower", "get-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "get-baseline" }, input)
 end
 
 --- AWS controltower get-baseline-operation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_baseline_operation(input)
-	return common.execute_aws_command_with_input({ "controltower", "get-baseline-operation" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "get-baseline-operation" }, input)
 end
 
 --- AWS controltower get-control-operation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_control_operation(input)
-	return common.execute_aws_command_with_input({ "controltower", "get-control-operation" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "get-control-operation" }, input)
 end
 
 --- AWS controltower get-enabled-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_enabled_baseline(input)
-	return common.execute_aws_command_with_input({ "controltower", "get-enabled-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "get-enabled-baseline" }, input)
 end
 
 --- AWS controltower get-enabled-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_enabled_control(input)
-	return common.execute_aws_command_with_input({ "controltower", "get-enabled-control" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "get-enabled-control" }, input)
 end
 
 --- AWS controltower get-landing-zone operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_landing_zone(input)
-	return common.execute_aws_command_with_input({ "controltower", "get-landing-zone" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "get-landing-zone" }, input)
 end
 
 --- AWS controltower get-landing-zone-operation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_landing_zone_operation(input)
-	return common.execute_aws_command_with_input({ "controltower", "get-landing-zone-operation" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "get-landing-zone-operation" }, input)
 end
 
 --- AWS controltower list-baselines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_baselines(input)
-	return common.execute_aws_command_with_input({ "controltower", "list-baselines" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "list-baselines" }, input)
 end
 
 --- AWS controltower list-control-operations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_control_operations(input)
-	return common.execute_aws_command_with_input({ "controltower", "list-control-operations" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "list-control-operations" }, input)
 end
 
 --- AWS controltower list-enabled-baselines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_enabled_baselines(input)
-	return common.execute_aws_command_with_input({ "controltower", "list-enabled-baselines" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "list-enabled-baselines" }, input)
 end
 
 --- AWS controltower list-enabled-controls operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_enabled_controls(input)
-	return common.execute_aws_command_with_input({ "controltower", "list-enabled-controls" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "list-enabled-controls" }, input)
 end
 
 --- AWS controltower list-landing-zone-operations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_landing_zone_operations(input)
-	return common.execute_aws_command_with_input({ "controltower", "list-landing-zone-operations" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "list-landing-zone-operations" }, input)
 end
 
 --- AWS controltower list-landing-zones operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_landing_zones(input)
-	return common.execute_aws_command_with_input({ "controltower", "list-landing-zones" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "list-landing-zones" }, input)
 end
 
 --- AWS controltower list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "controltower", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "list-tags-for-resource" }, input)
 end
 
 --- AWS controltower reset-enabled-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_enabled_baseline(input)
-	return common.execute_aws_command_with_input({ "controltower", "reset-enabled-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "reset-enabled-baseline" }, input)
 end
 
 --- AWS controltower reset-enabled-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_enabled_control(input)
-	return common.execute_aws_command_with_input({ "controltower", "reset-enabled-control" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "reset-enabled-control" }, input)
 end
 
 --- AWS controltower reset-landing-zone operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_landing_zone(input)
-	return common.execute_aws_command_with_input({ "controltower", "reset-landing-zone" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "reset-landing-zone" }, input)
 end
 
 --- AWS controltower tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "controltower", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "tag-resource" }, input)
 end
 
 --- AWS controltower untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "controltower", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "untag-resource" }, input)
 end
 
 --- AWS controltower update-enabled-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_enabled_baseline(input)
-	return common.execute_aws_command_with_input({ "controltower", "update-enabled-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "update-enabled-baseline" }, input)
 end
 
 --- AWS controltower update-enabled-control operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_enabled_control(input)
-	return common.execute_aws_command_with_input({ "controltower", "update-enabled-control" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "update-enabled-control" }, input)
 end
 
 --- AWS controltower update-landing-zone operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_landing_zone(input)
-	return common.execute_aws_command_with_input({ "controltower", "update-landing-zone" }, input)
+	return common.execute_aws_command_skeleton({ "controltower", "update-landing-zone" }, input)
 end
 
 return M

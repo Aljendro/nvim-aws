@@ -3,665 +3,665 @@
 
 local common = require("nvim-aws.common")
 
---- AWS BACKUP service functions
+--- AWS backup service functions
 local M = {}
 
 --- AWS backup cancel-legal-hold operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_legal_hold(input)
-	return common.execute_aws_command_with_input({ "backup", "cancel-legal-hold" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "cancel-legal-hold" }, input)
 end
 
 --- AWS backup create-backup-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_backup_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "create-backup-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "create-backup-plan" }, input)
 end
 
 --- AWS backup create-backup-selection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_backup_selection(input)
-	return common.execute_aws_command_with_input({ "backup", "create-backup-selection" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "create-backup-selection" }, input)
 end
 
 --- AWS backup create-backup-vault operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_backup_vault(input)
-	return common.execute_aws_command_with_input({ "backup", "create-backup-vault" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "create-backup-vault" }, input)
 end
 
 --- AWS backup create-framework operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_framework(input)
-	return common.execute_aws_command_with_input({ "backup", "create-framework" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "create-framework" }, input)
 end
 
 --- AWS backup create-legal-hold operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_legal_hold(input)
-	return common.execute_aws_command_with_input({ "backup", "create-legal-hold" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "create-legal-hold" }, input)
 end
 
 --- AWS backup create-logically-air-gapped-backup-vault operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_logically_air_gapped_backup_vault(input)
-	return common.execute_aws_command_with_input({ "backup", "create-logically-air-gapped-backup-vault" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "create-logically-air-gapped-backup-vault" }, input)
 end
 
 --- AWS backup create-report-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_report_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "create-report-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "create-report-plan" }, input)
 end
 
 --- AWS backup create-restore-testing-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_restore_testing_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "create-restore-testing-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "create-restore-testing-plan" }, input)
 end
 
 --- AWS backup create-restore-testing-selection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_restore_testing_selection(input)
-	return common.execute_aws_command_with_input({ "backup", "create-restore-testing-selection" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "create-restore-testing-selection" }, input)
 end
 
 --- AWS backup delete-backup-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backup_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-backup-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-backup-plan" }, input)
 end
 
 --- AWS backup delete-backup-selection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backup_selection(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-backup-selection" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-backup-selection" }, input)
 end
 
 --- AWS backup delete-backup-vault operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backup_vault(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-backup-vault" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-backup-vault" }, input)
 end
 
 --- AWS backup delete-backup-vault-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backup_vault_access_policy(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-backup-vault-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-backup-vault-access-policy" }, input)
 end
 
 --- AWS backup delete-backup-vault-lock-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backup_vault_lock_configuration(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-backup-vault-lock-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-backup-vault-lock-configuration" }, input)
 end
 
 --- AWS backup delete-backup-vault-notifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backup_vault_notifications(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-backup-vault-notifications" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-backup-vault-notifications" }, input)
 end
 
 --- AWS backup delete-framework operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_framework(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-framework" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-framework" }, input)
 end
 
 --- AWS backup delete-recovery-point operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_recovery_point(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-recovery-point" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-recovery-point" }, input)
 end
 
 --- AWS backup delete-report-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_report_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-report-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-report-plan" }, input)
 end
 
 --- AWS backup delete-restore-testing-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_restore_testing_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-restore-testing-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-restore-testing-plan" }, input)
 end
 
 --- AWS backup delete-restore-testing-selection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_restore_testing_selection(input)
-	return common.execute_aws_command_with_input({ "backup", "delete-restore-testing-selection" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "delete-restore-testing-selection" }, input)
 end
 
 --- AWS backup describe-backup-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_backup_job(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-backup-job" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-backup-job" }, input)
 end
 
 --- AWS backup describe-backup-vault operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_backup_vault(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-backup-vault" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-backup-vault" }, input)
 end
 
 --- AWS backup describe-copy-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_copy_job(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-copy-job" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-copy-job" }, input)
 end
 
 --- AWS backup describe-framework operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_framework(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-framework" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-framework" }, input)
 end
 
 --- AWS backup describe-global-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_global_settings(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-global-settings" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-global-settings" }, input)
 end
 
 --- AWS backup describe-protected-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_protected_resource(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-protected-resource" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-protected-resource" }, input)
 end
 
 --- AWS backup describe-recovery-point operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_recovery_point(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-recovery-point" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-recovery-point" }, input)
 end
 
 --- AWS backup describe-region-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_region_settings(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-region-settings" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-region-settings" }, input)
 end
 
 --- AWS backup describe-report-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_report_job(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-report-job" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-report-job" }, input)
 end
 
 --- AWS backup describe-report-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_report_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-report-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-report-plan" }, input)
 end
 
 --- AWS backup describe-restore-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_restore_job(input)
-	return common.execute_aws_command_with_input({ "backup", "describe-restore-job" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "describe-restore-job" }, input)
 end
 
 --- AWS backup disassociate-recovery-point operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_recovery_point(input)
-	return common.execute_aws_command_with_input({ "backup", "disassociate-recovery-point" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "disassociate-recovery-point" }, input)
 end
 
 --- AWS backup disassociate-recovery-point-from-parent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_recovery_point_from_parent(input)
-	return common.execute_aws_command_with_input({ "backup", "disassociate-recovery-point-from-parent" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "disassociate-recovery-point-from-parent" }, input)
 end
 
 --- AWS backup export-backup-plan-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_backup_plan_template(input)
-	return common.execute_aws_command_with_input({ "backup", "export-backup-plan-template" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "export-backup-plan-template" }, input)
 end
 
 --- AWS backup get-backup-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backup_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "get-backup-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-backup-plan" }, input)
 end
 
 --- AWS backup get-backup-plan-from-json operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backup_plan_from_json(input)
-	return common.execute_aws_command_with_input({ "backup", "get-backup-plan-from-json" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-backup-plan-from-json" }, input)
 end
 
 --- AWS backup get-backup-plan-from-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backup_plan_from_template(input)
-	return common.execute_aws_command_with_input({ "backup", "get-backup-plan-from-template" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-backup-plan-from-template" }, input)
 end
 
 --- AWS backup get-backup-selection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backup_selection(input)
-	return common.execute_aws_command_with_input({ "backup", "get-backup-selection" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-backup-selection" }, input)
 end
 
 --- AWS backup get-backup-vault-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backup_vault_access_policy(input)
-	return common.execute_aws_command_with_input({ "backup", "get-backup-vault-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-backup-vault-access-policy" }, input)
 end
 
 --- AWS backup get-backup-vault-notifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backup_vault_notifications(input)
-	return common.execute_aws_command_with_input({ "backup", "get-backup-vault-notifications" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-backup-vault-notifications" }, input)
 end
 
 --- AWS backup get-legal-hold operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_legal_hold(input)
-	return common.execute_aws_command_with_input({ "backup", "get-legal-hold" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-legal-hold" }, input)
 end
 
 --- AWS backup get-recovery-point-index-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recovery_point_index_details(input)
-	return common.execute_aws_command_with_input({ "backup", "get-recovery-point-index-details" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-recovery-point-index-details" }, input)
 end
 
 --- AWS backup get-recovery-point-restore-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recovery_point_restore_metadata(input)
-	return common.execute_aws_command_with_input({ "backup", "get-recovery-point-restore-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-recovery-point-restore-metadata" }, input)
 end
 
 --- AWS backup get-restore-job-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_restore_job_metadata(input)
-	return common.execute_aws_command_with_input({ "backup", "get-restore-job-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-restore-job-metadata" }, input)
 end
 
 --- AWS backup get-restore-testing-inferred-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_restore_testing_inferred_metadata(input)
-	return common.execute_aws_command_with_input({ "backup", "get-restore-testing-inferred-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-restore-testing-inferred-metadata" }, input)
 end
 
 --- AWS backup get-restore-testing-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_restore_testing_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "get-restore-testing-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-restore-testing-plan" }, input)
 end
 
 --- AWS backup get-restore-testing-selection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_restore_testing_selection(input)
-	return common.execute_aws_command_with_input({ "backup", "get-restore-testing-selection" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-restore-testing-selection" }, input)
 end
 
 --- AWS backup get-supported-resource-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_supported_resource_types(input)
-	return common.execute_aws_command_with_input({ "backup", "get-supported-resource-types" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "get-supported-resource-types" }, input)
 end
 
 --- AWS backup list-backup-job-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_backup_job_summaries(input)
-	return common.execute_aws_command_with_input({ "backup", "list-backup-job-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-backup-job-summaries" }, input)
 end
 
 --- AWS backup list-backup-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_backup_jobs(input)
-	return common.execute_aws_command_with_input({ "backup", "list-backup-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-backup-jobs" }, input)
 end
 
 --- AWS backup list-backup-plan-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_backup_plan_templates(input)
-	return common.execute_aws_command_with_input({ "backup", "list-backup-plan-templates" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-backup-plan-templates" }, input)
 end
 
 --- AWS backup list-backup-plan-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_backup_plan_versions(input)
-	return common.execute_aws_command_with_input({ "backup", "list-backup-plan-versions" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-backup-plan-versions" }, input)
 end
 
 --- AWS backup list-backup-plans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_backup_plans(input)
-	return common.execute_aws_command_with_input({ "backup", "list-backup-plans" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-backup-plans" }, input)
 end
 
 --- AWS backup list-backup-selections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_backup_selections(input)
-	return common.execute_aws_command_with_input({ "backup", "list-backup-selections" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-backup-selections" }, input)
 end
 
 --- AWS backup list-backup-vaults operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_backup_vaults(input)
-	return common.execute_aws_command_with_input({ "backup", "list-backup-vaults" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-backup-vaults" }, input)
 end
 
 --- AWS backup list-copy-job-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_copy_job_summaries(input)
-	return common.execute_aws_command_with_input({ "backup", "list-copy-job-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-copy-job-summaries" }, input)
 end
 
 --- AWS backup list-copy-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_copy_jobs(input)
-	return common.execute_aws_command_with_input({ "backup", "list-copy-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-copy-jobs" }, input)
 end
 
 --- AWS backup list-frameworks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_frameworks(input)
-	return common.execute_aws_command_with_input({ "backup", "list-frameworks" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-frameworks" }, input)
 end
 
 --- AWS backup list-indexed-recovery-points operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_indexed_recovery_points(input)
-	return common.execute_aws_command_with_input({ "backup", "list-indexed-recovery-points" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-indexed-recovery-points" }, input)
 end
 
 --- AWS backup list-legal-holds operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_legal_holds(input)
-	return common.execute_aws_command_with_input({ "backup", "list-legal-holds" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-legal-holds" }, input)
 end
 
 --- AWS backup list-protected-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_protected_resources(input)
-	return common.execute_aws_command_with_input({ "backup", "list-protected-resources" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-protected-resources" }, input)
 end
 
 --- AWS backup list-protected-resources-by-backup-vault operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_protected_resources_by_backup_vault(input)
-	return common.execute_aws_command_with_input({ "backup", "list-protected-resources-by-backup-vault" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-protected-resources-by-backup-vault" }, input)
 end
 
 --- AWS backup list-recovery-points-by-backup-vault operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recovery_points_by_backup_vault(input)
-	return common.execute_aws_command_with_input({ "backup", "list-recovery-points-by-backup-vault" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-recovery-points-by-backup-vault" }, input)
 end
 
 --- AWS backup list-recovery-points-by-legal-hold operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recovery_points_by_legal_hold(input)
-	return common.execute_aws_command_with_input({ "backup", "list-recovery-points-by-legal-hold" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-recovery-points-by-legal-hold" }, input)
 end
 
 --- AWS backup list-recovery-points-by-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recovery_points_by_resource(input)
-	return common.execute_aws_command_with_input({ "backup", "list-recovery-points-by-resource" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-recovery-points-by-resource" }, input)
 end
 
 --- AWS backup list-report-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_report_jobs(input)
-	return common.execute_aws_command_with_input({ "backup", "list-report-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-report-jobs" }, input)
 end
 
 --- AWS backup list-report-plans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_report_plans(input)
-	return common.execute_aws_command_with_input({ "backup", "list-report-plans" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-report-plans" }, input)
 end
 
 --- AWS backup list-restore-job-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_restore_job_summaries(input)
-	return common.execute_aws_command_with_input({ "backup", "list-restore-job-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-restore-job-summaries" }, input)
 end
 
 --- AWS backup list-restore-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_restore_jobs(input)
-	return common.execute_aws_command_with_input({ "backup", "list-restore-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-restore-jobs" }, input)
 end
 
 --- AWS backup list-restore-jobs-by-protected-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_restore_jobs_by_protected_resource(input)
-	return common.execute_aws_command_with_input({ "backup", "list-restore-jobs-by-protected-resource" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-restore-jobs-by-protected-resource" }, input)
 end
 
 --- AWS backup list-restore-testing-plans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_restore_testing_plans(input)
-	return common.execute_aws_command_with_input({ "backup", "list-restore-testing-plans" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-restore-testing-plans" }, input)
 end
 
 --- AWS backup list-restore-testing-selections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_restore_testing_selections(input)
-	return common.execute_aws_command_with_input({ "backup", "list-restore-testing-selections" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-restore-testing-selections" }, input)
 end
 
 --- AWS backup list-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags(input)
-	return common.execute_aws_command_with_input({ "backup", "list-tags" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "list-tags" }, input)
 end
 
 --- AWS backup put-backup-vault-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_backup_vault_access_policy(input)
-	return common.execute_aws_command_with_input({ "backup", "put-backup-vault-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "put-backup-vault-access-policy" }, input)
 end
 
 --- AWS backup put-backup-vault-lock-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_backup_vault_lock_configuration(input)
-	return common.execute_aws_command_with_input({ "backup", "put-backup-vault-lock-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "put-backup-vault-lock-configuration" }, input)
 end
 
 --- AWS backup put-backup-vault-notifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_backup_vault_notifications(input)
-	return common.execute_aws_command_with_input({ "backup", "put-backup-vault-notifications" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "put-backup-vault-notifications" }, input)
 end
 
 --- AWS backup put-restore-validation-result operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_restore_validation_result(input)
-	return common.execute_aws_command_with_input({ "backup", "put-restore-validation-result" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "put-restore-validation-result" }, input)
 end
 
 --- AWS backup start-backup-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_backup_job(input)
-	return common.execute_aws_command_with_input({ "backup", "start-backup-job" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "start-backup-job" }, input)
 end
 
 --- AWS backup start-copy-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_copy_job(input)
-	return common.execute_aws_command_with_input({ "backup", "start-copy-job" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "start-copy-job" }, input)
 end
 
 --- AWS backup start-report-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_report_job(input)
-	return common.execute_aws_command_with_input({ "backup", "start-report-job" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "start-report-job" }, input)
 end
 
 --- AWS backup start-restore-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_restore_job(input)
-	return common.execute_aws_command_with_input({ "backup", "start-restore-job" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "start-restore-job" }, input)
 end
 
 --- AWS backup stop-backup-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_backup_job(input)
-	return common.execute_aws_command_with_input({ "backup", "stop-backup-job" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "stop-backup-job" }, input)
 end
 
 --- AWS backup tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "backup", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "tag-resource" }, input)
 end
 
 --- AWS backup untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "backup", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "untag-resource" }, input)
 end
 
 --- AWS backup update-backup-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_backup_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "update-backup-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "update-backup-plan" }, input)
 end
 
 --- AWS backup update-framework operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_framework(input)
-	return common.execute_aws_command_with_input({ "backup", "update-framework" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "update-framework" }, input)
 end
 
 --- AWS backup update-global-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_global_settings(input)
-	return common.execute_aws_command_with_input({ "backup", "update-global-settings" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "update-global-settings" }, input)
 end
 
 --- AWS backup update-recovery-point-index-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_recovery_point_index_settings(input)
-	return common.execute_aws_command_with_input({ "backup", "update-recovery-point-index-settings" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "update-recovery-point-index-settings" }, input)
 end
 
 --- AWS backup update-recovery-point-lifecycle operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_recovery_point_lifecycle(input)
-	return common.execute_aws_command_with_input({ "backup", "update-recovery-point-lifecycle" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "update-recovery-point-lifecycle" }, input)
 end
 
 --- AWS backup update-region-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_region_settings(input)
-	return common.execute_aws_command_with_input({ "backup", "update-region-settings" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "update-region-settings" }, input)
 end
 
 --- AWS backup update-report-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_report_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "update-report-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "update-report-plan" }, input)
 end
 
 --- AWS backup update-restore-testing-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_restore_testing_plan(input)
-	return common.execute_aws_command_with_input({ "backup", "update-restore-testing-plan" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "update-restore-testing-plan" }, input)
 end
 
 --- AWS backup update-restore-testing-selection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_restore_testing_selection(input)
-	return common.execute_aws_command_with_input({ "backup", "update-restore-testing-selection" }, input)
+	return common.execute_aws_command_skeleton({ "backup", "update-restore-testing-selection" }, input)
 end
 
 return M

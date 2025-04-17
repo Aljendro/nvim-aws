@@ -3,63 +3,63 @@
 
 local common = require("nvim-aws.common")
 
---- AWS OBSERVABILITYADMIN service functions
+--- AWS observabilityadmin service functions
 local M = {}
 
 --- AWS observabilityadmin get-telemetry-evaluation-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_telemetry_evaluation_status(input)
-	return common.execute_aws_command_with_input({ "observabilityadmin", "get-telemetry-evaluation-status" }, input)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "get-telemetry-evaluation-status" }, input)
 end
 
 --- AWS observabilityadmin get-telemetry-evaluation-status-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_telemetry_evaluation_status_for_organization(input)
-	return common.execute_aws_command_with_input({ "observabilityadmin", "get-telemetry-evaluation-status-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "get-telemetry-evaluation-status-for-organization" }, input)
 end
 
 --- AWS observabilityadmin list-resource-telemetry operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_telemetry(input)
-	return common.execute_aws_command_with_input({ "observabilityadmin", "list-resource-telemetry" }, input)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "list-resource-telemetry" }, input)
 end
 
 --- AWS observabilityadmin list-resource-telemetry-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_telemetry_for_organization(input)
-	return common.execute_aws_command_with_input({ "observabilityadmin", "list-resource-telemetry-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "list-resource-telemetry-for-organization" }, input)
 end
 
 --- AWS observabilityadmin start-telemetry-evaluation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_telemetry_evaluation(input)
-	return common.execute_aws_command_with_input({ "observabilityadmin", "start-telemetry-evaluation" }, input)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "start-telemetry-evaluation" }, input)
 end
 
 --- AWS observabilityadmin start-telemetry-evaluation-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_telemetry_evaluation_for_organization(input)
-	return common.execute_aws_command_with_input({ "observabilityadmin", "start-telemetry-evaluation-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "start-telemetry-evaluation-for-organization" }, input)
 end
 
 --- AWS observabilityadmin stop-telemetry-evaluation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_telemetry_evaluation(input)
-	return common.execute_aws_command_with_input({ "observabilityadmin", "stop-telemetry-evaluation" }, input)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "stop-telemetry-evaluation" }, input)
 end
 
 --- AWS observabilityadmin stop-telemetry-evaluation-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_telemetry_evaluation_for_organization(input)
-	return common.execute_aws_command_with_input({ "observabilityadmin", "stop-telemetry-evaluation-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "observabilityadmin", "stop-telemetry-evaluation-for-organization" }, input)
 end
 
 return M

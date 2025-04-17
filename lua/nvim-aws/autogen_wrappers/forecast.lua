@@ -3,448 +3,448 @@
 
 local common = require("nvim-aws.common")
 
---- AWS FORECAST service functions
+--- AWS forecast service functions
 local M = {}
 
 --- AWS forecast create-auto-predictor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_auto_predictor(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-auto-predictor" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-auto-predictor" }, input)
 end
 
 --- AWS forecast create-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dataset(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-dataset" }, input)
 end
 
 --- AWS forecast create-dataset-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dataset_group(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-dataset-group" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-dataset-group" }, input)
 end
 
 --- AWS forecast create-dataset-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dataset_import_job(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-dataset-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-dataset-import-job" }, input)
 end
 
 --- AWS forecast create-explainability operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_explainability(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-explainability" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-explainability" }, input)
 end
 
 --- AWS forecast create-explainability-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_explainability_export(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-explainability-export" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-explainability-export" }, input)
 end
 
 --- AWS forecast create-forecast operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_forecast(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-forecast" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-forecast" }, input)
 end
 
 --- AWS forecast create-forecast-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_forecast_export_job(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-forecast-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-forecast-export-job" }, input)
 end
 
 --- AWS forecast create-monitor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_monitor(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-monitor" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-monitor" }, input)
 end
 
 --- AWS forecast create-predictor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_predictor(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-predictor" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-predictor" }, input)
 end
 
 --- AWS forecast create-predictor-backtest-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_predictor_backtest_export_job(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-predictor-backtest-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-predictor-backtest-export-job" }, input)
 end
 
 --- AWS forecast create-what-if-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_what_if_analysis(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-what-if-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-what-if-analysis" }, input)
 end
 
 --- AWS forecast create-what-if-forecast operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_what_if_forecast(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-what-if-forecast" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-what-if-forecast" }, input)
 end
 
 --- AWS forecast create-what-if-forecast-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_what_if_forecast_export(input)
-	return common.execute_aws_command_with_input({ "forecast", "create-what-if-forecast-export" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "create-what-if-forecast-export" }, input)
 end
 
 --- AWS forecast delete-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dataset(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-dataset" }, input)
 end
 
 --- AWS forecast delete-dataset-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dataset_group(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-dataset-group" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-dataset-group" }, input)
 end
 
 --- AWS forecast delete-dataset-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dataset_import_job(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-dataset-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-dataset-import-job" }, input)
 end
 
 --- AWS forecast delete-explainability operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_explainability(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-explainability" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-explainability" }, input)
 end
 
 --- AWS forecast delete-explainability-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_explainability_export(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-explainability-export" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-explainability-export" }, input)
 end
 
 --- AWS forecast delete-forecast operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_forecast(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-forecast" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-forecast" }, input)
 end
 
 --- AWS forecast delete-forecast-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_forecast_export_job(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-forecast-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-forecast-export-job" }, input)
 end
 
 --- AWS forecast delete-monitor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_monitor(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-monitor" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-monitor" }, input)
 end
 
 --- AWS forecast delete-predictor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_predictor(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-predictor" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-predictor" }, input)
 end
 
 --- AWS forecast delete-predictor-backtest-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_predictor_backtest_export_job(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-predictor-backtest-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-predictor-backtest-export-job" }, input)
 end
 
 --- AWS forecast delete-resource-tree operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_tree(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-resource-tree" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-resource-tree" }, input)
 end
 
 --- AWS forecast delete-what-if-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_what_if_analysis(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-what-if-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-what-if-analysis" }, input)
 end
 
 --- AWS forecast delete-what-if-forecast operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_what_if_forecast(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-what-if-forecast" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-what-if-forecast" }, input)
 end
 
 --- AWS forecast delete-what-if-forecast-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_what_if_forecast_export(input)
-	return common.execute_aws_command_with_input({ "forecast", "delete-what-if-forecast-export" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "delete-what-if-forecast-export" }, input)
 end
 
 --- AWS forecast describe-auto-predictor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_auto_predictor(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-auto-predictor" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-auto-predictor" }, input)
 end
 
 --- AWS forecast describe-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_dataset(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-dataset" }, input)
 end
 
 --- AWS forecast describe-dataset-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_dataset_group(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-dataset-group" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-dataset-group" }, input)
 end
 
 --- AWS forecast describe-dataset-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_dataset_import_job(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-dataset-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-dataset-import-job" }, input)
 end
 
 --- AWS forecast describe-explainability operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_explainability(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-explainability" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-explainability" }, input)
 end
 
 --- AWS forecast describe-explainability-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_explainability_export(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-explainability-export" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-explainability-export" }, input)
 end
 
 --- AWS forecast describe-forecast operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_forecast(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-forecast" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-forecast" }, input)
 end
 
 --- AWS forecast describe-forecast-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_forecast_export_job(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-forecast-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-forecast-export-job" }, input)
 end
 
 --- AWS forecast describe-monitor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_monitor(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-monitor" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-monitor" }, input)
 end
 
 --- AWS forecast describe-predictor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_predictor(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-predictor" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-predictor" }, input)
 end
 
 --- AWS forecast describe-predictor-backtest-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_predictor_backtest_export_job(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-predictor-backtest-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-predictor-backtest-export-job" }, input)
 end
 
 --- AWS forecast describe-what-if-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_what_if_analysis(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-what-if-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-what-if-analysis" }, input)
 end
 
 --- AWS forecast describe-what-if-forecast operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_what_if_forecast(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-what-if-forecast" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-what-if-forecast" }, input)
 end
 
 --- AWS forecast describe-what-if-forecast-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_what_if_forecast_export(input)
-	return common.execute_aws_command_with_input({ "forecast", "describe-what-if-forecast-export" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "describe-what-if-forecast-export" }, input)
 end
 
 --- AWS forecast get-accuracy-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_accuracy_metrics(input)
-	return common.execute_aws_command_with_input({ "forecast", "get-accuracy-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "get-accuracy-metrics" }, input)
 end
 
 --- AWS forecast list-dataset-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_dataset_groups(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-dataset-groups" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-dataset-groups" }, input)
 end
 
 --- AWS forecast list-dataset-import-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_dataset_import_jobs(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-dataset-import-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-dataset-import-jobs" }, input)
 end
 
 --- AWS forecast list-datasets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_datasets(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-datasets" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-datasets" }, input)
 end
 
 --- AWS forecast list-explainabilities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_explainabilities(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-explainabilities" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-explainabilities" }, input)
 end
 
 --- AWS forecast list-explainability-exports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_explainability_exports(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-explainability-exports" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-explainability-exports" }, input)
 end
 
 --- AWS forecast list-forecast-export-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_forecast_export_jobs(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-forecast-export-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-forecast-export-jobs" }, input)
 end
 
 --- AWS forecast list-forecasts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_forecasts(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-forecasts" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-forecasts" }, input)
 end
 
 --- AWS forecast list-monitor-evaluations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_monitor_evaluations(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-monitor-evaluations" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-monitor-evaluations" }, input)
 end
 
 --- AWS forecast list-monitors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_monitors(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-monitors" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-monitors" }, input)
 end
 
 --- AWS forecast list-predictor-backtest-export-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_predictor_backtest_export_jobs(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-predictor-backtest-export-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-predictor-backtest-export-jobs" }, input)
 end
 
 --- AWS forecast list-predictors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_predictors(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-predictors" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-predictors" }, input)
 end
 
 --- AWS forecast list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-tags-for-resource" }, input)
 end
 
 --- AWS forecast list-what-if-analyses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_what_if_analyses(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-what-if-analyses" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-what-if-analyses" }, input)
 end
 
 --- AWS forecast list-what-if-forecast-exports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_what_if_forecast_exports(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-what-if-forecast-exports" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-what-if-forecast-exports" }, input)
 end
 
 --- AWS forecast list-what-if-forecasts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_what_if_forecasts(input)
-	return common.execute_aws_command_with_input({ "forecast", "list-what-if-forecasts" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "list-what-if-forecasts" }, input)
 end
 
 --- AWS forecast resume-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resume_resource(input)
-	return common.execute_aws_command_with_input({ "forecast", "resume-resource" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "resume-resource" }, input)
 end
 
 --- AWS forecast stop-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_resource(input)
-	return common.execute_aws_command_with_input({ "forecast", "stop-resource" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "stop-resource" }, input)
 end
 
 --- AWS forecast tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "forecast", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "tag-resource" }, input)
 end
 
 --- AWS forecast untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "forecast", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "untag-resource" }, input)
 end
 
 --- AWS forecast update-dataset-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_dataset_group(input)
-	return common.execute_aws_command_with_input({ "forecast", "update-dataset-group" }, input)
+	return common.execute_aws_command_skeleton({ "forecast", "update-dataset-group" }, input)
 end
 
 return M

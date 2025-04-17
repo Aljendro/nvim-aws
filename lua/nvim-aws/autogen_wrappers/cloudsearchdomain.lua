@@ -3,28 +3,28 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLOUDSEARCHDOMAIN service functions
+--- AWS cloudsearchdomain service functions
 local M = {}
 
 --- AWS cloudsearchdomain search operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search(input)
-	return common.execute_aws_command_with_input({ "cloudsearchdomain", "search" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearchdomain", "search" }, input)
 end
 
 --- AWS cloudsearchdomain suggest operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.suggest(input)
-	return common.execute_aws_command_with_input({ "cloudsearchdomain", "suggest" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearchdomain", "suggest" }, input)
 end
 
 --- AWS cloudsearchdomain upload-documents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.upload_documents(input)
-	return common.execute_aws_command_with_input({ "cloudsearchdomain", "upload-documents" }, input)
+	return common.execute_aws_command_skeleton({ "cloudsearchdomain", "upload-documents" }, input)
 end
 
 return M

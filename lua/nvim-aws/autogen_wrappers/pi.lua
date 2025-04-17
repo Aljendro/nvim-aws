@@ -3,98 +3,98 @@
 
 local common = require("nvim-aws.common")
 
---- AWS PI service functions
+--- AWS pi service functions
 local M = {}
 
 --- AWS pi create-performance-analysis-report operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_performance_analysis_report(input)
-	return common.execute_aws_command_with_input({ "pi", "create-performance-analysis-report" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "create-performance-analysis-report" }, input)
 end
 
 --- AWS pi delete-performance-analysis-report operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_performance_analysis_report(input)
-	return common.execute_aws_command_with_input({ "pi", "delete-performance-analysis-report" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "delete-performance-analysis-report" }, input)
 end
 
 --- AWS pi describe-dimension-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_dimension_keys(input)
-	return common.execute_aws_command_with_input({ "pi", "describe-dimension-keys" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "describe-dimension-keys" }, input)
 end
 
 --- AWS pi get-dimension-key-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_dimension_key_details(input)
-	return common.execute_aws_command_with_input({ "pi", "get-dimension-key-details" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "get-dimension-key-details" }, input)
 end
 
 --- AWS pi get-performance-analysis-report operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_performance_analysis_report(input)
-	return common.execute_aws_command_with_input({ "pi", "get-performance-analysis-report" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "get-performance-analysis-report" }, input)
 end
 
 --- AWS pi get-resource-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_metadata(input)
-	return common.execute_aws_command_with_input({ "pi", "get-resource-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "get-resource-metadata" }, input)
 end
 
 --- AWS pi get-resource-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_metrics(input)
-	return common.execute_aws_command_with_input({ "pi", "get-resource-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "get-resource-metrics" }, input)
 end
 
 --- AWS pi list-available-resource-dimensions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_available_resource_dimensions(input)
-	return common.execute_aws_command_with_input({ "pi", "list-available-resource-dimensions" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "list-available-resource-dimensions" }, input)
 end
 
 --- AWS pi list-available-resource-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_available_resource_metrics(input)
-	return common.execute_aws_command_with_input({ "pi", "list-available-resource-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "list-available-resource-metrics" }, input)
 end
 
 --- AWS pi list-performance-analysis-reports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_performance_analysis_reports(input)
-	return common.execute_aws_command_with_input({ "pi", "list-performance-analysis-reports" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "list-performance-analysis-reports" }, input)
 end
 
 --- AWS pi list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "pi", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "list-tags-for-resource" }, input)
 end
 
 --- AWS pi tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "pi", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "tag-resource" }, input)
 end
 
 --- AWS pi untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "pi", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pi", "untag-resource" }, input)
 end
 
 return M

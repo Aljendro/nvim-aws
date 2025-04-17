@@ -3,147 +3,147 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SIGNER service functions
+--- AWS signer service functions
 local M = {}
 
 --- AWS signer add-profile-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_profile_permission(input)
-	return common.execute_aws_command_with_input({ "signer", "add-profile-permission" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "add-profile-permission" }, input)
 end
 
 --- AWS signer cancel-signing-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_signing_profile(input)
-	return common.execute_aws_command_with_input({ "signer", "cancel-signing-profile" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "cancel-signing-profile" }, input)
 end
 
 --- AWS signer describe-signing-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_signing_job(input)
-	return common.execute_aws_command_with_input({ "signer", "describe-signing-job" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "describe-signing-job" }, input)
 end
 
 --- AWS signer get-revocation-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_revocation_status(input)
-	return common.execute_aws_command_with_input({ "signer", "get-revocation-status" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "get-revocation-status" }, input)
 end
 
 --- AWS signer get-signing-platform operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_signing_platform(input)
-	return common.execute_aws_command_with_input({ "signer", "get-signing-platform" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "get-signing-platform" }, input)
 end
 
 --- AWS signer get-signing-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_signing_profile(input)
-	return common.execute_aws_command_with_input({ "signer", "get-signing-profile" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "get-signing-profile" }, input)
 end
 
 --- AWS signer list-profile-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_profile_permissions(input)
-	return common.execute_aws_command_with_input({ "signer", "list-profile-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "list-profile-permissions" }, input)
 end
 
 --- AWS signer list-signing-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_signing_jobs(input)
-	return common.execute_aws_command_with_input({ "signer", "list-signing-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "list-signing-jobs" }, input)
 end
 
 --- AWS signer list-signing-platforms operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_signing_platforms(input)
-	return common.execute_aws_command_with_input({ "signer", "list-signing-platforms" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "list-signing-platforms" }, input)
 end
 
 --- AWS signer list-signing-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_signing_profiles(input)
-	return common.execute_aws_command_with_input({ "signer", "list-signing-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "list-signing-profiles" }, input)
 end
 
 --- AWS signer list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "signer", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "list-tags-for-resource" }, input)
 end
 
 --- AWS signer put-signing-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_signing_profile(input)
-	return common.execute_aws_command_with_input({ "signer", "put-signing-profile" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "put-signing-profile" }, input)
 end
 
 --- AWS signer remove-profile-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_profile_permission(input)
-	return common.execute_aws_command_with_input({ "signer", "remove-profile-permission" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "remove-profile-permission" }, input)
 end
 
 --- AWS signer revoke-signature operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_signature(input)
-	return common.execute_aws_command_with_input({ "signer", "revoke-signature" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "revoke-signature" }, input)
 end
 
 --- AWS signer revoke-signing-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_signing_profile(input)
-	return common.execute_aws_command_with_input({ "signer", "revoke-signing-profile" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "revoke-signing-profile" }, input)
 end
 
 --- AWS signer sign-payload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.sign_payload(input)
-	return common.execute_aws_command_with_input({ "signer", "sign-payload" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "sign-payload" }, input)
 end
 
 --- AWS signer start-signing-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_signing_job(input)
-	return common.execute_aws_command_with_input({ "signer", "start-signing-job" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "start-signing-job" }, input)
 end
 
 --- AWS signer tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "signer", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "tag-resource" }, input)
 end
 
 --- AWS signer untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "signer", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "signer", "untag-resource" }, input)
 end
 
 --- AWS signer wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "signer", "wait" }, input)
+	return common.execute_aws_command({ "signer", "wait" }, input)
 end
 
 return M

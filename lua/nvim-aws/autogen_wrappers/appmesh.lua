@@ -3,273 +3,273 @@
 
 local common = require("nvim-aws.common")
 
---- AWS APPMESH service functions
+--- AWS appmesh service functions
 local M = {}
 
 --- AWS appmesh create-gateway-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_gateway_route(input)
-	return common.execute_aws_command_with_input({ "appmesh", "create-gateway-route" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "create-gateway-route" }, input)
 end
 
 --- AWS appmesh create-mesh operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_mesh(input)
-	return common.execute_aws_command_with_input({ "appmesh", "create-mesh" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "create-mesh" }, input)
 end
 
 --- AWS appmesh create-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_route(input)
-	return common.execute_aws_command_with_input({ "appmesh", "create-route" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "create-route" }, input)
 end
 
 --- AWS appmesh create-virtual-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_virtual_gateway(input)
-	return common.execute_aws_command_with_input({ "appmesh", "create-virtual-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "create-virtual-gateway" }, input)
 end
 
 --- AWS appmesh create-virtual-node operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_virtual_node(input)
-	return common.execute_aws_command_with_input({ "appmesh", "create-virtual-node" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "create-virtual-node" }, input)
 end
 
 --- AWS appmesh create-virtual-router operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_virtual_router(input)
-	return common.execute_aws_command_with_input({ "appmesh", "create-virtual-router" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "create-virtual-router" }, input)
 end
 
 --- AWS appmesh create-virtual-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_virtual_service(input)
-	return common.execute_aws_command_with_input({ "appmesh", "create-virtual-service" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "create-virtual-service" }, input)
 end
 
 --- AWS appmesh delete-gateway-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_gateway_route(input)
-	return common.execute_aws_command_with_input({ "appmesh", "delete-gateway-route" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "delete-gateway-route" }, input)
 end
 
 --- AWS appmesh delete-mesh operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_mesh(input)
-	return common.execute_aws_command_with_input({ "appmesh", "delete-mesh" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "delete-mesh" }, input)
 end
 
 --- AWS appmesh delete-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_route(input)
-	return common.execute_aws_command_with_input({ "appmesh", "delete-route" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "delete-route" }, input)
 end
 
 --- AWS appmesh delete-virtual-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_virtual_gateway(input)
-	return common.execute_aws_command_with_input({ "appmesh", "delete-virtual-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "delete-virtual-gateway" }, input)
 end
 
 --- AWS appmesh delete-virtual-node operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_virtual_node(input)
-	return common.execute_aws_command_with_input({ "appmesh", "delete-virtual-node" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "delete-virtual-node" }, input)
 end
 
 --- AWS appmesh delete-virtual-router operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_virtual_router(input)
-	return common.execute_aws_command_with_input({ "appmesh", "delete-virtual-router" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "delete-virtual-router" }, input)
 end
 
 --- AWS appmesh delete-virtual-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_virtual_service(input)
-	return common.execute_aws_command_with_input({ "appmesh", "delete-virtual-service" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "delete-virtual-service" }, input)
 end
 
 --- AWS appmesh describe-gateway-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_gateway_route(input)
-	return common.execute_aws_command_with_input({ "appmesh", "describe-gateway-route" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "describe-gateway-route" }, input)
 end
 
 --- AWS appmesh describe-mesh operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_mesh(input)
-	return common.execute_aws_command_with_input({ "appmesh", "describe-mesh" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "describe-mesh" }, input)
 end
 
 --- AWS appmesh describe-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_route(input)
-	return common.execute_aws_command_with_input({ "appmesh", "describe-route" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "describe-route" }, input)
 end
 
 --- AWS appmesh describe-virtual-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_virtual_gateway(input)
-	return common.execute_aws_command_with_input({ "appmesh", "describe-virtual-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "describe-virtual-gateway" }, input)
 end
 
 --- AWS appmesh describe-virtual-node operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_virtual_node(input)
-	return common.execute_aws_command_with_input({ "appmesh", "describe-virtual-node" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "describe-virtual-node" }, input)
 end
 
 --- AWS appmesh describe-virtual-router operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_virtual_router(input)
-	return common.execute_aws_command_with_input({ "appmesh", "describe-virtual-router" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "describe-virtual-router" }, input)
 end
 
 --- AWS appmesh describe-virtual-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_virtual_service(input)
-	return common.execute_aws_command_with_input({ "appmesh", "describe-virtual-service" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "describe-virtual-service" }, input)
 end
 
 --- AWS appmesh list-gateway-routes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_gateway_routes(input)
-	return common.execute_aws_command_with_input({ "appmesh", "list-gateway-routes" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "list-gateway-routes" }, input)
 end
 
 --- AWS appmesh list-meshes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_meshes(input)
-	return common.execute_aws_command_with_input({ "appmesh", "list-meshes" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "list-meshes" }, input)
 end
 
 --- AWS appmesh list-routes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_routes(input)
-	return common.execute_aws_command_with_input({ "appmesh", "list-routes" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "list-routes" }, input)
 end
 
 --- AWS appmesh list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "appmesh", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "list-tags-for-resource" }, input)
 end
 
 --- AWS appmesh list-virtual-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_virtual_gateways(input)
-	return common.execute_aws_command_with_input({ "appmesh", "list-virtual-gateways" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "list-virtual-gateways" }, input)
 end
 
 --- AWS appmesh list-virtual-nodes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_virtual_nodes(input)
-	return common.execute_aws_command_with_input({ "appmesh", "list-virtual-nodes" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "list-virtual-nodes" }, input)
 end
 
 --- AWS appmesh list-virtual-routers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_virtual_routers(input)
-	return common.execute_aws_command_with_input({ "appmesh", "list-virtual-routers" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "list-virtual-routers" }, input)
 end
 
 --- AWS appmesh list-virtual-services operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_virtual_services(input)
-	return common.execute_aws_command_with_input({ "appmesh", "list-virtual-services" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "list-virtual-services" }, input)
 end
 
 --- AWS appmesh tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "appmesh", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "tag-resource" }, input)
 end
 
 --- AWS appmesh untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "appmesh", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "untag-resource" }, input)
 end
 
 --- AWS appmesh update-gateway-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_gateway_route(input)
-	return common.execute_aws_command_with_input({ "appmesh", "update-gateway-route" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "update-gateway-route" }, input)
 end
 
 --- AWS appmesh update-mesh operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_mesh(input)
-	return common.execute_aws_command_with_input({ "appmesh", "update-mesh" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "update-mesh" }, input)
 end
 
 --- AWS appmesh update-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_route(input)
-	return common.execute_aws_command_with_input({ "appmesh", "update-route" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "update-route" }, input)
 end
 
 --- AWS appmesh update-virtual-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_virtual_gateway(input)
-	return common.execute_aws_command_with_input({ "appmesh", "update-virtual-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "update-virtual-gateway" }, input)
 end
 
 --- AWS appmesh update-virtual-node operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_virtual_node(input)
-	return common.execute_aws_command_with_input({ "appmesh", "update-virtual-node" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "update-virtual-node" }, input)
 end
 
 --- AWS appmesh update-virtual-router operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_virtual_router(input)
-	return common.execute_aws_command_with_input({ "appmesh", "update-virtual-router" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "update-virtual-router" }, input)
 end
 
 --- AWS appmesh update-virtual-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_virtual_service(input)
-	return common.execute_aws_command_with_input({ "appmesh", "update-virtual-service" }, input)
+	return common.execute_aws_command_skeleton({ "appmesh", "update-virtual-service" }, input)
 end
 
 return M

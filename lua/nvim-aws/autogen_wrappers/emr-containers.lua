@@ -3,189 +3,189 @@
 
 local common = require("nvim-aws.common")
 
---- AWS EMR-CONTAINERS service functions
+--- AWS emr-containers service functions
 local M = {}
 
 --- AWS emr-containers cancel-job-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_job_run(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "cancel-job-run" }, input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "cancel-job-run" }, input)
 end
 
 --- AWS emr-containers create-job-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_job_template(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "create-job-template" }, input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "create-job-template" }, input)
 end
 
 --- AWS emr-containers create-managed-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_managed_endpoint(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "create-managed-endpoint" }, input)
-end
-
---- AWS emr-containers create-security-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.create_security_configuration(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "create-security-configuration" }, input)
-end
-
---- AWS emr-containers create-virtual-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.create_virtual_cluster(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "create-virtual-cluster" }, input)
-end
-
---- AWS emr-containers delete-job-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_job_template(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "delete-job-template" }, input)
-end
-
---- AWS emr-containers delete-managed-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_managed_endpoint(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "delete-managed-endpoint" }, input)
-end
-
---- AWS emr-containers delete-virtual-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.delete_virtual_cluster(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "delete-virtual-cluster" }, input)
-end
-
---- AWS emr-containers describe-job-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_job_run(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "describe-job-run" }, input)
-end
-
---- AWS emr-containers describe-job-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_job_template(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "describe-job-template" }, input)
-end
-
---- AWS emr-containers describe-managed-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_managed_endpoint(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "describe-managed-endpoint" }, input)
-end
-
---- AWS emr-containers describe-security-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_security_configuration(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "describe-security-configuration" }, input)
-end
-
---- AWS emr-containers describe-virtual-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.describe_virtual_cluster(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "describe-virtual-cluster" }, input)
-end
-
---- AWS emr-containers get-managed-endpoint-session-credentials operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_managed_endpoint_session_credentials(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "get-managed-endpoint-session-credentials" }, input)
-end
-
---- AWS emr-containers list-job-runs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_job_runs(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "list-job-runs" }, input)
-end
-
---- AWS emr-containers list-job-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_job_templates(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "list-job-templates" }, input)
-end
-
---- AWS emr-containers list-managed-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_managed_endpoints(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "list-managed-endpoints" }, input)
-end
-
---- AWS emr-containers list-security-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_security_configurations(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "list-security-configurations" }, input)
-end
-
---- AWS emr-containers list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "list-tags-for-resource" }, input)
-end
-
---- AWS emr-containers list-virtual-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_virtual_clusters(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "list-virtual-clusters" }, input)
-end
-
---- AWS emr-containers start-job-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_job_run(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "start-job-run" }, input)
-end
-
---- AWS emr-containers tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "tag-resource" }, input)
-end
-
---- AWS emr-containers untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "emr-containers", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "create-managed-endpoint" }, input)
 end
 
 --- AWS emr-containers create-role-associations operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_role_associations(input)
-	return common.execute_aws_command_with_raw_input({ "emr-containers", "create-role-associations" }, input)
+	return common.execute_aws_command({ "emr-containers", "create-role-associations" }, input)
+end
+
+--- AWS emr-containers create-security-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.create_security_configuration(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "create-security-configuration" }, input)
+end
+
+--- AWS emr-containers create-virtual-cluster operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.create_virtual_cluster(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "create-virtual-cluster" }, input)
+end
+
+--- AWS emr-containers delete-job-template operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_job_template(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "delete-job-template" }, input)
+end
+
+--- AWS emr-containers delete-managed-endpoint operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_managed_endpoint(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "delete-managed-endpoint" }, input)
 end
 
 --- AWS emr-containers delete-role-associations operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_role_associations(input)
-	return common.execute_aws_command_with_raw_input({ "emr-containers", "delete-role-associations" }, input)
+	return common.execute_aws_command({ "emr-containers", "delete-role-associations" }, input)
+end
+
+--- AWS emr-containers delete-virtual-cluster operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.delete_virtual_cluster(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "delete-virtual-cluster" }, input)
+end
+
+--- AWS emr-containers describe-job-run operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.describe_job_run(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "describe-job-run" }, input)
+end
+
+--- AWS emr-containers describe-job-template operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.describe_job_template(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "describe-job-template" }, input)
+end
+
+--- AWS emr-containers describe-managed-endpoint operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.describe_managed_endpoint(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "describe-managed-endpoint" }, input)
+end
+
+--- AWS emr-containers describe-security-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.describe_security_configuration(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "describe-security-configuration" }, input)
+end
+
+--- AWS emr-containers describe-virtual-cluster operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.describe_virtual_cluster(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "describe-virtual-cluster" }, input)
+end
+
+--- AWS emr-containers get-managed-endpoint-session-credentials operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_managed_endpoint_session_credentials(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "get-managed-endpoint-session-credentials" }, input)
+end
+
+--- AWS emr-containers list-job-runs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_job_runs(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "list-job-runs" }, input)
+end
+
+--- AWS emr-containers list-job-templates operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_job_templates(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "list-job-templates" }, input)
+end
+
+--- AWS emr-containers list-managed-endpoints operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_managed_endpoints(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "list-managed-endpoints" }, input)
+end
+
+--- AWS emr-containers list-security-configurations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_security_configurations(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "list-security-configurations" }, input)
+end
+
+--- AWS emr-containers list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "list-tags-for-resource" }, input)
+end
+
+--- AWS emr-containers list-virtual-clusters operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_virtual_clusters(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "list-virtual-clusters" }, input)
+end
+
+--- AWS emr-containers start-job-run operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_job_run(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "start-job-run" }, input)
+end
+
+--- AWS emr-containers tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "tag-resource" }, input)
+end
+
+--- AWS emr-containers untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "emr-containers", "untag-resource" }, input)
 end
 
 --- AWS emr-containers update-role-trust-policy operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_role_trust_policy(input)
-	return common.execute_aws_command_with_raw_input({ "emr-containers", "update-role-trust-policy" }, input)
+	return common.execute_aws_command({ "emr-containers", "update-role-trust-policy" }, input)
 end
 
 return M

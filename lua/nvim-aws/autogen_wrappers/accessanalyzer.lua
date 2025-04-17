@@ -3,266 +3,266 @@
 
 local common = require("nvim-aws.common")
 
---- AWS ACCESSANALYZER service functions
+--- AWS accessanalyzer service functions
 local M = {}
 
 --- AWS accessanalyzer apply-archive-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.apply_archive_rule(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "apply-archive-rule" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "apply-archive-rule" }, input)
 end
 
 --- AWS accessanalyzer cancel-policy-generation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_policy_generation(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "cancel-policy-generation" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "cancel-policy-generation" }, input)
 end
 
 --- AWS accessanalyzer check-access-not-granted operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.check_access_not_granted(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "check-access-not-granted" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "check-access-not-granted" }, input)
 end
 
 --- AWS accessanalyzer check-no-new-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.check_no_new_access(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "check-no-new-access" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "check-no-new-access" }, input)
 end
 
 --- AWS accessanalyzer check-no-public-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.check_no_public_access(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "check-no-public-access" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "check-no-public-access" }, input)
 end
 
 --- AWS accessanalyzer create-access-preview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_access_preview(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "create-access-preview" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "create-access-preview" }, input)
 end
 
 --- AWS accessanalyzer create-analyzer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_analyzer(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "create-analyzer" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "create-analyzer" }, input)
 end
 
 --- AWS accessanalyzer create-archive-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_archive_rule(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "create-archive-rule" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "create-archive-rule" }, input)
 end
 
 --- AWS accessanalyzer delete-analyzer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_analyzer(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "delete-analyzer" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "delete-analyzer" }, input)
 end
 
 --- AWS accessanalyzer delete-archive-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_archive_rule(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "delete-archive-rule" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "delete-archive-rule" }, input)
 end
 
 --- AWS accessanalyzer generate-finding-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_finding_recommendation(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "generate-finding-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "generate-finding-recommendation" }, input)
 end
 
 --- AWS accessanalyzer get-access-preview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_access_preview(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "get-access-preview" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "get-access-preview" }, input)
 end
 
 --- AWS accessanalyzer get-analyzed-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_analyzed_resource(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "get-analyzed-resource" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "get-analyzed-resource" }, input)
 end
 
 --- AWS accessanalyzer get-analyzer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_analyzer(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "get-analyzer" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "get-analyzer" }, input)
 end
 
 --- AWS accessanalyzer get-archive-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_archive_rule(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "get-archive-rule" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "get-archive-rule" }, input)
 end
 
 --- AWS accessanalyzer get-finding operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_finding(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "get-finding" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "get-finding" }, input)
 end
 
 --- AWS accessanalyzer get-finding-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_finding_recommendation(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "get-finding-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "get-finding-recommendation" }, input)
 end
 
 --- AWS accessanalyzer get-finding-v2 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_finding_v2(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "get-finding-v2" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "get-finding-v2" }, input)
 end
 
 --- AWS accessanalyzer get-findings-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_findings_statistics(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "get-findings-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "get-findings-statistics" }, input)
 end
 
 --- AWS accessanalyzer get-generated-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_generated_policy(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "get-generated-policy" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "get-generated-policy" }, input)
 end
 
 --- AWS accessanalyzer list-access-preview-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_access_preview_findings(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "list-access-preview-findings" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "list-access-preview-findings" }, input)
 end
 
 --- AWS accessanalyzer list-access-previews operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_access_previews(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "list-access-previews" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "list-access-previews" }, input)
 end
 
 --- AWS accessanalyzer list-analyzed-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_analyzed_resources(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "list-analyzed-resources" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "list-analyzed-resources" }, input)
 end
 
 --- AWS accessanalyzer list-analyzers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_analyzers(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "list-analyzers" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "list-analyzers" }, input)
 end
 
 --- AWS accessanalyzer list-archive-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_archive_rules(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "list-archive-rules" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "list-archive-rules" }, input)
 end
 
 --- AWS accessanalyzer list-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_findings(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "list-findings" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "list-findings" }, input)
 end
 
 --- AWS accessanalyzer list-findings-v2 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_findings_v2(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "list-findings-v2" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "list-findings-v2" }, input)
 end
 
 --- AWS accessanalyzer list-policy-generations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_policy_generations(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "list-policy-generations" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "list-policy-generations" }, input)
 end
 
 --- AWS accessanalyzer list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "list-tags-for-resource" }, input)
 end
 
 --- AWS accessanalyzer start-policy-generation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_policy_generation(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "start-policy-generation" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "start-policy-generation" }, input)
 end
 
 --- AWS accessanalyzer start-resource-scan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_resource_scan(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "start-resource-scan" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "start-resource-scan" }, input)
 end
 
 --- AWS accessanalyzer tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "tag-resource" }, input)
 end
 
 --- AWS accessanalyzer untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "untag-resource" }, input)
 end
 
 --- AWS accessanalyzer update-analyzer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_analyzer(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "update-analyzer" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "update-analyzer" }, input)
 end
 
 --- AWS accessanalyzer update-archive-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_archive_rule(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "update-archive-rule" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "update-archive-rule" }, input)
 end
 
 --- AWS accessanalyzer update-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_findings(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "update-findings" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "update-findings" }, input)
 end
 
 --- AWS accessanalyzer validate-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.validate_policy(input)
-	return common.execute_aws_command_with_input({ "accessanalyzer", "validate-policy" }, input)
+	return common.execute_aws_command_skeleton({ "accessanalyzer", "validate-policy" }, input)
 end
 
 return M

@@ -3,238 +3,238 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CONNECTCAMPAIGNSV2 service functions
+--- AWS connectcampaignsv2 service functions
 local M = {}
 
 --- AWS connectcampaignsv2 create-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_campaign(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "create-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "create-campaign" }, input)
 end
 
 --- AWS connectcampaignsv2 delete-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_campaign(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign" }, input)
 end
 
 --- AWS connectcampaignsv2 delete-campaign-channel-subtype-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_campaign_channel_subtype_config(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-campaign-channel-subtype-config" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign-channel-subtype-config" }, input)
 end
 
 --- AWS connectcampaignsv2 delete-campaign-communication-limits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_campaign_communication_limits(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-campaign-communication-limits" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign-communication-limits" }, input)
 end
 
 --- AWS connectcampaignsv2 delete-campaign-communication-time operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_campaign_communication_time(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-campaign-communication-time" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-campaign-communication-time" }, input)
 end
 
 --- AWS connectcampaignsv2 delete-connect-instance-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connect_instance_config(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-connect-instance-config" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-connect-instance-config" }, input)
 end
 
 --- AWS connectcampaignsv2 delete-connect-instance-integration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connect_instance_integration(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-connect-instance-integration" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-connect-instance-integration" }, input)
 end
 
 --- AWS connectcampaignsv2 delete-instance-onboarding-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_instance_onboarding_job(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "delete-instance-onboarding-job" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "delete-instance-onboarding-job" }, input)
 end
 
 --- AWS connectcampaignsv2 describe-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_campaign(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "describe-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "describe-campaign" }, input)
 end
 
 --- AWS connectcampaignsv2 get-campaign-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_campaign_state(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "get-campaign-state" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-campaign-state" }, input)
 end
 
 --- AWS connectcampaignsv2 get-campaign-state-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_campaign_state_batch(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "get-campaign-state-batch" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-campaign-state-batch" }, input)
 end
 
 --- AWS connectcampaignsv2 get-connect-instance-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_connect_instance_config(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "get-connect-instance-config" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-connect-instance-config" }, input)
 end
 
 --- AWS connectcampaignsv2 get-instance-onboarding-job-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_instance_onboarding_job_status(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "get-instance-onboarding-job-status" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "get-instance-onboarding-job-status" }, input)
 end
 
 --- AWS connectcampaignsv2 list-campaigns operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_campaigns(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "list-campaigns" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "list-campaigns" }, input)
 end
 
 --- AWS connectcampaignsv2 list-connect-instance-integrations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_connect_instance_integrations(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "list-connect-instance-integrations" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "list-connect-instance-integrations" }, input)
 end
 
 --- AWS connectcampaignsv2 list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "list-tags-for-resource" }, input)
 end
 
 --- AWS connectcampaignsv2 pause-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.pause_campaign(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "pause-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "pause-campaign" }, input)
 end
 
 --- AWS connectcampaignsv2 put-connect-instance-integration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_connect_instance_integration(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "put-connect-instance-integration" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "put-connect-instance-integration" }, input)
 end
 
 --- AWS connectcampaignsv2 put-outbound-request-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_outbound_request_batch(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "put-outbound-request-batch" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "put-outbound-request-batch" }, input)
 end
 
 --- AWS connectcampaignsv2 put-profile-outbound-request-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_profile_outbound_request_batch(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "put-profile-outbound-request-batch" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "put-profile-outbound-request-batch" }, input)
 end
 
 --- AWS connectcampaignsv2 resume-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resume_campaign(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "resume-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "resume-campaign" }, input)
 end
 
 --- AWS connectcampaignsv2 start-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_campaign(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "start-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "start-campaign" }, input)
 end
 
 --- AWS connectcampaignsv2 start-instance-onboarding-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_instance_onboarding_job(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "start-instance-onboarding-job" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "start-instance-onboarding-job" }, input)
 end
 
 --- AWS connectcampaignsv2 stop-campaign operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_campaign(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "stop-campaign" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "stop-campaign" }, input)
 end
 
 --- AWS connectcampaignsv2 tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "tag-resource" }, input)
 end
 
 --- AWS connectcampaignsv2 untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "untag-resource" }, input)
 end
 
 --- AWS connectcampaignsv2 update-campaign-channel-subtype-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_campaign_channel_subtype_config(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-channel-subtype-config" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-channel-subtype-config" }, input)
 end
 
 --- AWS connectcampaignsv2 update-campaign-communication-limits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_campaign_communication_limits(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-communication-limits" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-communication-limits" }, input)
 end
 
 --- AWS connectcampaignsv2 update-campaign-communication-time operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_campaign_communication_time(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-communication-time" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-communication-time" }, input)
 end
 
 --- AWS connectcampaignsv2 update-campaign-flow-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_campaign_flow_association(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-flow-association" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-flow-association" }, input)
 end
 
 --- AWS connectcampaignsv2 update-campaign-name operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_campaign_name(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-name" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-name" }, input)
 end
 
 --- AWS connectcampaignsv2 update-campaign-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_campaign_schedule(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-schedule" }, input)
 end
 
 --- AWS connectcampaignsv2 update-campaign-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_campaign_source(input)
-	return common.execute_aws_command_with_input({ "connectcampaignsv2", "update-campaign-source" }, input)
+	return common.execute_aws_command_skeleton({ "connectcampaignsv2", "update-campaign-source" }, input)
 end
 
 return M

@@ -3,308 +3,308 @@
 
 local common = require("nvim-aws.common")
 
---- AWS NEPTUNEDATA service functions
+--- AWS neptunedata service functions
 local M = {}
 
 --- AWS neptunedata cancel-gremlin-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_gremlin_query(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "cancel-gremlin-query" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "cancel-gremlin-query" }, input)
 end
 
 --- AWS neptunedata cancel-loader-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_loader_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "cancel-loader-job" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "cancel-loader-job" }, input)
 end
 
 --- AWS neptunedata cancel-ml-data-processing-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_ml_data_processing_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "cancel-ml-data-processing-job" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "cancel-ml-data-processing-job" }, input)
 end
 
 --- AWS neptunedata cancel-ml-model-training-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_ml_model_training_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "cancel-ml-model-training-job" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "cancel-ml-model-training-job" }, input)
 end
 
 --- AWS neptunedata cancel-ml-model-transform-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_ml_model_transform_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "cancel-ml-model-transform-job" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "cancel-ml-model-transform-job" }, input)
 end
 
 --- AWS neptunedata cancel-open-cypher-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_open_cypher_query(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "cancel-open-cypher-query" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "cancel-open-cypher-query" }, input)
 end
 
 --- AWS neptunedata create-ml-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ml_endpoint(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "create-ml-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "create-ml-endpoint" }, input)
 end
 
 --- AWS neptunedata delete-ml-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ml_endpoint(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "delete-ml-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "delete-ml-endpoint" }, input)
 end
 
 --- AWS neptunedata delete-propertygraph-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_propertygraph_statistics(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "delete-propertygraph-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "delete-propertygraph-statistics" }, input)
 end
 
 --- AWS neptunedata delete-sparql-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_sparql_statistics(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "delete-sparql-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "delete-sparql-statistics" }, input)
 end
 
 --- AWS neptunedata execute-fast-reset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.execute_fast_reset(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "execute-fast-reset" }, input)
-end
-
---- AWS neptunedata execute-gremlin-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.execute_gremlin_query(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "execute-gremlin-query" }, input)
-end
-
---- AWS neptunedata execute-open-cypher-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.execute_open_cypher_query(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "execute-open-cypher-query" }, input)
-end
-
---- AWS neptunedata get-engine-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_engine_status(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-engine-status" }, input)
-end
-
---- AWS neptunedata get-gremlin-query-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_gremlin_query_status(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-gremlin-query-status" }, input)
-end
-
---- AWS neptunedata get-loader-job-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_loader_job_status(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-loader-job-status" }, input)
-end
-
---- AWS neptunedata get-ml-data-processing-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_ml_data_processing_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-ml-data-processing-job" }, input)
-end
-
---- AWS neptunedata get-ml-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_ml_endpoint(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-ml-endpoint" }, input)
-end
-
---- AWS neptunedata get-ml-model-training-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_ml_model_training_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-ml-model-training-job" }, input)
-end
-
---- AWS neptunedata get-ml-model-transform-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_ml_model_transform_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-ml-model-transform-job" }, input)
-end
-
---- AWS neptunedata get-open-cypher-query-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_open_cypher_query_status(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-open-cypher-query-status" }, input)
-end
-
---- AWS neptunedata get-propertygraph-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_propertygraph_statistics(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-propertygraph-statistics" }, input)
-end
-
---- AWS neptunedata get-propertygraph-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_propertygraph_stream(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-propertygraph-stream" }, input)
-end
-
---- AWS neptunedata get-propertygraph-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_propertygraph_summary(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-propertygraph-summary" }, input)
-end
-
---- AWS neptunedata get-rdf-graph-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_rdf_graph_summary(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-rdf-graph-summary" }, input)
-end
-
---- AWS neptunedata get-sparql-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_sparql_statistics(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-sparql-statistics" }, input)
-end
-
---- AWS neptunedata get-sparql-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_sparql_stream(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "get-sparql-stream" }, input)
-end
-
---- AWS neptunedata list-gremlin-queries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_gremlin_queries(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "list-gremlin-queries" }, input)
-end
-
---- AWS neptunedata list-loader-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_loader_jobs(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "list-loader-jobs" }, input)
-end
-
---- AWS neptunedata list-ml-data-processing-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_ml_data_processing_jobs(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "list-ml-data-processing-jobs" }, input)
-end
-
---- AWS neptunedata list-ml-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_ml_endpoints(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "list-ml-endpoints" }, input)
-end
-
---- AWS neptunedata list-ml-model-training-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_ml_model_training_jobs(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "list-ml-model-training-jobs" }, input)
-end
-
---- AWS neptunedata list-ml-model-transform-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_ml_model_transform_jobs(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "list-ml-model-transform-jobs" }, input)
-end
-
---- AWS neptunedata list-open-cypher-queries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_open_cypher_queries(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "list-open-cypher-queries" }, input)
-end
-
---- AWS neptunedata manage-propertygraph-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.manage_propertygraph_statistics(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "manage-propertygraph-statistics" }, input)
-end
-
---- AWS neptunedata manage-sparql-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.manage_sparql_statistics(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "manage-sparql-statistics" }, input)
-end
-
---- AWS neptunedata start-loader-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_loader_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "start-loader-job" }, input)
-end
-
---- AWS neptunedata start-ml-data-processing-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_ml_data_processing_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "start-ml-data-processing-job" }, input)
-end
-
---- AWS neptunedata start-ml-model-training-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_ml_model_training_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "start-ml-model-training-job" }, input)
-end
-
---- AWS neptunedata start-ml-model-transform-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_ml_model_transform_job(input)
-	return common.execute_aws_command_with_input({ "neptunedata", "start-ml-model-transform-job" }, input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "execute-fast-reset" }, input)
 end
 
 --- AWS neptunedata execute-gremlin-explain-query operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.execute_gremlin_explain_query(input)
-	return common.execute_aws_command_with_raw_input({ "neptunedata", "execute-gremlin-explain-query" }, input)
+	return common.execute_aws_command({ "neptunedata", "execute-gremlin-explain-query" }, input)
 end
 
 --- AWS neptunedata execute-gremlin-profile-query operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.execute_gremlin_profile_query(input)
-	return common.execute_aws_command_with_raw_input({ "neptunedata", "execute-gremlin-profile-query" }, input)
+	return common.execute_aws_command({ "neptunedata", "execute-gremlin-profile-query" }, input)
+end
+
+--- AWS neptunedata execute-gremlin-query operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.execute_gremlin_query(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "execute-gremlin-query" }, input)
 end
 
 --- AWS neptunedata execute-open-cypher-explain-query operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.execute_open_cypher_explain_query(input)
-	return common.execute_aws_command_with_raw_input({ "neptunedata", "execute-open-cypher-explain-query" }, input)
+	return common.execute_aws_command({ "neptunedata", "execute-open-cypher-explain-query" }, input)
+end
+
+--- AWS neptunedata execute-open-cypher-query operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.execute_open_cypher_query(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "execute-open-cypher-query" }, input)
+end
+
+--- AWS neptunedata get-engine-status operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_engine_status(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-engine-status" }, input)
+end
+
+--- AWS neptunedata get-gremlin-query-status operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_gremlin_query_status(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-gremlin-query-status" }, input)
+end
+
+--- AWS neptunedata get-loader-job-status operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_loader_job_status(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-loader-job-status" }, input)
+end
+
+--- AWS neptunedata get-ml-data-processing-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_ml_data_processing_job(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-ml-data-processing-job" }, input)
+end
+
+--- AWS neptunedata get-ml-endpoint operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_ml_endpoint(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-ml-endpoint" }, input)
+end
+
+--- AWS neptunedata get-ml-model-training-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_ml_model_training_job(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-ml-model-training-job" }, input)
+end
+
+--- AWS neptunedata get-ml-model-transform-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_ml_model_transform_job(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-ml-model-transform-job" }, input)
+end
+
+--- AWS neptunedata get-open-cypher-query-status operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_open_cypher_query_status(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-open-cypher-query-status" }, input)
+end
+
+--- AWS neptunedata get-propertygraph-statistics operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_propertygraph_statistics(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-propertygraph-statistics" }, input)
+end
+
+--- AWS neptunedata get-propertygraph-stream operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_propertygraph_stream(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-propertygraph-stream" }, input)
+end
+
+--- AWS neptunedata get-propertygraph-summary operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_propertygraph_summary(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-propertygraph-summary" }, input)
+end
+
+--- AWS neptunedata get-rdf-graph-summary operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_rdf_graph_summary(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-rdf-graph-summary" }, input)
+end
+
+--- AWS neptunedata get-sparql-statistics operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_sparql_statistics(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-sparql-statistics" }, input)
+end
+
+--- AWS neptunedata get-sparql-stream operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_sparql_stream(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "get-sparql-stream" }, input)
+end
+
+--- AWS neptunedata list-gremlin-queries operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_gremlin_queries(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "list-gremlin-queries" }, input)
+end
+
+--- AWS neptunedata list-loader-jobs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_loader_jobs(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "list-loader-jobs" }, input)
+end
+
+--- AWS neptunedata list-ml-data-processing-jobs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_ml_data_processing_jobs(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "list-ml-data-processing-jobs" }, input)
+end
+
+--- AWS neptunedata list-ml-endpoints operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_ml_endpoints(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "list-ml-endpoints" }, input)
+end
+
+--- AWS neptunedata list-ml-model-training-jobs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_ml_model_training_jobs(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "list-ml-model-training-jobs" }, input)
+end
+
+--- AWS neptunedata list-ml-model-transform-jobs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_ml_model_transform_jobs(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "list-ml-model-transform-jobs" }, input)
+end
+
+--- AWS neptunedata list-open-cypher-queries operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_open_cypher_queries(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "list-open-cypher-queries" }, input)
+end
+
+--- AWS neptunedata manage-propertygraph-statistics operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.manage_propertygraph_statistics(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "manage-propertygraph-statistics" }, input)
+end
+
+--- AWS neptunedata manage-sparql-statistics operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.manage_sparql_statistics(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "manage-sparql-statistics" }, input)
+end
+
+--- AWS neptunedata start-loader-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_loader_job(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "start-loader-job" }, input)
+end
+
+--- AWS neptunedata start-ml-data-processing-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_ml_data_processing_job(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "start-ml-data-processing-job" }, input)
+end
+
+--- AWS neptunedata start-ml-model-training-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_ml_model_training_job(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "start-ml-model-training-job" }, input)
+end
+
+--- AWS neptunedata start-ml-model-transform-job operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_ml_model_transform_job(input)
+	return common.execute_aws_command_skeleton({ "neptunedata", "start-ml-model-transform-job" }, input)
 end
 
 return M

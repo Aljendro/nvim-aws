@@ -3,273 +3,273 @@
 
 local common = require("nvim-aws.common")
 
---- AWS XRAY service functions
+--- AWS xray service functions
 local M = {}
 
 --- AWS xray batch-get-traces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_traces(input)
-	return common.execute_aws_command_with_input({ "xray", "batch-get-traces" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "batch-get-traces" }, input)
 end
 
 --- AWS xray cancel-trace-retrieval operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_trace_retrieval(input)
-	return common.execute_aws_command_with_input({ "xray", "cancel-trace-retrieval" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "cancel-trace-retrieval" }, input)
 end
 
 --- AWS xray create-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_group(input)
-	return common.execute_aws_command_with_input({ "xray", "create-group" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "create-group" }, input)
 end
 
 --- AWS xray create-sampling-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_sampling_rule(input)
-	return common.execute_aws_command_with_input({ "xray", "create-sampling-rule" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "create-sampling-rule" }, input)
 end
 
 --- AWS xray delete-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_group(input)
-	return common.execute_aws_command_with_input({ "xray", "delete-group" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "delete-group" }, input)
 end
 
 --- AWS xray delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "xray", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "delete-resource-policy" }, input)
 end
 
 --- AWS xray delete-sampling-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_sampling_rule(input)
-	return common.execute_aws_command_with_input({ "xray", "delete-sampling-rule" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "delete-sampling-rule" }, input)
 end
 
 --- AWS xray get-encryption-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_encryption_config(input)
-	return common.execute_aws_command_with_input({ "xray", "get-encryption-config" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-encryption-config" }, input)
 end
 
 --- AWS xray get-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_group(input)
-	return common.execute_aws_command_with_input({ "xray", "get-group" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-group" }, input)
 end
 
 --- AWS xray get-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_groups(input)
-	return common.execute_aws_command_with_input({ "xray", "get-groups" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-groups" }, input)
 end
 
 --- AWS xray get-indexing-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_indexing_rules(input)
-	return common.execute_aws_command_with_input({ "xray", "get-indexing-rules" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-indexing-rules" }, input)
 end
 
 --- AWS xray get-insight operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_insight(input)
-	return common.execute_aws_command_with_input({ "xray", "get-insight" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-insight" }, input)
 end
 
 --- AWS xray get-insight-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_insight_events(input)
-	return common.execute_aws_command_with_input({ "xray", "get-insight-events" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-insight-events" }, input)
 end
 
 --- AWS xray get-insight-impact-graph operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_insight_impact_graph(input)
-	return common.execute_aws_command_with_input({ "xray", "get-insight-impact-graph" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-insight-impact-graph" }, input)
 end
 
 --- AWS xray get-insight-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_insight_summaries(input)
-	return common.execute_aws_command_with_input({ "xray", "get-insight-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-insight-summaries" }, input)
 end
 
 --- AWS xray get-retrieved-traces-graph operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_retrieved_traces_graph(input)
-	return common.execute_aws_command_with_input({ "xray", "get-retrieved-traces-graph" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-retrieved-traces-graph" }, input)
 end
 
 --- AWS xray get-sampling-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sampling_rules(input)
-	return common.execute_aws_command_with_input({ "xray", "get-sampling-rules" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-sampling-rules" }, input)
 end
 
 --- AWS xray get-sampling-statistic-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sampling_statistic_summaries(input)
-	return common.execute_aws_command_with_input({ "xray", "get-sampling-statistic-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-sampling-statistic-summaries" }, input)
 end
 
 --- AWS xray get-sampling-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sampling_targets(input)
-	return common.execute_aws_command_with_input({ "xray", "get-sampling-targets" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-sampling-targets" }, input)
 end
 
 --- AWS xray get-service-graph operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_service_graph(input)
-	return common.execute_aws_command_with_input({ "xray", "get-service-graph" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-service-graph" }, input)
 end
 
 --- AWS xray get-time-series-service-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_time_series_service_statistics(input)
-	return common.execute_aws_command_with_input({ "xray", "get-time-series-service-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-time-series-service-statistics" }, input)
 end
 
 --- AWS xray get-trace-graph operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_trace_graph(input)
-	return common.execute_aws_command_with_input({ "xray", "get-trace-graph" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-trace-graph" }, input)
 end
 
 --- AWS xray get-trace-segment-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_trace_segment_destination(input)
-	return common.execute_aws_command_with_input({ "xray", "get-trace-segment-destination" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-trace-segment-destination" }, input)
 end
 
 --- AWS xray get-trace-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_trace_summaries(input)
-	return common.execute_aws_command_with_input({ "xray", "get-trace-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "get-trace-summaries" }, input)
 end
 
 --- AWS xray list-resource-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_policies(input)
-	return common.execute_aws_command_with_input({ "xray", "list-resource-policies" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "list-resource-policies" }, input)
 end
 
 --- AWS xray list-retrieved-traces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_retrieved_traces(input)
-	return common.execute_aws_command_with_input({ "xray", "list-retrieved-traces" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "list-retrieved-traces" }, input)
 end
 
 --- AWS xray list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "xray", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "list-tags-for-resource" }, input)
 end
 
 --- AWS xray put-encryption-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_encryption_config(input)
-	return common.execute_aws_command_with_input({ "xray", "put-encryption-config" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "put-encryption-config" }, input)
 end
 
 --- AWS xray put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "xray", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "put-resource-policy" }, input)
 end
 
 --- AWS xray put-telemetry-records operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_telemetry_records(input)
-	return common.execute_aws_command_with_input({ "xray", "put-telemetry-records" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "put-telemetry-records" }, input)
 end
 
 --- AWS xray put-trace-segments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_trace_segments(input)
-	return common.execute_aws_command_with_input({ "xray", "put-trace-segments" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "put-trace-segments" }, input)
 end
 
 --- AWS xray start-trace-retrieval operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_trace_retrieval(input)
-	return common.execute_aws_command_with_input({ "xray", "start-trace-retrieval" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "start-trace-retrieval" }, input)
 end
 
 --- AWS xray tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "xray", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "tag-resource" }, input)
 end
 
 --- AWS xray untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "xray", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "untag-resource" }, input)
 end
 
 --- AWS xray update-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_group(input)
-	return common.execute_aws_command_with_input({ "xray", "update-group" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "update-group" }, input)
 end
 
 --- AWS xray update-indexing-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_indexing_rule(input)
-	return common.execute_aws_command_with_input({ "xray", "update-indexing-rule" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "update-indexing-rule" }, input)
 end
 
 --- AWS xray update-sampling-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_sampling_rule(input)
-	return common.execute_aws_command_with_input({ "xray", "update-sampling-rule" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "update-sampling-rule" }, input)
 end
 
 --- AWS xray update-trace-segment-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_trace_segment_destination(input)
-	return common.execute_aws_command_with_input({ "xray", "update-trace-segment-destination" }, input)
+	return common.execute_aws_command_skeleton({ "xray", "update-trace-segment-destination" }, input)
 end
 
 return M

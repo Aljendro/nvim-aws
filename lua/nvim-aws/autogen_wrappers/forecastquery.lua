@@ -3,21 +3,21 @@
 
 local common = require("nvim-aws.common")
 
---- AWS FORECASTQUERY service functions
+--- AWS forecastquery service functions
 local M = {}
 
 --- AWS forecastquery query-forecast operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.query_forecast(input)
-	return common.execute_aws_command_with_input({ "forecastquery", "query-forecast" }, input)
+	return common.execute_aws_command_skeleton({ "forecastquery", "query-forecast" }, input)
 end
 
 --- AWS forecastquery query-what-if-forecast operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.query_what_if_forecast(input)
-	return common.execute_aws_command_with_input({ "forecastquery", "query-what-if-forecast" }, input)
+	return common.execute_aws_command_skeleton({ "forecastquery", "query-what-if-forecast" }, input)
 end
 
 return M

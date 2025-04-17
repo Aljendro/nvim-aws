@@ -3,210 +3,210 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MACHINELEARNING service functions
+--- AWS machinelearning service functions
 local M = {}
 
 --- AWS machinelearning add-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_tags(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "add-tags" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "add-tags" }, input)
 end
 
 --- AWS machinelearning create-batch-prediction operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_batch_prediction(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "create-batch-prediction" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "create-batch-prediction" }, input)
 end
 
 --- AWS machinelearning create-data-source-from-rds operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_source_from_rds(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "create-data-source-from-rds" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "create-data-source-from-rds" }, input)
 end
 
 --- AWS machinelearning create-data-source-from-redshift operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_source_from_redshift(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "create-data-source-from-redshift" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "create-data-source-from-redshift" }, input)
 end
 
 --- AWS machinelearning create-data-source-from-s3 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_source_from_s3(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "create-data-source-from-s3" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "create-data-source-from-s3" }, input)
 end
 
 --- AWS machinelearning create-evaluation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_evaluation(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "create-evaluation" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "create-evaluation" }, input)
 end
 
 --- AWS machinelearning create-ml-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ml_model(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "create-ml-model" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "create-ml-model" }, input)
 end
 
 --- AWS machinelearning create-realtime-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_realtime_endpoint(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "create-realtime-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "create-realtime-endpoint" }, input)
 end
 
 --- AWS machinelearning delete-batch-prediction operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_batch_prediction(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "delete-batch-prediction" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "delete-batch-prediction" }, input)
 end
 
 --- AWS machinelearning delete-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_source(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "delete-data-source" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "delete-data-source" }, input)
 end
 
 --- AWS machinelearning delete-evaluation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_evaluation(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "delete-evaluation" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "delete-evaluation" }, input)
 end
 
 --- AWS machinelearning delete-ml-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ml_model(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "delete-ml-model" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "delete-ml-model" }, input)
 end
 
 --- AWS machinelearning delete-realtime-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_realtime_endpoint(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "delete-realtime-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "delete-realtime-endpoint" }, input)
 end
 
 --- AWS machinelearning delete-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_tags(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "delete-tags" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "delete-tags" }, input)
 end
 
 --- AWS machinelearning describe-batch-predictions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_batch_predictions(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "describe-batch-predictions" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "describe-batch-predictions" }, input)
 end
 
 --- AWS machinelearning describe-data-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_sources(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "describe-data-sources" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "describe-data-sources" }, input)
 end
 
 --- AWS machinelearning describe-evaluations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_evaluations(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "describe-evaluations" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "describe-evaluations" }, input)
 end
 
 --- AWS machinelearning describe-ml-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ml_models(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "describe-ml-models" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "describe-ml-models" }, input)
 end
 
 --- AWS machinelearning describe-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_tags(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "describe-tags" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "describe-tags" }, input)
 end
 
 --- AWS machinelearning get-batch-prediction operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_batch_prediction(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "get-batch-prediction" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "get-batch-prediction" }, input)
 end
 
 --- AWS machinelearning get-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_source(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "get-data-source" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "get-data-source" }, input)
 end
 
 --- AWS machinelearning get-evaluation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_evaluation(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "get-evaluation" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "get-evaluation" }, input)
 end
 
 --- AWS machinelearning get-ml-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ml_model(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "get-ml-model" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "get-ml-model" }, input)
 end
 
 --- AWS machinelearning predict operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.predict(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "predict" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "predict" }, input)
 end
 
 --- AWS machinelearning update-batch-prediction operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_batch_prediction(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "update-batch-prediction" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "update-batch-prediction" }, input)
 end
 
 --- AWS machinelearning update-data-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_data_source(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "update-data-source" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "update-data-source" }, input)
 end
 
 --- AWS machinelearning update-evaluation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_evaluation(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "update-evaluation" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "update-evaluation" }, input)
 end
 
 --- AWS machinelearning update-ml-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_ml_model(input)
-	return common.execute_aws_command_with_input({ "machinelearning", "update-ml-model" }, input)
+	return common.execute_aws_command_skeleton({ "machinelearning", "update-ml-model" }, input)
 end
 
 --- AWS machinelearning wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "machinelearning", "wait" }, input)
+	return common.execute_aws_command({ "machinelearning", "wait" }, input)
 end
 
 return M

@@ -3,266 +3,266 @@
 
 local common = require("nvim-aws.common")
 
---- AWS APPRUNNER service functions
+--- AWS apprunner service functions
 local M = {}
 
 --- AWS apprunner associate-custom-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_custom_domain(input)
-	return common.execute_aws_command_with_input({ "apprunner", "associate-custom-domain" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "associate-custom-domain" }, input)
 end
 
 --- AWS apprunner create-auto-scaling-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_auto_scaling_configuration(input)
-	return common.execute_aws_command_with_input({ "apprunner", "create-auto-scaling-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "create-auto-scaling-configuration" }, input)
 end
 
 --- AWS apprunner create-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_connection(input)
-	return common.execute_aws_command_with_input({ "apprunner", "create-connection" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "create-connection" }, input)
 end
 
 --- AWS apprunner create-observability-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_observability_configuration(input)
-	return common.execute_aws_command_with_input({ "apprunner", "create-observability-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "create-observability-configuration" }, input)
 end
 
 --- AWS apprunner create-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_service(input)
-	return common.execute_aws_command_with_input({ "apprunner", "create-service" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "create-service" }, input)
 end
 
 --- AWS apprunner create-vpc-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_connector(input)
-	return common.execute_aws_command_with_input({ "apprunner", "create-vpc-connector" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "create-vpc-connector" }, input)
 end
 
 --- AWS apprunner create-vpc-ingress-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_ingress_connection(input)
-	return common.execute_aws_command_with_input({ "apprunner", "create-vpc-ingress-connection" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "create-vpc-ingress-connection" }, input)
 end
 
 --- AWS apprunner delete-auto-scaling-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_auto_scaling_configuration(input)
-	return common.execute_aws_command_with_input({ "apprunner", "delete-auto-scaling-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "delete-auto-scaling-configuration" }, input)
 end
 
 --- AWS apprunner delete-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connection(input)
-	return common.execute_aws_command_with_input({ "apprunner", "delete-connection" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "delete-connection" }, input)
 end
 
 --- AWS apprunner delete-observability-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_observability_configuration(input)
-	return common.execute_aws_command_with_input({ "apprunner", "delete-observability-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "delete-observability-configuration" }, input)
 end
 
 --- AWS apprunner delete-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_service(input)
-	return common.execute_aws_command_with_input({ "apprunner", "delete-service" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "delete-service" }, input)
 end
 
 --- AWS apprunner delete-vpc-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_connector(input)
-	return common.execute_aws_command_with_input({ "apprunner", "delete-vpc-connector" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "delete-vpc-connector" }, input)
 end
 
 --- AWS apprunner delete-vpc-ingress-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_ingress_connection(input)
-	return common.execute_aws_command_with_input({ "apprunner", "delete-vpc-ingress-connection" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "delete-vpc-ingress-connection" }, input)
 end
 
 --- AWS apprunner describe-auto-scaling-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_auto_scaling_configuration(input)
-	return common.execute_aws_command_with_input({ "apprunner", "describe-auto-scaling-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "describe-auto-scaling-configuration" }, input)
 end
 
 --- AWS apprunner describe-custom-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_custom_domains(input)
-	return common.execute_aws_command_with_input({ "apprunner", "describe-custom-domains" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "describe-custom-domains" }, input)
 end
 
 --- AWS apprunner describe-observability-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_observability_configuration(input)
-	return common.execute_aws_command_with_input({ "apprunner", "describe-observability-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "describe-observability-configuration" }, input)
 end
 
 --- AWS apprunner describe-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_service(input)
-	return common.execute_aws_command_with_input({ "apprunner", "describe-service" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "describe-service" }, input)
 end
 
 --- AWS apprunner describe-vpc-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_connector(input)
-	return common.execute_aws_command_with_input({ "apprunner", "describe-vpc-connector" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "describe-vpc-connector" }, input)
 end
 
 --- AWS apprunner describe-vpc-ingress-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_ingress_connection(input)
-	return common.execute_aws_command_with_input({ "apprunner", "describe-vpc-ingress-connection" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "describe-vpc-ingress-connection" }, input)
 end
 
 --- AWS apprunner disassociate-custom-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_custom_domain(input)
-	return common.execute_aws_command_with_input({ "apprunner", "disassociate-custom-domain" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "disassociate-custom-domain" }, input)
 end
 
 --- AWS apprunner list-auto-scaling-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_auto_scaling_configurations(input)
-	return common.execute_aws_command_with_input({ "apprunner", "list-auto-scaling-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "list-auto-scaling-configurations" }, input)
 end
 
 --- AWS apprunner list-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_connections(input)
-	return common.execute_aws_command_with_input({ "apprunner", "list-connections" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "list-connections" }, input)
 end
 
 --- AWS apprunner list-observability-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_observability_configurations(input)
-	return common.execute_aws_command_with_input({ "apprunner", "list-observability-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "list-observability-configurations" }, input)
 end
 
 --- AWS apprunner list-operations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_operations(input)
-	return common.execute_aws_command_with_input({ "apprunner", "list-operations" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "list-operations" }, input)
 end
 
 --- AWS apprunner list-services operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_services(input)
-	return common.execute_aws_command_with_input({ "apprunner", "list-services" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "list-services" }, input)
 end
 
 --- AWS apprunner list-services-for-auto-scaling-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_services_for_auto_scaling_configuration(input)
-	return common.execute_aws_command_with_input({ "apprunner", "list-services-for-auto-scaling-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "list-services-for-auto-scaling-configuration" }, input)
 end
 
 --- AWS apprunner list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "apprunner", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "list-tags-for-resource" }, input)
 end
 
 --- AWS apprunner list-vpc-connectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_vpc_connectors(input)
-	return common.execute_aws_command_with_input({ "apprunner", "list-vpc-connectors" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "list-vpc-connectors" }, input)
 end
 
 --- AWS apprunner list-vpc-ingress-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_vpc_ingress_connections(input)
-	return common.execute_aws_command_with_input({ "apprunner", "list-vpc-ingress-connections" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "list-vpc-ingress-connections" }, input)
 end
 
 --- AWS apprunner pause-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.pause_service(input)
-	return common.execute_aws_command_with_input({ "apprunner", "pause-service" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "pause-service" }, input)
 end
 
 --- AWS apprunner resume-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resume_service(input)
-	return common.execute_aws_command_with_input({ "apprunner", "resume-service" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "resume-service" }, input)
 end
 
 --- AWS apprunner start-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_deployment(input)
-	return common.execute_aws_command_with_input({ "apprunner", "start-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "start-deployment" }, input)
 end
 
 --- AWS apprunner tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "apprunner", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "tag-resource" }, input)
 end
 
 --- AWS apprunner untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "apprunner", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "untag-resource" }, input)
 end
 
 --- AWS apprunner update-default-auto-scaling-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_default_auto_scaling_configuration(input)
-	return common.execute_aws_command_with_input({ "apprunner", "update-default-auto-scaling-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "update-default-auto-scaling-configuration" }, input)
 end
 
 --- AWS apprunner update-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_service(input)
-	return common.execute_aws_command_with_input({ "apprunner", "update-service" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "update-service" }, input)
 end
 
 --- AWS apprunner update-vpc-ingress-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_vpc_ingress_connection(input)
-	return common.execute_aws_command_with_input({ "apprunner", "update-vpc-ingress-connection" }, input)
+	return common.execute_aws_command_skeleton({ "apprunner", "update-vpc-ingress-connection" }, input)
 end
 
 return M

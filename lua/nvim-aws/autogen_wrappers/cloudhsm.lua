@@ -3,7 +3,7 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLOUDHSM service functions
+--- AWS cloudhsm service functions
 local M = {}
 
 return M

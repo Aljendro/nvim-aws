@@ -3,259 +3,259 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IVS-REALTIME service functions
+--- AWS ivs-realtime service functions
 local M = {}
 
 --- AWS ivs-realtime create-encoder-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_encoder_configuration(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "create-encoder-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "create-encoder-configuration" }, input)
 end
 
 --- AWS ivs-realtime create-ingest-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ingest_configuration(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "create-ingest-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "create-ingest-configuration" }, input)
 end
 
 --- AWS ivs-realtime create-participant-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_participant_token(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "create-participant-token" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "create-participant-token" }, input)
 end
 
 --- AWS ivs-realtime create-stage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_stage(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "create-stage" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "create-stage" }, input)
 end
 
 --- AWS ivs-realtime create-storage-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_storage_configuration(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "create-storage-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "create-storage-configuration" }, input)
 end
 
 --- AWS ivs-realtime delete-encoder-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_encoder_configuration(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "delete-encoder-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "delete-encoder-configuration" }, input)
 end
 
 --- AWS ivs-realtime delete-ingest-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ingest_configuration(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "delete-ingest-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "delete-ingest-configuration" }, input)
 end
 
 --- AWS ivs-realtime delete-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_public_key(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "delete-public-key" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "delete-public-key" }, input)
 end
 
 --- AWS ivs-realtime delete-stage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_stage(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "delete-stage" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "delete-stage" }, input)
 end
 
 --- AWS ivs-realtime delete-storage-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_storage_configuration(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "delete-storage-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "delete-storage-configuration" }, input)
 end
 
 --- AWS ivs-realtime disconnect-participant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disconnect_participant(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "disconnect-participant" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "disconnect-participant" }, input)
 end
 
 --- AWS ivs-realtime get-composition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_composition(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "get-composition" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "get-composition" }, input)
 end
 
 --- AWS ivs-realtime get-encoder-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_encoder_configuration(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "get-encoder-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "get-encoder-configuration" }, input)
 end
 
 --- AWS ivs-realtime get-ingest-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ingest_configuration(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "get-ingest-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "get-ingest-configuration" }, input)
 end
 
 --- AWS ivs-realtime get-participant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_participant(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "get-participant" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "get-participant" }, input)
 end
 
 --- AWS ivs-realtime get-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_public_key(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "get-public-key" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "get-public-key" }, input)
 end
 
 --- AWS ivs-realtime get-stage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_stage(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "get-stage" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "get-stage" }, input)
 end
 
 --- AWS ivs-realtime get-stage-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_stage_session(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "get-stage-session" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "get-stage-session" }, input)
 end
 
 --- AWS ivs-realtime get-storage-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_storage_configuration(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "get-storage-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "get-storage-configuration" }, input)
 end
 
 --- AWS ivs-realtime import-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_public_key(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "import-public-key" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "import-public-key" }, input)
 end
 
 --- AWS ivs-realtime list-compositions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_compositions(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "list-compositions" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "list-compositions" }, input)
 end
 
 --- AWS ivs-realtime list-encoder-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_encoder_configurations(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "list-encoder-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "list-encoder-configurations" }, input)
 end
 
 --- AWS ivs-realtime list-ingest-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ingest_configurations(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "list-ingest-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "list-ingest-configurations" }, input)
 end
 
 --- AWS ivs-realtime list-participant-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_participant_events(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "list-participant-events" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "list-participant-events" }, input)
 end
 
 --- AWS ivs-realtime list-participants operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_participants(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "list-participants" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "list-participants" }, input)
 end
 
 --- AWS ivs-realtime list-public-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_public_keys(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "list-public-keys" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "list-public-keys" }, input)
 end
 
 --- AWS ivs-realtime list-stage-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_stage_sessions(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "list-stage-sessions" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "list-stage-sessions" }, input)
 end
 
 --- AWS ivs-realtime list-stages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_stages(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "list-stages" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "list-stages" }, input)
 end
 
 --- AWS ivs-realtime list-storage-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_storage_configurations(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "list-storage-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "list-storage-configurations" }, input)
 end
 
 --- AWS ivs-realtime list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "list-tags-for-resource" }, input)
 end
 
 --- AWS ivs-realtime start-composition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_composition(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "start-composition" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "start-composition" }, input)
 end
 
 --- AWS ivs-realtime stop-composition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_composition(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "stop-composition" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "stop-composition" }, input)
 end
 
 --- AWS ivs-realtime tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "tag-resource" }, input)
 end
 
 --- AWS ivs-realtime untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "untag-resource" }, input)
 end
 
 --- AWS ivs-realtime update-ingest-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_ingest_configuration(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "update-ingest-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "update-ingest-configuration" }, input)
 end
 
 --- AWS ivs-realtime update-stage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_stage(input)
-	return common.execute_aws_command_with_input({ "ivs-realtime", "update-stage" }, input)
+	return common.execute_aws_command_skeleton({ "ivs-realtime", "update-stage" }, input)
 end
 
 return M

@@ -3,2520 +3,2520 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SAGEMAKER service functions
+--- AWS sagemaker service functions
 local M = {}
 
 --- AWS sagemaker add-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_association(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "add-association" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "add-association" }, input)
 end
 
 --- AWS sagemaker add-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_tags(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "add-tags" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "add-tags" }, input)
 end
 
 --- AWS sagemaker associate-trial-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_trial_component(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "associate-trial-component" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "associate-trial-component" }, input)
 end
 
 --- AWS sagemaker batch-delete-cluster-nodes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_cluster_nodes(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "batch-delete-cluster-nodes" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "batch-delete-cluster-nodes" }, input)
 end
 
 --- AWS sagemaker batch-describe-model-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_describe_model_package(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "batch-describe-model-package" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "batch-describe-model-package" }, input)
 end
 
 --- AWS sagemaker create-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_action(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-action" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-action" }, input)
 end
 
 --- AWS sagemaker create-algorithm operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_algorithm(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-algorithm" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-algorithm" }, input)
 end
 
 --- AWS sagemaker create-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_app(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-app" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-app" }, input)
 end
 
 --- AWS sagemaker create-app-image-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_app_image_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-app-image-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-app-image-config" }, input)
 end
 
 --- AWS sagemaker create-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_artifact(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-artifact" }, input)
 end
 
 --- AWS sagemaker create-auto-ml-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_auto_ml_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-auto-ml-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-auto-ml-job" }, input)
 end
 
 --- AWS sagemaker create-auto-ml-job-v2 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_auto_ml_job_v2(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-auto-ml-job-v2" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-auto-ml-job-v2" }, input)
 end
 
 --- AWS sagemaker create-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-cluster" }, input)
 end
 
 --- AWS sagemaker create-cluster-scheduler-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster_scheduler_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-cluster-scheduler-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-cluster-scheduler-config" }, input)
 end
 
 --- AWS sagemaker create-code-repository operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_code_repository(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-code-repository" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-code-repository" }, input)
 end
 
 --- AWS sagemaker create-compilation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_compilation_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-compilation-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-compilation-job" }, input)
 end
 
 --- AWS sagemaker create-compute-quota operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_compute_quota(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-compute-quota" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-compute-quota" }, input)
 end
 
 --- AWS sagemaker create-context operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_context(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-context" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-context" }, input)
 end
 
 --- AWS sagemaker create-data-quality-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_quality_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-data-quality-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-data-quality-job-definition" }, input)
 end
 
 --- AWS sagemaker create-device-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_device_fleet(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-device-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-device-fleet" }, input)
 end
 
 --- AWS sagemaker create-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_domain(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-domain" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-domain" }, input)
 end
 
 --- AWS sagemaker create-edge-deployment-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_edge_deployment_plan(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-edge-deployment-plan" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-edge-deployment-plan" }, input)
 end
 
 --- AWS sagemaker create-edge-deployment-stage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_edge_deployment_stage(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-edge-deployment-stage" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-edge-deployment-stage" }, input)
 end
 
 --- AWS sagemaker create-edge-packaging-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_edge_packaging_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-edge-packaging-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-edge-packaging-job" }, input)
 end
 
 --- AWS sagemaker create-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_endpoint(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-endpoint" }, input)
 end
 
 --- AWS sagemaker create-endpoint-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_endpoint_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-endpoint-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-endpoint-config" }, input)
 end
 
 --- AWS sagemaker create-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_experiment(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-experiment" }, input)
 end
 
 --- AWS sagemaker create-feature-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_feature_group(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-feature-group" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-feature-group" }, input)
 end
 
 --- AWS sagemaker create-flow-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_flow_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-flow-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-flow-definition" }, input)
 end
 
 --- AWS sagemaker create-hub operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_hub(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-hub" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-hub" }, input)
 end
 
 --- AWS sagemaker create-hub-content-reference operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_hub_content_reference(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-hub-content-reference" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-hub-content-reference" }, input)
 end
 
 --- AWS sagemaker create-human-task-ui operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_human_task_ui(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-human-task-ui" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-human-task-ui" }, input)
 end
 
 --- AWS sagemaker create-hyper-parameter-tuning-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_hyper_parameter_tuning_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-hyper-parameter-tuning-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-hyper-parameter-tuning-job" }, input)
 end
 
 --- AWS sagemaker create-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_image(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-image" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-image" }, input)
 end
 
 --- AWS sagemaker create-image-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_image_version(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-image-version" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-image-version" }, input)
 end
 
 --- AWS sagemaker create-inference-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_inference_component(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-inference-component" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-inference-component" }, input)
 end
 
 --- AWS sagemaker create-inference-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_inference_experiment(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-inference-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-inference-experiment" }, input)
 end
 
 --- AWS sagemaker create-inference-recommendations-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_inference_recommendations_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-inference-recommendations-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-inference-recommendations-job" }, input)
 end
 
 --- AWS sagemaker create-labeling-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_labeling_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-labeling-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-labeling-job" }, input)
 end
 
 --- AWS sagemaker create-mlflow-tracking-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_mlflow_tracking_server(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-mlflow-tracking-server" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-mlflow-tracking-server" }, input)
 end
 
 --- AWS sagemaker create-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_model(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-model" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-model" }, input)
 end
 
 --- AWS sagemaker create-model-bias-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_model_bias_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-model-bias-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-model-bias-job-definition" }, input)
 end
 
 --- AWS sagemaker create-model-card operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_model_card(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-model-card" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-model-card" }, input)
 end
 
 --- AWS sagemaker create-model-card-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_model_card_export_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-model-card-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-model-card-export-job" }, input)
 end
 
 --- AWS sagemaker create-model-explainability-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_model_explainability_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-model-explainability-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-model-explainability-job-definition" }, input)
 end
 
 --- AWS sagemaker create-model-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_model_package(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-model-package" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-model-package" }, input)
 end
 
 --- AWS sagemaker create-model-package-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_model_package_group(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-model-package-group" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-model-package-group" }, input)
 end
 
 --- AWS sagemaker create-model-quality-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_model_quality_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-model-quality-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-model-quality-job-definition" }, input)
 end
 
 --- AWS sagemaker create-monitoring-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_monitoring_schedule(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-monitoring-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-monitoring-schedule" }, input)
 end
 
 --- AWS sagemaker create-notebook-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_notebook_instance(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-notebook-instance" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-notebook-instance" }, input)
 end
 
 --- AWS sagemaker create-notebook-instance-lifecycle-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_notebook_instance_lifecycle_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-notebook-instance-lifecycle-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-notebook-instance-lifecycle-config" }, input)
 end
 
 --- AWS sagemaker create-optimization-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_optimization_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-optimization-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-optimization-job" }, input)
 end
 
 --- AWS sagemaker create-partner-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_partner_app(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-partner-app" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-partner-app" }, input)
 end
 
 --- AWS sagemaker create-partner-app-presigned-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_partner_app_presigned_url(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-partner-app-presigned-url" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-partner-app-presigned-url" }, input)
 end
 
 --- AWS sagemaker create-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_pipeline(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-pipeline" }, input)
 end
 
 --- AWS sagemaker create-presigned-domain-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_presigned_domain_url(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-presigned-domain-url" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-presigned-domain-url" }, input)
 end
 
 --- AWS sagemaker create-presigned-mlflow-tracking-server-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_presigned_mlflow_tracking_server_url(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-presigned-mlflow-tracking-server-url" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-presigned-mlflow-tracking-server-url" }, input)
 end
 
 --- AWS sagemaker create-presigned-notebook-instance-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_presigned_notebook_instance_url(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-presigned-notebook-instance-url" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-presigned-notebook-instance-url" }, input)
 end
 
 --- AWS sagemaker create-processing-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_processing_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-processing-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-processing-job" }, input)
 end
 
 --- AWS sagemaker create-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_project(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-project" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-project" }, input)
 end
 
 --- AWS sagemaker create-space operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_space(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-space" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-space" }, input)
 end
 
 --- AWS sagemaker create-studio-lifecycle-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_studio_lifecycle_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-studio-lifecycle-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-studio-lifecycle-config" }, input)
 end
 
 --- AWS sagemaker create-training-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_training_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-training-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-training-job" }, input)
 end
 
 --- AWS sagemaker create-training-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_training_plan(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-training-plan" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-training-plan" }, input)
 end
 
 --- AWS sagemaker create-transform-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transform_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-transform-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-transform-job" }, input)
 end
 
 --- AWS sagemaker create-trial operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_trial(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-trial" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-trial" }, input)
 end
 
 --- AWS sagemaker create-trial-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_trial_component(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-trial-component" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-trial-component" }, input)
 end
 
 --- AWS sagemaker create-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user_profile(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-user-profile" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-user-profile" }, input)
 end
 
 --- AWS sagemaker create-workforce operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workforce(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-workforce" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-workforce" }, input)
 end
 
 --- AWS sagemaker create-workteam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workteam(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "create-workteam" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "create-workteam" }, input)
 end
 
 --- AWS sagemaker delete-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_action(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-action" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-action" }, input)
 end
 
 --- AWS sagemaker delete-algorithm operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_algorithm(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-algorithm" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-algorithm" }, input)
 end
 
 --- AWS sagemaker delete-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_app(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-app" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-app" }, input)
 end
 
 --- AWS sagemaker delete-app-image-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_app_image_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-app-image-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-app-image-config" }, input)
 end
 
 --- AWS sagemaker delete-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_artifact(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-artifact" }, input)
 end
 
 --- AWS sagemaker delete-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_association(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-association" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-association" }, input)
 end
 
 --- AWS sagemaker delete-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cluster(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-cluster" }, input)
 end
 
 --- AWS sagemaker delete-cluster-scheduler-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cluster_scheduler_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-cluster-scheduler-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-cluster-scheduler-config" }, input)
 end
 
 --- AWS sagemaker delete-code-repository operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_code_repository(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-code-repository" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-code-repository" }, input)
 end
 
 --- AWS sagemaker delete-compilation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_compilation_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-compilation-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-compilation-job" }, input)
 end
 
 --- AWS sagemaker delete-compute-quota operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_compute_quota(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-compute-quota" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-compute-quota" }, input)
 end
 
 --- AWS sagemaker delete-context operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_context(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-context" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-context" }, input)
 end
 
 --- AWS sagemaker delete-data-quality-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_quality_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-data-quality-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-data-quality-job-definition" }, input)
 end
 
 --- AWS sagemaker delete-device-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_device_fleet(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-device-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-device-fleet" }, input)
 end
 
 --- AWS sagemaker delete-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_domain(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-domain" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-domain" }, input)
 end
 
 --- AWS sagemaker delete-edge-deployment-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_edge_deployment_plan(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-edge-deployment-plan" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-edge-deployment-plan" }, input)
 end
 
 --- AWS sagemaker delete-edge-deployment-stage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_edge_deployment_stage(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-edge-deployment-stage" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-edge-deployment-stage" }, input)
 end
 
 --- AWS sagemaker delete-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_endpoint(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-endpoint" }, input)
 end
 
 --- AWS sagemaker delete-endpoint-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_endpoint_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-endpoint-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-endpoint-config" }, input)
 end
 
 --- AWS sagemaker delete-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_experiment(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-experiment" }, input)
 end
 
 --- AWS sagemaker delete-feature-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_feature_group(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-feature-group" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-feature-group" }, input)
 end
 
 --- AWS sagemaker delete-flow-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_flow_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-flow-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-flow-definition" }, input)
 end
 
 --- AWS sagemaker delete-hub operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_hub(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-hub" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-hub" }, input)
 end
 
 --- AWS sagemaker delete-hub-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_hub_content(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-hub-content" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-hub-content" }, input)
 end
 
 --- AWS sagemaker delete-hub-content-reference operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_hub_content_reference(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-hub-content-reference" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-hub-content-reference" }, input)
 end
 
 --- AWS sagemaker delete-human-task-ui operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_human_task_ui(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-human-task-ui" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-human-task-ui" }, input)
 end
 
 --- AWS sagemaker delete-hyper-parameter-tuning-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_hyper_parameter_tuning_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-hyper-parameter-tuning-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-hyper-parameter-tuning-job" }, input)
 end
 
 --- AWS sagemaker delete-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_image(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-image" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-image" }, input)
 end
 
 --- AWS sagemaker delete-image-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_image_version(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-image-version" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-image-version" }, input)
 end
 
 --- AWS sagemaker delete-inference-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_inference_component(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-inference-component" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-inference-component" }, input)
 end
 
 --- AWS sagemaker delete-inference-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_inference_experiment(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-inference-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-inference-experiment" }, input)
 end
 
 --- AWS sagemaker delete-mlflow-tracking-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_mlflow_tracking_server(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-mlflow-tracking-server" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-mlflow-tracking-server" }, input)
 end
 
 --- AWS sagemaker delete-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_model(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-model" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-model" }, input)
 end
 
 --- AWS sagemaker delete-model-bias-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_model_bias_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-model-bias-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-model-bias-job-definition" }, input)
 end
 
 --- AWS sagemaker delete-model-card operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_model_card(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-model-card" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-model-card" }, input)
 end
 
 --- AWS sagemaker delete-model-explainability-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_model_explainability_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-model-explainability-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-model-explainability-job-definition" }, input)
 end
 
 --- AWS sagemaker delete-model-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_model_package(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-model-package" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-model-package" }, input)
 end
 
 --- AWS sagemaker delete-model-package-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_model_package_group(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-model-package-group" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-model-package-group" }, input)
 end
 
 --- AWS sagemaker delete-model-package-group-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_model_package_group_policy(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-model-package-group-policy" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-model-package-group-policy" }, input)
 end
 
 --- AWS sagemaker delete-model-quality-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_model_quality_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-model-quality-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-model-quality-job-definition" }, input)
 end
 
 --- AWS sagemaker delete-monitoring-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_monitoring_schedule(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-monitoring-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-monitoring-schedule" }, input)
 end
 
 --- AWS sagemaker delete-notebook-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_notebook_instance(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-notebook-instance" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-notebook-instance" }, input)
 end
 
 --- AWS sagemaker delete-notebook-instance-lifecycle-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_notebook_instance_lifecycle_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-notebook-instance-lifecycle-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-notebook-instance-lifecycle-config" }, input)
 end
 
 --- AWS sagemaker delete-optimization-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_optimization_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-optimization-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-optimization-job" }, input)
 end
 
 --- AWS sagemaker delete-partner-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_partner_app(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-partner-app" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-partner-app" }, input)
 end
 
 --- AWS sagemaker delete-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_pipeline(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-pipeline" }, input)
 end
 
 --- AWS sagemaker delete-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_project(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-project" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-project" }, input)
 end
 
 --- AWS sagemaker delete-space operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_space(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-space" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-space" }, input)
 end
 
 --- AWS sagemaker delete-studio-lifecycle-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_studio_lifecycle_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-studio-lifecycle-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-studio-lifecycle-config" }, input)
 end
 
 --- AWS sagemaker delete-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_tags(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-tags" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-tags" }, input)
 end
 
 --- AWS sagemaker delete-trial operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_trial(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-trial" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-trial" }, input)
 end
 
 --- AWS sagemaker delete-trial-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_trial_component(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-trial-component" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-trial-component" }, input)
 end
 
 --- AWS sagemaker delete-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user_profile(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-user-profile" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-user-profile" }, input)
 end
 
 --- AWS sagemaker delete-workforce operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workforce(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-workforce" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-workforce" }, input)
 end
 
 --- AWS sagemaker delete-workteam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workteam(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "delete-workteam" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "delete-workteam" }, input)
 end
 
 --- AWS sagemaker deregister-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_devices(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "deregister-devices" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "deregister-devices" }, input)
 end
 
 --- AWS sagemaker describe-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_action(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-action" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-action" }, input)
 end
 
 --- AWS sagemaker describe-algorithm operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_algorithm(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-algorithm" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-algorithm" }, input)
 end
 
 --- AWS sagemaker describe-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_app(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-app" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-app" }, input)
 end
 
 --- AWS sagemaker describe-app-image-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_app_image_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-app-image-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-app-image-config" }, input)
 end
 
 --- AWS sagemaker describe-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_artifact(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-artifact" }, input)
 end
 
 --- AWS sagemaker describe-auto-ml-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_auto_ml_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-auto-ml-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-auto-ml-job" }, input)
 end
 
 --- AWS sagemaker describe-auto-ml-job-v2 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_auto_ml_job_v2(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-auto-ml-job-v2" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-auto-ml-job-v2" }, input)
 end
 
 --- AWS sagemaker describe-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-cluster" }, input)
 end
 
 --- AWS sagemaker describe-cluster-node operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster_node(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-cluster-node" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-cluster-node" }, input)
 end
 
 --- AWS sagemaker describe-cluster-scheduler-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster_scheduler_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-cluster-scheduler-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-cluster-scheduler-config" }, input)
 end
 
 --- AWS sagemaker describe-code-repository operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_code_repository(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-code-repository" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-code-repository" }, input)
 end
 
 --- AWS sagemaker describe-compilation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_compilation_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-compilation-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-compilation-job" }, input)
 end
 
 --- AWS sagemaker describe-compute-quota operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_compute_quota(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-compute-quota" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-compute-quota" }, input)
 end
 
 --- AWS sagemaker describe-context operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_context(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-context" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-context" }, input)
 end
 
 --- AWS sagemaker describe-data-quality-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_quality_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-data-quality-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-data-quality-job-definition" }, input)
 end
 
 --- AWS sagemaker describe-device operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_device(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-device" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-device" }, input)
 end
 
 --- AWS sagemaker describe-device-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_device_fleet(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-device-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-device-fleet" }, input)
 end
 
 --- AWS sagemaker describe-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_domain(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-domain" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-domain" }, input)
 end
 
 --- AWS sagemaker describe-edge-deployment-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_edge_deployment_plan(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-edge-deployment-plan" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-edge-deployment-plan" }, input)
 end
 
 --- AWS sagemaker describe-edge-packaging-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_edge_packaging_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-edge-packaging-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-edge-packaging-job" }, input)
 end
 
 --- AWS sagemaker describe-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoint(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-endpoint" }, input)
 end
 
 --- AWS sagemaker describe-endpoint-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoint_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-endpoint-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-endpoint-config" }, input)
 end
 
 --- AWS sagemaker describe-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_experiment(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-experiment" }, input)
 end
 
 --- AWS sagemaker describe-feature-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_feature_group(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-feature-group" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-feature-group" }, input)
 end
 
 --- AWS sagemaker describe-feature-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_feature_metadata(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-feature-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-feature-metadata" }, input)
 end
 
 --- AWS sagemaker describe-flow-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_flow_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-flow-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-flow-definition" }, input)
 end
 
 --- AWS sagemaker describe-hub operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_hub(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-hub" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-hub" }, input)
 end
 
 --- AWS sagemaker describe-hub-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_hub_content(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-hub-content" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-hub-content" }, input)
 end
 
 --- AWS sagemaker describe-human-task-ui operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_human_task_ui(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-human-task-ui" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-human-task-ui" }, input)
 end
 
 --- AWS sagemaker describe-hyper-parameter-tuning-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_hyper_parameter_tuning_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-hyper-parameter-tuning-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-hyper-parameter-tuning-job" }, input)
 end
 
 --- AWS sagemaker describe-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_image(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-image" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-image" }, input)
 end
 
 --- AWS sagemaker describe-image-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_image_version(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-image-version" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-image-version" }, input)
 end
 
 --- AWS sagemaker describe-inference-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_inference_component(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-inference-component" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-inference-component" }, input)
 end
 
 --- AWS sagemaker describe-inference-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_inference_experiment(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-inference-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-inference-experiment" }, input)
 end
 
 --- AWS sagemaker describe-inference-recommendations-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_inference_recommendations_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-inference-recommendations-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-inference-recommendations-job" }, input)
 end
 
 --- AWS sagemaker describe-labeling-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_labeling_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-labeling-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-labeling-job" }, input)
 end
 
 --- AWS sagemaker describe-lineage-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_lineage_group(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-lineage-group" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-lineage-group" }, input)
 end
 
 --- AWS sagemaker describe-mlflow-tracking-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_mlflow_tracking_server(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-mlflow-tracking-server" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-mlflow-tracking-server" }, input)
 end
 
 --- AWS sagemaker describe-model operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_model(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-model" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-model" }, input)
 end
 
 --- AWS sagemaker describe-model-bias-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_model_bias_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-model-bias-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-model-bias-job-definition" }, input)
 end
 
 --- AWS sagemaker describe-model-card operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_model_card(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-model-card" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-model-card" }, input)
 end
 
 --- AWS sagemaker describe-model-card-export-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_model_card_export_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-model-card-export-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-model-card-export-job" }, input)
 end
 
 --- AWS sagemaker describe-model-explainability-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_model_explainability_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-model-explainability-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-model-explainability-job-definition" }, input)
 end
 
 --- AWS sagemaker describe-model-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_model_package(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-model-package" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-model-package" }, input)
 end
 
 --- AWS sagemaker describe-model-package-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_model_package_group(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-model-package-group" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-model-package-group" }, input)
 end
 
 --- AWS sagemaker describe-model-quality-job-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_model_quality_job_definition(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-model-quality-job-definition" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-model-quality-job-definition" }, input)
 end
 
 --- AWS sagemaker describe-monitoring-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_monitoring_schedule(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-monitoring-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-monitoring-schedule" }, input)
 end
 
 --- AWS sagemaker describe-notebook-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_notebook_instance(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-notebook-instance" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-notebook-instance" }, input)
 end
 
 --- AWS sagemaker describe-notebook-instance-lifecycle-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_notebook_instance_lifecycle_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-notebook-instance-lifecycle-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-notebook-instance-lifecycle-config" }, input)
 end
 
 --- AWS sagemaker describe-optimization-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_optimization_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-optimization-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-optimization-job" }, input)
 end
 
 --- AWS sagemaker describe-partner-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_partner_app(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-partner-app" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-partner-app" }, input)
 end
 
 --- AWS sagemaker describe-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_pipeline(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-pipeline" }, input)
 end
 
 --- AWS sagemaker describe-pipeline-definition-for-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_pipeline_definition_for_execution(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-pipeline-definition-for-execution" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-pipeline-definition-for-execution" }, input)
 end
 
 --- AWS sagemaker describe-pipeline-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_pipeline_execution(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-pipeline-execution" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-pipeline-execution" }, input)
 end
 
 --- AWS sagemaker describe-processing-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_processing_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-processing-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-processing-job" }, input)
 end
 
 --- AWS sagemaker describe-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_project(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-project" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-project" }, input)
 end
 
 --- AWS sagemaker describe-space operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_space(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-space" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-space" }, input)
 end
 
 --- AWS sagemaker describe-studio-lifecycle-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_studio_lifecycle_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-studio-lifecycle-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-studio-lifecycle-config" }, input)
 end
 
 --- AWS sagemaker describe-subscribed-workteam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_subscribed_workteam(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-subscribed-workteam" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-subscribed-workteam" }, input)
 end
 
 --- AWS sagemaker describe-training-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_training_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-training-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-training-job" }, input)
 end
 
 --- AWS sagemaker describe-training-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_training_plan(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-training-plan" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-training-plan" }, input)
 end
 
 --- AWS sagemaker describe-transform-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transform_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-transform-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-transform-job" }, input)
 end
 
 --- AWS sagemaker describe-trial operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_trial(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-trial" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-trial" }, input)
 end
 
 --- AWS sagemaker describe-trial-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_trial_component(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-trial-component" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-trial-component" }, input)
 end
 
 --- AWS sagemaker describe-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_user_profile(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-user-profile" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-user-profile" }, input)
 end
 
 --- AWS sagemaker describe-workforce operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workforce(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-workforce" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-workforce" }, input)
 end
 
 --- AWS sagemaker describe-workteam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workteam(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "describe-workteam" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "describe-workteam" }, input)
 end
 
 --- AWS sagemaker disable-sagemaker-servicecatalog-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_sagemaker_servicecatalog_portfolio(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "disable-sagemaker-servicecatalog-portfolio" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "disable-sagemaker-servicecatalog-portfolio" }, input)
 end
 
 --- AWS sagemaker disassociate-trial-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_trial_component(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "disassociate-trial-component" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "disassociate-trial-component" }, input)
 end
 
 --- AWS sagemaker enable-sagemaker-servicecatalog-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_sagemaker_servicecatalog_portfolio(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "enable-sagemaker-servicecatalog-portfolio" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "enable-sagemaker-servicecatalog-portfolio" }, input)
 end
 
 --- AWS sagemaker get-device-fleet-report operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_device_fleet_report(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "get-device-fleet-report" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "get-device-fleet-report" }, input)
 end
 
 --- AWS sagemaker get-lineage-group-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_lineage_group_policy(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "get-lineage-group-policy" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "get-lineage-group-policy" }, input)
 end
 
 --- AWS sagemaker get-model-package-group-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_model_package_group_policy(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "get-model-package-group-policy" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "get-model-package-group-policy" }, input)
 end
 
 --- AWS sagemaker get-sagemaker-servicecatalog-portfolio-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sagemaker_servicecatalog_portfolio_status(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "get-sagemaker-servicecatalog-portfolio-status" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "get-sagemaker-servicecatalog-portfolio-status" }, input)
 end
 
 --- AWS sagemaker get-scaling-configuration-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_scaling_configuration_recommendation(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "get-scaling-configuration-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "get-scaling-configuration-recommendation" }, input)
 end
 
 --- AWS sagemaker get-search-suggestions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_search_suggestions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "get-search-suggestions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "get-search-suggestions" }, input)
 end
 
 --- AWS sagemaker import-hub-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_hub_content(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "import-hub-content" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "import-hub-content" }, input)
 end
 
 --- AWS sagemaker list-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_actions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-actions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-actions" }, input)
 end
 
 --- AWS sagemaker list-algorithms operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_algorithms(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-algorithms" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-algorithms" }, input)
 end
 
 --- AWS sagemaker list-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_aliases(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-aliases" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-aliases" }, input)
 end
 
 --- AWS sagemaker list-app-image-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_app_image_configs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-app-image-configs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-app-image-configs" }, input)
 end
 
 --- AWS sagemaker list-apps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_apps(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-apps" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-apps" }, input)
 end
 
 --- AWS sagemaker list-artifacts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_artifacts(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-artifacts" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-artifacts" }, input)
 end
 
 --- AWS sagemaker list-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_associations(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-associations" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-associations" }, input)
 end
 
 --- AWS sagemaker list-auto-ml-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_auto_ml_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-auto-ml-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-auto-ml-jobs" }, input)
 end
 
 --- AWS sagemaker list-candidates-for-auto-ml-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_candidates_for_auto_ml_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-candidates-for-auto-ml-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-candidates-for-auto-ml-job" }, input)
 end
 
 --- AWS sagemaker list-cluster-nodes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_cluster_nodes(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-cluster-nodes" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-cluster-nodes" }, input)
 end
 
 --- AWS sagemaker list-cluster-scheduler-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_cluster_scheduler_configs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-cluster-scheduler-configs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-cluster-scheduler-configs" }, input)
 end
 
 --- AWS sagemaker list-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_clusters(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-clusters" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-clusters" }, input)
 end
 
 --- AWS sagemaker list-code-repositories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_code_repositories(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-code-repositories" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-code-repositories" }, input)
 end
 
 --- AWS sagemaker list-compilation-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_compilation_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-compilation-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-compilation-jobs" }, input)
 end
 
 --- AWS sagemaker list-compute-quotas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_compute_quotas(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-compute-quotas" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-compute-quotas" }, input)
 end
 
 --- AWS sagemaker list-contexts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_contexts(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-contexts" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-contexts" }, input)
 end
 
 --- AWS sagemaker list-data-quality-job-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_data_quality_job_definitions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-data-quality-job-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-data-quality-job-definitions" }, input)
 end
 
 --- AWS sagemaker list-device-fleets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_device_fleets(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-device-fleets" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-device-fleets" }, input)
 end
 
 --- AWS sagemaker list-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_devices(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-devices" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-devices" }, input)
 end
 
 --- AWS sagemaker list-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_domains(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-domains" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-domains" }, input)
 end
 
 --- AWS sagemaker list-edge-deployment-plans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_edge_deployment_plans(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-edge-deployment-plans" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-edge-deployment-plans" }, input)
 end
 
 --- AWS sagemaker list-edge-packaging-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_edge_packaging_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-edge-packaging-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-edge-packaging-jobs" }, input)
 end
 
 --- AWS sagemaker list-endpoint-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_endpoint_configs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-endpoint-configs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-endpoint-configs" }, input)
 end
 
 --- AWS sagemaker list-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_endpoints(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-endpoints" }, input)
 end
 
 --- AWS sagemaker list-experiments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_experiments(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-experiments" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-experiments" }, input)
 end
 
 --- AWS sagemaker list-feature-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_feature_groups(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-feature-groups" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-feature-groups" }, input)
 end
 
 --- AWS sagemaker list-flow-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_flow_definitions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-flow-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-flow-definitions" }, input)
 end
 
 --- AWS sagemaker list-hub-content-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_hub_content_versions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-hub-content-versions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-hub-content-versions" }, input)
 end
 
 --- AWS sagemaker list-hub-contents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_hub_contents(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-hub-contents" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-hub-contents" }, input)
 end
 
 --- AWS sagemaker list-hubs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_hubs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-hubs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-hubs" }, input)
 end
 
 --- AWS sagemaker list-human-task-uis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_human_task_uis(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-human-task-uis" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-human-task-uis" }, input)
 end
 
 --- AWS sagemaker list-hyper-parameter-tuning-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_hyper_parameter_tuning_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-hyper-parameter-tuning-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-hyper-parameter-tuning-jobs" }, input)
 end
 
 --- AWS sagemaker list-image-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_image_versions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-image-versions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-image-versions" }, input)
 end
 
 --- AWS sagemaker list-images operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_images(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-images" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-images" }, input)
 end
 
 --- AWS sagemaker list-inference-components operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_inference_components(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-inference-components" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-inference-components" }, input)
 end
 
 --- AWS sagemaker list-inference-experiments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_inference_experiments(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-inference-experiments" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-inference-experiments" }, input)
 end
 
 --- AWS sagemaker list-inference-recommendations-job-steps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_inference_recommendations_job_steps(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-inference-recommendations-job-steps" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-inference-recommendations-job-steps" }, input)
 end
 
 --- AWS sagemaker list-inference-recommendations-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_inference_recommendations_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-inference-recommendations-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-inference-recommendations-jobs" }, input)
 end
 
 --- AWS sagemaker list-labeling-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_labeling_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-labeling-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-labeling-jobs" }, input)
 end
 
 --- AWS sagemaker list-labeling-jobs-for-workteam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_labeling_jobs_for_workteam(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-labeling-jobs-for-workteam" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-labeling-jobs-for-workteam" }, input)
 end
 
 --- AWS sagemaker list-lineage-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_lineage_groups(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-lineage-groups" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-lineage-groups" }, input)
 end
 
 --- AWS sagemaker list-mlflow-tracking-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_mlflow_tracking_servers(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-mlflow-tracking-servers" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-mlflow-tracking-servers" }, input)
 end
 
 --- AWS sagemaker list-model-bias-job-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_model_bias_job_definitions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-model-bias-job-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-model-bias-job-definitions" }, input)
 end
 
 --- AWS sagemaker list-model-card-export-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_model_card_export_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-model-card-export-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-model-card-export-jobs" }, input)
 end
 
 --- AWS sagemaker list-model-card-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_model_card_versions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-model-card-versions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-model-card-versions" }, input)
 end
 
 --- AWS sagemaker list-model-cards operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_model_cards(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-model-cards" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-model-cards" }, input)
 end
 
 --- AWS sagemaker list-model-explainability-job-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_model_explainability_job_definitions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-model-explainability-job-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-model-explainability-job-definitions" }, input)
 end
 
 --- AWS sagemaker list-model-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_model_metadata(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-model-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-model-metadata" }, input)
 end
 
 --- AWS sagemaker list-model-package-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_model_package_groups(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-model-package-groups" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-model-package-groups" }, input)
 end
 
 --- AWS sagemaker list-model-packages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_model_packages(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-model-packages" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-model-packages" }, input)
 end
 
 --- AWS sagemaker list-model-quality-job-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_model_quality_job_definitions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-model-quality-job-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-model-quality-job-definitions" }, input)
 end
 
 --- AWS sagemaker list-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_models(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-models" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-models" }, input)
 end
 
 --- AWS sagemaker list-monitoring-alert-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_monitoring_alert_history(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-monitoring-alert-history" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-monitoring-alert-history" }, input)
 end
 
 --- AWS sagemaker list-monitoring-alerts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_monitoring_alerts(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-monitoring-alerts" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-monitoring-alerts" }, input)
 end
 
 --- AWS sagemaker list-monitoring-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_monitoring_executions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-monitoring-executions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-monitoring-executions" }, input)
 end
 
 --- AWS sagemaker list-monitoring-schedules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_monitoring_schedules(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-monitoring-schedules" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-monitoring-schedules" }, input)
 end
 
 --- AWS sagemaker list-notebook-instance-lifecycle-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_notebook_instance_lifecycle_configs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-notebook-instance-lifecycle-configs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-notebook-instance-lifecycle-configs" }, input)
 end
 
 --- AWS sagemaker list-notebook-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_notebook_instances(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-notebook-instances" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-notebook-instances" }, input)
 end
 
 --- AWS sagemaker list-optimization-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_optimization_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-optimization-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-optimization-jobs" }, input)
 end
 
 --- AWS sagemaker list-partner-apps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_partner_apps(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-partner-apps" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-partner-apps" }, input)
 end
 
 --- AWS sagemaker list-pipeline-execution-steps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pipeline_execution_steps(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-pipeline-execution-steps" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-pipeline-execution-steps" }, input)
 end
 
 --- AWS sagemaker list-pipeline-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pipeline_executions(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-pipeline-executions" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-pipeline-executions" }, input)
 end
 
 --- AWS sagemaker list-pipeline-parameters-for-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pipeline_parameters_for_execution(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-pipeline-parameters-for-execution" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-pipeline-parameters-for-execution" }, input)
 end
 
 --- AWS sagemaker list-pipelines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pipelines(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-pipelines" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-pipelines" }, input)
 end
 
 --- AWS sagemaker list-processing-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_processing_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-processing-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-processing-jobs" }, input)
 end
 
 --- AWS sagemaker list-projects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_projects(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-projects" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-projects" }, input)
 end
 
 --- AWS sagemaker list-resource-catalogs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_catalogs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-resource-catalogs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-resource-catalogs" }, input)
 end
 
 --- AWS sagemaker list-spaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_spaces(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-spaces" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-spaces" }, input)
 end
 
 --- AWS sagemaker list-stage-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_stage_devices(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-stage-devices" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-stage-devices" }, input)
 end
 
 --- AWS sagemaker list-studio-lifecycle-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_studio_lifecycle_configs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-studio-lifecycle-configs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-studio-lifecycle-configs" }, input)
 end
 
 --- AWS sagemaker list-subscribed-workteams operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_subscribed_workteams(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-subscribed-workteams" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-subscribed-workteams" }, input)
 end
 
 --- AWS sagemaker list-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-tags" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-tags" }, input)
 end
 
 --- AWS sagemaker list-training-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_training_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-training-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-training-jobs" }, input)
 end
 
 --- AWS sagemaker list-training-jobs-for-hyper-parameter-tuning-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_training_jobs_for_hyper_parameter_tuning_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-training-jobs-for-hyper-parameter-tuning-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-training-jobs-for-hyper-parameter-tuning-job" }, input)
 end
 
 --- AWS sagemaker list-training-plans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_training_plans(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-training-plans" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-training-plans" }, input)
 end
 
 --- AWS sagemaker list-transform-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_transform_jobs(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-transform-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-transform-jobs" }, input)
 end
 
 --- AWS sagemaker list-trial-components operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_trial_components(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-trial-components" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-trial-components" }, input)
 end
 
 --- AWS sagemaker list-trials operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_trials(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-trials" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-trials" }, input)
 end
 
 --- AWS sagemaker list-user-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_user_profiles(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-user-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-user-profiles" }, input)
 end
 
 --- AWS sagemaker list-workforces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workforces(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-workforces" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-workforces" }, input)
 end
 
 --- AWS sagemaker list-workteams operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workteams(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "list-workteams" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "list-workteams" }, input)
 end
 
 --- AWS sagemaker put-model-package-group-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_model_package_group_policy(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "put-model-package-group-policy" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "put-model-package-group-policy" }, input)
 end
 
 --- AWS sagemaker query-lineage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.query_lineage(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "query-lineage" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "query-lineage" }, input)
 end
 
 --- AWS sagemaker register-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_devices(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "register-devices" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "register-devices" }, input)
 end
 
 --- AWS sagemaker render-ui-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.render_ui_template(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "render-ui-template" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "render-ui-template" }, input)
 end
 
 --- AWS sagemaker retry-pipeline-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.retry_pipeline_execution(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "retry-pipeline-execution" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "retry-pipeline-execution" }, input)
 end
 
 --- AWS sagemaker search operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "search" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "search" }, input)
 end
 
 --- AWS sagemaker search-training-plan-offerings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_training_plan_offerings(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "search-training-plan-offerings" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "search-training-plan-offerings" }, input)
 end
 
 --- AWS sagemaker send-pipeline-execution-step-failure operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_pipeline_execution_step_failure(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "send-pipeline-execution-step-failure" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "send-pipeline-execution-step-failure" }, input)
 end
 
 --- AWS sagemaker send-pipeline-execution-step-success operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_pipeline_execution_step_success(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "send-pipeline-execution-step-success" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "send-pipeline-execution-step-success" }, input)
 end
 
 --- AWS sagemaker start-edge-deployment-stage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_edge_deployment_stage(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "start-edge-deployment-stage" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "start-edge-deployment-stage" }, input)
 end
 
 --- AWS sagemaker start-inference-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_inference_experiment(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "start-inference-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "start-inference-experiment" }, input)
 end
 
 --- AWS sagemaker start-mlflow-tracking-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_mlflow_tracking_server(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "start-mlflow-tracking-server" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "start-mlflow-tracking-server" }, input)
 end
 
 --- AWS sagemaker start-monitoring-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_monitoring_schedule(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "start-monitoring-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "start-monitoring-schedule" }, input)
 end
 
 --- AWS sagemaker start-notebook-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_notebook_instance(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "start-notebook-instance" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "start-notebook-instance" }, input)
 end
 
 --- AWS sagemaker start-pipeline-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_pipeline_execution(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "start-pipeline-execution" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "start-pipeline-execution" }, input)
 end
 
 --- AWS sagemaker stop-auto-ml-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_auto_ml_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-auto-ml-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-auto-ml-job" }, input)
 end
 
 --- AWS sagemaker stop-compilation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_compilation_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-compilation-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-compilation-job" }, input)
 end
 
 --- AWS sagemaker stop-edge-deployment-stage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_edge_deployment_stage(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-edge-deployment-stage" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-edge-deployment-stage" }, input)
 end
 
 --- AWS sagemaker stop-edge-packaging-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_edge_packaging_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-edge-packaging-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-edge-packaging-job" }, input)
 end
 
 --- AWS sagemaker stop-hyper-parameter-tuning-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_hyper_parameter_tuning_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-hyper-parameter-tuning-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-hyper-parameter-tuning-job" }, input)
 end
 
 --- AWS sagemaker stop-inference-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_inference_experiment(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-inference-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-inference-experiment" }, input)
 end
 
 --- AWS sagemaker stop-inference-recommendations-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_inference_recommendations_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-inference-recommendations-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-inference-recommendations-job" }, input)
 end
 
 --- AWS sagemaker stop-labeling-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_labeling_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-labeling-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-labeling-job" }, input)
 end
 
 --- AWS sagemaker stop-mlflow-tracking-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_mlflow_tracking_server(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-mlflow-tracking-server" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-mlflow-tracking-server" }, input)
 end
 
 --- AWS sagemaker stop-monitoring-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_monitoring_schedule(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-monitoring-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-monitoring-schedule" }, input)
 end
 
 --- AWS sagemaker stop-notebook-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_notebook_instance(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-notebook-instance" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-notebook-instance" }, input)
 end
 
 --- AWS sagemaker stop-optimization-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_optimization_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-optimization-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-optimization-job" }, input)
 end
 
 --- AWS sagemaker stop-pipeline-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_pipeline_execution(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-pipeline-execution" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-pipeline-execution" }, input)
 end
 
 --- AWS sagemaker stop-processing-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_processing_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-processing-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-processing-job" }, input)
 end
 
 --- AWS sagemaker stop-training-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_training_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-training-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-training-job" }, input)
 end
 
 --- AWS sagemaker stop-transform-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_transform_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "stop-transform-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "stop-transform-job" }, input)
 end
 
 --- AWS sagemaker update-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_action(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-action" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-action" }, input)
 end
 
 --- AWS sagemaker update-app-image-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_app_image_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-app-image-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-app-image-config" }, input)
 end
 
 --- AWS sagemaker update-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_artifact(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-artifact" }, input)
 end
 
 --- AWS sagemaker update-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_cluster(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-cluster" }, input)
 end
 
 --- AWS sagemaker update-cluster-scheduler-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_cluster_scheduler_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-cluster-scheduler-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-cluster-scheduler-config" }, input)
 end
 
 --- AWS sagemaker update-cluster-software operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_cluster_software(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-cluster-software" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-cluster-software" }, input)
 end
 
 --- AWS sagemaker update-code-repository operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_code_repository(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-code-repository" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-code-repository" }, input)
 end
 
 --- AWS sagemaker update-compute-quota operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_compute_quota(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-compute-quota" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-compute-quota" }, input)
 end
 
 --- AWS sagemaker update-context operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_context(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-context" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-context" }, input)
 end
 
 --- AWS sagemaker update-device-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_device_fleet(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-device-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-device-fleet" }, input)
 end
 
 --- AWS sagemaker update-devices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_devices(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-devices" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-devices" }, input)
 end
 
 --- AWS sagemaker update-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_domain(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-domain" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-domain" }, input)
 end
 
 --- AWS sagemaker update-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_endpoint(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-endpoint" }, input)
 end
 
 --- AWS sagemaker update-endpoint-weights-and-capacities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_endpoint_weights_and_capacities(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-endpoint-weights-and-capacities" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-endpoint-weights-and-capacities" }, input)
 end
 
 --- AWS sagemaker update-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_experiment(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-experiment" }, input)
 end
 
 --- AWS sagemaker update-feature-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_feature_group(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-feature-group" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-feature-group" }, input)
 end
 
 --- AWS sagemaker update-feature-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_feature_metadata(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-feature-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-feature-metadata" }, input)
 end
 
 --- AWS sagemaker update-hub operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_hub(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-hub" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-hub" }, input)
 end
 
 --- AWS sagemaker update-hub-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_hub_content(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-hub-content" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-hub-content" }, input)
 end
 
 --- AWS sagemaker update-hub-content-reference operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_hub_content_reference(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-hub-content-reference" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-hub-content-reference" }, input)
 end
 
 --- AWS sagemaker update-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_image(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-image" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-image" }, input)
 end
 
 --- AWS sagemaker update-image-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_image_version(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-image-version" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-image-version" }, input)
 end
 
 --- AWS sagemaker update-inference-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_inference_component(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-inference-component" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-inference-component" }, input)
 end
 
 --- AWS sagemaker update-inference-component-runtime-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_inference_component_runtime_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-inference-component-runtime-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-inference-component-runtime-config" }, input)
 end
 
 --- AWS sagemaker update-inference-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_inference_experiment(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-inference-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-inference-experiment" }, input)
 end
 
 --- AWS sagemaker update-mlflow-tracking-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_mlflow_tracking_server(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-mlflow-tracking-server" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-mlflow-tracking-server" }, input)
 end
 
 --- AWS sagemaker update-model-card operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_model_card(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-model-card" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-model-card" }, input)
 end
 
 --- AWS sagemaker update-model-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_model_package(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-model-package" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-model-package" }, input)
 end
 
 --- AWS sagemaker update-monitoring-alert operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_monitoring_alert(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-monitoring-alert" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-monitoring-alert" }, input)
 end
 
 --- AWS sagemaker update-monitoring-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_monitoring_schedule(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-monitoring-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-monitoring-schedule" }, input)
 end
 
 --- AWS sagemaker update-notebook-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_notebook_instance(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-notebook-instance" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-notebook-instance" }, input)
 end
 
 --- AWS sagemaker update-notebook-instance-lifecycle-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_notebook_instance_lifecycle_config(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-notebook-instance-lifecycle-config" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-notebook-instance-lifecycle-config" }, input)
 end
 
 --- AWS sagemaker update-partner-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_partner_app(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-partner-app" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-partner-app" }, input)
 end
 
 --- AWS sagemaker update-pipeline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_pipeline(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-pipeline" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-pipeline" }, input)
 end
 
 --- AWS sagemaker update-pipeline-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_pipeline_execution(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-pipeline-execution" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-pipeline-execution" }, input)
 end
 
 --- AWS sagemaker update-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_project(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-project" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-project" }, input)
 end
 
 --- AWS sagemaker update-space operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_space(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-space" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-space" }, input)
 end
 
 --- AWS sagemaker update-training-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_training_job(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-training-job" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-training-job" }, input)
 end
 
 --- AWS sagemaker update-trial operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_trial(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-trial" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-trial" }, input)
 end
 
 --- AWS sagemaker update-trial-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_trial_component(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-trial-component" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-trial-component" }, input)
 end
 
 --- AWS sagemaker update-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user_profile(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-user-profile" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-user-profile" }, input)
 end
 
 --- AWS sagemaker update-workforce operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workforce(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-workforce" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-workforce" }, input)
 end
 
 --- AWS sagemaker update-workteam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workteam(input)
-	return common.execute_aws_command_with_input({ "sagemaker", "update-workteam" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker", "update-workteam" }, input)
 end
 
 --- AWS sagemaker wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "sagemaker", "wait" }, input)
+	return common.execute_aws_command({ "sagemaker", "wait" }, input)
 end
 
 return M

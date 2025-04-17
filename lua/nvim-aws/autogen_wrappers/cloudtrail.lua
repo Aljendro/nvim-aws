@@ -3,420 +3,420 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLOUDTRAIL service functions
+--- AWS cloudtrail service functions
 local M = {}
 
 --- AWS cloudtrail add-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_tags(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "add-tags" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "add-tags" }, input)
 end
 
 --- AWS cloudtrail cancel-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_query(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "cancel-query" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "cancel-query" }, input)
 end
 
 --- AWS cloudtrail create-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_channel(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "create-channel" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "create-channel" }, input)
 end
 
 --- AWS cloudtrail create-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dashboard(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "create-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "create-dashboard" }, input)
 end
 
 --- AWS cloudtrail create-event-data-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_event_data_store(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "create-event-data-store" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "create-event-data-store" }, input)
 end
 
 --- AWS cloudtrail create-trail operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_trail(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "create-trail" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "create-trail" }, input)
 end
 
 --- AWS cloudtrail delete-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "delete-channel" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-channel" }, input)
 end
 
 --- AWS cloudtrail delete-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dashboard(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "delete-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-dashboard" }, input)
 end
 
 --- AWS cloudtrail delete-event-data-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_event_data_store(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "delete-event-data-store" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-event-data-store" }, input)
 end
 
 --- AWS cloudtrail delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-resource-policy" }, input)
 end
 
 --- AWS cloudtrail delete-trail operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_trail(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "delete-trail" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "delete-trail" }, input)
 end
 
 --- AWS cloudtrail deregister-organization-delegated-admin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_organization_delegated_admin(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "deregister-organization-delegated-admin" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "deregister-organization-delegated-admin" }, input)
 end
 
 --- AWS cloudtrail describe-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_query(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "describe-query" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "describe-query" }, input)
 end
 
 --- AWS cloudtrail describe-trails operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_trails(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "describe-trails" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "describe-trails" }, input)
 end
 
 --- AWS cloudtrail disable-federation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_federation(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "disable-federation" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "disable-federation" }, input)
 end
 
 --- AWS cloudtrail enable-federation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_federation(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "enable-federation" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "enable-federation" }, input)
 end
 
 --- AWS cloudtrail generate-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_query(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "generate-query" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "generate-query" }, input)
 end
 
 --- AWS cloudtrail get-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_channel(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "get-channel" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-channel" }, input)
 end
 
 --- AWS cloudtrail get-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_dashboard(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "get-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-dashboard" }, input)
 end
 
 --- AWS cloudtrail get-event-data-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_event_data_store(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "get-event-data-store" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-event-data-store" }, input)
 end
 
 --- AWS cloudtrail get-event-selectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_event_selectors(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "get-event-selectors" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-event-selectors" }, input)
 end
 
 --- AWS cloudtrail get-import operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_import(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "get-import" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-import" }, input)
 end
 
 --- AWS cloudtrail get-insight-selectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_insight_selectors(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "get-insight-selectors" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-insight-selectors" }, input)
 end
 
 --- AWS cloudtrail get-query-results operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_query_results(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "get-query-results" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-query-results" }, input)
 end
 
 --- AWS cloudtrail get-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_policy(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "get-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-resource-policy" }, input)
 end
 
 --- AWS cloudtrail get-trail operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_trail(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "get-trail" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-trail" }, input)
 end
 
 --- AWS cloudtrail get-trail-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_trail_status(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "get-trail-status" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "get-trail-status" }, input)
 end
 
 --- AWS cloudtrail list-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channels(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "list-channels" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-channels" }, input)
 end
 
 --- AWS cloudtrail list-dashboards operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_dashboards(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "list-dashboards" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-dashboards" }, input)
 end
 
 --- AWS cloudtrail list-event-data-stores operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_event_data_stores(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "list-event-data-stores" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-event-data-stores" }, input)
 end
 
 --- AWS cloudtrail list-import-failures operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_import_failures(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "list-import-failures" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-import-failures" }, input)
 end
 
 --- AWS cloudtrail list-imports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_imports(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "list-imports" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-imports" }, input)
 end
 
 --- AWS cloudtrail list-insights-metric-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_insights_metric_data(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "list-insights-metric-data" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-insights-metric-data" }, input)
 end
 
 --- AWS cloudtrail list-public-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_public_keys(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "list-public-keys" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-public-keys" }, input)
 end
 
 --- AWS cloudtrail list-queries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_queries(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "list-queries" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-queries" }, input)
 end
 
 --- AWS cloudtrail list-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "list-tags" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-tags" }, input)
 end
 
 --- AWS cloudtrail list-trails operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_trails(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "list-trails" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "list-trails" }, input)
 end
 
 --- AWS cloudtrail lookup-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.lookup_events(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "lookup-events" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "lookup-events" }, input)
 end
 
 --- AWS cloudtrail put-event-selectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_event_selectors(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "put-event-selectors" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "put-event-selectors" }, input)
 end
 
 --- AWS cloudtrail put-insight-selectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_insight_selectors(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "put-insight-selectors" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "put-insight-selectors" }, input)
 end
 
 --- AWS cloudtrail put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "put-resource-policy" }, input)
 end
 
 --- AWS cloudtrail register-organization-delegated-admin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_organization_delegated_admin(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "register-organization-delegated-admin" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "register-organization-delegated-admin" }, input)
 end
 
 --- AWS cloudtrail remove-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_tags(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "remove-tags" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "remove-tags" }, input)
 end
 
 --- AWS cloudtrail restore-event-data-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_event_data_store(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "restore-event-data-store" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "restore-event-data-store" }, input)
 end
 
 --- AWS cloudtrail search-sample-queries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_sample_queries(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "search-sample-queries" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "search-sample-queries" }, input)
 end
 
 --- AWS cloudtrail start-dashboard-refresh operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_dashboard_refresh(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "start-dashboard-refresh" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "start-dashboard-refresh" }, input)
 end
 
 --- AWS cloudtrail start-event-data-store-ingestion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_event_data_store_ingestion(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "start-event-data-store-ingestion" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "start-event-data-store-ingestion" }, input)
 end
 
 --- AWS cloudtrail start-import operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_import(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "start-import" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "start-import" }, input)
 end
 
 --- AWS cloudtrail start-logging operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_logging(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "start-logging" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "start-logging" }, input)
 end
 
 --- AWS cloudtrail start-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_query(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "start-query" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "start-query" }, input)
 end
 
 --- AWS cloudtrail stop-event-data-store-ingestion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_event_data_store_ingestion(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "stop-event-data-store-ingestion" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "stop-event-data-store-ingestion" }, input)
 end
 
 --- AWS cloudtrail stop-import operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_import(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "stop-import" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "stop-import" }, input)
 end
 
 --- AWS cloudtrail stop-logging operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_logging(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "stop-logging" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "stop-logging" }, input)
 end
 
 --- AWS cloudtrail update-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_channel(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "update-channel" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "update-channel" }, input)
 end
 
 --- AWS cloudtrail update-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_dashboard(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "update-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "update-dashboard" }, input)
 end
 
 --- AWS cloudtrail update-event-data-store operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_event_data_store(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "update-event-data-store" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "update-event-data-store" }, input)
 end
 
 --- AWS cloudtrail update-trail operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_trail(input)
-	return common.execute_aws_command_with_input({ "cloudtrail", "update-trail" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail", "update-trail" }, input)
 end
 
 --- AWS cloudtrail validate-logs operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.validate_logs(input)
-	return common.execute_aws_command_with_raw_input({ "cloudtrail", "validate-logs" }, input)
+	return common.execute_aws_command({ "cloudtrail", "validate-logs" }, input)
 end
 
 --- AWS cloudtrail verify-query-results operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify_query_results(input)
-	return common.execute_aws_command_with_raw_input({ "cloudtrail", "verify-query-results" }, input)
+	return common.execute_aws_command({ "cloudtrail", "verify-query-results" }, input)
 end
 
 return M

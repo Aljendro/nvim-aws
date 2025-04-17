@@ -3,224 +3,224 @@
 
 local common = require("nvim-aws.common")
 
---- AWS AMPLIFYBACKEND service functions
+--- AWS amplifybackend service functions
 local M = {}
 
 --- AWS amplifybackend clone-backend operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.clone_backend(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "clone-backend" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "clone-backend" }, input)
 end
 
 --- AWS amplifybackend create-backend operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_backend(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "create-backend" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "create-backend" }, input)
 end
 
 --- AWS amplifybackend create-backend-api operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_backend_api(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "create-backend-api" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "create-backend-api" }, input)
 end
 
 --- AWS amplifybackend create-backend-auth operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_backend_auth(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "create-backend-auth" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "create-backend-auth" }, input)
 end
 
 --- AWS amplifybackend create-backend-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_backend_config(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "create-backend-config" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "create-backend-config" }, input)
 end
 
 --- AWS amplifybackend create-backend-storage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_backend_storage(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "create-backend-storage" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "create-backend-storage" }, input)
 end
 
 --- AWS amplifybackend create-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_token(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "create-token" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "create-token" }, input)
 end
 
 --- AWS amplifybackend delete-backend operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backend(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "delete-backend" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "delete-backend" }, input)
 end
 
 --- AWS amplifybackend delete-backend-api operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backend_api(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "delete-backend-api" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "delete-backend-api" }, input)
 end
 
 --- AWS amplifybackend delete-backend-auth operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backend_auth(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "delete-backend-auth" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "delete-backend-auth" }, input)
 end
 
 --- AWS amplifybackend delete-backend-storage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_backend_storage(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "delete-backend-storage" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "delete-backend-storage" }, input)
 end
 
 --- AWS amplifybackend delete-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_token(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "delete-token" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "delete-token" }, input)
 end
 
 --- AWS amplifybackend generate-backend-api-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_backend_api_models(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "generate-backend-api-models" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "generate-backend-api-models" }, input)
 end
 
 --- AWS amplifybackend get-backend operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backend(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "get-backend" }, input)
 end
 
 --- AWS amplifybackend get-backend-api operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backend_api(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend-api" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "get-backend-api" }, input)
 end
 
 --- AWS amplifybackend get-backend-api-models operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backend_api_models(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend-api-models" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "get-backend-api-models" }, input)
 end
 
 --- AWS amplifybackend get-backend-auth operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backend_auth(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend-auth" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "get-backend-auth" }, input)
 end
 
 --- AWS amplifybackend get-backend-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backend_job(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend-job" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "get-backend-job" }, input)
 end
 
 --- AWS amplifybackend get-backend-storage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_backend_storage(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "get-backend-storage" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "get-backend-storage" }, input)
 end
 
 --- AWS amplifybackend get-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_token(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "get-token" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "get-token" }, input)
 end
 
 --- AWS amplifybackend import-backend-auth operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_backend_auth(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "import-backend-auth" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "import-backend-auth" }, input)
 end
 
 --- AWS amplifybackend import-backend-storage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_backend_storage(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "import-backend-storage" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "import-backend-storage" }, input)
 end
 
 --- AWS amplifybackend list-backend-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_backend_jobs(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "list-backend-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "list-backend-jobs" }, input)
 end
 
 --- AWS amplifybackend list-s3-buckets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_s3_buckets(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "list-s3-buckets" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "list-s3-buckets" }, input)
 end
 
 --- AWS amplifybackend remove-all-backends operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_all_backends(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "remove-all-backends" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "remove-all-backends" }, input)
 end
 
 --- AWS amplifybackend remove-backend-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_backend_config(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "remove-backend-config" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "remove-backend-config" }, input)
 end
 
 --- AWS amplifybackend update-backend-api operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_backend_api(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "update-backend-api" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "update-backend-api" }, input)
 end
 
 --- AWS amplifybackend update-backend-auth operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_backend_auth(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "update-backend-auth" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "update-backend-auth" }, input)
 end
 
 --- AWS amplifybackend update-backend-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_backend_config(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "update-backend-config" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "update-backend-config" }, input)
 end
 
 --- AWS amplifybackend update-backend-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_backend_job(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "update-backend-job" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "update-backend-job" }, input)
 end
 
 --- AWS amplifybackend update-backend-storage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_backend_storage(input)
-	return common.execute_aws_command_with_input({ "amplifybackend", "update-backend-storage" }, input)
+	return common.execute_aws_command_skeleton({ "amplifybackend", "update-backend-storage" }, input)
 end
 
 return M

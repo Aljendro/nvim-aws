@@ -3,126 +3,126 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DS-DATA service functions
+--- AWS ds-data service functions
 local M = {}
 
 --- AWS ds-data add-group-member operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_group_member(input)
-	return common.execute_aws_command_with_input({ "ds-data", "add-group-member" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "add-group-member" }, input)
 end
 
 --- AWS ds-data create-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_group(input)
-	return common.execute_aws_command_with_input({ "ds-data", "create-group" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "create-group" }, input)
 end
 
 --- AWS ds-data create-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user(input)
-	return common.execute_aws_command_with_input({ "ds-data", "create-user" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "create-user" }, input)
 end
 
 --- AWS ds-data delete-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_group(input)
-	return common.execute_aws_command_with_input({ "ds-data", "delete-group" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "delete-group" }, input)
 end
 
 --- AWS ds-data delete-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user(input)
-	return common.execute_aws_command_with_input({ "ds-data", "delete-user" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "delete-user" }, input)
 end
 
 --- AWS ds-data describe-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_group(input)
-	return common.execute_aws_command_with_input({ "ds-data", "describe-group" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "describe-group" }, input)
 end
 
 --- AWS ds-data describe-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_user(input)
-	return common.execute_aws_command_with_input({ "ds-data", "describe-user" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "describe-user" }, input)
 end
 
 --- AWS ds-data disable-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_user(input)
-	return common.execute_aws_command_with_input({ "ds-data", "disable-user" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "disable-user" }, input)
 end
 
 --- AWS ds-data list-group-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_group_members(input)
-	return common.execute_aws_command_with_input({ "ds-data", "list-group-members" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "list-group-members" }, input)
 end
 
 --- AWS ds-data list-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_groups(input)
-	return common.execute_aws_command_with_input({ "ds-data", "list-groups" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "list-groups" }, input)
 end
 
 --- AWS ds-data list-groups-for-member operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_groups_for_member(input)
-	return common.execute_aws_command_with_input({ "ds-data", "list-groups-for-member" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "list-groups-for-member" }, input)
 end
 
 --- AWS ds-data list-users operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_users(input)
-	return common.execute_aws_command_with_input({ "ds-data", "list-users" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "list-users" }, input)
 end
 
 --- AWS ds-data remove-group-member operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_group_member(input)
-	return common.execute_aws_command_with_input({ "ds-data", "remove-group-member" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "remove-group-member" }, input)
 end
 
 --- AWS ds-data search-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_groups(input)
-	return common.execute_aws_command_with_input({ "ds-data", "search-groups" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "search-groups" }, input)
 end
 
 --- AWS ds-data search-users operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_users(input)
-	return common.execute_aws_command_with_input({ "ds-data", "search-users" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "search-users" }, input)
 end
 
 --- AWS ds-data update-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_group(input)
-	return common.execute_aws_command_with_input({ "ds-data", "update-group" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "update-group" }, input)
 end
 
 --- AWS ds-data update-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user(input)
-	return common.execute_aws_command_with_input({ "ds-data", "update-user" }, input)
+	return common.execute_aws_command_skeleton({ "ds-data", "update-user" }, input)
 end
 
 return M

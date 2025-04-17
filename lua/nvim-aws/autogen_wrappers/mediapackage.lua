@@ -3,133 +3,133 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MEDIAPACKAGE service functions
+--- AWS mediapackage service functions
 local M = {}
 
 --- AWS mediapackage configure-logs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.configure_logs(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "configure-logs" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "configure-logs" }, input)
 end
 
 --- AWS mediapackage create-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_channel(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "create-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "create-channel" }, input)
 end
 
 --- AWS mediapackage create-harvest-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_harvest_job(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "create-harvest-job" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "create-harvest-job" }, input)
 end
 
 --- AWS mediapackage create-origin-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_origin_endpoint(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "create-origin-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "create-origin-endpoint" }, input)
 end
 
 --- AWS mediapackage delete-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "delete-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "delete-channel" }, input)
 end
 
 --- AWS mediapackage delete-origin-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_origin_endpoint(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "delete-origin-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "delete-origin-endpoint" }, input)
 end
 
 --- AWS mediapackage describe-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_channel(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "describe-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "describe-channel" }, input)
 end
 
 --- AWS mediapackage describe-harvest-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_harvest_job(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "describe-harvest-job" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "describe-harvest-job" }, input)
 end
 
 --- AWS mediapackage describe-origin-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_origin_endpoint(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "describe-origin-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "describe-origin-endpoint" }, input)
 end
 
 --- AWS mediapackage list-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channels(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "list-channels" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "list-channels" }, input)
 end
 
 --- AWS mediapackage list-harvest-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_harvest_jobs(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "list-harvest-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "list-harvest-jobs" }, input)
 end
 
 --- AWS mediapackage list-origin-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_origin_endpoints(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "list-origin-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "list-origin-endpoints" }, input)
 end
 
 --- AWS mediapackage list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "list-tags-for-resource" }, input)
 end
 
 --- AWS mediapackage rotate-ingest-endpoint-credentials operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.rotate_ingest_endpoint_credentials(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "rotate-ingest-endpoint-credentials" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "rotate-ingest-endpoint-credentials" }, input)
 end
 
 --- AWS mediapackage tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "tag-resource" }, input)
 end
 
 --- AWS mediapackage untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "untag-resource" }, input)
 end
 
 --- AWS mediapackage update-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_channel(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "update-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "update-channel" }, input)
 end
 
 --- AWS mediapackage update-origin-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_origin_endpoint(input)
-	return common.execute_aws_command_with_input({ "mediapackage", "update-origin-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage", "update-origin-endpoint" }, input)
 end
 
 return M

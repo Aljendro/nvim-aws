@@ -3,644 +3,644 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SERVICECATALOG service functions
+--- AWS servicecatalog service functions
 local M = {}
 
 --- AWS servicecatalog accept-portfolio-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_portfolio_share(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "accept-portfolio-share" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "accept-portfolio-share" }, input)
 end
 
 --- AWS servicecatalog associate-budget-with-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_budget_with_resource(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "associate-budget-with-resource" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "associate-budget-with-resource" }, input)
 end
 
 --- AWS servicecatalog associate-principal-with-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_principal_with_portfolio(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "associate-principal-with-portfolio" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "associate-principal-with-portfolio" }, input)
 end
 
 --- AWS servicecatalog associate-product-with-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_product_with_portfolio(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "associate-product-with-portfolio" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "associate-product-with-portfolio" }, input)
 end
 
 --- AWS servicecatalog associate-service-action-with-provisioning-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_service_action_with_provisioning_artifact(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "associate-service-action-with-provisioning-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "associate-service-action-with-provisioning-artifact" }, input)
 end
 
 --- AWS servicecatalog associate-tag-option-with-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_tag_option_with_resource(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "associate-tag-option-with-resource" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "associate-tag-option-with-resource" }, input)
 end
 
 --- AWS servicecatalog batch-associate-service-action-with-provisioning-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_associate_service_action_with_provisioning_artifact(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "batch-associate-service-action-with-provisioning-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "batch-associate-service-action-with-provisioning-artifact" }, input)
 end
 
 --- AWS servicecatalog batch-disassociate-service-action-from-provisioning-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_disassociate_service_action_from_provisioning_artifact(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "batch-disassociate-service-action-from-provisioning-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "batch-disassociate-service-action-from-provisioning-artifact" }, input)
 end
 
 --- AWS servicecatalog copy-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "copy-product" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "copy-product" }, input)
 end
 
 --- AWS servicecatalog create-constraint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_constraint(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "create-constraint" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "create-constraint" }, input)
 end
 
 --- AWS servicecatalog create-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_portfolio(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "create-portfolio" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "create-portfolio" }, input)
 end
 
 --- AWS servicecatalog create-portfolio-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_portfolio_share(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "create-portfolio-share" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "create-portfolio-share" }, input)
 end
 
 --- AWS servicecatalog create-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "create-product" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "create-product" }, input)
 end
 
 --- AWS servicecatalog create-provisioned-product-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_provisioned_product_plan(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "create-provisioned-product-plan" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "create-provisioned-product-plan" }, input)
 end
 
 --- AWS servicecatalog create-provisioning-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_provisioning_artifact(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "create-provisioning-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "create-provisioning-artifact" }, input)
 end
 
 --- AWS servicecatalog create-service-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_service_action(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "create-service-action" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "create-service-action" }, input)
 end
 
 --- AWS servicecatalog create-tag-option operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_tag_option(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "create-tag-option" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "create-tag-option" }, input)
 end
 
 --- AWS servicecatalog delete-constraint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_constraint(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "delete-constraint" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "delete-constraint" }, input)
 end
 
 --- AWS servicecatalog delete-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_portfolio(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "delete-portfolio" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "delete-portfolio" }, input)
 end
 
 --- AWS servicecatalog delete-portfolio-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_portfolio_share(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "delete-portfolio-share" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "delete-portfolio-share" }, input)
 end
 
 --- AWS servicecatalog delete-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "delete-product" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "delete-product" }, input)
 end
 
 --- AWS servicecatalog delete-provisioned-product-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_provisioned_product_plan(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "delete-provisioned-product-plan" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "delete-provisioned-product-plan" }, input)
 end
 
 --- AWS servicecatalog delete-provisioning-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_provisioning_artifact(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "delete-provisioning-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "delete-provisioning-artifact" }, input)
 end
 
 --- AWS servicecatalog delete-service-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_service_action(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "delete-service-action" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "delete-service-action" }, input)
 end
 
 --- AWS servicecatalog delete-tag-option operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_tag_option(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "delete-tag-option" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "delete-tag-option" }, input)
 end
 
 --- AWS servicecatalog describe-constraint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_constraint(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-constraint" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-constraint" }, input)
 end
 
 --- AWS servicecatalog describe-copy-product-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_copy_product_status(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-copy-product-status" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-copy-product-status" }, input)
 end
 
 --- AWS servicecatalog describe-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_portfolio(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-portfolio" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-portfolio" }, input)
 end
 
 --- AWS servicecatalog describe-portfolio-share-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_portfolio_share_status(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-portfolio-share-status" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-portfolio-share-status" }, input)
 end
 
 --- AWS servicecatalog describe-portfolio-shares operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_portfolio_shares(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-portfolio-shares" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-portfolio-shares" }, input)
 end
 
 --- AWS servicecatalog describe-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-product" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-product" }, input)
 end
 
 --- AWS servicecatalog describe-product-as-admin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_product_as_admin(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-product-as-admin" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-product-as-admin" }, input)
 end
 
 --- AWS servicecatalog describe-product-view operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_product_view(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-product-view" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-product-view" }, input)
 end
 
 --- AWS servicecatalog describe-provisioned-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_provisioned_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-provisioned-product" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-provisioned-product" }, input)
 end
 
 --- AWS servicecatalog describe-provisioned-product-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_provisioned_product_plan(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-provisioned-product-plan" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-provisioned-product-plan" }, input)
 end
 
 --- AWS servicecatalog describe-provisioning-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_provisioning_artifact(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-provisioning-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-provisioning-artifact" }, input)
 end
 
 --- AWS servicecatalog describe-provisioning-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_provisioning_parameters(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-provisioning-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-provisioning-parameters" }, input)
 end
 
 --- AWS servicecatalog describe-record operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_record(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-record" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-record" }, input)
 end
 
 --- AWS servicecatalog describe-service-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_service_action(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-service-action" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-service-action" }, input)
 end
 
 --- AWS servicecatalog describe-service-action-execution-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_service_action_execution_parameters(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-service-action-execution-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-service-action-execution-parameters" }, input)
 end
 
 --- AWS servicecatalog describe-tag-option operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_tag_option(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "describe-tag-option" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "describe-tag-option" }, input)
 end
 
 --- AWS servicecatalog disable-aws-organizations-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_aws_organizations_access(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "disable-aws-organizations-access" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "disable-aws-organizations-access" }, input)
 end
 
 --- AWS servicecatalog disassociate-budget-from-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_budget_from_resource(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "disassociate-budget-from-resource" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "disassociate-budget-from-resource" }, input)
 end
 
 --- AWS servicecatalog disassociate-principal-from-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_principal_from_portfolio(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "disassociate-principal-from-portfolio" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "disassociate-principal-from-portfolio" }, input)
 end
 
 --- AWS servicecatalog disassociate-product-from-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_product_from_portfolio(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "disassociate-product-from-portfolio" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "disassociate-product-from-portfolio" }, input)
 end
 
 --- AWS servicecatalog disassociate-service-action-from-provisioning-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_service_action_from_provisioning_artifact(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "disassociate-service-action-from-provisioning-artifact" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "disassociate-service-action-from-provisioning-artifact" }, input)
 end
 
 --- AWS servicecatalog disassociate-tag-option-from-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_tag_option_from_resource(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "disassociate-tag-option-from-resource" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "disassociate-tag-option-from-resource" }, input)
 end
 
 --- AWS servicecatalog enable-aws-organizations-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_aws_organizations_access(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "enable-aws-organizations-access" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "enable-aws-organizations-access" }, input)
 end
 
 --- AWS servicecatalog execute-provisioned-product-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.execute_provisioned_product_plan(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "execute-provisioned-product-plan" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "execute-provisioned-product-plan" }, input)
 end
 
 --- AWS servicecatalog execute-provisioned-product-service-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.execute_provisioned_product_service_action(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "execute-provisioned-product-service-action" }, input)
-end
-
---- AWS servicecatalog get-aws-organizations-access-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_aws_organizations_access_status(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "get-aws-organizations-access-status" }, input)
-end
-
---- AWS servicecatalog get-provisioned-product-outputs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_provisioned_product_outputs(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "get-provisioned-product-outputs" }, input)
-end
-
---- AWS servicecatalog import-as-provisioned-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.import_as_provisioned_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "import-as-provisioned-product" }, input)
-end
-
---- AWS servicecatalog list-accepted-portfolio-shares operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_accepted_portfolio_shares(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-accepted-portfolio-shares" }, input)
-end
-
---- AWS servicecatalog list-budgets-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_budgets_for_resource(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-budgets-for-resource" }, input)
-end
-
---- AWS servicecatalog list-constraints-for-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_constraints_for_portfolio(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-constraints-for-portfolio" }, input)
-end
-
---- AWS servicecatalog list-launch-paths operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_launch_paths(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-launch-paths" }, input)
-end
-
---- AWS servicecatalog list-organization-portfolio-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_organization_portfolio_access(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-organization-portfolio-access" }, input)
-end
-
---- AWS servicecatalog list-portfolio-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_portfolio_access(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-portfolio-access" }, input)
-end
-
---- AWS servicecatalog list-portfolios operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_portfolios(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-portfolios" }, input)
-end
-
---- AWS servicecatalog list-portfolios-for-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_portfolios_for_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-portfolios-for-product" }, input)
-end
-
---- AWS servicecatalog list-principals-for-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_principals_for_portfolio(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-principals-for-portfolio" }, input)
-end
-
---- AWS servicecatalog list-provisioned-product-plans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_provisioned_product_plans(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-provisioned-product-plans" }, input)
-end
-
---- AWS servicecatalog list-provisioning-artifacts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_provisioning_artifacts(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-provisioning-artifacts" }, input)
-end
-
---- AWS servicecatalog list-provisioning-artifacts-for-service-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_provisioning_artifacts_for_service_action(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-provisioning-artifacts-for-service-action" }, input)
-end
-
---- AWS servicecatalog list-record-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_record_history(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-record-history" }, input)
-end
-
---- AWS servicecatalog list-resources-for-tag-option operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_resources_for_tag_option(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-resources-for-tag-option" }, input)
-end
-
---- AWS servicecatalog list-service-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_service_actions(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-service-actions" }, input)
-end
-
---- AWS servicecatalog list-service-actions-for-provisioning-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_service_actions_for_provisioning_artifact(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-service-actions-for-provisioning-artifact" }, input)
-end
-
---- AWS servicecatalog list-stack-instances-for-provisioned-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_stack_instances_for_provisioned_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-stack-instances-for-provisioned-product" }, input)
-end
-
---- AWS servicecatalog list-tag-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tag_options(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "list-tag-options" }, input)
-end
-
---- AWS servicecatalog notify-provision-product-engine-workflow-result operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.notify_provision_product_engine_workflow_result(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "notify-provision-product-engine-workflow-result" }, input)
-end
-
---- AWS servicecatalog notify-terminate-provisioned-product-engine-workflow-result operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.notify_terminate_provisioned_product_engine_workflow_result(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "notify-terminate-provisioned-product-engine-workflow-result" }, input)
-end
-
---- AWS servicecatalog notify-update-provisioned-product-engine-workflow-result operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.notify_update_provisioned_product_engine_workflow_result(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "notify-update-provisioned-product-engine-workflow-result" }, input)
-end
-
---- AWS servicecatalog provision-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.provision_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "provision-product" }, input)
-end
-
---- AWS servicecatalog reject-portfolio-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.reject_portfolio_share(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "reject-portfolio-share" }, input)
-end
-
---- AWS servicecatalog scan-provisioned-products operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.scan_provisioned_products(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "scan-provisioned-products" }, input)
-end
-
---- AWS servicecatalog search-products operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.search_products(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "search-products" }, input)
-end
-
---- AWS servicecatalog search-products-as-admin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.search_products_as_admin(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "search-products-as-admin" }, input)
-end
-
---- AWS servicecatalog search-provisioned-products operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.search_provisioned_products(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "search-provisioned-products" }, input)
-end
-
---- AWS servicecatalog terminate-provisioned-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.terminate_provisioned_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "terminate-provisioned-product" }, input)
-end
-
---- AWS servicecatalog update-constraint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_constraint(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "update-constraint" }, input)
-end
-
---- AWS servicecatalog update-portfolio operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_portfolio(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "update-portfolio" }, input)
-end
-
---- AWS servicecatalog update-portfolio-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_portfolio_share(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "update-portfolio-share" }, input)
-end
-
---- AWS servicecatalog update-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "update-product" }, input)
-end
-
---- AWS servicecatalog update-provisioned-product operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_provisioned_product(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "update-provisioned-product" }, input)
-end
-
---- AWS servicecatalog update-provisioned-product-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_provisioned_product_properties(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "update-provisioned-product-properties" }, input)
-end
-
---- AWS servicecatalog update-provisioning-artifact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_provisioning_artifact(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "update-provisioning-artifact" }, input)
-end
-
---- AWS servicecatalog update-service-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_service_action(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "update-service-action" }, input)
-end
-
---- AWS servicecatalog update-tag-option operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_tag_option(input)
-	return common.execute_aws_command_with_input({ "servicecatalog", "update-tag-option" }, input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "execute-provisioned-product-service-action" }, input)
 end
 
 --- AWS servicecatalog generate operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate(input)
-	return common.execute_aws_command_with_raw_input({ "servicecatalog", "generate" }, input)
+	return common.execute_aws_command({ "servicecatalog", "generate" }, input)
+end
+
+--- AWS servicecatalog get-aws-organizations-access-status operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_aws_organizations_access_status(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "get-aws-organizations-access-status" }, input)
+end
+
+--- AWS servicecatalog get-provisioned-product-outputs operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_provisioned_product_outputs(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "get-provisioned-product-outputs" }, input)
+end
+
+--- AWS servicecatalog import-as-provisioned-product operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.import_as_provisioned_product(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "import-as-provisioned-product" }, input)
+end
+
+--- AWS servicecatalog list-accepted-portfolio-shares operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_accepted_portfolio_shares(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-accepted-portfolio-shares" }, input)
+end
+
+--- AWS servicecatalog list-budgets-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_budgets_for_resource(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-budgets-for-resource" }, input)
+end
+
+--- AWS servicecatalog list-constraints-for-portfolio operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_constraints_for_portfolio(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-constraints-for-portfolio" }, input)
+end
+
+--- AWS servicecatalog list-launch-paths operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_launch_paths(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-launch-paths" }, input)
+end
+
+--- AWS servicecatalog list-organization-portfolio-access operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_organization_portfolio_access(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-organization-portfolio-access" }, input)
+end
+
+--- AWS servicecatalog list-portfolio-access operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_portfolio_access(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-portfolio-access" }, input)
+end
+
+--- AWS servicecatalog list-portfolios operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_portfolios(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-portfolios" }, input)
+end
+
+--- AWS servicecatalog list-portfolios-for-product operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_portfolios_for_product(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-portfolios-for-product" }, input)
+end
+
+--- AWS servicecatalog list-principals-for-portfolio operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_principals_for_portfolio(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-principals-for-portfolio" }, input)
+end
+
+--- AWS servicecatalog list-provisioned-product-plans operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_provisioned_product_plans(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-provisioned-product-plans" }, input)
+end
+
+--- AWS servicecatalog list-provisioning-artifacts operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_provisioning_artifacts(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-provisioning-artifacts" }, input)
+end
+
+--- AWS servicecatalog list-provisioning-artifacts-for-service-action operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_provisioning_artifacts_for_service_action(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-provisioning-artifacts-for-service-action" }, input)
+end
+
+--- AWS servicecatalog list-record-history operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_record_history(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-record-history" }, input)
+end
+
+--- AWS servicecatalog list-resources-for-tag-option operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_resources_for_tag_option(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-resources-for-tag-option" }, input)
+end
+
+--- AWS servicecatalog list-service-actions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_service_actions(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-service-actions" }, input)
+end
+
+--- AWS servicecatalog list-service-actions-for-provisioning-artifact operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_service_actions_for_provisioning_artifact(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-service-actions-for-provisioning-artifact" }, input)
+end
+
+--- AWS servicecatalog list-stack-instances-for-provisioned-product operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_stack_instances_for_provisioned_product(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-stack-instances-for-provisioned-product" }, input)
+end
+
+--- AWS servicecatalog list-tag-options operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tag_options(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "list-tag-options" }, input)
+end
+
+--- AWS servicecatalog notify-provision-product-engine-workflow-result operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.notify_provision_product_engine_workflow_result(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "notify-provision-product-engine-workflow-result" }, input)
+end
+
+--- AWS servicecatalog notify-terminate-provisioned-product-engine-workflow-result operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.notify_terminate_provisioned_product_engine_workflow_result(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "notify-terminate-provisioned-product-engine-workflow-result" }, input)
+end
+
+--- AWS servicecatalog notify-update-provisioned-product-engine-workflow-result operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.notify_update_provisioned_product_engine_workflow_result(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "notify-update-provisioned-product-engine-workflow-result" }, input)
+end
+
+--- AWS servicecatalog provision-product operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.provision_product(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "provision-product" }, input)
+end
+
+--- AWS servicecatalog reject-portfolio-share operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.reject_portfolio_share(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "reject-portfolio-share" }, input)
+end
+
+--- AWS servicecatalog scan-provisioned-products operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.scan_provisioned_products(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "scan-provisioned-products" }, input)
+end
+
+--- AWS servicecatalog search-products operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.search_products(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "search-products" }, input)
+end
+
+--- AWS servicecatalog search-products-as-admin operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.search_products_as_admin(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "search-products-as-admin" }, input)
+end
+
+--- AWS servicecatalog search-provisioned-products operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.search_provisioned_products(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "search-provisioned-products" }, input)
+end
+
+--- AWS servicecatalog terminate-provisioned-product operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.terminate_provisioned_product(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "terminate-provisioned-product" }, input)
+end
+
+--- AWS servicecatalog update-constraint operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_constraint(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "update-constraint" }, input)
+end
+
+--- AWS servicecatalog update-portfolio operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_portfolio(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "update-portfolio" }, input)
+end
+
+--- AWS servicecatalog update-portfolio-share operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_portfolio_share(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "update-portfolio-share" }, input)
+end
+
+--- AWS servicecatalog update-product operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_product(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "update-product" }, input)
+end
+
+--- AWS servicecatalog update-provisioned-product operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_provisioned_product(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "update-provisioned-product" }, input)
+end
+
+--- AWS servicecatalog update-provisioned-product-properties operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_provisioned_product_properties(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "update-provisioned-product-properties" }, input)
+end
+
+--- AWS servicecatalog update-provisioning-artifact operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_provisioning_artifact(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "update-provisioning-artifact" }, input)
+end
+
+--- AWS servicecatalog update-service-action operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_service_action(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "update-service-action" }, input)
+end
+
+--- AWS servicecatalog update-tag-option operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_tag_option(input)
+	return common.execute_aws_command_skeleton({ "servicecatalog", "update-tag-option" }, input)
 end
 
 return M

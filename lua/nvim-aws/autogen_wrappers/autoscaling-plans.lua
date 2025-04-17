@@ -3,49 +3,49 @@
 
 local common = require("nvim-aws.common")
 
---- AWS AUTOSCALING-PLANS service functions
+--- AWS autoscaling-plans service functions
 local M = {}
 
 --- AWS autoscaling-plans create-scaling-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_scaling_plan(input)
-	return common.execute_aws_command_with_input({ "autoscaling-plans", "create-scaling-plan" }, input)
+	return common.execute_aws_command_skeleton({ "autoscaling-plans", "create-scaling-plan" }, input)
 end
 
 --- AWS autoscaling-plans delete-scaling-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_scaling_plan(input)
-	return common.execute_aws_command_with_input({ "autoscaling-plans", "delete-scaling-plan" }, input)
+	return common.execute_aws_command_skeleton({ "autoscaling-plans", "delete-scaling-plan" }, input)
 end
 
 --- AWS autoscaling-plans describe-scaling-plan-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_scaling_plan_resources(input)
-	return common.execute_aws_command_with_input({ "autoscaling-plans", "describe-scaling-plan-resources" }, input)
+	return common.execute_aws_command_skeleton({ "autoscaling-plans", "describe-scaling-plan-resources" }, input)
 end
 
 --- AWS autoscaling-plans describe-scaling-plans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_scaling_plans(input)
-	return common.execute_aws_command_with_input({ "autoscaling-plans", "describe-scaling-plans" }, input)
+	return common.execute_aws_command_skeleton({ "autoscaling-plans", "describe-scaling-plans" }, input)
 end
 
 --- AWS autoscaling-plans get-scaling-plan-resource-forecast-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_scaling_plan_resource_forecast_data(input)
-	return common.execute_aws_command_with_input({ "autoscaling-plans", "get-scaling-plan-resource-forecast-data" }, input)
+	return common.execute_aws_command_skeleton({ "autoscaling-plans", "get-scaling-plan-resource-forecast-data" }, input)
 end
 
 --- AWS autoscaling-plans update-scaling-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_scaling_plan(input)
-	return common.execute_aws_command_with_input({ "autoscaling-plans", "update-scaling-plan" }, input)
+	return common.execute_aws_command_skeleton({ "autoscaling-plans", "update-scaling-plan" }, input)
 end
 
 return M

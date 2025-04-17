@@ -3,21 +3,21 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SAGEMAKER-METRICS service functions
+--- AWS sagemaker-metrics service functions
 local M = {}
 
 --- AWS sagemaker-metrics batch-get-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_metrics(input)
-	return common.execute_aws_command_with_input({ "sagemaker-metrics", "batch-get-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-metrics", "batch-get-metrics" }, input)
 end
 
 --- AWS sagemaker-metrics batch-put-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_put_metrics(input)
-	return common.execute_aws_command_with_input({ "sagemaker-metrics", "batch-put-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "sagemaker-metrics", "batch-put-metrics" }, input)
 end
 
 return M

@@ -3,14 +3,14 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MARKETPLACECOMMERCEANALYTICS service functions
+--- AWS marketplacecommerceanalytics service functions
 local M = {}
 
 --- AWS marketplacecommerceanalytics generate-data-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_data_set(input)
-	return common.execute_aws_command_with_input({ "marketplacecommerceanalytics", "generate-data-set" }, input)
+	return common.execute_aws_command_skeleton({ "marketplacecommerceanalytics", "generate-data-set" }, input)
 end
 
 return M

@@ -3,539 +3,539 @@
 
 local common = require("nvim-aws.common")
 
---- AWS OPSWORKS service functions
+--- AWS opsworks service functions
 local M = {}
 
 --- AWS opsworks assign-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assign_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "assign-instance" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "assign-instance" }, input)
 end
 
 --- AWS opsworks assign-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assign_volume(input)
-	return common.execute_aws_command_with_input({ "opsworks", "assign-volume" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "assign-volume" }, input)
 end
 
 --- AWS opsworks associate-elastic-ip operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_elastic_ip(input)
-	return common.execute_aws_command_with_input({ "opsworks", "associate-elastic-ip" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "associate-elastic-ip" }, input)
 end
 
 --- AWS opsworks attach-elastic-load-balancer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_elastic_load_balancer(input)
-	return common.execute_aws_command_with_input({ "opsworks", "attach-elastic-load-balancer" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "attach-elastic-load-balancer" }, input)
 end
 
 --- AWS opsworks clone-stack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.clone_stack(input)
-	return common.execute_aws_command_with_input({ "opsworks", "clone-stack" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "clone-stack" }, input)
 end
 
 --- AWS opsworks create-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_app(input)
-	return common.execute_aws_command_with_input({ "opsworks", "create-app" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "create-app" }, input)
 end
 
 --- AWS opsworks create-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_deployment(input)
-	return common.execute_aws_command_with_input({ "opsworks", "create-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "create-deployment" }, input)
 end
 
 --- AWS opsworks create-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "create-instance" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "create-instance" }, input)
 end
 
 --- AWS opsworks create-layer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_layer(input)
-	return common.execute_aws_command_with_input({ "opsworks", "create-layer" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "create-layer" }, input)
 end
 
 --- AWS opsworks create-stack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_stack(input)
-	return common.execute_aws_command_with_input({ "opsworks", "create-stack" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "create-stack" }, input)
 end
 
 --- AWS opsworks create-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user_profile(input)
-	return common.execute_aws_command_with_input({ "opsworks", "create-user-profile" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "create-user-profile" }, input)
 end
 
 --- AWS opsworks delete-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_app(input)
-	return common.execute_aws_command_with_input({ "opsworks", "delete-app" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "delete-app" }, input)
 end
 
 --- AWS opsworks delete-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "delete-instance" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "delete-instance" }, input)
 end
 
 --- AWS opsworks delete-layer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_layer(input)
-	return common.execute_aws_command_with_input({ "opsworks", "delete-layer" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "delete-layer" }, input)
 end
 
 --- AWS opsworks delete-stack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_stack(input)
-	return common.execute_aws_command_with_input({ "opsworks", "delete-stack" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "delete-stack" }, input)
 end
 
 --- AWS opsworks delete-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user_profile(input)
-	return common.execute_aws_command_with_input({ "opsworks", "delete-user-profile" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "delete-user-profile" }, input)
 end
 
 --- AWS opsworks deregister-ecs-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_ecs_cluster(input)
-	return common.execute_aws_command_with_input({ "opsworks", "deregister-ecs-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "deregister-ecs-cluster" }, input)
 end
 
 --- AWS opsworks deregister-elastic-ip operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_elastic_ip(input)
-	return common.execute_aws_command_with_input({ "opsworks", "deregister-elastic-ip" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "deregister-elastic-ip" }, input)
 end
 
 --- AWS opsworks deregister-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "deregister-instance" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "deregister-instance" }, input)
 end
 
 --- AWS opsworks deregister-rds-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_rds_db_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "deregister-rds-db-instance" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "deregister-rds-db-instance" }, input)
 end
 
 --- AWS opsworks deregister-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_volume(input)
-	return common.execute_aws_command_with_input({ "opsworks", "deregister-volume" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "deregister-volume" }, input)
 end
 
 --- AWS opsworks describe-agent-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_agent_versions(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-agent-versions" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-agent-versions" }, input)
 end
 
 --- AWS opsworks describe-apps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_apps(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-apps" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-apps" }, input)
 end
 
 --- AWS opsworks describe-commands operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_commands(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-commands" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-commands" }, input)
 end
 
 --- AWS opsworks describe-deployments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_deployments(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-deployments" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-deployments" }, input)
 end
 
 --- AWS opsworks describe-ecs-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ecs_clusters(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-ecs-clusters" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-ecs-clusters" }, input)
 end
 
 --- AWS opsworks describe-elastic-ips operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_elastic_ips(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-elastic-ips" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-elastic-ips" }, input)
 end
 
 --- AWS opsworks describe-elastic-load-balancers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_elastic_load_balancers(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-elastic-load-balancers" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-elastic-load-balancers" }, input)
 end
 
 --- AWS opsworks describe-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instances(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-instances" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-instances" }, input)
 end
 
 --- AWS opsworks describe-layers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_layers(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-layers" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-layers" }, input)
 end
 
 --- AWS opsworks describe-load-based-auto-scaling operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_load_based_auto_scaling(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-load-based-auto-scaling" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-load-based-auto-scaling" }, input)
 end
 
 --- AWS opsworks describe-my-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_my_user_profile(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-my-user-profile" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-my-user-profile" }, input)
 end
 
 --- AWS opsworks describe-operating-systems operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_operating_systems(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-operating-systems" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-operating-systems" }, input)
 end
 
 --- AWS opsworks describe-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_permissions(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-permissions" }, input)
 end
 
 --- AWS opsworks describe-raid-arrays operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_raid_arrays(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-raid-arrays" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-raid-arrays" }, input)
 end
 
 --- AWS opsworks describe-rds-db-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_rds_db_instances(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-rds-db-instances" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-rds-db-instances" }, input)
 end
 
 --- AWS opsworks describe-service-errors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_service_errors(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-service-errors" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-service-errors" }, input)
 end
 
 --- AWS opsworks describe-stack-provisioning-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_stack_provisioning_parameters(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-stack-provisioning-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-stack-provisioning-parameters" }, input)
 end
 
 --- AWS opsworks describe-stack-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_stack_summary(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-stack-summary" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-stack-summary" }, input)
 end
 
 --- AWS opsworks describe-stacks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_stacks(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-stacks" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-stacks" }, input)
 end
 
 --- AWS opsworks describe-time-based-auto-scaling operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_time_based_auto_scaling(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-time-based-auto-scaling" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-time-based-auto-scaling" }, input)
 end
 
 --- AWS opsworks describe-user-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_user_profiles(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-user-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-user-profiles" }, input)
 end
 
 --- AWS opsworks describe-volumes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_volumes(input)
-	return common.execute_aws_command_with_input({ "opsworks", "describe-volumes" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "describe-volumes" }, input)
 end
 
 --- AWS opsworks detach-elastic-load-balancer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_elastic_load_balancer(input)
-	return common.execute_aws_command_with_input({ "opsworks", "detach-elastic-load-balancer" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "detach-elastic-load-balancer" }, input)
 end
 
 --- AWS opsworks disassociate-elastic-ip operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_elastic_ip(input)
-	return common.execute_aws_command_with_input({ "opsworks", "disassociate-elastic-ip" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "disassociate-elastic-ip" }, input)
 end
 
 --- AWS opsworks get-hostname-suggestion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_hostname_suggestion(input)
-	return common.execute_aws_command_with_input({ "opsworks", "get-hostname-suggestion" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "get-hostname-suggestion" }, input)
 end
 
 --- AWS opsworks grant-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.grant_access(input)
-	return common.execute_aws_command_with_input({ "opsworks", "grant-access" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "grant-access" }, input)
 end
 
 --- AWS opsworks list-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags(input)
-	return common.execute_aws_command_with_input({ "opsworks", "list-tags" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "list-tags" }, input)
 end
 
 --- AWS opsworks reboot-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reboot_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "reboot-instance" }, input)
-end
-
---- AWS opsworks register-ecs-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.register_ecs_cluster(input)
-	return common.execute_aws_command_with_input({ "opsworks", "register-ecs-cluster" }, input)
-end
-
---- AWS opsworks register-elastic-ip operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.register_elastic_ip(input)
-	return common.execute_aws_command_with_input({ "opsworks", "register-elastic-ip" }, input)
-end
-
---- AWS opsworks register-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.register_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "register-instance" }, input)
-end
-
---- AWS opsworks register-rds-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.register_rds_db_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "register-rds-db-instance" }, input)
-end
-
---- AWS opsworks register-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.register_volume(input)
-	return common.execute_aws_command_with_input({ "opsworks", "register-volume" }, input)
-end
-
---- AWS opsworks set-load-based-auto-scaling operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.set_load_based_auto_scaling(input)
-	return common.execute_aws_command_with_input({ "opsworks", "set-load-based-auto-scaling" }, input)
-end
-
---- AWS opsworks set-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.set_permission(input)
-	return common.execute_aws_command_with_input({ "opsworks", "set-permission" }, input)
-end
-
---- AWS opsworks set-time-based-auto-scaling operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.set_time_based_auto_scaling(input)
-	return common.execute_aws_command_with_input({ "opsworks", "set-time-based-auto-scaling" }, input)
-end
-
---- AWS opsworks start-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "start-instance" }, input)
-end
-
---- AWS opsworks start-stack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_stack(input)
-	return common.execute_aws_command_with_input({ "opsworks", "start-stack" }, input)
-end
-
---- AWS opsworks stop-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "stop-instance" }, input)
-end
-
---- AWS opsworks stop-stack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_stack(input)
-	return common.execute_aws_command_with_input({ "opsworks", "stop-stack" }, input)
-end
-
---- AWS opsworks tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "opsworks", "tag-resource" }, input)
-end
-
---- AWS opsworks unassign-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.unassign_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "unassign-instance" }, input)
-end
-
---- AWS opsworks unassign-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.unassign_volume(input)
-	return common.execute_aws_command_with_input({ "opsworks", "unassign-volume" }, input)
-end
-
---- AWS opsworks untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "opsworks", "untag-resource" }, input)
-end
-
---- AWS opsworks update-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_app(input)
-	return common.execute_aws_command_with_input({ "opsworks", "update-app" }, input)
-end
-
---- AWS opsworks update-elastic-ip operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_elastic_ip(input)
-	return common.execute_aws_command_with_input({ "opsworks", "update-elastic-ip" }, input)
-end
-
---- AWS opsworks update-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "update-instance" }, input)
-end
-
---- AWS opsworks update-layer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_layer(input)
-	return common.execute_aws_command_with_input({ "opsworks", "update-layer" }, input)
-end
-
---- AWS opsworks update-my-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_my_user_profile(input)
-	return common.execute_aws_command_with_input({ "opsworks", "update-my-user-profile" }, input)
-end
-
---- AWS opsworks update-rds-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_rds_db_instance(input)
-	return common.execute_aws_command_with_input({ "opsworks", "update-rds-db-instance" }, input)
-end
-
---- AWS opsworks update-stack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_stack(input)
-	return common.execute_aws_command_with_input({ "opsworks", "update-stack" }, input)
-end
-
---- AWS opsworks update-user-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_user_profile(input)
-	return common.execute_aws_command_with_input({ "opsworks", "update-user-profile" }, input)
-end
-
---- AWS opsworks update-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_volume(input)
-	return common.execute_aws_command_with_input({ "opsworks", "update-volume" }, input)
+	return common.execute_aws_command_skeleton({ "opsworks", "reboot-instance" }, input)
 end
 
 --- AWS opsworks register operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register(input)
-	return common.execute_aws_command_with_raw_input({ "opsworks", "register" }, input)
+	return common.execute_aws_command({ "opsworks", "register" }, input)
+end
+
+--- AWS opsworks register-ecs-cluster operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.register_ecs_cluster(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "register-ecs-cluster" }, input)
+end
+
+--- AWS opsworks register-elastic-ip operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.register_elastic_ip(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "register-elastic-ip" }, input)
+end
+
+--- AWS opsworks register-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.register_instance(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "register-instance" }, input)
+end
+
+--- AWS opsworks register-rds-db-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.register_rds_db_instance(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "register-rds-db-instance" }, input)
+end
+
+--- AWS opsworks register-volume operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.register_volume(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "register-volume" }, input)
+end
+
+--- AWS opsworks set-load-based-auto-scaling operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.set_load_based_auto_scaling(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "set-load-based-auto-scaling" }, input)
+end
+
+--- AWS opsworks set-permission operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.set_permission(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "set-permission" }, input)
+end
+
+--- AWS opsworks set-time-based-auto-scaling operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.set_time_based_auto_scaling(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "set-time-based-auto-scaling" }, input)
+end
+
+--- AWS opsworks start-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_instance(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "start-instance" }, input)
+end
+
+--- AWS opsworks start-stack operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_stack(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "start-stack" }, input)
+end
+
+--- AWS opsworks stop-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_instance(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "stop-instance" }, input)
+end
+
+--- AWS opsworks stop-stack operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_stack(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "stop-stack" }, input)
+end
+
+--- AWS opsworks tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "tag-resource" }, input)
+end
+
+--- AWS opsworks unassign-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.unassign_instance(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "unassign-instance" }, input)
+end
+
+--- AWS opsworks unassign-volume operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.unassign_volume(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "unassign-volume" }, input)
+end
+
+--- AWS opsworks untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "untag-resource" }, input)
+end
+
+--- AWS opsworks update-app operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_app(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "update-app" }, input)
+end
+
+--- AWS opsworks update-elastic-ip operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_elastic_ip(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "update-elastic-ip" }, input)
+end
+
+--- AWS opsworks update-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_instance(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "update-instance" }, input)
+end
+
+--- AWS opsworks update-layer operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_layer(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "update-layer" }, input)
+end
+
+--- AWS opsworks update-my-user-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_my_user_profile(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "update-my-user-profile" }, input)
+end
+
+--- AWS opsworks update-rds-db-instance operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_rds_db_instance(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "update-rds-db-instance" }, input)
+end
+
+--- AWS opsworks update-stack operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_stack(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "update-stack" }, input)
+end
+
+--- AWS opsworks update-user-profile operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_user_profile(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "update-user-profile" }, input)
+end
+
+--- AWS opsworks update-volume operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_volume(input)
+	return common.execute_aws_command_skeleton({ "opsworks", "update-volume" }, input)
 end
 
 --- AWS opsworks wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "opsworks", "wait" }, input)
+	return common.execute_aws_command({ "opsworks", "wait" }, input)
 end
 
 return M

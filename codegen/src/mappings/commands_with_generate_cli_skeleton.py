@@ -1,4 +1,4 @@
-service_mappings = {
+generate_cli_service_command_mapping = {
     "accessanalyzer": [
         "apply-archive-rule",
         "cancel-policy-generation",

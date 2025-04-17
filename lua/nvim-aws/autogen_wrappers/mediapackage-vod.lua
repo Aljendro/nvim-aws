@@ -3,126 +3,126 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MEDIAPACKAGE-VOD service functions
+--- AWS mediapackage-vod service functions
 local M = {}
 
 --- AWS mediapackage-vod configure-logs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.configure_logs(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "configure-logs" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "configure-logs" }, input)
 end
 
 --- AWS mediapackage-vod create-asset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_asset(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "create-asset" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "create-asset" }, input)
 end
 
 --- AWS mediapackage-vod create-packaging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_packaging_configuration(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "create-packaging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "create-packaging-configuration" }, input)
 end
 
 --- AWS mediapackage-vod create-packaging-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_packaging_group(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "create-packaging-group" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "create-packaging-group" }, input)
 end
 
 --- AWS mediapackage-vod delete-asset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_asset(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "delete-asset" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "delete-asset" }, input)
 end
 
 --- AWS mediapackage-vod delete-packaging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_packaging_configuration(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "delete-packaging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "delete-packaging-configuration" }, input)
 end
 
 --- AWS mediapackage-vod delete-packaging-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_packaging_group(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "delete-packaging-group" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "delete-packaging-group" }, input)
 end
 
 --- AWS mediapackage-vod describe-asset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_asset(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "describe-asset" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "describe-asset" }, input)
 end
 
 --- AWS mediapackage-vod describe-packaging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_packaging_configuration(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "describe-packaging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "describe-packaging-configuration" }, input)
 end
 
 --- AWS mediapackage-vod describe-packaging-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_packaging_group(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "describe-packaging-group" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "describe-packaging-group" }, input)
 end
 
 --- AWS mediapackage-vod list-assets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_assets(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "list-assets" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-assets" }, input)
 end
 
 --- AWS mediapackage-vod list-packaging-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_packaging_configurations(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "list-packaging-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-packaging-configurations" }, input)
 end
 
 --- AWS mediapackage-vod list-packaging-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_packaging_groups(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "list-packaging-groups" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-packaging-groups" }, input)
 end
 
 --- AWS mediapackage-vod list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "list-tags-for-resource" }, input)
 end
 
 --- AWS mediapackage-vod tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "tag-resource" }, input)
 end
 
 --- AWS mediapackage-vod untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "untag-resource" }, input)
 end
 
 --- AWS mediapackage-vod update-packaging-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_packaging_group(input)
-	return common.execute_aws_command_with_input({ "mediapackage-vod", "update-packaging-group" }, input)
+	return common.execute_aws_command_skeleton({ "mediapackage-vod", "update-packaging-group" }, input)
 end
 
 return M

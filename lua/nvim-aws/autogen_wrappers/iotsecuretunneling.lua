@@ -3,63 +3,63 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IOTSECURETUNNELING service functions
+--- AWS iotsecuretunneling service functions
 local M = {}
 
 --- AWS iotsecuretunneling close-tunnel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.close_tunnel(input)
-	return common.execute_aws_command_with_input({ "iotsecuretunneling", "close-tunnel" }, input)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "close-tunnel" }, input)
 end
 
 --- AWS iotsecuretunneling describe-tunnel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_tunnel(input)
-	return common.execute_aws_command_with_input({ "iotsecuretunneling", "describe-tunnel" }, input)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "describe-tunnel" }, input)
 end
 
 --- AWS iotsecuretunneling list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "iotsecuretunneling", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "list-tags-for-resource" }, input)
 end
 
 --- AWS iotsecuretunneling list-tunnels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tunnels(input)
-	return common.execute_aws_command_with_input({ "iotsecuretunneling", "list-tunnels" }, input)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "list-tunnels" }, input)
 end
 
 --- AWS iotsecuretunneling open-tunnel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.open_tunnel(input)
-	return common.execute_aws_command_with_input({ "iotsecuretunneling", "open-tunnel" }, input)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "open-tunnel" }, input)
 end
 
 --- AWS iotsecuretunneling rotate-tunnel-access-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.rotate_tunnel_access_token(input)
-	return common.execute_aws_command_with_input({ "iotsecuretunneling", "rotate-tunnel-access-token" }, input)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "rotate-tunnel-access-token" }, input)
 end
 
 --- AWS iotsecuretunneling tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "iotsecuretunneling", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "tag-resource" }, input)
 end
 
 --- AWS iotsecuretunneling untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "iotsecuretunneling", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotsecuretunneling", "untag-resource" }, input)
 end
 
 return M

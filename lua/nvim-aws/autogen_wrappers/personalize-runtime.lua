@@ -3,28 +3,28 @@
 
 local common = require("nvim-aws.common")
 
---- AWS PERSONALIZE-RUNTIME service functions
+--- AWS personalize-runtime service functions
 local M = {}
 
 --- AWS personalize-runtime get-action-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_action_recommendations(input)
-	return common.execute_aws_command_with_input({ "personalize-runtime", "get-action-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "personalize-runtime", "get-action-recommendations" }, input)
 end
 
 --- AWS personalize-runtime get-personalized-ranking operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_personalized_ranking(input)
-	return common.execute_aws_command_with_input({ "personalize-runtime", "get-personalized-ranking" }, input)
+	return common.execute_aws_command_skeleton({ "personalize-runtime", "get-personalized-ranking" }, input)
 end
 
 --- AWS personalize-runtime get-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recommendations(input)
-	return common.execute_aws_command_with_input({ "personalize-runtime", "get-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "personalize-runtime", "get-recommendations" }, input)
 end
 
 return M

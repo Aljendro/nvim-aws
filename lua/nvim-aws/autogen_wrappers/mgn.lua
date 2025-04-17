@@ -3,497 +3,497 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MGN service functions
+--- AWS mgn service functions
 local M = {}
 
 --- AWS mgn archive-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.archive_application(input)
-	return common.execute_aws_command_with_input({ "mgn", "archive-application" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "archive-application" }, input)
 end
 
 --- AWS mgn archive-wave operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.archive_wave(input)
-	return common.execute_aws_command_with_input({ "mgn", "archive-wave" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "archive-wave" }, input)
 end
 
 --- AWS mgn associate-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_applications(input)
-	return common.execute_aws_command_with_input({ "mgn", "associate-applications" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "associate-applications" }, input)
 end
 
 --- AWS mgn associate-source-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_source_servers(input)
-	return common.execute_aws_command_with_input({ "mgn", "associate-source-servers" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "associate-source-servers" }, input)
 end
 
 --- AWS mgn change-server-life-cycle-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.change_server_life_cycle_state(input)
-	return common.execute_aws_command_with_input({ "mgn", "change-server-life-cycle-state" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "change-server-life-cycle-state" }, input)
 end
 
 --- AWS mgn create-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_application(input)
-	return common.execute_aws_command_with_input({ "mgn", "create-application" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "create-application" }, input)
 end
 
 --- AWS mgn create-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_connector(input)
-	return common.execute_aws_command_with_input({ "mgn", "create-connector" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "create-connector" }, input)
 end
 
 --- AWS mgn create-launch-configuration-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_launch_configuration_template(input)
-	return common.execute_aws_command_with_input({ "mgn", "create-launch-configuration-template" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "create-launch-configuration-template" }, input)
 end
 
 --- AWS mgn create-replication-configuration-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_replication_configuration_template(input)
-	return common.execute_aws_command_with_input({ "mgn", "create-replication-configuration-template" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "create-replication-configuration-template" }, input)
 end
 
 --- AWS mgn create-wave operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_wave(input)
-	return common.execute_aws_command_with_input({ "mgn", "create-wave" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "create-wave" }, input)
 end
 
 --- AWS mgn delete-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_application(input)
-	return common.execute_aws_command_with_input({ "mgn", "delete-application" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "delete-application" }, input)
 end
 
 --- AWS mgn delete-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connector(input)
-	return common.execute_aws_command_with_input({ "mgn", "delete-connector" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "delete-connector" }, input)
 end
 
 --- AWS mgn delete-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_job(input)
-	return common.execute_aws_command_with_input({ "mgn", "delete-job" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "delete-job" }, input)
 end
 
 --- AWS mgn delete-launch-configuration-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_launch_configuration_template(input)
-	return common.execute_aws_command_with_input({ "mgn", "delete-launch-configuration-template" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "delete-launch-configuration-template" }, input)
 end
 
 --- AWS mgn delete-replication-configuration-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_replication_configuration_template(input)
-	return common.execute_aws_command_with_input({ "mgn", "delete-replication-configuration-template" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "delete-replication-configuration-template" }, input)
 end
 
 --- AWS mgn delete-source-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_source_server(input)
-	return common.execute_aws_command_with_input({ "mgn", "delete-source-server" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "delete-source-server" }, input)
 end
 
 --- AWS mgn delete-vcenter-client operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vcenter_client(input)
-	return common.execute_aws_command_with_input({ "mgn", "delete-vcenter-client" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "delete-vcenter-client" }, input)
 end
 
 --- AWS mgn delete-wave operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_wave(input)
-	return common.execute_aws_command_with_input({ "mgn", "delete-wave" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "delete-wave" }, input)
 end
 
 --- AWS mgn describe-job-log-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_job_log_items(input)
-	return common.execute_aws_command_with_input({ "mgn", "describe-job-log-items" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "describe-job-log-items" }, input)
 end
 
 --- AWS mgn describe-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_jobs(input)
-	return common.execute_aws_command_with_input({ "mgn", "describe-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "describe-jobs" }, input)
 end
 
 --- AWS mgn describe-launch-configuration-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_launch_configuration_templates(input)
-	return common.execute_aws_command_with_input({ "mgn", "describe-launch-configuration-templates" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "describe-launch-configuration-templates" }, input)
 end
 
 --- AWS mgn describe-replication-configuration-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replication_configuration_templates(input)
-	return common.execute_aws_command_with_input({ "mgn", "describe-replication-configuration-templates" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "describe-replication-configuration-templates" }, input)
 end
 
 --- AWS mgn describe-source-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_source_servers(input)
-	return common.execute_aws_command_with_input({ "mgn", "describe-source-servers" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "describe-source-servers" }, input)
 end
 
 --- AWS mgn describe-vcenter-clients operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vcenter_clients(input)
-	return common.execute_aws_command_with_input({ "mgn", "describe-vcenter-clients" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "describe-vcenter-clients" }, input)
 end
 
 --- AWS mgn disassociate-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_applications(input)
-	return common.execute_aws_command_with_input({ "mgn", "disassociate-applications" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "disassociate-applications" }, input)
 end
 
 --- AWS mgn disassociate-source-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_source_servers(input)
-	return common.execute_aws_command_with_input({ "mgn", "disassociate-source-servers" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "disassociate-source-servers" }, input)
 end
 
 --- AWS mgn disconnect-from-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disconnect_from_service(input)
-	return common.execute_aws_command_with_input({ "mgn", "disconnect-from-service" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "disconnect-from-service" }, input)
 end
 
 --- AWS mgn finalize-cutover operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.finalize_cutover(input)
-	return common.execute_aws_command_with_input({ "mgn", "finalize-cutover" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "finalize-cutover" }, input)
 end
 
 --- AWS mgn get-launch-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_launch_configuration(input)
-	return common.execute_aws_command_with_input({ "mgn", "get-launch-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "get-launch-configuration" }, input)
 end
 
 --- AWS mgn get-replication-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_replication_configuration(input)
-	return common.execute_aws_command_with_input({ "mgn", "get-replication-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "get-replication-configuration" }, input)
 end
 
 --- AWS mgn initialize-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.initialize_service(input)
-	return common.execute_aws_command_with_input({ "mgn", "initialize-service" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "initialize-service" }, input)
 end
 
 --- AWS mgn list-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_applications(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-applications" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-applications" }, input)
 end
 
 --- AWS mgn list-connectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_connectors(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-connectors" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-connectors" }, input)
 end
 
 --- AWS mgn list-export-errors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_export_errors(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-export-errors" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-export-errors" }, input)
 end
 
 --- AWS mgn list-exports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_exports(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-exports" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-exports" }, input)
 end
 
 --- AWS mgn list-import-errors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_import_errors(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-import-errors" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-import-errors" }, input)
 end
 
 --- AWS mgn list-imports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_imports(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-imports" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-imports" }, input)
 end
 
 --- AWS mgn list-managed-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_accounts(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-managed-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-managed-accounts" }, input)
 end
 
 --- AWS mgn list-source-server-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_source_server_actions(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-source-server-actions" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-source-server-actions" }, input)
 end
 
 --- AWS mgn list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-tags-for-resource" }, input)
 end
 
 --- AWS mgn list-template-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_template_actions(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-template-actions" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-template-actions" }, input)
 end
 
 --- AWS mgn list-waves operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_waves(input)
-	return common.execute_aws_command_with_input({ "mgn", "list-waves" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "list-waves" }, input)
 end
 
 --- AWS mgn mark-as-archived operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.mark_as_archived(input)
-	return common.execute_aws_command_with_input({ "mgn", "mark-as-archived" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "mark-as-archived" }, input)
 end
 
 --- AWS mgn pause-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.pause_replication(input)
-	return common.execute_aws_command_with_input({ "mgn", "pause-replication" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "pause-replication" }, input)
 end
 
 --- AWS mgn put-source-server-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_source_server_action(input)
-	return common.execute_aws_command_with_input({ "mgn", "put-source-server-action" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "put-source-server-action" }, input)
 end
 
 --- AWS mgn put-template-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_template_action(input)
-	return common.execute_aws_command_with_input({ "mgn", "put-template-action" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "put-template-action" }, input)
 end
 
 --- AWS mgn remove-source-server-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_source_server_action(input)
-	return common.execute_aws_command_with_input({ "mgn", "remove-source-server-action" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "remove-source-server-action" }, input)
 end
 
 --- AWS mgn remove-template-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_template_action(input)
-	return common.execute_aws_command_with_input({ "mgn", "remove-template-action" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "remove-template-action" }, input)
 end
 
 --- AWS mgn resume-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resume_replication(input)
-	return common.execute_aws_command_with_input({ "mgn", "resume-replication" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "resume-replication" }, input)
 end
 
 --- AWS mgn retry-data-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.retry_data_replication(input)
-	return common.execute_aws_command_with_input({ "mgn", "retry-data-replication" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "retry-data-replication" }, input)
 end
 
 --- AWS mgn start-cutover operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_cutover(input)
-	return common.execute_aws_command_with_input({ "mgn", "start-cutover" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "start-cutover" }, input)
 end
 
 --- AWS mgn start-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_export(input)
-	return common.execute_aws_command_with_input({ "mgn", "start-export" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "start-export" }, input)
 end
 
 --- AWS mgn start-import operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_import(input)
-	return common.execute_aws_command_with_input({ "mgn", "start-import" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "start-import" }, input)
 end
 
 --- AWS mgn start-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_replication(input)
-	return common.execute_aws_command_with_input({ "mgn", "start-replication" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "start-replication" }, input)
 end
 
 --- AWS mgn start-test operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_test(input)
-	return common.execute_aws_command_with_input({ "mgn", "start-test" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "start-test" }, input)
 end
 
 --- AWS mgn stop-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_replication(input)
-	return common.execute_aws_command_with_input({ "mgn", "stop-replication" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "stop-replication" }, input)
 end
 
 --- AWS mgn tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "mgn", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "tag-resource" }, input)
 end
 
 --- AWS mgn terminate-target-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.terminate_target_instances(input)
-	return common.execute_aws_command_with_input({ "mgn", "terminate-target-instances" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "terminate-target-instances" }, input)
 end
 
 --- AWS mgn unarchive-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unarchive_application(input)
-	return common.execute_aws_command_with_input({ "mgn", "unarchive-application" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "unarchive-application" }, input)
 end
 
 --- AWS mgn unarchive-wave operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unarchive_wave(input)
-	return common.execute_aws_command_with_input({ "mgn", "unarchive-wave" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "unarchive-wave" }, input)
 end
 
 --- AWS mgn untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "mgn", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "untag-resource" }, input)
 end
 
 --- AWS mgn update-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_application(input)
-	return common.execute_aws_command_with_input({ "mgn", "update-application" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "update-application" }, input)
 end
 
 --- AWS mgn update-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_connector(input)
-	return common.execute_aws_command_with_input({ "mgn", "update-connector" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "update-connector" }, input)
 end
 
 --- AWS mgn update-launch-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_launch_configuration(input)
-	return common.execute_aws_command_with_input({ "mgn", "update-launch-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "update-launch-configuration" }, input)
 end
 
 --- AWS mgn update-launch-configuration-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_launch_configuration_template(input)
-	return common.execute_aws_command_with_input({ "mgn", "update-launch-configuration-template" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "update-launch-configuration-template" }, input)
 end
 
 --- AWS mgn update-replication-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_replication_configuration(input)
-	return common.execute_aws_command_with_input({ "mgn", "update-replication-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "update-replication-configuration" }, input)
 end
 
 --- AWS mgn update-replication-configuration-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_replication_configuration_template(input)
-	return common.execute_aws_command_with_input({ "mgn", "update-replication-configuration-template" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "update-replication-configuration-template" }, input)
 end
 
 --- AWS mgn update-source-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_source_server(input)
-	return common.execute_aws_command_with_input({ "mgn", "update-source-server" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "update-source-server" }, input)
 end
 
 --- AWS mgn update-source-server-replication-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_source_server_replication_type(input)
-	return common.execute_aws_command_with_input({ "mgn", "update-source-server-replication-type" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "update-source-server-replication-type" }, input)
 end
 
 --- AWS mgn update-wave operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_wave(input)
-	return common.execute_aws_command_with_input({ "mgn", "update-wave" }, input)
+	return common.execute_aws_command_skeleton({ "mgn", "update-wave" }, input)
 end
 
 return M

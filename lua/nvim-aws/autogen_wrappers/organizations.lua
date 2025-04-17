@@ -3,392 +3,392 @@
 
 local common = require("nvim-aws.common")
 
---- AWS ORGANIZATIONS service functions
+--- AWS organizations service functions
 local M = {}
 
 --- AWS organizations accept-handshake operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_handshake(input)
-	return common.execute_aws_command_with_input({ "organizations", "accept-handshake" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "accept-handshake" }, input)
 end
 
 --- AWS organizations attach-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "attach-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "attach-policy" }, input)
 end
 
 --- AWS organizations cancel-handshake operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_handshake(input)
-	return common.execute_aws_command_with_input({ "organizations", "cancel-handshake" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "cancel-handshake" }, input)
 end
 
 --- AWS organizations close-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.close_account(input)
-	return common.execute_aws_command_with_input({ "organizations", "close-account" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "close-account" }, input)
 end
 
 --- AWS organizations create-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_account(input)
-	return common.execute_aws_command_with_input({ "organizations", "create-account" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "create-account" }, input)
 end
 
 --- AWS organizations create-gov-cloud-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_gov_cloud_account(input)
-	return common.execute_aws_command_with_input({ "organizations", "create-gov-cloud-account" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "create-gov-cloud-account" }, input)
 end
 
 --- AWS organizations create-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_organization(input)
-	return common.execute_aws_command_with_input({ "organizations", "create-organization" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "create-organization" }, input)
 end
 
 --- AWS organizations create-organizational-unit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_organizational_unit(input)
-	return common.execute_aws_command_with_input({ "organizations", "create-organizational-unit" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "create-organizational-unit" }, input)
 end
 
 --- AWS organizations create-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "create-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "create-policy" }, input)
 end
 
 --- AWS organizations decline-handshake operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.decline_handshake(input)
-	return common.execute_aws_command_with_input({ "organizations", "decline-handshake" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "decline-handshake" }, input)
 end
 
 --- AWS organizations delete-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_organization(input)
-	return common.execute_aws_command_with_input({ "organizations", "delete-organization" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "delete-organization" }, input)
 end
 
 --- AWS organizations delete-organizational-unit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_organizational_unit(input)
-	return common.execute_aws_command_with_input({ "organizations", "delete-organizational-unit" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "delete-organizational-unit" }, input)
 end
 
 --- AWS organizations delete-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "delete-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "delete-policy" }, input)
 end
 
 --- AWS organizations delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "delete-resource-policy" }, input)
 end
 
 --- AWS organizations deregister-delegated-administrator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_delegated_administrator(input)
-	return common.execute_aws_command_with_input({ "organizations", "deregister-delegated-administrator" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "deregister-delegated-administrator" }, input)
 end
 
 --- AWS organizations describe-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account(input)
-	return common.execute_aws_command_with_input({ "organizations", "describe-account" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "describe-account" }, input)
 end
 
 --- AWS organizations describe-create-account-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_create_account_status(input)
-	return common.execute_aws_command_with_input({ "organizations", "describe-create-account-status" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "describe-create-account-status" }, input)
 end
 
 --- AWS organizations describe-effective-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_effective_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "describe-effective-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "describe-effective-policy" }, input)
 end
 
 --- AWS organizations describe-handshake operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_handshake(input)
-	return common.execute_aws_command_with_input({ "organizations", "describe-handshake" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "describe-handshake" }, input)
 end
 
 --- AWS organizations describe-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organization(input)
-	return common.execute_aws_command_with_input({ "organizations", "describe-organization" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "describe-organization" }, input)
 end
 
 --- AWS organizations describe-organizational-unit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organizational_unit(input)
-	return common.execute_aws_command_with_input({ "organizations", "describe-organizational-unit" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "describe-organizational-unit" }, input)
 end
 
 --- AWS organizations describe-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "describe-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "describe-policy" }, input)
 end
 
 --- AWS organizations describe-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_resource_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "describe-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "describe-resource-policy" }, input)
 end
 
 --- AWS organizations detach-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "detach-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "detach-policy" }, input)
 end
 
 --- AWS organizations disable-aws-service-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_aws_service_access(input)
-	return common.execute_aws_command_with_input({ "organizations", "disable-aws-service-access" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "disable-aws-service-access" }, input)
 end
 
 --- AWS organizations disable-policy-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_policy_type(input)
-	return common.execute_aws_command_with_input({ "organizations", "disable-policy-type" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "disable-policy-type" }, input)
 end
 
 --- AWS organizations enable-all-features operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_all_features(input)
-	return common.execute_aws_command_with_input({ "organizations", "enable-all-features" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "enable-all-features" }, input)
 end
 
 --- AWS organizations enable-aws-service-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_aws_service_access(input)
-	return common.execute_aws_command_with_input({ "organizations", "enable-aws-service-access" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "enable-aws-service-access" }, input)
 end
 
 --- AWS organizations enable-policy-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_policy_type(input)
-	return common.execute_aws_command_with_input({ "organizations", "enable-policy-type" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "enable-policy-type" }, input)
 end
 
 --- AWS organizations invite-account-to-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.invite_account_to_organization(input)
-	return common.execute_aws_command_with_input({ "organizations", "invite-account-to-organization" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "invite-account-to-organization" }, input)
 end
 
 --- AWS organizations leave-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.leave_organization(input)
-	return common.execute_aws_command_with_input({ "organizations", "leave-organization" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "leave-organization" }, input)
 end
 
 --- AWS organizations list-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_accounts(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-accounts" }, input)
 end
 
 --- AWS organizations list-accounts-for-parent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_accounts_for_parent(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-accounts-for-parent" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-accounts-for-parent" }, input)
 end
 
 --- AWS organizations list-aws-service-access-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_aws_service_access_for_organization(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-aws-service-access-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-aws-service-access-for-organization" }, input)
 end
 
 --- AWS organizations list-children operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_children(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-children" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-children" }, input)
 end
 
 --- AWS organizations list-create-account-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_create_account_status(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-create-account-status" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-create-account-status" }, input)
 end
 
 --- AWS organizations list-delegated-administrators operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_delegated_administrators(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-delegated-administrators" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-delegated-administrators" }, input)
 end
 
 --- AWS organizations list-delegated-services-for-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_delegated_services_for_account(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-delegated-services-for-account" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-delegated-services-for-account" }, input)
 end
 
 --- AWS organizations list-handshakes-for-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_handshakes_for_account(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-handshakes-for-account" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-handshakes-for-account" }, input)
 end
 
 --- AWS organizations list-handshakes-for-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_handshakes_for_organization(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-handshakes-for-organization" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-handshakes-for-organization" }, input)
 end
 
 --- AWS organizations list-organizational-units-for-parent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_organizational_units_for_parent(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-organizational-units-for-parent" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-organizational-units-for-parent" }, input)
 end
 
 --- AWS organizations list-parents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_parents(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-parents" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-parents" }, input)
 end
 
 --- AWS organizations list-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_policies(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-policies" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-policies" }, input)
 end
 
 --- AWS organizations list-policies-for-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_policies_for_target(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-policies-for-target" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-policies-for-target" }, input)
 end
 
 --- AWS organizations list-roots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_roots(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-roots" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-roots" }, input)
 end
 
 --- AWS organizations list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-tags-for-resource" }, input)
 end
 
 --- AWS organizations list-targets-for-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_targets_for_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "list-targets-for-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "list-targets-for-policy" }, input)
 end
 
 --- AWS organizations move-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.move_account(input)
-	return common.execute_aws_command_with_input({ "organizations", "move-account" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "move-account" }, input)
 end
 
 --- AWS organizations put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "put-resource-policy" }, input)
 end
 
 --- AWS organizations register-delegated-administrator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_delegated_administrator(input)
-	return common.execute_aws_command_with_input({ "organizations", "register-delegated-administrator" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "register-delegated-administrator" }, input)
 end
 
 --- AWS organizations remove-account-from-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_account_from_organization(input)
-	return common.execute_aws_command_with_input({ "organizations", "remove-account-from-organization" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "remove-account-from-organization" }, input)
 end
 
 --- AWS organizations tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "organizations", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "tag-resource" }, input)
 end
 
 --- AWS organizations untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "organizations", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "untag-resource" }, input)
 end
 
 --- AWS organizations update-organizational-unit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_organizational_unit(input)
-	return common.execute_aws_command_with_input({ "organizations", "update-organizational-unit" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "update-organizational-unit" }, input)
 end
 
 --- AWS organizations update-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_policy(input)
-	return common.execute_aws_command_with_input({ "organizations", "update-policy" }, input)
+	return common.execute_aws_command_skeleton({ "organizations", "update-policy" }, input)
 end
 
 return M

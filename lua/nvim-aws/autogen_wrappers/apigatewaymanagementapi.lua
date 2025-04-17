@@ -3,28 +3,28 @@
 
 local common = require("nvim-aws.common")
 
---- AWS APIGATEWAYMANAGEMENTAPI service functions
+--- AWS apigatewaymanagementapi service functions
 local M = {}
 
 --- AWS apigatewaymanagementapi delete-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connection(input)
-	return common.execute_aws_command_with_input({ "apigatewaymanagementapi", "delete-connection" }, input)
+	return common.execute_aws_command_skeleton({ "apigatewaymanagementapi", "delete-connection" }, input)
 end
 
 --- AWS apigatewaymanagementapi get-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_connection(input)
-	return common.execute_aws_command_with_input({ "apigatewaymanagementapi", "get-connection" }, input)
+	return common.execute_aws_command_skeleton({ "apigatewaymanagementapi", "get-connection" }, input)
 end
 
 --- AWS apigatewaymanagementapi post-to-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.post_to_connection(input)
-	return common.execute_aws_command_with_input({ "apigatewaymanagementapi", "post-to-connection" }, input)
+	return common.execute_aws_command_skeleton({ "apigatewaymanagementapi", "post-to-connection" }, input)
 end
 
 return M

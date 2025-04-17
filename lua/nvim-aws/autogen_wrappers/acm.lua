@@ -3,119 +3,119 @@
 
 local common = require("nvim-aws.common")
 
---- AWS ACM service functions
+--- AWS acm service functions
 local M = {}
 
 --- AWS acm add-tags-to-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_tags_to_certificate(input)
-	return common.execute_aws_command_with_input({ "acm", "add-tags-to-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "add-tags-to-certificate" }, input)
 end
 
 --- AWS acm delete-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_certificate(input)
-	return common.execute_aws_command_with_input({ "acm", "delete-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "delete-certificate" }, input)
 end
 
 --- AWS acm describe-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_certificate(input)
-	return common.execute_aws_command_with_input({ "acm", "describe-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "describe-certificate" }, input)
 end
 
 --- AWS acm export-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_certificate(input)
-	return common.execute_aws_command_with_input({ "acm", "export-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "export-certificate" }, input)
 end
 
 --- AWS acm get-account-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_account_configuration(input)
-	return common.execute_aws_command_with_input({ "acm", "get-account-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "get-account-configuration" }, input)
 end
 
 --- AWS acm get-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_certificate(input)
-	return common.execute_aws_command_with_input({ "acm", "get-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "get-certificate" }, input)
 end
 
 --- AWS acm import-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_certificate(input)
-	return common.execute_aws_command_with_input({ "acm", "import-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "import-certificate" }, input)
 end
 
 --- AWS acm list-certificates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_certificates(input)
-	return common.execute_aws_command_with_input({ "acm", "list-certificates" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "list-certificates" }, input)
 end
 
 --- AWS acm list-tags-for-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_certificate(input)
-	return common.execute_aws_command_with_input({ "acm", "list-tags-for-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "list-tags-for-certificate" }, input)
 end
 
 --- AWS acm put-account-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_account_configuration(input)
-	return common.execute_aws_command_with_input({ "acm", "put-account-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "put-account-configuration" }, input)
 end
 
 --- AWS acm remove-tags-from-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_tags_from_certificate(input)
-	return common.execute_aws_command_with_input({ "acm", "remove-tags-from-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "remove-tags-from-certificate" }, input)
 end
 
 --- AWS acm renew-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.renew_certificate(input)
-	return common.execute_aws_command_with_input({ "acm", "renew-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "renew-certificate" }, input)
 end
 
 --- AWS acm request-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.request_certificate(input)
-	return common.execute_aws_command_with_input({ "acm", "request-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "request-certificate" }, input)
 end
 
 --- AWS acm resend-validation-email operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resend_validation_email(input)
-	return common.execute_aws_command_with_input({ "acm", "resend-validation-email" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "resend-validation-email" }, input)
 end
 
 --- AWS acm update-certificate-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_certificate_options(input)
-	return common.execute_aws_command_with_input({ "acm", "update-certificate-options" }, input)
+	return common.execute_aws_command_skeleton({ "acm", "update-certificate-options" }, input)
 end
 
 --- AWS acm wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "acm", "wait" }, input)
+	return common.execute_aws_command({ "acm", "wait" }, input)
 end
 
 return M

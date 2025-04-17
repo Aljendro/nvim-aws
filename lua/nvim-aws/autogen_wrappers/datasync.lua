@@ -3,469 +3,469 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DATASYNC service functions
+--- AWS datasync service functions
 local M = {}
 
 --- AWS datasync add-storage-system operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_storage_system(input)
-	return common.execute_aws_command_with_input({ "datasync", "add-storage-system" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "add-storage-system" }, input)
 end
 
 --- AWS datasync cancel-task-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_task_execution(input)
-	return common.execute_aws_command_with_input({ "datasync", "cancel-task-execution" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "cancel-task-execution" }, input)
 end
 
 --- AWS datasync create-agent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_agent(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-agent" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-agent" }, input)
 end
 
 --- AWS datasync create-location-azure-blob operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_azure_blob(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-azure-blob" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-azure-blob" }, input)
 end
 
 --- AWS datasync create-location-efs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_efs(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-efs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-efs" }, input)
 end
 
 --- AWS datasync create-location-fsx-lustre operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_fsx_lustre(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-fsx-lustre" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-lustre" }, input)
 end
 
 --- AWS datasync create-location-fsx-ontap operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_fsx_ontap(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-fsx-ontap" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-ontap" }, input)
 end
 
 --- AWS datasync create-location-fsx-open-zfs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_fsx_open_zfs(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-fsx-open-zfs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-open-zfs" }, input)
 end
 
 --- AWS datasync create-location-fsx-windows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_fsx_windows(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-fsx-windows" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-fsx-windows" }, input)
 end
 
 --- AWS datasync create-location-hdfs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_hdfs(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-hdfs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-hdfs" }, input)
 end
 
 --- AWS datasync create-location-nfs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_nfs(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-nfs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-nfs" }, input)
 end
 
 --- AWS datasync create-location-object-storage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_object_storage(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-object-storage" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-object-storage" }, input)
 end
 
 --- AWS datasync create-location-s3 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_s3(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-s3" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-s3" }, input)
 end
 
 --- AWS datasync create-location-smb operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location_smb(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-location-smb" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-location-smb" }, input)
 end
 
 --- AWS datasync create-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_task(input)
-	return common.execute_aws_command_with_input({ "datasync", "create-task" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "create-task" }, input)
 end
 
 --- AWS datasync delete-agent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_agent(input)
-	return common.execute_aws_command_with_input({ "datasync", "delete-agent" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "delete-agent" }, input)
 end
 
 --- AWS datasync delete-location operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_location(input)
-	return common.execute_aws_command_with_input({ "datasync", "delete-location" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "delete-location" }, input)
 end
 
 --- AWS datasync delete-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_task(input)
-	return common.execute_aws_command_with_input({ "datasync", "delete-task" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "delete-task" }, input)
 end
 
 --- AWS datasync describe-agent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_agent(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-agent" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-agent" }, input)
 end
 
 --- AWS datasync describe-discovery-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_discovery_job(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-discovery-job" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-discovery-job" }, input)
 end
 
 --- AWS datasync describe-location-azure-blob operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_azure_blob(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-azure-blob" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-azure-blob" }, input)
 end
 
 --- AWS datasync describe-location-efs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_efs(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-efs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-efs" }, input)
 end
 
 --- AWS datasync describe-location-fsx-lustre operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_fsx_lustre(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-fsx-lustre" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-lustre" }, input)
 end
 
 --- AWS datasync describe-location-fsx-ontap operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_fsx_ontap(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-fsx-ontap" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-ontap" }, input)
 end
 
 --- AWS datasync describe-location-fsx-open-zfs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_fsx_open_zfs(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-fsx-open-zfs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-open-zfs" }, input)
 end
 
 --- AWS datasync describe-location-fsx-windows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_fsx_windows(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-fsx-windows" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-fsx-windows" }, input)
 end
 
 --- AWS datasync describe-location-hdfs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_hdfs(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-hdfs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-hdfs" }, input)
 end
 
 --- AWS datasync describe-location-nfs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_nfs(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-nfs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-nfs" }, input)
 end
 
 --- AWS datasync describe-location-object-storage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_object_storage(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-object-storage" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-object-storage" }, input)
 end
 
 --- AWS datasync describe-location-s3 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_s3(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-s3" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-s3" }, input)
 end
 
 --- AWS datasync describe-location-smb operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_location_smb(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-location-smb" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-location-smb" }, input)
 end
 
 --- AWS datasync describe-storage-system operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_storage_system(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-storage-system" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-storage-system" }, input)
 end
 
 --- AWS datasync describe-storage-system-resource-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_storage_system_resource_metrics(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-storage-system-resource-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-storage-system-resource-metrics" }, input)
 end
 
 --- AWS datasync describe-storage-system-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_storage_system_resources(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-storage-system-resources" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-storage-system-resources" }, input)
 end
 
 --- AWS datasync describe-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_task(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-task" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-task" }, input)
 end
 
 --- AWS datasync describe-task-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_task_execution(input)
-	return common.execute_aws_command_with_input({ "datasync", "describe-task-execution" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "describe-task-execution" }, input)
 end
 
 --- AWS datasync generate-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_recommendations(input)
-	return common.execute_aws_command_with_input({ "datasync", "generate-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "generate-recommendations" }, input)
 end
 
 --- AWS datasync list-agents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_agents(input)
-	return common.execute_aws_command_with_input({ "datasync", "list-agents" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "list-agents" }, input)
 end
 
 --- AWS datasync list-discovery-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_discovery_jobs(input)
-	return common.execute_aws_command_with_input({ "datasync", "list-discovery-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "list-discovery-jobs" }, input)
 end
 
 --- AWS datasync list-locations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_locations(input)
-	return common.execute_aws_command_with_input({ "datasync", "list-locations" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "list-locations" }, input)
 end
 
 --- AWS datasync list-storage-systems operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_storage_systems(input)
-	return common.execute_aws_command_with_input({ "datasync", "list-storage-systems" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "list-storage-systems" }, input)
 end
 
 --- AWS datasync list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "datasync", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "list-tags-for-resource" }, input)
 end
 
 --- AWS datasync list-task-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_task_executions(input)
-	return common.execute_aws_command_with_input({ "datasync", "list-task-executions" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "list-task-executions" }, input)
 end
 
 --- AWS datasync list-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tasks(input)
-	return common.execute_aws_command_with_input({ "datasync", "list-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "list-tasks" }, input)
 end
 
 --- AWS datasync remove-storage-system operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_storage_system(input)
-	return common.execute_aws_command_with_input({ "datasync", "remove-storage-system" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "remove-storage-system" }, input)
 end
 
 --- AWS datasync start-discovery-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_discovery_job(input)
-	return common.execute_aws_command_with_input({ "datasync", "start-discovery-job" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "start-discovery-job" }, input)
 end
 
 --- AWS datasync start-task-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_task_execution(input)
-	return common.execute_aws_command_with_input({ "datasync", "start-task-execution" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "start-task-execution" }, input)
 end
 
 --- AWS datasync stop-discovery-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_discovery_job(input)
-	return common.execute_aws_command_with_input({ "datasync", "stop-discovery-job" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "stop-discovery-job" }, input)
 end
 
 --- AWS datasync tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "datasync", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "tag-resource" }, input)
 end
 
 --- AWS datasync untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "datasync", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "untag-resource" }, input)
 end
 
 --- AWS datasync update-agent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_agent(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-agent" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-agent" }, input)
 end
 
 --- AWS datasync update-discovery-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_discovery_job(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-discovery-job" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-discovery-job" }, input)
 end
 
 --- AWS datasync update-location-azure-blob operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_azure_blob(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-azure-blob" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-azure-blob" }, input)
 end
 
 --- AWS datasync update-location-efs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_efs(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-efs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-efs" }, input)
 end
 
 --- AWS datasync update-location-fsx-lustre operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_fsx_lustre(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-fsx-lustre" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-lustre" }, input)
 end
 
 --- AWS datasync update-location-fsx-ontap operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_fsx_ontap(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-fsx-ontap" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-ontap" }, input)
 end
 
 --- AWS datasync update-location-fsx-open-zfs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_fsx_open_zfs(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-fsx-open-zfs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-open-zfs" }, input)
 end
 
 --- AWS datasync update-location-fsx-windows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_fsx_windows(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-fsx-windows" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-fsx-windows" }, input)
 end
 
 --- AWS datasync update-location-hdfs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_hdfs(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-hdfs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-hdfs" }, input)
 end
 
 --- AWS datasync update-location-nfs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_nfs(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-nfs" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-nfs" }, input)
 end
 
 --- AWS datasync update-location-object-storage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_object_storage(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-object-storage" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-object-storage" }, input)
 end
 
 --- AWS datasync update-location-s3 operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_s3(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-s3" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-s3" }, input)
 end
 
 --- AWS datasync update-location-smb operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_location_smb(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-location-smb" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-location-smb" }, input)
 end
 
 --- AWS datasync update-storage-system operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_storage_system(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-storage-system" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-storage-system" }, input)
 end
 
 --- AWS datasync update-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_task(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-task" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-task" }, input)
 end
 
 --- AWS datasync update-task-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_task_execution(input)
-	return common.execute_aws_command_with_input({ "datasync", "update-task-execution" }, input)
+	return common.execute_aws_command_skeleton({ "datasync", "update-task-execution" }, input)
 end
 
 return M

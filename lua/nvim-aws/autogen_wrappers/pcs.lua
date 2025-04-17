@@ -3,133 +3,133 @@
 
 local common = require("nvim-aws.common")
 
---- AWS PCS service functions
+--- AWS pcs service functions
 local M = {}
 
 --- AWS pcs create-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster(input)
-	return common.execute_aws_command_with_input({ "pcs", "create-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "create-cluster" }, input)
 end
 
 --- AWS pcs create-compute-node-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_compute_node_group(input)
-	return common.execute_aws_command_with_input({ "pcs", "create-compute-node-group" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "create-compute-node-group" }, input)
 end
 
 --- AWS pcs create-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_queue(input)
-	return common.execute_aws_command_with_input({ "pcs", "create-queue" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "create-queue" }, input)
 end
 
 --- AWS pcs delete-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cluster(input)
-	return common.execute_aws_command_with_input({ "pcs", "delete-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "delete-cluster" }, input)
 end
 
 --- AWS pcs delete-compute-node-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_compute_node_group(input)
-	return common.execute_aws_command_with_input({ "pcs", "delete-compute-node-group" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "delete-compute-node-group" }, input)
 end
 
 --- AWS pcs delete-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_queue(input)
-	return common.execute_aws_command_with_input({ "pcs", "delete-queue" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "delete-queue" }, input)
 end
 
 --- AWS pcs get-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cluster(input)
-	return common.execute_aws_command_with_input({ "pcs", "get-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "get-cluster" }, input)
 end
 
 --- AWS pcs get-compute-node-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_compute_node_group(input)
-	return common.execute_aws_command_with_input({ "pcs", "get-compute-node-group" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "get-compute-node-group" }, input)
 end
 
 --- AWS pcs get-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_queue(input)
-	return common.execute_aws_command_with_input({ "pcs", "get-queue" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "get-queue" }, input)
 end
 
 --- AWS pcs list-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_clusters(input)
-	return common.execute_aws_command_with_input({ "pcs", "list-clusters" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "list-clusters" }, input)
 end
 
 --- AWS pcs list-compute-node-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_compute_node_groups(input)
-	return common.execute_aws_command_with_input({ "pcs", "list-compute-node-groups" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "list-compute-node-groups" }, input)
 end
 
 --- AWS pcs list-queues operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_queues(input)
-	return common.execute_aws_command_with_input({ "pcs", "list-queues" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "list-queues" }, input)
 end
 
 --- AWS pcs list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "pcs", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "list-tags-for-resource" }, input)
 end
 
 --- AWS pcs register-compute-node-group-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_compute_node_group_instance(input)
-	return common.execute_aws_command_with_input({ "pcs", "register-compute-node-group-instance" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "register-compute-node-group-instance" }, input)
 end
 
 --- AWS pcs tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "pcs", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "tag-resource" }, input)
 end
 
 --- AWS pcs untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "pcs", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "untag-resource" }, input)
 end
 
 --- AWS pcs update-compute-node-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_compute_node_group(input)
-	return common.execute_aws_command_with_input({ "pcs", "update-compute-node-group" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "update-compute-node-group" }, input)
 end
 
 --- AWS pcs update-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_queue(input)
-	return common.execute_aws_command_with_input({ "pcs", "update-queue" }, input)
+	return common.execute_aws_command_skeleton({ "pcs", "update-queue" }, input)
 end
 
 return M

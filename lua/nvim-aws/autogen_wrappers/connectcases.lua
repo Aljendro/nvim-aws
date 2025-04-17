@@ -3,280 +3,280 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CONNECTCASES service functions
+--- AWS connectcases service functions
 local M = {}
 
 --- AWS connectcases batch-get-case-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_case_rule(input)
-	return common.execute_aws_command_with_input({ "connectcases", "batch-get-case-rule" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "batch-get-case-rule" }, input)
 end
 
 --- AWS connectcases batch-get-field operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_field(input)
-	return common.execute_aws_command_with_input({ "connectcases", "batch-get-field" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "batch-get-field" }, input)
 end
 
 --- AWS connectcases batch-put-field-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_put_field_options(input)
-	return common.execute_aws_command_with_input({ "connectcases", "batch-put-field-options" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "batch-put-field-options" }, input)
 end
 
 --- AWS connectcases create-case operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_case(input)
-	return common.execute_aws_command_with_input({ "connectcases", "create-case" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "create-case" }, input)
 end
 
 --- AWS connectcases create-case-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_case_rule(input)
-	return common.execute_aws_command_with_input({ "connectcases", "create-case-rule" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "create-case-rule" }, input)
 end
 
 --- AWS connectcases create-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_domain(input)
-	return common.execute_aws_command_with_input({ "connectcases", "create-domain" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "create-domain" }, input)
 end
 
 --- AWS connectcases create-field operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_field(input)
-	return common.execute_aws_command_with_input({ "connectcases", "create-field" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "create-field" }, input)
 end
 
 --- AWS connectcases create-layout operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_layout(input)
-	return common.execute_aws_command_with_input({ "connectcases", "create-layout" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "create-layout" }, input)
 end
 
 --- AWS connectcases create-related-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_related_item(input)
-	return common.execute_aws_command_with_input({ "connectcases", "create-related-item" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "create-related-item" }, input)
 end
 
 --- AWS connectcases create-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_template(input)
-	return common.execute_aws_command_with_input({ "connectcases", "create-template" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "create-template" }, input)
 end
 
 --- AWS connectcases delete-case-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_case_rule(input)
-	return common.execute_aws_command_with_input({ "connectcases", "delete-case-rule" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "delete-case-rule" }, input)
 end
 
 --- AWS connectcases delete-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_domain(input)
-	return common.execute_aws_command_with_input({ "connectcases", "delete-domain" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "delete-domain" }, input)
 end
 
 --- AWS connectcases delete-field operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_field(input)
-	return common.execute_aws_command_with_input({ "connectcases", "delete-field" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "delete-field" }, input)
 end
 
 --- AWS connectcases delete-layout operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_layout(input)
-	return common.execute_aws_command_with_input({ "connectcases", "delete-layout" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "delete-layout" }, input)
 end
 
 --- AWS connectcases delete-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_template(input)
-	return common.execute_aws_command_with_input({ "connectcases", "delete-template" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "delete-template" }, input)
 end
 
 --- AWS connectcases get-case operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_case(input)
-	return common.execute_aws_command_with_input({ "connectcases", "get-case" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "get-case" }, input)
 end
 
 --- AWS connectcases get-case-audit-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_case_audit_events(input)
-	return common.execute_aws_command_with_input({ "connectcases", "get-case-audit-events" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "get-case-audit-events" }, input)
 end
 
 --- AWS connectcases get-case-event-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_case_event_configuration(input)
-	return common.execute_aws_command_with_input({ "connectcases", "get-case-event-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "get-case-event-configuration" }, input)
 end
 
 --- AWS connectcases get-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_domain(input)
-	return common.execute_aws_command_with_input({ "connectcases", "get-domain" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "get-domain" }, input)
 end
 
 --- AWS connectcases get-layout operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_layout(input)
-	return common.execute_aws_command_with_input({ "connectcases", "get-layout" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "get-layout" }, input)
 end
 
 --- AWS connectcases get-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_template(input)
-	return common.execute_aws_command_with_input({ "connectcases", "get-template" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "get-template" }, input)
 end
 
 --- AWS connectcases list-case-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_case_rules(input)
-	return common.execute_aws_command_with_input({ "connectcases", "list-case-rules" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "list-case-rules" }, input)
 end
 
 --- AWS connectcases list-cases-for-contact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_cases_for_contact(input)
-	return common.execute_aws_command_with_input({ "connectcases", "list-cases-for-contact" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "list-cases-for-contact" }, input)
 end
 
 --- AWS connectcases list-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_domains(input)
-	return common.execute_aws_command_with_input({ "connectcases", "list-domains" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "list-domains" }, input)
 end
 
 --- AWS connectcases list-field-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_field_options(input)
-	return common.execute_aws_command_with_input({ "connectcases", "list-field-options" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "list-field-options" }, input)
 end
 
 --- AWS connectcases list-fields operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_fields(input)
-	return common.execute_aws_command_with_input({ "connectcases", "list-fields" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "list-fields" }, input)
 end
 
 --- AWS connectcases list-layouts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_layouts(input)
-	return common.execute_aws_command_with_input({ "connectcases", "list-layouts" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "list-layouts" }, input)
 end
 
 --- AWS connectcases list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "connectcases", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "list-tags-for-resource" }, input)
 end
 
 --- AWS connectcases list-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_templates(input)
-	return common.execute_aws_command_with_input({ "connectcases", "list-templates" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "list-templates" }, input)
 end
 
 --- AWS connectcases put-case-event-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_case_event_configuration(input)
-	return common.execute_aws_command_with_input({ "connectcases", "put-case-event-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "put-case-event-configuration" }, input)
 end
 
 --- AWS connectcases search-cases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_cases(input)
-	return common.execute_aws_command_with_input({ "connectcases", "search-cases" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "search-cases" }, input)
 end
 
 --- AWS connectcases search-related-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_related_items(input)
-	return common.execute_aws_command_with_input({ "connectcases", "search-related-items" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "search-related-items" }, input)
 end
 
 --- AWS connectcases tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "connectcases", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "tag-resource" }, input)
 end
 
 --- AWS connectcases untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "connectcases", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "untag-resource" }, input)
 end
 
 --- AWS connectcases update-case operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_case(input)
-	return common.execute_aws_command_with_input({ "connectcases", "update-case" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "update-case" }, input)
 end
 
 --- AWS connectcases update-case-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_case_rule(input)
-	return common.execute_aws_command_with_input({ "connectcases", "update-case-rule" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "update-case-rule" }, input)
 end
 
 --- AWS connectcases update-field operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_field(input)
-	return common.execute_aws_command_with_input({ "connectcases", "update-field" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "update-field" }, input)
 end
 
 --- AWS connectcases update-layout operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_layout(input)
-	return common.execute_aws_command_with_input({ "connectcases", "update-layout" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "update-layout" }, input)
 end
 
 --- AWS connectcases update-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_template(input)
-	return common.execute_aws_command_with_input({ "connectcases", "update-template" }, input)
+	return common.execute_aws_command_skeleton({ "connectcases", "update-template" }, input)
 end
 
 return M

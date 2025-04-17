@@ -3,315 +3,315 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MEDIATAILOR service functions
+--- AWS mediatailor service functions
 local M = {}
 
 --- AWS mediatailor configure-logs-for-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.configure_logs_for_channel(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "configure-logs-for-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "configure-logs-for-channel" }, input)
 end
 
 --- AWS mediatailor configure-logs-for-playback-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.configure_logs_for_playback_configuration(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "configure-logs-for-playback-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "configure-logs-for-playback-configuration" }, input)
 end
 
 --- AWS mediatailor create-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_channel(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "create-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "create-channel" }, input)
 end
 
 --- AWS mediatailor create-live-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_live_source(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "create-live-source" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "create-live-source" }, input)
 end
 
 --- AWS mediatailor create-prefetch-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_prefetch_schedule(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "create-prefetch-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "create-prefetch-schedule" }, input)
 end
 
 --- AWS mediatailor create-program operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_program(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "create-program" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "create-program" }, input)
 end
 
 --- AWS mediatailor create-source-location operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_source_location(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "create-source-location" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "create-source-location" }, input)
 end
 
 --- AWS mediatailor create-vod-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vod_source(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "create-vod-source" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "create-vod-source" }, input)
 end
 
 --- AWS mediatailor delete-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "delete-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "delete-channel" }, input)
 end
 
 --- AWS mediatailor delete-channel-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel_policy(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "delete-channel-policy" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "delete-channel-policy" }, input)
 end
 
 --- AWS mediatailor delete-live-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_live_source(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "delete-live-source" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "delete-live-source" }, input)
 end
 
 --- AWS mediatailor delete-playback-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_playback_configuration(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "delete-playback-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "delete-playback-configuration" }, input)
 end
 
 --- AWS mediatailor delete-prefetch-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_prefetch_schedule(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "delete-prefetch-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "delete-prefetch-schedule" }, input)
 end
 
 --- AWS mediatailor delete-program operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_program(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "delete-program" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "delete-program" }, input)
 end
 
 --- AWS mediatailor delete-source-location operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_source_location(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "delete-source-location" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "delete-source-location" }, input)
 end
 
 --- AWS mediatailor delete-vod-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vod_source(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "delete-vod-source" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "delete-vod-source" }, input)
 end
 
 --- AWS mediatailor describe-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_channel(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "describe-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "describe-channel" }, input)
 end
 
 --- AWS mediatailor describe-live-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_live_source(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "describe-live-source" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "describe-live-source" }, input)
 end
 
 --- AWS mediatailor describe-program operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_program(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "describe-program" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "describe-program" }, input)
 end
 
 --- AWS mediatailor describe-source-location operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_source_location(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "describe-source-location" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "describe-source-location" }, input)
 end
 
 --- AWS mediatailor describe-vod-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vod_source(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "describe-vod-source" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "describe-vod-source" }, input)
 end
 
 --- AWS mediatailor get-channel-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_channel_policy(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "get-channel-policy" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "get-channel-policy" }, input)
 end
 
 --- AWS mediatailor get-channel-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_channel_schedule(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "get-channel-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "get-channel-schedule" }, input)
 end
 
 --- AWS mediatailor get-playback-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_playback_configuration(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "get-playback-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "get-playback-configuration" }, input)
 end
 
 --- AWS mediatailor get-prefetch-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_prefetch_schedule(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "get-prefetch-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "get-prefetch-schedule" }, input)
 end
 
 --- AWS mediatailor list-alerts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_alerts(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "list-alerts" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "list-alerts" }, input)
 end
 
 --- AWS mediatailor list-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channels(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "list-channels" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "list-channels" }, input)
 end
 
 --- AWS mediatailor list-live-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_live_sources(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "list-live-sources" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "list-live-sources" }, input)
 end
 
 --- AWS mediatailor list-playback-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_playback_configurations(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "list-playback-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "list-playback-configurations" }, input)
 end
 
 --- AWS mediatailor list-prefetch-schedules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_prefetch_schedules(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "list-prefetch-schedules" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "list-prefetch-schedules" }, input)
 end
 
 --- AWS mediatailor list-source-locations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_source_locations(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "list-source-locations" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "list-source-locations" }, input)
 end
 
 --- AWS mediatailor list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "list-tags-for-resource" }, input)
 end
 
 --- AWS mediatailor list-vod-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_vod_sources(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "list-vod-sources" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "list-vod-sources" }, input)
 end
 
 --- AWS mediatailor put-channel-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_channel_policy(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "put-channel-policy" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "put-channel-policy" }, input)
 end
 
 --- AWS mediatailor put-playback-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_playback_configuration(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "put-playback-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "put-playback-configuration" }, input)
 end
 
 --- AWS mediatailor start-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_channel(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "start-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "start-channel" }, input)
 end
 
 --- AWS mediatailor stop-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_channel(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "stop-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "stop-channel" }, input)
 end
 
 --- AWS mediatailor tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "tag-resource" }, input)
 end
 
 --- AWS mediatailor untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "untag-resource" }, input)
 end
 
 --- AWS mediatailor update-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_channel(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "update-channel" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "update-channel" }, input)
 end
 
 --- AWS mediatailor update-live-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_live_source(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "update-live-source" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "update-live-source" }, input)
 end
 
 --- AWS mediatailor update-program operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_program(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "update-program" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "update-program" }, input)
 end
 
 --- AWS mediatailor update-source-location operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_source_location(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "update-source-location" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "update-source-location" }, input)
 end
 
 --- AWS mediatailor update-vod-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_vod_source(input)
-	return common.execute_aws_command_with_input({ "mediatailor", "update-vod-source" }, input)
+	return common.execute_aws_command_skeleton({ "mediatailor", "update-vod-source" }, input)
 end
 
 return M

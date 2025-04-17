@@ -3,105 +3,105 @@
 
 local common = require("nvim-aws.common")
 
---- AWS BEDROCK-DATA-AUTOMATION service functions
+--- AWS bedrock-data-automation service functions
 local M = {}
 
 --- AWS bedrock-data-automation create-blueprint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_blueprint(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "create-blueprint" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "create-blueprint" }, input)
 end
 
 --- AWS bedrock-data-automation create-blueprint-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_blueprint_version(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "create-blueprint-version" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "create-blueprint-version" }, input)
 end
 
 --- AWS bedrock-data-automation create-data-automation-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_automation_project(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "create-data-automation-project" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "create-data-automation-project" }, input)
 end
 
 --- AWS bedrock-data-automation delete-blueprint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_blueprint(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "delete-blueprint" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "delete-blueprint" }, input)
 end
 
 --- AWS bedrock-data-automation delete-data-automation-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_automation_project(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "delete-data-automation-project" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "delete-data-automation-project" }, input)
 end
 
 --- AWS bedrock-data-automation get-blueprint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_blueprint(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "get-blueprint" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "get-blueprint" }, input)
 end
 
 --- AWS bedrock-data-automation get-data-automation-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_automation_project(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "get-data-automation-project" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "get-data-automation-project" }, input)
 end
 
 --- AWS bedrock-data-automation list-blueprints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_blueprints(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "list-blueprints" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "list-blueprints" }, input)
 end
 
 --- AWS bedrock-data-automation list-data-automation-projects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_data_automation_projects(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "list-data-automation-projects" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "list-data-automation-projects" }, input)
 end
 
 --- AWS bedrock-data-automation list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "list-tags-for-resource" }, input)
 end
 
 --- AWS bedrock-data-automation tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "tag-resource" }, input)
 end
 
 --- AWS bedrock-data-automation untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "untag-resource" }, input)
 end
 
 --- AWS bedrock-data-automation update-blueprint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_blueprint(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "update-blueprint" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "update-blueprint" }, input)
 end
 
 --- AWS bedrock-data-automation update-data-automation-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_data_automation_project(input)
-	return common.execute_aws_command_with_input({ "bedrock-data-automation", "update-data-automation-project" }, input)
+	return common.execute_aws_command_skeleton({ "bedrock-data-automation", "update-data-automation-project" }, input)
 end
 
 return M

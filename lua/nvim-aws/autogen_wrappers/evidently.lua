@@ -3,273 +3,273 @@
 
 local common = require("nvim-aws.common")
 
---- AWS EVIDENTLY service functions
+--- AWS evidently service functions
 local M = {}
 
 --- AWS evidently batch-evaluate-feature operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_evaluate_feature(input)
-	return common.execute_aws_command_with_input({ "evidently", "batch-evaluate-feature" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "batch-evaluate-feature" }, input)
 end
 
 --- AWS evidently create-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_experiment(input)
-	return common.execute_aws_command_with_input({ "evidently", "create-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "create-experiment" }, input)
 end
 
 --- AWS evidently create-feature operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_feature(input)
-	return common.execute_aws_command_with_input({ "evidently", "create-feature" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "create-feature" }, input)
 end
 
 --- AWS evidently create-launch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_launch(input)
-	return common.execute_aws_command_with_input({ "evidently", "create-launch" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "create-launch" }, input)
 end
 
 --- AWS evidently create-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_project(input)
-	return common.execute_aws_command_with_input({ "evidently", "create-project" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "create-project" }, input)
 end
 
 --- AWS evidently create-segment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_segment(input)
-	return common.execute_aws_command_with_input({ "evidently", "create-segment" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "create-segment" }, input)
 end
 
 --- AWS evidently delete-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_experiment(input)
-	return common.execute_aws_command_with_input({ "evidently", "delete-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "delete-experiment" }, input)
 end
 
 --- AWS evidently delete-feature operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_feature(input)
-	return common.execute_aws_command_with_input({ "evidently", "delete-feature" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "delete-feature" }, input)
 end
 
 --- AWS evidently delete-launch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_launch(input)
-	return common.execute_aws_command_with_input({ "evidently", "delete-launch" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "delete-launch" }, input)
 end
 
 --- AWS evidently delete-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_project(input)
-	return common.execute_aws_command_with_input({ "evidently", "delete-project" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "delete-project" }, input)
 end
 
 --- AWS evidently delete-segment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_segment(input)
-	return common.execute_aws_command_with_input({ "evidently", "delete-segment" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "delete-segment" }, input)
 end
 
 --- AWS evidently evaluate-feature operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.evaluate_feature(input)
-	return common.execute_aws_command_with_input({ "evidently", "evaluate-feature" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "evaluate-feature" }, input)
 end
 
 --- AWS evidently get-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_experiment(input)
-	return common.execute_aws_command_with_input({ "evidently", "get-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "get-experiment" }, input)
 end
 
 --- AWS evidently get-experiment-results operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_experiment_results(input)
-	return common.execute_aws_command_with_input({ "evidently", "get-experiment-results" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "get-experiment-results" }, input)
 end
 
 --- AWS evidently get-feature operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_feature(input)
-	return common.execute_aws_command_with_input({ "evidently", "get-feature" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "get-feature" }, input)
 end
 
 --- AWS evidently get-launch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_launch(input)
-	return common.execute_aws_command_with_input({ "evidently", "get-launch" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "get-launch" }, input)
 end
 
 --- AWS evidently get-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_project(input)
-	return common.execute_aws_command_with_input({ "evidently", "get-project" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "get-project" }, input)
 end
 
 --- AWS evidently get-segment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_segment(input)
-	return common.execute_aws_command_with_input({ "evidently", "get-segment" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "get-segment" }, input)
 end
 
 --- AWS evidently list-experiments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_experiments(input)
-	return common.execute_aws_command_with_input({ "evidently", "list-experiments" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "list-experiments" }, input)
 end
 
 --- AWS evidently list-features operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_features(input)
-	return common.execute_aws_command_with_input({ "evidently", "list-features" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "list-features" }, input)
 end
 
 --- AWS evidently list-launches operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_launches(input)
-	return common.execute_aws_command_with_input({ "evidently", "list-launches" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "list-launches" }, input)
 end
 
 --- AWS evidently list-projects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_projects(input)
-	return common.execute_aws_command_with_input({ "evidently", "list-projects" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "list-projects" }, input)
 end
 
 --- AWS evidently list-segment-references operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_segment_references(input)
-	return common.execute_aws_command_with_input({ "evidently", "list-segment-references" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "list-segment-references" }, input)
 end
 
 --- AWS evidently list-segments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_segments(input)
-	return common.execute_aws_command_with_input({ "evidently", "list-segments" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "list-segments" }, input)
 end
 
 --- AWS evidently list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "evidently", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "list-tags-for-resource" }, input)
 end
 
 --- AWS evidently put-project-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_project_events(input)
-	return common.execute_aws_command_with_input({ "evidently", "put-project-events" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "put-project-events" }, input)
 end
 
 --- AWS evidently start-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_experiment(input)
-	return common.execute_aws_command_with_input({ "evidently", "start-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "start-experiment" }, input)
 end
 
 --- AWS evidently start-launch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_launch(input)
-	return common.execute_aws_command_with_input({ "evidently", "start-launch" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "start-launch" }, input)
 end
 
 --- AWS evidently stop-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_experiment(input)
-	return common.execute_aws_command_with_input({ "evidently", "stop-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "stop-experiment" }, input)
 end
 
 --- AWS evidently stop-launch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_launch(input)
-	return common.execute_aws_command_with_input({ "evidently", "stop-launch" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "stop-launch" }, input)
 end
 
 --- AWS evidently tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "evidently", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "tag-resource" }, input)
 end
 
 --- AWS evidently test-segment-pattern operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_segment_pattern(input)
-	return common.execute_aws_command_with_input({ "evidently", "test-segment-pattern" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "test-segment-pattern" }, input)
 end
 
 --- AWS evidently untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "evidently", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "untag-resource" }, input)
 end
 
 --- AWS evidently update-experiment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_experiment(input)
-	return common.execute_aws_command_with_input({ "evidently", "update-experiment" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "update-experiment" }, input)
 end
 
 --- AWS evidently update-feature operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_feature(input)
-	return common.execute_aws_command_with_input({ "evidently", "update-feature" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "update-feature" }, input)
 end
 
 --- AWS evidently update-launch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_launch(input)
-	return common.execute_aws_command_with_input({ "evidently", "update-launch" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "update-launch" }, input)
 end
 
 --- AWS evidently update-project operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_project(input)
-	return common.execute_aws_command_with_input({ "evidently", "update-project" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "update-project" }, input)
 end
 
 --- AWS evidently update-project-data-delivery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_project_data_delivery(input)
-	return common.execute_aws_command_with_input({ "evidently", "update-project-data-delivery" }, input)
+	return common.execute_aws_command_skeleton({ "evidently", "update-project-data-delivery" }, input)
 end
 
 return M

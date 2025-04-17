@@ -3,385 +3,385 @@
 
 local common = require("nvim-aws.common")
 
---- AWS WAFV2 service functions
+--- AWS wafv2 service functions
 local M = {}
 
 --- AWS wafv2 associate-web-acl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_web_acl(input)
-	return common.execute_aws_command_with_input({ "wafv2", "associate-web-acl" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "associate-web-acl" }, input)
 end
 
 --- AWS wafv2 check-capacity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.check_capacity(input)
-	return common.execute_aws_command_with_input({ "wafv2", "check-capacity" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "check-capacity" }, input)
 end
 
 --- AWS wafv2 create-api-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_api_key(input)
-	return common.execute_aws_command_with_input({ "wafv2", "create-api-key" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "create-api-key" }, input)
 end
 
 --- AWS wafv2 create-ip-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ip_set(input)
-	return common.execute_aws_command_with_input({ "wafv2", "create-ip-set" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "create-ip-set" }, input)
 end
 
 --- AWS wafv2 create-regex-pattern-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_regex_pattern_set(input)
-	return common.execute_aws_command_with_input({ "wafv2", "create-regex-pattern-set" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "create-regex-pattern-set" }, input)
 end
 
 --- AWS wafv2 create-rule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_rule_group(input)
-	return common.execute_aws_command_with_input({ "wafv2", "create-rule-group" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "create-rule-group" }, input)
 end
 
 --- AWS wafv2 create-web-acl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_web_acl(input)
-	return common.execute_aws_command_with_input({ "wafv2", "create-web-acl" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "create-web-acl" }, input)
 end
 
 --- AWS wafv2 delete-api-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_api_key(input)
-	return common.execute_aws_command_with_input({ "wafv2", "delete-api-key" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "delete-api-key" }, input)
 end
 
 --- AWS wafv2 delete-firewall-manager-rule-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_firewall_manager_rule_groups(input)
-	return common.execute_aws_command_with_input({ "wafv2", "delete-firewall-manager-rule-groups" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "delete-firewall-manager-rule-groups" }, input)
 end
 
 --- AWS wafv2 delete-ip-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ip_set(input)
-	return common.execute_aws_command_with_input({ "wafv2", "delete-ip-set" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "delete-ip-set" }, input)
 end
 
 --- AWS wafv2 delete-logging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_logging_configuration(input)
-	return common.execute_aws_command_with_input({ "wafv2", "delete-logging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "delete-logging-configuration" }, input)
 end
 
 --- AWS wafv2 delete-permission-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_permission_policy(input)
-	return common.execute_aws_command_with_input({ "wafv2", "delete-permission-policy" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "delete-permission-policy" }, input)
 end
 
 --- AWS wafv2 delete-regex-pattern-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_regex_pattern_set(input)
-	return common.execute_aws_command_with_input({ "wafv2", "delete-regex-pattern-set" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "delete-regex-pattern-set" }, input)
 end
 
 --- AWS wafv2 delete-rule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_rule_group(input)
-	return common.execute_aws_command_with_input({ "wafv2", "delete-rule-group" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "delete-rule-group" }, input)
 end
 
 --- AWS wafv2 delete-web-acl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_web_acl(input)
-	return common.execute_aws_command_with_input({ "wafv2", "delete-web-acl" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "delete-web-acl" }, input)
 end
 
 --- AWS wafv2 describe-all-managed-products operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_all_managed_products(input)
-	return common.execute_aws_command_with_input({ "wafv2", "describe-all-managed-products" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "describe-all-managed-products" }, input)
 end
 
 --- AWS wafv2 describe-managed-products-by-vendor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_managed_products_by_vendor(input)
-	return common.execute_aws_command_with_input({ "wafv2", "describe-managed-products-by-vendor" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "describe-managed-products-by-vendor" }, input)
 end
 
 --- AWS wafv2 describe-managed-rule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_managed_rule_group(input)
-	return common.execute_aws_command_with_input({ "wafv2", "describe-managed-rule-group" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "describe-managed-rule-group" }, input)
 end
 
 --- AWS wafv2 disassociate-web-acl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_web_acl(input)
-	return common.execute_aws_command_with_input({ "wafv2", "disassociate-web-acl" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "disassociate-web-acl" }, input)
 end
 
 --- AWS wafv2 generate-mobile-sdk-release-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_mobile_sdk_release_url(input)
-	return common.execute_aws_command_with_input({ "wafv2", "generate-mobile-sdk-release-url" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "generate-mobile-sdk-release-url" }, input)
 end
 
 --- AWS wafv2 get-decrypted-api-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_decrypted_api_key(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-decrypted-api-key" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-decrypted-api-key" }, input)
 end
 
 --- AWS wafv2 get-ip-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ip_set(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-ip-set" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-ip-set" }, input)
 end
 
 --- AWS wafv2 get-logging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_logging_configuration(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-logging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-logging-configuration" }, input)
 end
 
 --- AWS wafv2 get-managed-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_rule_set(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-managed-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-managed-rule-set" }, input)
 end
 
 --- AWS wafv2 get-mobile-sdk-release operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_mobile_sdk_release(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-mobile-sdk-release" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-mobile-sdk-release" }, input)
 end
 
 --- AWS wafv2 get-permission-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_permission_policy(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-permission-policy" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-permission-policy" }, input)
 end
 
 --- AWS wafv2 get-rate-based-statement-managed-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_rate_based_statement_managed_keys(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-rate-based-statement-managed-keys" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-rate-based-statement-managed-keys" }, input)
 end
 
 --- AWS wafv2 get-regex-pattern-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_regex_pattern_set(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-regex-pattern-set" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-regex-pattern-set" }, input)
 end
 
 --- AWS wafv2 get-rule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_rule_group(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-rule-group" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-rule-group" }, input)
 end
 
 --- AWS wafv2 get-sampled-requests operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sampled_requests(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-sampled-requests" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-sampled-requests" }, input)
 end
 
 --- AWS wafv2 get-web-acl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_web_acl(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-web-acl" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-web-acl" }, input)
 end
 
 --- AWS wafv2 get-web-acl-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_web_acl_for_resource(input)
-	return common.execute_aws_command_with_input({ "wafv2", "get-web-acl-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "get-web-acl-for-resource" }, input)
 end
 
 --- AWS wafv2 list-api-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_api_keys(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-api-keys" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-api-keys" }, input)
 end
 
 --- AWS wafv2 list-available-managed-rule-group-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_available_managed_rule_group_versions(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-available-managed-rule-group-versions" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-available-managed-rule-group-versions" }, input)
 end
 
 --- AWS wafv2 list-available-managed-rule-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_available_managed_rule_groups(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-available-managed-rule-groups" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-available-managed-rule-groups" }, input)
 end
 
 --- AWS wafv2 list-ip-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ip_sets(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-ip-sets" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-ip-sets" }, input)
 end
 
 --- AWS wafv2 list-logging-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_logging_configurations(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-logging-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-logging-configurations" }, input)
 end
 
 --- AWS wafv2 list-managed-rule-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_rule_sets(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-managed-rule-sets" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-managed-rule-sets" }, input)
 end
 
 --- AWS wafv2 list-mobile-sdk-releases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_mobile_sdk_releases(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-mobile-sdk-releases" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-mobile-sdk-releases" }, input)
 end
 
 --- AWS wafv2 list-regex-pattern-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_regex_pattern_sets(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-regex-pattern-sets" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-regex-pattern-sets" }, input)
 end
 
 --- AWS wafv2 list-resources-for-web-acl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resources_for_web_acl(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-resources-for-web-acl" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-resources-for-web-acl" }, input)
 end
 
 --- AWS wafv2 list-rule-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_rule_groups(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-rule-groups" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-rule-groups" }, input)
 end
 
 --- AWS wafv2 list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-tags-for-resource" }, input)
 end
 
 --- AWS wafv2 list-web-acls operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_web_acls(input)
-	return common.execute_aws_command_with_input({ "wafv2", "list-web-acls" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "list-web-acls" }, input)
 end
 
 --- AWS wafv2 put-logging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_logging_configuration(input)
-	return common.execute_aws_command_with_input({ "wafv2", "put-logging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "put-logging-configuration" }, input)
 end
 
 --- AWS wafv2 put-managed-rule-set-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_managed_rule_set_versions(input)
-	return common.execute_aws_command_with_input({ "wafv2", "put-managed-rule-set-versions" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "put-managed-rule-set-versions" }, input)
 end
 
 --- AWS wafv2 put-permission-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_permission_policy(input)
-	return common.execute_aws_command_with_input({ "wafv2", "put-permission-policy" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "put-permission-policy" }, input)
 end
 
 --- AWS wafv2 tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "wafv2", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "tag-resource" }, input)
 end
 
 --- AWS wafv2 untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "wafv2", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "untag-resource" }, input)
 end
 
 --- AWS wafv2 update-ip-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_ip_set(input)
-	return common.execute_aws_command_with_input({ "wafv2", "update-ip-set" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "update-ip-set" }, input)
 end
 
 --- AWS wafv2 update-managed-rule-set-version-expiry-date operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_managed_rule_set_version_expiry_date(input)
-	return common.execute_aws_command_with_input({ "wafv2", "update-managed-rule-set-version-expiry-date" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "update-managed-rule-set-version-expiry-date" }, input)
 end
 
 --- AWS wafv2 update-regex-pattern-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_regex_pattern_set(input)
-	return common.execute_aws_command_with_input({ "wafv2", "update-regex-pattern-set" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "update-regex-pattern-set" }, input)
 end
 
 --- AWS wafv2 update-rule-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_rule_group(input)
-	return common.execute_aws_command_with_input({ "wafv2", "update-rule-group" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "update-rule-group" }, input)
 end
 
 --- AWS wafv2 update-web-acl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_web_acl(input)
-	return common.execute_aws_command_with_input({ "wafv2", "update-web-acl" }, input)
+	return common.execute_aws_command_skeleton({ "wafv2", "update-web-acl" }, input)
 end
 
 return M

@@ -3,42 +3,42 @@
 
 local common = require("nvim-aws.common")
 
---- AWS GEO-MAPS service functions
+--- AWS geo-maps service functions
 local M = {}
 
 --- AWS geo-maps get-glyphs operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_glyphs(input)
-	return common.execute_aws_command_with_raw_input({ "geo-maps", "get-glyphs" }, input)
+	return common.execute_aws_command({ "geo-maps", "get-glyphs" }, input)
 end
 
 --- AWS geo-maps get-sprites operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sprites(input)
-	return common.execute_aws_command_with_raw_input({ "geo-maps", "get-sprites" }, input)
+	return common.execute_aws_command({ "geo-maps", "get-sprites" }, input)
 end
 
 --- AWS geo-maps get-static-map operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_static_map(input)
-	return common.execute_aws_command_with_raw_input({ "geo-maps", "get-static-map" }, input)
+	return common.execute_aws_command({ "geo-maps", "get-static-map" }, input)
 end
 
 --- AWS geo-maps get-style-descriptor operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_style_descriptor(input)
-	return common.execute_aws_command_with_raw_input({ "geo-maps", "get-style-descriptor" }, input)
+	return common.execute_aws_command({ "geo-maps", "get-style-descriptor" }, input)
 end
 
 --- AWS geo-maps get-tile operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_tile(input)
-	return common.execute_aws_command_with_raw_input({ "geo-maps", "get-tile" }, input)
+	return common.execute_aws_command({ "geo-maps", "get-tile" }, input)
 end
 
 return M

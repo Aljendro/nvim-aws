@@ -3,224 +3,224 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MIGRATIONHUBORCHESTRATOR service functions
+--- AWS migrationhuborchestrator service functions
 local M = {}
 
 --- AWS migrationhuborchestrator create-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_template(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "create-template" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "create-template" }, input)
 end
 
 --- AWS migrationhuborchestrator create-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workflow(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "create-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "create-workflow" }, input)
 end
 
 --- AWS migrationhuborchestrator create-workflow-step operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workflow_step(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "create-workflow-step" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "create-workflow-step" }, input)
 end
 
 --- AWS migrationhuborchestrator create-workflow-step-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workflow_step_group(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "create-workflow-step-group" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "create-workflow-step-group" }, input)
 end
 
 --- AWS migrationhuborchestrator delete-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_template(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "delete-template" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "delete-template" }, input)
 end
 
 --- AWS migrationhuborchestrator delete-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workflow(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "delete-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "delete-workflow" }, input)
 end
 
 --- AWS migrationhuborchestrator delete-workflow-step operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workflow_step(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "delete-workflow-step" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "delete-workflow-step" }, input)
 end
 
 --- AWS migrationhuborchestrator delete-workflow-step-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workflow_step_group(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "delete-workflow-step-group" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "delete-workflow-step-group" }, input)
 end
 
 --- AWS migrationhuborchestrator get-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_template(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "get-template" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "get-template" }, input)
 end
 
 --- AWS migrationhuborchestrator get-template-step operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_template_step(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "get-template-step" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "get-template-step" }, input)
 end
 
 --- AWS migrationhuborchestrator get-template-step-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_template_step_group(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "get-template-step-group" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "get-template-step-group" }, input)
 end
 
 --- AWS migrationhuborchestrator get-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_workflow(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "get-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "get-workflow" }, input)
 end
 
 --- AWS migrationhuborchestrator get-workflow-step operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_workflow_step(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "get-workflow-step" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "get-workflow-step" }, input)
 end
 
 --- AWS migrationhuborchestrator get-workflow-step-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_workflow_step_group(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "get-workflow-step-group" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "get-workflow-step-group" }, input)
 end
 
 --- AWS migrationhuborchestrator list-plugins operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_plugins(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "list-plugins" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "list-plugins" }, input)
 end
 
 --- AWS migrationhuborchestrator list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "list-tags-for-resource" }, input)
 end
 
 --- AWS migrationhuborchestrator list-template-step-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_template_step_groups(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "list-template-step-groups" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "list-template-step-groups" }, input)
 end
 
 --- AWS migrationhuborchestrator list-template-steps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_template_steps(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "list-template-steps" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "list-template-steps" }, input)
 end
 
 --- AWS migrationhuborchestrator list-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_templates(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "list-templates" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "list-templates" }, input)
 end
 
 --- AWS migrationhuborchestrator list-workflow-step-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workflow_step_groups(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "list-workflow-step-groups" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "list-workflow-step-groups" }, input)
 end
 
 --- AWS migrationhuborchestrator list-workflow-steps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workflow_steps(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "list-workflow-steps" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "list-workflow-steps" }, input)
 end
 
 --- AWS migrationhuborchestrator list-workflows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workflows(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "list-workflows" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "list-workflows" }, input)
 end
 
 --- AWS migrationhuborchestrator retry-workflow-step operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.retry_workflow_step(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "retry-workflow-step" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "retry-workflow-step" }, input)
 end
 
 --- AWS migrationhuborchestrator start-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_workflow(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "start-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "start-workflow" }, input)
 end
 
 --- AWS migrationhuborchestrator stop-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_workflow(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "stop-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "stop-workflow" }, input)
 end
 
 --- AWS migrationhuborchestrator tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "tag-resource" }, input)
 end
 
 --- AWS migrationhuborchestrator untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "untag-resource" }, input)
 end
 
 --- AWS migrationhuborchestrator update-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_template(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "update-template" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "update-template" }, input)
 end
 
 --- AWS migrationhuborchestrator update-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workflow(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "update-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "update-workflow" }, input)
 end
 
 --- AWS migrationhuborchestrator update-workflow-step operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workflow_step(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "update-workflow-step" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "update-workflow-step" }, input)
 end
 
 --- AWS migrationhuborchestrator update-workflow-step-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workflow_step_group(input)
-	return common.execute_aws_command_with_input({ "migrationhuborchestrator", "update-workflow-step-group" }, input)
+	return common.execute_aws_command_skeleton({ "migrationhuborchestrator", "update-workflow-step-group" }, input)
 end
 
 return M

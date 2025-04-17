@@ -3,315 +3,315 @@
 
 local common = require("nvim-aws.common")
 
---- AWS WORKDOCS service functions
+--- AWS workdocs service functions
 local M = {}
 
 --- AWS workdocs abort-document-version-upload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.abort_document_version_upload(input)
-	return common.execute_aws_command_with_input({ "workdocs", "abort-document-version-upload" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "abort-document-version-upload" }, input)
 end
 
 --- AWS workdocs activate-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.activate_user(input)
-	return common.execute_aws_command_with_input({ "workdocs", "activate-user" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "activate-user" }, input)
 end
 
 --- AWS workdocs add-resource-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_resource_permissions(input)
-	return common.execute_aws_command_with_input({ "workdocs", "add-resource-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "add-resource-permissions" }, input)
 end
 
 --- AWS workdocs create-comment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_comment(input)
-	return common.execute_aws_command_with_input({ "workdocs", "create-comment" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "create-comment" }, input)
 end
 
 --- AWS workdocs create-custom-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_custom_metadata(input)
-	return common.execute_aws_command_with_input({ "workdocs", "create-custom-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "create-custom-metadata" }, input)
 end
 
 --- AWS workdocs create-folder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_folder(input)
-	return common.execute_aws_command_with_input({ "workdocs", "create-folder" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "create-folder" }, input)
 end
 
 --- AWS workdocs create-labels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_labels(input)
-	return common.execute_aws_command_with_input({ "workdocs", "create-labels" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "create-labels" }, input)
 end
 
 --- AWS workdocs create-notification-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_notification_subscription(input)
-	return common.execute_aws_command_with_input({ "workdocs", "create-notification-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "create-notification-subscription" }, input)
 end
 
 --- AWS workdocs create-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user(input)
-	return common.execute_aws_command_with_input({ "workdocs", "create-user" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "create-user" }, input)
 end
 
 --- AWS workdocs deactivate-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deactivate_user(input)
-	return common.execute_aws_command_with_input({ "workdocs", "deactivate-user" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "deactivate-user" }, input)
 end
 
 --- AWS workdocs delete-comment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_comment(input)
-	return common.execute_aws_command_with_input({ "workdocs", "delete-comment" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "delete-comment" }, input)
 end
 
 --- AWS workdocs delete-custom-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_metadata(input)
-	return common.execute_aws_command_with_input({ "workdocs", "delete-custom-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "delete-custom-metadata" }, input)
 end
 
 --- AWS workdocs delete-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_document(input)
-	return common.execute_aws_command_with_input({ "workdocs", "delete-document" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "delete-document" }, input)
 end
 
 --- AWS workdocs delete-document-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_document_version(input)
-	return common.execute_aws_command_with_input({ "workdocs", "delete-document-version" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "delete-document-version" }, input)
 end
 
 --- AWS workdocs delete-folder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_folder(input)
-	return common.execute_aws_command_with_input({ "workdocs", "delete-folder" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "delete-folder" }, input)
 end
 
 --- AWS workdocs delete-folder-contents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_folder_contents(input)
-	return common.execute_aws_command_with_input({ "workdocs", "delete-folder-contents" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "delete-folder-contents" }, input)
 end
 
 --- AWS workdocs delete-labels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_labels(input)
-	return common.execute_aws_command_with_input({ "workdocs", "delete-labels" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "delete-labels" }, input)
 end
 
 --- AWS workdocs delete-notification-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_notification_subscription(input)
-	return common.execute_aws_command_with_input({ "workdocs", "delete-notification-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "delete-notification-subscription" }, input)
 end
 
 --- AWS workdocs delete-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user(input)
-	return common.execute_aws_command_with_input({ "workdocs", "delete-user" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "delete-user" }, input)
 end
 
 --- AWS workdocs describe-activities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_activities(input)
-	return common.execute_aws_command_with_input({ "workdocs", "describe-activities" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "describe-activities" }, input)
 end
 
 --- AWS workdocs describe-comments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_comments(input)
-	return common.execute_aws_command_with_input({ "workdocs", "describe-comments" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "describe-comments" }, input)
 end
 
 --- AWS workdocs describe-document-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_document_versions(input)
-	return common.execute_aws_command_with_input({ "workdocs", "describe-document-versions" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "describe-document-versions" }, input)
 end
 
 --- AWS workdocs describe-folder-contents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_folder_contents(input)
-	return common.execute_aws_command_with_input({ "workdocs", "describe-folder-contents" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "describe-folder-contents" }, input)
 end
 
 --- AWS workdocs describe-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_groups(input)
-	return common.execute_aws_command_with_input({ "workdocs", "describe-groups" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "describe-groups" }, input)
 end
 
 --- AWS workdocs describe-notification-subscriptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_notification_subscriptions(input)
-	return common.execute_aws_command_with_input({ "workdocs", "describe-notification-subscriptions" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "describe-notification-subscriptions" }, input)
 end
 
 --- AWS workdocs describe-resource-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_resource_permissions(input)
-	return common.execute_aws_command_with_input({ "workdocs", "describe-resource-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "describe-resource-permissions" }, input)
 end
 
 --- AWS workdocs describe-root-folders operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_root_folders(input)
-	return common.execute_aws_command_with_input({ "workdocs", "describe-root-folders" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "describe-root-folders" }, input)
 end
 
 --- AWS workdocs describe-users operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_users(input)
-	return common.execute_aws_command_with_input({ "workdocs", "describe-users" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "describe-users" }, input)
 end
 
 --- AWS workdocs get-current-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_current_user(input)
-	return common.execute_aws_command_with_input({ "workdocs", "get-current-user" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "get-current-user" }, input)
 end
 
 --- AWS workdocs get-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_document(input)
-	return common.execute_aws_command_with_input({ "workdocs", "get-document" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "get-document" }, input)
 end
 
 --- AWS workdocs get-document-path operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_document_path(input)
-	return common.execute_aws_command_with_input({ "workdocs", "get-document-path" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "get-document-path" }, input)
 end
 
 --- AWS workdocs get-document-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_document_version(input)
-	return common.execute_aws_command_with_input({ "workdocs", "get-document-version" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "get-document-version" }, input)
 end
 
 --- AWS workdocs get-folder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_folder(input)
-	return common.execute_aws_command_with_input({ "workdocs", "get-folder" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "get-folder" }, input)
 end
 
 --- AWS workdocs get-folder-path operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_folder_path(input)
-	return common.execute_aws_command_with_input({ "workdocs", "get-folder-path" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "get-folder-path" }, input)
 end
 
 --- AWS workdocs get-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resources(input)
-	return common.execute_aws_command_with_input({ "workdocs", "get-resources" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "get-resources" }, input)
 end
 
 --- AWS workdocs initiate-document-version-upload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.initiate_document_version_upload(input)
-	return common.execute_aws_command_with_input({ "workdocs", "initiate-document-version-upload" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "initiate-document-version-upload" }, input)
 end
 
 --- AWS workdocs remove-all-resource-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_all_resource_permissions(input)
-	return common.execute_aws_command_with_input({ "workdocs", "remove-all-resource-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "remove-all-resource-permissions" }, input)
 end
 
 --- AWS workdocs remove-resource-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_resource_permission(input)
-	return common.execute_aws_command_with_input({ "workdocs", "remove-resource-permission" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "remove-resource-permission" }, input)
 end
 
 --- AWS workdocs restore-document-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_document_versions(input)
-	return common.execute_aws_command_with_input({ "workdocs", "restore-document-versions" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "restore-document-versions" }, input)
 end
 
 --- AWS workdocs search-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_resources(input)
-	return common.execute_aws_command_with_input({ "workdocs", "search-resources" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "search-resources" }, input)
 end
 
 --- AWS workdocs update-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_document(input)
-	return common.execute_aws_command_with_input({ "workdocs", "update-document" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "update-document" }, input)
 end
 
 --- AWS workdocs update-document-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_document_version(input)
-	return common.execute_aws_command_with_input({ "workdocs", "update-document-version" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "update-document-version" }, input)
 end
 
 --- AWS workdocs update-folder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_folder(input)
-	return common.execute_aws_command_with_input({ "workdocs", "update-folder" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "update-folder" }, input)
 end
 
 --- AWS workdocs update-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user(input)
-	return common.execute_aws_command_with_input({ "workdocs", "update-user" }, input)
+	return common.execute_aws_command_skeleton({ "workdocs", "update-user" }, input)
 end
 
 return M

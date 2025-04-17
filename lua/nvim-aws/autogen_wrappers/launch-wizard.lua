@@ -3,91 +3,91 @@
 
 local common = require("nvim-aws.common")
 
---- AWS LAUNCH-WIZARD service functions
+--- AWS launch-wizard service functions
 local M = {}
 
 --- AWS launch-wizard create-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_deployment(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "create-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "create-deployment" }, input)
 end
 
 --- AWS launch-wizard delete-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_deployment(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "delete-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "delete-deployment" }, input)
 end
 
 --- AWS launch-wizard get-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_deployment(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "get-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "get-deployment" }, input)
 end
 
 --- AWS launch-wizard get-workload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_workload(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "get-workload" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "get-workload" }, input)
 end
 
 --- AWS launch-wizard get-workload-deployment-pattern operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_workload_deployment_pattern(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "get-workload-deployment-pattern" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "get-workload-deployment-pattern" }, input)
 end
 
 --- AWS launch-wizard list-deployment-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_deployment_events(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "list-deployment-events" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "list-deployment-events" }, input)
 end
 
 --- AWS launch-wizard list-deployments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_deployments(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "list-deployments" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "list-deployments" }, input)
 end
 
 --- AWS launch-wizard list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "list-tags-for-resource" }, input)
 end
 
 --- AWS launch-wizard list-workload-deployment-patterns operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workload_deployment_patterns(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "list-workload-deployment-patterns" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "list-workload-deployment-patterns" }, input)
 end
 
 --- AWS launch-wizard list-workloads operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workloads(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "list-workloads" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "list-workloads" }, input)
 end
 
 --- AWS launch-wizard tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "tag-resource" }, input)
 end
 
 --- AWS launch-wizard untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "launch-wizard", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "launch-wizard", "untag-resource" }, input)
 end
 
 return M

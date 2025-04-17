@@ -3,364 +3,364 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CHIME-SDK-MESSAGING service functions
+--- AWS chime-sdk-messaging service functions
 local M = {}
 
 --- AWS chime-sdk-messaging associate-channel-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_channel_flow(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "associate-channel-flow" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "associate-channel-flow" }, input)
 end
 
 --- AWS chime-sdk-messaging batch-create-channel-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_create_channel_membership(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "batch-create-channel-membership" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "batch-create-channel-membership" }, input)
 end
 
 --- AWS chime-sdk-messaging channel-flow-callback operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.channel_flow_callback(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "channel-flow-callback" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "channel-flow-callback" }, input)
 end
 
 --- AWS chime-sdk-messaging create-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_channel(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "create-channel" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "create-channel" }, input)
 end
 
 --- AWS chime-sdk-messaging create-channel-ban operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_channel_ban(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "create-channel-ban" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "create-channel-ban" }, input)
 end
 
 --- AWS chime-sdk-messaging create-channel-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_channel_flow(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "create-channel-flow" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "create-channel-flow" }, input)
 end
 
 --- AWS chime-sdk-messaging create-channel-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_channel_membership(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "create-channel-membership" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "create-channel-membership" }, input)
 end
 
 --- AWS chime-sdk-messaging create-channel-moderator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_channel_moderator(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "create-channel-moderator" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "create-channel-moderator" }, input)
 end
 
 --- AWS chime-sdk-messaging delete-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "delete-channel" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "delete-channel" }, input)
 end
 
 --- AWS chime-sdk-messaging delete-channel-ban operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel_ban(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "delete-channel-ban" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "delete-channel-ban" }, input)
 end
 
 --- AWS chime-sdk-messaging delete-channel-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel_flow(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "delete-channel-flow" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "delete-channel-flow" }, input)
 end
 
 --- AWS chime-sdk-messaging delete-channel-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel_membership(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "delete-channel-membership" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "delete-channel-membership" }, input)
 end
 
 --- AWS chime-sdk-messaging delete-channel-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel_message(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "delete-channel-message" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "delete-channel-message" }, input)
 end
 
 --- AWS chime-sdk-messaging delete-channel-moderator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_channel_moderator(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "delete-channel-moderator" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "delete-channel-moderator" }, input)
 end
 
 --- AWS chime-sdk-messaging delete-messaging-streaming-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_messaging_streaming_configurations(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "delete-messaging-streaming-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "delete-messaging-streaming-configurations" }, input)
 end
 
 --- AWS chime-sdk-messaging describe-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_channel(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "describe-channel" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "describe-channel" }, input)
 end
 
 --- AWS chime-sdk-messaging describe-channel-ban operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_channel_ban(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "describe-channel-ban" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "describe-channel-ban" }, input)
 end
 
 --- AWS chime-sdk-messaging describe-channel-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_channel_flow(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "describe-channel-flow" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "describe-channel-flow" }, input)
 end
 
 --- AWS chime-sdk-messaging describe-channel-membership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_channel_membership(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "describe-channel-membership" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "describe-channel-membership" }, input)
 end
 
 --- AWS chime-sdk-messaging describe-channel-membership-for-app-instance-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_channel_membership_for_app_instance_user(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "describe-channel-membership-for-app-instance-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "describe-channel-membership-for-app-instance-user" }, input)
 end
 
 --- AWS chime-sdk-messaging describe-channel-moderated-by-app-instance-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_channel_moderated_by_app_instance_user(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "describe-channel-moderated-by-app-instance-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "describe-channel-moderated-by-app-instance-user" }, input)
 end
 
 --- AWS chime-sdk-messaging describe-channel-moderator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_channel_moderator(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "describe-channel-moderator" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "describe-channel-moderator" }, input)
 end
 
 --- AWS chime-sdk-messaging disassociate-channel-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_channel_flow(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "disassociate-channel-flow" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "disassociate-channel-flow" }, input)
 end
 
 --- AWS chime-sdk-messaging get-channel-membership-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_channel_membership_preferences(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "get-channel-membership-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "get-channel-membership-preferences" }, input)
 end
 
 --- AWS chime-sdk-messaging get-channel-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_channel_message(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "get-channel-message" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "get-channel-message" }, input)
 end
 
 --- AWS chime-sdk-messaging get-channel-message-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_channel_message_status(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "get-channel-message-status" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "get-channel-message-status" }, input)
 end
 
 --- AWS chime-sdk-messaging get-messaging-session-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_messaging_session_endpoint(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "get-messaging-session-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "get-messaging-session-endpoint" }, input)
 end
 
 --- AWS chime-sdk-messaging get-messaging-streaming-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_messaging_streaming_configurations(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "get-messaging-streaming-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "get-messaging-streaming-configurations" }, input)
 end
 
 --- AWS chime-sdk-messaging list-channel-bans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channel_bans(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-channel-bans" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-channel-bans" }, input)
 end
 
 --- AWS chime-sdk-messaging list-channel-flows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channel_flows(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-channel-flows" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-channel-flows" }, input)
 end
 
 --- AWS chime-sdk-messaging list-channel-memberships operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channel_memberships(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-channel-memberships" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-channel-memberships" }, input)
 end
 
 --- AWS chime-sdk-messaging list-channel-memberships-for-app-instance-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channel_memberships_for_app_instance_user(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-channel-memberships-for-app-instance-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-channel-memberships-for-app-instance-user" }, input)
 end
 
 --- AWS chime-sdk-messaging list-channel-messages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channel_messages(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-channel-messages" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-channel-messages" }, input)
 end
 
 --- AWS chime-sdk-messaging list-channel-moderators operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channel_moderators(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-channel-moderators" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-channel-moderators" }, input)
 end
 
 --- AWS chime-sdk-messaging list-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channels(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-channels" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-channels" }, input)
 end
 
 --- AWS chime-sdk-messaging list-channels-associated-with-channel-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channels_associated_with_channel_flow(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-channels-associated-with-channel-flow" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-channels-associated-with-channel-flow" }, input)
 end
 
 --- AWS chime-sdk-messaging list-channels-moderated-by-app-instance-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_channels_moderated_by_app_instance_user(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-channels-moderated-by-app-instance-user" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-channels-moderated-by-app-instance-user" }, input)
 end
 
 --- AWS chime-sdk-messaging list-sub-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_sub_channels(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-sub-channels" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-sub-channels" }, input)
 end
 
 --- AWS chime-sdk-messaging list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "list-tags-for-resource" }, input)
 end
 
 --- AWS chime-sdk-messaging put-channel-expiration-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_channel_expiration_settings(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "put-channel-expiration-settings" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "put-channel-expiration-settings" }, input)
 end
 
 --- AWS chime-sdk-messaging put-channel-membership-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_channel_membership_preferences(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "put-channel-membership-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "put-channel-membership-preferences" }, input)
 end
 
 --- AWS chime-sdk-messaging put-messaging-streaming-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_messaging_streaming_configurations(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "put-messaging-streaming-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "put-messaging-streaming-configurations" }, input)
 end
 
 --- AWS chime-sdk-messaging redact-channel-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.redact_channel_message(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "redact-channel-message" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "redact-channel-message" }, input)
 end
 
 --- AWS chime-sdk-messaging search-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_channels(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "search-channels" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "search-channels" }, input)
 end
 
 --- AWS chime-sdk-messaging send-channel-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_channel_message(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "send-channel-message" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "send-channel-message" }, input)
 end
 
 --- AWS chime-sdk-messaging tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "tag-resource" }, input)
 end
 
 --- AWS chime-sdk-messaging untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "untag-resource" }, input)
 end
 
 --- AWS chime-sdk-messaging update-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_channel(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "update-channel" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "update-channel" }, input)
 end
 
 --- AWS chime-sdk-messaging update-channel-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_channel_flow(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "update-channel-flow" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "update-channel-flow" }, input)
 end
 
 --- AWS chime-sdk-messaging update-channel-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_channel_message(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "update-channel-message" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "update-channel-message" }, input)
 end
 
 --- AWS chime-sdk-messaging update-channel-read-marker operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_channel_read_marker(input)
-	return common.execute_aws_command_with_input({ "chime-sdk-messaging", "update-channel-read-marker" }, input)
+	return common.execute_aws_command_skeleton({ "chime-sdk-messaging", "update-channel-read-marker" }, input)
 end
 
 return M

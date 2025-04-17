@@ -3,245 +3,245 @@
 
 local common = require("nvim-aws.common")
 
---- AWS GROUNDSTATION service functions
+--- AWS groundstation service functions
 local M = {}
 
 --- AWS groundstation cancel-contact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_contact(input)
-	return common.execute_aws_command_with_input({ "groundstation", "cancel-contact" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "cancel-contact" }, input)
 end
 
 --- AWS groundstation create-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_config(input)
-	return common.execute_aws_command_with_input({ "groundstation", "create-config" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "create-config" }, input)
 end
 
 --- AWS groundstation create-dataflow-endpoint-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dataflow_endpoint_group(input)
-	return common.execute_aws_command_with_input({ "groundstation", "create-dataflow-endpoint-group" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "create-dataflow-endpoint-group" }, input)
 end
 
 --- AWS groundstation create-ephemeris operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ephemeris(input)
-	return common.execute_aws_command_with_input({ "groundstation", "create-ephemeris" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "create-ephemeris" }, input)
 end
 
 --- AWS groundstation create-mission-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_mission_profile(input)
-	return common.execute_aws_command_with_input({ "groundstation", "create-mission-profile" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "create-mission-profile" }, input)
 end
 
 --- AWS groundstation delete-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_config(input)
-	return common.execute_aws_command_with_input({ "groundstation", "delete-config" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "delete-config" }, input)
 end
 
 --- AWS groundstation delete-dataflow-endpoint-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dataflow_endpoint_group(input)
-	return common.execute_aws_command_with_input({ "groundstation", "delete-dataflow-endpoint-group" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "delete-dataflow-endpoint-group" }, input)
 end
 
 --- AWS groundstation delete-ephemeris operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ephemeris(input)
-	return common.execute_aws_command_with_input({ "groundstation", "delete-ephemeris" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "delete-ephemeris" }, input)
 end
 
 --- AWS groundstation delete-mission-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_mission_profile(input)
-	return common.execute_aws_command_with_input({ "groundstation", "delete-mission-profile" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "delete-mission-profile" }, input)
 end
 
 --- AWS groundstation describe-contact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_contact(input)
-	return common.execute_aws_command_with_input({ "groundstation", "describe-contact" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "describe-contact" }, input)
 end
 
 --- AWS groundstation describe-ephemeris operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ephemeris(input)
-	return common.execute_aws_command_with_input({ "groundstation", "describe-ephemeris" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "describe-ephemeris" }, input)
 end
 
 --- AWS groundstation get-agent-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_agent_configuration(input)
-	return common.execute_aws_command_with_input({ "groundstation", "get-agent-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-agent-configuration" }, input)
 end
 
 --- AWS groundstation get-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_config(input)
-	return common.execute_aws_command_with_input({ "groundstation", "get-config" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-config" }, input)
 end
 
 --- AWS groundstation get-dataflow-endpoint-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_dataflow_endpoint_group(input)
-	return common.execute_aws_command_with_input({ "groundstation", "get-dataflow-endpoint-group" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-dataflow-endpoint-group" }, input)
 end
 
 --- AWS groundstation get-minute-usage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_minute_usage(input)
-	return common.execute_aws_command_with_input({ "groundstation", "get-minute-usage" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-minute-usage" }, input)
 end
 
 --- AWS groundstation get-mission-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_mission_profile(input)
-	return common.execute_aws_command_with_input({ "groundstation", "get-mission-profile" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-mission-profile" }, input)
 end
 
 --- AWS groundstation get-satellite operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_satellite(input)
-	return common.execute_aws_command_with_input({ "groundstation", "get-satellite" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "get-satellite" }, input)
 end
 
 --- AWS groundstation list-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_configs(input)
-	return common.execute_aws_command_with_input({ "groundstation", "list-configs" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-configs" }, input)
 end
 
 --- AWS groundstation list-contacts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_contacts(input)
-	return common.execute_aws_command_with_input({ "groundstation", "list-contacts" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-contacts" }, input)
 end
 
 --- AWS groundstation list-dataflow-endpoint-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_dataflow_endpoint_groups(input)
-	return common.execute_aws_command_with_input({ "groundstation", "list-dataflow-endpoint-groups" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-dataflow-endpoint-groups" }, input)
 end
 
 --- AWS groundstation list-ephemerides operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ephemerides(input)
-	return common.execute_aws_command_with_input({ "groundstation", "list-ephemerides" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-ephemerides" }, input)
 end
 
 --- AWS groundstation list-ground-stations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ground_stations(input)
-	return common.execute_aws_command_with_input({ "groundstation", "list-ground-stations" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-ground-stations" }, input)
 end
 
 --- AWS groundstation list-mission-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_mission_profiles(input)
-	return common.execute_aws_command_with_input({ "groundstation", "list-mission-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-mission-profiles" }, input)
 end
 
 --- AWS groundstation list-satellites operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_satellites(input)
-	return common.execute_aws_command_with_input({ "groundstation", "list-satellites" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-satellites" }, input)
 end
 
 --- AWS groundstation list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "groundstation", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "list-tags-for-resource" }, input)
 end
 
 --- AWS groundstation register-agent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_agent(input)
-	return common.execute_aws_command_with_input({ "groundstation", "register-agent" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "register-agent" }, input)
 end
 
 --- AWS groundstation reserve-contact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reserve_contact(input)
-	return common.execute_aws_command_with_input({ "groundstation", "reserve-contact" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "reserve-contact" }, input)
 end
 
 --- AWS groundstation tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "groundstation", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "tag-resource" }, input)
 end
 
 --- AWS groundstation untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "groundstation", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "untag-resource" }, input)
 end
 
 --- AWS groundstation update-agent-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_agent_status(input)
-	return common.execute_aws_command_with_input({ "groundstation", "update-agent-status" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "update-agent-status" }, input)
 end
 
 --- AWS groundstation update-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_config(input)
-	return common.execute_aws_command_with_input({ "groundstation", "update-config" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "update-config" }, input)
 end
 
 --- AWS groundstation update-ephemeris operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_ephemeris(input)
-	return common.execute_aws_command_with_input({ "groundstation", "update-ephemeris" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "update-ephemeris" }, input)
 end
 
 --- AWS groundstation update-mission-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_mission_profile(input)
-	return common.execute_aws_command_with_input({ "groundstation", "update-mission-profile" }, input)
+	return common.execute_aws_command_skeleton({ "groundstation", "update-mission-profile" }, input)
 end
 
 --- AWS groundstation wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "groundstation", "wait" }, input)
+	return common.execute_aws_command({ "groundstation", "wait" }, input)
 end
 
 return M

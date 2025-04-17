@@ -3,91 +3,91 @@
 
 local common = require("nvim-aws.common")
 
---- AWS PCA-CONNECTOR-SCEP service functions
+--- AWS pca-connector-scep service functions
 local M = {}
 
 --- AWS pca-connector-scep create-challenge operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_challenge(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "create-challenge" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "create-challenge" }, input)
 end
 
 --- AWS pca-connector-scep create-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_connector(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "create-connector" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "create-connector" }, input)
 end
 
 --- AWS pca-connector-scep delete-challenge operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_challenge(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "delete-challenge" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "delete-challenge" }, input)
 end
 
 --- AWS pca-connector-scep delete-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connector(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "delete-connector" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "delete-connector" }, input)
 end
 
 --- AWS pca-connector-scep get-challenge-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_challenge_metadata(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "get-challenge-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "get-challenge-metadata" }, input)
 end
 
 --- AWS pca-connector-scep get-challenge-password operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_challenge_password(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "get-challenge-password" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "get-challenge-password" }, input)
 end
 
 --- AWS pca-connector-scep get-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_connector(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "get-connector" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "get-connector" }, input)
 end
 
 --- AWS pca-connector-scep list-challenge-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_challenge_metadata(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "list-challenge-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "list-challenge-metadata" }, input)
 end
 
 --- AWS pca-connector-scep list-connectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_connectors(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "list-connectors" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "list-connectors" }, input)
 end
 
 --- AWS pca-connector-scep list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "list-tags-for-resource" }, input)
 end
 
 --- AWS pca-connector-scep tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "tag-resource" }, input)
 end
 
 --- AWS pca-connector-scep untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "pca-connector-scep", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "pca-connector-scep", "untag-resource" }, input)
 end
 
 return M

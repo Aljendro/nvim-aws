@@ -3,21 +3,21 @@
 
 local common = require("nvim-aws.common")
 
---- AWS APPCONFIGDATA service functions
+--- AWS appconfigdata service functions
 local M = {}
 
---- AWS appconfigdata start-configuration-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_configuration_session(input)
-	return common.execute_aws_command_with_input({ "appconfigdata", "start-configuration-session" }, input)
+--- AWS appconfigdata get-latest-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_latest_configuration(input)
+	return common.execute_aws_command({ "appconfigdata", "get-latest-configuration" }, input)
 end
 
---- AWS appconfigdata get-latest-configuration operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_latest_configuration(input)
-	return common.execute_aws_command_with_raw_input({ "appconfigdata", "get-latest-configuration" }, input)
+--- AWS appconfigdata start-configuration-session operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_configuration_session(input)
+	return common.execute_aws_command_skeleton({ "appconfigdata", "start-configuration-session" }, input)
 end
 
 return M

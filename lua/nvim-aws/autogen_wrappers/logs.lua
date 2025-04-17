@@ -3,616 +3,617 @@
 
 local common = require("nvim-aws.common")
 
---- AWS LOGS service functions
+--- AWS logs service functions
 local M = {}
 
 --- AWS logs associate-kms-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_kms_key(input)
-	return common.execute_aws_command_with_input({ "logs", "associate-kms-key" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "associate-kms-key" }, input)
 end
 
 --- AWS logs cancel-export-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_export_task(input)
-	return common.execute_aws_command_with_input({ "logs", "cancel-export-task" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "cancel-export-task" }, input)
 end
 
 --- AWS logs create-delivery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_delivery(input)
-	return common.execute_aws_command_with_input({ "logs", "create-delivery" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "create-delivery" }, input)
 end
 
 --- AWS logs create-export-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_export_task(input)
-	return common.execute_aws_command_with_input({ "logs", "create-export-task" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "create-export-task" }, input)
 end
 
 --- AWS logs create-log-anomaly-detector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_log_anomaly_detector(input)
-	return common.execute_aws_command_with_input({ "logs", "create-log-anomaly-detector" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "create-log-anomaly-detector" }, input)
 end
 
 --- AWS logs create-log-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_log_group(input)
-	return common.execute_aws_command_with_input({ "logs", "create-log-group" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "create-log-group" }, input)
 end
 
 --- AWS logs create-log-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_log_stream(input)
-	return common.execute_aws_command_with_input({ "logs", "create-log-stream" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "create-log-stream" }, input)
 end
 
 --- AWS logs delete-account-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_account_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-account-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-account-policy" }, input)
 end
 
 --- AWS logs delete-data-protection-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_protection_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-data-protection-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-data-protection-policy" }, input)
 end
 
 --- AWS logs delete-delivery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_delivery(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-delivery" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-delivery" }, input)
 end
 
 --- AWS logs delete-delivery-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_delivery_destination(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-delivery-destination" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-delivery-destination" }, input)
 end
 
 --- AWS logs delete-delivery-destination-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_delivery_destination_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-delivery-destination-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-delivery-destination-policy" }, input)
 end
 
 --- AWS logs delete-delivery-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_delivery_source(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-delivery-source" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-delivery-source" }, input)
 end
 
 --- AWS logs delete-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_destination(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-destination" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-destination" }, input)
 end
 
 --- AWS logs delete-index-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_index_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-index-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-index-policy" }, input)
 end
 
 --- AWS logs delete-integration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_integration(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-integration" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-integration" }, input)
 end
 
 --- AWS logs delete-log-anomaly-detector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_log_anomaly_detector(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-log-anomaly-detector" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-log-anomaly-detector" }, input)
 end
 
 --- AWS logs delete-log-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_log_group(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-log-group" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-log-group" }, input)
 end
 
 --- AWS logs delete-log-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_log_stream(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-log-stream" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-log-stream" }, input)
 end
 
 --- AWS logs delete-metric-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_metric_filter(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-metric-filter" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-metric-filter" }, input)
 end
 
 --- AWS logs delete-query-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_query_definition(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-query-definition" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-query-definition" }, input)
 end
 
 --- AWS logs delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-resource-policy" }, input)
 end
 
 --- AWS logs delete-retention-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_retention_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-retention-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-retention-policy" }, input)
 end
 
 --- AWS logs delete-subscription-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_subscription_filter(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-subscription-filter" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-subscription-filter" }, input)
 end
 
 --- AWS logs delete-transformer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transformer(input)
-	return common.execute_aws_command_with_input({ "logs", "delete-transformer" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "delete-transformer" }, input)
 end
 
 --- AWS logs describe-account-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_policies(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-account-policies" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-account-policies" }, input)
 end
 
 --- AWS logs describe-configuration-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_configuration_templates(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-configuration-templates" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-configuration-templates" }, input)
 end
 
 --- AWS logs describe-deliveries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_deliveries(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-deliveries" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-deliveries" }, input)
 end
 
 --- AWS logs describe-delivery-destinations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_delivery_destinations(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-delivery-destinations" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-delivery-destinations" }, input)
 end
 
 --- AWS logs describe-delivery-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_delivery_sources(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-delivery-sources" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-delivery-sources" }, input)
 end
 
 --- AWS logs describe-destinations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_destinations(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-destinations" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-destinations" }, input)
 end
 
 --- AWS logs describe-export-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_export_tasks(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-export-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-export-tasks" }, input)
 end
 
 --- AWS logs describe-field-indexes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_field_indexes(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-field-indexes" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-field-indexes" }, input)
 end
 
 --- AWS logs describe-index-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_index_policies(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-index-policies" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-index-policies" }, input)
 end
 
 --- AWS logs describe-log-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_log_groups(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-log-groups" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-log-groups" }, input)
 end
 
 --- AWS logs describe-log-streams operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_log_streams(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-log-streams" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-log-streams" }, input)
 end
 
 --- AWS logs describe-metric-filters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_metric_filters(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-metric-filters" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-metric-filters" }, input)
 end
 
 --- AWS logs describe-queries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_queries(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-queries" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-queries" }, input)
 end
 
 --- AWS logs describe-query-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_query_definitions(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-query-definitions" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-query-definitions" }, input)
 end
 
 --- AWS logs describe-resource-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_resource_policies(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-resource-policies" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-resource-policies" }, input)
 end
 
 --- AWS logs describe-subscription-filters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_subscription_filters(input)
-	return common.execute_aws_command_with_input({ "logs", "describe-subscription-filters" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "describe-subscription-filters" }, input)
 end
 
 --- AWS logs disassociate-kms-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_kms_key(input)
-	return common.execute_aws_command_with_input({ "logs", "disassociate-kms-key" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "disassociate-kms-key" }, input)
 end
 
 --- AWS logs filter-log-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.filter_log_events(input)
-	return common.execute_aws_command_with_input({ "logs", "filter-log-events" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "filter-log-events" }, input)
 end
 
 --- AWS logs get-data-protection-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_protection_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "get-data-protection-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-data-protection-policy" }, input)
 end
 
 --- AWS logs get-delivery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_delivery(input)
-	return common.execute_aws_command_with_input({ "logs", "get-delivery" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-delivery" }, input)
 end
 
 --- AWS logs get-delivery-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_delivery_destination(input)
-	return common.execute_aws_command_with_input({ "logs", "get-delivery-destination" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-delivery-destination" }, input)
 end
 
 --- AWS logs get-delivery-destination-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_delivery_destination_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "get-delivery-destination-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-delivery-destination-policy" }, input)
 end
 
 --- AWS logs get-delivery-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_delivery_source(input)
-	return common.execute_aws_command_with_input({ "logs", "get-delivery-source" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-delivery-source" }, input)
 end
 
 --- AWS logs get-integration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_integration(input)
-	return common.execute_aws_command_with_input({ "logs", "get-integration" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-integration" }, input)
 end
 
 --- AWS logs get-log-anomaly-detector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_log_anomaly_detector(input)
-	return common.execute_aws_command_with_input({ "logs", "get-log-anomaly-detector" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-log-anomaly-detector" }, input)
 end
 
 --- AWS logs get-log-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_log_events(input)
-	return common.execute_aws_command_with_input({ "logs", "get-log-events" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-log-events" }, input)
 end
 
 --- AWS logs get-log-group-fields operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_log_group_fields(input)
-	return common.execute_aws_command_with_input({ "logs", "get-log-group-fields" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-log-group-fields" }, input)
 end
 
 --- AWS logs get-log-record operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_log_record(input)
-	return common.execute_aws_command_with_input({ "logs", "get-log-record" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-log-record" }, input)
 end
 
 --- AWS logs get-query-results operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_query_results(input)
-	return common.execute_aws_command_with_input({ "logs", "get-query-results" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-query-results" }, input)
 end
 
 --- AWS logs get-transformer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transformer(input)
-	return common.execute_aws_command_with_input({ "logs", "get-transformer" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "get-transformer" }, input)
 end
 
 --- AWS logs list-anomalies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_anomalies(input)
-	return common.execute_aws_command_with_input({ "logs", "list-anomalies" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "list-anomalies" }, input)
 end
 
 --- AWS logs list-integrations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_integrations(input)
-	return common.execute_aws_command_with_input({ "logs", "list-integrations" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "list-integrations" }, input)
 end
 
 --- AWS logs list-log-anomaly-detectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_log_anomaly_detectors(input)
-	return common.execute_aws_command_with_input({ "logs", "list-log-anomaly-detectors" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "list-log-anomaly-detectors" }, input)
 end
 
 --- AWS logs list-log-groups-for-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_log_groups_for_query(input)
-	return common.execute_aws_command_with_input({ "logs", "list-log-groups-for-query" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "list-log-groups-for-query" }, input)
 end
 
 --- AWS logs list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "logs", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "list-tags-for-resource" }, input)
 end
 
 --- AWS logs put-account-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_account_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "put-account-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-account-policy" }, input)
 end
 
 --- AWS logs put-data-protection-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_data_protection_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "put-data-protection-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-data-protection-policy" }, input)
 end
 
 --- AWS logs put-delivery-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_delivery_destination(input)
-	return common.execute_aws_command_with_input({ "logs", "put-delivery-destination" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-delivery-destination" }, input)
 end
 
 --- AWS logs put-delivery-destination-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_delivery_destination_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "put-delivery-destination-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-delivery-destination-policy" }, input)
 end
 
 --- AWS logs put-delivery-source operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_delivery_source(input)
-	return common.execute_aws_command_with_input({ "logs", "put-delivery-source" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-delivery-source" }, input)
 end
 
 --- AWS logs put-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_destination(input)
-	return common.execute_aws_command_with_input({ "logs", "put-destination" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-destination" }, input)
 end
 
 --- AWS logs put-destination-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_destination_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "put-destination-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-destination-policy" }, input)
 end
 
 --- AWS logs put-index-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_index_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "put-index-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-index-policy" }, input)
 end
 
 --- AWS logs put-integration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_integration(input)
-	return common.execute_aws_command_with_input({ "logs", "put-integration" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-integration" }, input)
 end
 
 --- AWS logs put-log-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_log_events(input)
-	return common.execute_aws_command_with_input({ "logs", "put-log-events" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-log-events" }, input)
 end
 
 --- AWS logs put-metric-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_metric_filter(input)
-	return common.execute_aws_command_with_input({ "logs", "put-metric-filter" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-metric-filter" }, input)
 end
 
 --- AWS logs put-query-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_query_definition(input)
-	return common.execute_aws_command_with_input({ "logs", "put-query-definition" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-query-definition" }, input)
 end
 
 --- AWS logs put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-resource-policy" }, input)
 end
 
 --- AWS logs put-retention-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_retention_policy(input)
-	return common.execute_aws_command_with_input({ "logs", "put-retention-policy" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-retention-policy" }, input)
 end
 
 --- AWS logs put-subscription-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_subscription_filter(input)
-	return common.execute_aws_command_with_input({ "logs", "put-subscription-filter" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-subscription-filter" }, input)
 end
 
 --- AWS logs put-transformer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_transformer(input)
-	return common.execute_aws_command_with_input({ "logs", "put-transformer" }, input)
-end
-
---- AWS logs start-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_query(input)
-	return common.execute_aws_command_with_input({ "logs", "start-query" }, input)
-end
-
---- AWS logs stop-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_query(input)
-	return common.execute_aws_command_with_input({ "logs", "stop-query" }, input)
-end
-
---- AWS logs tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "logs", "tag-resource" }, input)
-end
-
---- AWS logs test-metric-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.test_metric_filter(input)
-	return common.execute_aws_command_with_input({ "logs", "test-metric-filter" }, input)
-end
-
---- AWS logs test-transformer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.test_transformer(input)
-	return common.execute_aws_command_with_input({ "logs", "test-transformer" }, input)
-end
-
---- AWS logs untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "logs", "untag-resource" }, input)
-end
-
---- AWS logs update-anomaly operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_anomaly(input)
-	return common.execute_aws_command_with_input({ "logs", "update-anomaly" }, input)
-end
-
---- AWS logs update-delivery-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_delivery_configuration(input)
-	return common.execute_aws_command_with_input({ "logs", "update-delivery-configuration" }, input)
-end
-
---- AWS logs update-log-anomaly-detector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_log_anomaly_detector(input)
-	return common.execute_aws_command_with_input({ "logs", "update-log-anomaly-detector" }, input)
+	return common.execute_aws_command_skeleton({ "logs", "put-transformer" }, input)
 end
 
 --- AWS logs start-live-tail operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_live_tail(input)
-	return common.execute_aws_command_with_raw_input({ "logs", "start-live-tail" }, input)
+--- @param input table|nil input parameters
+--- @param callbacks table {on_output = function(line), on_error = function(err), on_exit = function(code)}
+--- @return {success: boolean, job: Job}
+function M.start_live_tail(input, callbacks)
+	return common.execute_aws_command_callbacks({ "logs", "start-live-tail" }, input, callbacks)
+end
+
+--- AWS logs start-query operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_query(input)
+	return common.execute_aws_command_skeleton({ "logs", "start-query" }, input)
+end
+
+--- AWS logs stop-query operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_query(input)
+	return common.execute_aws_command_skeleton({ "logs", "stop-query" }, input)
+end
+
+--- AWS logs tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "logs", "tag-resource" }, input)
 end
 
 --- AWS logs tail operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tail(input)
-	return common.execute_aws_command_with_raw_input({ "logs", "tail" }, input)
+	return common.execute_aws_command({ "logs", "tail" }, input)
+end
+
+--- AWS logs test-metric-filter operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.test_metric_filter(input)
+	return common.execute_aws_command_skeleton({ "logs", "test-metric-filter" }, input)
+end
+
+--- AWS logs test-transformer operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.test_transformer(input)
+	return common.execute_aws_command_skeleton({ "logs", "test-transformer" }, input)
+end
+
+--- AWS logs untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "logs", "untag-resource" }, input)
+end
+
+--- AWS logs update-anomaly operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_anomaly(input)
+	return common.execute_aws_command_skeleton({ "logs", "update-anomaly" }, input)
+end
+
+--- AWS logs update-delivery-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_delivery_configuration(input)
+	return common.execute_aws_command_skeleton({ "logs", "update-delivery-configuration" }, input)
+end
+
+--- AWS logs update-log-anomaly-detector operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_log_anomaly_detector(input)
+	return common.execute_aws_command_skeleton({ "logs", "update-log-anomaly-detector" }, input)
 end
 
 return M

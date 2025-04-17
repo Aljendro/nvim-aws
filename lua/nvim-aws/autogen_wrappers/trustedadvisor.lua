@@ -3,84 +3,84 @@
 
 local common = require("nvim-aws.common")
 
---- AWS TRUSTEDADVISOR service functions
+--- AWS trustedadvisor service functions
 local M = {}
 
 --- AWS trustedadvisor batch-update-recommendation-resource-exclusion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_update_recommendation_resource_exclusion(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "batch-update-recommendation-resource-exclusion" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "batch-update-recommendation-resource-exclusion" }, input)
 end
 
 --- AWS trustedadvisor get-organization-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_organization_recommendation(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "get-organization-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "get-organization-recommendation" }, input)
 end
 
 --- AWS trustedadvisor get-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recommendation(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "get-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "get-recommendation" }, input)
 end
 
 --- AWS trustedadvisor list-checks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_checks(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "list-checks" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-checks" }, input)
 end
 
 --- AWS trustedadvisor list-organization-recommendation-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_organization_recommendation_accounts(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "list-organization-recommendation-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-organization-recommendation-accounts" }, input)
 end
 
 --- AWS trustedadvisor list-organization-recommendation-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_organization_recommendation_resources(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "list-organization-recommendation-resources" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-organization-recommendation-resources" }, input)
 end
 
 --- AWS trustedadvisor list-organization-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_organization_recommendations(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "list-organization-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-organization-recommendations" }, input)
 end
 
 --- AWS trustedadvisor list-recommendation-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recommendation_resources(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "list-recommendation-resources" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-recommendation-resources" }, input)
 end
 
 --- AWS trustedadvisor list-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recommendations(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "list-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "list-recommendations" }, input)
 end
 
 --- AWS trustedadvisor update-organization-recommendation-lifecycle operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_organization_recommendation_lifecycle(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "update-organization-recommendation-lifecycle" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "update-organization-recommendation-lifecycle" }, input)
 end
 
 --- AWS trustedadvisor update-recommendation-lifecycle operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_recommendation_lifecycle(input)
-	return common.execute_aws_command_with_input({ "trustedadvisor", "update-recommendation-lifecycle" }, input)
+	return common.execute_aws_command_skeleton({ "trustedadvisor", "update-recommendation-lifecycle" }, input)
 end
 
 return M

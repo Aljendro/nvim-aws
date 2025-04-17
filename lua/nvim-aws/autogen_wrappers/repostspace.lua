@@ -3,98 +3,98 @@
 
 local common = require("nvim-aws.common")
 
---- AWS REPOSTSPACE service functions
+--- AWS repostspace service functions
 local M = {}
 
 --- AWS repostspace batch-add-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_add_role(input)
-	return common.execute_aws_command_with_input({ "repostspace", "batch-add-role" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "batch-add-role" }, input)
 end
 
 --- AWS repostspace batch-remove-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_remove_role(input)
-	return common.execute_aws_command_with_input({ "repostspace", "batch-remove-role" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "batch-remove-role" }, input)
 end
 
 --- AWS repostspace create-space operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_space(input)
-	return common.execute_aws_command_with_input({ "repostspace", "create-space" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "create-space" }, input)
 end
 
 --- AWS repostspace delete-space operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_space(input)
-	return common.execute_aws_command_with_input({ "repostspace", "delete-space" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "delete-space" }, input)
 end
 
 --- AWS repostspace deregister-admin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_admin(input)
-	return common.execute_aws_command_with_input({ "repostspace", "deregister-admin" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "deregister-admin" }, input)
 end
 
 --- AWS repostspace get-space operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_space(input)
-	return common.execute_aws_command_with_input({ "repostspace", "get-space" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "get-space" }, input)
 end
 
 --- AWS repostspace list-spaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_spaces(input)
-	return common.execute_aws_command_with_input({ "repostspace", "list-spaces" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "list-spaces" }, input)
 end
 
 --- AWS repostspace list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "repostspace", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "list-tags-for-resource" }, input)
 end
 
 --- AWS repostspace register-admin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_admin(input)
-	return common.execute_aws_command_with_input({ "repostspace", "register-admin" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "register-admin" }, input)
 end
 
 --- AWS repostspace send-invites operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_invites(input)
-	return common.execute_aws_command_with_input({ "repostspace", "send-invites" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "send-invites" }, input)
 end
 
 --- AWS repostspace tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "repostspace", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "tag-resource" }, input)
 end
 
 --- AWS repostspace untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "repostspace", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "untag-resource" }, input)
 end
 
 --- AWS repostspace update-space operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_space(input)
-	return common.execute_aws_command_with_input({ "repostspace", "update-space" }, input)
+	return common.execute_aws_command_skeleton({ "repostspace", "update-space" }, input)
 end
 
 return M

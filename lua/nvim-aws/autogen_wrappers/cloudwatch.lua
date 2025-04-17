@@ -3,280 +3,280 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLOUDWATCH service functions
+--- AWS cloudwatch service functions
 local M = {}
 
 --- AWS cloudwatch delete-alarms operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_alarms(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "delete-alarms" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "delete-alarms" }, input)
 end
 
 --- AWS cloudwatch delete-anomaly-detector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_anomaly_detector(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "delete-anomaly-detector" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "delete-anomaly-detector" }, input)
 end
 
 --- AWS cloudwatch delete-dashboards operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dashboards(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "delete-dashboards" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "delete-dashboards" }, input)
 end
 
 --- AWS cloudwatch delete-insight-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_insight_rules(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "delete-insight-rules" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "delete-insight-rules" }, input)
 end
 
 --- AWS cloudwatch delete-metric-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_metric_stream(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "delete-metric-stream" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "delete-metric-stream" }, input)
 end
 
 --- AWS cloudwatch describe-alarm-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_alarm_history(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "describe-alarm-history" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "describe-alarm-history" }, input)
 end
 
 --- AWS cloudwatch describe-alarms operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_alarms(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "describe-alarms" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "describe-alarms" }, input)
 end
 
 --- AWS cloudwatch describe-alarms-for-metric operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_alarms_for_metric(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "describe-alarms-for-metric" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "describe-alarms-for-metric" }, input)
 end
 
 --- AWS cloudwatch describe-anomaly-detectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_anomaly_detectors(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "describe-anomaly-detectors" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "describe-anomaly-detectors" }, input)
 end
 
 --- AWS cloudwatch describe-insight-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_insight_rules(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "describe-insight-rules" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "describe-insight-rules" }, input)
 end
 
 --- AWS cloudwatch disable-alarm-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_alarm_actions(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "disable-alarm-actions" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "disable-alarm-actions" }, input)
 end
 
 --- AWS cloudwatch disable-insight-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_insight_rules(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "disable-insight-rules" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "disable-insight-rules" }, input)
 end
 
 --- AWS cloudwatch enable-alarm-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_alarm_actions(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "enable-alarm-actions" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "enable-alarm-actions" }, input)
 end
 
 --- AWS cloudwatch enable-insight-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_insight_rules(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "enable-insight-rules" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "enable-insight-rules" }, input)
 end
 
 --- AWS cloudwatch get-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_dashboard(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "get-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "get-dashboard" }, input)
 end
 
 --- AWS cloudwatch get-insight-rule-report operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_insight_rule_report(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "get-insight-rule-report" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "get-insight-rule-report" }, input)
 end
 
 --- AWS cloudwatch get-metric-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_metric_data(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "get-metric-data" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "get-metric-data" }, input)
 end
 
 --- AWS cloudwatch get-metric-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_metric_statistics(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "get-metric-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "get-metric-statistics" }, input)
 end
 
 --- AWS cloudwatch get-metric-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_metric_stream(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "get-metric-stream" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "get-metric-stream" }, input)
 end
 
 --- AWS cloudwatch get-metric-widget-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_metric_widget_image(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "get-metric-widget-image" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "get-metric-widget-image" }, input)
 end
 
 --- AWS cloudwatch list-dashboards operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_dashboards(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "list-dashboards" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "list-dashboards" }, input)
 end
 
 --- AWS cloudwatch list-managed-insight-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_insight_rules(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "list-managed-insight-rules" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "list-managed-insight-rules" }, input)
 end
 
 --- AWS cloudwatch list-metric-streams operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_metric_streams(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "list-metric-streams" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "list-metric-streams" }, input)
 end
 
 --- AWS cloudwatch list-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_metrics(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "list-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "list-metrics" }, input)
 end
 
 --- AWS cloudwatch list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "list-tags-for-resource" }, input)
 end
 
 --- AWS cloudwatch put-anomaly-detector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_anomaly_detector(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "put-anomaly-detector" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "put-anomaly-detector" }, input)
 end
 
 --- AWS cloudwatch put-composite-alarm operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_composite_alarm(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "put-composite-alarm" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "put-composite-alarm" }, input)
 end
 
 --- AWS cloudwatch put-dashboard operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_dashboard(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "put-dashboard" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "put-dashboard" }, input)
 end
 
 --- AWS cloudwatch put-insight-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_insight_rule(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "put-insight-rule" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "put-insight-rule" }, input)
 end
 
 --- AWS cloudwatch put-managed-insight-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_managed_insight_rules(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "put-managed-insight-rules" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "put-managed-insight-rules" }, input)
 end
 
 --- AWS cloudwatch put-metric-alarm operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_metric_alarm(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "put-metric-alarm" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "put-metric-alarm" }, input)
 end
 
 --- AWS cloudwatch put-metric-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_metric_data(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "put-metric-data" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "put-metric-data" }, input)
 end
 
 --- AWS cloudwatch put-metric-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_metric_stream(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "put-metric-stream" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "put-metric-stream" }, input)
 end
 
 --- AWS cloudwatch set-alarm-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_alarm_state(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "set-alarm-state" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "set-alarm-state" }, input)
 end
 
 --- AWS cloudwatch start-metric-streams operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_metric_streams(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "start-metric-streams" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "start-metric-streams" }, input)
 end
 
 --- AWS cloudwatch stop-metric-streams operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_metric_streams(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "stop-metric-streams" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "stop-metric-streams" }, input)
 end
 
 --- AWS cloudwatch tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "tag-resource" }, input)
 end
 
 --- AWS cloudwatch untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "cloudwatch", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "cloudwatch", "untag-resource" }, input)
 end
 
 --- AWS cloudwatch wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "cloudwatch", "wait" }, input)
+	return common.execute_aws_command({ "cloudwatch", "wait" }, input)
 end
 
 return M

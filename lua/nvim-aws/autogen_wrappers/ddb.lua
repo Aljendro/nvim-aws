@@ -3,21 +3,21 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DDB service functions
+--- AWS ddb service functions
 local M = {}
 
 --- AWS ddb put operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put(input)
-	return common.execute_aws_command_with_raw_input({ "ddb", "put" }, input)
+	return common.execute_aws_command({ "ddb", "put" }, input)
 end
 
 --- AWS ddb select operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.select(input)
-	return common.execute_aws_command_with_raw_input({ "ddb", "select" }, input)
+	return common.execute_aws_command({ "ddb", "select" }, input)
 end
 
 return M

@@ -3,280 +3,280 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MTURK service functions
+--- AWS mturk service functions
 local M = {}
 
 --- AWS mturk accept-qualification-request operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_qualification_request(input)
-	return common.execute_aws_command_with_input({ "mturk", "accept-qualification-request" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "accept-qualification-request" }, input)
 end
 
 --- AWS mturk approve-assignment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.approve_assignment(input)
-	return common.execute_aws_command_with_input({ "mturk", "approve-assignment" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "approve-assignment" }, input)
 end
 
 --- AWS mturk associate-qualification-with-worker operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_qualification_with_worker(input)
-	return common.execute_aws_command_with_input({ "mturk", "associate-qualification-with-worker" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "associate-qualification-with-worker" }, input)
 end
 
 --- AWS mturk create-additional-assignments-for-hit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_additional_assignments_for_hit(input)
-	return common.execute_aws_command_with_input({ "mturk", "create-additional-assignments-for-hit" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "create-additional-assignments-for-hit" }, input)
 end
 
 --- AWS mturk create-hit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_hit(input)
-	return common.execute_aws_command_with_input({ "mturk", "create-hit" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "create-hit" }, input)
 end
 
 --- AWS mturk create-hit-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_hit_type(input)
-	return common.execute_aws_command_with_input({ "mturk", "create-hit-type" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "create-hit-type" }, input)
 end
 
 --- AWS mturk create-hit-with-hit-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_hit_with_hit_type(input)
-	return common.execute_aws_command_with_input({ "mturk", "create-hit-with-hit-type" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "create-hit-with-hit-type" }, input)
 end
 
 --- AWS mturk create-qualification-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_qualification_type(input)
-	return common.execute_aws_command_with_input({ "mturk", "create-qualification-type" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "create-qualification-type" }, input)
 end
 
 --- AWS mturk create-worker-block operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_worker_block(input)
-	return common.execute_aws_command_with_input({ "mturk", "create-worker-block" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "create-worker-block" }, input)
 end
 
 --- AWS mturk delete-hit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_hit(input)
-	return common.execute_aws_command_with_input({ "mturk", "delete-hit" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "delete-hit" }, input)
 end
 
 --- AWS mturk delete-qualification-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_qualification_type(input)
-	return common.execute_aws_command_with_input({ "mturk", "delete-qualification-type" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "delete-qualification-type" }, input)
 end
 
 --- AWS mturk delete-worker-block operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_worker_block(input)
-	return common.execute_aws_command_with_input({ "mturk", "delete-worker-block" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "delete-worker-block" }, input)
 end
 
 --- AWS mturk disassociate-qualification-from-worker operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_qualification_from_worker(input)
-	return common.execute_aws_command_with_input({ "mturk", "disassociate-qualification-from-worker" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "disassociate-qualification-from-worker" }, input)
 end
 
 --- AWS mturk get-account-balance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_account_balance(input)
-	return common.execute_aws_command_with_input({ "mturk", "get-account-balance" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "get-account-balance" }, input)
 end
 
 --- AWS mturk get-assignment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_assignment(input)
-	return common.execute_aws_command_with_input({ "mturk", "get-assignment" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "get-assignment" }, input)
 end
 
 --- AWS mturk get-file-upload-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_file_upload_url(input)
-	return common.execute_aws_command_with_input({ "mturk", "get-file-upload-url" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "get-file-upload-url" }, input)
 end
 
 --- AWS mturk get-hit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_hit(input)
-	return common.execute_aws_command_with_input({ "mturk", "get-hit" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "get-hit" }, input)
 end
 
 --- AWS mturk get-qualification-score operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_qualification_score(input)
-	return common.execute_aws_command_with_input({ "mturk", "get-qualification-score" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "get-qualification-score" }, input)
 end
 
 --- AWS mturk get-qualification-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_qualification_type(input)
-	return common.execute_aws_command_with_input({ "mturk", "get-qualification-type" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "get-qualification-type" }, input)
 end
 
 --- AWS mturk list-assignments-for-hit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_assignments_for_hit(input)
-	return common.execute_aws_command_with_input({ "mturk", "list-assignments-for-hit" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "list-assignments-for-hit" }, input)
 end
 
 --- AWS mturk list-bonus-payments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bonus_payments(input)
-	return common.execute_aws_command_with_input({ "mturk", "list-bonus-payments" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "list-bonus-payments" }, input)
 end
 
 --- AWS mturk list-hits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_hits(input)
-	return common.execute_aws_command_with_input({ "mturk", "list-hits" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "list-hits" }, input)
 end
 
 --- AWS mturk list-hits-for-qualification-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_hits_for_qualification_type(input)
-	return common.execute_aws_command_with_input({ "mturk", "list-hits-for-qualification-type" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "list-hits-for-qualification-type" }, input)
 end
 
 --- AWS mturk list-qualification-requests operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_qualification_requests(input)
-	return common.execute_aws_command_with_input({ "mturk", "list-qualification-requests" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "list-qualification-requests" }, input)
 end
 
 --- AWS mturk list-qualification-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_qualification_types(input)
-	return common.execute_aws_command_with_input({ "mturk", "list-qualification-types" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "list-qualification-types" }, input)
 end
 
 --- AWS mturk list-review-policy-results-for-hit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_review_policy_results_for_hit(input)
-	return common.execute_aws_command_with_input({ "mturk", "list-review-policy-results-for-hit" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "list-review-policy-results-for-hit" }, input)
 end
 
 --- AWS mturk list-reviewable-hits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_reviewable_hits(input)
-	return common.execute_aws_command_with_input({ "mturk", "list-reviewable-hits" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "list-reviewable-hits" }, input)
 end
 
 --- AWS mturk list-worker-blocks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_worker_blocks(input)
-	return common.execute_aws_command_with_input({ "mturk", "list-worker-blocks" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "list-worker-blocks" }, input)
 end
 
 --- AWS mturk list-workers-with-qualification-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workers_with_qualification_type(input)
-	return common.execute_aws_command_with_input({ "mturk", "list-workers-with-qualification-type" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "list-workers-with-qualification-type" }, input)
 end
 
 --- AWS mturk notify-workers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.notify_workers(input)
-	return common.execute_aws_command_with_input({ "mturk", "notify-workers" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "notify-workers" }, input)
 end
 
 --- AWS mturk reject-assignment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_assignment(input)
-	return common.execute_aws_command_with_input({ "mturk", "reject-assignment" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "reject-assignment" }, input)
 end
 
 --- AWS mturk reject-qualification-request operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_qualification_request(input)
-	return common.execute_aws_command_with_input({ "mturk", "reject-qualification-request" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "reject-qualification-request" }, input)
 end
 
 --- AWS mturk send-bonus operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_bonus(input)
-	return common.execute_aws_command_with_input({ "mturk", "send-bonus" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "send-bonus" }, input)
 end
 
 --- AWS mturk send-test-event-notification operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_test_event_notification(input)
-	return common.execute_aws_command_with_input({ "mturk", "send-test-event-notification" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "send-test-event-notification" }, input)
 end
 
 --- AWS mturk update-expiration-for-hit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_expiration_for_hit(input)
-	return common.execute_aws_command_with_input({ "mturk", "update-expiration-for-hit" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "update-expiration-for-hit" }, input)
 end
 
 --- AWS mturk update-hit-review-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_hit_review_status(input)
-	return common.execute_aws_command_with_input({ "mturk", "update-hit-review-status" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "update-hit-review-status" }, input)
 end
 
 --- AWS mturk update-hit-type-of-hit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_hit_type_of_hit(input)
-	return common.execute_aws_command_with_input({ "mturk", "update-hit-type-of-hit" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "update-hit-type-of-hit" }, input)
 end
 
 --- AWS mturk update-notification-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_notification_settings(input)
-	return common.execute_aws_command_with_input({ "mturk", "update-notification-settings" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "update-notification-settings" }, input)
 end
 
 --- AWS mturk update-qualification-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_qualification_type(input)
-	return common.execute_aws_command_with_input({ "mturk", "update-qualification-type" }, input)
+	return common.execute_aws_command_skeleton({ "mturk", "update-qualification-type" }, input)
 end
 
 return M

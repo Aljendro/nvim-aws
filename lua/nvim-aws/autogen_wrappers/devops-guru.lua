@@ -3,224 +3,224 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DEVOPS-GURU service functions
+--- AWS devops-guru service functions
 local M = {}
 
 --- AWS devops-guru add-notification-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_notification_channel(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "add-notification-channel" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "add-notification-channel" }, input)
 end
 
 --- AWS devops-guru delete-insight operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_insight(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "delete-insight" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "delete-insight" }, input)
 end
 
 --- AWS devops-guru describe-account-health operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_health(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-account-health" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-account-health" }, input)
 end
 
 --- AWS devops-guru describe-account-overview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_overview(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-account-overview" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-account-overview" }, input)
 end
 
 --- AWS devops-guru describe-anomaly operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_anomaly(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-anomaly" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-anomaly" }, input)
 end
 
 --- AWS devops-guru describe-event-sources-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_sources_config(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-event-sources-config" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-event-sources-config" }, input)
 end
 
 --- AWS devops-guru describe-feedback operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_feedback(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-feedback" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-feedback" }, input)
 end
 
 --- AWS devops-guru describe-insight operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_insight(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-insight" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-insight" }, input)
 end
 
 --- AWS devops-guru describe-organization-health operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organization_health(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-organization-health" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-organization-health" }, input)
 end
 
 --- AWS devops-guru describe-organization-overview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organization_overview(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-organization-overview" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-organization-overview" }, input)
 end
 
 --- AWS devops-guru describe-organization-resource-collection-health operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organization_resource_collection_health(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-organization-resource-collection-health" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-organization-resource-collection-health" }, input)
 end
 
 --- AWS devops-guru describe-resource-collection-health operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_resource_collection_health(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-resource-collection-health" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-resource-collection-health" }, input)
 end
 
 --- AWS devops-guru describe-service-integration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_service_integration(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "describe-service-integration" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "describe-service-integration" }, input)
 end
 
 --- AWS devops-guru get-cost-estimation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cost_estimation(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "get-cost-estimation" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "get-cost-estimation" }, input)
 end
 
 --- AWS devops-guru get-resource-collection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_collection(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "get-resource-collection" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "get-resource-collection" }, input)
 end
 
 --- AWS devops-guru list-anomalies-for-insight operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_anomalies_for_insight(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "list-anomalies-for-insight" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "list-anomalies-for-insight" }, input)
 end
 
 --- AWS devops-guru list-anomalous-log-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_anomalous_log_groups(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "list-anomalous-log-groups" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "list-anomalous-log-groups" }, input)
 end
 
 --- AWS devops-guru list-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_events(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "list-events" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "list-events" }, input)
 end
 
 --- AWS devops-guru list-insights operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_insights(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "list-insights" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "list-insights" }, input)
 end
 
 --- AWS devops-guru list-monitored-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_monitored_resources(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "list-monitored-resources" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "list-monitored-resources" }, input)
 end
 
 --- AWS devops-guru list-notification-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_notification_channels(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "list-notification-channels" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "list-notification-channels" }, input)
 end
 
 --- AWS devops-guru list-organization-insights operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_organization_insights(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "list-organization-insights" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "list-organization-insights" }, input)
 end
 
 --- AWS devops-guru list-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recommendations(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "list-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "list-recommendations" }, input)
 end
 
 --- AWS devops-guru put-feedback operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_feedback(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "put-feedback" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "put-feedback" }, input)
 end
 
 --- AWS devops-guru remove-notification-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_notification_channel(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "remove-notification-channel" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "remove-notification-channel" }, input)
 end
 
 --- AWS devops-guru search-insights operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_insights(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "search-insights" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "search-insights" }, input)
 end
 
 --- AWS devops-guru search-organization-insights operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_organization_insights(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "search-organization-insights" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "search-organization-insights" }, input)
 end
 
 --- AWS devops-guru start-cost-estimation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_cost_estimation(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "start-cost-estimation" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "start-cost-estimation" }, input)
 end
 
 --- AWS devops-guru update-event-sources-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_event_sources_config(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "update-event-sources-config" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "update-event-sources-config" }, input)
 end
 
 --- AWS devops-guru update-resource-collection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resource_collection(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "update-resource-collection" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "update-resource-collection" }, input)
 end
 
 --- AWS devops-guru update-service-integration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_service_integration(input)
-	return common.execute_aws_command_with_input({ "devops-guru", "update-service-integration" }, input)
+	return common.execute_aws_command_skeleton({ "devops-guru", "update-service-integration" }, input)
 end
 
 return M

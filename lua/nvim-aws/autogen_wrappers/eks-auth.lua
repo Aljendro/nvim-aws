@@ -3,14 +3,14 @@
 
 local common = require("nvim-aws.common")
 
---- AWS EKS-AUTH service functions
+--- AWS eks-auth service functions
 local M = {}
 
 --- AWS eks-auth assume-role-for-pod-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assume_role_for_pod_identity(input)
-	return common.execute_aws_command_with_input({ "eks-auth", "assume-role-for-pod-identity" }, input)
+	return common.execute_aws_command_skeleton({ "eks-auth", "assume-role-for-pod-identity" }, input)
 end
 
 return M

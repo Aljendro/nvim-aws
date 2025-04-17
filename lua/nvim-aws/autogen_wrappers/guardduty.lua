@@ -3,504 +3,504 @@
 
 local common = require("nvim-aws.common")
 
---- AWS GUARDDUTY service functions
+--- AWS guardduty service functions
 local M = {}
 
 --- AWS guardduty accept-administrator-invitation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_administrator_invitation(input)
-	return common.execute_aws_command_with_input({ "guardduty", "accept-administrator-invitation" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "accept-administrator-invitation" }, input)
 end
 
 --- AWS guardduty archive-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.archive_findings(input)
-	return common.execute_aws_command_with_input({ "guardduty", "archive-findings" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "archive-findings" }, input)
 end
 
 --- AWS guardduty create-detector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_detector(input)
-	return common.execute_aws_command_with_input({ "guardduty", "create-detector" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-detector" }, input)
 end
 
 --- AWS guardduty create-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_filter(input)
-	return common.execute_aws_command_with_input({ "guardduty", "create-filter" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-filter" }, input)
 end
 
 --- AWS guardduty create-ip-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ip_set(input)
-	return common.execute_aws_command_with_input({ "guardduty", "create-ip-set" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-ip-set" }, input)
 end
 
 --- AWS guardduty create-malware-protection-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_malware_protection_plan(input)
-	return common.execute_aws_command_with_input({ "guardduty", "create-malware-protection-plan" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-malware-protection-plan" }, input)
 end
 
 --- AWS guardduty create-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_members(input)
-	return common.execute_aws_command_with_input({ "guardduty", "create-members" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-members" }, input)
 end
 
 --- AWS guardduty create-publishing-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_publishing_destination(input)
-	return common.execute_aws_command_with_input({ "guardduty", "create-publishing-destination" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-publishing-destination" }, input)
 end
 
 --- AWS guardduty create-sample-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_sample_findings(input)
-	return common.execute_aws_command_with_input({ "guardduty", "create-sample-findings" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-sample-findings" }, input)
 end
 
 --- AWS guardduty create-threat-intel-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_threat_intel_set(input)
-	return common.execute_aws_command_with_input({ "guardduty", "create-threat-intel-set" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "create-threat-intel-set" }, input)
 end
 
 --- AWS guardduty decline-invitations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.decline_invitations(input)
-	return common.execute_aws_command_with_input({ "guardduty", "decline-invitations" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "decline-invitations" }, input)
 end
 
 --- AWS guardduty delete-detector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_detector(input)
-	return common.execute_aws_command_with_input({ "guardduty", "delete-detector" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-detector" }, input)
 end
 
 --- AWS guardduty delete-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_filter(input)
-	return common.execute_aws_command_with_input({ "guardduty", "delete-filter" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-filter" }, input)
 end
 
 --- AWS guardduty delete-invitations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_invitations(input)
-	return common.execute_aws_command_with_input({ "guardduty", "delete-invitations" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-invitations" }, input)
 end
 
 --- AWS guardduty delete-ip-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ip_set(input)
-	return common.execute_aws_command_with_input({ "guardduty", "delete-ip-set" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-ip-set" }, input)
 end
 
 --- AWS guardduty delete-malware-protection-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_malware_protection_plan(input)
-	return common.execute_aws_command_with_input({ "guardduty", "delete-malware-protection-plan" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-malware-protection-plan" }, input)
 end
 
 --- AWS guardduty delete-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_members(input)
-	return common.execute_aws_command_with_input({ "guardduty", "delete-members" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-members" }, input)
 end
 
 --- AWS guardduty delete-publishing-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_publishing_destination(input)
-	return common.execute_aws_command_with_input({ "guardduty", "delete-publishing-destination" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-publishing-destination" }, input)
 end
 
 --- AWS guardduty delete-threat-intel-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_threat_intel_set(input)
-	return common.execute_aws_command_with_input({ "guardduty", "delete-threat-intel-set" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "delete-threat-intel-set" }, input)
 end
 
 --- AWS guardduty describe-malware-scans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_malware_scans(input)
-	return common.execute_aws_command_with_input({ "guardduty", "describe-malware-scans" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "describe-malware-scans" }, input)
 end
 
 --- AWS guardduty describe-organization-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organization_configuration(input)
-	return common.execute_aws_command_with_input({ "guardduty", "describe-organization-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "describe-organization-configuration" }, input)
 end
 
 --- AWS guardduty describe-publishing-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_publishing_destination(input)
-	return common.execute_aws_command_with_input({ "guardduty", "describe-publishing-destination" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "describe-publishing-destination" }, input)
 end
 
 --- AWS guardduty disable-organization-admin-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_organization_admin_account(input)
-	return common.execute_aws_command_with_input({ "guardduty", "disable-organization-admin-account" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "disable-organization-admin-account" }, input)
 end
 
 --- AWS guardduty disassociate-from-administrator-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_from_administrator_account(input)
-	return common.execute_aws_command_with_input({ "guardduty", "disassociate-from-administrator-account" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "disassociate-from-administrator-account" }, input)
 end
 
 --- AWS guardduty disassociate-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_members(input)
-	return common.execute_aws_command_with_input({ "guardduty", "disassociate-members" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "disassociate-members" }, input)
 end
 
 --- AWS guardduty enable-organization-admin-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_organization_admin_account(input)
-	return common.execute_aws_command_with_input({ "guardduty", "enable-organization-admin-account" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "enable-organization-admin-account" }, input)
 end
 
 --- AWS guardduty get-administrator-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_administrator_account(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-administrator-account" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-administrator-account" }, input)
 end
 
 --- AWS guardduty get-coverage-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_coverage_statistics(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-coverage-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-coverage-statistics" }, input)
 end
 
 --- AWS guardduty get-detector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_detector(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-detector" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-detector" }, input)
 end
 
 --- AWS guardduty get-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_filter(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-filter" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-filter" }, input)
 end
 
 --- AWS guardduty get-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_findings(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-findings" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-findings" }, input)
 end
 
 --- AWS guardduty get-findings-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_findings_statistics(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-findings-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-findings-statistics" }, input)
 end
 
 --- AWS guardduty get-invitations-count operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_invitations_count(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-invitations-count" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-invitations-count" }, input)
 end
 
 --- AWS guardduty get-ip-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ip_set(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-ip-set" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-ip-set" }, input)
 end
 
 --- AWS guardduty get-malware-protection-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_malware_protection_plan(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-malware-protection-plan" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-malware-protection-plan" }, input)
 end
 
 --- AWS guardduty get-malware-scan-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_malware_scan_settings(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-malware-scan-settings" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-malware-scan-settings" }, input)
 end
 
 --- AWS guardduty get-member-detectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_member_detectors(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-member-detectors" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-member-detectors" }, input)
 end
 
 --- AWS guardduty get-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_members(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-members" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-members" }, input)
 end
 
 --- AWS guardduty get-organization-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_organization_statistics(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-organization-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-organization-statistics" }, input)
 end
 
 --- AWS guardduty get-remaining-free-trial-days operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_remaining_free_trial_days(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-remaining-free-trial-days" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-remaining-free-trial-days" }, input)
 end
 
 --- AWS guardduty get-threat-intel-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_threat_intel_set(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-threat-intel-set" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-threat-intel-set" }, input)
 end
 
 --- AWS guardduty get-usage-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_usage_statistics(input)
-	return common.execute_aws_command_with_input({ "guardduty", "get-usage-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "get-usage-statistics" }, input)
 end
 
 --- AWS guardduty invite-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.invite_members(input)
-	return common.execute_aws_command_with_input({ "guardduty", "invite-members" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "invite-members" }, input)
 end
 
 --- AWS guardduty list-coverage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_coverage(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-coverage" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-coverage" }, input)
 end
 
 --- AWS guardduty list-detectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_detectors(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-detectors" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-detectors" }, input)
 end
 
 --- AWS guardduty list-filters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_filters(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-filters" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-filters" }, input)
 end
 
 --- AWS guardduty list-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_findings(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-findings" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-findings" }, input)
 end
 
 --- AWS guardduty list-invitations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_invitations(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-invitations" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-invitations" }, input)
 end
 
 --- AWS guardduty list-ip-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ip_sets(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-ip-sets" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-ip-sets" }, input)
 end
 
 --- AWS guardduty list-malware-protection-plans operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_malware_protection_plans(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-malware-protection-plans" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-malware-protection-plans" }, input)
 end
 
 --- AWS guardduty list-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_members(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-members" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-members" }, input)
 end
 
 --- AWS guardduty list-organization-admin-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_organization_admin_accounts(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-organization-admin-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-organization-admin-accounts" }, input)
 end
 
 --- AWS guardduty list-publishing-destinations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_publishing_destinations(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-publishing-destinations" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-publishing-destinations" }, input)
 end
 
 --- AWS guardduty list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-tags-for-resource" }, input)
 end
 
 --- AWS guardduty list-threat-intel-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_threat_intel_sets(input)
-	return common.execute_aws_command_with_input({ "guardduty", "list-threat-intel-sets" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "list-threat-intel-sets" }, input)
 end
 
 --- AWS guardduty start-malware-scan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_malware_scan(input)
-	return common.execute_aws_command_with_input({ "guardduty", "start-malware-scan" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "start-malware-scan" }, input)
 end
 
 --- AWS guardduty start-monitoring-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_monitoring_members(input)
-	return common.execute_aws_command_with_input({ "guardduty", "start-monitoring-members" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "start-monitoring-members" }, input)
 end
 
 --- AWS guardduty stop-monitoring-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_monitoring_members(input)
-	return common.execute_aws_command_with_input({ "guardduty", "stop-monitoring-members" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "stop-monitoring-members" }, input)
 end
 
 --- AWS guardduty tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "guardduty", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "tag-resource" }, input)
 end
 
 --- AWS guardduty unarchive-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unarchive_findings(input)
-	return common.execute_aws_command_with_input({ "guardduty", "unarchive-findings" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "unarchive-findings" }, input)
 end
 
 --- AWS guardduty untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "guardduty", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "untag-resource" }, input)
 end
 
 --- AWS guardduty update-detector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_detector(input)
-	return common.execute_aws_command_with_input({ "guardduty", "update-detector" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-detector" }, input)
 end
 
 --- AWS guardduty update-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_filter(input)
-	return common.execute_aws_command_with_input({ "guardduty", "update-filter" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-filter" }, input)
 end
 
 --- AWS guardduty update-findings-feedback operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_findings_feedback(input)
-	return common.execute_aws_command_with_input({ "guardduty", "update-findings-feedback" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-findings-feedback" }, input)
 end
 
 --- AWS guardduty update-ip-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_ip_set(input)
-	return common.execute_aws_command_with_input({ "guardduty", "update-ip-set" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-ip-set" }, input)
 end
 
 --- AWS guardduty update-malware-protection-plan operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_malware_protection_plan(input)
-	return common.execute_aws_command_with_input({ "guardduty", "update-malware-protection-plan" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-malware-protection-plan" }, input)
 end
 
 --- AWS guardduty update-malware-scan-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_malware_scan_settings(input)
-	return common.execute_aws_command_with_input({ "guardduty", "update-malware-scan-settings" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-malware-scan-settings" }, input)
 end
 
 --- AWS guardduty update-member-detectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_member_detectors(input)
-	return common.execute_aws_command_with_input({ "guardduty", "update-member-detectors" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-member-detectors" }, input)
 end
 
 --- AWS guardduty update-organization-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_organization_configuration(input)
-	return common.execute_aws_command_with_input({ "guardduty", "update-organization-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-organization-configuration" }, input)
 end
 
 --- AWS guardduty update-publishing-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_publishing_destination(input)
-	return common.execute_aws_command_with_input({ "guardduty", "update-publishing-destination" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-publishing-destination" }, input)
 end
 
 --- AWS guardduty update-threat-intel-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_threat_intel_set(input)
-	return common.execute_aws_command_with_input({ "guardduty", "update-threat-intel-set" }, input)
+	return common.execute_aws_command_skeleton({ "guardduty", "update-threat-intel-set" }, input)
 end
 
 return M

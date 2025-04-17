@@ -3,42 +3,42 @@
 
 local common = require("nvim-aws.common")
 
---- AWS MEDIASTORE-DATA service functions
+--- AWS mediastore-data service functions
 local M = {}
 
 --- AWS mediastore-data delete-object operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_object(input)
-	return common.execute_aws_command_with_input({ "mediastore-data", "delete-object" }, input)
+	return common.execute_aws_command_skeleton({ "mediastore-data", "delete-object" }, input)
 end
 
 --- AWS mediastore-data describe-object operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_object(input)
-	return common.execute_aws_command_with_input({ "mediastore-data", "describe-object" }, input)
-end
-
---- AWS mediastore-data list-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_items(input)
-	return common.execute_aws_command_with_input({ "mediastore-data", "list-items" }, input)
-end
-
---- AWS mediastore-data put-object operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_object(input)
-	return common.execute_aws_command_with_input({ "mediastore-data", "put-object" }, input)
+	return common.execute_aws_command_skeleton({ "mediastore-data", "describe-object" }, input)
 end
 
 --- AWS mediastore-data get-object operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_object(input)
-	return common.execute_aws_command_with_raw_input({ "mediastore-data", "get-object" }, input)
+	return common.execute_aws_command({ "mediastore-data", "get-object" }, input)
+end
+
+--- AWS mediastore-data list-items operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_items(input)
+	return common.execute_aws_command_skeleton({ "mediastore-data", "list-items" }, input)
+end
+
+--- AWS mediastore-data put-object operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_object(input)
+	return common.execute_aws_command_skeleton({ "mediastore-data", "put-object" }, input)
 end
 
 return M

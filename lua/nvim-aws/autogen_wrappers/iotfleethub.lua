@@ -3,63 +3,63 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IOTFLEETHUB service functions
+--- AWS iotfleethub service functions
 local M = {}
 
 --- AWS iotfleethub create-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_application(input)
-	return common.execute_aws_command_with_input({ "iotfleethub", "create-application" }, input)
+	return common.execute_aws_command_skeleton({ "iotfleethub", "create-application" }, input)
 end
 
 --- AWS iotfleethub delete-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_application(input)
-	return common.execute_aws_command_with_input({ "iotfleethub", "delete-application" }, input)
+	return common.execute_aws_command_skeleton({ "iotfleethub", "delete-application" }, input)
 end
 
 --- AWS iotfleethub describe-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_application(input)
-	return common.execute_aws_command_with_input({ "iotfleethub", "describe-application" }, input)
+	return common.execute_aws_command_skeleton({ "iotfleethub", "describe-application" }, input)
 end
 
 --- AWS iotfleethub list-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_applications(input)
-	return common.execute_aws_command_with_input({ "iotfleethub", "list-applications" }, input)
+	return common.execute_aws_command_skeleton({ "iotfleethub", "list-applications" }, input)
 end
 
 --- AWS iotfleethub list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "iotfleethub", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotfleethub", "list-tags-for-resource" }, input)
 end
 
 --- AWS iotfleethub tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "iotfleethub", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotfleethub", "tag-resource" }, input)
 end
 
 --- AWS iotfleethub untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "iotfleethub", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "iotfleethub", "untag-resource" }, input)
 end
 
 --- AWS iotfleethub update-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_application(input)
-	return common.execute_aws_command_with_input({ "iotfleethub", "update-application" }, input)
+	return common.execute_aws_command_skeleton({ "iotfleethub", "update-application" }, input)
 end
 
 return M

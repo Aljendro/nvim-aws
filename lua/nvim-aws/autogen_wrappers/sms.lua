@@ -3,252 +3,252 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SMS service functions
+--- AWS sms service functions
 local M = {}
 
 --- AWS sms create-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_app(input)
-	return common.execute_aws_command_with_input({ "sms", "create-app" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "create-app" }, input)
 end
 
 --- AWS sms create-replication-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_replication_job(input)
-	return common.execute_aws_command_with_input({ "sms", "create-replication-job" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "create-replication-job" }, input)
 end
 
 --- AWS sms delete-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_app(input)
-	return common.execute_aws_command_with_input({ "sms", "delete-app" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "delete-app" }, input)
 end
 
 --- AWS sms delete-app-launch-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_app_launch_configuration(input)
-	return common.execute_aws_command_with_input({ "sms", "delete-app-launch-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "delete-app-launch-configuration" }, input)
 end
 
 --- AWS sms delete-app-replication-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_app_replication_configuration(input)
-	return common.execute_aws_command_with_input({ "sms", "delete-app-replication-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "delete-app-replication-configuration" }, input)
 end
 
 --- AWS sms delete-app-validation-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_app_validation_configuration(input)
-	return common.execute_aws_command_with_input({ "sms", "delete-app-validation-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "delete-app-validation-configuration" }, input)
 end
 
 --- AWS sms delete-replication-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_replication_job(input)
-	return common.execute_aws_command_with_input({ "sms", "delete-replication-job" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "delete-replication-job" }, input)
 end
 
 --- AWS sms delete-server-catalog operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_server_catalog(input)
-	return common.execute_aws_command_with_input({ "sms", "delete-server-catalog" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "delete-server-catalog" }, input)
 end
 
 --- AWS sms disassociate-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_connector(input)
-	return common.execute_aws_command_with_input({ "sms", "disassociate-connector" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "disassociate-connector" }, input)
 end
 
 --- AWS sms generate-change-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_change_set(input)
-	return common.execute_aws_command_with_input({ "sms", "generate-change-set" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "generate-change-set" }, input)
 end
 
 --- AWS sms generate-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_template(input)
-	return common.execute_aws_command_with_input({ "sms", "generate-template" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "generate-template" }, input)
 end
 
 --- AWS sms get-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_app(input)
-	return common.execute_aws_command_with_input({ "sms", "get-app" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "get-app" }, input)
 end
 
 --- AWS sms get-app-launch-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_app_launch_configuration(input)
-	return common.execute_aws_command_with_input({ "sms", "get-app-launch-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "get-app-launch-configuration" }, input)
 end
 
 --- AWS sms get-app-replication-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_app_replication_configuration(input)
-	return common.execute_aws_command_with_input({ "sms", "get-app-replication-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "get-app-replication-configuration" }, input)
 end
 
 --- AWS sms get-app-validation-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_app_validation_configuration(input)
-	return common.execute_aws_command_with_input({ "sms", "get-app-validation-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "get-app-validation-configuration" }, input)
 end
 
 --- AWS sms get-app-validation-output operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_app_validation_output(input)
-	return common.execute_aws_command_with_input({ "sms", "get-app-validation-output" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "get-app-validation-output" }, input)
 end
 
 --- AWS sms get-connectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_connectors(input)
-	return common.execute_aws_command_with_input({ "sms", "get-connectors" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "get-connectors" }, input)
 end
 
 --- AWS sms get-replication-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_replication_jobs(input)
-	return common.execute_aws_command_with_input({ "sms", "get-replication-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "get-replication-jobs" }, input)
 end
 
 --- AWS sms get-replication-runs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_replication_runs(input)
-	return common.execute_aws_command_with_input({ "sms", "get-replication-runs" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "get-replication-runs" }, input)
 end
 
 --- AWS sms get-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_servers(input)
-	return common.execute_aws_command_with_input({ "sms", "get-servers" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "get-servers" }, input)
 end
 
 --- AWS sms import-app-catalog operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_app_catalog(input)
-	return common.execute_aws_command_with_input({ "sms", "import-app-catalog" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "import-app-catalog" }, input)
 end
 
 --- AWS sms import-server-catalog operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_server_catalog(input)
-	return common.execute_aws_command_with_input({ "sms", "import-server-catalog" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "import-server-catalog" }, input)
 end
 
 --- AWS sms launch-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.launch_app(input)
-	return common.execute_aws_command_with_input({ "sms", "launch-app" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "launch-app" }, input)
 end
 
 --- AWS sms list-apps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_apps(input)
-	return common.execute_aws_command_with_input({ "sms", "list-apps" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "list-apps" }, input)
 end
 
 --- AWS sms notify-app-validation-output operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.notify_app_validation_output(input)
-	return common.execute_aws_command_with_input({ "sms", "notify-app-validation-output" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "notify-app-validation-output" }, input)
 end
 
 --- AWS sms put-app-launch-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_app_launch_configuration(input)
-	return common.execute_aws_command_with_input({ "sms", "put-app-launch-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "put-app-launch-configuration" }, input)
 end
 
 --- AWS sms put-app-replication-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_app_replication_configuration(input)
-	return common.execute_aws_command_with_input({ "sms", "put-app-replication-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "put-app-replication-configuration" }, input)
 end
 
 --- AWS sms put-app-validation-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_app_validation_configuration(input)
-	return common.execute_aws_command_with_input({ "sms", "put-app-validation-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "put-app-validation-configuration" }, input)
 end
 
 --- AWS sms start-app-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_app_replication(input)
-	return common.execute_aws_command_with_input({ "sms", "start-app-replication" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "start-app-replication" }, input)
 end
 
 --- AWS sms start-on-demand-app-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_on_demand_app_replication(input)
-	return common.execute_aws_command_with_input({ "sms", "start-on-demand-app-replication" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "start-on-demand-app-replication" }, input)
 end
 
 --- AWS sms start-on-demand-replication-run operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_on_demand_replication_run(input)
-	return common.execute_aws_command_with_input({ "sms", "start-on-demand-replication-run" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "start-on-demand-replication-run" }, input)
 end
 
 --- AWS sms stop-app-replication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_app_replication(input)
-	return common.execute_aws_command_with_input({ "sms", "stop-app-replication" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "stop-app-replication" }, input)
 end
 
 --- AWS sms terminate-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.terminate_app(input)
-	return common.execute_aws_command_with_input({ "sms", "terminate-app" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "terminate-app" }, input)
 end
 
 --- AWS sms update-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_app(input)
-	return common.execute_aws_command_with_input({ "sms", "update-app" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "update-app" }, input)
 end
 
 --- AWS sms update-replication-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_replication_job(input)
-	return common.execute_aws_command_with_input({ "sms", "update-replication-job" }, input)
+	return common.execute_aws_command_skeleton({ "sms", "update-replication-job" }, input)
 end
 
 return M

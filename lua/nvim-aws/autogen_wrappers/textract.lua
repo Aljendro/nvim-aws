@@ -3,182 +3,182 @@
 
 local common = require("nvim-aws.common")
 
---- AWS TEXTRACT service functions
+--- AWS textract service functions
 local M = {}
 
 --- AWS textract analyze-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.analyze_document(input)
-	return common.execute_aws_command_with_input({ "textract", "analyze-document" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "analyze-document" }, input)
 end
 
 --- AWS textract analyze-expense operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.analyze_expense(input)
-	return common.execute_aws_command_with_input({ "textract", "analyze-expense" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "analyze-expense" }, input)
 end
 
 --- AWS textract analyze-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.analyze_id(input)
-	return common.execute_aws_command_with_input({ "textract", "analyze-id" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "analyze-id" }, input)
 end
 
 --- AWS textract create-adapter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_adapter(input)
-	return common.execute_aws_command_with_input({ "textract", "create-adapter" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "create-adapter" }, input)
 end
 
 --- AWS textract create-adapter-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_adapter_version(input)
-	return common.execute_aws_command_with_input({ "textract", "create-adapter-version" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "create-adapter-version" }, input)
 end
 
 --- AWS textract delete-adapter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_adapter(input)
-	return common.execute_aws_command_with_input({ "textract", "delete-adapter" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "delete-adapter" }, input)
 end
 
 --- AWS textract delete-adapter-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_adapter_version(input)
-	return common.execute_aws_command_with_input({ "textract", "delete-adapter-version" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "delete-adapter-version" }, input)
 end
 
 --- AWS textract detect-document-text operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detect_document_text(input)
-	return common.execute_aws_command_with_input({ "textract", "detect-document-text" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "detect-document-text" }, input)
 end
 
 --- AWS textract get-adapter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_adapter(input)
-	return common.execute_aws_command_with_input({ "textract", "get-adapter" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "get-adapter" }, input)
 end
 
 --- AWS textract get-adapter-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_adapter_version(input)
-	return common.execute_aws_command_with_input({ "textract", "get-adapter-version" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "get-adapter-version" }, input)
 end
 
 --- AWS textract get-document-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_document_analysis(input)
-	return common.execute_aws_command_with_input({ "textract", "get-document-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "get-document-analysis" }, input)
 end
 
 --- AWS textract get-document-text-detection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_document_text_detection(input)
-	return common.execute_aws_command_with_input({ "textract", "get-document-text-detection" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "get-document-text-detection" }, input)
 end
 
 --- AWS textract get-expense-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_expense_analysis(input)
-	return common.execute_aws_command_with_input({ "textract", "get-expense-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "get-expense-analysis" }, input)
 end
 
 --- AWS textract get-lending-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_lending_analysis(input)
-	return common.execute_aws_command_with_input({ "textract", "get-lending-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "get-lending-analysis" }, input)
 end
 
 --- AWS textract get-lending-analysis-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_lending_analysis_summary(input)
-	return common.execute_aws_command_with_input({ "textract", "get-lending-analysis-summary" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "get-lending-analysis-summary" }, input)
 end
 
 --- AWS textract list-adapter-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_adapter_versions(input)
-	return common.execute_aws_command_with_input({ "textract", "list-adapter-versions" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "list-adapter-versions" }, input)
 end
 
 --- AWS textract list-adapters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_adapters(input)
-	return common.execute_aws_command_with_input({ "textract", "list-adapters" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "list-adapters" }, input)
 end
 
 --- AWS textract list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "textract", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "list-tags-for-resource" }, input)
 end
 
 --- AWS textract start-document-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_document_analysis(input)
-	return common.execute_aws_command_with_input({ "textract", "start-document-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "start-document-analysis" }, input)
 end
 
 --- AWS textract start-document-text-detection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_document_text_detection(input)
-	return common.execute_aws_command_with_input({ "textract", "start-document-text-detection" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "start-document-text-detection" }, input)
 end
 
 --- AWS textract start-expense-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_expense_analysis(input)
-	return common.execute_aws_command_with_input({ "textract", "start-expense-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "start-expense-analysis" }, input)
 end
 
 --- AWS textract start-lending-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_lending_analysis(input)
-	return common.execute_aws_command_with_input({ "textract", "start-lending-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "start-lending-analysis" }, input)
 end
 
 --- AWS textract tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "textract", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "tag-resource" }, input)
 end
 
 --- AWS textract untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "textract", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "untag-resource" }, input)
 end
 
 --- AWS textract update-adapter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_adapter(input)
-	return common.execute_aws_command_with_input({ "textract", "update-adapter" }, input)
+	return common.execute_aws_command_skeleton({ "textract", "update-adapter" }, input)
 end
 
 return M

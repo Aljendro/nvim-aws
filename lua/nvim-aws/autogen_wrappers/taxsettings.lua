@@ -3,119 +3,119 @@
 
 local common = require("nvim-aws.common")
 
---- AWS TAXSETTINGS service functions
+--- AWS taxsettings service functions
 local M = {}
 
 --- AWS taxsettings batch-delete-tax-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_tax_registration(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "batch-delete-tax-registration" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "batch-delete-tax-registration" }, input)
 end
 
 --- AWS taxsettings batch-get-tax-exemptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_tax_exemptions(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "batch-get-tax-exemptions" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "batch-get-tax-exemptions" }, input)
 end
 
 --- AWS taxsettings batch-put-tax-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_put_tax_registration(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "batch-put-tax-registration" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "batch-put-tax-registration" }, input)
 end
 
 --- AWS taxsettings delete-supplemental-tax-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_supplemental_tax_registration(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "delete-supplemental-tax-registration" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "delete-supplemental-tax-registration" }, input)
 end
 
 --- AWS taxsettings delete-tax-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_tax_registration(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "delete-tax-registration" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "delete-tax-registration" }, input)
 end
 
 --- AWS taxsettings get-tax-exemption-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_tax_exemption_types(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "get-tax-exemption-types" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "get-tax-exemption-types" }, input)
 end
 
 --- AWS taxsettings get-tax-inheritance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_tax_inheritance(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "get-tax-inheritance" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "get-tax-inheritance" }, input)
 end
 
 --- AWS taxsettings get-tax-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_tax_registration(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "get-tax-registration" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "get-tax-registration" }, input)
 end
 
 --- AWS taxsettings get-tax-registration-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_tax_registration_document(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "get-tax-registration-document" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "get-tax-registration-document" }, input)
 end
 
 --- AWS taxsettings list-supplemental-tax-registrations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_supplemental_tax_registrations(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "list-supplemental-tax-registrations" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "list-supplemental-tax-registrations" }, input)
 end
 
 --- AWS taxsettings list-tax-exemptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tax_exemptions(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "list-tax-exemptions" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "list-tax-exemptions" }, input)
 end
 
 --- AWS taxsettings list-tax-registrations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tax_registrations(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "list-tax-registrations" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "list-tax-registrations" }, input)
 end
 
 --- AWS taxsettings put-supplemental-tax-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_supplemental_tax_registration(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "put-supplemental-tax-registration" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "put-supplemental-tax-registration" }, input)
 end
 
 --- AWS taxsettings put-tax-exemption operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_tax_exemption(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "put-tax-exemption" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "put-tax-exemption" }, input)
 end
 
 --- AWS taxsettings put-tax-inheritance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_tax_inheritance(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "put-tax-inheritance" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "put-tax-inheritance" }, input)
 end
 
 --- AWS taxsettings put-tax-registration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_tax_registration(input)
-	return common.execute_aws_command_with_input({ "taxsettings", "put-tax-registration" }, input)
+	return common.execute_aws_command_skeleton({ "taxsettings", "put-tax-registration" }, input)
 end
 
 return M

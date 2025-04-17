@@ -3,70 +3,70 @@
 
 local common = require("nvim-aws.common")
 
---- AWS NOTIFICATIONSCONTACTS service functions
+--- AWS notificationscontacts service functions
 local M = {}
 
 --- AWS notificationscontacts activate-email-contact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.activate_email_contact(input)
-	return common.execute_aws_command_with_input({ "notificationscontacts", "activate-email-contact" }, input)
+	return common.execute_aws_command_skeleton({ "notificationscontacts", "activate-email-contact" }, input)
 end
 
 --- AWS notificationscontacts create-email-contact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_email_contact(input)
-	return common.execute_aws_command_with_input({ "notificationscontacts", "create-email-contact" }, input)
+	return common.execute_aws_command_skeleton({ "notificationscontacts", "create-email-contact" }, input)
 end
 
 --- AWS notificationscontacts delete-email-contact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_email_contact(input)
-	return common.execute_aws_command_with_input({ "notificationscontacts", "delete-email-contact" }, input)
+	return common.execute_aws_command_skeleton({ "notificationscontacts", "delete-email-contact" }, input)
 end
 
 --- AWS notificationscontacts get-email-contact operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_email_contact(input)
-	return common.execute_aws_command_with_input({ "notificationscontacts", "get-email-contact" }, input)
+	return common.execute_aws_command_skeleton({ "notificationscontacts", "get-email-contact" }, input)
 end
 
 --- AWS notificationscontacts list-email-contacts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_email_contacts(input)
-	return common.execute_aws_command_with_input({ "notificationscontacts", "list-email-contacts" }, input)
+	return common.execute_aws_command_skeleton({ "notificationscontacts", "list-email-contacts" }, input)
 end
 
 --- AWS notificationscontacts list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "notificationscontacts", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "notificationscontacts", "list-tags-for-resource" }, input)
 end
 
 --- AWS notificationscontacts send-activation-code operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_activation_code(input)
-	return common.execute_aws_command_with_input({ "notificationscontacts", "send-activation-code" }, input)
+	return common.execute_aws_command_skeleton({ "notificationscontacts", "send-activation-code" }, input)
 end
 
 --- AWS notificationscontacts tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "notificationscontacts", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "notificationscontacts", "tag-resource" }, input)
 end
 
 --- AWS notificationscontacts untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "notificationscontacts", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "notificationscontacts", "untag-resource" }, input)
 end
 
 return M

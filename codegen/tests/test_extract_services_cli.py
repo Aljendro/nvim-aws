@@ -1,7 +1,7 @@
 import os
 import pytest
 import subprocess
-from src.extract_services_cli import AwsCliParser
+from src.extract_services_cli import AwsCliParser, OutputType
 
 
 @pytest.fixture
@@ -99,16 +99,23 @@ def test_check_cli_skeleton_support(mocker, aws_cli_parser):
 
     # Test the function
     commands = ["execute-the-script", "help-the-bucket"]
-    supported, unsupported = aws_cli_parser._check_cli_skeleton_support(commands)
+    supported = aws_cli_parser._check_cli_skeleton_support(commands)
 
-    assert supported == ["execute-the-script"]
-    assert unsupported == ["help-the-bucket"]
+    assert supported == [
+        ["execute-the-script", OutputType.HAS_GENERATE_CLI_SKELETON],
+        ["help-the-bucket", OutputType.MISSING_HAS_GENERATE_CLI_SKELETON],
+    ]
 
 
 def test_parse(mocker, aws_cli_parser):
     """Test the main parse method."""
     # Setup mocks
-    mock_generate_cli_dict = mocker.patch("src.generate_cli_commands.service_mappings")
+    mock_generate_cli_dict = mocker.patch(
+        "src.mappings.commands_with_generate_cli_skeleton.generate_cli_service_command_mapping"
+    )
+    mock_streaming_dict = mocker.patch(
+        "src.mappings.commands_with_streaming.live_streaming_service_command_mapping"
+    )
     mock_extract = mocker.patch(
         "src.extract_services_cli.AwsCliParser._extract_commands"
     )
@@ -119,17 +126,28 @@ def test_parse(mocker, aws_cli_parser):
         "src.extract_services_cli.AwsCliParser._generate_lua_file"
     )
 
-    mock_generate_cli_dict = {"s3api": ["cmd1", "cmd3"]}
-    mock_extract.return_value = ["cmd1", "cmd2", "cmd3"]
-    mock_check.return_value = [["cmd1", "cmd3"], ["cmd2"]]
+    mock_generate_cli_dict.return_value = {"s3api": ["cmd1", "cmd3"]}
+    mock_streaming_dict.return_value = {"s3api": ["cmd4"]}
+    mock_extract.return_value = ["cmd1", "cmd2", "cmd3", "cmd4"]
+    mock_check.return_value = [
+        ["cmd1", OutputType.HAS_GENERATE_CLI_SKELETON],
+        ["cmd2", OutputType.MISSING_HAS_GENERATE_CLI_SKELETON],
+        ["cmd3", OutputType.HAS_GENERATE_CLI_SKELETON],
+        ["cmd4", OutputType.STREAMING],
+    ]
 
     # Call the parse method
     aws_cli_parser.parse()
 
     # Verify the expected calls
     mock_extract.assert_called_once()
-    mock_check.assert_called_once_with(["cmd1", "cmd2", "cmd3"])
-    mock_generate.assert_called_once_with(["cmd1", "cmd3"], ["cmd2"])
+    mock_check.assert_called_once_with(["cmd1", "cmd2", "cmd3", "cmd4"])
+    mock_generate.assert_called_once_with(
+        ["cmd1", OutputType.HAS_GENERATE_CLI_SKELETON],
+        ["cmd2", OutputType.MISSING_HAS_GENERATE_CLI_SKELETON],
+        ["cmd3", OutputType.HAS_GENERATE_CLI_SKELETON],
+        ["cmd4", OutputType.STREAMING],
+    )
 
 
 def test_generate_lua_file(aws_cli_parser, output_dir, output_dir_tests):

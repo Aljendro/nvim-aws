@@ -3,266 +3,266 @@
 
 local common = require("nvim-aws.common")
 
---- AWS ENTITYRESOLUTION service functions
+--- AWS entityresolution service functions
 local M = {}
 
 --- AWS entityresolution add-policy-statement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_policy_statement(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "add-policy-statement" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "add-policy-statement" }, input)
 end
 
 --- AWS entityresolution batch-delete-unique-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_unique_id(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "batch-delete-unique-id" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "batch-delete-unique-id" }, input)
 end
 
 --- AWS entityresolution create-id-mapping-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_id_mapping_workflow(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "create-id-mapping-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "create-id-mapping-workflow" }, input)
 end
 
 --- AWS entityresolution create-id-namespace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_id_namespace(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "create-id-namespace" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "create-id-namespace" }, input)
 end
 
 --- AWS entityresolution create-matching-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_matching_workflow(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "create-matching-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "create-matching-workflow" }, input)
 end
 
 --- AWS entityresolution create-schema-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_schema_mapping(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "create-schema-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "create-schema-mapping" }, input)
 end
 
 --- AWS entityresolution delete-id-mapping-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_id_mapping_workflow(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "delete-id-mapping-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "delete-id-mapping-workflow" }, input)
 end
 
 --- AWS entityresolution delete-id-namespace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_id_namespace(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "delete-id-namespace" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "delete-id-namespace" }, input)
 end
 
 --- AWS entityresolution delete-matching-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_matching_workflow(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "delete-matching-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "delete-matching-workflow" }, input)
 end
 
 --- AWS entityresolution delete-policy-statement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_policy_statement(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "delete-policy-statement" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "delete-policy-statement" }, input)
 end
 
 --- AWS entityresolution delete-schema-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_schema_mapping(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "delete-schema-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "delete-schema-mapping" }, input)
 end
 
 --- AWS entityresolution get-id-mapping-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_id_mapping_job(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "get-id-mapping-job" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-id-mapping-job" }, input)
 end
 
 --- AWS entityresolution get-id-mapping-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_id_mapping_workflow(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "get-id-mapping-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-id-mapping-workflow" }, input)
 end
 
 --- AWS entityresolution get-id-namespace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_id_namespace(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "get-id-namespace" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-id-namespace" }, input)
 end
 
 --- AWS entityresolution get-match-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_match_id(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "get-match-id" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-match-id" }, input)
 end
 
 --- AWS entityresolution get-matching-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_matching_job(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "get-matching-job" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-matching-job" }, input)
 end
 
 --- AWS entityresolution get-matching-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_matching_workflow(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "get-matching-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-matching-workflow" }, input)
 end
 
 --- AWS entityresolution get-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_policy(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "get-policy" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-policy" }, input)
 end
 
 --- AWS entityresolution get-provider-service operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_provider_service(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "get-provider-service" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-provider-service" }, input)
 end
 
 --- AWS entityresolution get-schema-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_schema_mapping(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "get-schema-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "get-schema-mapping" }, input)
 end
 
 --- AWS entityresolution list-id-mapping-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_id_mapping_jobs(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "list-id-mapping-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-id-mapping-jobs" }, input)
 end
 
 --- AWS entityresolution list-id-mapping-workflows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_id_mapping_workflows(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "list-id-mapping-workflows" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-id-mapping-workflows" }, input)
 end
 
 --- AWS entityresolution list-id-namespaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_id_namespaces(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "list-id-namespaces" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-id-namespaces" }, input)
 end
 
 --- AWS entityresolution list-matching-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_matching_jobs(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "list-matching-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-matching-jobs" }, input)
 end
 
 --- AWS entityresolution list-matching-workflows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_matching_workflows(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "list-matching-workflows" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-matching-workflows" }, input)
 end
 
 --- AWS entityresolution list-provider-services operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_provider_services(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "list-provider-services" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-provider-services" }, input)
 end
 
 --- AWS entityresolution list-schema-mappings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_schema_mappings(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "list-schema-mappings" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-schema-mappings" }, input)
 end
 
 --- AWS entityresolution list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "list-tags-for-resource" }, input)
 end
 
 --- AWS entityresolution put-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_policy(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "put-policy" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "put-policy" }, input)
 end
 
 --- AWS entityresolution start-id-mapping-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_id_mapping_job(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "start-id-mapping-job" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "start-id-mapping-job" }, input)
 end
 
 --- AWS entityresolution start-matching-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_matching_job(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "start-matching-job" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "start-matching-job" }, input)
 end
 
 --- AWS entityresolution tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "tag-resource" }, input)
 end
 
 --- AWS entityresolution untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "untag-resource" }, input)
 end
 
 --- AWS entityresolution update-id-mapping-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_id_mapping_workflow(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "update-id-mapping-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "update-id-mapping-workflow" }, input)
 end
 
 --- AWS entityresolution update-id-namespace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_id_namespace(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "update-id-namespace" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "update-id-namespace" }, input)
 end
 
 --- AWS entityresolution update-matching-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_matching_workflow(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "update-matching-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "update-matching-workflow" }, input)
 end
 
 --- AWS entityresolution update-schema-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_schema_mapping(input)
-	return common.execute_aws_command_with_input({ "entityresolution", "update-schema-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "entityresolution", "update-schema-mapping" }, input)
 end
 
 return M

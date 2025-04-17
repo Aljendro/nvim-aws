@@ -3,119 +3,119 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SUPPORT service functions
+--- AWS support service functions
 local M = {}
 
 --- AWS support add-attachments-to-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_attachments_to_set(input)
-	return common.execute_aws_command_with_input({ "support", "add-attachments-to-set" }, input)
+	return common.execute_aws_command_skeleton({ "support", "add-attachments-to-set" }, input)
 end
 
 --- AWS support add-communication-to-case operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_communication_to_case(input)
-	return common.execute_aws_command_with_input({ "support", "add-communication-to-case" }, input)
+	return common.execute_aws_command_skeleton({ "support", "add-communication-to-case" }, input)
 end
 
 --- AWS support create-case operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_case(input)
-	return common.execute_aws_command_with_input({ "support", "create-case" }, input)
+	return common.execute_aws_command_skeleton({ "support", "create-case" }, input)
 end
 
 --- AWS support describe-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_attachment(input)
-	return common.execute_aws_command_with_input({ "support", "describe-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-attachment" }, input)
 end
 
 --- AWS support describe-cases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cases(input)
-	return common.execute_aws_command_with_input({ "support", "describe-cases" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-cases" }, input)
 end
 
 --- AWS support describe-communications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_communications(input)
-	return common.execute_aws_command_with_input({ "support", "describe-communications" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-communications" }, input)
 end
 
 --- AWS support describe-create-case-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_create_case_options(input)
-	return common.execute_aws_command_with_input({ "support", "describe-create-case-options" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-create-case-options" }, input)
 end
 
 --- AWS support describe-services operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_services(input)
-	return common.execute_aws_command_with_input({ "support", "describe-services" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-services" }, input)
 end
 
 --- AWS support describe-severity-levels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_severity_levels(input)
-	return common.execute_aws_command_with_input({ "support", "describe-severity-levels" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-severity-levels" }, input)
 end
 
 --- AWS support describe-supported-languages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_supported_languages(input)
-	return common.execute_aws_command_with_input({ "support", "describe-supported-languages" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-supported-languages" }, input)
 end
 
 --- AWS support describe-trusted-advisor-check-refresh-statuses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_trusted_advisor_check_refresh_statuses(input)
-	return common.execute_aws_command_with_input({ "support", "describe-trusted-advisor-check-refresh-statuses" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-check-refresh-statuses" }, input)
 end
 
 --- AWS support describe-trusted-advisor-check-result operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_trusted_advisor_check_result(input)
-	return common.execute_aws_command_with_input({ "support", "describe-trusted-advisor-check-result" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-check-result" }, input)
 end
 
 --- AWS support describe-trusted-advisor-check-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_trusted_advisor_check_summaries(input)
-	return common.execute_aws_command_with_input({ "support", "describe-trusted-advisor-check-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-check-summaries" }, input)
 end
 
 --- AWS support describe-trusted-advisor-checks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_trusted_advisor_checks(input)
-	return common.execute_aws_command_with_input({ "support", "describe-trusted-advisor-checks" }, input)
+	return common.execute_aws_command_skeleton({ "support", "describe-trusted-advisor-checks" }, input)
 end
 
 --- AWS support refresh-trusted-advisor-check operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.refresh_trusted_advisor_check(input)
-	return common.execute_aws_command_with_input({ "support", "refresh-trusted-advisor-check" }, input)
+	return common.execute_aws_command_skeleton({ "support", "refresh-trusted-advisor-check" }, input)
 end
 
 --- AWS support resolve-case operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resolve_case(input)
-	return common.execute_aws_command_with_input({ "support", "resolve-case" }, input)
+	return common.execute_aws_command_skeleton({ "support", "resolve-case" }, input)
 end
 
 return M

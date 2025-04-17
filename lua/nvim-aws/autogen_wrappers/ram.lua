@@ -3,245 +3,245 @@
 
 local common = require("nvim-aws.common")
 
---- AWS RAM service functions
+--- AWS ram service functions
 local M = {}
 
 --- AWS ram accept-resource-share-invitation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_resource_share_invitation(input)
-	return common.execute_aws_command_with_input({ "ram", "accept-resource-share-invitation" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "accept-resource-share-invitation" }, input)
 end
 
 --- AWS ram associate-resource-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_resource_share(input)
-	return common.execute_aws_command_with_input({ "ram", "associate-resource-share" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "associate-resource-share" }, input)
 end
 
 --- AWS ram associate-resource-share-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_resource_share_permission(input)
-	return common.execute_aws_command_with_input({ "ram", "associate-resource-share-permission" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "associate-resource-share-permission" }, input)
 end
 
 --- AWS ram create-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_permission(input)
-	return common.execute_aws_command_with_input({ "ram", "create-permission" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "create-permission" }, input)
 end
 
 --- AWS ram create-permission-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_permission_version(input)
-	return common.execute_aws_command_with_input({ "ram", "create-permission-version" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "create-permission-version" }, input)
 end
 
 --- AWS ram create-resource-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_resource_share(input)
-	return common.execute_aws_command_with_input({ "ram", "create-resource-share" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "create-resource-share" }, input)
 end
 
 --- AWS ram delete-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_permission(input)
-	return common.execute_aws_command_with_input({ "ram", "delete-permission" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "delete-permission" }, input)
 end
 
 --- AWS ram delete-permission-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_permission_version(input)
-	return common.execute_aws_command_with_input({ "ram", "delete-permission-version" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "delete-permission-version" }, input)
 end
 
 --- AWS ram delete-resource-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_share(input)
-	return common.execute_aws_command_with_input({ "ram", "delete-resource-share" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "delete-resource-share" }, input)
 end
 
 --- AWS ram disassociate-resource-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_resource_share(input)
-	return common.execute_aws_command_with_input({ "ram", "disassociate-resource-share" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "disassociate-resource-share" }, input)
 end
 
 --- AWS ram disassociate-resource-share-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_resource_share_permission(input)
-	return common.execute_aws_command_with_input({ "ram", "disassociate-resource-share-permission" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "disassociate-resource-share-permission" }, input)
 end
 
 --- AWS ram enable-sharing-with-aws-organization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_sharing_with_aws_organization(input)
-	return common.execute_aws_command_with_input({ "ram", "enable-sharing-with-aws-organization" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "enable-sharing-with-aws-organization" }, input)
 end
 
 --- AWS ram get-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_permission(input)
-	return common.execute_aws_command_with_input({ "ram", "get-permission" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "get-permission" }, input)
 end
 
 --- AWS ram get-resource-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_policies(input)
-	return common.execute_aws_command_with_input({ "ram", "get-resource-policies" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "get-resource-policies" }, input)
 end
 
 --- AWS ram get-resource-share-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_share_associations(input)
-	return common.execute_aws_command_with_input({ "ram", "get-resource-share-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "get-resource-share-associations" }, input)
 end
 
 --- AWS ram get-resource-share-invitations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_share_invitations(input)
-	return common.execute_aws_command_with_input({ "ram", "get-resource-share-invitations" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "get-resource-share-invitations" }, input)
 end
 
 --- AWS ram get-resource-shares operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_shares(input)
-	return common.execute_aws_command_with_input({ "ram", "get-resource-shares" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "get-resource-shares" }, input)
 end
 
 --- AWS ram list-pending-invitation-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_pending_invitation_resources(input)
-	return common.execute_aws_command_with_input({ "ram", "list-pending-invitation-resources" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "list-pending-invitation-resources" }, input)
 end
 
 --- AWS ram list-permission-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_permission_associations(input)
-	return common.execute_aws_command_with_input({ "ram", "list-permission-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "list-permission-associations" }, input)
 end
 
 --- AWS ram list-permission-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_permission_versions(input)
-	return common.execute_aws_command_with_input({ "ram", "list-permission-versions" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "list-permission-versions" }, input)
 end
 
 --- AWS ram list-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_permissions(input)
-	return common.execute_aws_command_with_input({ "ram", "list-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "list-permissions" }, input)
 end
 
 --- AWS ram list-principals operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_principals(input)
-	return common.execute_aws_command_with_input({ "ram", "list-principals" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "list-principals" }, input)
 end
 
 --- AWS ram list-replace-permission-associations-work operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_replace_permission_associations_work(input)
-	return common.execute_aws_command_with_input({ "ram", "list-replace-permission-associations-work" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "list-replace-permission-associations-work" }, input)
 end
 
 --- AWS ram list-resource-share-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_share_permissions(input)
-	return common.execute_aws_command_with_input({ "ram", "list-resource-share-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "list-resource-share-permissions" }, input)
 end
 
 --- AWS ram list-resource-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_types(input)
-	return common.execute_aws_command_with_input({ "ram", "list-resource-types" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "list-resource-types" }, input)
 end
 
 --- AWS ram list-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resources(input)
-	return common.execute_aws_command_with_input({ "ram", "list-resources" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "list-resources" }, input)
 end
 
 --- AWS ram promote-permission-created-from-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.promote_permission_created_from_policy(input)
-	return common.execute_aws_command_with_input({ "ram", "promote-permission-created-from-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "promote-permission-created-from-policy" }, input)
 end
 
 --- AWS ram promote-resource-share-created-from-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.promote_resource_share_created_from_policy(input)
-	return common.execute_aws_command_with_input({ "ram", "promote-resource-share-created-from-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "promote-resource-share-created-from-policy" }, input)
 end
 
 --- AWS ram reject-resource-share-invitation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_resource_share_invitation(input)
-	return common.execute_aws_command_with_input({ "ram", "reject-resource-share-invitation" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "reject-resource-share-invitation" }, input)
 end
 
 --- AWS ram replace-permission-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replace_permission_associations(input)
-	return common.execute_aws_command_with_input({ "ram", "replace-permission-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "replace-permission-associations" }, input)
 end
 
 --- AWS ram set-default-permission-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_default_permission_version(input)
-	return common.execute_aws_command_with_input({ "ram", "set-default-permission-version" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "set-default-permission-version" }, input)
 end
 
 --- AWS ram tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "ram", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "tag-resource" }, input)
 end
 
 --- AWS ram untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "ram", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "untag-resource" }, input)
 end
 
 --- AWS ram update-resource-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resource_share(input)
-	return common.execute_aws_command_with_input({ "ram", "update-resource-share" }, input)
+	return common.execute_aws_command_skeleton({ "ram", "update-resource-share" }, input)
 end
 
 return M

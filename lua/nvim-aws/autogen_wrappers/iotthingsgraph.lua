@@ -3,7 +3,7 @@
 
 local common = require("nvim-aws.common")
 
---- AWS IOTTHINGSGRAPH service functions
+--- AWS iotthingsgraph service functions
 local M = {}
 
 return M

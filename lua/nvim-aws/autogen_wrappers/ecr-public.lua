@@ -3,175 +3,175 @@
 
 local common = require("nvim-aws.common")
 
---- AWS ECR-PUBLIC service functions
+--- AWS ecr-public service functions
 local M = {}
 
 --- AWS ecr-public batch-check-layer-availability operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_check_layer_availability(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "batch-check-layer-availability" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "batch-check-layer-availability" }, input)
 end
 
 --- AWS ecr-public batch-delete-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_image(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "batch-delete-image" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "batch-delete-image" }, input)
 end
 
 --- AWS ecr-public complete-layer-upload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.complete_layer_upload(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "complete-layer-upload" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "complete-layer-upload" }, input)
 end
 
 --- AWS ecr-public create-repository operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_repository(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "create-repository" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "create-repository" }, input)
 end
 
 --- AWS ecr-public delete-repository operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_repository(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "delete-repository" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "delete-repository" }, input)
 end
 
 --- AWS ecr-public delete-repository-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_repository_policy(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "delete-repository-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "delete-repository-policy" }, input)
 end
 
 --- AWS ecr-public describe-image-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_image_tags(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "describe-image-tags" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "describe-image-tags" }, input)
 end
 
 --- AWS ecr-public describe-images operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_images(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "describe-images" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "describe-images" }, input)
 end
 
 --- AWS ecr-public describe-registries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_registries(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "describe-registries" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "describe-registries" }, input)
 end
 
 --- AWS ecr-public describe-repositories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_repositories(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "describe-repositories" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "describe-repositories" }, input)
 end
 
 --- AWS ecr-public get-authorization-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_authorization_token(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "get-authorization-token" }, input)
-end
-
---- AWS ecr-public get-registry-catalog-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_registry_catalog_data(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "get-registry-catalog-data" }, input)
-end
-
---- AWS ecr-public get-repository-catalog-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_repository_catalog_data(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "get-repository-catalog-data" }, input)
-end
-
---- AWS ecr-public get-repository-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_repository_policy(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "get-repository-policy" }, input)
-end
-
---- AWS ecr-public initiate-layer-upload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.initiate_layer_upload(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "initiate-layer-upload" }, input)
-end
-
---- AWS ecr-public list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "list-tags-for-resource" }, input)
-end
-
---- AWS ecr-public put-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_image(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "put-image" }, input)
-end
-
---- AWS ecr-public put-registry-catalog-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_registry_catalog_data(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "put-registry-catalog-data" }, input)
-end
-
---- AWS ecr-public put-repository-catalog-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_repository_catalog_data(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "put-repository-catalog-data" }, input)
-end
-
---- AWS ecr-public set-repository-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.set_repository_policy(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "set-repository-policy" }, input)
-end
-
---- AWS ecr-public tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "tag-resource" }, input)
-end
-
---- AWS ecr-public untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "untag-resource" }, input)
-end
-
---- AWS ecr-public upload-layer-part operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.upload_layer_part(input)
-	return common.execute_aws_command_with_input({ "ecr-public", "upload-layer-part" }, input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "get-authorization-token" }, input)
 end
 
 --- AWS ecr-public get-login-password operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_login_password(input)
-	return common.execute_aws_command_with_raw_input({ "ecr-public", "get-login-password" }, input)
+	return common.execute_aws_command({ "ecr-public", "get-login-password" }, input)
+end
+
+--- AWS ecr-public get-registry-catalog-data operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_registry_catalog_data(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "get-registry-catalog-data" }, input)
+end
+
+--- AWS ecr-public get-repository-catalog-data operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_repository_catalog_data(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "get-repository-catalog-data" }, input)
+end
+
+--- AWS ecr-public get-repository-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_repository_policy(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "get-repository-policy" }, input)
+end
+
+--- AWS ecr-public initiate-layer-upload operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.initiate_layer_upload(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "initiate-layer-upload" }, input)
+end
+
+--- AWS ecr-public list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "list-tags-for-resource" }, input)
+end
+
+--- AWS ecr-public put-image operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_image(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "put-image" }, input)
+end
+
+--- AWS ecr-public put-registry-catalog-data operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_registry_catalog_data(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "put-registry-catalog-data" }, input)
+end
+
+--- AWS ecr-public put-repository-catalog-data operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_repository_catalog_data(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "put-repository-catalog-data" }, input)
+end
+
+--- AWS ecr-public set-repository-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.set_repository_policy(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "set-repository-policy" }, input)
+end
+
+--- AWS ecr-public tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "tag-resource" }, input)
+end
+
+--- AWS ecr-public untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "untag-resource" }, input)
+end
+
+--- AWS ecr-public upload-layer-part operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.upload_layer_part(input)
+	return common.execute_aws_command_skeleton({ "ecr-public", "upload-layer-part" }, input)
 end
 
 return M

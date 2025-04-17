@@ -3,847 +3,847 @@
 
 local common = require("nvim-aws.common")
 
---- AWS GAMELIFT service functions
+--- AWS gamelift service functions
 local M = {}
 
 --- AWS gamelift accept-match operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_match(input)
-	return common.execute_aws_command_with_input({ "gamelift", "accept-match" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "accept-match" }, input)
 end
 
 --- AWS gamelift claim-game-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.claim_game_server(input)
-	return common.execute_aws_command_with_input({ "gamelift", "claim-game-server" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "claim-game-server" }, input)
 end
 
 --- AWS gamelift create-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_alias(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-alias" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-alias" }, input)
 end
 
 --- AWS gamelift create-build operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_build(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-build" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-build" }, input)
 end
 
 --- AWS gamelift create-container-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_container_fleet(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-container-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-container-fleet" }, input)
 end
 
 --- AWS gamelift create-container-group-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_container_group_definition(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-container-group-definition" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-container-group-definition" }, input)
 end
 
 --- AWS gamelift create-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_fleet(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-fleet" }, input)
 end
 
 --- AWS gamelift create-fleet-locations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_fleet_locations(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-fleet-locations" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-fleet-locations" }, input)
 end
 
 --- AWS gamelift create-game-server-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_game_server_group(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-game-server-group" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-game-server-group" }, input)
 end
 
 --- AWS gamelift create-game-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_game_session(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-game-session" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-game-session" }, input)
 end
 
 --- AWS gamelift create-game-session-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_game_session_queue(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-game-session-queue" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-game-session-queue" }, input)
 end
 
 --- AWS gamelift create-location operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_location(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-location" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-location" }, input)
 end
 
 --- AWS gamelift create-matchmaking-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_matchmaking_configuration(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-matchmaking-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-matchmaking-configuration" }, input)
 end
 
 --- AWS gamelift create-matchmaking-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_matchmaking_rule_set(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-matchmaking-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-matchmaking-rule-set" }, input)
 end
 
 --- AWS gamelift create-player-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_player_session(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-player-session" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-player-session" }, input)
 end
 
 --- AWS gamelift create-player-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_player_sessions(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-player-sessions" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-player-sessions" }, input)
 end
 
 --- AWS gamelift create-script operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_script(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-script" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-script" }, input)
 end
 
 --- AWS gamelift create-vpc-peering-authorization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_peering_authorization(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-vpc-peering-authorization" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-vpc-peering-authorization" }, input)
 end
 
 --- AWS gamelift create-vpc-peering-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_peering_connection(input)
-	return common.execute_aws_command_with_input({ "gamelift", "create-vpc-peering-connection" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "create-vpc-peering-connection" }, input)
 end
 
 --- AWS gamelift delete-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_alias(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-alias" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-alias" }, input)
 end
 
 --- AWS gamelift delete-build operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_build(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-build" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-build" }, input)
 end
 
 --- AWS gamelift delete-container-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_container_fleet(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-container-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-container-fleet" }, input)
 end
 
 --- AWS gamelift delete-container-group-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_container_group_definition(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-container-group-definition" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-container-group-definition" }, input)
 end
 
 --- AWS gamelift delete-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_fleet(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-fleet" }, input)
 end
 
 --- AWS gamelift delete-fleet-locations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_fleet_locations(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-fleet-locations" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-fleet-locations" }, input)
 end
 
 --- AWS gamelift delete-game-server-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_game_server_group(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-game-server-group" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-game-server-group" }, input)
 end
 
 --- AWS gamelift delete-game-session-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_game_session_queue(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-game-session-queue" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-game-session-queue" }, input)
 end
 
 --- AWS gamelift delete-location operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_location(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-location" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-location" }, input)
 end
 
 --- AWS gamelift delete-matchmaking-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_matchmaking_configuration(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-matchmaking-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-matchmaking-configuration" }, input)
 end
 
 --- AWS gamelift delete-matchmaking-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_matchmaking_rule_set(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-matchmaking-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-matchmaking-rule-set" }, input)
 end
 
 --- AWS gamelift delete-scaling-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_scaling_policy(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-scaling-policy" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-scaling-policy" }, input)
 end
 
 --- AWS gamelift delete-script operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_script(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-script" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-script" }, input)
 end
 
 --- AWS gamelift delete-vpc-peering-authorization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_peering_authorization(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-vpc-peering-authorization" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-vpc-peering-authorization" }, input)
 end
 
 --- AWS gamelift delete-vpc-peering-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_peering_connection(input)
-	return common.execute_aws_command_with_input({ "gamelift", "delete-vpc-peering-connection" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "delete-vpc-peering-connection" }, input)
 end
 
 --- AWS gamelift deregister-compute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_compute(input)
-	return common.execute_aws_command_with_input({ "gamelift", "deregister-compute" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "deregister-compute" }, input)
 end
 
 --- AWS gamelift deregister-game-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_game_server(input)
-	return common.execute_aws_command_with_input({ "gamelift", "deregister-game-server" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "deregister-game-server" }, input)
 end
 
 --- AWS gamelift describe-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_alias(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-alias" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-alias" }, input)
 end
 
 --- AWS gamelift describe-build operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_build(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-build" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-build" }, input)
 end
 
 --- AWS gamelift describe-compute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_compute(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-compute" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-compute" }, input)
 end
 
 --- AWS gamelift describe-container-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_container_fleet(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-container-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-container-fleet" }, input)
 end
 
 --- AWS gamelift describe-container-group-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_container_group_definition(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-container-group-definition" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-container-group-definition" }, input)
 end
 
 --- AWS gamelift describe-ec2-instance-limits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ec2_instance_limits(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-ec2-instance-limits" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-ec2-instance-limits" }, input)
 end
 
 --- AWS gamelift describe-fleet-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_attributes(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-fleet-attributes" }, input)
 end
 
 --- AWS gamelift describe-fleet-capacity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_capacity(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-capacity" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-fleet-capacity" }, input)
 end
 
 --- AWS gamelift describe-fleet-deployment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_deployment(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-deployment" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-fleet-deployment" }, input)
 end
 
 --- AWS gamelift describe-fleet-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_events(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-events" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-fleet-events" }, input)
 end
 
 --- AWS gamelift describe-fleet-location-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_location_attributes(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-location-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-fleet-location-attributes" }, input)
 end
 
 --- AWS gamelift describe-fleet-location-capacity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_location_capacity(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-location-capacity" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-fleet-location-capacity" }, input)
 end
 
 --- AWS gamelift describe-fleet-location-utilization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_location_utilization(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-location-utilization" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-fleet-location-utilization" }, input)
 end
 
 --- AWS gamelift describe-fleet-port-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_port_settings(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-port-settings" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-fleet-port-settings" }, input)
 end
 
 --- AWS gamelift describe-fleet-utilization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_utilization(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-fleet-utilization" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-fleet-utilization" }, input)
 end
 
 --- AWS gamelift describe-game-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_game_server(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-game-server" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-game-server" }, input)
 end
 
 --- AWS gamelift describe-game-server-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_game_server_group(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-game-server-group" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-game-server-group" }, input)
 end
 
 --- AWS gamelift describe-game-server-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_game_server_instances(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-game-server-instances" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-game-server-instances" }, input)
 end
 
 --- AWS gamelift describe-game-session-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_game_session_details(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-game-session-details" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-game-session-details" }, input)
 end
 
 --- AWS gamelift describe-game-session-placement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_game_session_placement(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-game-session-placement" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-game-session-placement" }, input)
 end
 
 --- AWS gamelift describe-game-session-queues operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_game_session_queues(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-game-session-queues" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-game-session-queues" }, input)
 end
 
 --- AWS gamelift describe-game-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_game_sessions(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-game-sessions" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-game-sessions" }, input)
 end
 
 --- AWS gamelift describe-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instances(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-instances" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-instances" }, input)
 end
 
 --- AWS gamelift describe-matchmaking operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_matchmaking(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-matchmaking" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-matchmaking" }, input)
 end
 
 --- AWS gamelift describe-matchmaking-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_matchmaking_configurations(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-matchmaking-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-matchmaking-configurations" }, input)
 end
 
 --- AWS gamelift describe-matchmaking-rule-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_matchmaking_rule_sets(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-matchmaking-rule-sets" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-matchmaking-rule-sets" }, input)
 end
 
 --- AWS gamelift describe-player-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_player_sessions(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-player-sessions" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-player-sessions" }, input)
 end
 
 --- AWS gamelift describe-runtime-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_runtime_configuration(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-runtime-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-runtime-configuration" }, input)
 end
 
 --- AWS gamelift describe-scaling-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_scaling_policies(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-scaling-policies" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-scaling-policies" }, input)
 end
 
 --- AWS gamelift describe-script operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_script(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-script" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-script" }, input)
 end
 
 --- AWS gamelift describe-vpc-peering-authorizations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_peering_authorizations(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-vpc-peering-authorizations" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-vpc-peering-authorizations" }, input)
 end
 
 --- AWS gamelift describe-vpc-peering-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_peering_connections(input)
-	return common.execute_aws_command_with_input({ "gamelift", "describe-vpc-peering-connections" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "describe-vpc-peering-connections" }, input)
 end
 
 --- AWS gamelift get-compute-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_compute_access(input)
-	return common.execute_aws_command_with_input({ "gamelift", "get-compute-access" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "get-compute-access" }, input)
 end
 
 --- AWS gamelift get-compute-auth-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_compute_auth_token(input)
-	return common.execute_aws_command_with_input({ "gamelift", "get-compute-auth-token" }, input)
-end
-
---- AWS gamelift get-game-session-log-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_game_session_log_url(input)
-	return common.execute_aws_command_with_input({ "gamelift", "get-game-session-log-url" }, input)
-end
-
---- AWS gamelift get-instance-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_instance_access(input)
-	return common.execute_aws_command_with_input({ "gamelift", "get-instance-access" }, input)
-end
-
---- AWS gamelift list-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_aliases(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-aliases" }, input)
-end
-
---- AWS gamelift list-builds operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_builds(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-builds" }, input)
-end
-
---- AWS gamelift list-compute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_compute(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-compute" }, input)
-end
-
---- AWS gamelift list-container-fleets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_container_fleets(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-container-fleets" }, input)
-end
-
---- AWS gamelift list-container-group-definition-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_container_group_definition_versions(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-container-group-definition-versions" }, input)
-end
-
---- AWS gamelift list-container-group-definitions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_container_group_definitions(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-container-group-definitions" }, input)
-end
-
---- AWS gamelift list-fleet-deployments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_fleet_deployments(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-fleet-deployments" }, input)
-end
-
---- AWS gamelift list-fleets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_fleets(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-fleets" }, input)
-end
-
---- AWS gamelift list-game-server-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_game_server_groups(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-game-server-groups" }, input)
-end
-
---- AWS gamelift list-game-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_game_servers(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-game-servers" }, input)
-end
-
---- AWS gamelift list-locations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_locations(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-locations" }, input)
-end
-
---- AWS gamelift list-scripts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_scripts(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-scripts" }, input)
-end
-
---- AWS gamelift list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "gamelift", "list-tags-for-resource" }, input)
-end
-
---- AWS gamelift put-scaling-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_scaling_policy(input)
-	return common.execute_aws_command_with_input({ "gamelift", "put-scaling-policy" }, input)
-end
-
---- AWS gamelift register-compute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.register_compute(input)
-	return common.execute_aws_command_with_input({ "gamelift", "register-compute" }, input)
-end
-
---- AWS gamelift register-game-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.register_game_server(input)
-	return common.execute_aws_command_with_input({ "gamelift", "register-game-server" }, input)
-end
-
---- AWS gamelift request-upload-credentials operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.request_upload_credentials(input)
-	return common.execute_aws_command_with_input({ "gamelift", "request-upload-credentials" }, input)
-end
-
---- AWS gamelift resolve-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.resolve_alias(input)
-	return common.execute_aws_command_with_input({ "gamelift", "resolve-alias" }, input)
-end
-
---- AWS gamelift resume-game-server-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.resume_game_server_group(input)
-	return common.execute_aws_command_with_input({ "gamelift", "resume-game-server-group" }, input)
-end
-
---- AWS gamelift search-game-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.search_game_sessions(input)
-	return common.execute_aws_command_with_input({ "gamelift", "search-game-sessions" }, input)
-end
-
---- AWS gamelift start-fleet-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_fleet_actions(input)
-	return common.execute_aws_command_with_input({ "gamelift", "start-fleet-actions" }, input)
-end
-
---- AWS gamelift start-game-session-placement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_game_session_placement(input)
-	return common.execute_aws_command_with_input({ "gamelift", "start-game-session-placement" }, input)
-end
-
---- AWS gamelift start-match-backfill operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_match_backfill(input)
-	return common.execute_aws_command_with_input({ "gamelift", "start-match-backfill" }, input)
-end
-
---- AWS gamelift start-matchmaking operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_matchmaking(input)
-	return common.execute_aws_command_with_input({ "gamelift", "start-matchmaking" }, input)
-end
-
---- AWS gamelift stop-fleet-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_fleet_actions(input)
-	return common.execute_aws_command_with_input({ "gamelift", "stop-fleet-actions" }, input)
-end
-
---- AWS gamelift stop-game-session-placement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_game_session_placement(input)
-	return common.execute_aws_command_with_input({ "gamelift", "stop-game-session-placement" }, input)
-end
-
---- AWS gamelift stop-matchmaking operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_matchmaking(input)
-	return common.execute_aws_command_with_input({ "gamelift", "stop-matchmaking" }, input)
-end
-
---- AWS gamelift suspend-game-server-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.suspend_game_server_group(input)
-	return common.execute_aws_command_with_input({ "gamelift", "suspend-game-server-group" }, input)
-end
-
---- AWS gamelift tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "gamelift", "tag-resource" }, input)
-end
-
---- AWS gamelift terminate-game-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.terminate_game_session(input)
-	return common.execute_aws_command_with_input({ "gamelift", "terminate-game-session" }, input)
-end
-
---- AWS gamelift untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "gamelift", "untag-resource" }, input)
-end
-
---- AWS gamelift update-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_alias(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-alias" }, input)
-end
-
---- AWS gamelift update-build operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_build(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-build" }, input)
-end
-
---- AWS gamelift update-container-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_container_fleet(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-container-fleet" }, input)
-end
-
---- AWS gamelift update-container-group-definition operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_container_group_definition(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-container-group-definition" }, input)
-end
-
---- AWS gamelift update-fleet-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_fleet_attributes(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-fleet-attributes" }, input)
-end
-
---- AWS gamelift update-fleet-capacity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_fleet_capacity(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-fleet-capacity" }, input)
-end
-
---- AWS gamelift update-fleet-port-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_fleet_port_settings(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-fleet-port-settings" }, input)
-end
-
---- AWS gamelift update-game-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_game_server(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-game-server" }, input)
-end
-
---- AWS gamelift update-game-server-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_game_server_group(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-game-server-group" }, input)
-end
-
---- AWS gamelift update-game-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_game_session(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-game-session" }, input)
-end
-
---- AWS gamelift update-game-session-queue operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_game_session_queue(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-game-session-queue" }, input)
-end
-
---- AWS gamelift update-matchmaking-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_matchmaking_configuration(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-matchmaking-configuration" }, input)
-end
-
---- AWS gamelift update-runtime-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_runtime_configuration(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-runtime-configuration" }, input)
-end
-
---- AWS gamelift update-script operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_script(input)
-	return common.execute_aws_command_with_input({ "gamelift", "update-script" }, input)
-end
-
---- AWS gamelift validate-matchmaking-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.validate_matchmaking_rule_set(input)
-	return common.execute_aws_command_with_input({ "gamelift", "validate-matchmaking-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "gamelift", "get-compute-auth-token" }, input)
 end
 
 --- AWS gamelift get-game-session-log operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_game_session_log(input)
-	return common.execute_aws_command_with_raw_input({ "gamelift", "get-game-session-log" }, input)
+	return common.execute_aws_command({ "gamelift", "get-game-session-log" }, input)
+end
+
+--- AWS gamelift get-game-session-log-url operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_game_session_log_url(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "get-game-session-log-url" }, input)
+end
+
+--- AWS gamelift get-instance-access operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_instance_access(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "get-instance-access" }, input)
+end
+
+--- AWS gamelift list-aliases operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_aliases(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-aliases" }, input)
+end
+
+--- AWS gamelift list-builds operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_builds(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-builds" }, input)
+end
+
+--- AWS gamelift list-compute operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_compute(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-compute" }, input)
+end
+
+--- AWS gamelift list-container-fleets operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_container_fleets(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-container-fleets" }, input)
+end
+
+--- AWS gamelift list-container-group-definition-versions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_container_group_definition_versions(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-container-group-definition-versions" }, input)
+end
+
+--- AWS gamelift list-container-group-definitions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_container_group_definitions(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-container-group-definitions" }, input)
+end
+
+--- AWS gamelift list-fleet-deployments operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_fleet_deployments(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-fleet-deployments" }, input)
+end
+
+--- AWS gamelift list-fleets operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_fleets(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-fleets" }, input)
+end
+
+--- AWS gamelift list-game-server-groups operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_game_server_groups(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-game-server-groups" }, input)
+end
+
+--- AWS gamelift list-game-servers operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_game_servers(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-game-servers" }, input)
+end
+
+--- AWS gamelift list-locations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_locations(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-locations" }, input)
+end
+
+--- AWS gamelift list-scripts operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_scripts(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-scripts" }, input)
+end
+
+--- AWS gamelift list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "list-tags-for-resource" }, input)
+end
+
+--- AWS gamelift put-scaling-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_scaling_policy(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "put-scaling-policy" }, input)
+end
+
+--- AWS gamelift register-compute operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.register_compute(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "register-compute" }, input)
+end
+
+--- AWS gamelift register-game-server operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.register_game_server(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "register-game-server" }, input)
+end
+
+--- AWS gamelift request-upload-credentials operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.request_upload_credentials(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "request-upload-credentials" }, input)
+end
+
+--- AWS gamelift resolve-alias operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.resolve_alias(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "resolve-alias" }, input)
+end
+
+--- AWS gamelift resume-game-server-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.resume_game_server_group(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "resume-game-server-group" }, input)
+end
+
+--- AWS gamelift search-game-sessions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.search_game_sessions(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "search-game-sessions" }, input)
+end
+
+--- AWS gamelift start-fleet-actions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_fleet_actions(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "start-fleet-actions" }, input)
+end
+
+--- AWS gamelift start-game-session-placement operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_game_session_placement(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "start-game-session-placement" }, input)
+end
+
+--- AWS gamelift start-match-backfill operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_match_backfill(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "start-match-backfill" }, input)
+end
+
+--- AWS gamelift start-matchmaking operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_matchmaking(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "start-matchmaking" }, input)
+end
+
+--- AWS gamelift stop-fleet-actions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_fleet_actions(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "stop-fleet-actions" }, input)
+end
+
+--- AWS gamelift stop-game-session-placement operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_game_session_placement(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "stop-game-session-placement" }, input)
+end
+
+--- AWS gamelift stop-matchmaking operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_matchmaking(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "stop-matchmaking" }, input)
+end
+
+--- AWS gamelift suspend-game-server-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.suspend_game_server_group(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "suspend-game-server-group" }, input)
+end
+
+--- AWS gamelift tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "tag-resource" }, input)
+end
+
+--- AWS gamelift terminate-game-session operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.terminate_game_session(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "terminate-game-session" }, input)
+end
+
+--- AWS gamelift untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "untag-resource" }, input)
+end
+
+--- AWS gamelift update-alias operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_alias(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-alias" }, input)
+end
+
+--- AWS gamelift update-build operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_build(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-build" }, input)
+end
+
+--- AWS gamelift update-container-fleet operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_container_fleet(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-container-fleet" }, input)
+end
+
+--- AWS gamelift update-container-group-definition operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_container_group_definition(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-container-group-definition" }, input)
+end
+
+--- AWS gamelift update-fleet-attributes operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_fleet_attributes(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-fleet-attributes" }, input)
+end
+
+--- AWS gamelift update-fleet-capacity operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_fleet_capacity(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-fleet-capacity" }, input)
+end
+
+--- AWS gamelift update-fleet-port-settings operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_fleet_port_settings(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-fleet-port-settings" }, input)
+end
+
+--- AWS gamelift update-game-server operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_game_server(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-game-server" }, input)
+end
+
+--- AWS gamelift update-game-server-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_game_server_group(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-game-server-group" }, input)
+end
+
+--- AWS gamelift update-game-session operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_game_session(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-game-session" }, input)
+end
+
+--- AWS gamelift update-game-session-queue operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_game_session_queue(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-game-session-queue" }, input)
+end
+
+--- AWS gamelift update-matchmaking-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_matchmaking_configuration(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-matchmaking-configuration" }, input)
+end
+
+--- AWS gamelift update-runtime-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_runtime_configuration(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-runtime-configuration" }, input)
+end
+
+--- AWS gamelift update-script operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_script(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "update-script" }, input)
 end
 
 --- AWS gamelift upload-build operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.upload_build(input)
-	return common.execute_aws_command_with_raw_input({ "gamelift", "upload-build" }, input)
+	return common.execute_aws_command({ "gamelift", "upload-build" }, input)
+end
+
+--- AWS gamelift validate-matchmaking-rule-set operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.validate_matchmaking_rule_set(input)
+	return common.execute_aws_command_skeleton({ "gamelift", "validate-matchmaking-rule-set" }, input)
 end
 
 return M

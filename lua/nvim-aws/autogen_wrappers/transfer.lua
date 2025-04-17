@@ -3,511 +3,511 @@
 
 local common = require("nvim-aws.common")
 
---- AWS TRANSFER service functions
+--- AWS transfer service functions
 local M = {}
 
 --- AWS transfer create-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_access(input)
-	return common.execute_aws_command_with_input({ "transfer", "create-access" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "create-access" }, input)
 end
 
 --- AWS transfer create-agreement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_agreement(input)
-	return common.execute_aws_command_with_input({ "transfer", "create-agreement" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "create-agreement" }, input)
 end
 
 --- AWS transfer create-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_connector(input)
-	return common.execute_aws_command_with_input({ "transfer", "create-connector" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "create-connector" }, input)
 end
 
 --- AWS transfer create-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_profile(input)
-	return common.execute_aws_command_with_input({ "transfer", "create-profile" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "create-profile" }, input)
 end
 
 --- AWS transfer create-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_server(input)
-	return common.execute_aws_command_with_input({ "transfer", "create-server" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "create-server" }, input)
 end
 
 --- AWS transfer create-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_user(input)
-	return common.execute_aws_command_with_input({ "transfer", "create-user" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "create-user" }, input)
 end
 
 --- AWS transfer create-web-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_web_app(input)
-	return common.execute_aws_command_with_input({ "transfer", "create-web-app" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "create-web-app" }, input)
 end
 
 --- AWS transfer create-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_workflow(input)
-	return common.execute_aws_command_with_input({ "transfer", "create-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "create-workflow" }, input)
 end
 
 --- AWS transfer delete-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_access(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-access" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-access" }, input)
 end
 
 --- AWS transfer delete-agreement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_agreement(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-agreement" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-agreement" }, input)
 end
 
 --- AWS transfer delete-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_certificate(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-certificate" }, input)
 end
 
 --- AWS transfer delete-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_connector(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-connector" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-connector" }, input)
 end
 
 --- AWS transfer delete-host-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_host_key(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-host-key" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-host-key" }, input)
 end
 
 --- AWS transfer delete-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_profile(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-profile" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-profile" }, input)
 end
 
 --- AWS transfer delete-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_server(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-server" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-server" }, input)
 end
 
 --- AWS transfer delete-ssh-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ssh_public_key(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-ssh-public-key" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-ssh-public-key" }, input)
 end
 
 --- AWS transfer delete-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_user(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-user" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-user" }, input)
 end
 
 --- AWS transfer delete-web-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_web_app(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-web-app" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-web-app" }, input)
 end
 
 --- AWS transfer delete-web-app-customization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_web_app_customization(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-web-app-customization" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-web-app-customization" }, input)
 end
 
 --- AWS transfer delete-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_workflow(input)
-	return common.execute_aws_command_with_input({ "transfer", "delete-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "delete-workflow" }, input)
 end
 
 --- AWS transfer describe-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_access(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-access" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-access" }, input)
 end
 
 --- AWS transfer describe-agreement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_agreement(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-agreement" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-agreement" }, input)
 end
 
 --- AWS transfer describe-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_certificate(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-certificate" }, input)
 end
 
 --- AWS transfer describe-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_connector(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-connector" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-connector" }, input)
 end
 
 --- AWS transfer describe-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_execution(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-execution" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-execution" }, input)
 end
 
 --- AWS transfer describe-host-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_host_key(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-host-key" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-host-key" }, input)
 end
 
 --- AWS transfer describe-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_profile(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-profile" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-profile" }, input)
 end
 
 --- AWS transfer describe-security-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_security_policy(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-security-policy" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-security-policy" }, input)
 end
 
 --- AWS transfer describe-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_server(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-server" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-server" }, input)
 end
 
 --- AWS transfer describe-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_user(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-user" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-user" }, input)
 end
 
 --- AWS transfer describe-web-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_web_app(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-web-app" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-web-app" }, input)
 end
 
 --- AWS transfer describe-web-app-customization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_web_app_customization(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-web-app-customization" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-web-app-customization" }, input)
 end
 
 --- AWS transfer describe-workflow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workflow(input)
-	return common.execute_aws_command_with_input({ "transfer", "describe-workflow" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "describe-workflow" }, input)
 end
 
 --- AWS transfer import-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_certificate(input)
-	return common.execute_aws_command_with_input({ "transfer", "import-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "import-certificate" }, input)
 end
 
 --- AWS transfer import-host-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_host_key(input)
-	return common.execute_aws_command_with_input({ "transfer", "import-host-key" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "import-host-key" }, input)
 end
 
 --- AWS transfer import-ssh-public-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_ssh_public_key(input)
-	return common.execute_aws_command_with_input({ "transfer", "import-ssh-public-key" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "import-ssh-public-key" }, input)
 end
 
 --- AWS transfer list-accesses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_accesses(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-accesses" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-accesses" }, input)
 end
 
 --- AWS transfer list-agreements operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_agreements(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-agreements" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-agreements" }, input)
 end
 
 --- AWS transfer list-certificates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_certificates(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-certificates" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-certificates" }, input)
 end
 
 --- AWS transfer list-connectors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_connectors(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-connectors" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-connectors" }, input)
 end
 
 --- AWS transfer list-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_executions(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-executions" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-executions" }, input)
 end
 
 --- AWS transfer list-file-transfer-results operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_file_transfer_results(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-file-transfer-results" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-file-transfer-results" }, input)
 end
 
 --- AWS transfer list-host-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_host_keys(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-host-keys" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-host-keys" }, input)
 end
 
 --- AWS transfer list-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_profiles(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-profiles" }, input)
 end
 
 --- AWS transfer list-security-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_security_policies(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-security-policies" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-security-policies" }, input)
 end
 
 --- AWS transfer list-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_servers(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-servers" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-servers" }, input)
 end
 
 --- AWS transfer list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-tags-for-resource" }, input)
 end
 
 --- AWS transfer list-users operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_users(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-users" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-users" }, input)
 end
 
 --- AWS transfer list-web-apps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_web_apps(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-web-apps" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-web-apps" }, input)
 end
 
 --- AWS transfer list-workflows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workflows(input)
-	return common.execute_aws_command_with_input({ "transfer", "list-workflows" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "list-workflows" }, input)
 end
 
 --- AWS transfer send-workflow-step-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_workflow_step_state(input)
-	return common.execute_aws_command_with_input({ "transfer", "send-workflow-step-state" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "send-workflow-step-state" }, input)
 end
 
 --- AWS transfer start-directory-listing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_directory_listing(input)
-	return common.execute_aws_command_with_input({ "transfer", "start-directory-listing" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "start-directory-listing" }, input)
 end
 
 --- AWS transfer start-file-transfer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_file_transfer(input)
-	return common.execute_aws_command_with_input({ "transfer", "start-file-transfer" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "start-file-transfer" }, input)
 end
 
 --- AWS transfer start-remote-delete operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_remote_delete(input)
-	return common.execute_aws_command_with_input({ "transfer", "start-remote-delete" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "start-remote-delete" }, input)
 end
 
 --- AWS transfer start-remote-move operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_remote_move(input)
-	return common.execute_aws_command_with_input({ "transfer", "start-remote-move" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "start-remote-move" }, input)
 end
 
 --- AWS transfer start-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_server(input)
-	return common.execute_aws_command_with_input({ "transfer", "start-server" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "start-server" }, input)
 end
 
 --- AWS transfer stop-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_server(input)
-	return common.execute_aws_command_with_input({ "transfer", "stop-server" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "stop-server" }, input)
 end
 
 --- AWS transfer tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "transfer", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "tag-resource" }, input)
 end
 
 --- AWS transfer test-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_connection(input)
-	return common.execute_aws_command_with_input({ "transfer", "test-connection" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "test-connection" }, input)
 end
 
 --- AWS transfer test-identity-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_identity_provider(input)
-	return common.execute_aws_command_with_input({ "transfer", "test-identity-provider" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "test-identity-provider" }, input)
 end
 
 --- AWS transfer untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "transfer", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "untag-resource" }, input)
 end
 
 --- AWS transfer update-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_access(input)
-	return common.execute_aws_command_with_input({ "transfer", "update-access" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "update-access" }, input)
 end
 
 --- AWS transfer update-agreement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_agreement(input)
-	return common.execute_aws_command_with_input({ "transfer", "update-agreement" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "update-agreement" }, input)
 end
 
 --- AWS transfer update-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_certificate(input)
-	return common.execute_aws_command_with_input({ "transfer", "update-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "update-certificate" }, input)
 end
 
 --- AWS transfer update-connector operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_connector(input)
-	return common.execute_aws_command_with_input({ "transfer", "update-connector" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "update-connector" }, input)
 end
 
 --- AWS transfer update-host-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_host_key(input)
-	return common.execute_aws_command_with_input({ "transfer", "update-host-key" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "update-host-key" }, input)
 end
 
 --- AWS transfer update-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_profile(input)
-	return common.execute_aws_command_with_input({ "transfer", "update-profile" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "update-profile" }, input)
 end
 
 --- AWS transfer update-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_server(input)
-	return common.execute_aws_command_with_input({ "transfer", "update-server" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "update-server" }, input)
 end
 
 --- AWS transfer update-user operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_user(input)
-	return common.execute_aws_command_with_input({ "transfer", "update-user" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "update-user" }, input)
 end
 
 --- AWS transfer update-web-app operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_web_app(input)
-	return common.execute_aws_command_with_input({ "transfer", "update-web-app" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "update-web-app" }, input)
 end
 
 --- AWS transfer update-web-app-customization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_web_app_customization(input)
-	return common.execute_aws_command_with_input({ "transfer", "update-web-app-customization" }, input)
+	return common.execute_aws_command_skeleton({ "transfer", "update-web-app-customization" }, input)
 end
 
 --- AWS transfer wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "transfer", "wait" }, input)
+	return common.execute_aws_command({ "transfer", "wait" }, input)
 end
 
 return M

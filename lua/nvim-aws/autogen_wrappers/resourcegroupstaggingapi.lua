@@ -3,63 +3,63 @@
 
 local common = require("nvim-aws.common")
 
---- AWS RESOURCEGROUPSTAGGINGAPI service functions
+--- AWS resourcegroupstaggingapi service functions
 local M = {}
 
 --- AWS resourcegroupstaggingapi describe-report-creation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_report_creation(input)
-	return common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "describe-report-creation" }, input)
+	return common.execute_aws_command_skeleton({ "resourcegroupstaggingapi", "describe-report-creation" }, input)
 end
 
 --- AWS resourcegroupstaggingapi get-compliance-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_compliance_summary(input)
-	return common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "get-compliance-summary" }, input)
+	return common.execute_aws_command_skeleton({ "resourcegroupstaggingapi", "get-compliance-summary" }, input)
 end
 
 --- AWS resourcegroupstaggingapi get-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resources(input)
-	return common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "get-resources" }, input)
+	return common.execute_aws_command_skeleton({ "resourcegroupstaggingapi", "get-resources" }, input)
 end
 
 --- AWS resourcegroupstaggingapi get-tag-keys operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_tag_keys(input)
-	return common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "get-tag-keys" }, input)
+	return common.execute_aws_command_skeleton({ "resourcegroupstaggingapi", "get-tag-keys" }, input)
 end
 
 --- AWS resourcegroupstaggingapi get-tag-values operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_tag_values(input)
-	return common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "get-tag-values" }, input)
+	return common.execute_aws_command_skeleton({ "resourcegroupstaggingapi", "get-tag-values" }, input)
 end
 
 --- AWS resourcegroupstaggingapi start-report-creation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_report_creation(input)
-	return common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "start-report-creation" }, input)
+	return common.execute_aws_command_skeleton({ "resourcegroupstaggingapi", "start-report-creation" }, input)
 end
 
 --- AWS resourcegroupstaggingapi tag-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resources(input)
-	return common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "tag-resources" }, input)
+	return common.execute_aws_command_skeleton({ "resourcegroupstaggingapi", "tag-resources" }, input)
 end
 
 --- AWS resourcegroupstaggingapi untag-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resources(input)
-	return common.execute_aws_command_with_input({ "resourcegroupstaggingapi", "untag-resources" }, input)
+	return common.execute_aws_command_skeleton({ "resourcegroupstaggingapi", "untag-resources" }, input)
 end
 
 return M

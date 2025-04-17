@@ -3,700 +3,700 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CONFIGSERVICE service functions
+--- AWS configservice service functions
 local M = {}
 
 --- AWS configservice associate-resource-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_resource_types(input)
-	return common.execute_aws_command_with_input({ "configservice", "associate-resource-types" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "associate-resource-types" }, input)
 end
 
 --- AWS configservice batch-get-aggregate-resource-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_aggregate_resource_config(input)
-	return common.execute_aws_command_with_input({ "configservice", "batch-get-aggregate-resource-config" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "batch-get-aggregate-resource-config" }, input)
 end
 
 --- AWS configservice batch-get-resource-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_resource_config(input)
-	return common.execute_aws_command_with_input({ "configservice", "batch-get-resource-config" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "batch-get-resource-config" }, input)
 end
 
 --- AWS configservice delete-aggregation-authorization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_aggregation_authorization(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-aggregation-authorization" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-aggregation-authorization" }, input)
 end
 
 --- AWS configservice delete-config-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_config_rule(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-config-rule" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-config-rule" }, input)
 end
 
 --- AWS configservice delete-configuration-aggregator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configuration_aggregator(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-configuration-aggregator" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-configuration-aggregator" }, input)
 end
 
 --- AWS configservice delete-configuration-recorder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configuration_recorder(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-configuration-recorder" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-configuration-recorder" }, input)
 end
 
 --- AWS configservice delete-conformance-pack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_conformance_pack(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-conformance-pack" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-conformance-pack" }, input)
 end
 
 --- AWS configservice delete-delivery-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_delivery_channel(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-delivery-channel" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-delivery-channel" }, input)
 end
 
 --- AWS configservice delete-evaluation-results operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_evaluation_results(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-evaluation-results" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-evaluation-results" }, input)
 end
 
 --- AWS configservice delete-organization-config-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_organization_config_rule(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-organization-config-rule" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-organization-config-rule" }, input)
 end
 
 --- AWS configservice delete-organization-conformance-pack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_organization_conformance_pack(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-organization-conformance-pack" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-organization-conformance-pack" }, input)
 end
 
 --- AWS configservice delete-pending-aggregation-request operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_pending_aggregation_request(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-pending-aggregation-request" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-pending-aggregation-request" }, input)
 end
 
 --- AWS configservice delete-remediation-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_remediation_configuration(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-remediation-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-remediation-configuration" }, input)
 end
 
 --- AWS configservice delete-remediation-exceptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_remediation_exceptions(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-remediation-exceptions" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-remediation-exceptions" }, input)
 end
 
 --- AWS configservice delete-resource-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_config(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-resource-config" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-resource-config" }, input)
 end
 
 --- AWS configservice delete-retention-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_retention_configuration(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-retention-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-retention-configuration" }, input)
 end
 
 --- AWS configservice delete-service-linked-configuration-recorder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_service_linked_configuration_recorder(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-service-linked-configuration-recorder" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-service-linked-configuration-recorder" }, input)
 end
 
 --- AWS configservice delete-stored-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_stored_query(input)
-	return common.execute_aws_command_with_input({ "configservice", "delete-stored-query" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "delete-stored-query" }, input)
 end
 
 --- AWS configservice deliver-config-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deliver_config_snapshot(input)
-	return common.execute_aws_command_with_input({ "configservice", "deliver-config-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "deliver-config-snapshot" }, input)
 end
 
 --- AWS configservice describe-aggregate-compliance-by-config-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_aggregate_compliance_by_config_rules(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-aggregate-compliance-by-config-rules" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-aggregate-compliance-by-config-rules" }, input)
 end
 
 --- AWS configservice describe-aggregate-compliance-by-conformance-packs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_aggregate_compliance_by_conformance_packs(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-aggregate-compliance-by-conformance-packs" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-aggregate-compliance-by-conformance-packs" }, input)
 end
 
 --- AWS configservice describe-aggregation-authorizations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_aggregation_authorizations(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-aggregation-authorizations" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-aggregation-authorizations" }, input)
 end
 
 --- AWS configservice describe-compliance-by-config-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_compliance_by_config_rule(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-compliance-by-config-rule" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-compliance-by-config-rule" }, input)
 end
 
 --- AWS configservice describe-compliance-by-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_compliance_by_resource(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-compliance-by-resource" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-compliance-by-resource" }, input)
 end
 
 --- AWS configservice describe-config-rule-evaluation-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_config_rule_evaluation_status(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-config-rule-evaluation-status" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-config-rule-evaluation-status" }, input)
 end
 
 --- AWS configservice describe-config-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_config_rules(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-config-rules" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-config-rules" }, input)
 end
 
 --- AWS configservice describe-configuration-aggregator-sources-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_configuration_aggregator_sources_status(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-configuration-aggregator-sources-status" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-configuration-aggregator-sources-status" }, input)
 end
 
 --- AWS configservice describe-configuration-aggregators operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_configuration_aggregators(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-configuration-aggregators" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-configuration-aggregators" }, input)
 end
 
 --- AWS configservice describe-configuration-recorder-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_configuration_recorder_status(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-configuration-recorder-status" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-configuration-recorder-status" }, input)
 end
 
 --- AWS configservice describe-configuration-recorders operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_configuration_recorders(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-configuration-recorders" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-configuration-recorders" }, input)
 end
 
 --- AWS configservice describe-conformance-pack-compliance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_conformance_pack_compliance(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-conformance-pack-compliance" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-conformance-pack-compliance" }, input)
 end
 
 --- AWS configservice describe-conformance-pack-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_conformance_pack_status(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-conformance-pack-status" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-conformance-pack-status" }, input)
 end
 
 --- AWS configservice describe-conformance-packs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_conformance_packs(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-conformance-packs" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-conformance-packs" }, input)
 end
 
 --- AWS configservice describe-delivery-channel-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_delivery_channel_status(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-delivery-channel-status" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-delivery-channel-status" }, input)
 end
 
 --- AWS configservice describe-delivery-channels operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_delivery_channels(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-delivery-channels" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-delivery-channels" }, input)
 end
 
 --- AWS configservice describe-organization-config-rule-statuses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organization_config_rule_statuses(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-organization-config-rule-statuses" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-organization-config-rule-statuses" }, input)
 end
 
 --- AWS configservice describe-organization-config-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organization_config_rules(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-organization-config-rules" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-organization-config-rules" }, input)
 end
 
 --- AWS configservice describe-organization-conformance-pack-statuses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organization_conformance_pack_statuses(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-organization-conformance-pack-statuses" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-organization-conformance-pack-statuses" }, input)
 end
 
 --- AWS configservice describe-organization-conformance-packs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_organization_conformance_packs(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-organization-conformance-packs" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-organization-conformance-packs" }, input)
 end
 
 --- AWS configservice describe-pending-aggregation-requests operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_pending_aggregation_requests(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-pending-aggregation-requests" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-pending-aggregation-requests" }, input)
 end
 
 --- AWS configservice describe-remediation-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_remediation_configurations(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-remediation-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-remediation-configurations" }, input)
 end
 
 --- AWS configservice describe-remediation-exceptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_remediation_exceptions(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-remediation-exceptions" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-remediation-exceptions" }, input)
 end
 
 --- AWS configservice describe-remediation-execution-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_remediation_execution_status(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-remediation-execution-status" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-remediation-execution-status" }, input)
 end
 
 --- AWS configservice describe-retention-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_retention_configurations(input)
-	return common.execute_aws_command_with_input({ "configservice", "describe-retention-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "describe-retention-configurations" }, input)
 end
 
 --- AWS configservice disassociate-resource-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_resource_types(input)
-	return common.execute_aws_command_with_input({ "configservice", "disassociate-resource-types" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "disassociate-resource-types" }, input)
 end
 
 --- AWS configservice get-aggregate-compliance-details-by-config-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_aggregate_compliance_details_by_config_rule(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-aggregate-compliance-details-by-config-rule" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-aggregate-compliance-details-by-config-rule" }, input)
 end
 
 --- AWS configservice get-aggregate-config-rule-compliance-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_aggregate_config_rule_compliance_summary(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-aggregate-config-rule-compliance-summary" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-aggregate-config-rule-compliance-summary" }, input)
 end
 
 --- AWS configservice get-aggregate-conformance-pack-compliance-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_aggregate_conformance_pack_compliance_summary(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-aggregate-conformance-pack-compliance-summary" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-aggregate-conformance-pack-compliance-summary" }, input)
 end
 
 --- AWS configservice get-aggregate-discovered-resource-counts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_aggregate_discovered_resource_counts(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-aggregate-discovered-resource-counts" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-aggregate-discovered-resource-counts" }, input)
 end
 
 --- AWS configservice get-aggregate-resource-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_aggregate_resource_config(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-aggregate-resource-config" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-aggregate-resource-config" }, input)
 end
 
 --- AWS configservice get-compliance-details-by-config-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_compliance_details_by_config_rule(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-compliance-details-by-config-rule" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-compliance-details-by-config-rule" }, input)
 end
 
 --- AWS configservice get-compliance-details-by-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_compliance_details_by_resource(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-compliance-details-by-resource" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-compliance-details-by-resource" }, input)
 end
 
 --- AWS configservice get-compliance-summary-by-config-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_compliance_summary_by_config_rule(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-compliance-summary-by-config-rule" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-compliance-summary-by-config-rule" }, input)
 end
 
 --- AWS configservice get-compliance-summary-by-resource-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_compliance_summary_by_resource_type(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-compliance-summary-by-resource-type" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-compliance-summary-by-resource-type" }, input)
 end
 
 --- AWS configservice get-conformance-pack-compliance-details operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_conformance_pack_compliance_details(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-conformance-pack-compliance-details" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-conformance-pack-compliance-details" }, input)
 end
 
 --- AWS configservice get-conformance-pack-compliance-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_conformance_pack_compliance_summary(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-conformance-pack-compliance-summary" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-conformance-pack-compliance-summary" }, input)
 end
 
 --- AWS configservice get-custom-rule-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_custom_rule_policy(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-custom-rule-policy" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-custom-rule-policy" }, input)
 end
 
 --- AWS configservice get-discovered-resource-counts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_discovered_resource_counts(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-discovered-resource-counts" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-discovered-resource-counts" }, input)
 end
 
 --- AWS configservice get-organization-config-rule-detailed-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_organization_config_rule_detailed_status(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-organization-config-rule-detailed-status" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-organization-config-rule-detailed-status" }, input)
 end
 
 --- AWS configservice get-organization-conformance-pack-detailed-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_organization_conformance_pack_detailed_status(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-organization-conformance-pack-detailed-status" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-organization-conformance-pack-detailed-status" }, input)
 end
 
 --- AWS configservice get-organization-custom-rule-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_organization_custom_rule_policy(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-organization-custom-rule-policy" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-organization-custom-rule-policy" }, input)
 end
 
 --- AWS configservice get-resource-config-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_config_history(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-resource-config-history" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-resource-config-history" }, input)
 end
 
 --- AWS configservice get-resource-evaluation-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_evaluation_summary(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-resource-evaluation-summary" }, input)
-end
-
---- AWS configservice get-stored-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_stored_query(input)
-	return common.execute_aws_command_with_input({ "configservice", "get-stored-query" }, input)
-end
-
---- AWS configservice list-aggregate-discovered-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_aggregate_discovered_resources(input)
-	return common.execute_aws_command_with_input({ "configservice", "list-aggregate-discovered-resources" }, input)
-end
-
---- AWS configservice list-configuration-recorders operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_configuration_recorders(input)
-	return common.execute_aws_command_with_input({ "configservice", "list-configuration-recorders" }, input)
-end
-
---- AWS configservice list-conformance-pack-compliance-scores operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_conformance_pack_compliance_scores(input)
-	return common.execute_aws_command_with_input({ "configservice", "list-conformance-pack-compliance-scores" }, input)
-end
-
---- AWS configservice list-discovered-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_discovered_resources(input)
-	return common.execute_aws_command_with_input({ "configservice", "list-discovered-resources" }, input)
-end
-
---- AWS configservice list-resource-evaluations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_resource_evaluations(input)
-	return common.execute_aws_command_with_input({ "configservice", "list-resource-evaluations" }, input)
-end
-
---- AWS configservice list-stored-queries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_stored_queries(input)
-	return common.execute_aws_command_with_input({ "configservice", "list-stored-queries" }, input)
-end
-
---- AWS configservice list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "configservice", "list-tags-for-resource" }, input)
-end
-
---- AWS configservice put-aggregation-authorization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_aggregation_authorization(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-aggregation-authorization" }, input)
-end
-
---- AWS configservice put-config-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_config_rule(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-config-rule" }, input)
-end
-
---- AWS configservice put-configuration-aggregator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_configuration_aggregator(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-configuration-aggregator" }, input)
-end
-
---- AWS configservice put-configuration-recorder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_configuration_recorder(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-configuration-recorder" }, input)
-end
-
---- AWS configservice put-conformance-pack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_conformance_pack(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-conformance-pack" }, input)
-end
-
---- AWS configservice put-delivery-channel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_delivery_channel(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-delivery-channel" }, input)
-end
-
---- AWS configservice put-evaluations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_evaluations(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-evaluations" }, input)
-end
-
---- AWS configservice put-external-evaluation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_external_evaluation(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-external-evaluation" }, input)
-end
-
---- AWS configservice put-organization-config-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_organization_config_rule(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-organization-config-rule" }, input)
-end
-
---- AWS configservice put-organization-conformance-pack operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_organization_conformance_pack(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-organization-conformance-pack" }, input)
-end
-
---- AWS configservice put-remediation-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_remediation_configurations(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-remediation-configurations" }, input)
-end
-
---- AWS configservice put-remediation-exceptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_remediation_exceptions(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-remediation-exceptions" }, input)
-end
-
---- AWS configservice put-resource-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_resource_config(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-resource-config" }, input)
-end
-
---- AWS configservice put-retention-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_retention_configuration(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-retention-configuration" }, input)
-end
-
---- AWS configservice put-service-linked-configuration-recorder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_service_linked_configuration_recorder(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-service-linked-configuration-recorder" }, input)
-end
-
---- AWS configservice put-stored-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_stored_query(input)
-	return common.execute_aws_command_with_input({ "configservice", "put-stored-query" }, input)
-end
-
---- AWS configservice select-aggregate-resource-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.select_aggregate_resource_config(input)
-	return common.execute_aws_command_with_input({ "configservice", "select-aggregate-resource-config" }, input)
-end
-
---- AWS configservice select-resource-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.select_resource_config(input)
-	return common.execute_aws_command_with_input({ "configservice", "select-resource-config" }, input)
-end
-
---- AWS configservice start-config-rules-evaluation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_config_rules_evaluation(input)
-	return common.execute_aws_command_with_input({ "configservice", "start-config-rules-evaluation" }, input)
-end
-
---- AWS configservice start-configuration-recorder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_configuration_recorder(input)
-	return common.execute_aws_command_with_input({ "configservice", "start-configuration-recorder" }, input)
-end
-
---- AWS configservice start-remediation-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_remediation_execution(input)
-	return common.execute_aws_command_with_input({ "configservice", "start-remediation-execution" }, input)
-end
-
---- AWS configservice start-resource-evaluation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.start_resource_evaluation(input)
-	return common.execute_aws_command_with_input({ "configservice", "start-resource-evaluation" }, input)
-end
-
---- AWS configservice stop-configuration-recorder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.stop_configuration_recorder(input)
-	return common.execute_aws_command_with_input({ "configservice", "stop-configuration-recorder" }, input)
-end
-
---- AWS configservice tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "configservice", "tag-resource" }, input)
-end
-
---- AWS configservice untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "configservice", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-resource-evaluation-summary" }, input)
 end
 
 --- AWS configservice get-status operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_status(input)
-	return common.execute_aws_command_with_raw_input({ "configservice", "get-status" }, input)
+	return common.execute_aws_command({ "configservice", "get-status" }, input)
+end
+
+--- AWS configservice get-stored-query operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_stored_query(input)
+	return common.execute_aws_command_skeleton({ "configservice", "get-stored-query" }, input)
+end
+
+--- AWS configservice list-aggregate-discovered-resources operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_aggregate_discovered_resources(input)
+	return common.execute_aws_command_skeleton({ "configservice", "list-aggregate-discovered-resources" }, input)
+end
+
+--- AWS configservice list-configuration-recorders operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_configuration_recorders(input)
+	return common.execute_aws_command_skeleton({ "configservice", "list-configuration-recorders" }, input)
+end
+
+--- AWS configservice list-conformance-pack-compliance-scores operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_conformance_pack_compliance_scores(input)
+	return common.execute_aws_command_skeleton({ "configservice", "list-conformance-pack-compliance-scores" }, input)
+end
+
+--- AWS configservice list-discovered-resources operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_discovered_resources(input)
+	return common.execute_aws_command_skeleton({ "configservice", "list-discovered-resources" }, input)
+end
+
+--- AWS configservice list-resource-evaluations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_resource_evaluations(input)
+	return common.execute_aws_command_skeleton({ "configservice", "list-resource-evaluations" }, input)
+end
+
+--- AWS configservice list-stored-queries operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_stored_queries(input)
+	return common.execute_aws_command_skeleton({ "configservice", "list-stored-queries" }, input)
+end
+
+--- AWS configservice list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "configservice", "list-tags-for-resource" }, input)
+end
+
+--- AWS configservice put-aggregation-authorization operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_aggregation_authorization(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-aggregation-authorization" }, input)
+end
+
+--- AWS configservice put-config-rule operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_config_rule(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-config-rule" }, input)
+end
+
+--- AWS configservice put-configuration-aggregator operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_configuration_aggregator(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-configuration-aggregator" }, input)
+end
+
+--- AWS configservice put-configuration-recorder operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_configuration_recorder(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-configuration-recorder" }, input)
+end
+
+--- AWS configservice put-conformance-pack operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_conformance_pack(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-conformance-pack" }, input)
+end
+
+--- AWS configservice put-delivery-channel operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_delivery_channel(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-delivery-channel" }, input)
+end
+
+--- AWS configservice put-evaluations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_evaluations(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-evaluations" }, input)
+end
+
+--- AWS configservice put-external-evaluation operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_external_evaluation(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-external-evaluation" }, input)
+end
+
+--- AWS configservice put-organization-config-rule operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_organization_config_rule(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-organization-config-rule" }, input)
+end
+
+--- AWS configservice put-organization-conformance-pack operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_organization_conformance_pack(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-organization-conformance-pack" }, input)
+end
+
+--- AWS configservice put-remediation-configurations operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_remediation_configurations(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-remediation-configurations" }, input)
+end
+
+--- AWS configservice put-remediation-exceptions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_remediation_exceptions(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-remediation-exceptions" }, input)
+end
+
+--- AWS configservice put-resource-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_resource_config(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-resource-config" }, input)
+end
+
+--- AWS configservice put-retention-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_retention_configuration(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-retention-configuration" }, input)
+end
+
+--- AWS configservice put-service-linked-configuration-recorder operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_service_linked_configuration_recorder(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-service-linked-configuration-recorder" }, input)
+end
+
+--- AWS configservice put-stored-query operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_stored_query(input)
+	return common.execute_aws_command_skeleton({ "configservice", "put-stored-query" }, input)
+end
+
+--- AWS configservice select-aggregate-resource-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.select_aggregate_resource_config(input)
+	return common.execute_aws_command_skeleton({ "configservice", "select-aggregate-resource-config" }, input)
+end
+
+--- AWS configservice select-resource-config operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.select_resource_config(input)
+	return common.execute_aws_command_skeleton({ "configservice", "select-resource-config" }, input)
+end
+
+--- AWS configservice start-config-rules-evaluation operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_config_rules_evaluation(input)
+	return common.execute_aws_command_skeleton({ "configservice", "start-config-rules-evaluation" }, input)
+end
+
+--- AWS configservice start-configuration-recorder operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_configuration_recorder(input)
+	return common.execute_aws_command_skeleton({ "configservice", "start-configuration-recorder" }, input)
+end
+
+--- AWS configservice start-remediation-execution operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_remediation_execution(input)
+	return common.execute_aws_command_skeleton({ "configservice", "start-remediation-execution" }, input)
+end
+
+--- AWS configservice start-resource-evaluation operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.start_resource_evaluation(input)
+	return common.execute_aws_command_skeleton({ "configservice", "start-resource-evaluation" }, input)
+end
+
+--- AWS configservice stop-configuration-recorder operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.stop_configuration_recorder(input)
+	return common.execute_aws_command_skeleton({ "configservice", "stop-configuration-recorder" }, input)
 end
 
 --- AWS configservice subscribe operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.subscribe(input)
-	return common.execute_aws_command_with_raw_input({ "configservice", "subscribe" }, input)
+	return common.execute_aws_command({ "configservice", "subscribe" }, input)
+end
+
+--- AWS configservice tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "configservice", "tag-resource" }, input)
+end
+
+--- AWS configservice untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "configservice", "untag-resource" }, input)
 end
 
 return M

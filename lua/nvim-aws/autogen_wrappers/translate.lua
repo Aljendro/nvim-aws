@@ -3,140 +3,140 @@
 
 local common = require("nvim-aws.common")
 
---- AWS TRANSLATE service functions
+--- AWS translate service functions
 local M = {}
 
 --- AWS translate create-parallel-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_parallel_data(input)
-	return common.execute_aws_command_with_input({ "translate", "create-parallel-data" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "create-parallel-data" }, input)
 end
 
 --- AWS translate delete-parallel-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_parallel_data(input)
-	return common.execute_aws_command_with_input({ "translate", "delete-parallel-data" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "delete-parallel-data" }, input)
 end
 
 --- AWS translate delete-terminology operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_terminology(input)
-	return common.execute_aws_command_with_input({ "translate", "delete-terminology" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "delete-terminology" }, input)
 end
 
 --- AWS translate describe-text-translation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_text_translation_job(input)
-	return common.execute_aws_command_with_input({ "translate", "describe-text-translation-job" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "describe-text-translation-job" }, input)
 end
 
 --- AWS translate get-parallel-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_parallel_data(input)
-	return common.execute_aws_command_with_input({ "translate", "get-parallel-data" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "get-parallel-data" }, input)
 end
 
 --- AWS translate get-terminology operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_terminology(input)
-	return common.execute_aws_command_with_input({ "translate", "get-terminology" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "get-terminology" }, input)
 end
 
 --- AWS translate import-terminology operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_terminology(input)
-	return common.execute_aws_command_with_input({ "translate", "import-terminology" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "import-terminology" }, input)
 end
 
 --- AWS translate list-languages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_languages(input)
-	return common.execute_aws_command_with_input({ "translate", "list-languages" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "list-languages" }, input)
 end
 
 --- AWS translate list-parallel-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_parallel_data(input)
-	return common.execute_aws_command_with_input({ "translate", "list-parallel-data" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "list-parallel-data" }, input)
 end
 
 --- AWS translate list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "translate", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "list-tags-for-resource" }, input)
 end
 
 --- AWS translate list-terminologies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_terminologies(input)
-	return common.execute_aws_command_with_input({ "translate", "list-terminologies" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "list-terminologies" }, input)
 end
 
 --- AWS translate list-text-translation-jobs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_text_translation_jobs(input)
-	return common.execute_aws_command_with_input({ "translate", "list-text-translation-jobs" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "list-text-translation-jobs" }, input)
 end
 
 --- AWS translate start-text-translation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_text_translation_job(input)
-	return common.execute_aws_command_with_input({ "translate", "start-text-translation-job" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "start-text-translation-job" }, input)
 end
 
 --- AWS translate stop-text-translation-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_text_translation_job(input)
-	return common.execute_aws_command_with_input({ "translate", "stop-text-translation-job" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "stop-text-translation-job" }, input)
 end
 
 --- AWS translate tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "translate", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "tag-resource" }, input)
 end
 
 --- AWS translate translate-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.translate_document(input)
-	return common.execute_aws_command_with_input({ "translate", "translate-document" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "translate-document" }, input)
 end
 
 --- AWS translate translate-text operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.translate_text(input)
-	return common.execute_aws_command_with_input({ "translate", "translate-text" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "translate-text" }, input)
 end
 
 --- AWS translate untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "translate", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "untag-resource" }, input)
 end
 
 --- AWS translate update-parallel-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_parallel_data(input)
-	return common.execute_aws_command_with_input({ "translate", "update-parallel-data" }, input)
+	return common.execute_aws_command_skeleton({ "translate", "update-parallel-data" }, input)
 end
 
 return M

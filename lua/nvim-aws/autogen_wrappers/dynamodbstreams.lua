@@ -3,35 +3,35 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DYNAMODBSTREAMS service functions
+--- AWS dynamodbstreams service functions
 local M = {}
 
 --- AWS dynamodbstreams describe-stream operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_stream(input)
-	return common.execute_aws_command_with_input({ "dynamodbstreams", "describe-stream" }, input)
+	return common.execute_aws_command_skeleton({ "dynamodbstreams", "describe-stream" }, input)
 end
 
 --- AWS dynamodbstreams get-records operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_records(input)
-	return common.execute_aws_command_with_input({ "dynamodbstreams", "get-records" }, input)
+	return common.execute_aws_command_skeleton({ "dynamodbstreams", "get-records" }, input)
 end
 
 --- AWS dynamodbstreams get-shard-iterator operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_shard_iterator(input)
-	return common.execute_aws_command_with_input({ "dynamodbstreams", "get-shard-iterator" }, input)
+	return common.execute_aws_command_skeleton({ "dynamodbstreams", "get-shard-iterator" }, input)
 end
 
 --- AWS dynamodbstreams list-streams operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_streams(input)
-	return common.execute_aws_command_with_input({ "dynamodbstreams", "list-streams" }, input)
+	return common.execute_aws_command_skeleton({ "dynamodbstreams", "list-streams" }, input)
 end
 
 return M

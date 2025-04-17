@@ -3,70 +3,70 @@
 
 local common = require("nvim-aws.common")
 
---- AWS STS service functions
+--- AWS sts service functions
 local M = {}
 
 --- AWS sts assume-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assume_role(input)
-	return common.execute_aws_command_with_input({ "sts", "assume-role" }, input)
+	return common.execute_aws_command_skeleton({ "sts", "assume-role" }, input)
 end
 
 --- AWS sts assume-role-with-saml operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assume_role_with_saml(input)
-	return common.execute_aws_command_with_input({ "sts", "assume-role-with-saml" }, input)
+	return common.execute_aws_command_skeleton({ "sts", "assume-role-with-saml" }, input)
 end
 
 --- AWS sts assume-role-with-web-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assume_role_with_web_identity(input)
-	return common.execute_aws_command_with_input({ "sts", "assume-role-with-web-identity" }, input)
+	return common.execute_aws_command_skeleton({ "sts", "assume-role-with-web-identity" }, input)
 end
 
 --- AWS sts assume-root operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assume_root(input)
-	return common.execute_aws_command_with_input({ "sts", "assume-root" }, input)
+	return common.execute_aws_command_skeleton({ "sts", "assume-root" }, input)
 end
 
 --- AWS sts decode-authorization-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.decode_authorization_message(input)
-	return common.execute_aws_command_with_input({ "sts", "decode-authorization-message" }, input)
+	return common.execute_aws_command_skeleton({ "sts", "decode-authorization-message" }, input)
 end
 
 --- AWS sts get-access-key-info operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_access_key_info(input)
-	return common.execute_aws_command_with_input({ "sts", "get-access-key-info" }, input)
+	return common.execute_aws_command_skeleton({ "sts", "get-access-key-info" }, input)
 end
 
 --- AWS sts get-caller-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_caller_identity(input)
-	return common.execute_aws_command_with_input({ "sts", "get-caller-identity" }, input)
+	return common.execute_aws_command_skeleton({ "sts", "get-caller-identity" }, input)
 end
 
 --- AWS sts get-federation-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_federation_token(input)
-	return common.execute_aws_command_with_input({ "sts", "get-federation-token" }, input)
+	return common.execute_aws_command_skeleton({ "sts", "get-federation-token" }, input)
 end
 
 --- AWS sts get-session-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_session_token(input)
-	return common.execute_aws_command_with_input({ "sts", "get-session-token" }, input)
+	return common.execute_aws_command_skeleton({ "sts", "get-session-token" }, input)
 end
 
 return M

@@ -3,497 +3,497 @@
 
 local common = require("nvim-aws.common")
 
---- AWS DS service functions
+--- AWS ds service functions
 local M = {}
 
 --- AWS ds accept-shared-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_shared_directory(input)
-	return common.execute_aws_command_with_input({ "ds", "accept-shared-directory" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "accept-shared-directory" }, input)
 end
 
 --- AWS ds add-ip-routes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_ip_routes(input)
-	return common.execute_aws_command_with_input({ "ds", "add-ip-routes" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "add-ip-routes" }, input)
 end
 
 --- AWS ds add-region operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_region(input)
-	return common.execute_aws_command_with_input({ "ds", "add-region" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "add-region" }, input)
 end
 
 --- AWS ds add-tags-to-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_tags_to_resource(input)
-	return common.execute_aws_command_with_input({ "ds", "add-tags-to-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "add-tags-to-resource" }, input)
 end
 
 --- AWS ds cancel-schema-extension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_schema_extension(input)
-	return common.execute_aws_command_with_input({ "ds", "cancel-schema-extension" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "cancel-schema-extension" }, input)
 end
 
 --- AWS ds connect-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.connect_directory(input)
-	return common.execute_aws_command_with_input({ "ds", "connect-directory" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "connect-directory" }, input)
 end
 
 --- AWS ds create-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_alias(input)
-	return common.execute_aws_command_with_input({ "ds", "create-alias" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "create-alias" }, input)
 end
 
 --- AWS ds create-computer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_computer(input)
-	return common.execute_aws_command_with_input({ "ds", "create-computer" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "create-computer" }, input)
 end
 
 --- AWS ds create-conditional-forwarder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_conditional_forwarder(input)
-	return common.execute_aws_command_with_input({ "ds", "create-conditional-forwarder" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "create-conditional-forwarder" }, input)
 end
 
 --- AWS ds create-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_directory(input)
-	return common.execute_aws_command_with_input({ "ds", "create-directory" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "create-directory" }, input)
 end
 
 --- AWS ds create-log-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_log_subscription(input)
-	return common.execute_aws_command_with_input({ "ds", "create-log-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "create-log-subscription" }, input)
 end
 
 --- AWS ds create-microsoft-ad operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_microsoft_ad(input)
-	return common.execute_aws_command_with_input({ "ds", "create-microsoft-ad" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "create-microsoft-ad" }, input)
 end
 
 --- AWS ds create-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_snapshot(input)
-	return common.execute_aws_command_with_input({ "ds", "create-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "create-snapshot" }, input)
 end
 
 --- AWS ds create-trust operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_trust(input)
-	return common.execute_aws_command_with_input({ "ds", "create-trust" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "create-trust" }, input)
 end
 
 --- AWS ds delete-conditional-forwarder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_conditional_forwarder(input)
-	return common.execute_aws_command_with_input({ "ds", "delete-conditional-forwarder" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "delete-conditional-forwarder" }, input)
 end
 
 --- AWS ds delete-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_directory(input)
-	return common.execute_aws_command_with_input({ "ds", "delete-directory" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "delete-directory" }, input)
 end
 
 --- AWS ds delete-log-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_log_subscription(input)
-	return common.execute_aws_command_with_input({ "ds", "delete-log-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "delete-log-subscription" }, input)
 end
 
 --- AWS ds delete-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_snapshot(input)
-	return common.execute_aws_command_with_input({ "ds", "delete-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "delete-snapshot" }, input)
 end
 
 --- AWS ds delete-trust operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_trust(input)
-	return common.execute_aws_command_with_input({ "ds", "delete-trust" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "delete-trust" }, input)
 end
 
 --- AWS ds deregister-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_certificate(input)
-	return common.execute_aws_command_with_input({ "ds", "deregister-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "deregister-certificate" }, input)
 end
 
 --- AWS ds deregister-event-topic operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_event_topic(input)
-	return common.execute_aws_command_with_input({ "ds", "deregister-event-topic" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "deregister-event-topic" }, input)
 end
 
 --- AWS ds describe-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_certificate(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-certificate" }, input)
 end
 
 --- AWS ds describe-client-authentication-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_client_authentication_settings(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-client-authentication-settings" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-client-authentication-settings" }, input)
 end
 
 --- AWS ds describe-conditional-forwarders operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_conditional_forwarders(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-conditional-forwarders" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-conditional-forwarders" }, input)
 end
 
 --- AWS ds describe-directories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_directories(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-directories" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-directories" }, input)
 end
 
 --- AWS ds describe-directory-data-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_directory_data_access(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-directory-data-access" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-directory-data-access" }, input)
 end
 
 --- AWS ds describe-domain-controllers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_domain_controllers(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-domain-controllers" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-domain-controllers" }, input)
 end
 
 --- AWS ds describe-event-topics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_topics(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-event-topics" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-event-topics" }, input)
 end
 
 --- AWS ds describe-ldaps-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ldaps_settings(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-ldaps-settings" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-ldaps-settings" }, input)
 end
 
 --- AWS ds describe-regions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_regions(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-regions" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-regions" }, input)
 end
 
 --- AWS ds describe-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_settings(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-settings" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-settings" }, input)
 end
 
 --- AWS ds describe-shared-directories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_shared_directories(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-shared-directories" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-shared-directories" }, input)
 end
 
 --- AWS ds describe-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_snapshots(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-snapshots" }, input)
 end
 
 --- AWS ds describe-trusts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_trusts(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-trusts" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-trusts" }, input)
 end
 
 --- AWS ds describe-update-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_update_directory(input)
-	return common.execute_aws_command_with_input({ "ds", "describe-update-directory" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "describe-update-directory" }, input)
 end
 
 --- AWS ds disable-client-authentication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_client_authentication(input)
-	return common.execute_aws_command_with_input({ "ds", "disable-client-authentication" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "disable-client-authentication" }, input)
 end
 
 --- AWS ds disable-directory-data-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_directory_data_access(input)
-	return common.execute_aws_command_with_input({ "ds", "disable-directory-data-access" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "disable-directory-data-access" }, input)
 end
 
 --- AWS ds disable-ldaps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_ldaps(input)
-	return common.execute_aws_command_with_input({ "ds", "disable-ldaps" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "disable-ldaps" }, input)
 end
 
 --- AWS ds disable-radius operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_radius(input)
-	return common.execute_aws_command_with_input({ "ds", "disable-radius" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "disable-radius" }, input)
 end
 
 --- AWS ds disable-sso operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_sso(input)
-	return common.execute_aws_command_with_input({ "ds", "disable-sso" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "disable-sso" }, input)
 end
 
 --- AWS ds enable-client-authentication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_client_authentication(input)
-	return common.execute_aws_command_with_input({ "ds", "enable-client-authentication" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "enable-client-authentication" }, input)
 end
 
 --- AWS ds enable-directory-data-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_directory_data_access(input)
-	return common.execute_aws_command_with_input({ "ds", "enable-directory-data-access" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "enable-directory-data-access" }, input)
 end
 
 --- AWS ds enable-ldaps operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_ldaps(input)
-	return common.execute_aws_command_with_input({ "ds", "enable-ldaps" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "enable-ldaps" }, input)
 end
 
 --- AWS ds enable-radius operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_radius(input)
-	return common.execute_aws_command_with_input({ "ds", "enable-radius" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "enable-radius" }, input)
 end
 
 --- AWS ds enable-sso operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_sso(input)
-	return common.execute_aws_command_with_input({ "ds", "enable-sso" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "enable-sso" }, input)
 end
 
 --- AWS ds get-directory-limits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_directory_limits(input)
-	return common.execute_aws_command_with_input({ "ds", "get-directory-limits" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "get-directory-limits" }, input)
 end
 
 --- AWS ds get-snapshot-limits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_snapshot_limits(input)
-	return common.execute_aws_command_with_input({ "ds", "get-snapshot-limits" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "get-snapshot-limits" }, input)
 end
 
 --- AWS ds list-certificates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_certificates(input)
-	return common.execute_aws_command_with_input({ "ds", "list-certificates" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "list-certificates" }, input)
 end
 
 --- AWS ds list-ip-routes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ip_routes(input)
-	return common.execute_aws_command_with_input({ "ds", "list-ip-routes" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "list-ip-routes" }, input)
 end
 
 --- AWS ds list-log-subscriptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_log_subscriptions(input)
-	return common.execute_aws_command_with_input({ "ds", "list-log-subscriptions" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "list-log-subscriptions" }, input)
 end
 
 --- AWS ds list-schema-extensions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_schema_extensions(input)
-	return common.execute_aws_command_with_input({ "ds", "list-schema-extensions" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "list-schema-extensions" }, input)
 end
 
 --- AWS ds list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "ds", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "list-tags-for-resource" }, input)
 end
 
 --- AWS ds register-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_certificate(input)
-	return common.execute_aws_command_with_input({ "ds", "register-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "register-certificate" }, input)
 end
 
 --- AWS ds register-event-topic operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_event_topic(input)
-	return common.execute_aws_command_with_input({ "ds", "register-event-topic" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "register-event-topic" }, input)
 end
 
 --- AWS ds reject-shared-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_shared_directory(input)
-	return common.execute_aws_command_with_input({ "ds", "reject-shared-directory" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "reject-shared-directory" }, input)
 end
 
 --- AWS ds remove-ip-routes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_ip_routes(input)
-	return common.execute_aws_command_with_input({ "ds", "remove-ip-routes" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "remove-ip-routes" }, input)
 end
 
 --- AWS ds remove-region operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_region(input)
-	return common.execute_aws_command_with_input({ "ds", "remove-region" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "remove-region" }, input)
 end
 
 --- AWS ds remove-tags-from-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_tags_from_resource(input)
-	return common.execute_aws_command_with_input({ "ds", "remove-tags-from-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "remove-tags-from-resource" }, input)
 end
 
 --- AWS ds reset-user-password operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_user_password(input)
-	return common.execute_aws_command_with_input({ "ds", "reset-user-password" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "reset-user-password" }, input)
 end
 
 --- AWS ds restore-from-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_from_snapshot(input)
-	return common.execute_aws_command_with_input({ "ds", "restore-from-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "restore-from-snapshot" }, input)
 end
 
 --- AWS ds share-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.share_directory(input)
-	return common.execute_aws_command_with_input({ "ds", "share-directory" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "share-directory" }, input)
 end
 
 --- AWS ds start-schema-extension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_schema_extension(input)
-	return common.execute_aws_command_with_input({ "ds", "start-schema-extension" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "start-schema-extension" }, input)
 end
 
 --- AWS ds unshare-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unshare_directory(input)
-	return common.execute_aws_command_with_input({ "ds", "unshare-directory" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "unshare-directory" }, input)
 end
 
 --- AWS ds update-conditional-forwarder operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_conditional_forwarder(input)
-	return common.execute_aws_command_with_input({ "ds", "update-conditional-forwarder" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "update-conditional-forwarder" }, input)
 end
 
 --- AWS ds update-directory-setup operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_directory_setup(input)
-	return common.execute_aws_command_with_input({ "ds", "update-directory-setup" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "update-directory-setup" }, input)
 end
 
 --- AWS ds update-number-of-domain-controllers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_number_of_domain_controllers(input)
-	return common.execute_aws_command_with_input({ "ds", "update-number-of-domain-controllers" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "update-number-of-domain-controllers" }, input)
 end
 
 --- AWS ds update-radius operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_radius(input)
-	return common.execute_aws_command_with_input({ "ds", "update-radius" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "update-radius" }, input)
 end
 
 --- AWS ds update-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_settings(input)
-	return common.execute_aws_command_with_input({ "ds", "update-settings" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "update-settings" }, input)
 end
 
 --- AWS ds update-trust operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_trust(input)
-	return common.execute_aws_command_with_input({ "ds", "update-trust" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "update-trust" }, input)
 end
 
 --- AWS ds verify-trust operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify_trust(input)
-	return common.execute_aws_command_with_input({ "ds", "verify-trust" }, input)
+	return common.execute_aws_command_skeleton({ "ds", "verify-trust" }, input)
 end
 
 return M

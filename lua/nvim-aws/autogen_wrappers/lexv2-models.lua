@@ -3,728 +3,728 @@
 
 local common = require("nvim-aws.common")
 
---- AWS LEXV2-MODELS service functions
+--- AWS lexv2-models service functions
 local M = {}
 
 --- AWS lexv2-models batch-create-custom-vocabulary-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_create_custom_vocabulary_item(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "batch-create-custom-vocabulary-item" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "batch-create-custom-vocabulary-item" }, input)
 end
 
 --- AWS lexv2-models batch-delete-custom-vocabulary-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_custom_vocabulary_item(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "batch-delete-custom-vocabulary-item" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "batch-delete-custom-vocabulary-item" }, input)
 end
 
 --- AWS lexv2-models batch-update-custom-vocabulary-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_update_custom_vocabulary_item(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "batch-update-custom-vocabulary-item" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "batch-update-custom-vocabulary-item" }, input)
 end
 
 --- AWS lexv2-models build-bot-locale operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.build_bot_locale(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "build-bot-locale" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "build-bot-locale" }, input)
 end
 
 --- AWS lexv2-models create-bot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_bot(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-bot" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot" }, input)
 end
 
 --- AWS lexv2-models create-bot-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_bot_alias(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-bot-alias" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-alias" }, input)
 end
 
 --- AWS lexv2-models create-bot-locale operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_bot_locale(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-bot-locale" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-locale" }, input)
 end
 
 --- AWS lexv2-models create-bot-replica operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_bot_replica(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-bot-replica" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-replica" }, input)
 end
 
 --- AWS lexv2-models create-bot-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_bot_version(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-bot-version" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-bot-version" }, input)
 end
 
 --- AWS lexv2-models create-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_export(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-export" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-export" }, input)
 end
 
 --- AWS lexv2-models create-intent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_intent(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-intent" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-intent" }, input)
 end
 
 --- AWS lexv2-models create-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_resource_policy(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-resource-policy" }, input)
 end
 
 --- AWS lexv2-models create-resource-policy-statement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_resource_policy_statement(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-resource-policy-statement" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-resource-policy-statement" }, input)
 end
 
 --- AWS lexv2-models create-slot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_slot(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-slot" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-slot" }, input)
 end
 
 --- AWS lexv2-models create-slot-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_slot_type(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-slot-type" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-slot-type" }, input)
 end
 
 --- AWS lexv2-models create-test-set-discrepancy-report operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_test_set_discrepancy_report(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-test-set-discrepancy-report" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-test-set-discrepancy-report" }, input)
 end
 
 --- AWS lexv2-models create-upload-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_upload_url(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "create-upload-url" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "create-upload-url" }, input)
 end
 
 --- AWS lexv2-models delete-bot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_bot(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-bot" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot" }, input)
 end
 
 --- AWS lexv2-models delete-bot-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_bot_alias(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-bot-alias" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-alias" }, input)
 end
 
 --- AWS lexv2-models delete-bot-locale operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_bot_locale(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-bot-locale" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-locale" }, input)
 end
 
 --- AWS lexv2-models delete-bot-replica operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_bot_replica(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-bot-replica" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-replica" }, input)
 end
 
 --- AWS lexv2-models delete-bot-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_bot_version(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-bot-version" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-bot-version" }, input)
 end
 
 --- AWS lexv2-models delete-custom-vocabulary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_vocabulary(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-custom-vocabulary" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-custom-vocabulary" }, input)
 end
 
 --- AWS lexv2-models delete-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_export(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-export" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-export" }, input)
 end
 
 --- AWS lexv2-models delete-import operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_import(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-import" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-import" }, input)
 end
 
 --- AWS lexv2-models delete-intent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_intent(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-intent" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-intent" }, input)
 end
 
 --- AWS lexv2-models delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-resource-policy" }, input)
 end
 
 --- AWS lexv2-models delete-resource-policy-statement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy_statement(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-resource-policy-statement" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-resource-policy-statement" }, input)
 end
 
 --- AWS lexv2-models delete-slot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_slot(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-slot" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-slot" }, input)
 end
 
 --- AWS lexv2-models delete-slot-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_slot_type(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-slot-type" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-slot-type" }, input)
 end
 
 --- AWS lexv2-models delete-test-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_test_set(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-test-set" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-test-set" }, input)
 end
 
 --- AWS lexv2-models delete-utterances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_utterances(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "delete-utterances" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "delete-utterances" }, input)
 end
 
 --- AWS lexv2-models describe-bot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_bot(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-bot" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot" }, input)
 end
 
 --- AWS lexv2-models describe-bot-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_bot_alias(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-bot-alias" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-alias" }, input)
 end
 
 --- AWS lexv2-models describe-bot-locale operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_bot_locale(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-bot-locale" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-locale" }, input)
 end
 
 --- AWS lexv2-models describe-bot-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_bot_recommendation(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-bot-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-recommendation" }, input)
 end
 
 --- AWS lexv2-models describe-bot-replica operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_bot_replica(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-bot-replica" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-replica" }, input)
 end
 
 --- AWS lexv2-models describe-bot-resource-generation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_bot_resource_generation(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-bot-resource-generation" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-resource-generation" }, input)
 end
 
 --- AWS lexv2-models describe-bot-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_bot_version(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-bot-version" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-bot-version" }, input)
 end
 
 --- AWS lexv2-models describe-custom-vocabulary-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_custom_vocabulary_metadata(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-custom-vocabulary-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-custom-vocabulary-metadata" }, input)
 end
 
 --- AWS lexv2-models describe-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_export(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-export" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-export" }, input)
 end
 
 --- AWS lexv2-models describe-import operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_import(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-import" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-import" }, input)
 end
 
 --- AWS lexv2-models describe-intent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_intent(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-intent" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-intent" }, input)
 end
 
 --- AWS lexv2-models describe-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_resource_policy(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-resource-policy" }, input)
 end
 
 --- AWS lexv2-models describe-slot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_slot(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-slot" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-slot" }, input)
 end
 
 --- AWS lexv2-models describe-slot-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_slot_type(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-slot-type" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-slot-type" }, input)
 end
 
 --- AWS lexv2-models describe-test-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_test_execution(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-test-execution" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-execution" }, input)
 end
 
 --- AWS lexv2-models describe-test-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_test_set(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-test-set" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-set" }, input)
 end
 
 --- AWS lexv2-models describe-test-set-discrepancy-report operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_test_set_discrepancy_report(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-test-set-discrepancy-report" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-set-discrepancy-report" }, input)
 end
 
 --- AWS lexv2-models describe-test-set-generation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_test_set_generation(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "describe-test-set-generation" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "describe-test-set-generation" }, input)
 end
 
 --- AWS lexv2-models generate-bot-element operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.generate_bot_element(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "generate-bot-element" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "generate-bot-element" }, input)
 end
 
 --- AWS lexv2-models get-test-execution-artifacts-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_test_execution_artifacts_url(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "get-test-execution-artifacts-url" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "get-test-execution-artifacts-url" }, input)
 end
 
 --- AWS lexv2-models list-aggregated-utterances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_aggregated_utterances(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-aggregated-utterances" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-aggregated-utterances" }, input)
 end
 
 --- AWS lexv2-models list-bot-alias-replicas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bot_alias_replicas(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-bot-alias-replicas" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-alias-replicas" }, input)
 end
 
 --- AWS lexv2-models list-bot-aliases operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bot_aliases(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-bot-aliases" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-aliases" }, input)
 end
 
 --- AWS lexv2-models list-bot-locales operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bot_locales(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-bot-locales" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-locales" }, input)
 end
 
 --- AWS lexv2-models list-bot-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bot_recommendations(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-bot-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-recommendations" }, input)
 end
 
 --- AWS lexv2-models list-bot-replicas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bot_replicas(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-bot-replicas" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-replicas" }, input)
 end
 
 --- AWS lexv2-models list-bot-resource-generations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bot_resource_generations(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-bot-resource-generations" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-resource-generations" }, input)
 end
 
 --- AWS lexv2-models list-bot-version-replicas operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bot_version_replicas(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-bot-version-replicas" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-version-replicas" }, input)
 end
 
 --- AWS lexv2-models list-bot-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bot_versions(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-bot-versions" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bot-versions" }, input)
 end
 
 --- AWS lexv2-models list-bots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_bots(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-bots" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-bots" }, input)
 end
 
 --- AWS lexv2-models list-built-in-intents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_built_in_intents(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-built-in-intents" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-built-in-intents" }, input)
 end
 
 --- AWS lexv2-models list-built-in-slot-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_built_in_slot_types(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-built-in-slot-types" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-built-in-slot-types" }, input)
 end
 
 --- AWS lexv2-models list-custom-vocabulary-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_custom_vocabulary_items(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-custom-vocabulary-items" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-custom-vocabulary-items" }, input)
 end
 
 --- AWS lexv2-models list-exports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_exports(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-exports" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-exports" }, input)
 end
 
 --- AWS lexv2-models list-imports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_imports(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-imports" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-imports" }, input)
 end
 
 --- AWS lexv2-models list-intent-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_intent_metrics(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-intent-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intent-metrics" }, input)
 end
 
 --- AWS lexv2-models list-intent-paths operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_intent_paths(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-intent-paths" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intent-paths" }, input)
 end
 
 --- AWS lexv2-models list-intent-stage-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_intent_stage_metrics(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-intent-stage-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intent-stage-metrics" }, input)
 end
 
 --- AWS lexv2-models list-intents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_intents(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-intents" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-intents" }, input)
 end
 
 --- AWS lexv2-models list-recommended-intents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recommended_intents(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-recommended-intents" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-recommended-intents" }, input)
 end
 
 --- AWS lexv2-models list-session-analytics-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_session_analytics_data(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-session-analytics-data" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-session-analytics-data" }, input)
 end
 
 --- AWS lexv2-models list-session-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_session_metrics(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-session-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-session-metrics" }, input)
 end
 
 --- AWS lexv2-models list-slot-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_slot_types(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-slot-types" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-slot-types" }, input)
 end
 
 --- AWS lexv2-models list-slots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_slots(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-slots" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-slots" }, input)
 end
 
 --- AWS lexv2-models list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-tags-for-resource" }, input)
 end
 
 --- AWS lexv2-models list-test-execution-result-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_test_execution_result_items(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-test-execution-result-items" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-execution-result-items" }, input)
 end
 
 --- AWS lexv2-models list-test-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_test_executions(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-test-executions" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-executions" }, input)
 end
 
 --- AWS lexv2-models list-test-set-records operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_test_set_records(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-test-set-records" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-set-records" }, input)
 end
 
 --- AWS lexv2-models list-test-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_test_sets(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-test-sets" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-test-sets" }, input)
 end
 
 --- AWS lexv2-models list-utterance-analytics-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_utterance_analytics_data(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-utterance-analytics-data" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-utterance-analytics-data" }, input)
 end
 
 --- AWS lexv2-models list-utterance-metrics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_utterance_metrics(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "list-utterance-metrics" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "list-utterance-metrics" }, input)
 end
 
 --- AWS lexv2-models search-associated-transcripts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_associated_transcripts(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "search-associated-transcripts" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "search-associated-transcripts" }, input)
 end
 
 --- AWS lexv2-models start-bot-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_bot_recommendation(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "start-bot-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "start-bot-recommendation" }, input)
 end
 
 --- AWS lexv2-models start-bot-resource-generation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_bot_resource_generation(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "start-bot-resource-generation" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "start-bot-resource-generation" }, input)
 end
 
 --- AWS lexv2-models start-import operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_import(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "start-import" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "start-import" }, input)
 end
 
 --- AWS lexv2-models start-test-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_test_execution(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "start-test-execution" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "start-test-execution" }, input)
 end
 
 --- AWS lexv2-models start-test-set-generation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_test_set_generation(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "start-test-set-generation" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "start-test-set-generation" }, input)
 end
 
 --- AWS lexv2-models stop-bot-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_bot_recommendation(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "stop-bot-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "stop-bot-recommendation" }, input)
 end
 
 --- AWS lexv2-models tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "tag-resource" }, input)
 end
 
 --- AWS lexv2-models untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "untag-resource" }, input)
 end
 
 --- AWS lexv2-models update-bot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_bot(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "update-bot" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot" }, input)
 end
 
 --- AWS lexv2-models update-bot-alias operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_bot_alias(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "update-bot-alias" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot-alias" }, input)
 end
 
 --- AWS lexv2-models update-bot-locale operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_bot_locale(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "update-bot-locale" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot-locale" }, input)
 end
 
 --- AWS lexv2-models update-bot-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_bot_recommendation(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "update-bot-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-bot-recommendation" }, input)
 end
 
 --- AWS lexv2-models update-export operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_export(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "update-export" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-export" }, input)
 end
 
 --- AWS lexv2-models update-intent operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_intent(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "update-intent" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-intent" }, input)
 end
 
 --- AWS lexv2-models update-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resource_policy(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "update-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-resource-policy" }, input)
 end
 
 --- AWS lexv2-models update-slot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_slot(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "update-slot" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-slot" }, input)
 end
 
 --- AWS lexv2-models update-slot-type operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_slot_type(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "update-slot-type" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-slot-type" }, input)
 end
 
 --- AWS lexv2-models update-test-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_test_set(input)
-	return common.execute_aws_command_with_input({ "lexv2-models", "update-test-set" }, input)
+	return common.execute_aws_command_skeleton({ "lexv2-models", "update-test-set" }, input)
 end
 
 --- AWS lexv2-models wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "lexv2-models", "wait" }, input)
+	return common.execute_aws_command({ "lexv2-models", "wait" }, input)
 end
 
 return M

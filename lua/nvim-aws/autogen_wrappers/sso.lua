@@ -3,42 +3,42 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SSO service functions
+--- AWS sso service functions
 local M = {}
 
 --- AWS sso get-role-credentials operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_role_credentials(input)
-	return common.execute_aws_command_with_input({ "sso", "get-role-credentials" }, input)
+	return common.execute_aws_command_skeleton({ "sso", "get-role-credentials" }, input)
 end
 
 --- AWS sso list-account-roles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_account_roles(input)
-	return common.execute_aws_command_with_input({ "sso", "list-account-roles" }, input)
+	return common.execute_aws_command_skeleton({ "sso", "list-account-roles" }, input)
 end
 
 --- AWS sso list-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_accounts(input)
-	return common.execute_aws_command_with_input({ "sso", "list-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "sso", "list-accounts" }, input)
 end
 
 --- AWS sso login operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.login(input)
-	return common.execute_aws_command_with_raw_input({ "sso", "login" }, input)
+	return common.execute_aws_command({ "sso", "login" }, input)
 end
 
 --- AWS sso logout operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.logout(input)
-	return common.execute_aws_command_with_raw_input({ "sso", "logout" }, input)
+	return common.execute_aws_command({ "sso", "logout" }, input)
 end
 
 return M

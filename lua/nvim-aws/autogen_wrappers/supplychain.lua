@@ -3,154 +3,154 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SUPPLYCHAIN service functions
+--- AWS supplychain service functions
 local M = {}
 
 --- AWS supplychain create-bill-of-materials-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_bill_of_materials_import_job(input)
-	return common.execute_aws_command_with_input({ "supplychain", "create-bill-of-materials-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "create-bill-of-materials-import-job" }, input)
 end
 
 --- AWS supplychain create-data-integration-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_integration_flow(input)
-	return common.execute_aws_command_with_input({ "supplychain", "create-data-integration-flow" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "create-data-integration-flow" }, input)
 end
 
 --- AWS supplychain create-data-lake-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_data_lake_dataset(input)
-	return common.execute_aws_command_with_input({ "supplychain", "create-data-lake-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "create-data-lake-dataset" }, input)
 end
 
 --- AWS supplychain create-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_instance(input)
-	return common.execute_aws_command_with_input({ "supplychain", "create-instance" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "create-instance" }, input)
 end
 
 --- AWS supplychain delete-data-integration-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_integration_flow(input)
-	return common.execute_aws_command_with_input({ "supplychain", "delete-data-integration-flow" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "delete-data-integration-flow" }, input)
 end
 
 --- AWS supplychain delete-data-lake-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_data_lake_dataset(input)
-	return common.execute_aws_command_with_input({ "supplychain", "delete-data-lake-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "delete-data-lake-dataset" }, input)
 end
 
 --- AWS supplychain delete-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_instance(input)
-	return common.execute_aws_command_with_input({ "supplychain", "delete-instance" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "delete-instance" }, input)
 end
 
 --- AWS supplychain get-bill-of-materials-import-job operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_bill_of_materials_import_job(input)
-	return common.execute_aws_command_with_input({ "supplychain", "get-bill-of-materials-import-job" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "get-bill-of-materials-import-job" }, input)
 end
 
 --- AWS supplychain get-data-integration-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_integration_flow(input)
-	return common.execute_aws_command_with_input({ "supplychain", "get-data-integration-flow" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "get-data-integration-flow" }, input)
 end
 
 --- AWS supplychain get-data-lake-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_data_lake_dataset(input)
-	return common.execute_aws_command_with_input({ "supplychain", "get-data-lake-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "get-data-lake-dataset" }, input)
 end
 
 --- AWS supplychain get-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_instance(input)
-	return common.execute_aws_command_with_input({ "supplychain", "get-instance" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "get-instance" }, input)
 end
 
 --- AWS supplychain list-data-integration-flows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_data_integration_flows(input)
-	return common.execute_aws_command_with_input({ "supplychain", "list-data-integration-flows" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "list-data-integration-flows" }, input)
 end
 
 --- AWS supplychain list-data-lake-datasets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_data_lake_datasets(input)
-	return common.execute_aws_command_with_input({ "supplychain", "list-data-lake-datasets" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "list-data-lake-datasets" }, input)
 end
 
 --- AWS supplychain list-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_instances(input)
-	return common.execute_aws_command_with_input({ "supplychain", "list-instances" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "list-instances" }, input)
 end
 
 --- AWS supplychain list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "supplychain", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "list-tags-for-resource" }, input)
 end
 
 --- AWS supplychain send-data-integration-event operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_data_integration_event(input)
-	return common.execute_aws_command_with_input({ "supplychain", "send-data-integration-event" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "send-data-integration-event" }, input)
 end
 
 --- AWS supplychain tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "supplychain", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "tag-resource" }, input)
 end
 
 --- AWS supplychain untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "supplychain", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "untag-resource" }, input)
 end
 
 --- AWS supplychain update-data-integration-flow operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_data_integration_flow(input)
-	return common.execute_aws_command_with_input({ "supplychain", "update-data-integration-flow" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "update-data-integration-flow" }, input)
 end
 
 --- AWS supplychain update-data-lake-dataset operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_data_lake_dataset(input)
-	return common.execute_aws_command_with_input({ "supplychain", "update-data-lake-dataset" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "update-data-lake-dataset" }, input)
 end
 
 --- AWS supplychain update-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_instance(input)
-	return common.execute_aws_command_with_input({ "supplychain", "update-instance" }, input)
+	return common.execute_aws_command_skeleton({ "supplychain", "update-instance" }, input)
 end
 
 return M

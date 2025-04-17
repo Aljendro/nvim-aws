@@ -3,84 +3,84 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CONNECTPARTICIPANT service functions
+--- AWS connectparticipant service functions
 local M = {}
 
 --- AWS connectparticipant cancel-participant-authentication operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_participant_authentication(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "cancel-participant-authentication" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "cancel-participant-authentication" }, input)
 end
 
 --- AWS connectparticipant complete-attachment-upload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.complete_attachment_upload(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "complete-attachment-upload" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "complete-attachment-upload" }, input)
 end
 
 --- AWS connectparticipant create-participant-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_participant_connection(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "create-participant-connection" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "create-participant-connection" }, input)
 end
 
 --- AWS connectparticipant describe-view operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_view(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "describe-view" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "describe-view" }, input)
 end
 
 --- AWS connectparticipant disconnect-participant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disconnect_participant(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "disconnect-participant" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "disconnect-participant" }, input)
 end
 
 --- AWS connectparticipant get-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_attachment(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "get-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "get-attachment" }, input)
 end
 
 --- AWS connectparticipant get-authentication-url operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_authentication_url(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "get-authentication-url" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "get-authentication-url" }, input)
 end
 
 --- AWS connectparticipant get-transcript operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transcript(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "get-transcript" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "get-transcript" }, input)
 end
 
 --- AWS connectparticipant send-event operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_event(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "send-event" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "send-event" }, input)
 end
 
 --- AWS connectparticipant send-message operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_message(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "send-message" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "send-message" }, input)
 end
 
 --- AWS connectparticipant start-attachment-upload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_attachment_upload(input)
-	return common.execute_aws_command_with_input({ "connectparticipant", "start-attachment-upload" }, input)
+	return common.execute_aws_command_skeleton({ "connectparticipant", "start-attachment-upload" }, input)
 end
 
 return M

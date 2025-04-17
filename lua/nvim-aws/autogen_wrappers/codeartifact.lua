@@ -3,350 +3,350 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CODEARTIFACT service functions
+--- AWS codeartifact service functions
 local M = {}
 
 --- AWS codeartifact associate-external-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_external_connection(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "associate-external-connection" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "associate-external-connection" }, input)
 end
 
 --- AWS codeartifact copy-package-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_package_versions(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "copy-package-versions" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "copy-package-versions" }, input)
 end
 
 --- AWS codeartifact create-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_domain(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "create-domain" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "create-domain" }, input)
 end
 
 --- AWS codeartifact create-package-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_package_group(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "create-package-group" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "create-package-group" }, input)
 end
 
 --- AWS codeartifact create-repository operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_repository(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "create-repository" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "create-repository" }, input)
 end
 
 --- AWS codeartifact delete-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_domain(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "delete-domain" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "delete-domain" }, input)
 end
 
 --- AWS codeartifact delete-domain-permissions-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_domain_permissions_policy(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "delete-domain-permissions-policy" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "delete-domain-permissions-policy" }, input)
 end
 
 --- AWS codeartifact delete-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_package(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "delete-package" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "delete-package" }, input)
 end
 
 --- AWS codeartifact delete-package-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_package_group(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "delete-package-group" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "delete-package-group" }, input)
 end
 
 --- AWS codeartifact delete-package-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_package_versions(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "delete-package-versions" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "delete-package-versions" }, input)
 end
 
 --- AWS codeartifact delete-repository operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_repository(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "delete-repository" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "delete-repository" }, input)
 end
 
 --- AWS codeartifact delete-repository-permissions-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_repository_permissions_policy(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "delete-repository-permissions-policy" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "delete-repository-permissions-policy" }, input)
 end
 
 --- AWS codeartifact describe-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_domain(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "describe-domain" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "describe-domain" }, input)
 end
 
 --- AWS codeartifact describe-package operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_package(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "describe-package" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "describe-package" }, input)
 end
 
 --- AWS codeartifact describe-package-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_package_group(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "describe-package-group" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "describe-package-group" }, input)
 end
 
 --- AWS codeartifact describe-package-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_package_version(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "describe-package-version" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "describe-package-version" }, input)
 end
 
 --- AWS codeartifact describe-repository operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_repository(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "describe-repository" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "describe-repository" }, input)
 end
 
 --- AWS codeartifact disassociate-external-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_external_connection(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "disassociate-external-connection" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "disassociate-external-connection" }, input)
 end
 
 --- AWS codeartifact dispose-package-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.dispose_package_versions(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "dispose-package-versions" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "dispose-package-versions" }, input)
 end
 
 --- AWS codeartifact get-associated-package-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_associated_package_group(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "get-associated-package-group" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "get-associated-package-group" }, input)
 end
 
 --- AWS codeartifact get-authorization-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_authorization_token(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "get-authorization-token" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "get-authorization-token" }, input)
 end
 
 --- AWS codeartifact get-domain-permissions-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_domain_permissions_policy(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "get-domain-permissions-policy" }, input)
-end
-
---- AWS codeartifact get-package-version-readme operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_package_version_readme(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "get-package-version-readme" }, input)
-end
-
---- AWS codeartifact get-repository-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_repository_endpoint(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "get-repository-endpoint" }, input)
-end
-
---- AWS codeartifact get-repository-permissions-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_repository_permissions_policy(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "get-repository-permissions-policy" }, input)
-end
-
---- AWS codeartifact list-allowed-repositories-for-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_allowed_repositories_for_group(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-allowed-repositories-for-group" }, input)
-end
-
---- AWS codeartifact list-associated-packages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_associated_packages(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-associated-packages" }, input)
-end
-
---- AWS codeartifact list-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_domains(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-domains" }, input)
-end
-
---- AWS codeartifact list-package-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_package_groups(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-package-groups" }, input)
-end
-
---- AWS codeartifact list-package-version-assets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_package_version_assets(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-package-version-assets" }, input)
-end
-
---- AWS codeartifact list-package-version-dependencies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_package_version_dependencies(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-package-version-dependencies" }, input)
-end
-
---- AWS codeartifact list-package-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_package_versions(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-package-versions" }, input)
-end
-
---- AWS codeartifact list-packages operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_packages(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-packages" }, input)
-end
-
---- AWS codeartifact list-repositories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_repositories(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-repositories" }, input)
-end
-
---- AWS codeartifact list-repositories-in-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_repositories_in_domain(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-repositories-in-domain" }, input)
-end
-
---- AWS codeartifact list-sub-package-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_sub_package_groups(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-sub-package-groups" }, input)
-end
-
---- AWS codeartifact list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "list-tags-for-resource" }, input)
-end
-
---- AWS codeartifact publish-package-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.publish_package_version(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "publish-package-version" }, input)
-end
-
---- AWS codeartifact put-domain-permissions-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_domain_permissions_policy(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "put-domain-permissions-policy" }, input)
-end
-
---- AWS codeartifact put-package-origin-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_package_origin_configuration(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "put-package-origin-configuration" }, input)
-end
-
---- AWS codeartifact put-repository-permissions-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_repository_permissions_policy(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "put-repository-permissions-policy" }, input)
-end
-
---- AWS codeartifact tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "tag-resource" }, input)
-end
-
---- AWS codeartifact untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "untag-resource" }, input)
-end
-
---- AWS codeartifact update-package-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_package_group(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "update-package-group" }, input)
-end
-
---- AWS codeartifact update-package-group-origin-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_package_group_origin_configuration(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "update-package-group-origin-configuration" }, input)
-end
-
---- AWS codeartifact update-package-versions-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_package_versions_status(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "update-package-versions-status" }, input)
-end
-
---- AWS codeartifact update-repository operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.update_repository(input)
-	return common.execute_aws_command_with_input({ "codeartifact", "update-repository" }, input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "get-domain-permissions-policy" }, input)
 end
 
 --- AWS codeartifact get-package-version-asset operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_package_version_asset(input)
-	return common.execute_aws_command_with_raw_input({ "codeartifact", "get-package-version-asset" }, input)
+	return common.execute_aws_command({ "codeartifact", "get-package-version-asset" }, input)
+end
+
+--- AWS codeartifact get-package-version-readme operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_package_version_readme(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "get-package-version-readme" }, input)
+end
+
+--- AWS codeartifact get-repository-endpoint operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_repository_endpoint(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "get-repository-endpoint" }, input)
+end
+
+--- AWS codeartifact get-repository-permissions-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_repository_permissions_policy(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "get-repository-permissions-policy" }, input)
+end
+
+--- AWS codeartifact list-allowed-repositories-for-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_allowed_repositories_for_group(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-allowed-repositories-for-group" }, input)
+end
+
+--- AWS codeartifact list-associated-packages operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_associated_packages(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-associated-packages" }, input)
+end
+
+--- AWS codeartifact list-domains operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_domains(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-domains" }, input)
+end
+
+--- AWS codeartifact list-package-groups operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_package_groups(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-package-groups" }, input)
+end
+
+--- AWS codeartifact list-package-version-assets operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_package_version_assets(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-package-version-assets" }, input)
+end
+
+--- AWS codeartifact list-package-version-dependencies operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_package_version_dependencies(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-package-version-dependencies" }, input)
+end
+
+--- AWS codeartifact list-package-versions operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_package_versions(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-package-versions" }, input)
+end
+
+--- AWS codeartifact list-packages operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_packages(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-packages" }, input)
+end
+
+--- AWS codeartifact list-repositories operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_repositories(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-repositories" }, input)
+end
+
+--- AWS codeartifact list-repositories-in-domain operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_repositories_in_domain(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-repositories-in-domain" }, input)
+end
+
+--- AWS codeartifact list-sub-package-groups operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_sub_package_groups(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-sub-package-groups" }, input)
+end
+
+--- AWS codeartifact list-tags-for-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.list_tags_for_resource(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "list-tags-for-resource" }, input)
 end
 
 --- AWS codeartifact login operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.login(input)
-	return common.execute_aws_command_with_raw_input({ "codeartifact", "login" }, input)
+	return common.execute_aws_command({ "codeartifact", "login" }, input)
+end
+
+--- AWS codeartifact publish-package-version operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.publish_package_version(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "publish-package-version" }, input)
+end
+
+--- AWS codeartifact put-domain-permissions-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_domain_permissions_policy(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "put-domain-permissions-policy" }, input)
+end
+
+--- AWS codeartifact put-package-origin-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_package_origin_configuration(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "put-package-origin-configuration" }, input)
+end
+
+--- AWS codeartifact put-repository-permissions-policy operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_repository_permissions_policy(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "put-repository-permissions-policy" }, input)
+end
+
+--- AWS codeartifact tag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.tag_resource(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "tag-resource" }, input)
+end
+
+--- AWS codeartifact untag-resource operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.untag_resource(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "untag-resource" }, input)
+end
+
+--- AWS codeartifact update-package-group operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_package_group(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "update-package-group" }, input)
+end
+
+--- AWS codeartifact update-package-group-origin-configuration operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_package_group_origin_configuration(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "update-package-group-origin-configuration" }, input)
+end
+
+--- AWS codeartifact update-package-versions-status operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_package_versions_status(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "update-package-versions-status" }, input)
+end
+
+--- AWS codeartifact update-repository operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.update_repository(input)
+	return common.execute_aws_command_skeleton({ "codeartifact", "update-repository" }, input)
 end
 
 return M

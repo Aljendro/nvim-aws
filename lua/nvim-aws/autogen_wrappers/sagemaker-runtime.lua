@@ -3,21 +3,21 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SAGEMAKER-RUNTIME service functions
+--- AWS sagemaker-runtime service functions
 local M = {}
 
---- AWS sagemaker-runtime invoke-endpoint-async operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.invoke_endpoint_async(input)
-	return common.execute_aws_command_with_input({ "sagemaker-runtime", "invoke-endpoint-async" }, input)
+--- AWS sagemaker-runtime invoke-endpoint operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.invoke_endpoint(input)
+	return common.execute_aws_command({ "sagemaker-runtime", "invoke-endpoint" }, input)
 end
 
---- AWS sagemaker-runtime invoke-endpoint operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.invoke_endpoint(input)
-	return common.execute_aws_command_with_raw_input({ "sagemaker-runtime", "invoke-endpoint" }, input)
+--- AWS sagemaker-runtime invoke-endpoint-async operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.invoke_endpoint_async(input)
+	return common.execute_aws_command_skeleton({ "sagemaker-runtime", "invoke-endpoint-async" }, input)
 end
 
 return M

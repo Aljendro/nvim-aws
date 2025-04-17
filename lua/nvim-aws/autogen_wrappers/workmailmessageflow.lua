@@ -3,21 +3,21 @@
 
 local common = require("nvim-aws.common")
 
---- AWS WORKMAILMESSAGEFLOW service functions
+--- AWS workmailmessageflow service functions
 local M = {}
 
---- AWS workmailmessageflow put-raw-message-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.put_raw_message_content(input)
-	return common.execute_aws_command_with_input({ "workmailmessageflow", "put-raw-message-content" }, input)
+--- AWS workmailmessageflow get-raw-message-content operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.get_raw_message_content(input)
+	return common.execute_aws_command({ "workmailmessageflow", "get-raw-message-content" }, input)
 end
 
---- AWS workmailmessageflow get-raw-message-content operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.get_raw_message_content(input)
-	return common.execute_aws_command_with_raw_input({ "workmailmessageflow", "get-raw-message-content" }, input)
+--- AWS workmailmessageflow put-raw-message-content operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.put_raw_message_content(input)
+	return common.execute_aws_command_skeleton({ "workmailmessageflow", "put-raw-message-content" }, input)
 end
 
 return M

@@ -3,217 +3,217 @@
 
 local common = require("nvim-aws.common")
 
---- AWS ROLESANYWHERE service functions
+--- AWS rolesanywhere service functions
 local M = {}
 
 --- AWS rolesanywhere create-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_profile(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "create-profile" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "create-profile" }, input)
 end
 
 --- AWS rolesanywhere create-trust-anchor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_trust_anchor(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "create-trust-anchor" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "create-trust-anchor" }, input)
 end
 
 --- AWS rolesanywhere delete-attribute-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_attribute_mapping(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "delete-attribute-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "delete-attribute-mapping" }, input)
 end
 
 --- AWS rolesanywhere delete-crl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_crl(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "delete-crl" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "delete-crl" }, input)
 end
 
 --- AWS rolesanywhere delete-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_profile(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "delete-profile" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "delete-profile" }, input)
 end
 
 --- AWS rolesanywhere delete-trust-anchor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_trust_anchor(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "delete-trust-anchor" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "delete-trust-anchor" }, input)
 end
 
 --- AWS rolesanywhere disable-crl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_crl(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "disable-crl" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "disable-crl" }, input)
 end
 
 --- AWS rolesanywhere disable-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_profile(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "disable-profile" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "disable-profile" }, input)
 end
 
 --- AWS rolesanywhere disable-trust-anchor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_trust_anchor(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "disable-trust-anchor" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "disable-trust-anchor" }, input)
 end
 
 --- AWS rolesanywhere enable-crl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_crl(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "enable-crl" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "enable-crl" }, input)
 end
 
 --- AWS rolesanywhere enable-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_profile(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "enable-profile" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "enable-profile" }, input)
 end
 
 --- AWS rolesanywhere enable-trust-anchor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_trust_anchor(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "enable-trust-anchor" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "enable-trust-anchor" }, input)
 end
 
 --- AWS rolesanywhere get-crl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_crl(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "get-crl" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "get-crl" }, input)
 end
 
 --- AWS rolesanywhere get-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_profile(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "get-profile" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "get-profile" }, input)
 end
 
 --- AWS rolesanywhere get-subject operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_subject(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "get-subject" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "get-subject" }, input)
 end
 
 --- AWS rolesanywhere get-trust-anchor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_trust_anchor(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "get-trust-anchor" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "get-trust-anchor" }, input)
 end
 
 --- AWS rolesanywhere import-crl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_crl(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "import-crl" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "import-crl" }, input)
 end
 
 --- AWS rolesanywhere list-crls operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_crls(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "list-crls" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "list-crls" }, input)
 end
 
 --- AWS rolesanywhere list-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_profiles(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "list-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "list-profiles" }, input)
 end
 
 --- AWS rolesanywhere list-subjects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_subjects(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "list-subjects" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "list-subjects" }, input)
 end
 
 --- AWS rolesanywhere list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "list-tags-for-resource" }, input)
 end
 
 --- AWS rolesanywhere list-trust-anchors operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_trust_anchors(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "list-trust-anchors" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "list-trust-anchors" }, input)
 end
 
 --- AWS rolesanywhere put-attribute-mapping operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_attribute_mapping(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "put-attribute-mapping" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "put-attribute-mapping" }, input)
 end
 
 --- AWS rolesanywhere put-notification-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_notification_settings(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "put-notification-settings" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "put-notification-settings" }, input)
 end
 
 --- AWS rolesanywhere reset-notification-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_notification_settings(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "reset-notification-settings" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "reset-notification-settings" }, input)
 end
 
 --- AWS rolesanywhere tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "tag-resource" }, input)
 end
 
 --- AWS rolesanywhere untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "untag-resource" }, input)
 end
 
 --- AWS rolesanywhere update-crl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_crl(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "update-crl" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "update-crl" }, input)
 end
 
 --- AWS rolesanywhere update-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_profile(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "update-profile" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "update-profile" }, input)
 end
 
 --- AWS rolesanywhere update-trust-anchor operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_trust_anchor(input)
-	return common.execute_aws_command_with_input({ "rolesanywhere", "update-trust-anchor" }, input)
+	return common.execute_aws_command_skeleton({ "rolesanywhere", "update-trust-anchor" }, input)
 end
 
 return M

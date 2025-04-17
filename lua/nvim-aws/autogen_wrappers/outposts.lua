@@ -3,238 +3,238 @@
 
 local common = require("nvim-aws.common")
 
---- AWS OUTPOSTS service functions
+--- AWS outposts service functions
 local M = {}
 
 --- AWS outposts cancel-capacity-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_capacity_task(input)
-	return common.execute_aws_command_with_input({ "outposts", "cancel-capacity-task" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "cancel-capacity-task" }, input)
 end
 
 --- AWS outposts cancel-order operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_order(input)
-	return common.execute_aws_command_with_input({ "outposts", "cancel-order" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "cancel-order" }, input)
 end
 
 --- AWS outposts create-order operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_order(input)
-	return common.execute_aws_command_with_input({ "outposts", "create-order" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "create-order" }, input)
 end
 
 --- AWS outposts create-outpost operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_outpost(input)
-	return common.execute_aws_command_with_input({ "outposts", "create-outpost" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "create-outpost" }, input)
 end
 
 --- AWS outposts create-site operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_site(input)
-	return common.execute_aws_command_with_input({ "outposts", "create-site" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "create-site" }, input)
 end
 
 --- AWS outposts delete-outpost operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_outpost(input)
-	return common.execute_aws_command_with_input({ "outposts", "delete-outpost" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "delete-outpost" }, input)
 end
 
 --- AWS outposts delete-site operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_site(input)
-	return common.execute_aws_command_with_input({ "outposts", "delete-site" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "delete-site" }, input)
 end
 
 --- AWS outposts get-capacity-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_capacity_task(input)
-	return common.execute_aws_command_with_input({ "outposts", "get-capacity-task" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "get-capacity-task" }, input)
 end
 
 --- AWS outposts get-catalog-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_catalog_item(input)
-	return common.execute_aws_command_with_input({ "outposts", "get-catalog-item" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "get-catalog-item" }, input)
 end
 
 --- AWS outposts get-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_connection(input)
-	return common.execute_aws_command_with_input({ "outposts", "get-connection" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "get-connection" }, input)
 end
 
 --- AWS outposts get-order operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_order(input)
-	return common.execute_aws_command_with_input({ "outposts", "get-order" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "get-order" }, input)
 end
 
 --- AWS outposts get-outpost operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_outpost(input)
-	return common.execute_aws_command_with_input({ "outposts", "get-outpost" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "get-outpost" }, input)
 end
 
 --- AWS outposts get-outpost-instance-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_outpost_instance_types(input)
-	return common.execute_aws_command_with_input({ "outposts", "get-outpost-instance-types" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "get-outpost-instance-types" }, input)
 end
 
 --- AWS outposts get-outpost-supported-instance-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_outpost_supported_instance_types(input)
-	return common.execute_aws_command_with_input({ "outposts", "get-outpost-supported-instance-types" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "get-outpost-supported-instance-types" }, input)
 end
 
 --- AWS outposts get-site operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_site(input)
-	return common.execute_aws_command_with_input({ "outposts", "get-site" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "get-site" }, input)
 end
 
 --- AWS outposts get-site-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_site_address(input)
-	return common.execute_aws_command_with_input({ "outposts", "get-site-address" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "get-site-address" }, input)
 end
 
 --- AWS outposts list-asset-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_asset_instances(input)
-	return common.execute_aws_command_with_input({ "outposts", "list-asset-instances" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "list-asset-instances" }, input)
 end
 
 --- AWS outposts list-assets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_assets(input)
-	return common.execute_aws_command_with_input({ "outposts", "list-assets" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "list-assets" }, input)
 end
 
 --- AWS outposts list-blocking-instances-for-capacity-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_blocking_instances_for_capacity_task(input)
-	return common.execute_aws_command_with_input({ "outposts", "list-blocking-instances-for-capacity-task" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "list-blocking-instances-for-capacity-task" }, input)
 end
 
 --- AWS outposts list-capacity-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_capacity_tasks(input)
-	return common.execute_aws_command_with_input({ "outposts", "list-capacity-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "list-capacity-tasks" }, input)
 end
 
 --- AWS outposts list-catalog-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_catalog_items(input)
-	return common.execute_aws_command_with_input({ "outposts", "list-catalog-items" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "list-catalog-items" }, input)
 end
 
 --- AWS outposts list-orders operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_orders(input)
-	return common.execute_aws_command_with_input({ "outposts", "list-orders" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "list-orders" }, input)
 end
 
 --- AWS outposts list-outposts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_outposts(input)
-	return common.execute_aws_command_with_input({ "outposts", "list-outposts" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "list-outposts" }, input)
 end
 
 --- AWS outposts list-sites operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_sites(input)
-	return common.execute_aws_command_with_input({ "outposts", "list-sites" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "list-sites" }, input)
 end
 
 --- AWS outposts list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "outposts", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "list-tags-for-resource" }, input)
 end
 
 --- AWS outposts start-capacity-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_capacity_task(input)
-	return common.execute_aws_command_with_input({ "outposts", "start-capacity-task" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "start-capacity-task" }, input)
 end
 
 --- AWS outposts start-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_connection(input)
-	return common.execute_aws_command_with_input({ "outposts", "start-connection" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "start-connection" }, input)
 end
 
 --- AWS outposts tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "outposts", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "tag-resource" }, input)
 end
 
 --- AWS outposts untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "outposts", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "untag-resource" }, input)
 end
 
 --- AWS outposts update-outpost operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_outpost(input)
-	return common.execute_aws_command_with_input({ "outposts", "update-outpost" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "update-outpost" }, input)
 end
 
 --- AWS outposts update-site operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_site(input)
-	return common.execute_aws_command_with_input({ "outposts", "update-site" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "update-site" }, input)
 end
 
 --- AWS outposts update-site-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_site_address(input)
-	return common.execute_aws_command_with_input({ "outposts", "update-site-address" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "update-site-address" }, input)
 end
 
 --- AWS outposts update-site-rack-physical-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_site_rack_physical_properties(input)
-	return common.execute_aws_command_with_input({ "outposts", "update-site-rack-physical-properties" }, input)
+	return common.execute_aws_command_skeleton({ "outposts", "update-site-rack-physical-properties" }, input)
 end
 
 return M

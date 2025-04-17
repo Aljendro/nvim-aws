@@ -3,497 +3,497 @@
 
 local common = require("nvim-aws.common")
 
---- AWS NEPTUNE service functions
+--- AWS neptune service functions
 local M = {}
 
 --- AWS neptune add-role-to-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_role_to_db_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "add-role-to-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "add-role-to-db-cluster" }, input)
 end
 
 --- AWS neptune add-source-identifier-to-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_source_identifier_to_subscription(input)
-	return common.execute_aws_command_with_input({ "neptune", "add-source-identifier-to-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "add-source-identifier-to-subscription" }, input)
 end
 
 --- AWS neptune add-tags-to-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_tags_to_resource(input)
-	return common.execute_aws_command_with_input({ "neptune", "add-tags-to-resource" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "add-tags-to-resource" }, input)
 end
 
 --- AWS neptune apply-pending-maintenance-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.apply_pending_maintenance_action(input)
-	return common.execute_aws_command_with_input({ "neptune", "apply-pending-maintenance-action" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "apply-pending-maintenance-action" }, input)
 end
 
 --- AWS neptune copy-db-cluster-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_db_cluster_parameter_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "copy-db-cluster-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "copy-db-cluster-parameter-group" }, input)
 end
 
 --- AWS neptune copy-db-cluster-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_db_cluster_snapshot(input)
-	return common.execute_aws_command_with_input({ "neptune", "copy-db-cluster-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "copy-db-cluster-snapshot" }, input)
 end
 
 --- AWS neptune copy-db-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_db_parameter_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "copy-db-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "copy-db-parameter-group" }, input)
 end
 
 --- AWS neptune create-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_db_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "create-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "create-db-cluster" }, input)
 end
 
 --- AWS neptune create-db-cluster-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_db_cluster_endpoint(input)
-	return common.execute_aws_command_with_input({ "neptune", "create-db-cluster-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "create-db-cluster-endpoint" }, input)
 end
 
 --- AWS neptune create-db-cluster-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_db_cluster_parameter_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "create-db-cluster-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "create-db-cluster-parameter-group" }, input)
 end
 
 --- AWS neptune create-db-cluster-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_db_cluster_snapshot(input)
-	return common.execute_aws_command_with_input({ "neptune", "create-db-cluster-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "create-db-cluster-snapshot" }, input)
 end
 
 --- AWS neptune create-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_db_instance(input)
-	return common.execute_aws_command_with_input({ "neptune", "create-db-instance" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "create-db-instance" }, input)
 end
 
 --- AWS neptune create-db-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_db_parameter_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "create-db-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "create-db-parameter-group" }, input)
 end
 
 --- AWS neptune create-db-subnet-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_db_subnet_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "create-db-subnet-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "create-db-subnet-group" }, input)
 end
 
 --- AWS neptune create-event-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_event_subscription(input)
-	return common.execute_aws_command_with_input({ "neptune", "create-event-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "create-event-subscription" }, input)
 end
 
 --- AWS neptune create-global-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_global_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "create-global-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "create-global-cluster" }, input)
 end
 
 --- AWS neptune delete-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_db_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "delete-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "delete-db-cluster" }, input)
 end
 
 --- AWS neptune delete-db-cluster-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_db_cluster_endpoint(input)
-	return common.execute_aws_command_with_input({ "neptune", "delete-db-cluster-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "delete-db-cluster-endpoint" }, input)
 end
 
 --- AWS neptune delete-db-cluster-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_db_cluster_parameter_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "delete-db-cluster-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "delete-db-cluster-parameter-group" }, input)
 end
 
 --- AWS neptune delete-db-cluster-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_db_cluster_snapshot(input)
-	return common.execute_aws_command_with_input({ "neptune", "delete-db-cluster-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "delete-db-cluster-snapshot" }, input)
 end
 
 --- AWS neptune delete-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_db_instance(input)
-	return common.execute_aws_command_with_input({ "neptune", "delete-db-instance" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "delete-db-instance" }, input)
 end
 
 --- AWS neptune delete-db-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_db_parameter_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "delete-db-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "delete-db-parameter-group" }, input)
 end
 
 --- AWS neptune delete-db-subnet-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_db_subnet_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "delete-db-subnet-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "delete-db-subnet-group" }, input)
 end
 
 --- AWS neptune delete-event-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_event_subscription(input)
-	return common.execute_aws_command_with_input({ "neptune", "delete-event-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "delete-event-subscription" }, input)
 end
 
 --- AWS neptune delete-global-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_global_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "delete-global-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "delete-global-cluster" }, input)
 end
 
 --- AWS neptune describe-db-cluster-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_cluster_endpoints(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-cluster-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-cluster-endpoints" }, input)
 end
 
 --- AWS neptune describe-db-cluster-parameter-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_cluster_parameter_groups(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-cluster-parameter-groups" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-cluster-parameter-groups" }, input)
 end
 
 --- AWS neptune describe-db-cluster-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_cluster_parameters(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-cluster-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-cluster-parameters" }, input)
 end
 
 --- AWS neptune describe-db-cluster-snapshot-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_cluster_snapshot_attributes(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-cluster-snapshot-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-cluster-snapshot-attributes" }, input)
 end
 
 --- AWS neptune describe-db-cluster-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_cluster_snapshots(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-cluster-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-cluster-snapshots" }, input)
 end
 
 --- AWS neptune describe-db-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_clusters(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-clusters" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-clusters" }, input)
 end
 
 --- AWS neptune describe-db-engine-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_engine_versions(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-engine-versions" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-engine-versions" }, input)
 end
 
 --- AWS neptune describe-db-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_instances(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-instances" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-instances" }, input)
 end
 
 --- AWS neptune describe-db-parameter-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_parameter_groups(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-parameter-groups" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-parameter-groups" }, input)
 end
 
 --- AWS neptune describe-db-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_parameters(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-parameters" }, input)
 end
 
 --- AWS neptune describe-db-subnet-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_db_subnet_groups(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-db-subnet-groups" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-db-subnet-groups" }, input)
 end
 
 --- AWS neptune describe-engine-default-cluster-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_engine_default_cluster_parameters(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-engine-default-cluster-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-engine-default-cluster-parameters" }, input)
 end
 
 --- AWS neptune describe-engine-default-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_engine_default_parameters(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-engine-default-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-engine-default-parameters" }, input)
 end
 
 --- AWS neptune describe-event-categories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_categories(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-event-categories" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-event-categories" }, input)
 end
 
 --- AWS neptune describe-event-subscriptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_subscriptions(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-event-subscriptions" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-event-subscriptions" }, input)
 end
 
 --- AWS neptune describe-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_events(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-events" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-events" }, input)
 end
 
 --- AWS neptune describe-global-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_global_clusters(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-global-clusters" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-global-clusters" }, input)
 end
 
 --- AWS neptune describe-orderable-db-instance-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_orderable_db_instance_options(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-orderable-db-instance-options" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-orderable-db-instance-options" }, input)
 end
 
 --- AWS neptune describe-pending-maintenance-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_pending_maintenance_actions(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-pending-maintenance-actions" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-pending-maintenance-actions" }, input)
 end
 
 --- AWS neptune describe-valid-db-instance-modifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_valid_db_instance_modifications(input)
-	return common.execute_aws_command_with_input({ "neptune", "describe-valid-db-instance-modifications" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "describe-valid-db-instance-modifications" }, input)
 end
 
 --- AWS neptune failover-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.failover_db_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "failover-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "failover-db-cluster" }, input)
 end
 
 --- AWS neptune failover-global-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.failover_global_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "failover-global-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "failover-global-cluster" }, input)
 end
 
 --- AWS neptune list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "neptune", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "list-tags-for-resource" }, input)
 end
 
 --- AWS neptune modify-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_db_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "modify-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "modify-db-cluster" }, input)
 end
 
 --- AWS neptune modify-db-cluster-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_db_cluster_endpoint(input)
-	return common.execute_aws_command_with_input({ "neptune", "modify-db-cluster-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "modify-db-cluster-endpoint" }, input)
 end
 
 --- AWS neptune modify-db-cluster-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_db_cluster_parameter_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "modify-db-cluster-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "modify-db-cluster-parameter-group" }, input)
 end
 
 --- AWS neptune modify-db-cluster-snapshot-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_db_cluster_snapshot_attribute(input)
-	return common.execute_aws_command_with_input({ "neptune", "modify-db-cluster-snapshot-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "modify-db-cluster-snapshot-attribute" }, input)
 end
 
 --- AWS neptune modify-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_db_instance(input)
-	return common.execute_aws_command_with_input({ "neptune", "modify-db-instance" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "modify-db-instance" }, input)
 end
 
 --- AWS neptune modify-db-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_db_parameter_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "modify-db-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "modify-db-parameter-group" }, input)
 end
 
 --- AWS neptune modify-db-subnet-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_db_subnet_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "modify-db-subnet-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "modify-db-subnet-group" }, input)
 end
 
 --- AWS neptune modify-event-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_event_subscription(input)
-	return common.execute_aws_command_with_input({ "neptune", "modify-event-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "modify-event-subscription" }, input)
 end
 
 --- AWS neptune modify-global-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_global_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "modify-global-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "modify-global-cluster" }, input)
 end
 
 --- AWS neptune promote-read-replica-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.promote_read_replica_db_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "promote-read-replica-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "promote-read-replica-db-cluster" }, input)
 end
 
 --- AWS neptune reboot-db-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reboot_db_instance(input)
-	return common.execute_aws_command_with_input({ "neptune", "reboot-db-instance" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "reboot-db-instance" }, input)
 end
 
 --- AWS neptune remove-from-global-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_from_global_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "remove-from-global-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "remove-from-global-cluster" }, input)
 end
 
 --- AWS neptune remove-role-from-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_role_from_db_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "remove-role-from-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "remove-role-from-db-cluster" }, input)
 end
 
 --- AWS neptune remove-source-identifier-from-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_source_identifier_from_subscription(input)
-	return common.execute_aws_command_with_input({ "neptune", "remove-source-identifier-from-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "remove-source-identifier-from-subscription" }, input)
 end
 
 --- AWS neptune remove-tags-from-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_tags_from_resource(input)
-	return common.execute_aws_command_with_input({ "neptune", "remove-tags-from-resource" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "remove-tags-from-resource" }, input)
 end
 
 --- AWS neptune reset-db-cluster-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_db_cluster_parameter_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "reset-db-cluster-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "reset-db-cluster-parameter-group" }, input)
 end
 
 --- AWS neptune reset-db-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_db_parameter_group(input)
-	return common.execute_aws_command_with_input({ "neptune", "reset-db-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "reset-db-parameter-group" }, input)
 end
 
 --- AWS neptune restore-db-cluster-from-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_db_cluster_from_snapshot(input)
-	return common.execute_aws_command_with_input({ "neptune", "restore-db-cluster-from-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "restore-db-cluster-from-snapshot" }, input)
 end
 
 --- AWS neptune restore-db-cluster-to-point-in-time operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_db_cluster_to_point_in_time(input)
-	return common.execute_aws_command_with_input({ "neptune", "restore-db-cluster-to-point-in-time" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "restore-db-cluster-to-point-in-time" }, input)
 end
 
 --- AWS neptune start-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_db_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "start-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "start-db-cluster" }, input)
 end
 
 --- AWS neptune stop-db-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_db_cluster(input)
-	return common.execute_aws_command_with_input({ "neptune", "stop-db-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "neptune", "stop-db-cluster" }, input)
 end
 
 --- AWS neptune wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "neptune", "wait" }, input)
+	return common.execute_aws_command({ "neptune", "wait" }, input)
 end
 
 return M

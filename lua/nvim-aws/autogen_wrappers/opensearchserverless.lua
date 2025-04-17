@@ -3,266 +3,266 @@
 
 local common = require("nvim-aws.common")
 
---- AWS OPENSEARCHSERVERLESS service functions
+--- AWS opensearchserverless service functions
 local M = {}
 
 --- AWS opensearchserverless batch-get-collection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_collection(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "batch-get-collection" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "batch-get-collection" }, input)
 end
 
 --- AWS opensearchserverless batch-get-effective-lifecycle-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_effective_lifecycle_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "batch-get-effective-lifecycle-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "batch-get-effective-lifecycle-policy" }, input)
 end
 
 --- AWS opensearchserverless batch-get-lifecycle-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_lifecycle_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "batch-get-lifecycle-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "batch-get-lifecycle-policy" }, input)
 end
 
 --- AWS opensearchserverless batch-get-vpc-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_get_vpc_endpoint(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "batch-get-vpc-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "batch-get-vpc-endpoint" }, input)
 end
 
 --- AWS opensearchserverless create-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_access_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "create-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "create-access-policy" }, input)
 end
 
 --- AWS opensearchserverless create-collection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_collection(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "create-collection" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "create-collection" }, input)
 end
 
 --- AWS opensearchserverless create-lifecycle-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_lifecycle_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "create-lifecycle-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "create-lifecycle-policy" }, input)
 end
 
 --- AWS opensearchserverless create-security-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_security_config(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "create-security-config" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "create-security-config" }, input)
 end
 
 --- AWS opensearchserverless create-security-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_security_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "create-security-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "create-security-policy" }, input)
 end
 
 --- AWS opensearchserverless create-vpc-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_endpoint(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "create-vpc-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "create-vpc-endpoint" }, input)
 end
 
 --- AWS opensearchserverless delete-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_access_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "delete-access-policy" }, input)
 end
 
 --- AWS opensearchserverless delete-collection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_collection(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-collection" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "delete-collection" }, input)
 end
 
 --- AWS opensearchserverless delete-lifecycle-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_lifecycle_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-lifecycle-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "delete-lifecycle-policy" }, input)
 end
 
 --- AWS opensearchserverless delete-security-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_security_config(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-security-config" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "delete-security-config" }, input)
 end
 
 --- AWS opensearchserverless delete-security-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_security_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-security-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "delete-security-policy" }, input)
 end
 
 --- AWS opensearchserverless delete-vpc-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_endpoint(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "delete-vpc-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "delete-vpc-endpoint" }, input)
 end
 
 --- AWS opensearchserverless get-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_access_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "get-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "get-access-policy" }, input)
 end
 
 --- AWS opensearchserverless get-account-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_account_settings(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "get-account-settings" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "get-account-settings" }, input)
 end
 
 --- AWS opensearchserverless get-policies-stats operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_policies_stats(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "get-policies-stats" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "get-policies-stats" }, input)
 end
 
 --- AWS opensearchserverless get-security-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_security_config(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "get-security-config" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "get-security-config" }, input)
 end
 
 --- AWS opensearchserverless get-security-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_security_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "get-security-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "get-security-policy" }, input)
 end
 
 --- AWS opensearchserverless list-access-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_access_policies(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "list-access-policies" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "list-access-policies" }, input)
 end
 
 --- AWS opensearchserverless list-collections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_collections(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "list-collections" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "list-collections" }, input)
 end
 
 --- AWS opensearchserverless list-lifecycle-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_lifecycle_policies(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "list-lifecycle-policies" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "list-lifecycle-policies" }, input)
 end
 
 --- AWS opensearchserverless list-security-configs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_security_configs(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "list-security-configs" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "list-security-configs" }, input)
 end
 
 --- AWS opensearchserverless list-security-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_security_policies(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "list-security-policies" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "list-security-policies" }, input)
 end
 
 --- AWS opensearchserverless list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "list-tags-for-resource" }, input)
 end
 
 --- AWS opensearchserverless list-vpc-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_vpc_endpoints(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "list-vpc-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "list-vpc-endpoints" }, input)
 end
 
 --- AWS opensearchserverless tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "tag-resource" }, input)
 end
 
 --- AWS opensearchserverless untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "untag-resource" }, input)
 end
 
 --- AWS opensearchserverless update-access-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_access_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "update-access-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "update-access-policy" }, input)
 end
 
 --- AWS opensearchserverless update-account-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_account_settings(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "update-account-settings" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "update-account-settings" }, input)
 end
 
 --- AWS opensearchserverless update-collection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_collection(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "update-collection" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "update-collection" }, input)
 end
 
 --- AWS opensearchserverless update-lifecycle-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_lifecycle_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "update-lifecycle-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "update-lifecycle-policy" }, input)
 end
 
 --- AWS opensearchserverless update-security-config operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_security_config(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "update-security-config" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "update-security-config" }, input)
 end
 
 --- AWS opensearchserverless update-security-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_security_policy(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "update-security-policy" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "update-security-policy" }, input)
 end
 
 --- AWS opensearchserverless update-vpc-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_vpc_endpoint(input)
-	return common.execute_aws_command_with_input({ "opensearchserverless", "update-vpc-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "opensearchserverless", "update-vpc-endpoint" }, input)
 end
 
 return M

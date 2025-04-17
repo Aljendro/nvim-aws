@@ -3,238 +3,238 @@
 
 local common = require("nvim-aws.common")
 
---- AWS APPLICATION-INSIGHTS service functions
+--- AWS application-insights service functions
 local M = {}
 
 --- AWS application-insights add-workload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_workload(input)
-	return common.execute_aws_command_with_input({ "application-insights", "add-workload" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "add-workload" }, input)
 end
 
 --- AWS application-insights create-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_application(input)
-	return common.execute_aws_command_with_input({ "application-insights", "create-application" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "create-application" }, input)
 end
 
 --- AWS application-insights create-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_component(input)
-	return common.execute_aws_command_with_input({ "application-insights", "create-component" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "create-component" }, input)
 end
 
 --- AWS application-insights create-log-pattern operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_log_pattern(input)
-	return common.execute_aws_command_with_input({ "application-insights", "create-log-pattern" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "create-log-pattern" }, input)
 end
 
 --- AWS application-insights delete-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_application(input)
-	return common.execute_aws_command_with_input({ "application-insights", "delete-application" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "delete-application" }, input)
 end
 
 --- AWS application-insights delete-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_component(input)
-	return common.execute_aws_command_with_input({ "application-insights", "delete-component" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "delete-component" }, input)
 end
 
 --- AWS application-insights delete-log-pattern operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_log_pattern(input)
-	return common.execute_aws_command_with_input({ "application-insights", "delete-log-pattern" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "delete-log-pattern" }, input)
 end
 
 --- AWS application-insights describe-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_application(input)
-	return common.execute_aws_command_with_input({ "application-insights", "describe-application" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "describe-application" }, input)
 end
 
 --- AWS application-insights describe-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_component(input)
-	return common.execute_aws_command_with_input({ "application-insights", "describe-component" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "describe-component" }, input)
 end
 
 --- AWS application-insights describe-component-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_component_configuration(input)
-	return common.execute_aws_command_with_input({ "application-insights", "describe-component-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "describe-component-configuration" }, input)
 end
 
 --- AWS application-insights describe-component-configuration-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_component_configuration_recommendation(input)
-	return common.execute_aws_command_with_input({ "application-insights", "describe-component-configuration-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "describe-component-configuration-recommendation" }, input)
 end
 
 --- AWS application-insights describe-log-pattern operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_log_pattern(input)
-	return common.execute_aws_command_with_input({ "application-insights", "describe-log-pattern" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "describe-log-pattern" }, input)
 end
 
 --- AWS application-insights describe-observation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_observation(input)
-	return common.execute_aws_command_with_input({ "application-insights", "describe-observation" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "describe-observation" }, input)
 end
 
 --- AWS application-insights describe-problem operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_problem(input)
-	return common.execute_aws_command_with_input({ "application-insights", "describe-problem" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "describe-problem" }, input)
 end
 
 --- AWS application-insights describe-problem-observations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_problem_observations(input)
-	return common.execute_aws_command_with_input({ "application-insights", "describe-problem-observations" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "describe-problem-observations" }, input)
 end
 
 --- AWS application-insights describe-workload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_workload(input)
-	return common.execute_aws_command_with_input({ "application-insights", "describe-workload" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "describe-workload" }, input)
 end
 
 --- AWS application-insights list-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_applications(input)
-	return common.execute_aws_command_with_input({ "application-insights", "list-applications" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "list-applications" }, input)
 end
 
 --- AWS application-insights list-components operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_components(input)
-	return common.execute_aws_command_with_input({ "application-insights", "list-components" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "list-components" }, input)
 end
 
 --- AWS application-insights list-configuration-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_configuration_history(input)
-	return common.execute_aws_command_with_input({ "application-insights", "list-configuration-history" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "list-configuration-history" }, input)
 end
 
 --- AWS application-insights list-log-pattern-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_log_pattern_sets(input)
-	return common.execute_aws_command_with_input({ "application-insights", "list-log-pattern-sets" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "list-log-pattern-sets" }, input)
 end
 
 --- AWS application-insights list-log-patterns operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_log_patterns(input)
-	return common.execute_aws_command_with_input({ "application-insights", "list-log-patterns" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "list-log-patterns" }, input)
 end
 
 --- AWS application-insights list-problems operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_problems(input)
-	return common.execute_aws_command_with_input({ "application-insights", "list-problems" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "list-problems" }, input)
 end
 
 --- AWS application-insights list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "application-insights", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "list-tags-for-resource" }, input)
 end
 
 --- AWS application-insights list-workloads operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_workloads(input)
-	return common.execute_aws_command_with_input({ "application-insights", "list-workloads" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "list-workloads" }, input)
 end
 
 --- AWS application-insights remove-workload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_workload(input)
-	return common.execute_aws_command_with_input({ "application-insights", "remove-workload" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "remove-workload" }, input)
 end
 
 --- AWS application-insights tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "application-insights", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "tag-resource" }, input)
 end
 
 --- AWS application-insights untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "application-insights", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "untag-resource" }, input)
 end
 
 --- AWS application-insights update-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_application(input)
-	return common.execute_aws_command_with_input({ "application-insights", "update-application" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "update-application" }, input)
 end
 
 --- AWS application-insights update-component operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_component(input)
-	return common.execute_aws_command_with_input({ "application-insights", "update-component" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "update-component" }, input)
 end
 
 --- AWS application-insights update-component-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_component_configuration(input)
-	return common.execute_aws_command_with_input({ "application-insights", "update-component-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "update-component-configuration" }, input)
 end
 
 --- AWS application-insights update-log-pattern operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_log_pattern(input)
-	return common.execute_aws_command_with_input({ "application-insights", "update-log-pattern" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "update-log-pattern" }, input)
 end
 
 --- AWS application-insights update-problem operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_problem(input)
-	return common.execute_aws_command_with_input({ "application-insights", "update-problem" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "update-problem" }, input)
 end
 
 --- AWS application-insights update-workload operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_workload(input)
-	return common.execute_aws_command_with_input({ "application-insights", "update-workload" }, input)
+	return common.execute_aws_command_skeleton({ "application-insights", "update-workload" }, input)
 end
 
 return M

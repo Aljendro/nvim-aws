@@ -3,490 +3,490 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SES service functions
+--- AWS ses service functions
 local M = {}
 
 --- AWS ses clone-receipt-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.clone_receipt_rule_set(input)
-	return common.execute_aws_command_with_input({ "ses", "clone-receipt-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "clone-receipt-rule-set" }, input)
 end
 
 --- AWS ses create-configuration-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_configuration_set(input)
-	return common.execute_aws_command_with_input({ "ses", "create-configuration-set" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "create-configuration-set" }, input)
 end
 
 --- AWS ses create-configuration-set-event-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_configuration_set_event_destination(input)
-	return common.execute_aws_command_with_input({ "ses", "create-configuration-set-event-destination" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "create-configuration-set-event-destination" }, input)
 end
 
 --- AWS ses create-configuration-set-tracking-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_configuration_set_tracking_options(input)
-	return common.execute_aws_command_with_input({ "ses", "create-configuration-set-tracking-options" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "create-configuration-set-tracking-options" }, input)
 end
 
 --- AWS ses create-custom-verification-email-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_custom_verification_email_template(input)
-	return common.execute_aws_command_with_input({ "ses", "create-custom-verification-email-template" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "create-custom-verification-email-template" }, input)
 end
 
 --- AWS ses create-receipt-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_receipt_filter(input)
-	return common.execute_aws_command_with_input({ "ses", "create-receipt-filter" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "create-receipt-filter" }, input)
 end
 
 --- AWS ses create-receipt-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_receipt_rule(input)
-	return common.execute_aws_command_with_input({ "ses", "create-receipt-rule" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "create-receipt-rule" }, input)
 end
 
 --- AWS ses create-receipt-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_receipt_rule_set(input)
-	return common.execute_aws_command_with_input({ "ses", "create-receipt-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "create-receipt-rule-set" }, input)
 end
 
 --- AWS ses create-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_template(input)
-	return common.execute_aws_command_with_input({ "ses", "create-template" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "create-template" }, input)
 end
 
 --- AWS ses delete-configuration-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configuration_set(input)
-	return common.execute_aws_command_with_input({ "ses", "delete-configuration-set" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "delete-configuration-set" }, input)
 end
 
 --- AWS ses delete-configuration-set-event-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configuration_set_event_destination(input)
-	return common.execute_aws_command_with_input({ "ses", "delete-configuration-set-event-destination" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "delete-configuration-set-event-destination" }, input)
 end
 
 --- AWS ses delete-configuration-set-tracking-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_configuration_set_tracking_options(input)
-	return common.execute_aws_command_with_input({ "ses", "delete-configuration-set-tracking-options" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "delete-configuration-set-tracking-options" }, input)
 end
 
 --- AWS ses delete-custom-verification-email-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_verification_email_template(input)
-	return common.execute_aws_command_with_input({ "ses", "delete-custom-verification-email-template" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "delete-custom-verification-email-template" }, input)
 end
 
 --- AWS ses delete-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_identity(input)
-	return common.execute_aws_command_with_input({ "ses", "delete-identity" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "delete-identity" }, input)
 end
 
 --- AWS ses delete-identity-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_identity_policy(input)
-	return common.execute_aws_command_with_input({ "ses", "delete-identity-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "delete-identity-policy" }, input)
 end
 
 --- AWS ses delete-receipt-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_receipt_filter(input)
-	return common.execute_aws_command_with_input({ "ses", "delete-receipt-filter" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "delete-receipt-filter" }, input)
 end
 
 --- AWS ses delete-receipt-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_receipt_rule(input)
-	return common.execute_aws_command_with_input({ "ses", "delete-receipt-rule" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "delete-receipt-rule" }, input)
 end
 
 --- AWS ses delete-receipt-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_receipt_rule_set(input)
-	return common.execute_aws_command_with_input({ "ses", "delete-receipt-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "delete-receipt-rule-set" }, input)
 end
 
 --- AWS ses delete-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_template(input)
-	return common.execute_aws_command_with_input({ "ses", "delete-template" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "delete-template" }, input)
 end
 
 --- AWS ses describe-active-receipt-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_active_receipt_rule_set(input)
-	return common.execute_aws_command_with_input({ "ses", "describe-active-receipt-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "describe-active-receipt-rule-set" }, input)
 end
 
 --- AWS ses describe-configuration-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_configuration_set(input)
-	return common.execute_aws_command_with_input({ "ses", "describe-configuration-set" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "describe-configuration-set" }, input)
 end
 
 --- AWS ses describe-receipt-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_receipt_rule(input)
-	return common.execute_aws_command_with_input({ "ses", "describe-receipt-rule" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "describe-receipt-rule" }, input)
 end
 
 --- AWS ses describe-receipt-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_receipt_rule_set(input)
-	return common.execute_aws_command_with_input({ "ses", "describe-receipt-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "describe-receipt-rule-set" }, input)
 end
 
 --- AWS ses get-account-sending-enabled operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_account_sending_enabled(input)
-	return common.execute_aws_command_with_input({ "ses", "get-account-sending-enabled" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "get-account-sending-enabled" }, input)
 end
 
 --- AWS ses get-custom-verification-email-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_custom_verification_email_template(input)
-	return common.execute_aws_command_with_input({ "ses", "get-custom-verification-email-template" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "get-custom-verification-email-template" }, input)
 end
 
 --- AWS ses get-identity-dkim-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_identity_dkim_attributes(input)
-	return common.execute_aws_command_with_input({ "ses", "get-identity-dkim-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "get-identity-dkim-attributes" }, input)
 end
 
 --- AWS ses get-identity-mail-from-domain-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_identity_mail_from_domain_attributes(input)
-	return common.execute_aws_command_with_input({ "ses", "get-identity-mail-from-domain-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "get-identity-mail-from-domain-attributes" }, input)
 end
 
 --- AWS ses get-identity-notification-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_identity_notification_attributes(input)
-	return common.execute_aws_command_with_input({ "ses", "get-identity-notification-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "get-identity-notification-attributes" }, input)
 end
 
 --- AWS ses get-identity-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_identity_policies(input)
-	return common.execute_aws_command_with_input({ "ses", "get-identity-policies" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "get-identity-policies" }, input)
 end
 
 --- AWS ses get-identity-verification-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_identity_verification_attributes(input)
-	return common.execute_aws_command_with_input({ "ses", "get-identity-verification-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "get-identity-verification-attributes" }, input)
 end
 
 --- AWS ses get-send-quota operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_send_quota(input)
-	return common.execute_aws_command_with_input({ "ses", "get-send-quota" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "get-send-quota" }, input)
 end
 
 --- AWS ses get-send-statistics operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_send_statistics(input)
-	return common.execute_aws_command_with_input({ "ses", "get-send-statistics" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "get-send-statistics" }, input)
 end
 
 --- AWS ses get-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_template(input)
-	return common.execute_aws_command_with_input({ "ses", "get-template" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "get-template" }, input)
 end
 
 --- AWS ses list-configuration-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_configuration_sets(input)
-	return common.execute_aws_command_with_input({ "ses", "list-configuration-sets" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "list-configuration-sets" }, input)
 end
 
 --- AWS ses list-custom-verification-email-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_custom_verification_email_templates(input)
-	return common.execute_aws_command_with_input({ "ses", "list-custom-verification-email-templates" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "list-custom-verification-email-templates" }, input)
 end
 
 --- AWS ses list-identities operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_identities(input)
-	return common.execute_aws_command_with_input({ "ses", "list-identities" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "list-identities" }, input)
 end
 
 --- AWS ses list-identity-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_identity_policies(input)
-	return common.execute_aws_command_with_input({ "ses", "list-identity-policies" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "list-identity-policies" }, input)
 end
 
 --- AWS ses list-receipt-filters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_receipt_filters(input)
-	return common.execute_aws_command_with_input({ "ses", "list-receipt-filters" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "list-receipt-filters" }, input)
 end
 
 --- AWS ses list-receipt-rule-sets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_receipt_rule_sets(input)
-	return common.execute_aws_command_with_input({ "ses", "list-receipt-rule-sets" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "list-receipt-rule-sets" }, input)
 end
 
 --- AWS ses list-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_templates(input)
-	return common.execute_aws_command_with_input({ "ses", "list-templates" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "list-templates" }, input)
 end
 
 --- AWS ses put-configuration-set-delivery-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_configuration_set_delivery_options(input)
-	return common.execute_aws_command_with_input({ "ses", "put-configuration-set-delivery-options" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "put-configuration-set-delivery-options" }, input)
 end
 
 --- AWS ses put-identity-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_identity_policy(input)
-	return common.execute_aws_command_with_input({ "ses", "put-identity-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "put-identity-policy" }, input)
 end
 
 --- AWS ses reorder-receipt-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reorder_receipt_rule_set(input)
-	return common.execute_aws_command_with_input({ "ses", "reorder-receipt-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "reorder-receipt-rule-set" }, input)
 end
 
 --- AWS ses send-bounce operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_bounce(input)
-	return common.execute_aws_command_with_input({ "ses", "send-bounce" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "send-bounce" }, input)
 end
 
 --- AWS ses send-bulk-templated-email operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_bulk_templated_email(input)
-	return common.execute_aws_command_with_input({ "ses", "send-bulk-templated-email" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "send-bulk-templated-email" }, input)
 end
 
 --- AWS ses send-custom-verification-email operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_custom_verification_email(input)
-	return common.execute_aws_command_with_input({ "ses", "send-custom-verification-email" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "send-custom-verification-email" }, input)
 end
 
 --- AWS ses send-email operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_email(input)
-	return common.execute_aws_command_with_input({ "ses", "send-email" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "send-email" }, input)
 end
 
 --- AWS ses send-raw-email operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_raw_email(input)
-	return common.execute_aws_command_with_input({ "ses", "send-raw-email" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "send-raw-email" }, input)
 end
 
 --- AWS ses send-templated-email operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_templated_email(input)
-	return common.execute_aws_command_with_input({ "ses", "send-templated-email" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "send-templated-email" }, input)
 end
 
 --- AWS ses set-active-receipt-rule-set operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_active_receipt_rule_set(input)
-	return common.execute_aws_command_with_input({ "ses", "set-active-receipt-rule-set" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "set-active-receipt-rule-set" }, input)
 end
 
 --- AWS ses set-identity-dkim-enabled operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_identity_dkim_enabled(input)
-	return common.execute_aws_command_with_input({ "ses", "set-identity-dkim-enabled" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "set-identity-dkim-enabled" }, input)
 end
 
 --- AWS ses set-identity-feedback-forwarding-enabled operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_identity_feedback_forwarding_enabled(input)
-	return common.execute_aws_command_with_input({ "ses", "set-identity-feedback-forwarding-enabled" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "set-identity-feedback-forwarding-enabled" }, input)
 end
 
 --- AWS ses set-identity-headers-in-notifications-enabled operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_identity_headers_in_notifications_enabled(input)
-	return common.execute_aws_command_with_input({ "ses", "set-identity-headers-in-notifications-enabled" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "set-identity-headers-in-notifications-enabled" }, input)
 end
 
 --- AWS ses set-identity-mail-from-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_identity_mail_from_domain(input)
-	return common.execute_aws_command_with_input({ "ses", "set-identity-mail-from-domain" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "set-identity-mail-from-domain" }, input)
 end
 
 --- AWS ses set-identity-notification-topic operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_identity_notification_topic(input)
-	return common.execute_aws_command_with_input({ "ses", "set-identity-notification-topic" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "set-identity-notification-topic" }, input)
 end
 
 --- AWS ses set-receipt-rule-position operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.set_receipt_rule_position(input)
-	return common.execute_aws_command_with_input({ "ses", "set-receipt-rule-position" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "set-receipt-rule-position" }, input)
 end
 
 --- AWS ses test-render-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.test_render_template(input)
-	return common.execute_aws_command_with_input({ "ses", "test-render-template" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "test-render-template" }, input)
 end
 
 --- AWS ses update-account-sending-enabled operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_account_sending_enabled(input)
-	return common.execute_aws_command_with_input({ "ses", "update-account-sending-enabled" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "update-account-sending-enabled" }, input)
 end
 
 --- AWS ses update-configuration-set-event-destination operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_configuration_set_event_destination(input)
-	return common.execute_aws_command_with_input({ "ses", "update-configuration-set-event-destination" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "update-configuration-set-event-destination" }, input)
 end
 
 --- AWS ses update-configuration-set-reputation-metrics-enabled operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_configuration_set_reputation_metrics_enabled(input)
-	return common.execute_aws_command_with_input({ "ses", "update-configuration-set-reputation-metrics-enabled" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "update-configuration-set-reputation-metrics-enabled" }, input)
 end
 
 --- AWS ses update-configuration-set-sending-enabled operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_configuration_set_sending_enabled(input)
-	return common.execute_aws_command_with_input({ "ses", "update-configuration-set-sending-enabled" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "update-configuration-set-sending-enabled" }, input)
 end
 
 --- AWS ses update-configuration-set-tracking-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_configuration_set_tracking_options(input)
-	return common.execute_aws_command_with_input({ "ses", "update-configuration-set-tracking-options" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "update-configuration-set-tracking-options" }, input)
 end
 
 --- AWS ses update-custom-verification-email-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_custom_verification_email_template(input)
-	return common.execute_aws_command_with_input({ "ses", "update-custom-verification-email-template" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "update-custom-verification-email-template" }, input)
 end
 
 --- AWS ses update-receipt-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_receipt_rule(input)
-	return common.execute_aws_command_with_input({ "ses", "update-receipt-rule" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "update-receipt-rule" }, input)
 end
 
 --- AWS ses update-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_template(input)
-	return common.execute_aws_command_with_input({ "ses", "update-template" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "update-template" }, input)
 end
 
 --- AWS ses verify-domain-dkim operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify_domain_dkim(input)
-	return common.execute_aws_command_with_input({ "ses", "verify-domain-dkim" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "verify-domain-dkim" }, input)
 end
 
 --- AWS ses verify-domain-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify_domain_identity(input)
-	return common.execute_aws_command_with_input({ "ses", "verify-domain-identity" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "verify-domain-identity" }, input)
 end
 
 --- AWS ses verify-email-identity operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.verify_email_identity(input)
-	return common.execute_aws_command_with_input({ "ses", "verify-email-identity" }, input)
+	return common.execute_aws_command_skeleton({ "ses", "verify-email-identity" }, input)
 end
 
 --- AWS ses wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "ses", "wait" }, input)
+	return common.execute_aws_command({ "ses", "wait" }, input)
 end
 
 return M

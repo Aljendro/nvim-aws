@@ -3,4725 +3,4725 @@
 
 local common = require("nvim-aws.common")
 
---- AWS EC2 service functions
+--- AWS ec2 service functions
 local M = {}
 
 --- AWS ec2 accept-address-transfer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_address_transfer(input)
-	return common.execute_aws_command_with_input({ "ec2", "accept-address-transfer" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "accept-address-transfer" }, input)
 end
 
 --- AWS ec2 accept-capacity-reservation-billing-ownership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_capacity_reservation_billing_ownership(input)
-	return common.execute_aws_command_with_input({ "ec2", "accept-capacity-reservation-billing-ownership" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "accept-capacity-reservation-billing-ownership" }, input)
 end
 
 --- AWS ec2 accept-reserved-instances-exchange-quote operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_reserved_instances_exchange_quote(input)
-	return common.execute_aws_command_with_input({ "ec2", "accept-reserved-instances-exchange-quote" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "accept-reserved-instances-exchange-quote" }, input)
 end
 
 --- AWS ec2 accept-transit-gateway-multicast-domain-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_transit_gateway_multicast_domain_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "accept-transit-gateway-multicast-domain-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "accept-transit-gateway-multicast-domain-associations" }, input)
 end
 
 --- AWS ec2 accept-transit-gateway-peering-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_transit_gateway_peering_attachment(input)
-	return common.execute_aws_command_with_input({ "ec2", "accept-transit-gateway-peering-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "accept-transit-gateway-peering-attachment" }, input)
 end
 
 --- AWS ec2 accept-transit-gateway-vpc-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_transit_gateway_vpc_attachment(input)
-	return common.execute_aws_command_with_input({ "ec2", "accept-transit-gateway-vpc-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "accept-transit-gateway-vpc-attachment" }, input)
 end
 
 --- AWS ec2 accept-vpc-endpoint-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_vpc_endpoint_connections(input)
-	return common.execute_aws_command_with_input({ "ec2", "accept-vpc-endpoint-connections" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "accept-vpc-endpoint-connections" }, input)
 end
 
 --- AWS ec2 accept-vpc-peering-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_vpc_peering_connection(input)
-	return common.execute_aws_command_with_input({ "ec2", "accept-vpc-peering-connection" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "accept-vpc-peering-connection" }, input)
 end
 
 --- AWS ec2 advertise-byoip-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.advertise_byoip_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "advertise-byoip-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "advertise-byoip-cidr" }, input)
 end
 
 --- AWS ec2 allocate-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.allocate_address(input)
-	return common.execute_aws_command_with_input({ "ec2", "allocate-address" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "allocate-address" }, input)
 end
 
 --- AWS ec2 allocate-hosts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.allocate_hosts(input)
-	return common.execute_aws_command_with_input({ "ec2", "allocate-hosts" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "allocate-hosts" }, input)
 end
 
 --- AWS ec2 allocate-ipam-pool-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.allocate_ipam_pool_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "allocate-ipam-pool-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "allocate-ipam-pool-cidr" }, input)
 end
 
 --- AWS ec2 apply-security-groups-to-client-vpn-target-network operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.apply_security_groups_to_client_vpn_target_network(input)
-	return common.execute_aws_command_with_input({ "ec2", "apply-security-groups-to-client-vpn-target-network" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "apply-security-groups-to-client-vpn-target-network" }, input)
 end
 
 --- AWS ec2 assign-ipv6-addresses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assign_ipv6_addresses(input)
-	return common.execute_aws_command_with_input({ "ec2", "assign-ipv6-addresses" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "assign-ipv6-addresses" }, input)
 end
 
 --- AWS ec2 assign-private-ip-addresses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assign_private_ip_addresses(input)
-	return common.execute_aws_command_with_input({ "ec2", "assign-private-ip-addresses" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "assign-private-ip-addresses" }, input)
 end
 
 --- AWS ec2 assign-private-nat-gateway-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.assign_private_nat_gateway_address(input)
-	return common.execute_aws_command_with_input({ "ec2", "assign-private-nat-gateway-address" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "assign-private-nat-gateway-address" }, input)
 end
 
 --- AWS ec2 associate-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_address(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-address" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-address" }, input)
 end
 
 --- AWS ec2 associate-capacity-reservation-billing-owner operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_capacity_reservation_billing_owner(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-capacity-reservation-billing-owner" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-capacity-reservation-billing-owner" }, input)
 end
 
 --- AWS ec2 associate-client-vpn-target-network operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_client_vpn_target_network(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-client-vpn-target-network" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-client-vpn-target-network" }, input)
 end
 
 --- AWS ec2 associate-dhcp-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_dhcp_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-dhcp-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-dhcp-options" }, input)
 end
 
 --- AWS ec2 associate-enclave-certificate-iam-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_enclave_certificate_iam_role(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-enclave-certificate-iam-role" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-enclave-certificate-iam-role" }, input)
 end
 
 --- AWS ec2 associate-iam-instance-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_iam_instance_profile(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-iam-instance-profile" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-iam-instance-profile" }, input)
 end
 
 --- AWS ec2 associate-instance-event-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_instance_event_window(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-instance-event-window" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-instance-event-window" }, input)
 end
 
 --- AWS ec2 associate-ipam-byoasn operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_ipam_byoasn(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-ipam-byoasn" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-ipam-byoasn" }, input)
 end
 
 --- AWS ec2 associate-ipam-resource-discovery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_ipam_resource_discovery(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-ipam-resource-discovery" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-ipam-resource-discovery" }, input)
 end
 
 --- AWS ec2 associate-nat-gateway-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_nat_gateway_address(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-nat-gateway-address" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-nat-gateway-address" }, input)
 end
 
 --- AWS ec2 associate-route-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_route_server(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-route-server" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-route-server" }, input)
 end
 
 --- AWS ec2 associate-route-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_route_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-route-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-route-table" }, input)
 end
 
 --- AWS ec2 associate-security-group-vpc operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_security_group_vpc(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-security-group-vpc" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-security-group-vpc" }, input)
 end
 
 --- AWS ec2 associate-subnet-cidr-block operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_subnet_cidr_block(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-subnet-cidr-block" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-subnet-cidr-block" }, input)
 end
 
 --- AWS ec2 associate-transit-gateway-multicast-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_transit_gateway_multicast_domain(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-transit-gateway-multicast-domain" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-transit-gateway-multicast-domain" }, input)
 end
 
 --- AWS ec2 associate-transit-gateway-policy-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_transit_gateway_policy_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-transit-gateway-policy-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-transit-gateway-policy-table" }, input)
 end
 
 --- AWS ec2 associate-transit-gateway-route-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_transit_gateway_route_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-transit-gateway-route-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-transit-gateway-route-table" }, input)
 end
 
 --- AWS ec2 associate-trunk-interface operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_trunk_interface(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-trunk-interface" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-trunk-interface" }, input)
 end
 
 --- AWS ec2 associate-vpc-cidr-block operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_vpc_cidr_block(input)
-	return common.execute_aws_command_with_input({ "ec2", "associate-vpc-cidr-block" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "associate-vpc-cidr-block" }, input)
 end
 
 --- AWS ec2 attach-classic-link-vpc operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_classic_link_vpc(input)
-	return common.execute_aws_command_with_input({ "ec2", "attach-classic-link-vpc" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "attach-classic-link-vpc" }, input)
 end
 
 --- AWS ec2 attach-internet-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_internet_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "attach-internet-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "attach-internet-gateway" }, input)
 end
 
 --- AWS ec2 attach-network-interface operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_network_interface(input)
-	return common.execute_aws_command_with_input({ "ec2", "attach-network-interface" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "attach-network-interface" }, input)
 end
 
 --- AWS ec2 attach-verified-access-trust-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_verified_access_trust_provider(input)
-	return common.execute_aws_command_with_input({ "ec2", "attach-verified-access-trust-provider" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "attach-verified-access-trust-provider" }, input)
 end
 
 --- AWS ec2 attach-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_volume(input)
-	return common.execute_aws_command_with_input({ "ec2", "attach-volume" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "attach-volume" }, input)
 end
 
 --- AWS ec2 attach-vpn-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_vpn_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "attach-vpn-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "attach-vpn-gateway" }, input)
 end
 
 --- AWS ec2 authorize-client-vpn-ingress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.authorize_client_vpn_ingress(input)
-	return common.execute_aws_command_with_input({ "ec2", "authorize-client-vpn-ingress" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "authorize-client-vpn-ingress" }, input)
 end
 
 --- AWS ec2 authorize-security-group-egress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.authorize_security_group_egress(input)
-	return common.execute_aws_command_with_input({ "ec2", "authorize-security-group-egress" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "authorize-security-group-egress" }, input)
 end
 
 --- AWS ec2 authorize-security-group-ingress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.authorize_security_group_ingress(input)
-	return common.execute_aws_command_with_input({ "ec2", "authorize-security-group-ingress" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "authorize-security-group-ingress" }, input)
 end
 
 --- AWS ec2 bundle-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.bundle_instance(input)
-	return common.execute_aws_command_with_input({ "ec2", "bundle-instance" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "bundle-instance" }, input)
 end
 
 --- AWS ec2 cancel-bundle-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_bundle_task(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-bundle-task" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-bundle-task" }, input)
 end
 
 --- AWS ec2 cancel-capacity-reservation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_capacity_reservation(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-capacity-reservation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-capacity-reservation" }, input)
 end
 
 --- AWS ec2 cancel-capacity-reservation-fleets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_capacity_reservation_fleets(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-capacity-reservation-fleets" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-capacity-reservation-fleets" }, input)
 end
 
 --- AWS ec2 cancel-conversion-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_conversion_task(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-conversion-task" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-conversion-task" }, input)
 end
 
 --- AWS ec2 cancel-declarative-policies-report operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_declarative_policies_report(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-declarative-policies-report" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-declarative-policies-report" }, input)
 end
 
 --- AWS ec2 cancel-export-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_export_task(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-export-task" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-export-task" }, input)
 end
 
 --- AWS ec2 cancel-image-launch-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_image_launch_permission(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-image-launch-permission" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-image-launch-permission" }, input)
 end
 
 --- AWS ec2 cancel-import-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_import_task(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-import-task" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-import-task" }, input)
 end
 
 --- AWS ec2 cancel-reserved-instances-listing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_reserved_instances_listing(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-reserved-instances-listing" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-reserved-instances-listing" }, input)
 end
 
 --- AWS ec2 cancel-spot-fleet-requests operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_spot_fleet_requests(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-spot-fleet-requests" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-spot-fleet-requests" }, input)
 end
 
 --- AWS ec2 cancel-spot-instance-requests operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_spot_instance_requests(input)
-	return common.execute_aws_command_with_input({ "ec2", "cancel-spot-instance-requests" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "cancel-spot-instance-requests" }, input)
 end
 
 --- AWS ec2 confirm-product-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.confirm_product_instance(input)
-	return common.execute_aws_command_with_input({ "ec2", "confirm-product-instance" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "confirm-product-instance" }, input)
 end
 
 --- AWS ec2 copy-fpga-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_fpga_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "copy-fpga-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "copy-fpga-image" }, input)
 end
 
 --- AWS ec2 copy-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "copy-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "copy-image" }, input)
 end
 
 --- AWS ec2 copy-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_snapshot(input)
-	return common.execute_aws_command_with_input({ "ec2", "copy-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "copy-snapshot" }, input)
 end
 
 --- AWS ec2 create-capacity-reservation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_capacity_reservation(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-capacity-reservation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-capacity-reservation" }, input)
 end
 
 --- AWS ec2 create-capacity-reservation-by-splitting operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_capacity_reservation_by_splitting(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-capacity-reservation-by-splitting" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-capacity-reservation-by-splitting" }, input)
 end
 
 --- AWS ec2 create-capacity-reservation-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_capacity_reservation_fleet(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-capacity-reservation-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-capacity-reservation-fleet" }, input)
 end
 
 --- AWS ec2 create-carrier-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_carrier_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-carrier-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-carrier-gateway" }, input)
 end
 
 --- AWS ec2 create-client-vpn-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_client_vpn_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-client-vpn-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-client-vpn-endpoint" }, input)
 end
 
 --- AWS ec2 create-client-vpn-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_client_vpn_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-client-vpn-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-client-vpn-route" }, input)
 end
 
 --- AWS ec2 create-coip-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_coip_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-coip-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-coip-cidr" }, input)
 end
 
 --- AWS ec2 create-coip-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_coip_pool(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-coip-pool" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-coip-pool" }, input)
 end
 
 --- AWS ec2 create-customer-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_customer_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-customer-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-customer-gateway" }, input)
 end
 
 --- AWS ec2 create-default-subnet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_default_subnet(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-default-subnet" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-default-subnet" }, input)
 end
 
 --- AWS ec2 create-default-vpc operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_default_vpc(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-default-vpc" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-default-vpc" }, input)
 end
 
 --- AWS ec2 create-dhcp-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_dhcp_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-dhcp-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-dhcp-options" }, input)
 end
 
 --- AWS ec2 create-egress-only-internet-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_egress_only_internet_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-egress-only-internet-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-egress-only-internet-gateway" }, input)
 end
 
 --- AWS ec2 create-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_fleet(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-fleet" }, input)
 end
 
 --- AWS ec2 create-flow-logs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_flow_logs(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-flow-logs" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-flow-logs" }, input)
 end
 
 --- AWS ec2 create-fpga-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_fpga_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-fpga-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-fpga-image" }, input)
 end
 
 --- AWS ec2 create-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-image" }, input)
 end
 
 --- AWS ec2 create-instance-connect-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_instance_connect_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-instance-connect-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-instance-connect-endpoint" }, input)
 end
 
 --- AWS ec2 create-instance-event-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_instance_event_window(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-instance-event-window" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-instance-event-window" }, input)
 end
 
 --- AWS ec2 create-instance-export-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_instance_export_task(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-instance-export-task" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-instance-export-task" }, input)
 end
 
 --- AWS ec2 create-internet-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_internet_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-internet-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-internet-gateway" }, input)
 end
 
 --- AWS ec2 create-ipam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ipam(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-ipam" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-ipam" }, input)
 end
 
 --- AWS ec2 create-ipam-external-resource-verification-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ipam_external_resource_verification_token(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-ipam-external-resource-verification-token" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-ipam-external-resource-verification-token" }, input)
 end
 
 --- AWS ec2 create-ipam-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ipam_pool(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-ipam-pool" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-ipam-pool" }, input)
 end
 
 --- AWS ec2 create-ipam-resource-discovery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ipam_resource_discovery(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-ipam-resource-discovery" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-ipam-resource-discovery" }, input)
 end
 
 --- AWS ec2 create-ipam-scope operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ipam_scope(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-ipam-scope" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-ipam-scope" }, input)
 end
 
 --- AWS ec2 create-key-pair operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_key_pair(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-key-pair" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-key-pair" }, input)
 end
 
 --- AWS ec2 create-launch-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_launch_template(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-launch-template" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-launch-template" }, input)
 end
 
 --- AWS ec2 create-launch-template-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_launch_template_version(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-launch-template-version" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-launch-template-version" }, input)
 end
 
 --- AWS ec2 create-local-gateway-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_local_gateway_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-local-gateway-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-local-gateway-route" }, input)
 end
 
 --- AWS ec2 create-local-gateway-route-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_local_gateway_route_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-local-gateway-route-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-local-gateway-route-table" }, input)
 end
 
 --- AWS ec2 create-local-gateway-route-table-virtual-interface-group-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_local_gateway_route_table_virtual_interface_group_association(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-local-gateway-route-table-virtual-interface-group-association" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-local-gateway-route-table-virtual-interface-group-association" }, input)
 end
 
 --- AWS ec2 create-local-gateway-route-table-vpc-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_local_gateway_route_table_vpc_association(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-local-gateway-route-table-vpc-association" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-local-gateway-route-table-vpc-association" }, input)
 end
 
 --- AWS ec2 create-managed-prefix-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_managed_prefix_list(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-managed-prefix-list" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-managed-prefix-list" }, input)
 end
 
 --- AWS ec2 create-nat-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_nat_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-nat-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-nat-gateway" }, input)
 end
 
 --- AWS ec2 create-network-acl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_network_acl(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-network-acl" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-network-acl" }, input)
 end
 
 --- AWS ec2 create-network-acl-entry operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_network_acl_entry(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-network-acl-entry" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-network-acl-entry" }, input)
 end
 
 --- AWS ec2 create-network-insights-access-scope operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_network_insights_access_scope(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-network-insights-access-scope" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-network-insights-access-scope" }, input)
 end
 
 --- AWS ec2 create-network-insights-path operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_network_insights_path(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-network-insights-path" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-network-insights-path" }, input)
 end
 
 --- AWS ec2 create-network-interface operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_network_interface(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-network-interface" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-network-interface" }, input)
 end
 
 --- AWS ec2 create-network-interface-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_network_interface_permission(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-network-interface-permission" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-network-interface-permission" }, input)
 end
 
 --- AWS ec2 create-placement-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_placement_group(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-placement-group" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-placement-group" }, input)
 end
 
 --- AWS ec2 create-public-ipv4-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_public_ipv4_pool(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-public-ipv4-pool" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-public-ipv4-pool" }, input)
 end
 
 --- AWS ec2 create-replace-root-volume-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_replace_root_volume_task(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-replace-root-volume-task" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-replace-root-volume-task" }, input)
 end
 
 --- AWS ec2 create-reserved-instances-listing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_reserved_instances_listing(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-reserved-instances-listing" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-reserved-instances-listing" }, input)
 end
 
 --- AWS ec2 create-restore-image-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_restore_image_task(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-restore-image-task" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-restore-image-task" }, input)
 end
 
 --- AWS ec2 create-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-route" }, input)
 end
 
 --- AWS ec2 create-route-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_route_server(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-route-server" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-route-server" }, input)
 end
 
 --- AWS ec2 create-route-server-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_route_server_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-route-server-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-route-server-endpoint" }, input)
 end
 
 --- AWS ec2 create-route-server-peer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_route_server_peer(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-route-server-peer" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-route-server-peer" }, input)
 end
 
 --- AWS ec2 create-route-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_route_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-route-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-route-table" }, input)
 end
 
 --- AWS ec2 create-security-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_security_group(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-security-group" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-security-group" }, input)
 end
 
 --- AWS ec2 create-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_snapshot(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-snapshot" }, input)
 end
 
 --- AWS ec2 create-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_snapshots(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-snapshots" }, input)
 end
 
 --- AWS ec2 create-spot-datafeed-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_spot_datafeed_subscription(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-spot-datafeed-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-spot-datafeed-subscription" }, input)
 end
 
 --- AWS ec2 create-store-image-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_store_image_task(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-store-image-task" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-store-image-task" }, input)
 end
 
 --- AWS ec2 create-subnet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_subnet(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-subnet" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-subnet" }, input)
 end
 
 --- AWS ec2 create-subnet-cidr-reservation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_subnet_cidr_reservation(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-subnet-cidr-reservation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-subnet-cidr-reservation" }, input)
 end
 
 --- AWS ec2 create-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_tags(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-tags" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-tags" }, input)
 end
 
 --- AWS ec2 create-traffic-mirror-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_traffic_mirror_filter(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-traffic-mirror-filter" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-traffic-mirror-filter" }, input)
 end
 
 --- AWS ec2 create-traffic-mirror-filter-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_traffic_mirror_filter_rule(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-traffic-mirror-filter-rule" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-traffic-mirror-filter-rule" }, input)
 end
 
 --- AWS ec2 create-traffic-mirror-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_traffic_mirror_session(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-traffic-mirror-session" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-traffic-mirror-session" }, input)
 end
 
 --- AWS ec2 create-traffic-mirror-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_traffic_mirror_target(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-traffic-mirror-target" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-traffic-mirror-target" }, input)
 end
 
 --- AWS ec2 create-transit-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway" }, input)
 end
 
 --- AWS ec2 create-transit-gateway-connect operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway_connect(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway-connect" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway-connect" }, input)
 end
 
 --- AWS ec2 create-transit-gateway-connect-peer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway_connect_peer(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway-connect-peer" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway-connect-peer" }, input)
 end
 
 --- AWS ec2 create-transit-gateway-multicast-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway_multicast_domain(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway-multicast-domain" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway-multicast-domain" }, input)
 end
 
 --- AWS ec2 create-transit-gateway-peering-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway_peering_attachment(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway-peering-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway-peering-attachment" }, input)
 end
 
 --- AWS ec2 create-transit-gateway-policy-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway_policy_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway-policy-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway-policy-table" }, input)
 end
 
 --- AWS ec2 create-transit-gateway-prefix-list-reference operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway_prefix_list_reference(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway-prefix-list-reference" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway-prefix-list-reference" }, input)
 end
 
 --- AWS ec2 create-transit-gateway-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway-route" }, input)
 end
 
 --- AWS ec2 create-transit-gateway-route-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway_route_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway-route-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway-route-table" }, input)
 end
 
 --- AWS ec2 create-transit-gateway-route-table-announcement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway_route_table_announcement(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway-route-table-announcement" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway-route-table-announcement" }, input)
 end
 
 --- AWS ec2 create-transit-gateway-vpc-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_transit_gateway_vpc_attachment(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-transit-gateway-vpc-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-transit-gateway-vpc-attachment" }, input)
 end
 
 --- AWS ec2 create-verified-access-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_verified_access_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-verified-access-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-verified-access-endpoint" }, input)
 end
 
 --- AWS ec2 create-verified-access-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_verified_access_group(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-verified-access-group" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-verified-access-group" }, input)
 end
 
 --- AWS ec2 create-verified-access-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_verified_access_instance(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-verified-access-instance" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-verified-access-instance" }, input)
 end
 
 --- AWS ec2 create-verified-access-trust-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_verified_access_trust_provider(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-verified-access-trust-provider" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-verified-access-trust-provider" }, input)
 end
 
 --- AWS ec2 create-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_volume(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-volume" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-volume" }, input)
 end
 
 --- AWS ec2 create-vpc operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-vpc" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-vpc" }, input)
 end
 
 --- AWS ec2 create-vpc-block-public-access-exclusion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_block_public_access_exclusion(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-vpc-block-public-access-exclusion" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-vpc-block-public-access-exclusion" }, input)
 end
 
 --- AWS ec2 create-vpc-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-vpc-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-vpc-endpoint" }, input)
 end
 
 --- AWS ec2 create-vpc-endpoint-connection-notification operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_endpoint_connection_notification(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-vpc-endpoint-connection-notification" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-vpc-endpoint-connection-notification" }, input)
 end
 
 --- AWS ec2 create-vpc-endpoint-service-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_endpoint_service_configuration(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-vpc-endpoint-service-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-vpc-endpoint-service-configuration" }, input)
 end
 
 --- AWS ec2 create-vpc-peering-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpc_peering_connection(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-vpc-peering-connection" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-vpc-peering-connection" }, input)
 end
 
 --- AWS ec2 create-vpn-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpn_connection(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-vpn-connection" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-vpn-connection" }, input)
 end
 
 --- AWS ec2 create-vpn-connection-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpn_connection_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-vpn-connection-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-vpn-connection-route" }, input)
 end
 
 --- AWS ec2 create-vpn-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_vpn_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "create-vpn-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "create-vpn-gateway" }, input)
 end
 
 --- AWS ec2 delete-carrier-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_carrier_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-carrier-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-carrier-gateway" }, input)
 end
 
 --- AWS ec2 delete-client-vpn-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_client_vpn_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-client-vpn-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-client-vpn-endpoint" }, input)
 end
 
 --- AWS ec2 delete-client-vpn-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_client_vpn_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-client-vpn-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-client-vpn-route" }, input)
 end
 
 --- AWS ec2 delete-coip-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_coip_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-coip-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-coip-cidr" }, input)
 end
 
 --- AWS ec2 delete-coip-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_coip_pool(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-coip-pool" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-coip-pool" }, input)
 end
 
 --- AWS ec2 delete-customer-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_customer_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-customer-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-customer-gateway" }, input)
 end
 
 --- AWS ec2 delete-dhcp-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_dhcp_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-dhcp-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-dhcp-options" }, input)
 end
 
 --- AWS ec2 delete-egress-only-internet-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_egress_only_internet_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-egress-only-internet-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-egress-only-internet-gateway" }, input)
 end
 
 --- AWS ec2 delete-fleets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_fleets(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-fleets" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-fleets" }, input)
 end
 
 --- AWS ec2 delete-flow-logs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_flow_logs(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-flow-logs" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-flow-logs" }, input)
 end
 
 --- AWS ec2 delete-fpga-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_fpga_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-fpga-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-fpga-image" }, input)
 end
 
 --- AWS ec2 delete-instance-connect-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_instance_connect_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-instance-connect-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-instance-connect-endpoint" }, input)
 end
 
 --- AWS ec2 delete-instance-event-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_instance_event_window(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-instance-event-window" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-instance-event-window" }, input)
 end
 
 --- AWS ec2 delete-internet-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_internet_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-internet-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-internet-gateway" }, input)
 end
 
 --- AWS ec2 delete-ipam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ipam(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-ipam" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-ipam" }, input)
 end
 
 --- AWS ec2 delete-ipam-external-resource-verification-token operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ipam_external_resource_verification_token(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-ipam-external-resource-verification-token" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-ipam-external-resource-verification-token" }, input)
 end
 
 --- AWS ec2 delete-ipam-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ipam_pool(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-ipam-pool" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-ipam-pool" }, input)
 end
 
 --- AWS ec2 delete-ipam-resource-discovery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ipam_resource_discovery(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-ipam-resource-discovery" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-ipam-resource-discovery" }, input)
 end
 
 --- AWS ec2 delete-ipam-scope operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ipam_scope(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-ipam-scope" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-ipam-scope" }, input)
 end
 
 --- AWS ec2 delete-key-pair operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_key_pair(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-key-pair" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-key-pair" }, input)
 end
 
 --- AWS ec2 delete-launch-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_launch_template(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-launch-template" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-launch-template" }, input)
 end
 
 --- AWS ec2 delete-launch-template-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_launch_template_versions(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-launch-template-versions" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-launch-template-versions" }, input)
 end
 
 --- AWS ec2 delete-local-gateway-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_local_gateway_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-local-gateway-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-local-gateway-route" }, input)
 end
 
 --- AWS ec2 delete-local-gateway-route-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_local_gateway_route_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-local-gateway-route-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-local-gateway-route-table" }, input)
 end
 
 --- AWS ec2 delete-local-gateway-route-table-virtual-interface-group-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_local_gateway_route_table_virtual_interface_group_association(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-local-gateway-route-table-virtual-interface-group-association" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-local-gateway-route-table-virtual-interface-group-association" }, input)
 end
 
 --- AWS ec2 delete-local-gateway-route-table-vpc-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_local_gateway_route_table_vpc_association(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-local-gateway-route-table-vpc-association" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-local-gateway-route-table-vpc-association" }, input)
 end
 
 --- AWS ec2 delete-managed-prefix-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_managed_prefix_list(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-managed-prefix-list" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-managed-prefix-list" }, input)
 end
 
 --- AWS ec2 delete-nat-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_nat_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-nat-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-nat-gateway" }, input)
 end
 
 --- AWS ec2 delete-network-acl operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_acl(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-network-acl" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-network-acl" }, input)
 end
 
 --- AWS ec2 delete-network-acl-entry operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_acl_entry(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-network-acl-entry" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-network-acl-entry" }, input)
 end
 
 --- AWS ec2 delete-network-insights-access-scope operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_insights_access_scope(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-network-insights-access-scope" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-network-insights-access-scope" }, input)
 end
 
 --- AWS ec2 delete-network-insights-access-scope-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_insights_access_scope_analysis(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-network-insights-access-scope-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-network-insights-access-scope-analysis" }, input)
 end
 
 --- AWS ec2 delete-network-insights-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_insights_analysis(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-network-insights-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-network-insights-analysis" }, input)
 end
 
 --- AWS ec2 delete-network-insights-path operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_insights_path(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-network-insights-path" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-network-insights-path" }, input)
 end
 
 --- AWS ec2 delete-network-interface operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_interface(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-network-interface" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-network-interface" }, input)
 end
 
 --- AWS ec2 delete-network-interface-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_network_interface_permission(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-network-interface-permission" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-network-interface-permission" }, input)
 end
 
 --- AWS ec2 delete-placement-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_placement_group(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-placement-group" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-placement-group" }, input)
 end
 
 --- AWS ec2 delete-public-ipv4-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_public_ipv4_pool(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-public-ipv4-pool" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-public-ipv4-pool" }, input)
 end
 
 --- AWS ec2 delete-queued-reserved-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_queued_reserved_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-queued-reserved-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-queued-reserved-instances" }, input)
 end
 
 --- AWS ec2 delete-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-route" }, input)
 end
 
 --- AWS ec2 delete-route-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_route_server(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-route-server" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-route-server" }, input)
 end
 
 --- AWS ec2 delete-route-server-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_route_server_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-route-server-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-route-server-endpoint" }, input)
 end
 
 --- AWS ec2 delete-route-server-peer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_route_server_peer(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-route-server-peer" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-route-server-peer" }, input)
 end
 
 --- AWS ec2 delete-route-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_route_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-route-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-route-table" }, input)
 end
 
 --- AWS ec2 delete-security-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_security_group(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-security-group" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-security-group" }, input)
 end
 
 --- AWS ec2 delete-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_snapshot(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-snapshot" }, input)
 end
 
 --- AWS ec2 delete-spot-datafeed-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_spot_datafeed_subscription(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-spot-datafeed-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-spot-datafeed-subscription" }, input)
 end
 
 --- AWS ec2 delete-subnet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_subnet(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-subnet" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-subnet" }, input)
 end
 
 --- AWS ec2 delete-subnet-cidr-reservation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_subnet_cidr_reservation(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-subnet-cidr-reservation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-subnet-cidr-reservation" }, input)
 end
 
 --- AWS ec2 delete-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_tags(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-tags" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-tags" }, input)
 end
 
 --- AWS ec2 delete-traffic-mirror-filter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_traffic_mirror_filter(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-traffic-mirror-filter" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-traffic-mirror-filter" }, input)
 end
 
 --- AWS ec2 delete-traffic-mirror-filter-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_traffic_mirror_filter_rule(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-traffic-mirror-filter-rule" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-traffic-mirror-filter-rule" }, input)
 end
 
 --- AWS ec2 delete-traffic-mirror-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_traffic_mirror_session(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-traffic-mirror-session" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-traffic-mirror-session" }, input)
 end
 
 --- AWS ec2 delete-traffic-mirror-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_traffic_mirror_target(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-traffic-mirror-target" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-traffic-mirror-target" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway-connect operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway_connect(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway-connect" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway-connect" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway-connect-peer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway_connect_peer(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway-connect-peer" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway-connect-peer" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway-multicast-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway_multicast_domain(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway-multicast-domain" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway-multicast-domain" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway-peering-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway_peering_attachment(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway-peering-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway-peering-attachment" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway-policy-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway_policy_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway-policy-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway-policy-table" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway-prefix-list-reference operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway_prefix_list_reference(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway-prefix-list-reference" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway-prefix-list-reference" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway-route" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway-route-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway_route_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway-route-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway-route-table" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway-route-table-announcement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway_route_table_announcement(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway-route-table-announcement" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway-route-table-announcement" }, input)
 end
 
 --- AWS ec2 delete-transit-gateway-vpc-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_transit_gateway_vpc_attachment(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-transit-gateway-vpc-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-transit-gateway-vpc-attachment" }, input)
 end
 
 --- AWS ec2 delete-verified-access-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_verified_access_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-verified-access-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-verified-access-endpoint" }, input)
 end
 
 --- AWS ec2 delete-verified-access-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_verified_access_group(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-verified-access-group" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-verified-access-group" }, input)
 end
 
 --- AWS ec2 delete-verified-access-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_verified_access_instance(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-verified-access-instance" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-verified-access-instance" }, input)
 end
 
 --- AWS ec2 delete-verified-access-trust-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_verified_access_trust_provider(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-verified-access-trust-provider" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-verified-access-trust-provider" }, input)
 end
 
 --- AWS ec2 delete-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_volume(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-volume" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-volume" }, input)
 end
 
 --- AWS ec2 delete-vpc operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-vpc" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-vpc" }, input)
 end
 
 --- AWS ec2 delete-vpc-block-public-access-exclusion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_block_public_access_exclusion(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-vpc-block-public-access-exclusion" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-vpc-block-public-access-exclusion" }, input)
 end
 
 --- AWS ec2 delete-vpc-endpoint-connection-notifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_endpoint_connection_notifications(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-vpc-endpoint-connection-notifications" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-vpc-endpoint-connection-notifications" }, input)
 end
 
 --- AWS ec2 delete-vpc-endpoint-service-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_endpoint_service_configurations(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-vpc-endpoint-service-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-vpc-endpoint-service-configurations" }, input)
 end
 
 --- AWS ec2 delete-vpc-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_endpoints(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-vpc-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-vpc-endpoints" }, input)
 end
 
 --- AWS ec2 delete-vpc-peering-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpc_peering_connection(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-vpc-peering-connection" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-vpc-peering-connection" }, input)
 end
 
 --- AWS ec2 delete-vpn-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpn_connection(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-vpn-connection" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-vpn-connection" }, input)
 end
 
 --- AWS ec2 delete-vpn-connection-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpn_connection_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-vpn-connection-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-vpn-connection-route" }, input)
 end
 
 --- AWS ec2 delete-vpn-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_vpn_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "delete-vpn-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "delete-vpn-gateway" }, input)
 end
 
 --- AWS ec2 deprovision-byoip-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deprovision_byoip_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "deprovision-byoip-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "deprovision-byoip-cidr" }, input)
 end
 
 --- AWS ec2 deprovision-ipam-byoasn operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deprovision_ipam_byoasn(input)
-	return common.execute_aws_command_with_input({ "ec2", "deprovision-ipam-byoasn" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "deprovision-ipam-byoasn" }, input)
 end
 
 --- AWS ec2 deprovision-ipam-pool-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deprovision_ipam_pool_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "deprovision-ipam-pool-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "deprovision-ipam-pool-cidr" }, input)
 end
 
 --- AWS ec2 deprovision-public-ipv4-pool-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deprovision_public_ipv4_pool_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "deprovision-public-ipv4-pool-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "deprovision-public-ipv4-pool-cidr" }, input)
 end
 
 --- AWS ec2 deregister-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "deregister-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "deregister-image" }, input)
 end
 
 --- AWS ec2 deregister-instance-event-notification-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_instance_event_notification_attributes(input)
-	return common.execute_aws_command_with_input({ "ec2", "deregister-instance-event-notification-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "deregister-instance-event-notification-attributes" }, input)
 end
 
 --- AWS ec2 deregister-transit-gateway-multicast-group-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_transit_gateway_multicast_group_members(input)
-	return common.execute_aws_command_with_input({ "ec2", "deregister-transit-gateway-multicast-group-members" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "deregister-transit-gateway-multicast-group-members" }, input)
 end
 
 --- AWS ec2 deregister-transit-gateway-multicast-group-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_transit_gateway_multicast_group_sources(input)
-	return common.execute_aws_command_with_input({ "ec2", "deregister-transit-gateway-multicast-group-sources" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "deregister-transit-gateway-multicast-group-sources" }, input)
 end
 
 --- AWS ec2 describe-account-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_attributes(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-account-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-account-attributes" }, input)
 end
 
 --- AWS ec2 describe-address-transfers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_address_transfers(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-address-transfers" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-address-transfers" }, input)
 end
 
 --- AWS ec2 describe-addresses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_addresses(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-addresses" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-addresses" }, input)
 end
 
 --- AWS ec2 describe-addresses-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_addresses_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-addresses-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-addresses-attribute" }, input)
 end
 
 --- AWS ec2 describe-aggregate-id-format operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_aggregate_id_format(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-aggregate-id-format" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-aggregate-id-format" }, input)
 end
 
 --- AWS ec2 describe-availability-zones operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_availability_zones(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-availability-zones" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-availability-zones" }, input)
 end
 
 --- AWS ec2 describe-aws-network-performance-metric-subscriptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_aws_network_performance_metric_subscriptions(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-aws-network-performance-metric-subscriptions" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-aws-network-performance-metric-subscriptions" }, input)
 end
 
 --- AWS ec2 describe-bundle-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_bundle_tasks(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-bundle-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-bundle-tasks" }, input)
 end
 
 --- AWS ec2 describe-byoip-cidrs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_byoip_cidrs(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-byoip-cidrs" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-byoip-cidrs" }, input)
 end
 
 --- AWS ec2 describe-capacity-block-extension-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_capacity_block_extension_history(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-capacity-block-extension-history" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-capacity-block-extension-history" }, input)
 end
 
 --- AWS ec2 describe-capacity-block-extension-offerings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_capacity_block_extension_offerings(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-capacity-block-extension-offerings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-capacity-block-extension-offerings" }, input)
 end
 
 --- AWS ec2 describe-capacity-block-offerings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_capacity_block_offerings(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-capacity-block-offerings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-capacity-block-offerings" }, input)
 end
 
 --- AWS ec2 describe-capacity-reservation-billing-requests operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_capacity_reservation_billing_requests(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-capacity-reservation-billing-requests" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-capacity-reservation-billing-requests" }, input)
 end
 
 --- AWS ec2 describe-capacity-reservation-fleets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_capacity_reservation_fleets(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-capacity-reservation-fleets" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-capacity-reservation-fleets" }, input)
 end
 
 --- AWS ec2 describe-capacity-reservations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_capacity_reservations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-capacity-reservations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-capacity-reservations" }, input)
 end
 
 --- AWS ec2 describe-carrier-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_carrier_gateways(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-carrier-gateways" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-carrier-gateways" }, input)
 end
 
 --- AWS ec2 describe-classic-link-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_classic_link_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-classic-link-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-classic-link-instances" }, input)
 end
 
 --- AWS ec2 describe-client-vpn-authorization-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_client_vpn_authorization_rules(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-client-vpn-authorization-rules" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-client-vpn-authorization-rules" }, input)
 end
 
 --- AWS ec2 describe-client-vpn-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_client_vpn_connections(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-client-vpn-connections" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-client-vpn-connections" }, input)
 end
 
 --- AWS ec2 describe-client-vpn-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_client_vpn_endpoints(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-client-vpn-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-client-vpn-endpoints" }, input)
 end
 
 --- AWS ec2 describe-client-vpn-routes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_client_vpn_routes(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-client-vpn-routes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-client-vpn-routes" }, input)
 end
 
 --- AWS ec2 describe-client-vpn-target-networks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_client_vpn_target_networks(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-client-vpn-target-networks" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-client-vpn-target-networks" }, input)
 end
 
 --- AWS ec2 describe-coip-pools operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_coip_pools(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-coip-pools" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-coip-pools" }, input)
 end
 
 --- AWS ec2 describe-conversion-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_conversion_tasks(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-conversion-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-conversion-tasks" }, input)
 end
 
 --- AWS ec2 describe-customer-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_customer_gateways(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-customer-gateways" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-customer-gateways" }, input)
 end
 
 --- AWS ec2 describe-declarative-policies-reports operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_declarative_policies_reports(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-declarative-policies-reports" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-declarative-policies-reports" }, input)
 end
 
 --- AWS ec2 describe-dhcp-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_dhcp_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-dhcp-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-dhcp-options" }, input)
 end
 
 --- AWS ec2 describe-egress-only-internet-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_egress_only_internet_gateways(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-egress-only-internet-gateways" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-egress-only-internet-gateways" }, input)
 end
 
 --- AWS ec2 describe-elastic-gpus operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_elastic_gpus(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-elastic-gpus" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-elastic-gpus" }, input)
 end
 
 --- AWS ec2 describe-export-image-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_export_image_tasks(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-export-image-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-export-image-tasks" }, input)
 end
 
 --- AWS ec2 describe-export-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_export_tasks(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-export-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-export-tasks" }, input)
 end
 
 --- AWS ec2 describe-fast-launch-images operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fast_launch_images(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-fast-launch-images" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-fast-launch-images" }, input)
 end
 
 --- AWS ec2 describe-fast-snapshot-restores operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fast_snapshot_restores(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-fast-snapshot-restores" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-fast-snapshot-restores" }, input)
 end
 
 --- AWS ec2 describe-fleet-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_history(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-fleet-history" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-fleet-history" }, input)
 end
 
 --- AWS ec2 describe-fleet-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleet_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-fleet-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-fleet-instances" }, input)
 end
 
 --- AWS ec2 describe-fleets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fleets(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-fleets" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-fleets" }, input)
 end
 
 --- AWS ec2 describe-flow-logs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_flow_logs(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-flow-logs" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-flow-logs" }, input)
 end
 
 --- AWS ec2 describe-fpga-image-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fpga_image_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-fpga-image-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-fpga-image-attribute" }, input)
 end
 
 --- AWS ec2 describe-fpga-images operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_fpga_images(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-fpga-images" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-fpga-images" }, input)
 end
 
 --- AWS ec2 describe-host-reservation-offerings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_host_reservation_offerings(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-host-reservation-offerings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-host-reservation-offerings" }, input)
 end
 
 --- AWS ec2 describe-host-reservations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_host_reservations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-host-reservations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-host-reservations" }, input)
 end
 
 --- AWS ec2 describe-hosts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_hosts(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-hosts" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-hosts" }, input)
 end
 
 --- AWS ec2 describe-iam-instance-profile-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_iam_instance_profile_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-iam-instance-profile-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-iam-instance-profile-associations" }, input)
 end
 
 --- AWS ec2 describe-id-format operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_id_format(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-id-format" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-id-format" }, input)
 end
 
 --- AWS ec2 describe-identity-id-format operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_identity_id_format(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-identity-id-format" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-identity-id-format" }, input)
 end
 
 --- AWS ec2 describe-image-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_image_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-image-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-image-attribute" }, input)
 end
 
 --- AWS ec2 describe-images operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_images(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-images" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-images" }, input)
 end
 
 --- AWS ec2 describe-import-image-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_import_image_tasks(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-import-image-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-import-image-tasks" }, input)
 end
 
 --- AWS ec2 describe-import-snapshot-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_import_snapshot_tasks(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-import-snapshot-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-import-snapshot-tasks" }, input)
 end
 
 --- AWS ec2 describe-instance-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instance-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instance-attribute" }, input)
 end
 
 --- AWS ec2 describe-instance-connect-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_connect_endpoints(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instance-connect-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instance-connect-endpoints" }, input)
 end
 
 --- AWS ec2 describe-instance-credit-specifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_credit_specifications(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instance-credit-specifications" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instance-credit-specifications" }, input)
 end
 
 --- AWS ec2 describe-instance-event-notification-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_event_notification_attributes(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instance-event-notification-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instance-event-notification-attributes" }, input)
 end
 
 --- AWS ec2 describe-instance-event-windows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_event_windows(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instance-event-windows" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instance-event-windows" }, input)
 end
 
 --- AWS ec2 describe-instance-image-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_image_metadata(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instance-image-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instance-image-metadata" }, input)
 end
 
 --- AWS ec2 describe-instance-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_status(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instance-status" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instance-status" }, input)
 end
 
 --- AWS ec2 describe-instance-topology operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_topology(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instance-topology" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instance-topology" }, input)
 end
 
 --- AWS ec2 describe-instance-type-offerings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_type_offerings(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instance-type-offerings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instance-type-offerings" }, input)
 end
 
 --- AWS ec2 describe-instance-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_types(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instance-types" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instance-types" }, input)
 end
 
 --- AWS ec2 describe-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-instances" }, input)
 end
 
 --- AWS ec2 describe-internet-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_internet_gateways(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-internet-gateways" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-internet-gateways" }, input)
 end
 
 --- AWS ec2 describe-ipam-byoasn operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ipam_byoasn(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-ipam-byoasn" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-ipam-byoasn" }, input)
 end
 
 --- AWS ec2 describe-ipam-external-resource-verification-tokens operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ipam_external_resource_verification_tokens(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-ipam-external-resource-verification-tokens" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-ipam-external-resource-verification-tokens" }, input)
 end
 
 --- AWS ec2 describe-ipam-pools operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ipam_pools(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-ipam-pools" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-ipam-pools" }, input)
 end
 
 --- AWS ec2 describe-ipam-resource-discoveries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ipam_resource_discoveries(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-ipam-resource-discoveries" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-ipam-resource-discoveries" }, input)
 end
 
 --- AWS ec2 describe-ipam-resource-discovery-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ipam_resource_discovery_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-ipam-resource-discovery-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-ipam-resource-discovery-associations" }, input)
 end
 
 --- AWS ec2 describe-ipam-scopes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ipam_scopes(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-ipam-scopes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-ipam-scopes" }, input)
 end
 
 --- AWS ec2 describe-ipams operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ipams(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-ipams" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-ipams" }, input)
 end
 
 --- AWS ec2 describe-ipv6-pools operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ipv6_pools(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-ipv6-pools" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-ipv6-pools" }, input)
 end
 
 --- AWS ec2 describe-key-pairs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_key_pairs(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-key-pairs" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-key-pairs" }, input)
 end
 
 --- AWS ec2 describe-launch-template-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_launch_template_versions(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-launch-template-versions" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-launch-template-versions" }, input)
 end
 
 --- AWS ec2 describe-launch-templates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_launch_templates(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-launch-templates" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-launch-templates" }, input)
 end
 
 --- AWS ec2 describe-local-gateway-route-table-virtual-interface-group-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_local_gateway_route_table_virtual_interface_group_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-local-gateway-route-table-virtual-interface-group-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-local-gateway-route-table-virtual-interface-group-associations" }, input)
 end
 
 --- AWS ec2 describe-local-gateway-route-table-vpc-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_local_gateway_route_table_vpc_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-local-gateway-route-table-vpc-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-local-gateway-route-table-vpc-associations" }, input)
 end
 
 --- AWS ec2 describe-local-gateway-route-tables operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_local_gateway_route_tables(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-local-gateway-route-tables" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-local-gateway-route-tables" }, input)
 end
 
 --- AWS ec2 describe-local-gateway-virtual-interface-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_local_gateway_virtual_interface_groups(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-local-gateway-virtual-interface-groups" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-local-gateway-virtual-interface-groups" }, input)
 end
 
 --- AWS ec2 describe-local-gateway-virtual-interfaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_local_gateway_virtual_interfaces(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-local-gateway-virtual-interfaces" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-local-gateway-virtual-interfaces" }, input)
 end
 
 --- AWS ec2 describe-local-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_local_gateways(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-local-gateways" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-local-gateways" }, input)
 end
 
 --- AWS ec2 describe-locked-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_locked_snapshots(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-locked-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-locked-snapshots" }, input)
 end
 
 --- AWS ec2 describe-mac-hosts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_mac_hosts(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-mac-hosts" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-mac-hosts" }, input)
 end
 
 --- AWS ec2 describe-managed-prefix-lists operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_managed_prefix_lists(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-managed-prefix-lists" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-managed-prefix-lists" }, input)
 end
 
 --- AWS ec2 describe-moving-addresses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_moving_addresses(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-moving-addresses" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-moving-addresses" }, input)
 end
 
 --- AWS ec2 describe-nat-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_nat_gateways(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-nat-gateways" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-nat-gateways" }, input)
 end
 
 --- AWS ec2 describe-network-acls operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_network_acls(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-network-acls" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-network-acls" }, input)
 end
 
 --- AWS ec2 describe-network-insights-access-scope-analyses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_network_insights_access_scope_analyses(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-network-insights-access-scope-analyses" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-network-insights-access-scope-analyses" }, input)
 end
 
 --- AWS ec2 describe-network-insights-access-scopes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_network_insights_access_scopes(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-network-insights-access-scopes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-network-insights-access-scopes" }, input)
 end
 
 --- AWS ec2 describe-network-insights-analyses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_network_insights_analyses(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-network-insights-analyses" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-network-insights-analyses" }, input)
 end
 
 --- AWS ec2 describe-network-insights-paths operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_network_insights_paths(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-network-insights-paths" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-network-insights-paths" }, input)
 end
 
 --- AWS ec2 describe-network-interface-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_network_interface_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-network-interface-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-network-interface-attribute" }, input)
 end
 
 --- AWS ec2 describe-network-interface-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_network_interface_permissions(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-network-interface-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-network-interface-permissions" }, input)
 end
 
 --- AWS ec2 describe-network-interfaces operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_network_interfaces(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-network-interfaces" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-network-interfaces" }, input)
 end
 
 --- AWS ec2 describe-placement-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_placement_groups(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-placement-groups" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-placement-groups" }, input)
 end
 
 --- AWS ec2 describe-prefix-lists operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_prefix_lists(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-prefix-lists" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-prefix-lists" }, input)
 end
 
 --- AWS ec2 describe-principal-id-format operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_principal_id_format(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-principal-id-format" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-principal-id-format" }, input)
 end
 
 --- AWS ec2 describe-public-ipv4-pools operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_public_ipv4_pools(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-public-ipv4-pools" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-public-ipv4-pools" }, input)
 end
 
 --- AWS ec2 describe-regions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_regions(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-regions" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-regions" }, input)
 end
 
 --- AWS ec2 describe-replace-root-volume-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_replace_root_volume_tasks(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-replace-root-volume-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-replace-root-volume-tasks" }, input)
 end
 
 --- AWS ec2 describe-reserved-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_reserved_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-reserved-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-reserved-instances" }, input)
 end
 
 --- AWS ec2 describe-reserved-instances-listings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_reserved_instances_listings(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-reserved-instances-listings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-reserved-instances-listings" }, input)
 end
 
 --- AWS ec2 describe-reserved-instances-modifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_reserved_instances_modifications(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-reserved-instances-modifications" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-reserved-instances-modifications" }, input)
 end
 
 --- AWS ec2 describe-reserved-instances-offerings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_reserved_instances_offerings(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-reserved-instances-offerings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-reserved-instances-offerings" }, input)
 end
 
 --- AWS ec2 describe-route-server-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_route_server_endpoints(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-route-server-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-route-server-endpoints" }, input)
 end
 
 --- AWS ec2 describe-route-server-peers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_route_server_peers(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-route-server-peers" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-route-server-peers" }, input)
 end
 
 --- AWS ec2 describe-route-servers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_route_servers(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-route-servers" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-route-servers" }, input)
 end
 
 --- AWS ec2 describe-route-tables operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_route_tables(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-route-tables" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-route-tables" }, input)
 end
 
 --- AWS ec2 describe-scheduled-instance-availability operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_scheduled_instance_availability(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-scheduled-instance-availability" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-scheduled-instance-availability" }, input)
 end
 
 --- AWS ec2 describe-scheduled-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_scheduled_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-scheduled-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-scheduled-instances" }, input)
 end
 
 --- AWS ec2 describe-security-group-references operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_security_group_references(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-security-group-references" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-security-group-references" }, input)
 end
 
 --- AWS ec2 describe-security-group-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_security_group_rules(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-security-group-rules" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-security-group-rules" }, input)
 end
 
 --- AWS ec2 describe-security-group-vpc-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_security_group_vpc_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-security-group-vpc-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-security-group-vpc-associations" }, input)
 end
 
 --- AWS ec2 describe-security-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_security_groups(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-security-groups" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-security-groups" }, input)
 end
 
 --- AWS ec2 describe-snapshot-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_snapshot_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-snapshot-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-snapshot-attribute" }, input)
 end
 
 --- AWS ec2 describe-snapshot-tier-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_snapshot_tier_status(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-snapshot-tier-status" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-snapshot-tier-status" }, input)
 end
 
 --- AWS ec2 describe-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_snapshots(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-snapshots" }, input)
 end
 
 --- AWS ec2 describe-spot-datafeed-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_spot_datafeed_subscription(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-spot-datafeed-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-spot-datafeed-subscription" }, input)
 end
 
 --- AWS ec2 describe-spot-fleet-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_spot_fleet_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-spot-fleet-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-spot-fleet-instances" }, input)
 end
 
 --- AWS ec2 describe-spot-fleet-request-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_spot_fleet_request_history(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-spot-fleet-request-history" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-spot-fleet-request-history" }, input)
 end
 
 --- AWS ec2 describe-spot-fleet-requests operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_spot_fleet_requests(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-spot-fleet-requests" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-spot-fleet-requests" }, input)
 end
 
 --- AWS ec2 describe-spot-instance-requests operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_spot_instance_requests(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-spot-instance-requests" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-spot-instance-requests" }, input)
 end
 
 --- AWS ec2 describe-spot-price-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_spot_price_history(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-spot-price-history" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-spot-price-history" }, input)
 end
 
 --- AWS ec2 describe-stale-security-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_stale_security_groups(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-stale-security-groups" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-stale-security-groups" }, input)
 end
 
 --- AWS ec2 describe-store-image-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_store_image_tasks(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-store-image-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-store-image-tasks" }, input)
 end
 
 --- AWS ec2 describe-subnets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_subnets(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-subnets" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-subnets" }, input)
 end
 
 --- AWS ec2 describe-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_tags(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-tags" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-tags" }, input)
 end
 
 --- AWS ec2 describe-traffic-mirror-filter-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_traffic_mirror_filter_rules(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-traffic-mirror-filter-rules" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-traffic-mirror-filter-rules" }, input)
 end
 
 --- AWS ec2 describe-traffic-mirror-filters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_traffic_mirror_filters(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-traffic-mirror-filters" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-traffic-mirror-filters" }, input)
 end
 
 --- AWS ec2 describe-traffic-mirror-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_traffic_mirror_sessions(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-traffic-mirror-sessions" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-traffic-mirror-sessions" }, input)
 end
 
 --- AWS ec2 describe-traffic-mirror-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_traffic_mirror_targets(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-traffic-mirror-targets" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-traffic-mirror-targets" }, input)
 end
 
 --- AWS ec2 describe-transit-gateway-attachments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transit_gateway_attachments(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-transit-gateway-attachments" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-transit-gateway-attachments" }, input)
 end
 
 --- AWS ec2 describe-transit-gateway-connect-peers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transit_gateway_connect_peers(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-transit-gateway-connect-peers" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-transit-gateway-connect-peers" }, input)
 end
 
 --- AWS ec2 describe-transit-gateway-connects operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transit_gateway_connects(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-transit-gateway-connects" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-transit-gateway-connects" }, input)
 end
 
 --- AWS ec2 describe-transit-gateway-multicast-domains operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transit_gateway_multicast_domains(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-transit-gateway-multicast-domains" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-transit-gateway-multicast-domains" }, input)
 end
 
 --- AWS ec2 describe-transit-gateway-peering-attachments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transit_gateway_peering_attachments(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-transit-gateway-peering-attachments" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-transit-gateway-peering-attachments" }, input)
 end
 
 --- AWS ec2 describe-transit-gateway-policy-tables operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transit_gateway_policy_tables(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-transit-gateway-policy-tables" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-transit-gateway-policy-tables" }, input)
 end
 
 --- AWS ec2 describe-transit-gateway-route-table-announcements operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transit_gateway_route_table_announcements(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-transit-gateway-route-table-announcements" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-transit-gateway-route-table-announcements" }, input)
 end
 
 --- AWS ec2 describe-transit-gateway-route-tables operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transit_gateway_route_tables(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-transit-gateway-route-tables" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-transit-gateway-route-tables" }, input)
 end
 
 --- AWS ec2 describe-transit-gateway-vpc-attachments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transit_gateway_vpc_attachments(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-transit-gateway-vpc-attachments" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-transit-gateway-vpc-attachments" }, input)
 end
 
 --- AWS ec2 describe-transit-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_transit_gateways(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-transit-gateways" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-transit-gateways" }, input)
 end
 
 --- AWS ec2 describe-trunk-interface-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_trunk_interface_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-trunk-interface-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-trunk-interface-associations" }, input)
 end
 
 --- AWS ec2 describe-verified-access-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_verified_access_endpoints(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-verified-access-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-verified-access-endpoints" }, input)
 end
 
 --- AWS ec2 describe-verified-access-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_verified_access_groups(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-verified-access-groups" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-verified-access-groups" }, input)
 end
 
 --- AWS ec2 describe-verified-access-instance-logging-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_verified_access_instance_logging_configurations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-verified-access-instance-logging-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-verified-access-instance-logging-configurations" }, input)
 end
 
 --- AWS ec2 describe-verified-access-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_verified_access_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-verified-access-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-verified-access-instances" }, input)
 end
 
 --- AWS ec2 describe-verified-access-trust-providers operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_verified_access_trust_providers(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-verified-access-trust-providers" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-verified-access-trust-providers" }, input)
 end
 
 --- AWS ec2 describe-volume-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_volume_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-volume-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-volume-attribute" }, input)
 end
 
 --- AWS ec2 describe-volume-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_volume_status(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-volume-status" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-volume-status" }, input)
 end
 
 --- AWS ec2 describe-volumes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_volumes(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-volumes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-volumes" }, input)
 end
 
 --- AWS ec2 describe-volumes-modifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_volumes_modifications(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-volumes-modifications" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-volumes-modifications" }, input)
 end
 
 --- AWS ec2 describe-vpc-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-attribute" }, input)
 end
 
 --- AWS ec2 describe-vpc-block-public-access-exclusions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_block_public_access_exclusions(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-block-public-access-exclusions" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-block-public-access-exclusions" }, input)
 end
 
 --- AWS ec2 describe-vpc-block-public-access-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_block_public_access_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-block-public-access-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-block-public-access-options" }, input)
 end
 
 --- AWS ec2 describe-vpc-classic-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_classic_link(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-classic-link" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-classic-link" }, input)
 end
 
 --- AWS ec2 describe-vpc-classic-link-dns-support operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_classic_link_dns_support(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-classic-link-dns-support" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-classic-link-dns-support" }, input)
 end
 
 --- AWS ec2 describe-vpc-endpoint-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_endpoint_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-endpoint-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-endpoint-associations" }, input)
 end
 
 --- AWS ec2 describe-vpc-endpoint-connection-notifications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_endpoint_connection_notifications(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-endpoint-connection-notifications" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-endpoint-connection-notifications" }, input)
 end
 
 --- AWS ec2 describe-vpc-endpoint-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_endpoint_connections(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-endpoint-connections" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-endpoint-connections" }, input)
 end
 
 --- AWS ec2 describe-vpc-endpoint-service-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_endpoint_service_configurations(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-endpoint-service-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-endpoint-service-configurations" }, input)
 end
 
 --- AWS ec2 describe-vpc-endpoint-service-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_endpoint_service_permissions(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-endpoint-service-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-endpoint-service-permissions" }, input)
 end
 
 --- AWS ec2 describe-vpc-endpoint-services operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_endpoint_services(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-endpoint-services" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-endpoint-services" }, input)
 end
 
 --- AWS ec2 describe-vpc-endpoints operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_endpoints(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-endpoints" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-endpoints" }, input)
 end
 
 --- AWS ec2 describe-vpc-peering-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpc_peering_connections(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpc-peering-connections" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpc-peering-connections" }, input)
 end
 
 --- AWS ec2 describe-vpcs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpcs(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpcs" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpcs" }, input)
 end
 
 --- AWS ec2 describe-vpn-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpn_connections(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpn-connections" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpn-connections" }, input)
 end
 
 --- AWS ec2 describe-vpn-gateways operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_vpn_gateways(input)
-	return common.execute_aws_command_with_input({ "ec2", "describe-vpn-gateways" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "describe-vpn-gateways" }, input)
 end
 
 --- AWS ec2 detach-classic-link-vpc operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_classic_link_vpc(input)
-	return common.execute_aws_command_with_input({ "ec2", "detach-classic-link-vpc" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "detach-classic-link-vpc" }, input)
 end
 
 --- AWS ec2 detach-internet-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_internet_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "detach-internet-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "detach-internet-gateway" }, input)
 end
 
 --- AWS ec2 detach-network-interface operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_network_interface(input)
-	return common.execute_aws_command_with_input({ "ec2", "detach-network-interface" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "detach-network-interface" }, input)
 end
 
 --- AWS ec2 detach-verified-access-trust-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_verified_access_trust_provider(input)
-	return common.execute_aws_command_with_input({ "ec2", "detach-verified-access-trust-provider" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "detach-verified-access-trust-provider" }, input)
 end
 
 --- AWS ec2 detach-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_volume(input)
-	return common.execute_aws_command_with_input({ "ec2", "detach-volume" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "detach-volume" }, input)
 end
 
 --- AWS ec2 detach-vpn-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_vpn_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "detach-vpn-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "detach-vpn-gateway" }, input)
 end
 
 --- AWS ec2 disable-address-transfer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_address_transfer(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-address-transfer" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-address-transfer" }, input)
 end
 
 --- AWS ec2 disable-allowed-images-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_allowed_images_settings(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-allowed-images-settings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-allowed-images-settings" }, input)
 end
 
 --- AWS ec2 disable-aws-network-performance-metric-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_aws_network_performance_metric_subscription(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-aws-network-performance-metric-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-aws-network-performance-metric-subscription" }, input)
 end
 
 --- AWS ec2 disable-ebs-encryption-by-default operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_ebs_encryption_by_default(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-ebs-encryption-by-default" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-ebs-encryption-by-default" }, input)
 end
 
 --- AWS ec2 disable-fast-launch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_fast_launch(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-fast-launch" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-fast-launch" }, input)
 end
 
 --- AWS ec2 disable-fast-snapshot-restores operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_fast_snapshot_restores(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-fast-snapshot-restores" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-fast-snapshot-restores" }, input)
 end
 
 --- AWS ec2 disable-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-image" }, input)
 end
 
 --- AWS ec2 disable-image-block-public-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_image_block_public_access(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-image-block-public-access" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-image-block-public-access" }, input)
 end
 
 --- AWS ec2 disable-image-deprecation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_image_deprecation(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-image-deprecation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-image-deprecation" }, input)
 end
 
 --- AWS ec2 disable-image-deregistration-protection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_image_deregistration_protection(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-image-deregistration-protection" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-image-deregistration-protection" }, input)
 end
 
 --- AWS ec2 disable-ipam-organization-admin-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_ipam_organization_admin_account(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-ipam-organization-admin-account" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-ipam-organization-admin-account" }, input)
 end
 
 --- AWS ec2 disable-route-server-propagation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_route_server_propagation(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-route-server-propagation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-route-server-propagation" }, input)
 end
 
 --- AWS ec2 disable-serial-console-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_serial_console_access(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-serial-console-access" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-serial-console-access" }, input)
 end
 
 --- AWS ec2 disable-snapshot-block-public-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_snapshot_block_public_access(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-snapshot-block-public-access" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-snapshot-block-public-access" }, input)
 end
 
 --- AWS ec2 disable-transit-gateway-route-table-propagation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_transit_gateway_route_table_propagation(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-transit-gateway-route-table-propagation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-transit-gateway-route-table-propagation" }, input)
 end
 
 --- AWS ec2 disable-vgw-route-propagation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_vgw_route_propagation(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-vgw-route-propagation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-vgw-route-propagation" }, input)
 end
 
 --- AWS ec2 disable-vpc-classic-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_vpc_classic_link(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-vpc-classic-link" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-vpc-classic-link" }, input)
 end
 
 --- AWS ec2 disable-vpc-classic-link-dns-support operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_vpc_classic_link_dns_support(input)
-	return common.execute_aws_command_with_input({ "ec2", "disable-vpc-classic-link-dns-support" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disable-vpc-classic-link-dns-support" }, input)
 end
 
 --- AWS ec2 disassociate-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_address(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-address" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-address" }, input)
 end
 
 --- AWS ec2 disassociate-capacity-reservation-billing-owner operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_capacity_reservation_billing_owner(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-capacity-reservation-billing-owner" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-capacity-reservation-billing-owner" }, input)
 end
 
 --- AWS ec2 disassociate-client-vpn-target-network operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_client_vpn_target_network(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-client-vpn-target-network" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-client-vpn-target-network" }, input)
 end
 
 --- AWS ec2 disassociate-enclave-certificate-iam-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_enclave_certificate_iam_role(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-enclave-certificate-iam-role" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-enclave-certificate-iam-role" }, input)
 end
 
 --- AWS ec2 disassociate-iam-instance-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_iam_instance_profile(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-iam-instance-profile" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-iam-instance-profile" }, input)
 end
 
 --- AWS ec2 disassociate-instance-event-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_instance_event_window(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-instance-event-window" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-instance-event-window" }, input)
 end
 
 --- AWS ec2 disassociate-ipam-byoasn operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_ipam_byoasn(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-ipam-byoasn" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-ipam-byoasn" }, input)
 end
 
 --- AWS ec2 disassociate-ipam-resource-discovery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_ipam_resource_discovery(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-ipam-resource-discovery" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-ipam-resource-discovery" }, input)
 end
 
 --- AWS ec2 disassociate-nat-gateway-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_nat_gateway_address(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-nat-gateway-address" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-nat-gateway-address" }, input)
 end
 
 --- AWS ec2 disassociate-route-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_route_server(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-route-server" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-route-server" }, input)
 end
 
 --- AWS ec2 disassociate-route-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_route_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-route-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-route-table" }, input)
 end
 
 --- AWS ec2 disassociate-security-group-vpc operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_security_group_vpc(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-security-group-vpc" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-security-group-vpc" }, input)
 end
 
 --- AWS ec2 disassociate-subnet-cidr-block operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_subnet_cidr_block(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-subnet-cidr-block" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-subnet-cidr-block" }, input)
 end
 
 --- AWS ec2 disassociate-transit-gateway-multicast-domain operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_transit_gateway_multicast_domain(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-transit-gateway-multicast-domain" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-transit-gateway-multicast-domain" }, input)
 end
 
 --- AWS ec2 disassociate-transit-gateway-policy-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_transit_gateway_policy_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-transit-gateway-policy-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-transit-gateway-policy-table" }, input)
 end
 
 --- AWS ec2 disassociate-transit-gateway-route-table operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_transit_gateway_route_table(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-transit-gateway-route-table" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-transit-gateway-route-table" }, input)
 end
 
 --- AWS ec2 disassociate-trunk-interface operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_trunk_interface(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-trunk-interface" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-trunk-interface" }, input)
 end
 
 --- AWS ec2 disassociate-vpc-cidr-block operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_vpc_cidr_block(input)
-	return common.execute_aws_command_with_input({ "ec2", "disassociate-vpc-cidr-block" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "disassociate-vpc-cidr-block" }, input)
 end
 
 --- AWS ec2 enable-address-transfer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_address_transfer(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-address-transfer" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-address-transfer" }, input)
 end
 
 --- AWS ec2 enable-allowed-images-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_allowed_images_settings(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-allowed-images-settings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-allowed-images-settings" }, input)
 end
 
 --- AWS ec2 enable-aws-network-performance-metric-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_aws_network_performance_metric_subscription(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-aws-network-performance-metric-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-aws-network-performance-metric-subscription" }, input)
 end
 
 --- AWS ec2 enable-ebs-encryption-by-default operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_ebs_encryption_by_default(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-ebs-encryption-by-default" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-ebs-encryption-by-default" }, input)
 end
 
 --- AWS ec2 enable-fast-launch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_fast_launch(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-fast-launch" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-fast-launch" }, input)
 end
 
 --- AWS ec2 enable-fast-snapshot-restores operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_fast_snapshot_restores(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-fast-snapshot-restores" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-fast-snapshot-restores" }, input)
 end
 
 --- AWS ec2 enable-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-image" }, input)
 end
 
 --- AWS ec2 enable-image-block-public-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_image_block_public_access(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-image-block-public-access" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-image-block-public-access" }, input)
 end
 
 --- AWS ec2 enable-image-deprecation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_image_deprecation(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-image-deprecation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-image-deprecation" }, input)
 end
 
 --- AWS ec2 enable-image-deregistration-protection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_image_deregistration_protection(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-image-deregistration-protection" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-image-deregistration-protection" }, input)
 end
 
 --- AWS ec2 enable-ipam-organization-admin-account operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_ipam_organization_admin_account(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-ipam-organization-admin-account" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-ipam-organization-admin-account" }, input)
 end
 
 --- AWS ec2 enable-reachability-analyzer-organization-sharing operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_reachability_analyzer_organization_sharing(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-reachability-analyzer-organization-sharing" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-reachability-analyzer-organization-sharing" }, input)
 end
 
 --- AWS ec2 enable-route-server-propagation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_route_server_propagation(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-route-server-propagation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-route-server-propagation" }, input)
 end
 
 --- AWS ec2 enable-serial-console-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_serial_console_access(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-serial-console-access" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-serial-console-access" }, input)
 end
 
 --- AWS ec2 enable-snapshot-block-public-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_snapshot_block_public_access(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-snapshot-block-public-access" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-snapshot-block-public-access" }, input)
 end
 
 --- AWS ec2 enable-transit-gateway-route-table-propagation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_transit_gateway_route_table_propagation(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-transit-gateway-route-table-propagation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-transit-gateway-route-table-propagation" }, input)
 end
 
 --- AWS ec2 enable-vgw-route-propagation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_vgw_route_propagation(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-vgw-route-propagation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-vgw-route-propagation" }, input)
 end
 
 --- AWS ec2 enable-volume-io operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_volume_io(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-volume-io" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-volume-io" }, input)
 end
 
 --- AWS ec2 enable-vpc-classic-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_vpc_classic_link(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-vpc-classic-link" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-vpc-classic-link" }, input)
 end
 
 --- AWS ec2 enable-vpc-classic-link-dns-support operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_vpc_classic_link_dns_support(input)
-	return common.execute_aws_command_with_input({ "ec2", "enable-vpc-classic-link-dns-support" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "enable-vpc-classic-link-dns-support" }, input)
 end
 
 --- AWS ec2 export-client-vpn-client-certificate-revocation-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_client_vpn_client_certificate_revocation_list(input)
-	return common.execute_aws_command_with_input({ "ec2", "export-client-vpn-client-certificate-revocation-list" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "export-client-vpn-client-certificate-revocation-list" }, input)
 end
 
 --- AWS ec2 export-client-vpn-client-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_client_vpn_client_configuration(input)
-	return common.execute_aws_command_with_input({ "ec2", "export-client-vpn-client-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "export-client-vpn-client-configuration" }, input)
 end
 
 --- AWS ec2 export-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "export-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "export-image" }, input)
 end
 
 --- AWS ec2 export-transit-gateway-routes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_transit_gateway_routes(input)
-	return common.execute_aws_command_with_input({ "ec2", "export-transit-gateway-routes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "export-transit-gateway-routes" }, input)
 end
 
 --- AWS ec2 export-verified-access-instance-client-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.export_verified_access_instance_client_configuration(input)
-	return common.execute_aws_command_with_input({ "ec2", "export-verified-access-instance-client-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "export-verified-access-instance-client-configuration" }, input)
 end
 
 --- AWS ec2 get-allowed-images-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_allowed_images_settings(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-allowed-images-settings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-allowed-images-settings" }, input)
 end
 
 --- AWS ec2 get-associated-enclave-certificate-iam-roles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_associated_enclave_certificate_iam_roles(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-associated-enclave-certificate-iam-roles" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-associated-enclave-certificate-iam-roles" }, input)
 end
 
 --- AWS ec2 get-associated-ipv6-pool-cidrs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_associated_ipv6_pool_cidrs(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-associated-ipv6-pool-cidrs" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-associated-ipv6-pool-cidrs" }, input)
 end
 
 --- AWS ec2 get-aws-network-performance-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_aws_network_performance_data(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-aws-network-performance-data" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-aws-network-performance-data" }, input)
 end
 
 --- AWS ec2 get-capacity-reservation-usage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_capacity_reservation_usage(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-capacity-reservation-usage" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-capacity-reservation-usage" }, input)
 end
 
 --- AWS ec2 get-coip-pool-usage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_coip_pool_usage(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-coip-pool-usage" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-coip-pool-usage" }, input)
 end
 
 --- AWS ec2 get-console-output operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_console_output(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-console-output" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-console-output" }, input)
 end
 
 --- AWS ec2 get-console-screenshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_console_screenshot(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-console-screenshot" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-console-screenshot" }, input)
 end
 
 --- AWS ec2 get-declarative-policies-report-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_declarative_policies_report_summary(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-declarative-policies-report-summary" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-declarative-policies-report-summary" }, input)
 end
 
 --- AWS ec2 get-default-credit-specification operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_default_credit_specification(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-default-credit-specification" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-default-credit-specification" }, input)
 end
 
 --- AWS ec2 get-ebs-default-kms-key-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ebs_default_kms_key_id(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-ebs-default-kms-key-id" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-ebs-default-kms-key-id" }, input)
 end
 
 --- AWS ec2 get-ebs-encryption-by-default operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ebs_encryption_by_default(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-ebs-encryption-by-default" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-ebs-encryption-by-default" }, input)
 end
 
 --- AWS ec2 get-flow-logs-integration-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_flow_logs_integration_template(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-flow-logs-integration-template" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-flow-logs-integration-template" }, input)
 end
 
 --- AWS ec2 get-groups-for-capacity-reservation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_groups_for_capacity_reservation(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-groups-for-capacity-reservation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-groups-for-capacity-reservation" }, input)
 end
 
 --- AWS ec2 get-host-reservation-purchase-preview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_host_reservation_purchase_preview(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-host-reservation-purchase-preview" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-host-reservation-purchase-preview" }, input)
 end
 
 --- AWS ec2 get-image-block-public-access-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_image_block_public_access_state(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-image-block-public-access-state" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-image-block-public-access-state" }, input)
 end
 
 --- AWS ec2 get-instance-metadata-defaults operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_instance_metadata_defaults(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-instance-metadata-defaults" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-instance-metadata-defaults" }, input)
 end
 
 --- AWS ec2 get-instance-tpm-ek-pub operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_instance_tpm_ek_pub(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-instance-tpm-ek-pub" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-instance-tpm-ek-pub" }, input)
 end
 
 --- AWS ec2 get-instance-types-from-instance-requirements operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_instance_types_from_instance_requirements(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-instance-types-from-instance-requirements" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-instance-types-from-instance-requirements" }, input)
 end
 
 --- AWS ec2 get-instance-uefi-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_instance_uefi_data(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-instance-uefi-data" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-instance-uefi-data" }, input)
 end
 
 --- AWS ec2 get-ipam-address-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ipam_address_history(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-ipam-address-history" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-ipam-address-history" }, input)
 end
 
 --- AWS ec2 get-ipam-discovered-accounts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ipam_discovered_accounts(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-ipam-discovered-accounts" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-ipam-discovered-accounts" }, input)
 end
 
 --- AWS ec2 get-ipam-discovered-public-addresses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ipam_discovered_public_addresses(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-ipam-discovered-public-addresses" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-ipam-discovered-public-addresses" }, input)
 end
 
 --- AWS ec2 get-ipam-discovered-resource-cidrs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ipam_discovered_resource_cidrs(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-ipam-discovered-resource-cidrs" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-ipam-discovered-resource-cidrs" }, input)
 end
 
 --- AWS ec2 get-ipam-pool-allocations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ipam_pool_allocations(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-ipam-pool-allocations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-ipam-pool-allocations" }, input)
 end
 
 --- AWS ec2 get-ipam-pool-cidrs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ipam_pool_cidrs(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-ipam-pool-cidrs" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-ipam-pool-cidrs" }, input)
 end
 
 --- AWS ec2 get-ipam-resource-cidrs operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ipam_resource_cidrs(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-ipam-resource-cidrs" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-ipam-resource-cidrs" }, input)
 end
 
 --- AWS ec2 get-launch-template-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_launch_template_data(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-launch-template-data" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-launch-template-data" }, input)
 end
 
 --- AWS ec2 get-managed-prefix-list-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_prefix_list_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-managed-prefix-list-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-managed-prefix-list-associations" }, input)
 end
 
 --- AWS ec2 get-managed-prefix-list-entries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_managed_prefix_list_entries(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-managed-prefix-list-entries" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-managed-prefix-list-entries" }, input)
 end
 
 --- AWS ec2 get-network-insights-access-scope-analysis-findings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_network_insights_access_scope_analysis_findings(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-network-insights-access-scope-analysis-findings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-network-insights-access-scope-analysis-findings" }, input)
 end
 
 --- AWS ec2 get-network-insights-access-scope-content operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_network_insights_access_scope_content(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-network-insights-access-scope-content" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-network-insights-access-scope-content" }, input)
 end
 
 --- AWS ec2 get-password-data operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_password_data(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-password-data" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-password-data" }, input)
 end
 
 --- AWS ec2 get-reserved-instances-exchange-quote operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_reserved_instances_exchange_quote(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-reserved-instances-exchange-quote" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-reserved-instances-exchange-quote" }, input)
 end
 
 --- AWS ec2 get-route-server-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_route_server_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-route-server-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-route-server-associations" }, input)
 end
 
 --- AWS ec2 get-route-server-propagations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_route_server_propagations(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-route-server-propagations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-route-server-propagations" }, input)
 end
 
 --- AWS ec2 get-route-server-routing-database operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_route_server_routing_database(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-route-server-routing-database" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-route-server-routing-database" }, input)
 end
 
 --- AWS ec2 get-security-groups-for-vpc operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_security_groups_for_vpc(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-security-groups-for-vpc" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-security-groups-for-vpc" }, input)
 end
 
 --- AWS ec2 get-serial-console-access-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_serial_console_access_status(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-serial-console-access-status" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-serial-console-access-status" }, input)
 end
 
 --- AWS ec2 get-snapshot-block-public-access-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_snapshot_block_public_access_state(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-snapshot-block-public-access-state" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-snapshot-block-public-access-state" }, input)
 end
 
 --- AWS ec2 get-spot-placement-scores operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_spot_placement_scores(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-spot-placement-scores" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-spot-placement-scores" }, input)
 end
 
 --- AWS ec2 get-subnet-cidr-reservations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_subnet_cidr_reservations(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-subnet-cidr-reservations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-subnet-cidr-reservations" }, input)
 end
 
 --- AWS ec2 get-transit-gateway-attachment-propagations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transit_gateway_attachment_propagations(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-transit-gateway-attachment-propagations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-transit-gateway-attachment-propagations" }, input)
 end
 
 --- AWS ec2 get-transit-gateway-multicast-domain-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transit_gateway_multicast_domain_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-transit-gateway-multicast-domain-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-transit-gateway-multicast-domain-associations" }, input)
 end
 
 --- AWS ec2 get-transit-gateway-policy-table-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transit_gateway_policy_table_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-transit-gateway-policy-table-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-transit-gateway-policy-table-associations" }, input)
 end
 
 --- AWS ec2 get-transit-gateway-policy-table-entries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transit_gateway_policy_table_entries(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-transit-gateway-policy-table-entries" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-transit-gateway-policy-table-entries" }, input)
 end
 
 --- AWS ec2 get-transit-gateway-prefix-list-references operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transit_gateway_prefix_list_references(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-transit-gateway-prefix-list-references" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-transit-gateway-prefix-list-references" }, input)
 end
 
 --- AWS ec2 get-transit-gateway-route-table-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transit_gateway_route_table_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-transit-gateway-route-table-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-transit-gateway-route-table-associations" }, input)
 end
 
 --- AWS ec2 get-transit-gateway-route-table-propagations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_transit_gateway_route_table_propagations(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-transit-gateway-route-table-propagations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-transit-gateway-route-table-propagations" }, input)
 end
 
 --- AWS ec2 get-verified-access-endpoint-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_verified_access_endpoint_policy(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-verified-access-endpoint-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-verified-access-endpoint-policy" }, input)
 end
 
 --- AWS ec2 get-verified-access-endpoint-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_verified_access_endpoint_targets(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-verified-access-endpoint-targets" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-verified-access-endpoint-targets" }, input)
 end
 
 --- AWS ec2 get-verified-access-group-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_verified_access_group_policy(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-verified-access-group-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-verified-access-group-policy" }, input)
 end
 
 --- AWS ec2 get-vpn-connection-device-sample-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_vpn_connection_device_sample_configuration(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-vpn-connection-device-sample-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-vpn-connection-device-sample-configuration" }, input)
 end
 
 --- AWS ec2 get-vpn-connection-device-types operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_vpn_connection_device_types(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-vpn-connection-device-types" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-vpn-connection-device-types" }, input)
 end
 
 --- AWS ec2 get-vpn-tunnel-replacement-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_vpn_tunnel_replacement_status(input)
-	return common.execute_aws_command_with_input({ "ec2", "get-vpn-tunnel-replacement-status" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "get-vpn-tunnel-replacement-status" }, input)
 end
 
 --- AWS ec2 import-client-vpn-client-certificate-revocation-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_client_vpn_client_certificate_revocation_list(input)
-	return common.execute_aws_command_with_input({ "ec2", "import-client-vpn-client-certificate-revocation-list" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "import-client-vpn-client-certificate-revocation-list" }, input)
 end
 
 --- AWS ec2 import-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "import-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "import-image" }, input)
 end
 
 --- AWS ec2 import-key-pair operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_key_pair(input)
-	return common.execute_aws_command_with_input({ "ec2", "import-key-pair" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "import-key-pair" }, input)
 end
 
 --- AWS ec2 import-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.import_snapshot(input)
-	return common.execute_aws_command_with_input({ "ec2", "import-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "import-snapshot" }, input)
 end
 
 --- AWS ec2 list-images-in-recycle-bin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_images_in_recycle_bin(input)
-	return common.execute_aws_command_with_input({ "ec2", "list-images-in-recycle-bin" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "list-images-in-recycle-bin" }, input)
 end
 
 --- AWS ec2 list-snapshots-in-recycle-bin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_snapshots_in_recycle_bin(input)
-	return common.execute_aws_command_with_input({ "ec2", "list-snapshots-in-recycle-bin" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "list-snapshots-in-recycle-bin" }, input)
 end
 
 --- AWS ec2 lock-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.lock_snapshot(input)
-	return common.execute_aws_command_with_input({ "ec2", "lock-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "lock-snapshot" }, input)
 end
 
 --- AWS ec2 modify-address-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_address_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-address-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-address-attribute" }, input)
 end
 
 --- AWS ec2 modify-availability-zone-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_availability_zone_group(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-availability-zone-group" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-availability-zone-group" }, input)
 end
 
 --- AWS ec2 modify-capacity-reservation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_capacity_reservation(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-capacity-reservation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-capacity-reservation" }, input)
 end
 
 --- AWS ec2 modify-capacity-reservation-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_capacity_reservation_fleet(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-capacity-reservation-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-capacity-reservation-fleet" }, input)
 end
 
 --- AWS ec2 modify-client-vpn-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_client_vpn_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-client-vpn-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-client-vpn-endpoint" }, input)
 end
 
 --- AWS ec2 modify-default-credit-specification operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_default_credit_specification(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-default-credit-specification" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-default-credit-specification" }, input)
 end
 
 --- AWS ec2 modify-ebs-default-kms-key-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_ebs_default_kms_key_id(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-ebs-default-kms-key-id" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-ebs-default-kms-key-id" }, input)
 end
 
 --- AWS ec2 modify-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_fleet(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-fleet" }, input)
 end
 
 --- AWS ec2 modify-fpga-image-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_fpga_image_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-fpga-image-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-fpga-image-attribute" }, input)
 end
 
 --- AWS ec2 modify-hosts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_hosts(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-hosts" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-hosts" }, input)
 end
 
 --- AWS ec2 modify-id-format operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_id_format(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-id-format" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-id-format" }, input)
 end
 
 --- AWS ec2 modify-identity-id-format operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_identity_id_format(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-identity-id-format" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-identity-id-format" }, input)
 end
 
 --- AWS ec2 modify-image-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_image_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-image-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-image-attribute" }, input)
 end
 
 --- AWS ec2 modify-instance-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-attribute" }, input)
 end
 
 --- AWS ec2 modify-instance-capacity-reservation-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_capacity_reservation_attributes(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-capacity-reservation-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-capacity-reservation-attributes" }, input)
 end
 
 --- AWS ec2 modify-instance-cpu-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_cpu_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-cpu-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-cpu-options" }, input)
 end
 
 --- AWS ec2 modify-instance-credit-specification operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_credit_specification(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-credit-specification" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-credit-specification" }, input)
 end
 
 --- AWS ec2 modify-instance-event-start-time operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_event_start_time(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-event-start-time" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-event-start-time" }, input)
 end
 
 --- AWS ec2 modify-instance-event-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_event_window(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-event-window" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-event-window" }, input)
 end
 
 --- AWS ec2 modify-instance-maintenance-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_maintenance_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-maintenance-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-maintenance-options" }, input)
 end
 
 --- AWS ec2 modify-instance-metadata-defaults operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_metadata_defaults(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-metadata-defaults" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-metadata-defaults" }, input)
 end
 
 --- AWS ec2 modify-instance-metadata-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_metadata_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-metadata-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-metadata-options" }, input)
 end
 
 --- AWS ec2 modify-instance-network-performance-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_network_performance_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-network-performance-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-network-performance-options" }, input)
 end
 
 --- AWS ec2 modify-instance-placement operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_instance_placement(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-instance-placement" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-instance-placement" }, input)
 end
 
 --- AWS ec2 modify-ipam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_ipam(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-ipam" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-ipam" }, input)
 end
 
 --- AWS ec2 modify-ipam-pool operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_ipam_pool(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-ipam-pool" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-ipam-pool" }, input)
 end
 
 --- AWS ec2 modify-ipam-resource-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_ipam_resource_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-ipam-resource-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-ipam-resource-cidr" }, input)
 end
 
 --- AWS ec2 modify-ipam-resource-discovery operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_ipam_resource_discovery(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-ipam-resource-discovery" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-ipam-resource-discovery" }, input)
 end
 
 --- AWS ec2 modify-ipam-scope operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_ipam_scope(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-ipam-scope" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-ipam-scope" }, input)
 end
 
 --- AWS ec2 modify-launch-template operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_launch_template(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-launch-template" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-launch-template" }, input)
 end
 
 --- AWS ec2 modify-local-gateway-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_local_gateway_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-local-gateway-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-local-gateway-route" }, input)
 end
 
 --- AWS ec2 modify-managed-prefix-list operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_managed_prefix_list(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-managed-prefix-list" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-managed-prefix-list" }, input)
 end
 
 --- AWS ec2 modify-network-interface-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_network_interface_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-network-interface-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-network-interface-attribute" }, input)
 end
 
 --- AWS ec2 modify-private-dns-name-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_private_dns_name_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-private-dns-name-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-private-dns-name-options" }, input)
 end
 
 --- AWS ec2 modify-reserved-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_reserved_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-reserved-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-reserved-instances" }, input)
 end
 
 --- AWS ec2 modify-route-server operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_route_server(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-route-server" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-route-server" }, input)
 end
 
 --- AWS ec2 modify-security-group-rules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_security_group_rules(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-security-group-rules" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-security-group-rules" }, input)
 end
 
 --- AWS ec2 modify-snapshot-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_snapshot_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-snapshot-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-snapshot-attribute" }, input)
 end
 
 --- AWS ec2 modify-snapshot-tier operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_snapshot_tier(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-snapshot-tier" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-snapshot-tier" }, input)
 end
 
 --- AWS ec2 modify-spot-fleet-request operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_spot_fleet_request(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-spot-fleet-request" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-spot-fleet-request" }, input)
 end
 
 --- AWS ec2 modify-subnet-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_subnet_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-subnet-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-subnet-attribute" }, input)
 end
 
 --- AWS ec2 modify-traffic-mirror-filter-network-services operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_traffic_mirror_filter_network_services(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-traffic-mirror-filter-network-services" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-traffic-mirror-filter-network-services" }, input)
 end
 
 --- AWS ec2 modify-traffic-mirror-filter-rule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_traffic_mirror_filter_rule(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-traffic-mirror-filter-rule" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-traffic-mirror-filter-rule" }, input)
 end
 
 --- AWS ec2 modify-traffic-mirror-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_traffic_mirror_session(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-traffic-mirror-session" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-traffic-mirror-session" }, input)
 end
 
 --- AWS ec2 modify-transit-gateway operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_transit_gateway(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-transit-gateway" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-transit-gateway" }, input)
 end
 
 --- AWS ec2 modify-transit-gateway-prefix-list-reference operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_transit_gateway_prefix_list_reference(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-transit-gateway-prefix-list-reference" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-transit-gateway-prefix-list-reference" }, input)
 end
 
 --- AWS ec2 modify-transit-gateway-vpc-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_transit_gateway_vpc_attachment(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-transit-gateway-vpc-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-transit-gateway-vpc-attachment" }, input)
 end
 
 --- AWS ec2 modify-verified-access-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_verified_access_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-verified-access-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-verified-access-endpoint" }, input)
 end
 
 --- AWS ec2 modify-verified-access-endpoint-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_verified_access_endpoint_policy(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-verified-access-endpoint-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-verified-access-endpoint-policy" }, input)
 end
 
 --- AWS ec2 modify-verified-access-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_verified_access_group(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-verified-access-group" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-verified-access-group" }, input)
 end
 
 --- AWS ec2 modify-verified-access-group-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_verified_access_group_policy(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-verified-access-group-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-verified-access-group-policy" }, input)
 end
 
 --- AWS ec2 modify-verified-access-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_verified_access_instance(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-verified-access-instance" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-verified-access-instance" }, input)
 end
 
 --- AWS ec2 modify-verified-access-instance-logging-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_verified_access_instance_logging_configuration(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-verified-access-instance-logging-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-verified-access-instance-logging-configuration" }, input)
 end
 
 --- AWS ec2 modify-verified-access-trust-provider operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_verified_access_trust_provider(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-verified-access-trust-provider" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-verified-access-trust-provider" }, input)
 end
 
 --- AWS ec2 modify-volume operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_volume(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-volume" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-volume" }, input)
 end
 
 --- AWS ec2 modify-volume-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_volume_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-volume-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-volume-attribute" }, input)
 end
 
 --- AWS ec2 modify-vpc-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpc_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpc-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpc-attribute" }, input)
 end
 
 --- AWS ec2 modify-vpc-block-public-access-exclusion operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpc_block_public_access_exclusion(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpc-block-public-access-exclusion" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpc-block-public-access-exclusion" }, input)
 end
 
 --- AWS ec2 modify-vpc-block-public-access-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpc_block_public_access_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpc-block-public-access-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpc-block-public-access-options" }, input)
 end
 
 --- AWS ec2 modify-vpc-endpoint operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpc_endpoint(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpc-endpoint" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpc-endpoint" }, input)
 end
 
 --- AWS ec2 modify-vpc-endpoint-connection-notification operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpc_endpoint_connection_notification(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpc-endpoint-connection-notification" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpc-endpoint-connection-notification" }, input)
 end
 
 --- AWS ec2 modify-vpc-endpoint-service-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpc_endpoint_service_configuration(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpc-endpoint-service-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpc-endpoint-service-configuration" }, input)
 end
 
 --- AWS ec2 modify-vpc-endpoint-service-payer-responsibility operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpc_endpoint_service_payer_responsibility(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpc-endpoint-service-payer-responsibility" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpc-endpoint-service-payer-responsibility" }, input)
 end
 
 --- AWS ec2 modify-vpc-endpoint-service-permissions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpc_endpoint_service_permissions(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpc-endpoint-service-permissions" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpc-endpoint-service-permissions" }, input)
 end
 
 --- AWS ec2 modify-vpc-peering-connection-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpc_peering_connection_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpc-peering-connection-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpc-peering-connection-options" }, input)
 end
 
 --- AWS ec2 modify-vpc-tenancy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpc_tenancy(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpc-tenancy" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpc-tenancy" }, input)
 end
 
 --- AWS ec2 modify-vpn-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpn_connection(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpn-connection" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpn-connection" }, input)
 end
 
 --- AWS ec2 modify-vpn-connection-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpn_connection_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpn-connection-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpn-connection-options" }, input)
 end
 
 --- AWS ec2 modify-vpn-tunnel-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpn_tunnel_certificate(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpn-tunnel-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpn-tunnel-certificate" }, input)
 end
 
 --- AWS ec2 modify-vpn-tunnel-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_vpn_tunnel_options(input)
-	return common.execute_aws_command_with_input({ "ec2", "modify-vpn-tunnel-options" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "modify-vpn-tunnel-options" }, input)
 end
 
 --- AWS ec2 monitor-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.monitor_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "monitor-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "monitor-instances" }, input)
 end
 
 --- AWS ec2 move-address-to-vpc operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.move_address_to_vpc(input)
-	return common.execute_aws_command_with_input({ "ec2", "move-address-to-vpc" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "move-address-to-vpc" }, input)
 end
 
 --- AWS ec2 move-byoip-cidr-to-ipam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.move_byoip_cidr_to_ipam(input)
-	return common.execute_aws_command_with_input({ "ec2", "move-byoip-cidr-to-ipam" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "move-byoip-cidr-to-ipam" }, input)
 end
 
 --- AWS ec2 move-capacity-reservation-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.move_capacity_reservation_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "move-capacity-reservation-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "move-capacity-reservation-instances" }, input)
 end
 
 --- AWS ec2 provision-byoip-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.provision_byoip_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "provision-byoip-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "provision-byoip-cidr" }, input)
 end
 
 --- AWS ec2 provision-ipam-byoasn operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.provision_ipam_byoasn(input)
-	return common.execute_aws_command_with_input({ "ec2", "provision-ipam-byoasn" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "provision-ipam-byoasn" }, input)
 end
 
 --- AWS ec2 provision-ipam-pool-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.provision_ipam_pool_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "provision-ipam-pool-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "provision-ipam-pool-cidr" }, input)
 end
 
 --- AWS ec2 provision-public-ipv4-pool-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.provision_public_ipv4_pool_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "provision-public-ipv4-pool-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "provision-public-ipv4-pool-cidr" }, input)
 end
 
 --- AWS ec2 purchase-capacity-block operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.purchase_capacity_block(input)
-	return common.execute_aws_command_with_input({ "ec2", "purchase-capacity-block" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "purchase-capacity-block" }, input)
 end
 
 --- AWS ec2 purchase-capacity-block-extension operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.purchase_capacity_block_extension(input)
-	return common.execute_aws_command_with_input({ "ec2", "purchase-capacity-block-extension" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "purchase-capacity-block-extension" }, input)
 end
 
 --- AWS ec2 purchase-host-reservation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.purchase_host_reservation(input)
-	return common.execute_aws_command_with_input({ "ec2", "purchase-host-reservation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "purchase-host-reservation" }, input)
 end
 
 --- AWS ec2 purchase-reserved-instances-offering operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.purchase_reserved_instances_offering(input)
-	return common.execute_aws_command_with_input({ "ec2", "purchase-reserved-instances-offering" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "purchase-reserved-instances-offering" }, input)
 end
 
 --- AWS ec2 purchase-scheduled-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.purchase_scheduled_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "purchase-scheduled-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "purchase-scheduled-instances" }, input)
 end
 
 --- AWS ec2 reboot-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reboot_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "reboot-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reboot-instances" }, input)
 end
 
 --- AWS ec2 register-image operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_image(input)
-	return common.execute_aws_command_with_input({ "ec2", "register-image" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "register-image" }, input)
 end
 
 --- AWS ec2 register-instance-event-notification-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_instance_event_notification_attributes(input)
-	return common.execute_aws_command_with_input({ "ec2", "register-instance-event-notification-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "register-instance-event-notification-attributes" }, input)
 end
 
 --- AWS ec2 register-transit-gateway-multicast-group-members operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_transit_gateway_multicast_group_members(input)
-	return common.execute_aws_command_with_input({ "ec2", "register-transit-gateway-multicast-group-members" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "register-transit-gateway-multicast-group-members" }, input)
 end
 
 --- AWS ec2 register-transit-gateway-multicast-group-sources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_transit_gateway_multicast_group_sources(input)
-	return common.execute_aws_command_with_input({ "ec2", "register-transit-gateway-multicast-group-sources" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "register-transit-gateway-multicast-group-sources" }, input)
 end
 
 --- AWS ec2 reject-capacity-reservation-billing-ownership operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_capacity_reservation_billing_ownership(input)
-	return common.execute_aws_command_with_input({ "ec2", "reject-capacity-reservation-billing-ownership" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reject-capacity-reservation-billing-ownership" }, input)
 end
 
 --- AWS ec2 reject-transit-gateway-multicast-domain-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_transit_gateway_multicast_domain_associations(input)
-	return common.execute_aws_command_with_input({ "ec2", "reject-transit-gateway-multicast-domain-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reject-transit-gateway-multicast-domain-associations" }, input)
 end
 
 --- AWS ec2 reject-transit-gateway-peering-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_transit_gateway_peering_attachment(input)
-	return common.execute_aws_command_with_input({ "ec2", "reject-transit-gateway-peering-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reject-transit-gateway-peering-attachment" }, input)
 end
 
 --- AWS ec2 reject-transit-gateway-vpc-attachment operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_transit_gateway_vpc_attachment(input)
-	return common.execute_aws_command_with_input({ "ec2", "reject-transit-gateway-vpc-attachment" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reject-transit-gateway-vpc-attachment" }, input)
 end
 
 --- AWS ec2 reject-vpc-endpoint-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_vpc_endpoint_connections(input)
-	return common.execute_aws_command_with_input({ "ec2", "reject-vpc-endpoint-connections" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reject-vpc-endpoint-connections" }, input)
 end
 
 --- AWS ec2 reject-vpc-peering-connection operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_vpc_peering_connection(input)
-	return common.execute_aws_command_with_input({ "ec2", "reject-vpc-peering-connection" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reject-vpc-peering-connection" }, input)
 end
 
 --- AWS ec2 release-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.release_address(input)
-	return common.execute_aws_command_with_input({ "ec2", "release-address" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "release-address" }, input)
 end
 
 --- AWS ec2 release-hosts operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.release_hosts(input)
-	return common.execute_aws_command_with_input({ "ec2", "release-hosts" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "release-hosts" }, input)
 end
 
 --- AWS ec2 release-ipam-pool-allocation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.release_ipam_pool_allocation(input)
-	return common.execute_aws_command_with_input({ "ec2", "release-ipam-pool-allocation" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "release-ipam-pool-allocation" }, input)
 end
 
 --- AWS ec2 replace-iam-instance-profile-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replace_iam_instance_profile_association(input)
-	return common.execute_aws_command_with_input({ "ec2", "replace-iam-instance-profile-association" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "replace-iam-instance-profile-association" }, input)
 end
 
 --- AWS ec2 replace-image-criteria-in-allowed-images-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replace_image_criteria_in_allowed_images_settings(input)
-	return common.execute_aws_command_with_input({ "ec2", "replace-image-criteria-in-allowed-images-settings" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "replace-image-criteria-in-allowed-images-settings" }, input)
 end
 
 --- AWS ec2 replace-network-acl-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replace_network_acl_association(input)
-	return common.execute_aws_command_with_input({ "ec2", "replace-network-acl-association" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "replace-network-acl-association" }, input)
 end
 
 --- AWS ec2 replace-network-acl-entry operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replace_network_acl_entry(input)
-	return common.execute_aws_command_with_input({ "ec2", "replace-network-acl-entry" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "replace-network-acl-entry" }, input)
 end
 
 --- AWS ec2 replace-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replace_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "replace-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "replace-route" }, input)
 end
 
 --- AWS ec2 replace-route-table-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replace_route_table_association(input)
-	return common.execute_aws_command_with_input({ "ec2", "replace-route-table-association" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "replace-route-table-association" }, input)
 end
 
 --- AWS ec2 replace-transit-gateway-route operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replace_transit_gateway_route(input)
-	return common.execute_aws_command_with_input({ "ec2", "replace-transit-gateway-route" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "replace-transit-gateway-route" }, input)
 end
 
 --- AWS ec2 replace-vpn-tunnel operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.replace_vpn_tunnel(input)
-	return common.execute_aws_command_with_input({ "ec2", "replace-vpn-tunnel" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "replace-vpn-tunnel" }, input)
 end
 
 --- AWS ec2 report-instance-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.report_instance_status(input)
-	return common.execute_aws_command_with_input({ "ec2", "report-instance-status" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "report-instance-status" }, input)
 end
 
 --- AWS ec2 request-spot-fleet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.request_spot_fleet(input)
-	return common.execute_aws_command_with_input({ "ec2", "request-spot-fleet" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "request-spot-fleet" }, input)
 end
 
 --- AWS ec2 request-spot-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.request_spot_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "request-spot-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "request-spot-instances" }, input)
 end
 
 --- AWS ec2 reset-address-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_address_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "reset-address-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reset-address-attribute" }, input)
 end
 
 --- AWS ec2 reset-ebs-default-kms-key-id operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_ebs_default_kms_key_id(input)
-	return common.execute_aws_command_with_input({ "ec2", "reset-ebs-default-kms-key-id" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reset-ebs-default-kms-key-id" }, input)
 end
 
 --- AWS ec2 reset-fpga-image-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_fpga_image_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "reset-fpga-image-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reset-fpga-image-attribute" }, input)
 end
 
 --- AWS ec2 reset-image-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_image_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "reset-image-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reset-image-attribute" }, input)
 end
 
 --- AWS ec2 reset-instance-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_instance_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "reset-instance-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reset-instance-attribute" }, input)
 end
 
 --- AWS ec2 reset-network-interface-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_network_interface_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "reset-network-interface-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reset-network-interface-attribute" }, input)
 end
 
 --- AWS ec2 reset-snapshot-attribute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_snapshot_attribute(input)
-	return common.execute_aws_command_with_input({ "ec2", "reset-snapshot-attribute" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "reset-snapshot-attribute" }, input)
 end
 
 --- AWS ec2 restore-address-to-classic operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_address_to_classic(input)
-	return common.execute_aws_command_with_input({ "ec2", "restore-address-to-classic" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "restore-address-to-classic" }, input)
 end
 
 --- AWS ec2 restore-image-from-recycle-bin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_image_from_recycle_bin(input)
-	return common.execute_aws_command_with_input({ "ec2", "restore-image-from-recycle-bin" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "restore-image-from-recycle-bin" }, input)
 end
 
 --- AWS ec2 restore-managed-prefix-list-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_managed_prefix_list_version(input)
-	return common.execute_aws_command_with_input({ "ec2", "restore-managed-prefix-list-version" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "restore-managed-prefix-list-version" }, input)
 end
 
 --- AWS ec2 restore-snapshot-from-recycle-bin operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_snapshot_from_recycle_bin(input)
-	return common.execute_aws_command_with_input({ "ec2", "restore-snapshot-from-recycle-bin" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "restore-snapshot-from-recycle-bin" }, input)
 end
 
 --- AWS ec2 restore-snapshot-tier operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_snapshot_tier(input)
-	return common.execute_aws_command_with_input({ "ec2", "restore-snapshot-tier" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "restore-snapshot-tier" }, input)
 end
 
 --- AWS ec2 revoke-client-vpn-ingress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_client_vpn_ingress(input)
-	return common.execute_aws_command_with_input({ "ec2", "revoke-client-vpn-ingress" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "revoke-client-vpn-ingress" }, input)
 end
 
 --- AWS ec2 revoke-security-group-egress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_security_group_egress(input)
-	return common.execute_aws_command_with_input({ "ec2", "revoke-security-group-egress" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "revoke-security-group-egress" }, input)
 end
 
 --- AWS ec2 revoke-security-group-ingress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_security_group_ingress(input)
-	return common.execute_aws_command_with_input({ "ec2", "revoke-security-group-ingress" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "revoke-security-group-ingress" }, input)
 end
 
 --- AWS ec2 run-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.run_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "run-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "run-instances" }, input)
 end
 
 --- AWS ec2 run-scheduled-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.run_scheduled_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "run-scheduled-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "run-scheduled-instances" }, input)
 end
 
 --- AWS ec2 search-local-gateway-routes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_local_gateway_routes(input)
-	return common.execute_aws_command_with_input({ "ec2", "search-local-gateway-routes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "search-local-gateway-routes" }, input)
 end
 
 --- AWS ec2 search-transit-gateway-multicast-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_transit_gateway_multicast_groups(input)
-	return common.execute_aws_command_with_input({ "ec2", "search-transit-gateway-multicast-groups" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "search-transit-gateway-multicast-groups" }, input)
 end
 
 --- AWS ec2 search-transit-gateway-routes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_transit_gateway_routes(input)
-	return common.execute_aws_command_with_input({ "ec2", "search-transit-gateway-routes" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "search-transit-gateway-routes" }, input)
 end
 
 --- AWS ec2 send-diagnostic-interrupt operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_diagnostic_interrupt(input)
-	return common.execute_aws_command_with_input({ "ec2", "send-diagnostic-interrupt" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "send-diagnostic-interrupt" }, input)
 end
 
 --- AWS ec2 start-declarative-policies-report operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_declarative_policies_report(input)
-	return common.execute_aws_command_with_input({ "ec2", "start-declarative-policies-report" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "start-declarative-policies-report" }, input)
 end
 
 --- AWS ec2 start-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "start-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "start-instances" }, input)
 end
 
 --- AWS ec2 start-network-insights-access-scope-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_network_insights_access_scope_analysis(input)
-	return common.execute_aws_command_with_input({ "ec2", "start-network-insights-access-scope-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "start-network-insights-access-scope-analysis" }, input)
 end
 
 --- AWS ec2 start-network-insights-analysis operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_network_insights_analysis(input)
-	return common.execute_aws_command_with_input({ "ec2", "start-network-insights-analysis" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "start-network-insights-analysis" }, input)
 end
 
 --- AWS ec2 start-vpc-endpoint-service-private-dns-verification operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_vpc_endpoint_service_private_dns_verification(input)
-	return common.execute_aws_command_with_input({ "ec2", "start-vpc-endpoint-service-private-dns-verification" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "start-vpc-endpoint-service-private-dns-verification" }, input)
 end
 
 --- AWS ec2 stop-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "stop-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "stop-instances" }, input)
 end
 
 --- AWS ec2 terminate-client-vpn-connections operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.terminate_client_vpn_connections(input)
-	return common.execute_aws_command_with_input({ "ec2", "terminate-client-vpn-connections" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "terminate-client-vpn-connections" }, input)
 end
 
 --- AWS ec2 terminate-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.terminate_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "terminate-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "terminate-instances" }, input)
 end
 
 --- AWS ec2 unassign-ipv6-addresses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unassign_ipv6_addresses(input)
-	return common.execute_aws_command_with_input({ "ec2", "unassign-ipv6-addresses" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "unassign-ipv6-addresses" }, input)
 end
 
 --- AWS ec2 unassign-private-ip-addresses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unassign_private_ip_addresses(input)
-	return common.execute_aws_command_with_input({ "ec2", "unassign-private-ip-addresses" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "unassign-private-ip-addresses" }, input)
 end
 
 --- AWS ec2 unassign-private-nat-gateway-address operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unassign_private_nat_gateway_address(input)
-	return common.execute_aws_command_with_input({ "ec2", "unassign-private-nat-gateway-address" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "unassign-private-nat-gateway-address" }, input)
 end
 
 --- AWS ec2 unlock-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unlock_snapshot(input)
-	return common.execute_aws_command_with_input({ "ec2", "unlock-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "unlock-snapshot" }, input)
 end
 
 --- AWS ec2 unmonitor-instances operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unmonitor_instances(input)
-	return common.execute_aws_command_with_input({ "ec2", "unmonitor-instances" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "unmonitor-instances" }, input)
 end
 
 --- AWS ec2 update-security-group-rule-descriptions-egress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_security_group_rule_descriptions_egress(input)
-	return common.execute_aws_command_with_input({ "ec2", "update-security-group-rule-descriptions-egress" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "update-security-group-rule-descriptions-egress" }, input)
 end
 
 --- AWS ec2 update-security-group-rule-descriptions-ingress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_security_group_rule_descriptions_ingress(input)
-	return common.execute_aws_command_with_input({ "ec2", "update-security-group-rule-descriptions-ingress" }, input)
-end
-
---- AWS ec2 withdraw-byoip-cidr operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
-function M.withdraw_byoip_cidr(input)
-	return common.execute_aws_command_with_input({ "ec2", "withdraw-byoip-cidr" }, input)
+	return common.execute_aws_command_skeleton({ "ec2", "update-security-group-rule-descriptions-ingress" }, input)
 end
 
 --- AWS ec2 wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "ec2", "wait" }, input)
+	return common.execute_aws_command({ "ec2", "wait" }, input)
+end
+
+--- AWS ec2 withdraw-byoip-cidr operation
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
+function M.withdraw_byoip_cidr(input)
+	return common.execute_aws_command_skeleton({ "ec2", "withdraw-byoip-cidr" }, input)
 end
 
 return M

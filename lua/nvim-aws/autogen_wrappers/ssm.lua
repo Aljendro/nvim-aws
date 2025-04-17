@@ -3,1022 +3,1022 @@
 
 local common = require("nvim-aws.common")
 
---- AWS SSM service functions
+--- AWS ssm service functions
 local M = {}
 
 --- AWS ssm add-tags-to-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_tags_to_resource(input)
-	return common.execute_aws_command_with_input({ "ssm", "add-tags-to-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "add-tags-to-resource" }, input)
 end
 
 --- AWS ssm associate-ops-item-related-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_ops_item_related_item(input)
-	return common.execute_aws_command_with_input({ "ssm", "associate-ops-item-related-item" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "associate-ops-item-related-item" }, input)
 end
 
 --- AWS ssm cancel-command operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_command(input)
-	return common.execute_aws_command_with_input({ "ssm", "cancel-command" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "cancel-command" }, input)
 end
 
 --- AWS ssm cancel-maintenance-window-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_maintenance_window_execution(input)
-	return common.execute_aws_command_with_input({ "ssm", "cancel-maintenance-window-execution" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "cancel-maintenance-window-execution" }, input)
 end
 
 --- AWS ssm create-activation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_activation(input)
-	return common.execute_aws_command_with_input({ "ssm", "create-activation" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "create-activation" }, input)
 end
 
 --- AWS ssm create-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_association(input)
-	return common.execute_aws_command_with_input({ "ssm", "create-association" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "create-association" }, input)
 end
 
 --- AWS ssm create-association-batch operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_association_batch(input)
-	return common.execute_aws_command_with_input({ "ssm", "create-association-batch" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "create-association-batch" }, input)
 end
 
 --- AWS ssm create-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_document(input)
-	return common.execute_aws_command_with_input({ "ssm", "create-document" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "create-document" }, input)
 end
 
 --- AWS ssm create-maintenance-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_maintenance_window(input)
-	return common.execute_aws_command_with_input({ "ssm", "create-maintenance-window" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "create-maintenance-window" }, input)
 end
 
 --- AWS ssm create-ops-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ops_item(input)
-	return common.execute_aws_command_with_input({ "ssm", "create-ops-item" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "create-ops-item" }, input)
 end
 
 --- AWS ssm create-ops-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_ops_metadata(input)
-	return common.execute_aws_command_with_input({ "ssm", "create-ops-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "create-ops-metadata" }, input)
 end
 
 --- AWS ssm create-patch-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_patch_baseline(input)
-	return common.execute_aws_command_with_input({ "ssm", "create-patch-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "create-patch-baseline" }, input)
 end
 
 --- AWS ssm create-resource-data-sync operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_resource_data_sync(input)
-	return common.execute_aws_command_with_input({ "ssm", "create-resource-data-sync" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "create-resource-data-sync" }, input)
 end
 
 --- AWS ssm delete-activation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_activation(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-activation" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-activation" }, input)
 end
 
 --- AWS ssm delete-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_association(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-association" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-association" }, input)
 end
 
 --- AWS ssm delete-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_document(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-document" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-document" }, input)
 end
 
 --- AWS ssm delete-inventory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_inventory(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-inventory" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-inventory" }, input)
 end
 
 --- AWS ssm delete-maintenance-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_maintenance_window(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-maintenance-window" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-maintenance-window" }, input)
 end
 
 --- AWS ssm delete-ops-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ops_item(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-ops-item" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-ops-item" }, input)
 end
 
 --- AWS ssm delete-ops-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_ops_metadata(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-ops-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-ops-metadata" }, input)
 end
 
 --- AWS ssm delete-parameter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_parameter(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-parameter" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-parameter" }, input)
 end
 
 --- AWS ssm delete-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_parameters(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-parameters" }, input)
 end
 
 --- AWS ssm delete-patch-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_patch_baseline(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-patch-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-patch-baseline" }, input)
 end
 
 --- AWS ssm delete-resource-data-sync operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_data_sync(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-resource-data-sync" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-resource-data-sync" }, input)
 end
 
 --- AWS ssm delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "ssm", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "delete-resource-policy" }, input)
 end
 
 --- AWS ssm deregister-managed-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_managed_instance(input)
-	return common.execute_aws_command_with_input({ "ssm", "deregister-managed-instance" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "deregister-managed-instance" }, input)
 end
 
 --- AWS ssm deregister-patch-baseline-for-patch-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_patch_baseline_for_patch_group(input)
-	return common.execute_aws_command_with_input({ "ssm", "deregister-patch-baseline-for-patch-group" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "deregister-patch-baseline-for-patch-group" }, input)
 end
 
 --- AWS ssm deregister-target-from-maintenance-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_target_from_maintenance_window(input)
-	return common.execute_aws_command_with_input({ "ssm", "deregister-target-from-maintenance-window" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "deregister-target-from-maintenance-window" }, input)
 end
 
 --- AWS ssm deregister-task-from-maintenance-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_task_from_maintenance_window(input)
-	return common.execute_aws_command_with_input({ "ssm", "deregister-task-from-maintenance-window" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "deregister-task-from-maintenance-window" }, input)
 end
 
 --- AWS ssm describe-activations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_activations(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-activations" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-activations" }, input)
 end
 
 --- AWS ssm describe-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_association(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-association" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-association" }, input)
 end
 
 --- AWS ssm describe-association-execution-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_association_execution_targets(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-association-execution-targets" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-association-execution-targets" }, input)
 end
 
 --- AWS ssm describe-association-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_association_executions(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-association-executions" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-association-executions" }, input)
 end
 
 --- AWS ssm describe-automation-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_automation_executions(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-automation-executions" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-automation-executions" }, input)
 end
 
 --- AWS ssm describe-automation-step-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_automation_step_executions(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-automation-step-executions" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-automation-step-executions" }, input)
 end
 
 --- AWS ssm describe-available-patches operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_available_patches(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-available-patches" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-available-patches" }, input)
 end
 
 --- AWS ssm describe-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_document(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-document" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-document" }, input)
 end
 
 --- AWS ssm describe-document-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_document_permission(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-document-permission" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-document-permission" }, input)
 end
 
 --- AWS ssm describe-effective-instance-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_effective_instance_associations(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-effective-instance-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-effective-instance-associations" }, input)
 end
 
 --- AWS ssm describe-effective-patches-for-patch-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_effective_patches_for_patch_baseline(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-effective-patches-for-patch-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-effective-patches-for-patch-baseline" }, input)
 end
 
 --- AWS ssm describe-instance-associations-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_associations_status(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-instance-associations-status" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-instance-associations-status" }, input)
 end
 
 --- AWS ssm describe-instance-information operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_information(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-instance-information" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-instance-information" }, input)
 end
 
 --- AWS ssm describe-instance-patch-states operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_patch_states(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-instance-patch-states" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-instance-patch-states" }, input)
 end
 
 --- AWS ssm describe-instance-patch-states-for-patch-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_patch_states_for_patch_group(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-instance-patch-states-for-patch-group" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-instance-patch-states-for-patch-group" }, input)
 end
 
 --- AWS ssm describe-instance-patches operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_patches(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-instance-patches" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-instance-patches" }, input)
 end
 
 --- AWS ssm describe-instance-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_instance_properties(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-instance-properties" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-instance-properties" }, input)
 end
 
 --- AWS ssm describe-inventory-deletions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_inventory_deletions(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-inventory-deletions" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-inventory-deletions" }, input)
 end
 
 --- AWS ssm describe-maintenance-window-execution-task-invocations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_maintenance_window_execution_task_invocations(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-execution-task-invocations" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-maintenance-window-execution-task-invocations" }, input)
 end
 
 --- AWS ssm describe-maintenance-window-execution-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_maintenance_window_execution_tasks(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-execution-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-maintenance-window-execution-tasks" }, input)
 end
 
 --- AWS ssm describe-maintenance-window-executions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_maintenance_window_executions(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-executions" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-maintenance-window-executions" }, input)
 end
 
 --- AWS ssm describe-maintenance-window-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_maintenance_window_schedule(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-maintenance-window-schedule" }, input)
 end
 
 --- AWS ssm describe-maintenance-window-targets operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_maintenance_window_targets(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-targets" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-maintenance-window-targets" }, input)
 end
 
 --- AWS ssm describe-maintenance-window-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_maintenance_window_tasks(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-window-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-maintenance-window-tasks" }, input)
 end
 
 --- AWS ssm describe-maintenance-windows operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_maintenance_windows(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-windows" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-maintenance-windows" }, input)
 end
 
 --- AWS ssm describe-maintenance-windows-for-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_maintenance_windows_for_target(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-maintenance-windows-for-target" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-maintenance-windows-for-target" }, input)
 end
 
 --- AWS ssm describe-ops-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_ops_items(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-ops-items" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-ops-items" }, input)
 end
 
 --- AWS ssm describe-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_parameters(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-parameters" }, input)
 end
 
 --- AWS ssm describe-patch-baselines operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_patch_baselines(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-patch-baselines" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-patch-baselines" }, input)
 end
 
 --- AWS ssm describe-patch-group-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_patch_group_state(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-patch-group-state" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-patch-group-state" }, input)
 end
 
 --- AWS ssm describe-patch-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_patch_groups(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-patch-groups" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-patch-groups" }, input)
 end
 
 --- AWS ssm describe-patch-properties operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_patch_properties(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-patch-properties" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-patch-properties" }, input)
 end
 
 --- AWS ssm describe-sessions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_sessions(input)
-	return common.execute_aws_command_with_input({ "ssm", "describe-sessions" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "describe-sessions" }, input)
 end
 
 --- AWS ssm disassociate-ops-item-related-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_ops_item_related_item(input)
-	return common.execute_aws_command_with_input({ "ssm", "disassociate-ops-item-related-item" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "disassociate-ops-item-related-item" }, input)
 end
 
 --- AWS ssm get-automation-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_automation_execution(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-automation-execution" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-automation-execution" }, input)
 end
 
 --- AWS ssm get-calendar-state operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_calendar_state(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-calendar-state" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-calendar-state" }, input)
 end
 
 --- AWS ssm get-command-invocation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_command_invocation(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-command-invocation" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-command-invocation" }, input)
 end
 
 --- AWS ssm get-connection-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_connection_status(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-connection-status" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-connection-status" }, input)
 end
 
 --- AWS ssm get-default-patch-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_default_patch_baseline(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-default-patch-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-default-patch-baseline" }, input)
 end
 
 --- AWS ssm get-deployable-patch-snapshot-for-instance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_deployable_patch_snapshot_for_instance(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-deployable-patch-snapshot-for-instance" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-deployable-patch-snapshot-for-instance" }, input)
 end
 
 --- AWS ssm get-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_document(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-document" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-document" }, input)
 end
 
 --- AWS ssm get-execution-preview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_execution_preview(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-execution-preview" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-execution-preview" }, input)
 end
 
 --- AWS ssm get-inventory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_inventory(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-inventory" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-inventory" }, input)
 end
 
 --- AWS ssm get-inventory-schema operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_inventory_schema(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-inventory-schema" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-inventory-schema" }, input)
 end
 
 --- AWS ssm get-maintenance-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_maintenance_window(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-maintenance-window" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-maintenance-window" }, input)
 end
 
 --- AWS ssm get-maintenance-window-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_maintenance_window_execution(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-maintenance-window-execution" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-maintenance-window-execution" }, input)
 end
 
 --- AWS ssm get-maintenance-window-execution-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_maintenance_window_execution_task(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-maintenance-window-execution-task" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-maintenance-window-execution-task" }, input)
 end
 
 --- AWS ssm get-maintenance-window-execution-task-invocation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_maintenance_window_execution_task_invocation(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-maintenance-window-execution-task-invocation" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-maintenance-window-execution-task-invocation" }, input)
 end
 
 --- AWS ssm get-maintenance-window-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_maintenance_window_task(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-maintenance-window-task" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-maintenance-window-task" }, input)
 end
 
 --- AWS ssm get-ops-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ops_item(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-ops-item" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-ops-item" }, input)
 end
 
 --- AWS ssm get-ops-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ops_metadata(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-ops-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-ops-metadata" }, input)
 end
 
 --- AWS ssm get-ops-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_ops_summary(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-ops-summary" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-ops-summary" }, input)
 end
 
 --- AWS ssm get-parameter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_parameter(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-parameter" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-parameter" }, input)
 end
 
 --- AWS ssm get-parameter-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_parameter_history(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-parameter-history" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-parameter-history" }, input)
 end
 
 --- AWS ssm get-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_parameters(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-parameters" }, input)
 end
 
 --- AWS ssm get-parameters-by-path operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_parameters_by_path(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-parameters-by-path" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-parameters-by-path" }, input)
 end
 
 --- AWS ssm get-patch-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_patch_baseline(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-patch-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-patch-baseline" }, input)
 end
 
 --- AWS ssm get-patch-baseline-for-patch-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_patch_baseline_for_patch_group(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-patch-baseline-for-patch-group" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-patch-baseline-for-patch-group" }, input)
 end
 
 --- AWS ssm get-resource-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_policies(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-resource-policies" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-resource-policies" }, input)
 end
 
 --- AWS ssm get-service-setting operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_service_setting(input)
-	return common.execute_aws_command_with_input({ "ssm", "get-service-setting" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "get-service-setting" }, input)
 end
 
 --- AWS ssm label-parameter-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.label_parameter_version(input)
-	return common.execute_aws_command_with_input({ "ssm", "label-parameter-version" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "label-parameter-version" }, input)
 end
 
 --- AWS ssm list-association-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_association_versions(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-association-versions" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-association-versions" }, input)
 end
 
 --- AWS ssm list-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_associations(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-associations" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-associations" }, input)
 end
 
 --- AWS ssm list-command-invocations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_command_invocations(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-command-invocations" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-command-invocations" }, input)
 end
 
 --- AWS ssm list-commands operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_commands(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-commands" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-commands" }, input)
 end
 
 --- AWS ssm list-compliance-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_compliance_items(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-compliance-items" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-compliance-items" }, input)
 end
 
 --- AWS ssm list-compliance-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_compliance_summaries(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-compliance-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-compliance-summaries" }, input)
 end
 
 --- AWS ssm list-document-metadata-history operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_document_metadata_history(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-document-metadata-history" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-document-metadata-history" }, input)
 end
 
 --- AWS ssm list-document-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_document_versions(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-document-versions" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-document-versions" }, input)
 end
 
 --- AWS ssm list-documents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_documents(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-documents" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-documents" }, input)
 end
 
 --- AWS ssm list-inventory-entries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_inventory_entries(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-inventory-entries" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-inventory-entries" }, input)
 end
 
 --- AWS ssm list-nodes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_nodes(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-nodes" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-nodes" }, input)
 end
 
 --- AWS ssm list-nodes-summary operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_nodes_summary(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-nodes-summary" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-nodes-summary" }, input)
 end
 
 --- AWS ssm list-ops-item-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ops_item_events(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-ops-item-events" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-ops-item-events" }, input)
 end
 
 --- AWS ssm list-ops-item-related-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ops_item_related_items(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-ops-item-related-items" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-ops-item-related-items" }, input)
 end
 
 --- AWS ssm list-ops-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_ops_metadata(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-ops-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-ops-metadata" }, input)
 end
 
 --- AWS ssm list-resource-compliance-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_compliance_summaries(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-resource-compliance-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-resource-compliance-summaries" }, input)
 end
 
 --- AWS ssm list-resource-data-sync operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_resource_data_sync(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-resource-data-sync" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-resource-data-sync" }, input)
 end
 
 --- AWS ssm list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "ssm", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "list-tags-for-resource" }, input)
 end
 
 --- AWS ssm modify-document-permission operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_document_permission(input)
-	return common.execute_aws_command_with_input({ "ssm", "modify-document-permission" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "modify-document-permission" }, input)
 end
 
 --- AWS ssm put-compliance-items operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_compliance_items(input)
-	return common.execute_aws_command_with_input({ "ssm", "put-compliance-items" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "put-compliance-items" }, input)
 end
 
 --- AWS ssm put-inventory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_inventory(input)
-	return common.execute_aws_command_with_input({ "ssm", "put-inventory" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "put-inventory" }, input)
 end
 
 --- AWS ssm put-parameter operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_parameter(input)
-	return common.execute_aws_command_with_input({ "ssm", "put-parameter" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "put-parameter" }, input)
 end
 
 --- AWS ssm put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "ssm", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "put-resource-policy" }, input)
 end
 
 --- AWS ssm register-default-patch-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_default_patch_baseline(input)
-	return common.execute_aws_command_with_input({ "ssm", "register-default-patch-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "register-default-patch-baseline" }, input)
 end
 
 --- AWS ssm register-patch-baseline-for-patch-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_patch_baseline_for_patch_group(input)
-	return common.execute_aws_command_with_input({ "ssm", "register-patch-baseline-for-patch-group" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "register-patch-baseline-for-patch-group" }, input)
 end
 
 --- AWS ssm register-target-with-maintenance-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_target_with_maintenance_window(input)
-	return common.execute_aws_command_with_input({ "ssm", "register-target-with-maintenance-window" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "register-target-with-maintenance-window" }, input)
 end
 
 --- AWS ssm register-task-with-maintenance-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_task_with_maintenance_window(input)
-	return common.execute_aws_command_with_input({ "ssm", "register-task-with-maintenance-window" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "register-task-with-maintenance-window" }, input)
 end
 
 --- AWS ssm remove-tags-from-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_tags_from_resource(input)
-	return common.execute_aws_command_with_input({ "ssm", "remove-tags-from-resource" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "remove-tags-from-resource" }, input)
 end
 
 --- AWS ssm reset-service-setting operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_service_setting(input)
-	return common.execute_aws_command_with_input({ "ssm", "reset-service-setting" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "reset-service-setting" }, input)
 end
 
 --- AWS ssm resume-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resume_session(input)
-	return common.execute_aws_command_with_input({ "ssm", "resume-session" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "resume-session" }, input)
 end
 
 --- AWS ssm send-automation-signal operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_automation_signal(input)
-	return common.execute_aws_command_with_input({ "ssm", "send-automation-signal" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "send-automation-signal" }, input)
 end
 
 --- AWS ssm send-command operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.send_command(input)
-	return common.execute_aws_command_with_input({ "ssm", "send-command" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "send-command" }, input)
 end
 
 --- AWS ssm start-associations-once operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_associations_once(input)
-	return common.execute_aws_command_with_input({ "ssm", "start-associations-once" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "start-associations-once" }, input)
 end
 
 --- AWS ssm start-automation-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_automation_execution(input)
-	return common.execute_aws_command_with_input({ "ssm", "start-automation-execution" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "start-automation-execution" }, input)
 end
 
 --- AWS ssm start-change-request-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_change_request_execution(input)
-	return common.execute_aws_command_with_input({ "ssm", "start-change-request-execution" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "start-change-request-execution" }, input)
 end
 
 --- AWS ssm start-execution-preview operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_execution_preview(input)
-	return common.execute_aws_command_with_input({ "ssm", "start-execution-preview" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "start-execution-preview" }, input)
 end
 
 --- AWS ssm start-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_session(input)
-	return common.execute_aws_command_with_input({ "ssm", "start-session" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "start-session" }, input)
 end
 
 --- AWS ssm stop-automation-execution operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.stop_automation_execution(input)
-	return common.execute_aws_command_with_input({ "ssm", "stop-automation-execution" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "stop-automation-execution" }, input)
 end
 
 --- AWS ssm terminate-session operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.terminate_session(input)
-	return common.execute_aws_command_with_input({ "ssm", "terminate-session" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "terminate-session" }, input)
 end
 
 --- AWS ssm unlabel-parameter-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.unlabel_parameter_version(input)
-	return common.execute_aws_command_with_input({ "ssm", "unlabel-parameter-version" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "unlabel-parameter-version" }, input)
 end
 
 --- AWS ssm update-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_association(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-association" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-association" }, input)
 end
 
 --- AWS ssm update-association-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_association_status(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-association-status" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-association-status" }, input)
 end
 
 --- AWS ssm update-document operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_document(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-document" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-document" }, input)
 end
 
 --- AWS ssm update-document-default-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_document_default_version(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-document-default-version" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-document-default-version" }, input)
 end
 
 --- AWS ssm update-document-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_document_metadata(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-document-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-document-metadata" }, input)
 end
 
 --- AWS ssm update-maintenance-window operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_maintenance_window(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-maintenance-window" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-maintenance-window" }, input)
 end
 
 --- AWS ssm update-maintenance-window-target operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_maintenance_window_target(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-maintenance-window-target" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-maintenance-window-target" }, input)
 end
 
 --- AWS ssm update-maintenance-window-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_maintenance_window_task(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-maintenance-window-task" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-maintenance-window-task" }, input)
 end
 
 --- AWS ssm update-managed-instance-role operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_managed_instance_role(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-managed-instance-role" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-managed-instance-role" }, input)
 end
 
 --- AWS ssm update-ops-item operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_ops_item(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-ops-item" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-ops-item" }, input)
 end
 
 --- AWS ssm update-ops-metadata operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_ops_metadata(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-ops-metadata" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-ops-metadata" }, input)
 end
 
 --- AWS ssm update-patch-baseline operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_patch_baseline(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-patch-baseline" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-patch-baseline" }, input)
 end
 
 --- AWS ssm update-resource-data-sync operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_resource_data_sync(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-resource-data-sync" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-resource-data-sync" }, input)
 end
 
 --- AWS ssm update-service-setting operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_service_setting(input)
-	return common.execute_aws_command_with_input({ "ssm", "update-service-setting" }, input)
+	return common.execute_aws_command_skeleton({ "ssm", "update-service-setting" }, input)
 end
 
 --- AWS ssm wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "ssm", "wait" }, input)
+	return common.execute_aws_command({ "ssm", "wait" }, input)
 end
 
 return M

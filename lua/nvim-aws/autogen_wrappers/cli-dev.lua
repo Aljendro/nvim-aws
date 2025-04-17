@@ -3,7 +3,7 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLI-DEV service functions
+--- AWS cli-dev service functions
 local M = {}
 
 return M

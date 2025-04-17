@@ -3,987 +3,987 @@
 
 local common = require("nvim-aws.common")
 
---- AWS REDSHIFT service functions
+--- AWS redshift service functions
 local M = {}
 
 --- AWS redshift accept-reserved-node-exchange operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.accept_reserved_node_exchange(input)
-	return common.execute_aws_command_with_input({ "redshift", "accept-reserved-node-exchange" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "accept-reserved-node-exchange" }, input)
 end
 
 --- AWS redshift add-partner operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_partner(input)
-	return common.execute_aws_command_with_input({ "redshift", "add-partner" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "add-partner" }, input)
 end
 
 --- AWS redshift associate-data-share-consumer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.associate_data_share_consumer(input)
-	return common.execute_aws_command_with_input({ "redshift", "associate-data-share-consumer" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "associate-data-share-consumer" }, input)
 end
 
 --- AWS redshift authorize-cluster-security-group-ingress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.authorize_cluster_security_group_ingress(input)
-	return common.execute_aws_command_with_input({ "redshift", "authorize-cluster-security-group-ingress" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "authorize-cluster-security-group-ingress" }, input)
 end
 
 --- AWS redshift authorize-data-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.authorize_data_share(input)
-	return common.execute_aws_command_with_input({ "redshift", "authorize-data-share" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "authorize-data-share" }, input)
 end
 
 --- AWS redshift authorize-endpoint-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.authorize_endpoint_access(input)
-	return common.execute_aws_command_with_input({ "redshift", "authorize-endpoint-access" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "authorize-endpoint-access" }, input)
 end
 
 --- AWS redshift authorize-snapshot-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.authorize_snapshot_access(input)
-	return common.execute_aws_command_with_input({ "redshift", "authorize-snapshot-access" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "authorize-snapshot-access" }, input)
 end
 
 --- AWS redshift batch-delete-cluster-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_delete_cluster_snapshots(input)
-	return common.execute_aws_command_with_input({ "redshift", "batch-delete-cluster-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "batch-delete-cluster-snapshots" }, input)
 end
 
 --- AWS redshift batch-modify-cluster-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_modify_cluster_snapshots(input)
-	return common.execute_aws_command_with_input({ "redshift", "batch-modify-cluster-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "batch-modify-cluster-snapshots" }, input)
 end
 
 --- AWS redshift cancel-resize operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_resize(input)
-	return common.execute_aws_command_with_input({ "redshift", "cancel-resize" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "cancel-resize" }, input)
 end
 
 --- AWS redshift copy-cluster-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.copy_cluster_snapshot(input)
-	return common.execute_aws_command_with_input({ "redshift", "copy-cluster-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "copy-cluster-snapshot" }, input)
 end
 
 --- AWS redshift create-authentication-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_authentication_profile(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-authentication-profile" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-authentication-profile" }, input)
 end
 
 --- AWS redshift create-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-cluster" }, input)
 end
 
 --- AWS redshift create-cluster-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster_parameter_group(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-cluster-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-cluster-parameter-group" }, input)
 end
 
 --- AWS redshift create-cluster-security-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster_security_group(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-cluster-security-group" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-cluster-security-group" }, input)
 end
 
 --- AWS redshift create-cluster-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster_snapshot(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-cluster-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-cluster-snapshot" }, input)
 end
 
 --- AWS redshift create-cluster-subnet-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_cluster_subnet_group(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-cluster-subnet-group" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-cluster-subnet-group" }, input)
 end
 
 --- AWS redshift create-custom-domain-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_custom_domain_association(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-custom-domain-association" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-custom-domain-association" }, input)
 end
 
 --- AWS redshift create-endpoint-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_endpoint_access(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-endpoint-access" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-endpoint-access" }, input)
 end
 
 --- AWS redshift create-event-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_event_subscription(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-event-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-event-subscription" }, input)
 end
 
 --- AWS redshift create-hsm-client-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_hsm_client_certificate(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-hsm-client-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-hsm-client-certificate" }, input)
 end
 
 --- AWS redshift create-hsm-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_hsm_configuration(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-hsm-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-hsm-configuration" }, input)
 end
 
 --- AWS redshift create-integration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_integration(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-integration" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-integration" }, input)
 end
 
 --- AWS redshift create-redshift-idc-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_redshift_idc_application(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-redshift-idc-application" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-redshift-idc-application" }, input)
 end
 
 --- AWS redshift create-scheduled-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_scheduled_action(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-scheduled-action" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-scheduled-action" }, input)
 end
 
 --- AWS redshift create-snapshot-copy-grant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_snapshot_copy_grant(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-snapshot-copy-grant" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-snapshot-copy-grant" }, input)
 end
 
 --- AWS redshift create-snapshot-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_snapshot_schedule(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-snapshot-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-snapshot-schedule" }, input)
 end
 
 --- AWS redshift create-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_tags(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-tags" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-tags" }, input)
 end
 
 --- AWS redshift create-usage-limit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_usage_limit(input)
-	return common.execute_aws_command_with_input({ "redshift", "create-usage-limit" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "create-usage-limit" }, input)
 end
 
 --- AWS redshift deauthorize-data-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deauthorize_data_share(input)
-	return common.execute_aws_command_with_input({ "redshift", "deauthorize-data-share" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "deauthorize-data-share" }, input)
 end
 
 --- AWS redshift delete-authentication-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_authentication_profile(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-authentication-profile" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-authentication-profile" }, input)
 end
 
 --- AWS redshift delete-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cluster(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-cluster" }, input)
 end
 
 --- AWS redshift delete-cluster-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cluster_parameter_group(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-cluster-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-cluster-parameter-group" }, input)
 end
 
 --- AWS redshift delete-cluster-security-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cluster_security_group(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-cluster-security-group" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-cluster-security-group" }, input)
 end
 
 --- AWS redshift delete-cluster-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cluster_snapshot(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-cluster-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-cluster-snapshot" }, input)
 end
 
 --- AWS redshift delete-cluster-subnet-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_cluster_subnet_group(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-cluster-subnet-group" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-cluster-subnet-group" }, input)
 end
 
 --- AWS redshift delete-custom-domain-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_custom_domain_association(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-custom-domain-association" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-custom-domain-association" }, input)
 end
 
 --- AWS redshift delete-endpoint-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_endpoint_access(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-endpoint-access" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-endpoint-access" }, input)
 end
 
 --- AWS redshift delete-event-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_event_subscription(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-event-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-event-subscription" }, input)
 end
 
 --- AWS redshift delete-hsm-client-certificate operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_hsm_client_certificate(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-hsm-client-certificate" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-hsm-client-certificate" }, input)
 end
 
 --- AWS redshift delete-hsm-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_hsm_configuration(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-hsm-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-hsm-configuration" }, input)
 end
 
 --- AWS redshift delete-integration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_integration(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-integration" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-integration" }, input)
 end
 
 --- AWS redshift delete-partner operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_partner(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-partner" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-partner" }, input)
 end
 
 --- AWS redshift delete-redshift-idc-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_redshift_idc_application(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-redshift-idc-application" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-redshift-idc-application" }, input)
 end
 
 --- AWS redshift delete-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_resource_policy(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-resource-policy" }, input)
 end
 
 --- AWS redshift delete-scheduled-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_scheduled_action(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-scheduled-action" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-scheduled-action" }, input)
 end
 
 --- AWS redshift delete-snapshot-copy-grant operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_snapshot_copy_grant(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-snapshot-copy-grant" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-snapshot-copy-grant" }, input)
 end
 
 --- AWS redshift delete-snapshot-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_snapshot_schedule(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-snapshot-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-snapshot-schedule" }, input)
 end
 
 --- AWS redshift delete-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_tags(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-tags" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-tags" }, input)
 end
 
 --- AWS redshift delete-usage-limit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_usage_limit(input)
-	return common.execute_aws_command_with_input({ "redshift", "delete-usage-limit" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "delete-usage-limit" }, input)
 end
 
 --- AWS redshift deregister-namespace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.deregister_namespace(input)
-	return common.execute_aws_command_with_input({ "redshift", "deregister-namespace" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "deregister-namespace" }, input)
 end
 
 --- AWS redshift describe-account-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_account_attributes(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-account-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-account-attributes" }, input)
 end
 
 --- AWS redshift describe-authentication-profiles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_authentication_profiles(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-authentication-profiles" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-authentication-profiles" }, input)
 end
 
 --- AWS redshift describe-cluster-db-revisions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster_db_revisions(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-db-revisions" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-cluster-db-revisions" }, input)
 end
 
 --- AWS redshift describe-cluster-parameter-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster_parameter_groups(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-parameter-groups" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-cluster-parameter-groups" }, input)
 end
 
 --- AWS redshift describe-cluster-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster_parameters(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-cluster-parameters" }, input)
 end
 
 --- AWS redshift describe-cluster-security-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster_security_groups(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-security-groups" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-cluster-security-groups" }, input)
 end
 
 --- AWS redshift describe-cluster-snapshots operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster_snapshots(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-snapshots" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-cluster-snapshots" }, input)
 end
 
 --- AWS redshift describe-cluster-subnet-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster_subnet_groups(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-subnet-groups" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-cluster-subnet-groups" }, input)
 end
 
 --- AWS redshift describe-cluster-tracks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster_tracks(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-tracks" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-cluster-tracks" }, input)
 end
 
 --- AWS redshift describe-cluster-versions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_cluster_versions(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-cluster-versions" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-cluster-versions" }, input)
 end
 
 --- AWS redshift describe-clusters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_clusters(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-clusters" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-clusters" }, input)
 end
 
 --- AWS redshift describe-custom-domain-associations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_custom_domain_associations(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-custom-domain-associations" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-custom-domain-associations" }, input)
 end
 
 --- AWS redshift describe-data-shares operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_shares(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-data-shares" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-data-shares" }, input)
 end
 
 --- AWS redshift describe-data-shares-for-consumer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_shares_for_consumer(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-data-shares-for-consumer" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-data-shares-for-consumer" }, input)
 end
 
 --- AWS redshift describe-data-shares-for-producer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_data_shares_for_producer(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-data-shares-for-producer" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-data-shares-for-producer" }, input)
 end
 
 --- AWS redshift describe-default-cluster-parameters operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_default_cluster_parameters(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-default-cluster-parameters" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-default-cluster-parameters" }, input)
 end
 
 --- AWS redshift describe-endpoint-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoint_access(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-endpoint-access" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-endpoint-access" }, input)
 end
 
 --- AWS redshift describe-endpoint-authorization operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_endpoint_authorization(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-endpoint-authorization" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-endpoint-authorization" }, input)
 end
 
 --- AWS redshift describe-event-categories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_categories(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-event-categories" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-event-categories" }, input)
 end
 
 --- AWS redshift describe-event-subscriptions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_event_subscriptions(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-event-subscriptions" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-event-subscriptions" }, input)
 end
 
 --- AWS redshift describe-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_events(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-events" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-events" }, input)
 end
 
 --- AWS redshift describe-hsm-client-certificates operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_hsm_client_certificates(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-hsm-client-certificates" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-hsm-client-certificates" }, input)
 end
 
 --- AWS redshift describe-hsm-configurations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_hsm_configurations(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-hsm-configurations" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-hsm-configurations" }, input)
 end
 
 --- AWS redshift describe-inbound-integrations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_inbound_integrations(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-inbound-integrations" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-inbound-integrations" }, input)
 end
 
 --- AWS redshift describe-integrations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_integrations(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-integrations" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-integrations" }, input)
 end
 
 --- AWS redshift describe-logging-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_logging_status(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-logging-status" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-logging-status" }, input)
 end
 
 --- AWS redshift describe-node-configuration-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_node_configuration_options(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-node-configuration-options" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-node-configuration-options" }, input)
 end
 
 --- AWS redshift describe-orderable-cluster-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_orderable_cluster_options(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-orderable-cluster-options" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-orderable-cluster-options" }, input)
 end
 
 --- AWS redshift describe-partners operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_partners(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-partners" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-partners" }, input)
 end
 
 --- AWS redshift describe-redshift-idc-applications operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_redshift_idc_applications(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-redshift-idc-applications" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-redshift-idc-applications" }, input)
 end
 
 --- AWS redshift describe-reserved-node-exchange-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_reserved_node_exchange_status(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-reserved-node-exchange-status" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-reserved-node-exchange-status" }, input)
 end
 
 --- AWS redshift describe-reserved-node-offerings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_reserved_node_offerings(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-reserved-node-offerings" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-reserved-node-offerings" }, input)
 end
 
 --- AWS redshift describe-reserved-nodes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_reserved_nodes(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-reserved-nodes" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-reserved-nodes" }, input)
 end
 
 --- AWS redshift describe-resize operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_resize(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-resize" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-resize" }, input)
 end
 
 --- AWS redshift describe-scheduled-actions operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_scheduled_actions(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-scheduled-actions" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-scheduled-actions" }, input)
 end
 
 --- AWS redshift describe-snapshot-copy-grants operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_snapshot_copy_grants(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-snapshot-copy-grants" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-snapshot-copy-grants" }, input)
 end
 
 --- AWS redshift describe-snapshot-schedules operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_snapshot_schedules(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-snapshot-schedules" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-snapshot-schedules" }, input)
 end
 
 --- AWS redshift describe-storage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_storage(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-storage" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-storage" }, input)
 end
 
 --- AWS redshift describe-table-restore-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_table_restore_status(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-table-restore-status" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-table-restore-status" }, input)
 end
 
 --- AWS redshift describe-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_tags(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-tags" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-tags" }, input)
 end
 
 --- AWS redshift describe-usage-limits operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.describe_usage_limits(input)
-	return common.execute_aws_command_with_input({ "redshift", "describe-usage-limits" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "describe-usage-limits" }, input)
 end
 
 --- AWS redshift disable-logging operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_logging(input)
-	return common.execute_aws_command_with_input({ "redshift", "disable-logging" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "disable-logging" }, input)
 end
 
 --- AWS redshift disable-snapshot-copy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_snapshot_copy(input)
-	return common.execute_aws_command_with_input({ "redshift", "disable-snapshot-copy" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "disable-snapshot-copy" }, input)
 end
 
 --- AWS redshift disassociate-data-share-consumer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disassociate_data_share_consumer(input)
-	return common.execute_aws_command_with_input({ "redshift", "disassociate-data-share-consumer" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "disassociate-data-share-consumer" }, input)
 end
 
 --- AWS redshift enable-logging operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_logging(input)
-	return common.execute_aws_command_with_input({ "redshift", "enable-logging" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "enable-logging" }, input)
 end
 
 --- AWS redshift enable-snapshot-copy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_snapshot_copy(input)
-	return common.execute_aws_command_with_input({ "redshift", "enable-snapshot-copy" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "enable-snapshot-copy" }, input)
 end
 
 --- AWS redshift failover-primary-compute operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.failover_primary_compute(input)
-	return common.execute_aws_command_with_input({ "redshift", "failover-primary-compute" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "failover-primary-compute" }, input)
 end
 
 --- AWS redshift get-cluster-credentials operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cluster_credentials(input)
-	return common.execute_aws_command_with_input({ "redshift", "get-cluster-credentials" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "get-cluster-credentials" }, input)
 end
 
 --- AWS redshift get-cluster-credentials-with-iam operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_cluster_credentials_with_iam(input)
-	return common.execute_aws_command_with_input({ "redshift", "get-cluster-credentials-with-iam" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "get-cluster-credentials-with-iam" }, input)
 end
 
 --- AWS redshift get-reserved-node-exchange-configuration-options operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_reserved_node_exchange_configuration_options(input)
-	return common.execute_aws_command_with_input({ "redshift", "get-reserved-node-exchange-configuration-options" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "get-reserved-node-exchange-configuration-options" }, input)
 end
 
 --- AWS redshift get-reserved-node-exchange-offerings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_reserved_node_exchange_offerings(input)
-	return common.execute_aws_command_with_input({ "redshift", "get-reserved-node-exchange-offerings" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "get-reserved-node-exchange-offerings" }, input)
 end
 
 --- AWS redshift get-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_resource_policy(input)
-	return common.execute_aws_command_with_input({ "redshift", "get-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "get-resource-policy" }, input)
 end
 
 --- AWS redshift list-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recommendations(input)
-	return common.execute_aws_command_with_input({ "redshift", "list-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "list-recommendations" }, input)
 end
 
 --- AWS redshift modify-aqua-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_aqua_configuration(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-aqua-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-aqua-configuration" }, input)
 end
 
 --- AWS redshift modify-authentication-profile operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_authentication_profile(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-authentication-profile" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-authentication-profile" }, input)
 end
 
 --- AWS redshift modify-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_cluster(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-cluster" }, input)
 end
 
 --- AWS redshift modify-cluster-db-revision operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_cluster_db_revision(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-db-revision" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-cluster-db-revision" }, input)
 end
 
 --- AWS redshift modify-cluster-iam-roles operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_cluster_iam_roles(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-iam-roles" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-cluster-iam-roles" }, input)
 end
 
 --- AWS redshift modify-cluster-maintenance operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_cluster_maintenance(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-maintenance" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-cluster-maintenance" }, input)
 end
 
 --- AWS redshift modify-cluster-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_cluster_parameter_group(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-cluster-parameter-group" }, input)
 end
 
 --- AWS redshift modify-cluster-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_cluster_snapshot(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-cluster-snapshot" }, input)
 end
 
 --- AWS redshift modify-cluster-snapshot-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_cluster_snapshot_schedule(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-snapshot-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-cluster-snapshot-schedule" }, input)
 end
 
 --- AWS redshift modify-cluster-subnet-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_cluster_subnet_group(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-cluster-subnet-group" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-cluster-subnet-group" }, input)
 end
 
 --- AWS redshift modify-custom-domain-association operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_custom_domain_association(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-custom-domain-association" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-custom-domain-association" }, input)
 end
 
 --- AWS redshift modify-endpoint-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_endpoint_access(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-endpoint-access" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-endpoint-access" }, input)
 end
 
 --- AWS redshift modify-event-subscription operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_event_subscription(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-event-subscription" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-event-subscription" }, input)
 end
 
 --- AWS redshift modify-integration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_integration(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-integration" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-integration" }, input)
 end
 
 --- AWS redshift modify-redshift-idc-application operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_redshift_idc_application(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-redshift-idc-application" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-redshift-idc-application" }, input)
 end
 
 --- AWS redshift modify-scheduled-action operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_scheduled_action(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-scheduled-action" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-scheduled-action" }, input)
 end
 
 --- AWS redshift modify-snapshot-copy-retention-period operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_snapshot_copy_retention_period(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-snapshot-copy-retention-period" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-snapshot-copy-retention-period" }, input)
 end
 
 --- AWS redshift modify-snapshot-schedule operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_snapshot_schedule(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-snapshot-schedule" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-snapshot-schedule" }, input)
 end
 
 --- AWS redshift modify-usage-limit operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.modify_usage_limit(input)
-	return common.execute_aws_command_with_input({ "redshift", "modify-usage-limit" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "modify-usage-limit" }, input)
 end
 
 --- AWS redshift pause-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.pause_cluster(input)
-	return common.execute_aws_command_with_input({ "redshift", "pause-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "pause-cluster" }, input)
 end
 
 --- AWS redshift purchase-reserved-node-offering operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.purchase_reserved_node_offering(input)
-	return common.execute_aws_command_with_input({ "redshift", "purchase-reserved-node-offering" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "purchase-reserved-node-offering" }, input)
 end
 
 --- AWS redshift put-resource-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_resource_policy(input)
-	return common.execute_aws_command_with_input({ "redshift", "put-resource-policy" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "put-resource-policy" }, input)
 end
 
 --- AWS redshift reboot-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reboot_cluster(input)
-	return common.execute_aws_command_with_input({ "redshift", "reboot-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "reboot-cluster" }, input)
 end
 
 --- AWS redshift register-namespace operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_namespace(input)
-	return common.execute_aws_command_with_input({ "redshift", "register-namespace" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "register-namespace" }, input)
 end
 
 --- AWS redshift reject-data-share operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reject_data_share(input)
-	return common.execute_aws_command_with_input({ "redshift", "reject-data-share" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "reject-data-share" }, input)
 end
 
 --- AWS redshift reset-cluster-parameter-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reset_cluster_parameter_group(input)
-	return common.execute_aws_command_with_input({ "redshift", "reset-cluster-parameter-group" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "reset-cluster-parameter-group" }, input)
 end
 
 --- AWS redshift resize-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resize_cluster(input)
-	return common.execute_aws_command_with_input({ "redshift", "resize-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "resize-cluster" }, input)
 end
 
 --- AWS redshift restore-from-cluster-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_from_cluster_snapshot(input)
-	return common.execute_aws_command_with_input({ "redshift", "restore-from-cluster-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "restore-from-cluster-snapshot" }, input)
 end
 
 --- AWS redshift restore-table-from-cluster-snapshot operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.restore_table_from_cluster_snapshot(input)
-	return common.execute_aws_command_with_input({ "redshift", "restore-table-from-cluster-snapshot" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "restore-table-from-cluster-snapshot" }, input)
 end
 
 --- AWS redshift resume-cluster operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resume_cluster(input)
-	return common.execute_aws_command_with_input({ "redshift", "resume-cluster" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "resume-cluster" }, input)
 end
 
 --- AWS redshift revoke-cluster-security-group-ingress operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_cluster_security_group_ingress(input)
-	return common.execute_aws_command_with_input({ "redshift", "revoke-cluster-security-group-ingress" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "revoke-cluster-security-group-ingress" }, input)
 end
 
 --- AWS redshift revoke-endpoint-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_endpoint_access(input)
-	return common.execute_aws_command_with_input({ "redshift", "revoke-endpoint-access" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "revoke-endpoint-access" }, input)
 end
 
 --- AWS redshift revoke-snapshot-access operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.revoke_snapshot_access(input)
-	return common.execute_aws_command_with_input({ "redshift", "revoke-snapshot-access" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "revoke-snapshot-access" }, input)
 end
 
 --- AWS redshift rotate-encryption-key operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.rotate_encryption_key(input)
-	return common.execute_aws_command_with_input({ "redshift", "rotate-encryption-key" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "rotate-encryption-key" }, input)
 end
 
 --- AWS redshift update-partner-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_partner_status(input)
-	return common.execute_aws_command_with_input({ "redshift", "update-partner-status" }, input)
+	return common.execute_aws_command_skeleton({ "redshift", "update-partner-status" }, input)
 end
 
 --- AWS redshift wait operation
---- @param input table|nil Optional raw list input
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.wait(input)
-	return common.execute_aws_command_with_raw_input({ "redshift", "wait" }, input)
+	return common.execute_aws_command({ "redshift", "wait" }, input)
 end
 
 return M

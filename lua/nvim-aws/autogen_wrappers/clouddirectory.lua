@@ -3,469 +3,469 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLOUDDIRECTORY service functions
+--- AWS clouddirectory service functions
 local M = {}
 
 --- AWS clouddirectory add-facet-to-object operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.add_facet_to_object(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "add-facet-to-object" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "add-facet-to-object" }, input)
 end
 
 --- AWS clouddirectory apply-schema operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.apply_schema(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "apply-schema" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "apply-schema" }, input)
 end
 
 --- AWS clouddirectory attach-object operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_object(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "attach-object" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "attach-object" }, input)
 end
 
 --- AWS clouddirectory attach-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_policy(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "attach-policy" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "attach-policy" }, input)
 end
 
 --- AWS clouddirectory attach-to-index operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_to_index(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "attach-to-index" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "attach-to-index" }, input)
 end
 
 --- AWS clouddirectory attach-typed-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.attach_typed_link(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "attach-typed-link" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "attach-typed-link" }, input)
 end
 
 --- AWS clouddirectory batch-read operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_read(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "batch-read" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "batch-read" }, input)
 end
 
 --- AWS clouddirectory batch-write operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_write(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "batch-write" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "batch-write" }, input)
 end
 
 --- AWS clouddirectory create-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_directory(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "create-directory" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "create-directory" }, input)
 end
 
 --- AWS clouddirectory create-facet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_facet(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "create-facet" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "create-facet" }, input)
 end
 
 --- AWS clouddirectory create-index operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_index(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "create-index" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "create-index" }, input)
 end
 
 --- AWS clouddirectory create-object operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_object(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "create-object" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "create-object" }, input)
 end
 
 --- AWS clouddirectory create-schema operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_schema(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "create-schema" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "create-schema" }, input)
 end
 
 --- AWS clouddirectory create-typed-link-facet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_typed_link_facet(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "create-typed-link-facet" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "create-typed-link-facet" }, input)
 end
 
 --- AWS clouddirectory delete-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_directory(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "delete-directory" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "delete-directory" }, input)
 end
 
 --- AWS clouddirectory delete-facet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_facet(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "delete-facet" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "delete-facet" }, input)
 end
 
 --- AWS clouddirectory delete-object operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_object(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "delete-object" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "delete-object" }, input)
 end
 
 --- AWS clouddirectory delete-schema operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_schema(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "delete-schema" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "delete-schema" }, input)
 end
 
 --- AWS clouddirectory delete-typed-link-facet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_typed_link_facet(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "delete-typed-link-facet" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "delete-typed-link-facet" }, input)
 end
 
 --- AWS clouddirectory detach-from-index operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_from_index(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "detach-from-index" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "detach-from-index" }, input)
 end
 
 --- AWS clouddirectory detach-object operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_object(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "detach-object" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "detach-object" }, input)
 end
 
 --- AWS clouddirectory detach-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_policy(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "detach-policy" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "detach-policy" }, input)
 end
 
 --- AWS clouddirectory detach-typed-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.detach_typed_link(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "detach-typed-link" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "detach-typed-link" }, input)
 end
 
 --- AWS clouddirectory disable-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.disable_directory(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "disable-directory" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "disable-directory" }, input)
 end
 
 --- AWS clouddirectory enable-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.enable_directory(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "enable-directory" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "enable-directory" }, input)
 end
 
 --- AWS clouddirectory get-applied-schema-version operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_applied_schema_version(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "get-applied-schema-version" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "get-applied-schema-version" }, input)
 end
 
 --- AWS clouddirectory get-directory operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_directory(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "get-directory" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "get-directory" }, input)
 end
 
 --- AWS clouddirectory get-facet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_facet(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "get-facet" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "get-facet" }, input)
 end
 
 --- AWS clouddirectory get-link-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_link_attributes(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "get-link-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "get-link-attributes" }, input)
 end
 
 --- AWS clouddirectory get-object-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_object_attributes(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "get-object-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "get-object-attributes" }, input)
 end
 
 --- AWS clouddirectory get-object-information operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_object_information(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "get-object-information" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "get-object-information" }, input)
 end
 
 --- AWS clouddirectory get-schema-as-json operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_schema_as_json(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "get-schema-as-json" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "get-schema-as-json" }, input)
 end
 
 --- AWS clouddirectory get-typed-link-facet-information operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_typed_link_facet_information(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "get-typed-link-facet-information" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "get-typed-link-facet-information" }, input)
 end
 
 --- AWS clouddirectory list-applied-schema-arns operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_applied_schema_arns(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-applied-schema-arns" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-applied-schema-arns" }, input)
 end
 
 --- AWS clouddirectory list-attached-indices operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_attached_indices(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-attached-indices" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-attached-indices" }, input)
 end
 
 --- AWS clouddirectory list-development-schema-arns operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_development_schema_arns(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-development-schema-arns" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-development-schema-arns" }, input)
 end
 
 --- AWS clouddirectory list-directories operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_directories(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-directories" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-directories" }, input)
 end
 
 --- AWS clouddirectory list-facet-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_facet_attributes(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-facet-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-facet-attributes" }, input)
 end
 
 --- AWS clouddirectory list-facet-names operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_facet_names(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-facet-names" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-facet-names" }, input)
 end
 
 --- AWS clouddirectory list-incoming-typed-links operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_incoming_typed_links(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-incoming-typed-links" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-incoming-typed-links" }, input)
 end
 
 --- AWS clouddirectory list-index operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_index(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-index" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-index" }, input)
 end
 
 --- AWS clouddirectory list-managed-schema-arns operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_managed_schema_arns(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-managed-schema-arns" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-managed-schema-arns" }, input)
 end
 
 --- AWS clouddirectory list-object-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_object_attributes(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-object-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-object-attributes" }, input)
 end
 
 --- AWS clouddirectory list-object-children operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_object_children(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-object-children" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-object-children" }, input)
 end
 
 --- AWS clouddirectory list-object-parent-paths operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_object_parent_paths(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-object-parent-paths" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-object-parent-paths" }, input)
 end
 
 --- AWS clouddirectory list-object-parents operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_object_parents(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-object-parents" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-object-parents" }, input)
 end
 
 --- AWS clouddirectory list-object-policies operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_object_policies(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-object-policies" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-object-policies" }, input)
 end
 
 --- AWS clouddirectory list-outgoing-typed-links operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_outgoing_typed_links(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-outgoing-typed-links" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-outgoing-typed-links" }, input)
 end
 
 --- AWS clouddirectory list-policy-attachments operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_policy_attachments(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-policy-attachments" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-policy-attachments" }, input)
 end
 
 --- AWS clouddirectory list-published-schema-arns operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_published_schema_arns(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-published-schema-arns" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-published-schema-arns" }, input)
 end
 
 --- AWS clouddirectory list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-tags-for-resource" }, input)
 end
 
 --- AWS clouddirectory list-typed-link-facet-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_typed_link_facet_attributes(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-typed-link-facet-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-typed-link-facet-attributes" }, input)
 end
 
 --- AWS clouddirectory list-typed-link-facet-names operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_typed_link_facet_names(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "list-typed-link-facet-names" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "list-typed-link-facet-names" }, input)
 end
 
 --- AWS clouddirectory lookup-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.lookup_policy(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "lookup-policy" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "lookup-policy" }, input)
 end
 
 --- AWS clouddirectory publish-schema operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.publish_schema(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "publish-schema" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "publish-schema" }, input)
 end
 
 --- AWS clouddirectory put-schema-from-json operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_schema_from_json(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "put-schema-from-json" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "put-schema-from-json" }, input)
 end
 
 --- AWS clouddirectory remove-facet-from-object operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.remove_facet_from_object(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "remove-facet-from-object" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "remove-facet-from-object" }, input)
 end
 
 --- AWS clouddirectory tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "tag-resource" }, input)
 end
 
 --- AWS clouddirectory untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "untag-resource" }, input)
 end
 
 --- AWS clouddirectory update-facet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_facet(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "update-facet" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "update-facet" }, input)
 end
 
 --- AWS clouddirectory update-link-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_link_attributes(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "update-link-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "update-link-attributes" }, input)
 end
 
 --- AWS clouddirectory update-object-attributes operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_object_attributes(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "update-object-attributes" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "update-object-attributes" }, input)
 end
 
 --- AWS clouddirectory update-schema operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_schema(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "update-schema" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "update-schema" }, input)
 end
 
 --- AWS clouddirectory update-typed-link-facet operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_typed_link_facet(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "update-typed-link-facet" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "update-typed-link-facet" }, input)
 end
 
 --- AWS clouddirectory upgrade-applied-schema operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.upgrade_applied_schema(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "upgrade-applied-schema" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "upgrade-applied-schema" }, input)
 end
 
 --- AWS clouddirectory upgrade-published-schema operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.upgrade_published_schema(input)
-	return common.execute_aws_command_with_input({ "clouddirectory", "upgrade-published-schema" }, input)
+	return common.execute_aws_command_skeleton({ "clouddirectory", "upgrade-published-schema" }, input)
 end
 
 return M

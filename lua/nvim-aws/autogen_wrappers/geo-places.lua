@@ -3,56 +3,56 @@
 
 local common = require("nvim-aws.common")
 
---- AWS GEO-PLACES service functions
+--- AWS geo-places service functions
 local M = {}
 
 --- AWS geo-places autocomplete operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.autocomplete(input)
-	return common.execute_aws_command_with_input({ "geo-places", "autocomplete" }, input)
+	return common.execute_aws_command_skeleton({ "geo-places", "autocomplete" }, input)
 end
 
 --- AWS geo-places geocode operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.geocode(input)
-	return common.execute_aws_command_with_input({ "geo-places", "geocode" }, input)
+	return common.execute_aws_command_skeleton({ "geo-places", "geocode" }, input)
 end
 
 --- AWS geo-places get-place operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_place(input)
-	return common.execute_aws_command_with_input({ "geo-places", "get-place" }, input)
+	return common.execute_aws_command_skeleton({ "geo-places", "get-place" }, input)
 end
 
 --- AWS geo-places reverse-geocode operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.reverse_geocode(input)
-	return common.execute_aws_command_with_input({ "geo-places", "reverse-geocode" }, input)
+	return common.execute_aws_command_skeleton({ "geo-places", "reverse-geocode" }, input)
 end
 
 --- AWS geo-places search-nearby operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_nearby(input)
-	return common.execute_aws_command_with_input({ "geo-places", "search-nearby" }, input)
+	return common.execute_aws_command_skeleton({ "geo-places", "search-nearby" }, input)
 end
 
 --- AWS geo-places search-text operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_text(input)
-	return common.execute_aws_command_with_input({ "geo-places", "search-text" }, input)
+	return common.execute_aws_command_skeleton({ "geo-places", "search-text" }, input)
 end
 
 --- AWS geo-places suggest operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.suggest(input)
-	return common.execute_aws_command_with_input({ "geo-places", "suggest" }, input)
+	return common.execute_aws_command_skeleton({ "geo-places", "suggest" }, input)
 end
 
 return M

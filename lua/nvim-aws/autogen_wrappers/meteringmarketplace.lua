@@ -3,35 +3,35 @@
 
 local common = require("nvim-aws.common")
 
---- AWS METERINGMARKETPLACE service functions
+--- AWS meteringmarketplace service functions
 local M = {}
 
 --- AWS meteringmarketplace batch-meter-usage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.batch_meter_usage(input)
-	return common.execute_aws_command_with_input({ "meteringmarketplace", "batch-meter-usage" }, input)
+	return common.execute_aws_command_skeleton({ "meteringmarketplace", "batch-meter-usage" }, input)
 end
 
 --- AWS meteringmarketplace meter-usage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.meter_usage(input)
-	return common.execute_aws_command_with_input({ "meteringmarketplace", "meter-usage" }, input)
+	return common.execute_aws_command_skeleton({ "meteringmarketplace", "meter-usage" }, input)
 end
 
 --- AWS meteringmarketplace register-usage operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.register_usage(input)
-	return common.execute_aws_command_with_input({ "meteringmarketplace", "register-usage" }, input)
+	return common.execute_aws_command_skeleton({ "meteringmarketplace", "register-usage" }, input)
 end
 
 --- AWS meteringmarketplace resolve-customer operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.resolve_customer(input)
-	return common.execute_aws_command_with_input({ "meteringmarketplace", "resolve-customer" }, input)
+	return common.execute_aws_command_skeleton({ "meteringmarketplace", "resolve-customer" }, input)
 end
 
 return M

@@ -3,168 +3,168 @@
 
 local common = require("nvim-aws.common")
 
---- AWS RESOURCE-GROUPS service functions
+--- AWS resource-groups service functions
 local M = {}
 
 --- AWS resource-groups cancel-tag-sync-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.cancel_tag_sync_task(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "cancel-tag-sync-task" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "cancel-tag-sync-task" }, input)
 end
 
 --- AWS resource-groups create-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_group(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "create-group" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "create-group" }, input)
 end
 
 --- AWS resource-groups delete-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_group(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "delete-group" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "delete-group" }, input)
 end
 
 --- AWS resource-groups get-account-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_account_settings(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "get-account-settings" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-account-settings" }, input)
 end
 
 --- AWS resource-groups get-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_group(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "get-group" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-group" }, input)
 end
 
 --- AWS resource-groups get-group-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_group_configuration(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "get-group-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-group-configuration" }, input)
 end
 
 --- AWS resource-groups get-group-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_group_query(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "get-group-query" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-group-query" }, input)
 end
 
 --- AWS resource-groups get-tag-sync-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_tag_sync_task(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "get-tag-sync-task" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-tag-sync-task" }, input)
 end
 
 --- AWS resource-groups get-tags operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_tags(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "get-tags" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "get-tags" }, input)
 end
 
 --- AWS resource-groups group-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.group_resources(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "group-resources" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "group-resources" }, input)
 end
 
 --- AWS resource-groups list-group-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_group_resources(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "list-group-resources" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "list-group-resources" }, input)
 end
 
 --- AWS resource-groups list-grouping-statuses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_grouping_statuses(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "list-grouping-statuses" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "list-grouping-statuses" }, input)
 end
 
 --- AWS resource-groups list-groups operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_groups(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "list-groups" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "list-groups" }, input)
 end
 
 --- AWS resource-groups list-tag-sync-tasks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tag_sync_tasks(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "list-tag-sync-tasks" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "list-tag-sync-tasks" }, input)
 end
 
 --- AWS resource-groups put-group-configuration operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_group_configuration(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "put-group-configuration" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "put-group-configuration" }, input)
 end
 
 --- AWS resource-groups search-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.search_resources(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "search-resources" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "search-resources" }, input)
 end
 
 --- AWS resource-groups start-tag-sync-task operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.start_tag_sync_task(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "start-tag-sync-task" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "start-tag-sync-task" }, input)
 end
 
 --- AWS resource-groups tag operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "tag" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "tag" }, input)
 end
 
 --- AWS resource-groups ungroup-resources operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.ungroup_resources(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "ungroup-resources" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "ungroup-resources" }, input)
 end
 
 --- AWS resource-groups untag operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "untag" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "untag" }, input)
 end
 
 --- AWS resource-groups update-account-settings operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_account_settings(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "update-account-settings" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "update-account-settings" }, input)
 end
 
 --- AWS resource-groups update-group operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_group(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "update-group" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "update-group" }, input)
 end
 
 --- AWS resource-groups update-group-query operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_group_query(input)
-	return common.execute_aws_command_with_input({ "resource-groups", "update-group-query" }, input)
+	return common.execute_aws_command_skeleton({ "resource-groups", "update-group-query" }, input)
 end
 
 return M

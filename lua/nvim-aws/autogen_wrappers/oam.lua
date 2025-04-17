@@ -3,112 +3,112 @@
 
 local common = require("nvim-aws.common")
 
---- AWS OAM service functions
+--- AWS oam service functions
 local M = {}
 
 --- AWS oam create-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_link(input)
-	return common.execute_aws_command_with_input({ "oam", "create-link" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "create-link" }, input)
 end
 
 --- AWS oam create-sink operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.create_sink(input)
-	return common.execute_aws_command_with_input({ "oam", "create-sink" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "create-sink" }, input)
 end
 
 --- AWS oam delete-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_link(input)
-	return common.execute_aws_command_with_input({ "oam", "delete-link" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "delete-link" }, input)
 end
 
 --- AWS oam delete-sink operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.delete_sink(input)
-	return common.execute_aws_command_with_input({ "oam", "delete-sink" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "delete-sink" }, input)
 end
 
 --- AWS oam get-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_link(input)
-	return common.execute_aws_command_with_input({ "oam", "get-link" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "get-link" }, input)
 end
 
 --- AWS oam get-sink operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sink(input)
-	return common.execute_aws_command_with_input({ "oam", "get-sink" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "get-sink" }, input)
 end
 
 --- AWS oam get-sink-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_sink_policy(input)
-	return common.execute_aws_command_with_input({ "oam", "get-sink-policy" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "get-sink-policy" }, input)
 end
 
 --- AWS oam list-attached-links operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_attached_links(input)
-	return common.execute_aws_command_with_input({ "oam", "list-attached-links" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "list-attached-links" }, input)
 end
 
 --- AWS oam list-links operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_links(input)
-	return common.execute_aws_command_with_input({ "oam", "list-links" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "list-links" }, input)
 end
 
 --- AWS oam list-sinks operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_sinks(input)
-	return common.execute_aws_command_with_input({ "oam", "list-sinks" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "list-sinks" }, input)
 end
 
 --- AWS oam list-tags-for-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_tags_for_resource(input)
-	return common.execute_aws_command_with_input({ "oam", "list-tags-for-resource" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "list-tags-for-resource" }, input)
 end
 
 --- AWS oam put-sink-policy operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_sink_policy(input)
-	return common.execute_aws_command_with_input({ "oam", "put-sink-policy" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "put-sink-policy" }, input)
 end
 
 --- AWS oam tag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.tag_resource(input)
-	return common.execute_aws_command_with_input({ "oam", "tag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "tag-resource" }, input)
 end
 
 --- AWS oam untag-resource operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.untag_resource(input)
-	return common.execute_aws_command_with_input({ "oam", "untag-resource" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "untag-resource" }, input)
 end
 
 --- AWS oam update-link operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_link(input)
-	return common.execute_aws_command_with_input({ "oam", "update-link" }, input)
+	return common.execute_aws_command_skeleton({ "oam", "update-link" }, input)
 end
 
 return M

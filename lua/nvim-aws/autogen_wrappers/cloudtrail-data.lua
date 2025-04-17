@@ -3,14 +3,14 @@
 
 local common = require("nvim-aws.common")
 
---- AWS CLOUDTRAIL-DATA service functions
+--- AWS cloudtrail-data service functions
 local M = {}
 
 --- AWS cloudtrail-data put-audit-events operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.put_audit_events(input)
-	return common.execute_aws_command_with_input({ "cloudtrail-data", "put-audit-events" }, input)
+	return common.execute_aws_command_skeleton({ "cloudtrail-data", "put-audit-events" }, input)
 end
 
 return M

@@ -3,56 +3,56 @@
 
 local common = require("nvim-aws.common")
 
---- AWS COST-OPTIMIZATION-HUB service functions
+--- AWS cost-optimization-hub service functions
 local M = {}
 
 --- AWS cost-optimization-hub get-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_preferences(input)
-	return common.execute_aws_command_with_input({ "cost-optimization-hub", "get-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "get-preferences" }, input)
 end
 
 --- AWS cost-optimization-hub get-recommendation operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.get_recommendation(input)
-	return common.execute_aws_command_with_input({ "cost-optimization-hub", "get-recommendation" }, input)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "get-recommendation" }, input)
 end
 
 --- AWS cost-optimization-hub list-enrollment-statuses operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_enrollment_statuses(input)
-	return common.execute_aws_command_with_input({ "cost-optimization-hub", "list-enrollment-statuses" }, input)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "list-enrollment-statuses" }, input)
 end
 
 --- AWS cost-optimization-hub list-recommendation-summaries operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recommendation_summaries(input)
-	return common.execute_aws_command_with_input({ "cost-optimization-hub", "list-recommendation-summaries" }, input)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "list-recommendation-summaries" }, input)
 end
 
 --- AWS cost-optimization-hub list-recommendations operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.list_recommendations(input)
-	return common.execute_aws_command_with_input({ "cost-optimization-hub", "list-recommendations" }, input)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "list-recommendations" }, input)
 end
 
 --- AWS cost-optimization-hub update-enrollment-status operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_enrollment_status(input)
-	return common.execute_aws_command_with_input({ "cost-optimization-hub", "update-enrollment-status" }, input)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "update-enrollment-status" }, input)
 end
 
 --- AWS cost-optimization-hub update-preferences operation
---- @param input table|nil Optional input parameters
---- @return {success: boolean, data: table|nil, error: string|nil} Result table
+--- @param input table|nil input parameters
+--- @return {success: boolean, data: table|nil, error: string|nil}
 function M.update_preferences(input)
-	return common.execute_aws_command_with_input({ "cost-optimization-hub", "update-preferences" }, input)
+	return common.execute_aws_command_skeleton({ "cost-optimization-hub", "update-preferences" }, input)
 end
 
 return M
