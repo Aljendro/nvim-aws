@@ -98,7 +98,7 @@ function M.execute_aws_job(args, callbacks)
 			return { success = true, data = parsed_data }
 		else
 			local err = #stderr_result > 0 and table.concat(stderr_result, "\n") or "Unknown error"
-			log.info("failed job: aws " .. concatenated_args .. ": " .. err)
+			log.error("failed job: aws " .. concatenated_args .. ": " .. err)
 			return { success = false, error = err }
 		end
 	end
