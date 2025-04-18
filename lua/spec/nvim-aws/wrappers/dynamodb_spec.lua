@@ -170,6 +170,24 @@ describe("AWS DynamoDB Service", function()
 		assert.equals(test_item.userId.S, result.data.Items[1].userId.S)
 	end)
 
+	it("should execute PartiQL SELECT statement", function()
+		local result = dynamodb.execute_statement({
+			Statement = 'SELECT * FROM "' .. test_table_name .. '" WHERE "userId" = ? AND "timestamp" = ?',
+			Parameters = {
+				{ S = test_item.userId.S },
+				{ N = test_item.timestamp.N },
+			},
+		})
+
+		assert.is_true(result.success)
+		assert.is_table(result.data)
+		assert.is_table(result.data.Items)
+		assert.equals(1, #result.data.Items)
+		assert.equals(test_item.userId.S, result.data.Items[1].userId.S)
+		assert.equals(test_item.name.S, result.data.Items[1].name.S)
+	end)
+
+
 	it("should update the item", function()
 		local result = dynamodb.update_item({
 			TableName = test_table_name,
@@ -211,6 +229,89 @@ describe("AWS DynamoDB Service", function()
 		assert.is_table(result.data.Items)
 		assert.equals(1, #result.data.Items)
 		assert.equals(updated_item.userId.S, result.data.Items[1].userId.S)
+	end)
+
+	it("should execute PartiQL UPDATE statement", function()
+		local result = dynamodb.execute_statement({
+			Statement = 'UPDATE "'
+				.. test_table_name
+				.. "\" SET name = 'PartiQL Updated User' WHERE \"userId\" = '"
+				.. test_item.userId.S
+				.. "' AND \"timestamp\" = "
+				.. test_item.timestamp.N,
+		})
+
+		assert.is_true(result.success)
+		assert.is_table(result.data)
+	end)
+
+	it("should verify PartiQL UPDATE worked", function()
+		local result = dynamodb.execute_statement({
+			Statement = 'SELECT * FROM "'
+				.. test_table_name
+				.. "\" WHERE \"userId\" = '"
+				.. test_item.userId.S
+				.. "' AND \"timestamp\" = "
+				.. test_item.timestamp.N,
+		})
+
+		assert.is_true(result.success)
+		assert.is_table(result.data)
+		assert.is_table(result.data.Items)
+		assert.equals(1, #result.data.Items)
+		assert.equals("PartiQL Updated User", result.data.Items[1].name.S)
+	end)
+
+	it("should execute PartiQL INSERT statement", function()
+		local new_user_id = "partiql_user"
+		local new_timestamp = "1623456790"
+
+		local result = dynamodb.execute_statement({
+			Statement = 'INSERT INTO "'
+				.. test_table_name
+				.. "\" VALUE {'userId': '"
+				.. new_user_id
+				.. "', 'timestamp': "
+				.. new_timestamp
+				.. ", 'name': 'PartiQL User', 'email': 'partiql@example.com', 'active': true}",
+		})
+
+		assert.is_true(result.success)
+		assert.is_table(result.data)
+	end)
+
+	it("should verify PartiQL INSERT worked", function()
+		local result = dynamodb.execute_statement({
+			Statement = 'SELECT * FROM "' .. test_table_name .. "\" WHERE \"userId\" = 'partiql_user'",
+		})
+
+		assert.is_true(result.success)
+		assert.is_table(result.data)
+		assert.is_table(result.data.Items)
+		assert.equals(1, #result.data.Items)
+		assert.equals("partiql_user", result.data.Items[1].userId.S)
+		assert.equals("PartiQL User", result.data.Items[1].name.S)
+	end)
+
+	it("should execute PartiQL DELETE statement", function()
+		local result = dynamodb.execute_statement({
+			Statement = 'DELETE FROM "'
+				.. test_table_name
+				.. "\" WHERE \"userId\" = 'partiql_user' AND \"timestamp\" = 1623456790",
+		})
+
+		assert.is_true(result.success)
+		assert.is_table(result.data)
+	end)
+
+	it("should verify PartiQL DELETE worked", function()
+		local result = dynamodb.execute_statement({
+			Statement = 'SELECT * FROM "' .. test_table_name .. "\" WHERE \"userId\" = 'partiql_user'",
+		})
+
+		assert.is_true(result.success)
+		assert.is_table(result.data)
+		assert.equals(0, #(result.data.Items or {}))
 	end)
 
 	it("should delete the item", function()
