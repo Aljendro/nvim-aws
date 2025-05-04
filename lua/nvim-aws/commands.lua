@@ -5,7 +5,7 @@ local M = {}
 
 function M.list_services()
 	-- Placeholder for actual AWS interaction
-	log.info("AWS Services (Region: " .. config.aws.region .. ", Profile: " .. config.aws.profile .. ")")
+	log.info("AWS Services (Region: " .. config.aws.aws_region .. ", Profile: " .. config.aws.aws_profile .. ")")
 	-- TODO: Implement AWS CLI interaction
 end
 
