@@ -8,6 +8,17 @@ import subprocess
 import sys
 import re
 
+ONLY_SERVICES = [
+    "dynamodb",
+    "ec2",
+    "lambda",
+    "logs",
+    "s3",
+    "s3api",
+    "sns",
+    "sqs",
+]
+
 
 def run_extraction_for_all_cli_services():
     # Get the codegen directory (parent of the current script directory)
@@ -84,7 +95,8 @@ def extract_service_ids():
                     service_id = line.strip().replace("o ", "").strip()
                     # Skip special entries that aren't actual AWS services
                     if service_id not in ["help", "history", "configure"]:
-                        service_ids.append(service_id)
+                        if service_id in ONLY_SERVICES:
+                            service_ids.append(service_id)
 
                 # Check if we've reached the end of the services section
                 if "SEE ALSO" in line:
