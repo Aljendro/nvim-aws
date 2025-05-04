@@ -9,6 +9,7 @@ import sys
 import re
 
 ONLY_SERVICES = [
+    "cloudwatch",
     "dynamodb",
     "ec2",
     "lambda",
