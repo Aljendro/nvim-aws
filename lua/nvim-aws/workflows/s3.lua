@@ -1,4 +1,4 @@
-local s3 = require("nvim-aws.services.s3")
+local s3 = require("nvim-aws.autogen_wrappers.s3api")
 local fzf = require("fzf-lua")
 local log = require("utilities.log")
 
@@ -21,9 +21,6 @@ function M.manage_buckets()
 
 	fzf.fzf_exec(bucket_names, {
 		prompt = "Select S3 Bucket> ",
-		fzf_opts = {
-			["--multi"] = true,
-		},
 		actions = {
 			["default"] = function(selected)
 				print("Selected bucket: " .. selected[1])
