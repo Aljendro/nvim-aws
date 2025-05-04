@@ -54,28 +54,33 @@ end
 function M.execute_aws_job(args, callbacks)
 	local concatenated_args = table.concat(args, " ")
 	local stderr_result = {}
-	local local_callbacks = callbacks
-		or {
-			on_start = function()
-				log.info("starting job: aws " .. concatenated_args .. "...")
-			end,
-			on_stdout = nil,
-			on_stderr = function(_, data)
-				table.insert(stderr_result, data)
-			end,
-			on_exit = function(_, code)
-				log.info("finished job: aws " .. concatenated_args .. " with code " .. code)
-			end,
-		}
+	local local_on_start = function()
+		log.info("starting job: aws " .. concatenated_args .. "...")
+		if callbacks and callbacks.on_start then
+			callbacks.on_start()
+		end
+	end
+	local local_on_exit = function(_, code)
+		log.info("finished job: aws " .. concatenated_args .. " with code " .. code)
+		if callbacks and callbacks.on_exit then
+			callbacks.on_exit(_, code)
+		end
+	end
+	local local_on_stdout = callbacks and callbacks.on_stdout or nil
+	local local_on_stderr = callbacks and callbacks.on_stderr
+		or function(_, data)
+			table.insert(stderr_result, data)
+		end
+
 	local job = Job:new({
 		command = "aws",
 		args = args,
 		interactive = false,
 		env = default_env,
-		on_start = local_callbacks.on_start,
-		on_exit = local_callbacks.on_exit,
-		on_stdout = local_callbacks.on_stdout,
-		on_stderr = local_callbacks.on_stderr,
+		on_start = local_on_start,
+		on_exit = local_on_exit,
+		on_stdout = local_on_stdout,
+		on_stderr = local_on_stderr,
 	})
 
 	if callbacks then
