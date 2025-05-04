@@ -145,7 +145,7 @@ function M.start()
 									local result_buf = api.nvim_create_buf(false, true)
 									local uuid = M.generate_uuid()
 									api.nvim_buf_set_name(result_buf, "aws-result-" .. uuid)
-									api.nvim_set_option_value("filetype", "json", { buf = buf })
+									api.nvim_set_option_value("filetype", "json", { buf = result_buf })
 
 									-- Open in a split
 									vim.cmd("vsplit")
@@ -155,6 +155,13 @@ function M.start()
 									local current_job = nil
 
 									local result = M.execute_command(service_name, command_name, content, {
+										on_exit = function(_, code)
+											if code == 0 then
+												vim.schedule(function()
+													api.nvim_buf_set_lines(result_buf, 0, 1, false, {})
+												end)
+											end
+										end,
 										on_stdout = function(_, line)
 											vim.schedule(function()
 												api.nvim_buf_set_lines(result_buf, -1, -1, false, { line })
