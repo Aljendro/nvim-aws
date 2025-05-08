@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# Configuration
+INTERVAL_SECONDS=${1:-5}
+DURATION_MINUTES=${2:-60}
+LOG_GROUP_NAME=${3:-"/test/example-logs"}
+LOG_STREAM_NAME=${4:-"stream-$(date +%Y%m%d%H%M%S)"}
+
+echo "Starting CloudWatch Log Generator"
+echo "AWS Profile: $AWS_PROFILE"
+echo "Interval: $INTERVAL_SECONDS seconds"
+echo "Duration: $DURATION_MINUTES minutes"
+echo "Log Group: $LOG_GROUP_NAME"
+echo "Log Stream: $LOG_STREAM_NAME"
+
+# Create log group if it doesn't exist
+aws logs describe-log-groups --log-group-name-prefix "$LOG_GROUP_NAME" | grep "$LOG_GROUP_NAME" >/dev/null
+if [ $? -ne 0 ]; then
+  echo "Creating log group $LOG_GROUP_NAME..."
+  aws logs create-log-group --log-group-name "$LOG_GROUP_NAME"
+  aws logs put-retention-policy --log-group-name "$LOG_GROUP_NAME" --retention-in-days 1
+else
+  echo "Setting retention policy on existing log group..."
+  aws logs put-retention-policy --log-group-name "$LOG_GROUP_NAME" --retention-in-days 1
+fi
+
+# Create log stream if it doesn't exist
+aws logs describe-log-streams --log-group-name "$LOG_GROUP_NAME" --log-stream-name-prefix "$LOG_STREAM_NAME" | grep "$LOG_STREAM_NAME" >/dev/null
+if [ $? -ne 0 ]; then
+  echo "Creating log stream $LOG_STREAM_NAME..."
+  aws logs create-log-stream --log-group-name "$LOG_GROUP_NAME" --log-stream-name "$LOG_STREAM_NAME"
+fi
+
+# Calculate end time
+END_TIME=$(($(date +%s) + DURATION_MINUTES * 60))
+
+# Log levels for random selection
+LOG_LEVELS=("INFO" "DEBUG" "WARN" "ERROR")
+
+# Generate and send logs
+SEQUENCE_TOKEN=""
+while [ $(date +%s) -lt $END_TIME ]; do
+  # Generate random log message
+  TIMESTAMP=$(($(date +%s) * 1000))
+  LOG_LEVEL=${LOG_LEVELS[$RANDOM % ${#LOG_LEVELS[@]}]}
+  MESSAGE="Test log message at $(date) - $LOG_LEVEL - Random data: $RANDOM"
+
+  # Send log to CloudWatch
+  if [ -z "$SEQUENCE_TOKEN" ]; then
+    RESPONSE=$(aws logs put-log-events --log-group-name "$LOG_GROUP_NAME" --log-stream-name "$LOG_STREAM_NAME" --log-events timestamp=$TIMESTAMP,message="$MESSAGE")
+  else
+    RESPONSE=$(aws logs put-log-events --log-group-name "$LOG_GROUP_NAME" --log-stream-name "$LOG_STREAM_NAME" --sequence-token "$SEQUENCE_TOKEN" --log-events timestamp=$TIMESTAMP,message="$MESSAGE")
+  fi
+
+  # Extract next sequence token
+  SEQUENCE_TOKEN=$(echo $RESPONSE | grep -o 'nextSequenceToken": "[^"]*' | cut -d'"' -f3)
+
+  echo "Log sent: $MESSAGE"
+  sleep $INTERVAL_SECONDS
+done
+
+echo "Log generation completed"

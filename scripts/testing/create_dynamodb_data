@@ -1,0 +1,66 @@
+#!/bin/bash
+
+set -e
+
+echo "Starting Create Dynamodb Data"
+echo "AWS Profile: $AWS_PROFILE"
+
+# Generate a unique test table name with timestamp
+TEST_TABLE_NAME="test-table"
+echo "Creating table: $TEST_TABLE_NAME"
+
+# Define keys
+PARTITION_KEY="userId"
+SORT_KEY="timestamp"
+GSI_NAME="EmailIndex"
+GSI_KEY="email"
+
+# Create the table with GSI
+aws dynamodb create-table \
+  --table-name "$TEST_TABLE_NAME" \
+  --no-cli-pager \
+  --attribute-definitions \
+    AttributeName="$PARTITION_KEY",AttributeType=S \
+    AttributeName="$SORT_KEY",AttributeType=N \
+    AttributeName="$GSI_KEY",AttributeType=S \
+  --key-schema \
+    AttributeName="$PARTITION_KEY",KeyType=HASH \
+    AttributeName="$SORT_KEY",KeyType=RANGE \
+  --global-secondary-indexes \
+    "IndexName=$GSI_NAME,KeySchema=[{AttributeName=$GSI_KEY,KeyType=HASH}],Projection={ProjectionType=ALL},ProvisionedThroughput={ReadCapacityUnits=5,WriteCapacityUnits=5}" \
+  --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
+
+echo "Waiting for table to become active..."
+aws dynamodb wait table-exists --table-name "$TEST_TABLE_NAME"
+
+# Insert test item
+echo "Inserting test item..."
+aws dynamodb put-item \
+  --table-name "$TEST_TABLE_NAME" \
+  --no-cli-pager \
+  --item '{
+    "userId": {"S": "user123"},
+    "timestamp": {"N": "1623456789"},
+    "email": {"S": "test@example.com"},
+    "name": {"S": "Test User"},
+    "active": {"BOOL": true}
+  }'
+
+# Insert PartiQL test item
+echo "Inserting PartiQL test item..."
+aws dynamodb execute-statement \
+  --no-cli-pager \
+  --statement "INSERT INTO \"$TEST_TABLE_NAME\" VALUE {
+    'userId': 'partiql_user',
+    'timestamp': 1623456790,
+    'name': 'PartiQL User',
+    'email': 'partiql@example.com',
+    'active': true
+  }"
+
+echo "Table created and populated successfully: $TEST_TABLE_NAME"
+echo ""
+echo "To clean up when finished testing, run:"
+echo "aws dynamodb delete-table --table-name $TEST_TABLE_NAME --profile nvim-aws --no-cli-pager"
+
+
