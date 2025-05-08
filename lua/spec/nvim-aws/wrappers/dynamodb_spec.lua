@@ -187,7 +187,6 @@ describe("AWS DynamoDB Service", function()
 		assert.equals(test_item.name.S, result.data.Items[1].name.S)
 	end)
 
-
 	it("should update the item", function()
 		local result = dynamodb.update_item({
 			TableName = test_table_name,
@@ -237,7 +236,7 @@ describe("AWS DynamoDB Service", function()
 				.. test_table_name
 				.. "\" SET name = 'PartiQL Updated User' WHERE \"userId\" = '"
 				.. test_item.userId.S
-				.. "' AND \"timestamp\" = "
+				.. '\' AND "timestamp" = '
 				.. test_item.timestamp.N,
 		})
 
@@ -249,9 +248,9 @@ describe("AWS DynamoDB Service", function()
 		local result = dynamodb.execute_statement({
 			Statement = 'SELECT * FROM "'
 				.. test_table_name
-				.. "\" WHERE \"userId\" = '"
+				.. '" WHERE "userId" = \''
 				.. test_item.userId.S
-				.. "' AND \"timestamp\" = "
+				.. '\' AND "timestamp" = '
 				.. test_item.timestamp.N,
 		})
 
@@ -282,7 +281,7 @@ describe("AWS DynamoDB Service", function()
 
 	it("should verify PartiQL INSERT worked", function()
 		local result = dynamodb.execute_statement({
-			Statement = 'SELECT * FROM "' .. test_table_name .. "\" WHERE \"userId\" = 'partiql_user'",
+			Statement = 'SELECT * FROM "' .. test_table_name .. '" WHERE "userId" = \'partiql_user\'',
 		})
 
 		assert.is_true(result.success)
@@ -297,7 +296,7 @@ describe("AWS DynamoDB Service", function()
 		local result = dynamodb.execute_statement({
 			Statement = 'DELETE FROM "'
 				.. test_table_name
-				.. "\" WHERE \"userId\" = 'partiql_user' AND \"timestamp\" = 1623456790",
+				.. '" WHERE "userId" = \'partiql_user\' AND "timestamp" = 1623456790',
 		})
 
 		assert.is_true(result.success)
@@ -306,7 +305,7 @@ describe("AWS DynamoDB Service", function()
 
 	it("should verify PartiQL DELETE worked", function()
 		local result = dynamodb.execute_statement({
-			Statement = 'SELECT * FROM "' .. test_table_name .. "\" WHERE \"userId\" = 'partiql_user'",
+			Statement = 'SELECT * FROM "' .. test_table_name .. '" WHERE "userId" = \'partiql_user\'',
 		})
 
 		assert.is_true(result.success)

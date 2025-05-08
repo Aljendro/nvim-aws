@@ -4,11 +4,9 @@ local log = require("utilities.log")
 local M = {}
 
 local default_env = {
-	["AWS_REGION"] = config.aws.aws_region,
 	["AWS_PROFILE"] = config.aws.aws_profile,
-	["AWS_ENDPOINT_URL"] = config.aws.aws_endpoint_url,
-	["AWS_PAGER"] = "",
 	["AWS_DEFAULT_OUTPUT"] = "json",
+	["AWS_PAGER"] = "",
 	["PATH"] = os.getenv("PATH") or "",
 }
 
@@ -67,7 +65,8 @@ function M.execute_aws_job(args, callbacks)
 		local system_obj = vim.system({ "aws", unpack(args) }, {
 			env = default_env,
 			text = true,
-			stdout = function(_, data) if callbacks.on_stdout and data then
+			stdout = function(_, data)
+				if callbacks.on_stdout and data then
 					callbacks.on_stdout(nil, data)
 				end
 			end,

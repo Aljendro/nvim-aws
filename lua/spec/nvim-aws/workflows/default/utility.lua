@@ -1,6 +1,5 @@
 require("nvim-aws").setup()
 local default_utility = require("nvim-aws.workflows.default.utility")
-local log = require("utilities.log")
 
 describe("testing default workflow", function()
 	it("should return sorted list of available services", function()

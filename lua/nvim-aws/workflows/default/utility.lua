@@ -81,15 +81,11 @@ function M.execute_command(service_name, command_name, input_json, callbacks)
 	if not success_parse then
 		return { success = false, error = "Invalid JSON: " .. input_json }
 	end
-  
-  log.info("successfully started job 1")
 
 	-- Execute the command
 	if callbacks then
-    log.info("successfully started job 2")
 		return command_fn(input, callbacks)
 	else
-    log.info("successfully started job 3")
 		return command_fn(input)
 	end
 end
