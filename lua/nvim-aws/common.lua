@@ -1,5 +1,3 @@
-local Job = require("plenary.job")
-
 local config = require("nvim-aws").config
 local log = require("utilities.log")
 
@@ -54,55 +52,57 @@ end
 function M.execute_aws_job(args, callbacks)
 	local concatenated_args = table.concat(args, " ")
 	local stderr_result = {}
-	local local_on_start = function()
-		log.info("starting job: aws " .. concatenated_args .. "...")
-		if callbacks and callbacks.on_start then
-			callbacks.on_start()
-		end
-	end
-	local local_on_exit = function(_, code)
-		log.info("finished job: aws " .. concatenated_args .. " with code " .. code)
-		if callbacks and callbacks.on_exit then
-			callbacks.on_exit(_, code)
-		end
-	end
-	local local_on_stdout = callbacks and callbacks.on_stdout or nil
-	local local_on_stderr = callbacks and callbacks.on_stderr
-		or function(_, data)
-			table.insert(stderr_result, data)
-		end
-
-	local job = Job:new({
-		command = "aws",
-		args = args,
-		interactive = false,
-		env = default_env,
-		on_start = local_on_start,
-		on_exit = local_on_exit,
-		on_stdout = local_on_stdout,
-		on_stderr = local_on_stderr,
-	})
 
 	if callbacks then
-		job:start()
-		return { success = true, job }
+		local on_start = function()
+			log.info("starting job: aws " .. concatenated_args .. "...")
+			if callbacks.on_start then
+				callbacks.on_start()
+			end
+		end
+
+		-- Call on_start immediately since vim.system doesn't have an on_start callback
+		on_start()
+
+		local system_obj = vim.system({ "aws", unpack(args) }, {
+			env = default_env,
+			text = true,
+			stdout = function(_, data) if callbacks.on_stdout and data then
+					callbacks.on_stdout(nil, data)
+				end
+			end,
+			stderr = function(_, data)
+				if callbacks.on_stderr and data then
+					callbacks.on_stderr(nil, data)
+				end
+			end,
+		}, function(obj)
+			if callbacks.on_exit then
+				callbacks.on_exit(nil, obj.code)
+			end
+			log.info("finished job: aws " .. concatenated_args .. " with code " .. obj.code)
+		end)
+
+		return { success = true, job = system_obj }
 	else
-		local result, code = job:sync()
-		if code == 0 then
+		-- Synchronous execution
+		local obj = vim.system({ "aws", unpack(args) }, { env = default_env, text = true }):wait()
+
+		if obj.code == 0 then
 			log.info("successful job: aws " .. concatenated_args)
-			local concatenated_result = table.concat(result or {}, "\n")
+			local result = obj.stdout or ""
 
 			-- Handle empty responses
-			if concatenated_result == "" then
+			if result == "" then
 				log.debug("successful job: empty response: aws " .. concatenated_args)
 				return { success = true, data = {} }
 			end
 
-			local parsed_data = vim.json.decode(concatenated_result, { luanil = { object = true, array = true } })
+			local parsed_data = vim.json.decode(result, { luanil = { object = true, array = true } })
 			log.debug(parsed_data)
 			return { success = true, data = parsed_data }
 		else
-			local err = #stderr_result > 0 and table.concat(stderr_result, "\n") or "Unknown error"
+			local err = obj.stderr or "Unknown error"
 			log.error("failed job: aws " .. concatenated_args .. ": " .. err)
 			return { success = false, error = err }
 		end
