@@ -7,697 +7,697 @@ local common = require("nvim-aws.common")
 local M = {}
 
 --- AWS logs associate-kms-key operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.associate_kms_key(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "associate-kms-key" }, input, callbacks)
 end
 
 --- AWS logs cancel-export-task operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.cancel_export_task(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "cancel-export-task" }, input, callbacks)
 end
 
 --- AWS logs create-delivery operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.create_delivery(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "create-delivery" }, input, callbacks)
 end
 
 --- AWS logs create-export-task operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.create_export_task(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "create-export-task" }, input, callbacks)
 end
 
 --- AWS logs create-log-anomaly-detector operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.create_log_anomaly_detector(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "create-log-anomaly-detector" }, input, callbacks)
 end
 
 --- AWS logs create-log-group operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.create_log_group(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "create-log-group" }, input, callbacks)
 end
 
 --- AWS logs create-log-stream operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.create_log_stream(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "create-log-stream" }, input, callbacks)
 end
 
 --- AWS logs delete-account-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_account_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-account-policy" }, input, callbacks)
 end
 
 --- AWS logs delete-data-protection-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_data_protection_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-data-protection-policy" }, input, callbacks)
 end
 
 --- AWS logs delete-delivery operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_delivery(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-delivery" }, input, callbacks)
 end
 
 --- AWS logs delete-delivery-destination operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_delivery_destination(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-delivery-destination" }, input, callbacks)
 end
 
 --- AWS logs delete-delivery-destination-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_delivery_destination_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-delivery-destination-policy" }, input, callbacks)
 end
 
 --- AWS logs delete-delivery-source operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_delivery_source(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-delivery-source" }, input, callbacks)
 end
 
 --- AWS logs delete-destination operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_destination(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-destination" }, input, callbacks)
 end
 
 --- AWS logs delete-index-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_index_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-index-policy" }, input, callbacks)
 end
 
 --- AWS logs delete-integration operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_integration(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-integration" }, input, callbacks)
 end
 
 --- AWS logs delete-log-anomaly-detector operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_log_anomaly_detector(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-log-anomaly-detector" }, input, callbacks)
 end
 
 --- AWS logs delete-log-group operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_log_group(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-log-group" }, input, callbacks)
 end
 
 --- AWS logs delete-log-stream operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_log_stream(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-log-stream" }, input, callbacks)
 end
 
 --- AWS logs delete-metric-filter operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_metric_filter(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-metric-filter" }, input, callbacks)
 end
 
 --- AWS logs delete-query-definition operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_query_definition(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-query-definition" }, input, callbacks)
 end
 
 --- AWS logs delete-resource-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_resource_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-resource-policy" }, input, callbacks)
 end
 
 --- AWS logs delete-retention-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_retention_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-retention-policy" }, input, callbacks)
 end
 
 --- AWS logs delete-subscription-filter operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_subscription_filter(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-subscription-filter" }, input, callbacks)
 end
 
 --- AWS logs delete-transformer operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.delete_transformer(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "delete-transformer" }, input, callbacks)
 end
 
 --- AWS logs describe-account-policies operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_account_policies(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-account-policies" }, input, callbacks)
 end
 
 --- AWS logs describe-configuration-templates operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_configuration_templates(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-configuration-templates" }, input, callbacks)
 end
 
 --- AWS logs describe-deliveries operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_deliveries(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-deliveries" }, input, callbacks)
 end
 
 --- AWS logs describe-delivery-destinations operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_delivery_destinations(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-delivery-destinations" }, input, callbacks)
 end
 
 --- AWS logs describe-delivery-sources operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_delivery_sources(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-delivery-sources" }, input, callbacks)
 end
 
 --- AWS logs describe-destinations operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_destinations(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-destinations" }, input, callbacks)
 end
 
 --- AWS logs describe-export-tasks operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_export_tasks(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-export-tasks" }, input, callbacks)
 end
 
 --- AWS logs describe-field-indexes operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_field_indexes(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-field-indexes" }, input, callbacks)
 end
 
 --- AWS logs describe-index-policies operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_index_policies(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-index-policies" }, input, callbacks)
 end
 
 --- AWS logs describe-log-groups operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_log_groups(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-log-groups" }, input, callbacks)
 end
 
 --- AWS logs describe-log-streams operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_log_streams(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-log-streams" }, input, callbacks)
 end
 
 --- AWS logs describe-metric-filters operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_metric_filters(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-metric-filters" }, input, callbacks)
 end
 
 --- AWS logs describe-queries operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_queries(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-queries" }, input, callbacks)
 end
 
 --- AWS logs describe-query-definitions operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_query_definitions(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-query-definitions" }, input, callbacks)
 end
 
 --- AWS logs describe-resource-policies operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_resource_policies(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-resource-policies" }, input, callbacks)
 end
 
 --- AWS logs describe-subscription-filters operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.describe_subscription_filters(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "describe-subscription-filters" }, input, callbacks)
 end
 
 --- AWS logs disassociate-kms-key operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.disassociate_kms_key(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "disassociate-kms-key" }, input, callbacks)
 end
 
 --- AWS logs filter-log-events operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.filter_log_events(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "filter-log-events" }, input, callbacks)
 end
 
 --- AWS logs get-data-protection-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_data_protection_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-data-protection-policy" }, input, callbacks)
 end
 
 --- AWS logs get-delivery operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_delivery(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-delivery" }, input, callbacks)
 end
 
 --- AWS logs get-delivery-destination operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_delivery_destination(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-delivery-destination" }, input, callbacks)
 end
 
 --- AWS logs get-delivery-destination-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_delivery_destination_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-delivery-destination-policy" }, input, callbacks)
 end
 
 --- AWS logs get-delivery-source operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_delivery_source(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-delivery-source" }, input, callbacks)
 end
 
 --- AWS logs get-integration operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_integration(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-integration" }, input, callbacks)
 end
 
 --- AWS logs get-log-anomaly-detector operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_log_anomaly_detector(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-log-anomaly-detector" }, input, callbacks)
 end
 
 --- AWS logs get-log-events operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_log_events(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-log-events" }, input, callbacks)
 end
 
 --- AWS logs get-log-group-fields operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_log_group_fields(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-log-group-fields" }, input, callbacks)
 end
 
 --- AWS logs get-log-record operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_log_record(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-log-record" }, input, callbacks)
 end
 
 --- AWS logs get-query-results operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_query_results(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-query-results" }, input, callbacks)
 end
 
 --- AWS logs get-transformer operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.get_transformer(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "get-transformer" }, input, callbacks)
 end
 
 --- AWS logs list-anomalies operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.list_anomalies(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "list-anomalies" }, input, callbacks)
 end
 
 --- AWS logs list-integrations operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.list_integrations(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "list-integrations" }, input, callbacks)
 end
 
 --- AWS logs list-log-anomaly-detectors operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.list_log_anomaly_detectors(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "list-log-anomaly-detectors" }, input, callbacks)
 end
 
 --- AWS logs list-log-groups-for-query operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.list_log_groups_for_query(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "list-log-groups-for-query" }, input, callbacks)
 end
 
 --- AWS logs list-tags-for-resource operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.list_tags_for_resource(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "list-tags-for-resource" }, input, callbacks)
 end
 
 --- AWS logs put-account-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_account_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-account-policy" }, input, callbacks)
 end
 
 --- AWS logs put-data-protection-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_data_protection_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-data-protection-policy" }, input, callbacks)
 end
 
 --- AWS logs put-delivery-destination operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_delivery_destination(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-delivery-destination" }, input, callbacks)
 end
 
 --- AWS logs put-delivery-destination-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_delivery_destination_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-delivery-destination-policy" }, input, callbacks)
 end
 
 --- AWS logs put-delivery-source operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_delivery_source(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-delivery-source" }, input, callbacks)
 end
 
 --- AWS logs put-destination operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_destination(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-destination" }, input, callbacks)
 end
 
 --- AWS logs put-destination-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_destination_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-destination-policy" }, input, callbacks)
 end
 
 --- AWS logs put-index-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_index_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-index-policy" }, input, callbacks)
 end
 
 --- AWS logs put-integration operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_integration(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-integration" }, input, callbacks)
 end
 
 --- AWS logs put-log-events operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_log_events(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-log-events" }, input, callbacks)
 end
 
 --- AWS logs put-metric-filter operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_metric_filter(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-metric-filter" }, input, callbacks)
 end
 
 --- AWS logs put-query-definition operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_query_definition(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-query-definition" }, input, callbacks)
 end
 
 --- AWS logs put-resource-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_resource_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-resource-policy" }, input, callbacks)
 end
 
 --- AWS logs put-retention-policy operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_retention_policy(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-retention-policy" }, input, callbacks)
 end
 
 --- AWS logs put-subscription-filter operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_subscription_filter(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-subscription-filter" }, input, callbacks)
 end
 
 --- AWS logs put-transformer operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.put_transformer(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "put-transformer" }, input, callbacks)
 end
 
 --- AWS logs start-live-tail operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.start_live_tail(input, callbacks)
 	return common.execute_aws_command({ "logs", "start-live-tail" }, input, callbacks)
 end
 
 --- AWS logs start-query operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.start_query(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "start-query" }, input, callbacks)
 end
 
 --- AWS logs stop-query operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.stop_query(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "stop-query" }, input, callbacks)
 end
 
 --- AWS logs tag-resource operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.tag_resource(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "tag-resource" }, input, callbacks)
 end
 
 --- AWS logs tail operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.tail(input, callbacks)
 	return common.execute_aws_command({ "logs", "tail" }, input, callbacks)
 end
 
 --- AWS logs test-metric-filter operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.test_metric_filter(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "test-metric-filter" }, input, callbacks)
 end
 
 --- AWS logs test-transformer operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.test_transformer(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "test-transformer" }, input, callbacks)
 end
 
 --- AWS logs untag-resource operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.untag_resource(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "untag-resource" }, input, callbacks)
 end
 
 --- AWS logs update-anomaly operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.update_anomaly(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "update-anomaly" }, input, callbacks)
 end
 
 --- AWS logs update-delivery-configuration operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.update_delivery_configuration(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "update-delivery-configuration" }, input, callbacks)
 end
 
 --- AWS logs update-log-anomaly-detector operation
---- @param input table|nil input parameters
---- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}
---- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
 function M.update_log_anomaly_detector(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "update-log-anomaly-detector" }, input, callbacks)
 end

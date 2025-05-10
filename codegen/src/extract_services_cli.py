@@ -157,12 +157,12 @@ class AwsCliParser:
                 lua_func_name = self._to_snake_case(command)
 
                 f.write(f"--- AWS {self.service_id} {command} operation\n")
-                f.write("--- @param input table|nil input parameters\n")
+                f.write("--- @param input nil|table the input table\n")
                 f.write(
-                    "--- @param callbacks table|nil {on_start = function(), on_stdout = function(line), on_stderr = function(err), on_exit = function(code)}\n"
+                    "--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}\n"
                 )
                 f.write(
-                    "--- @return {success: boolean, data: table|nil, error: string|nil }|{success: boolean, job: Job }\n"
+                    "--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}\n"
                 )
                 f.write(f"function M.{lua_func_name}(input, callbacks)\n")
 
