@@ -1,5 +1,5 @@
 local log = require("nvim-aws.utilities.log")
-local workflow_common = require("nvim-aws.workflows.common")
+local workflows_common = require("nvim-aws.workflows.common")
 local default_utility = require("nvim-aws.workflows.default.utility")
 
 local M = {}
@@ -53,7 +53,7 @@ function M.start()
 								group = augroup,
 								buffer = buf,
 								callback = function()
-									local result_buf, callbacks = workflow_common.generate_result_buffer()
+									local result_buf, callbacks = workflows_common.generate_result_buffer()
 
 									local content = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
 									local result =
