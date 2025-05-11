@@ -1,11 +1,11 @@
 local dynamodb = require("nvim-aws.autogen_wrappers.dynamodb")
 local fzf = require("fzf-lua")
-local log = require("utilities.log")
+local log = require("nvim-aws.utilities.log")
 
 local M = {}
 
 --- Displays a list of S3 buckets and allows the user to manage them
-function M.manage_tables()
+function M.start()
 	log.debug("Entering manage_tables function")
 	local result = dynamodb.list_tables({})
 	if not result.success then

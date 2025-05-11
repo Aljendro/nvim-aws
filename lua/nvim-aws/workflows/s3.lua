@@ -1,11 +1,11 @@
 local s3 = require("nvim-aws.autogen_wrappers.s3api")
 local fzf = require("fzf-lua")
-local log = require("utilities.log")
+local log = require("nvim-aws.utilities.log")
 
 local M = {}
 
 --- Displays a list of S3 buckets and allows the user to manage them
-function M.manage_buckets()
+function M.start()
 	log.debug("Entering manage_buckets function")
 	local result = s3.list_buckets({})
 	if not result.success then

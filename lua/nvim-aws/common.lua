@@ -1,5 +1,5 @@
 local config = require("nvim-aws").config
-local log = require("utilities.log")
+local log = require("nvim-aws.utilities.log")
 
 local M = {}
 

@@ -1,5 +1,5 @@
 local api = vim.api
-local log = require("utilities.log")
+local log = require("nvim-aws.utilities.log")
 local default_utility = require("nvim-aws.workflows.default.utility")
 
 local M = {}
