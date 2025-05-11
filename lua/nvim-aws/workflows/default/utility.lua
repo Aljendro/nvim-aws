@@ -66,28 +66,14 @@ end
 -- Execute the command with the user provided input
 function M.execute_command(service_name, command_name, input_json, callbacks)
 	log.info("execute_command(" .. service_name .. ", " .. command_name .. ")")
-	local success, service = pcall(require, "nvim-aws.autogen_wrappers." .. service_name)
-	if not success then
-		return { success = false, error = "Service module not found: " .. service_name }
-	end
-
+	local _, service = pcall(require, "nvim-aws.autogen_wrappers." .. service_name)
 	local command_fn = service[command_name]
-	if not command_fn then
-		return { success = false, error = "Command not found: " .. command_name }
-	end
-
-	-- Parse JSON input
 	local success_parse, input = pcall(vim.fn.json_decode, input_json)
 	if not success_parse then
 		return { success = false, error = "Invalid JSON: " .. input_json }
 	end
 
-	-- Execute the command
-	if callbacks then
-		return command_fn(input, callbacks)
-	else
-		return command_fn(input)
-	end
+	return command_fn(input, callbacks)
 end
 
 return M
