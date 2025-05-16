@@ -3,7 +3,14 @@ if vim.g.loaded_nvim_aws == 1 then
 end
 vim.g.loaded_nvim_aws = 1
 
--- Plugin commands can be defined here
-vim.api.nvim_create_user_command("AWSListServices", function()
-	require("nvim-aws.commands").list_services()
+vim.api.nvim_create_user_command("AWSLogs", function()
+	require("nvim-aws.workflows.logs").start()
+end, {})
+
+vim.api.nvim_create_user_command("AWSDynamodb", function()
+	require("nvim-aws.workflows.dynamodb").start()
+end, {})
+
+vim.api.nvim_create_user_command("AWSS3", function()
+	require("nvim-aws.workflows.s3").start()
 end, {})

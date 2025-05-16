@@ -5,6 +5,10 @@ local M = {}
 
 M.NVIM_AWS_RESULT_BUFFER_PID = "nvim_aws_result_buffer_pid"
 
+function M.append_buffer(buffer, lines)
+	vim.api.nvim_buf_set_lines(buffer, -1, -1, false, lines)
+end
+
 function M.set_interrupt_keybind(buf)
 	vim.keymap.set("n", "<C-c>", function()
 		local pid = vim.api.nvim_buf_get_var(buf, M.NVIM_AWS_RESULT_BUFFER_PID)
@@ -14,7 +18,7 @@ function M.set_interrupt_keybind(buf)
 
 			if systemCompleteResult.code == 0 then
 				log.info("stopped process with pid (" .. pid .. ")")
-				vim.api.nvim_buf_set_lines(buf, -1, -1, false, { "", "Command interrupted by user" })
+        M.append_buffer(buf, { "", "Command interrupted by user" })
 				vim.api.nvim_buf_set_var(buf, M.NVIM_AWS_RESULT_BUFFER_PID, nil)
 			else
 				log.error("unable to stop process with pid (" .. pid .. ")")
@@ -44,14 +48,7 @@ function M.generate_result_buffer()
 
 	return result_buf,
 		{
-			on_exit = function(out)
-				if out and out.code == 0 then
-					vim.schedule(function()
-						vim.api.nvim_buf_set_lines(result_buf, 0, 1, false, {})
-					end)
-				end
-			end,
-      -- TODO: handle the first parameter from stdout callback
+			-- TODO: handle the first parameter from stdout callback
 			stdout = function(_, data)
 				vim.schedule(function()
 					if data then
@@ -59,15 +56,19 @@ function M.generate_result_buffer()
 						for line in data:gmatch("[^\r\n]+") do
 							table.insert(lines, line)
 						end
-						vim.api.nvim_buf_set_lines(result_buf, -1, -1, false, lines)
+						M.append_buffer(result_buf, lines)
 					end
 				end)
 			end,
-      -- TODO: handle the first parameter from stderr callback
+			-- TODO: handle the first parameter from stderr callback
 			stderr = function(_, err)
 				vim.schedule(function()
 					if err then
-						vim.api.nvim_buf_set_lines(result_buf, -1, -1, false, { "ERROR: " .. err })
+						local lines = {}
+						for line in err:gmatch("[^\r\n]+") do
+							table.insert(lines, line)
+						end
+						M.append_buffer(result_buf, lines)
 					end
 				end)
 			end,
