@@ -10,10 +10,10 @@ function M.set_interrupt_keybind(buf)
 		local pid = vim.api.nvim_buf_get_var(buf, M.NVIM_AWS_RESULT_BUFFER_PID)
 		if pid then
 			log.info("attempting to stop process with pid (" .. pid .. ")")
-			local systemCompleteResult = vim.system("kill -9 " .. pid):wait()
+			local systemCompleteResult = vim.system({ "kill", "-9", pid }):wait()
 
 			if systemCompleteResult.code == 0 then
-				log.error("stopped process with pid (" .. pid .. ")")
+				log.info("stopped process with pid (" .. pid .. ")")
 				vim.api.nvim_buf_set_lines(buf, -1, -1, false, { "", "Command interrupted by user" })
 				vim.api.nvim_buf_set_var(buf, M.NVIM_AWS_RESULT_BUFFER_PID, nil)
 			else
@@ -51,15 +51,19 @@ function M.generate_result_buffer()
 					end)
 				end
 			end,
+      -- TODO: handle the first parameter from stdout callback
 			stdout = function(_, data)
 				vim.schedule(function()
-					local lines = {}
-					for line in data:gmatch("[^\r\n]+") do
-						table.insert(lines, line)
+					if data then
+						local lines = {}
+						for line in data:gmatch("[^\r\n]+") do
+							table.insert(lines, line)
+						end
+						vim.api.nvim_buf_set_lines(result_buf, -1, -1, false, lines)
 					end
-					vim.api.nvim_buf_set_lines(result_buf, -1, -1, false, lines)
 				end)
 			end,
+      -- TODO: handle the first parameter from stderr callback
 			stderr = function(_, err)
 				vim.schedule(function()
 					if err then
