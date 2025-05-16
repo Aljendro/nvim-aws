@@ -44,23 +44,32 @@ function M.start()
 							end
 
 							-- Create buffer with template
-							local buf = default_utility.create_template_buffer(service_name, command_name, template)
-							vim.api.nvim_win_set_buf(0, buf)
+							local input_buffer = default_utility.create_template_buffer(service_name, command_name, template)
+							vim.api.nvim_win_set_buf(0, input_buffer)
 
 							-- Set up autocmd for buffer write
 							local augroup = vim.api.nvim_create_augroup("AWSTemplateExecution", { clear = true })
 							vim.api.nvim_create_autocmd("BufWritePost", {
 								group = augroup,
-								buffer = buf,
+								buffer = input_buffer,
 								callback = function()
-									local result_buf, callbacks = workflows_common.generate_result_buffer()
+									local result_buf, result_buf_callbacks = workflows_common.generate_result_buffer()
+									local input_buffer_content = vim.api.nvim_buf_get_lines(input_buffer, 0, -1, false)
 
-									local content = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
-									local result =
-										default_utility.execute_command(service_name, command_name, content, callbacks)
+									local result = default_utility.execute_command(
+										service_name,
+										command_name,
+										input_buffer_content,
+										result_buf_callbacks
+									)
 
 									if result and result.success and result.job then
-										vim.b[result_buf].current_job = result.job
+										vim.api.nvim_buf_set_var(
+											result_buf,
+											workflows_common.NVIM_AWS_RESULT_BUFFER_PID,
+											result.job.pid
+										)
+										workflows_common.set_interrupt_keybind(result_buf)
 									end
 								end,
 							})

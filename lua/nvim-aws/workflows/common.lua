@@ -1,8 +1,34 @@
+local log = require("nvim-aws.utilities.log")
 local default_utility = require("nvim-aws.workflows.default.utility")
 
 local M = {}
 
---- Generate a buffer to output the results of runningn an aws command
+M.NVIM_AWS_RESULT_BUFFER_PID = "nvim_aws_result_buffer_pid"
+
+function M.set_interrupt_keybind(buf)
+	vim.keymap.set("n", "<C-c>", function()
+		local pid = vim.api.nvim_buf_get_var(buf, M.NVIM_AWS_RESULT_BUFFER_PID)
+		if pid then
+			log.info("attempting to stop process with pid (" .. pid .. ")")
+			local systemCompleteResult = vim.system("kill -9 " .. pid):wait()
+
+			if systemCompleteResult.code == 0 then
+				log.error("stopped process with pid (" .. pid .. ")")
+				vim.api.nvim_buf_set_lines(buf, -1, -1, false, { "", "Command interrupted by user" })
+				vim.api.nvim_buf_set_var(buf, M.NVIM_AWS_RESULT_BUFFER_PID, nil)
+			else
+				log.error("unable to stop process with pid (" .. pid .. ")")
+			end
+		end
+	end, {
+		desc = "Interrupt AWS command",
+		buffer = buf,
+		noremap = true,
+		silent = true,
+	})
+end
+
+--- Generate a buffer to output the results of running a aws command
 --- @return integer
 --- @return { on_exit: fun(out: vim.SystemObj), stdout: fun(_, data: string), stderr: fun(_, data: string) }
 function M.generate_result_buffer()
@@ -15,20 +41,6 @@ function M.generate_result_buffer()
 	-- Open in a split
 	vim.cmd("vsplit")
 	vim.api.nvim_win_set_buf(0, result_buf)
-
-	vim.keymap.set("n", "<C-c>", function()
-		local current_job = vim.b[result_buf].current_job
-		if current_job then
-			current_job:kill()
-			vim.api.nvim_buf_set_lines(result_buf, -1, -1, false, { "", "Command interrupted by user" })
-			current_job = nil
-		end
-	end, {
-		desc = "Interrupt AWS command",
-		buffer = result_buf,
-		noremap = true,
-		silent = true,
-	})
 
 	return result_buf,
 		{
