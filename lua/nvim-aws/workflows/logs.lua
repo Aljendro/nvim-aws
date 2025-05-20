@@ -131,11 +131,11 @@ function M.open_filter_form(log_group, log_stream)
 		"# Format: 30m, 2h, 1d (minutes, hours, days)",
 		"",
 		"[SPECIFIC TIME RANGE]",
-		"# Start time (ISO8601 format)",
-		"# " .. os.date("!%Y-%m-%dT%H:%M:%SZ", os.time() - 3600), -- 1 hour ago
+		"# Start time (Use format: 2025-01-01T00:00:00, parsed with local offset)",
+		"# " .. os.date("%Y-%m-%dT%H:%M:%S", os.time() - 3600), -- 1 hour ago
 		"",
-		"# End time (ISO8601 format)",
-		"# " .. os.date("!%Y-%m-%dT%H:%M:%SZ"),
+		"# End time (Use format: 2025-01-01T00:00:00, parsed with local offset)",
+		"# " .. os.date("%Y-%m-%dT%H:%M:%S"),
 	}
 
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
@@ -195,7 +195,7 @@ function M.open_filter_form(log_group, log_stream)
 			-- Handle time options
 			if relative_time ~= "" then
 				local end_time_ms = os.time() * 1000
-				local start_time_ms = workflows_common.parse_relative_time(relative_time, end_time_ms)
+				local start_time_ms = common.parse_relative_time(relative_time, end_time_ms)
 
 				if start_time_ms then
 					params.startTime = start_time_ms
@@ -207,8 +207,9 @@ function M.open_filter_form(log_group, log_stream)
 					return
 				end
 			elseif start_time ~= "" then
-				params.startTime = workflows_common.iso8601_to_timestamp(start_time)
-				params.endTime = workflows_common.iso8601_to_timestamp(end_time or os.date("!%Y-%m-%dT%H:%M:%SZ"))
+				local new_end_time = end_time or os.date("!%Y-%m-%dT%H:%M:%Sz")
+				params.startTime = common.iso8601_to_local_timestamp(start_time)
+				params.endTime = common.iso8601_to_local_timestamp(new_end_time)
 			end
 
 			local result = logs.filter_log_events(params, result_buf_callbacks)
