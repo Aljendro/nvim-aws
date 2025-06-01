@@ -27,7 +27,7 @@ end
 --- Helper function to convert ISO8601 timestamp to Unix timestamp in milliseconds
 --- @param iso_time string ISO8601 formatted timestamp
 --- @return number Unix timestamp in milliseconds
-function M.iso8601_to_timestamp(iso_time)
+function M.iso8601_to_local_timestamp(iso_time)
 	-- Parse ISO8601 format into Unix timestamp
 	local year, month, day, hour, min, sec = iso_time:match("(%d+)-(%d+)-(%d+)T(%d+):(%d+):(%d+)")
 	if not year then
@@ -35,7 +35,7 @@ function M.iso8601_to_timestamp(iso_time)
 		return 0
 	end
 
-  -- TODO: input timestamps parsing can only be done for local datetimes only
+	-- TODO: input timestamps parsing can only be done for local datetimes only
 	local time = os.time({
 		year = tonumber(year) or 0,
 		month = tonumber(month) or 1,
@@ -66,8 +66,8 @@ function M.parse_relative_time(time_ago, end_time)
 		seconds_ago = amount * 60 -- minutes to seconds
 	elseif unit == "h" then
 		seconds_ago = amount * 3600 -- hours to seconds
-  elseif unit == "d" then
-    seconds_ago = amount * 86400 -- days to seconds
+	elseif unit == "d" then
+		seconds_ago = amount * 86400 -- days to seconds
 	end
 
 	local start_time = end_time - (seconds_ago * 1000) -- milliseconds
