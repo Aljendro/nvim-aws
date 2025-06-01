@@ -33,6 +33,11 @@ function M.start()
 				local log_group = keyed_log_groups[log_group_name]
 				M.handle_select_log_stream(log_group)
 			end,
+			["ctrl-l"] = function(selected)
+				local log_group_name = selected[1]
+				local log_group = keyed_log_groups[log_group_name]
+				M.open_aws_console_link(log_group)
+			end,
 		},
 		winopts = {
 			title = "AWS CloudWatch Logs Groups",
@@ -251,4 +256,24 @@ function M.open_filter_form(log_group, log_stream)
 	})
 end
 
+--- Open the AWS console link for the log group
+--- @param log_group { logGroupName: string, logGroupArn: string }
+function M.open_aws_console_link(log_group)
+	-- Extract region from the ARN: arn:aws:logs:region:account-id:log-group:name
+	local region = log_group.logGroupArn:match("arn:aws:logs:([^:]+)")
+	local encoded_name = common.url_encode(log_group.logGroupName)
+	local url = string.format(
+		"https://%s.console.aws.amazon.com/cloudwatch/home?region=%s#logsV2:log-groups/log-group/%s",
+		region,
+		region,
+		encoded_name
+	)
+
+	vim.fn.system({ "open", url }) -- For macOS
+	log.info("Opening AWS CloudWatch console for " .. log_group.logGroupName)
+end
+
 return M
+
+-- https://us-west-1.console.aws.amazon.com/cloudwatch/home?region=us-west-1#logsV2:log-groups/log-group/$252Ftest$252Fexample-logs
+-- https://us-west-1.console.aws.amazon.com/cloudwatch/home?region=us-west-1#logsV2:log-groups/log-group/%2Ftest%2Fexample-logs

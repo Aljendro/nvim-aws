@@ -74,4 +74,16 @@ function M.parse_relative_time(time_ago, end_time)
 	return start_time
 end
 
+--- URL encode a string
+--- @param str string The string to URL encode
+--- @return string The URL encoded string
+function M.url_encode(str)
+	if str then
+		str = string.gsub(str, "([^0-9a-zA-Z-._~])", function(c)
+			return string.format("%%%02X", string.byte(c))
+		end)
+	end
+	return str
+end
+
 return M

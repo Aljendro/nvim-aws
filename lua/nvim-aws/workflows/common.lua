@@ -67,7 +67,7 @@ end
 --- Generate a buffer to output the results of running a aws command
 --- @return integer
 function M.gen_result_buffer()
-	local result_buf = vim.api.nvim_create_buf(false, true)
+	local result_buf = vim.api.nvim_create_buf(true, true)
 	local uuid = default_utility.generate_uuid()
 	vim.api.nvim_buf_set_name(result_buf, "aws-result-" .. uuid)
 	vim.api.nvim_set_option_value("filetype", "json", { buf = result_buf })
