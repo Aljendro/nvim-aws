@@ -44,7 +44,8 @@ function M.start()
 							end
 
 							-- Create buffer with template
-							local input_buffer = default_utility.create_template_buffer(service_name, command_name, template)
+							local input_buffer =
+								default_utility.create_template_buffer(service_name, command_name, template)
 							vim.api.nvim_win_set_buf(0, input_buffer)
 
 							-- Set up autocmd for buffer write
@@ -53,7 +54,8 @@ function M.start()
 								group = augroup,
 								buffer = input_buffer,
 								callback = function()
-									local result_buf, result_buf_callbacks = workflows_common.generate_result_buffer()
+									local result_buf = workflows_common.gen_result_buffer()
+									local result_buf_callbacks = workflows_common.gen_default_callbacks(result_buf)
 									local input_buffer_content = vim.api.nvim_buf_get_lines(input_buffer, 0, -1, false)
 
 									local result = default_utility.execute_command(

@@ -32,48 +32,49 @@ function M.set_interrupt_keybind(buf)
 	})
 end
 
+--- Generate default callbacks to handle
+--- @param result_buf number The nvim buffer id of the result buffer
+--- @return { on_exit: fun(out: vim.SystemObj), stdout: fun(_, data: string), stderr: fun(_, data: string) }
+function M.gen_default_callbacks(result_buf)
+	return {
+		-- TODO: (handle_system_process_error_object) handle the first parameter from stdout callback
+		stdout = function(_, data)
+			vim.schedule(function()
+				if data then
+					local lines = {}
+					for line in data:gmatch("[^\r\n]+") do
+						table.insert(lines, line)
+					end
+					M.append_buffer(result_buf, lines)
+				end
+			end)
+		end,
+		-- TODO: (handle_system_process_error_object) handle the first parameter from stderr callback
+		stderr = function(_, err)
+			vim.schedule(function()
+				if err then
+					local lines = {}
+					for line in err:gmatch("[^\r\n]+") do
+						table.insert(lines, line)
+					end
+					M.append_buffer(result_buf, lines)
+				end
+			end)
+		end,
+	}
+end
+
 --- Generate a buffer to output the results of running a aws command
 --- @return integer
---- @return { on_exit: fun(out: vim.SystemObj), stdout: fun(_, data: string), stderr: fun(_, data: string) }
-function M.generate_result_buffer()
-	-- Create result buffer
+function M.gen_result_buffer()
 	local result_buf = vim.api.nvim_create_buf(false, true)
 	local uuid = default_utility.generate_uuid()
 	vim.api.nvim_buf_set_name(result_buf, "aws-result-" .. uuid)
 	vim.api.nvim_set_option_value("filetype", "json", { buf = result_buf })
 
-	-- Open in a split
-	vim.cmd("vsplit")
 	vim.api.nvim_win_set_buf(0, result_buf)
 
-	return result_buf,
-		{
-			-- TODO: (handle_system_process_error_object) handle the first parameter from stdout callback
-			stdout = function(_, data)
-				vim.schedule(function()
-					if data then
-						local lines = {}
-						for line in data:gmatch("[^\r\n]+") do
-							table.insert(lines, line)
-						end
-						M.append_buffer(result_buf, lines)
-					end
-				end)
-			end,
-			-- TODO: (handle_system_process_error_object) handle the first parameter from stderr callback
-			stderr = function(_, err)
-				vim.schedule(function()
-					if err then
-						local lines = {}
-						for line in err:gmatch("[^\r\n]+") do
-							table.insert(lines, line)
-						end
-						M.append_buffer(result_buf, lines)
-					end
-				end)
-			end,
-		}
+	return result_buf
 end
-
 
 return M
