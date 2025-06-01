@@ -41,7 +41,7 @@ LOG_LEVELS=("INFO" "DEBUG" "WARN" "ERROR")
 SEQUENCE_TOKEN=""
 while [ $(date +%s) -lt $END_TIME ]; do
   # Generate random log message
-  TIMESTAMP=$(($(date +%s) * 1000))
+  TIMESTAMP=$(date +%s%N | cut -b1-13)
   LOG_LEVEL=${LOG_LEVELS[$RANDOM % ${#LOG_LEVELS[@]}]}
   MESSAGE="Test log message at $(date) - $LOG_LEVEL - Random data: $RANDOM"
 

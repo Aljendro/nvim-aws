@@ -24,12 +24,21 @@ function M.extract_fzf(collection, iteratee)
 	return keys, results
 end
 
---- Helper function to convert ISO8601 timestamp to Unix timestamp in milliseconds
---- @param iso_time string ISO8601 formatted timestamp
+--- Helper function to convert a Unix timestamp in milliseconds to a local timestamp string
+--- @param unix_ms_timestamp number
+--- @return string Unix local timestamp with milliseconds
+function M.unix_ms_to_local_timestamp_str(unix_ms_timestamp)
+	local seconds = math.floor(unix_ms_timestamp / 1000)
+	local milliseconds = unix_ms_timestamp % 1000
+	return os.date("%Y-%m-%dT%H:%M:%S", seconds) .. string.format(".%03d", milliseconds)
+end
+
+--- Helper function to convert a local timestamp string to Unix timestamp in milliseconds
+--- @param timestamp_str string
 --- @return number Unix timestamp in milliseconds
-function M.iso8601_to_local_timestamp(iso_time)
+function M.local_timestamp_str_to_unix_ms(timestamp_str)
 	-- Parse ISO8601 format into Unix timestamp
-	local year, month, day, hour, min, sec = iso_time:match("(%d+)-(%d+)-(%d+)T(%d+):(%d+):(%d+)")
+	local year, month, day, hour, min, sec = timestamp_str:match("(%d+)-(%d+)-(%d+)T(%d+):(%d+):(%d+)")
 	if not year then
 		log.error("Use format like 2023-01-01T00:00:00")
 		return 0

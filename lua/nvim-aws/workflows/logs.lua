@@ -1,4 +1,5 @@
 local logs = require("nvim-aws.autogen_wrappers.logs")
+local default_utility = require("nvim-aws.workflows.default.utility")
 local common = require("nvim-aws.utilities.common")
 local workflows_common = require("nvim-aws.workflows.common")
 local log = require("nvim-aws.utilities.log")
@@ -118,7 +119,7 @@ end
 function M.open_filter_form(log_group, log_stream)
 	-- Create a new buffer for the filter form
 	local buf = vim.api.nvim_create_buf(false, true)
-	vim.api.nvim_buf_set_name(buf, "aws-logs-filter-form")
+	vim.api.nvim_buf_set_name(buf, "aws-logs-filter-form-" .. default_utility.generate_uuid())
 	vim.api.nvim_set_option_value("filetype", "awslogsfilter", { buf = buf })
 	vim.api.nvim_set_option_value("buftype", "acwrite", { buf = buf })
 
@@ -212,8 +213,8 @@ function M.open_filter_form(log_group, log_stream)
 				end
 			elseif start_time ~= "" then
 				local new_end_time = end_time or os.date("!%Y-%m-%dT%H:%M:%Sz")
-				params.startTime = common.iso8601_to_local_timestamp(start_time)
-				params.endTime = common.iso8601_to_local_timestamp(new_end_time)
+				params.startTime = common.local_timestamp_str_to_unix_ms(start_time)
+				params.endTime = common.local_timestamp_str_to_unix_ms(new_end_time)
 			end
 
 			local function fetch_logs_page(next_token)
@@ -228,7 +229,7 @@ function M.open_filter_form(log_group, log_stream)
 						if result.data and result.data.events then
 							local result_lines = {}
 							for _, event in ipairs(result.data.events) do
-								table.insert(result_lines, event.message)
+								table.insert(result_lines, "(" .. common.unix_ms_to_local_timestamp_str(event.timestamp) .. ")" .. " " .. event.message)
 							end
 							workflows_common.append_buffer(result_buf, result_lines)
 						end
