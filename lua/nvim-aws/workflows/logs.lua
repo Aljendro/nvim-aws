@@ -86,7 +86,8 @@ function M.handle_start_live_tail(log_group, log_stream)
 			.. log_group.logGroupName
 			.. (log_stream and (" stream " .. log_stream.logStreamName) or "")
 	)
-	local result_buf, result_buf_callbacks = workflows_common.generate_result_buffer()
+	local result_buf = workflows_common.gen_result_buffer()
+	local result_buf_callbacks = workflows_common.gen_default_callbacks(result_buf)
 
 	local args = {
 		"--log-group-identifiers",
@@ -176,12 +177,11 @@ function M.open_filter_form(log_group, log_stream)
 				end
 			end
 
-			-- Create result buffer
-			local result_buf, result_buf_callbacks = workflows_common.generate_result_buffer()
+			local result_buf = workflows_common.gen_result_buffer()
 
-			-- Prepare filter params
 			local params = {
 				logGroupName = log_group.logGroupName,
+				limit = 1000,
 			}
 
 			if filter_pattern ~= "" then
@@ -192,7 +192,6 @@ function M.open_filter_form(log_group, log_stream)
 				params.logStreamNames = { log_stream.logStreamName }
 			end
 
-			-- Handle time options
 			if relative_time ~= "" then
 				local end_time_ms = os.time() * 1000
 				local start_time_ms = common.parse_relative_time(relative_time, end_time_ms)
@@ -212,12 +211,39 @@ function M.open_filter_form(log_group, log_stream)
 				params.endTime = common.iso8601_to_local_timestamp(new_end_time)
 			end
 
-			local result = logs.filter_log_events(params, result_buf_callbacks)
+			local function fetch_logs_page(next_token)
+				if next_token then
+					params.nextToken = next_token
+				end
 
-			if result and result.success and result.job then
-				vim.api.nvim_buf_set_var(result_buf, workflows_common.NVIM_AWS_RESULT_BUFFER_PID, result.job.pid)
-				workflows_common.set_interrupt_keybind(result_buf)
+				local result = logs.filter_log_events(params)
+
+				if result and result.success then
+					vim.schedule(function()
+						if result.data and result.data.events then
+							local result_lines = {}
+							for _, event in ipairs(result.data.events) do
+								table.insert(result_lines, event.message)
+							end
+							workflows_common.append_buffer(result_buf, result_lines)
+						end
+
+						if result.data and result.data.nextToken then
+							fetch_logs_page(result.data.nextToken)
+						end
+					end)
+				else
+					vim.schedule(function()
+						workflows_common.append_buffer(
+							result_buf,
+							{ "Error fetching logs: " .. (result.error or "Unknown error") }
+						)
+					end)
+				end
 			end
+
+			-- Start fetching logs
+			fetch_logs_page(nil)
 
 			vim.api.nvim_set_option_value("modified", false, { buf = buf })
 			vim.api.nvim_buf_delete(buf, { force = true })
