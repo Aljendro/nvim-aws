@@ -229,7 +229,14 @@ function M.open_filter_form(log_group, log_stream)
 						if result.data and result.data.events then
 							local result_lines = {}
 							for _, event in ipairs(result.data.events) do
-								table.insert(result_lines, "(" .. common.unix_ms_to_local_timestamp_str(event.timestamp) .. ")" .. " " .. event.message)
+								table.insert(
+									result_lines,
+									"("
+										.. common.unix_ms_to_local_timestamp_str(event.timestamp)
+										.. ")"
+										.. " "
+										.. event.message
+								)
 							end
 							workflows_common.append_buffer(result_buf, result_lines)
 						end
@@ -275,6 +282,3 @@ function M.open_aws_console_link(log_group)
 end
 
 return M
-
--- https://us-west-1.console.aws.amazon.com/cloudwatch/home?region=us-west-1#logsV2:log-groups/log-group/$252Ftest$252Fexample-logs
--- https://us-west-1.console.aws.amazon.com/cloudwatch/home?region=us-west-1#logsV2:log-groups/log-group/%2Ftest%2Fexample-logs
