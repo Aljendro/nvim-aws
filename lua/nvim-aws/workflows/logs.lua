@@ -113,6 +113,73 @@ function M.handle_start_live_tail(log_group, log_stream)
 	end
 end
 
+-- 4. remove the usage of extract_ts_ms, because we are now saving the timestamps within the buffer ai
+--- Extracts a timestamp from the beginning of a log line and converts it to Unix time in milliseconds.
+--- The function looks for a timestamp pattern enclosed in parentheses at the start of the line.
+--- @param line string The log line from which to extract the timestamp
+--- @return number|nil Unix timestamp in milliseconds if found, nil otherwise
+local function extract_ts_ms(line)
+	local ts = line:match("^%(([%d%-%.:T]+)%)")
+	return ts and common.local_timestamp_str_to_unix_ms(ts) or nil
+end
+
+local function fetch_more(result_buf, params, opts) -- opts = {before=true}|{after=true}
+  -- 2. instead of parsing the line in the file, use the buffer local timestamp fields set within the buffer ai
+	local first = vim.api.nvim_buf_get_lines(result_buf, 0, 1, false)[1] or ""
+	local last = vim.api.nvim_buf_get_lines(result_buf, vim.api.nvim_buf_line_count(result_buf) - 1, -1, false)[1] or ""
+	local ts_ms
+	if opts.before then
+		ts_ms = extract_ts_ms(first)
+	end
+	if opts.after then
+		ts_ms = extract_ts_ms(last)
+	end
+	if not ts_ms then
+		log.error("Couldn’t detect timestamp on current log lines")
+		return
+	end
+
+	local req = vim.tbl_extend("force", {}, params)
+	req.nextToken = nil -- new paging context
+	req.startTime = nil
+	req.endTime = nil
+	if opts.before then -- grab older logs
+		req.endTime = ts_ms - 1
+	else -- grab newer logs
+		req.startTime = ts_ms + 1
+	end
+
+	local function page(token)
+		if token then
+			req.nextToken = token
+		end
+		local res = logs.filter_log_events(req)
+		if not (res and res.success) then
+			workflows_common.append_buffer(
+				result_buf,
+				{ "Error fetching additional logs: " .. (res and res.error or "unknown") }
+			)
+			return
+		end
+		local lines = {}
+		for _, ev in ipairs(res.data.events or {}) do
+			table.insert(lines, "(" .. common.unix_ms_to_local_timestamp_str(ev.timestamp) .. ") " .. ev.message)
+		end
+    -- 3. save the new values of the starting and ending times in the buffer local variables ai
+		if opts.before then
+			vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, lines) -- prepend
+		else
+			workflows_common.append_buffer(result_buf, lines) -- append
+		end
+    -- 5. have a set amount of loops to go through before stopping, so that we dont continually
+    -- query for logs. Have the user press their keybind to get more logs in the buffer ai!
+		if res.data.nextToken then
+			page(res.data.nextToken)
+		end
+	end
+	page(nil)
+end
+
 --- Open a form buffer for filtering logs
 --- @param log_group { logGroupName: string, logGroupArn: string }
 --- @param log_stream? { logStreamName: string } Optional log stream to filter by
@@ -183,69 +250,20 @@ function M.open_filter_form(log_group, log_stream)
 				end
 			end
 
+      -- 1. within the result_buf, I want to save the starting and ending timestamps in buffer local variables ai
 			local result_buf = workflows_common.gen_result_buffer()
--- helper ────────────────────────────────────────────────────────────────────
-local function extract_ts_ms(line)
-  local ts = line:match("^%(([%d%-%.:T]+)%)")
-  return ts and common.local_timestamp_str_to_unix_ms(ts) or nil
-end
-
-local function fetch_more(opts)         -- opts = {before=true}|{after=true}
-  local first = vim.api.nvim_buf_get_lines(result_buf, 0, 1, false)[1] or ""
-  local last  = vim.api.nvim_buf_get_lines(result_buf,
-                                           vim.api.nvim_buf_line_count(result_buf)-1,
-                                           -1, false)[1] or ""
-  local ts_ms
-  if opts.before then ts_ms = extract_ts_ms(first) end
-  if opts.after  then ts_ms = extract_ts_ms(last)  end
-  if not ts_ms then
-    log.error("Couldn’t detect timestamp on current log lines")
-    return
-  end
-
-  local req = vim.tbl_extend("force", {}, params)
-  req.nextToken = nil                     -- new paging context
-  req.startTime = nil
-  req.endTime   = nil
-  if opts.before then                     -- grab older logs
-    req.endTime   = ts_ms - 1
-  else                                    -- grab newer logs
-    req.startTime = ts_ms + 1
-  end
-
-  local function page(token)
-    if token then req.nextToken = token end
-    local res = logs.filter_log_events(req)
-    if not (res and res.success) then
-      workflows_common.append_buffer(result_buf,
-        { "Error fetching additional logs: " .. (res and res.error or "unknown") })
-      return
-    end
-    local lines = {}
-    for _, ev in ipairs(res.data.events or {}) do
-      table.insert(lines,
-        "(" .. common.unix_ms_to_local_timestamp_str(ev.timestamp) .. ") " .. ev.message)
-    end
-    if opts.before then
-      vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, lines)      -- prepend
-    else
-      workflows_common.append_buffer(result_buf, lines)               -- append
-    end
-    if res.data.nextToken then page(res.data.nextToken) end
-  end
-  page(nil)
-end
-
--- buffer-local keymaps ──────────────────────────────────────────────────────
-vim.keymap.set("n", "[b", function() fetch_more({ before = true }) end,
-  { buffer = result_buf, desc = "Fetch logs before current first line" })
-vim.keymap.set("n", "]b", function() fetch_more({ after = true }) end,
-  { buffer = result_buf, desc = "Fetch logs after current last line" })
 
 			local params = {
 				logGroupName = log_group.logGroupName,
 				limit = 1000,
 			}
+
+			vim.keymap.set("n", "[b", function()
+				fetch_more(result_buf, params, { before = true })
+			end, { buffer = result_buf, desc = "Fetch logs before current first line" })
+			vim.keymap.set("n", "]b", function()
+				fetch_more({ after = true })
+			end, { buffer = result_buf, desc = "Fetch logs after current last line" })
 
 			if filter_pattern ~= "" then
 				params.filterPattern = filter_pattern
