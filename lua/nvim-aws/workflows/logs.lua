@@ -183,6 +183,9 @@ function M.open_filter_form(log_group, log_stream)
 				end
 			end
 
+      -- I need to to add keybindings to this result_buf to do two things ai!
+      -- - one keybinding to search for logs before the first log line (the timestamp is set on each line as "(2025-05-01T00:00:00.000)", they are local to the user)
+      -- - one keybinding to search for logs after the last log line (the timestamp is set on each line as "(2025-05-01T00:00:00.000)", they are local to the user)
 			local result_buf = workflows_common.gen_result_buffer()
 
 			local params = {
