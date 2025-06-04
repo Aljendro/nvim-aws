@@ -183,9 +183,6 @@ function M.open_filter_form(log_group, log_stream)
 				end
 			end
 
-			-- this is the result_buffer ai!
-			-- I need this result buffer to contain keybindings that will search before the first line in the buffer
-			-- I need this result buffer to contain keybindings that will search after the last line in the buffer
 			local result_buf = workflows_common.gen_result_buffer()
 
 			local params = {
