@@ -12,14 +12,16 @@
 
 ## Installation
 
-# use lazy instead of packer ai!
-Using packer-.nvim:
+Using lazy.nvim:
 
 ```lua
-use({
-  'your-name/nvim-aws',
-  requires = { 'nvim-lua/plenary.nvim' },
-})
+{
+  "your-name/nvim-aws",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  config = function()
+    require("nvim-aws").setup()
+  end,
+}
 ```
 
 ## Configuration
