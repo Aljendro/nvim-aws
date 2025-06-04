@@ -1,0 +1,241 @@
+#!/usr/bin/env python3
+"""
+AWS CLI Service Command Parser
+Extracts AWS API commands from CLI help output and generates Lua wrapper functions
+"""
+
+import os
+import re
+import argparse
+import subprocess
+import shlex
+from enum import Enum
+from typing import List
+
+from mappings.commands_with_generate_cli_skeleton import (
+    generate_cli_service_command_mapping,
+)
+from mappings.commands_with_streaming import live_streaming_service_command_mapping
+
+
+class OutputType(Enum):
+    HAS_GENERATE_CLI_SKELETON = 1
+    MISSING_HAS_GENERATE_CLI_SKELETON = 2
+    STREAMING = 3
+
+
+class AwsCliParser:
+    def __init__(
+        self,
+        service_id: str,
+        output_dir: str,
+        output_dir_tests: str,
+    ):
+        self.service_id = service_id
+        self.output_dir = output_dir
+        self.output_dir_tests = output_dir_tests
+
+    def parse(self):
+        """Parse the AWS CLI help output and generate Lua wrapper"""
+        commands = self._extract_commands()
+
+        # Check CLI skeleton support for each command
+        partitioned_commands = self._check_cli_skeleton_support(commands)
+
+        # Generate Lua files
+        self._generate_lua_file(partitioned_commands)
+
+    def _extract_commands(self) -> List[str]:
+        """Extract command names from CLI help output"""
+        commands = []
+        help_output = self._get_service_help(self.service_id)
+        if not help_output:
+            return commands
+
+        # Parse the output to extract service IDs
+        in_commands_section = False
+        for line in help_output.split("\n"):
+            if "AVAILABLE COMMANDS" in line:
+                in_commands_section = True
+                continue
+            if in_commands_section:
+                if line.strip().startswith("o"):
+                    command_id = line.strip().replace("o ", "").strip()
+                    commands.append(command_id)
+
+                # Check if we've reached the end of the services section
+                if "SEE ALSO" in line:
+                    break
+
+        return commands
+
+    def _check_cli_skeleton_support(
+        self, commands: List[str]
+    ) -> List[tuple[str, OutputType]]:
+        """Check if each command supports the --generate-cli-skeleton option"""
+        partitioned_commands = []
+
+        for command in commands:
+            if command == "help":
+                continue
+
+            cmd = f"aws {self.service_id} {command} --generate-cli-skeleton"
+
+            # If the command is already known to be supported, add it directly
+            if command in generate_cli_service_command_mapping.get(self.service_id, []):
+                partitioned_commands.append(
+                    [command, OutputType.HAS_GENERATE_CLI_SKELETON]
+                )
+                continue
+
+            if command in live_streaming_service_command_mapping.get(
+                self.service_id, []
+            ):
+                partitioned_commands.append([command, OutputType.STREAMING])
+                continue
+
+            try:
+                result = subprocess.run(
+                    shlex.split(cmd),
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    env={"PATH": os.environ["PATH"]},
+                    text=True,
+                    check=False,
+                )
+
+                if result.returncode == 0:
+                    partitioned_commands.append(
+                        [command, OutputType.HAS_GENERATE_CLI_SKELETON]
+                    )
+                else:
+                    partitioned_commands.append(
+                        [command, OutputType.MISSING_HAS_GENERATE_CLI_SKELETON]
+                    )
+            except Exception as e:
+                print(f"Error checking {cmd}: {str(e)}")
+
+        return partitioned_commands
+
+    def _get_service_help(self, service_id):
+        """Get help output for a specific AWS CLI service"""
+        try:
+            result = subprocess.run(
+                ["aws", service_id, "help"],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                env={"PATH": os.environ["PATH"]},
+                text=True,
+                check=True,
+            )
+
+            clean_output = re.sub(".\x08", "", result.stdout)
+
+            return clean_output
+        except subprocess.CalledProcessError as e:
+            print(f"Error getting help for {service_id}: {e}")
+            return None
+
+    def _generate_lua_file(self, partitioned_commands: List[tuple[str, OutputType]]):
+        """Generate the Lua wrapper file"""
+        # Create the output directories if they don't exist
+        os.makedirs(self.output_dir, exist_ok=True)
+        os.makedirs(self.output_dir_tests, exist_ok=True)
+
+        output_path = os.path.join(self.output_dir, f"{self.service_id}.lua")
+
+        with open(output_path, "w") as f:
+            f.write("-- AUTOGENERATED FILE - DO NOT EDIT\n")
+            f.write(f"-- AWS Service: {self.service_id}\n\n")
+
+            f.write('local common = require("nvim-aws.common")\n\n')
+
+            f.write(f"--- AWS {self.service_id} service functions\n")
+            f.write("local M = {}\n\n")
+
+            for [command, command_type] in sorted(partitioned_commands):
+                lua_func_name = self._to_snake_case(command)
+
+                f.write(f"--- AWS {self.service_id} {command} operation\n")
+                f.write("--- @param input nil|table the input table\n")
+                f.write(
+                    "--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}\n"
+                )
+                f.write(
+                    "--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}\n"
+                )
+                f.write(f"function M.{lua_func_name}(input, callbacks)\n")
+
+                if (
+                    command_type == OutputType.MISSING_HAS_GENERATE_CLI_SKELETON
+                    or command_type == OutputType.STREAMING
+                ):
+                    f.write(
+                        f'\treturn common.execute_aws_command({{ "{self.service_id}", "{command}" }}, input, callbacks)\n'
+                    )
+                elif command_type == OutputType.HAS_GENERATE_CLI_SKELETON:
+                    f.write(
+                        f'\treturn common.execute_aws_command_skeleton({{ "{self.service_id}", "{command}" }}, input, callbacks)\n'
+                    )
+
+                f.write("end\n\n")
+
+            f.write("return M\n")
+
+        # Generate test file
+        output_path_tests = os.path.join(
+            self.output_dir_tests, f"{self.service_id}_spec.lua"
+        )
+
+        with open(output_path_tests, "w") as f:
+            # Write autogenerated header
+            f.write("-- AUTOGENERATED FILE - DO NOT EDIT\n")
+            f.write(f"-- AWS Service: {self.service_id}\n\n")
+
+            f.write('require("nvim-aws").setup()\n')
+            f.write(
+                f'local service = require("nvim-aws.autogen_wrappers.{self.service_id}")\n\n'
+            )
+
+            f.write(f'describe("AWS {self.service_id} service testing", function()\n')
+            for [command, _] in sorted(partitioned_commands):
+                lua_func_name = self._to_snake_case(command)
+                f.write(
+                    f'\tit("should generate a cli skeleton with {lua_func_name}", function()\n'
+                )
+                f.write(f"\t\tlocal result = service.{lua_func_name}()\n")
+                f.write("\t\tassert.is_true(result.success)\n")
+                f.write("\tend)\n")
+
+            f.write("end)")
+
+        print(f"Generated Lua wrapper: {output_path}")
+        print(f"Generated Lua tests: {output_path_tests}")
+
+    def _to_snake_case(self, kebab_case: str) -> str:
+        """Convert kebab-case to snake_case"""
+        return kebab_case.replace("-", "_")
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Extract AWS service commands from CLI help output and generate Lua wrappers"
+    )
+    parser.add_argument(
+        "--service-id", required=True, help="AWS service ID (e.g., s3api, ec2)"
+    )
+    parser.add_argument(
+        "--output-dir", required=True, help="Output directory for Lua wrappers"
+    )
+    parser.add_argument(
+        "--output-dir-tests", required=True, help="Output directory for Lua test files"
+    )
+
+    args = parser.parse_args()
+
+    cli_parser = AwsCliParser(args.service_id, args.output_dir, args.output_dir_tests)
+    cli_parser.parse()
+
+
+if __name__ == "__main__":
+    main()
