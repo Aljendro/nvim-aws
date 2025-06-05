@@ -11,6 +11,9 @@ local BUF_VAR_END_TS = "aws_log_end_ts"
 
 local parse_form_and_query_logs, parse_form, fetch_logs_page, query_logs
 
+-- add the stream link utility function here ai!
+
+-- use this as an example
 --- Open the AWS console link for the log group
 --- @param log_group { logGroupName: string, logGroupArn: string }
 function M.open_aws_console_link(log_group)
