@@ -77,7 +77,11 @@ function M.handle_select_log_stream(log_group)
 				local stream = keyed_streams[stream_name]
 				logs_utility.open_filter_form(log_group, stream)
 			end,
-      -- TODO: (workflow_logs) add a link to the stream ai
+			["ctrl-l"] = function(selected)
+				local stream_name = selected[1]
+				local stream      = keyed_streams[stream_name]
+				logs_utility.open_aws_console_stream_link(log_group, stream)
+			end,
 		},
 		winopts = {
 			title = "AWS CloudWatch Log Streams",

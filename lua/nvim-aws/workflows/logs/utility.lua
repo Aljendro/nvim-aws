@@ -11,7 +11,29 @@ local BUF_VAR_END_TS = "aws_log_end_ts"
 
 local parse_form_and_query_logs, parse_form, fetch_logs_page, query_logs
 
--- add the stream link utility function here ai!
+--- Open the AWS console link for a specific log stream
+--- @param log_group  { logGroupName: string, logGroupArn: string }
+--- @param log_stream { logStreamName: string }
+function M.open_aws_console_stream_link(log_group, log_stream)
+  local region         = log_group.logGroupArn:match("arn:aws:logs:([^:]+)")
+  local encoded_group  = common.url_encode(log_group.logGroupName)
+  local encoded_stream = common.url_encode(log_stream.logStreamName)
+  local url = string.format(
+    "https://%s.console.aws.amazon.com/cloudwatch/home?region=%s#logsV2:log-groups/log-group/%s/log-events/%s",
+    region,
+    region,
+    encoded_group,
+    encoded_stream
+  )
+
+  log.info(
+    "Opening AWS CloudWatch console for "
+      .. log_group.logGroupName
+      .. "/"
+      .. log_stream.logStreamName
+  )
+  vim.fn.system({ "open", url }) -- macOS; adjust for other OS if you add support later
+end
 
 -- use this as an example
 --- Open the AWS console link for the log group
