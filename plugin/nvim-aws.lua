@@ -4,7 +4,7 @@ end
 vim.g.loaded_nvim_aws = 1
 
 vim.api.nvim_create_user_command("AWSLogs", function()
-	require("nvim-aws.workflows.logs").start()
+	require("nvim-aws.workflows.logs.main").start()
 end, {})
 
 vim.api.nvim_create_user_command("AWSDynamodb", function()

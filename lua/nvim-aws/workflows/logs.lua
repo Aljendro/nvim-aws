@@ -1,3 +1,4 @@
+-- TODO: (workflow_logs) remove this file
 local logs = require("nvim-aws.autogen_wrappers.logs")
 local default_utility = require("nvim-aws.workflows.default.utility")
 local common = require("nvim-aws.utilities.common")

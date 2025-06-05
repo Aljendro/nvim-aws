@@ -44,7 +44,7 @@ function M.local_timestamp_str_to_unix_ms(timestamp_str)
 		return 0
 	end
 
-	-- TODO: input timestamps parsing can only be done for local datetimes only
+	-- TODO: (workflow_logs) input timestamps parsing can only be done for local datetimes only
 	local time = os.time({
 		year = tonumber(year) or 0,
 		month = tonumber(month) or 1,
@@ -65,7 +65,8 @@ function M.parse_relative_time(time_ago, end_time)
 	local amount, unit = time_ago:match("^(%d+)([mhd])$")
 
 	if not amount or not unit then
-		return nil
+    amount = "1"
+    unit = "h"
 	end
 
 	amount = tonumber(amount)
