@@ -121,8 +121,8 @@ parse_form_and_query_logs = function(log_group, log_stream)
 				max_ts = max_ts and math.max(max_ts, log_event.timestamp) or log_event.timestamp
 			end
 			if min_ts then
-				table.insert(lines, 1,  string.format("(<<< TIMESTAMP: %d)", min_ts))
-				table.insert(lines,     string.format("(>>> TIMESTAMP: %d)", max_ts))
+				table.insert(lines, 1, string.format("(<<< TIMESTAMP: %d)", min_ts))
+				table.insert(lines, string.format("(>>> TIMESTAMP: %d)", max_ts))
 			end
 			workflows_common.append_buffer(result_buf, lines)
 		end
@@ -137,58 +137,62 @@ parse_form_and_query_logs = function(log_group, log_stream)
 end
 
 query_logs = function(result_buf, params, opts)
-	opts         = opts or {}
+	opts = opts or {}
 	local max_lp = opts.max_loops or 1
 
 	-- 4.1 read cursor line & decide direction
-	local cur    = vim.api.nvim_win_get_cursor(0)
-	local row    = cur[1] - 1
-	local line   = vim.api.nvim_buf_get_lines(result_buf, row, row + 1, false)[1] or ""
+	local cur = vim.api.nvim_win_get_cursor(0)
+	local row = cur[1] - 1
+	local line = vim.api.nvim_buf_get_lines(result_buf, row, row + 1, false)[1] or ""
 	local arrow, ts_str = line:match("^%(%s*([<>]{3})%s+TIMESTAMP:%s+(%d+)")
-	if not arrow then return end
-	local prepend   = arrow == "<<<"
-	local ts_ms     = tonumber(ts_str)
+	if not arrow then
+		return
+	end
+	local prepend = arrow == "<<<"
+	local ts_ms = tonumber(ts_str)
 
 	-- delete the marker line
 	vim.api.nvim_buf_set_lines(result_buf, row, row + 1, false, {})
 
 	-- 4.2 build request window
-	local rq        = vim.tbl_extend("force", {}, params)
-	rq.nextToken    = nil
+	local rq = vim.tbl_extend("force", {}, params)
+	rq.nextToken = nil
 	if prepend then
 		rq.startTime = ts_ms - FETCH_LENGTH_TIME_IN_MS
-		rq.endTime   = ts_ms - 1
+		rq.endTime = ts_ms - 1
 	else
 		rq.startTime = ts_ms + 1
-		rq.endTime   = ts_ms + FETCH_LENGTH_TIME_IN_MS
+		rq.endTime = ts_ms + FETCH_LENGTH_TIME_IN_MS
 	end
 
 	-- 4.3 loop through pages
 	local loops, oldest, newest = 0, nil, nil
 	local function page(token)
-		if loops >= max_lp then return end
+		if loops >= max_lp then
+			return
+		end
 		loops = loops + 1
-		if token then rq.nextToken = token end
+		if token then
+			rq.nextToken = token
+		end
 
 		local res = logs.filter_log_events(rq)
 		if not (res and res.success) then
-			workflows_common.append_buffer(result_buf,
-				{ "Error fetching logs: " .. (res and res.error or "unknown") })
+			workflows_common.append_buffer(result_buf, { "Error fetching logs: " .. (res and res.error or "unknown") })
 			return
 		end
 
 		local batch = {}
 		for _, ev in ipairs(res.data.events or {}) do
-			table.insert(batch,
-				"(" .. common.unix_ms_to_local_timestamp_str(ev.timestamp) .. ") " .. ev.message)
+			table.insert(batch, "(" .. common.unix_ms_to_local_timestamp_str(ev.timestamp) .. ") " .. ev.message)
 			oldest = oldest and math.min(oldest, ev.timestamp) or ev.timestamp
 			newest = newest and math.max(newest, ev.timestamp) or ev.timestamp
 		end
 
 		if prepend then
-			vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, batch)  -- prepend
+			vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, batch) -- prepend
 		else
-			workflows_common.append_buffer(result_buf, batch)           -- append
+			workflows_common.append_buffer(result_buf, batch) -- append
 		end
 
 		if res.data.nextToken and loops < max_lp then
@@ -196,8 +200,7 @@ query_logs = function(result_buf, params, opts)
 		elseif res.data.nextToken then
 			-- ran out of loops, leave a new marker line
 			local marker_ts = prepend and oldest or newest
-			local marker    = string.format("(%s TIMESTAMP: %d)",
-				prepend and "<<<" or ">>>", marker_ts)
+			local marker = string.format("(%s TIMESTAMP: %d)", prepend and "<<<" or ">>>", marker_ts)
 			if prepend then
 				vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, { marker })
 			else
