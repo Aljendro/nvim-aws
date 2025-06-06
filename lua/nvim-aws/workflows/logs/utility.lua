@@ -6,33 +6,30 @@ local log = require("nvim-aws.utilities.log")
 
 local M = {}
 
+-- 2. discard the usage of BUF_VAR_END_TS and BUF_VAR_START_TS
 local BUF_VAR_START_TS = "aws_log_start_ts"
 local BUF_VAR_END_TS = "aws_log_end_ts"
+local FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 
-local parse_form_and_query_logs, parse_form, fetch_logs_page, query_logs
+local parse_form_and_query_logs, parse_form, query_logs
 
 --- Open the AWS console link for a specific log stream
 --- @param log_group  { logGroupName: string, logGroupArn: string }
 --- @param log_stream { logStreamName: string }
 function M.open_aws_console_stream_link(log_group, log_stream)
-  local region         = log_group.logGroupArn:match("arn:aws:logs:([^:]+)")
-  local encoded_group  = common.url_encode(log_group.logGroupName)
-  local encoded_stream = common.url_encode(log_stream.logStreamName)
-  local url = string.format(
-    "https://%s.console.aws.amazon.com/cloudwatch/home?region=%s#logsV2:log-groups/log-group/%s/log-events/%s",
-    region,
-    region,
-    encoded_group,
-    encoded_stream
-  )
+	local region = log_group.logGroupArn:match("arn:aws:logs:([^:]+)")
+	local encoded_group = common.url_encode(log_group.logGroupName)
+	local encoded_stream = common.url_encode(log_stream.logStreamName)
+	local url = string.format(
+		"https://%s.console.aws.amazon.com/cloudwatch/home?region=%s#logsV2:log-groups/log-group/%s/log-events/%s",
+		region,
+		region,
+		encoded_group,
+		encoded_stream
+	)
 
-  log.info(
-    "Opening AWS CloudWatch console for "
-      .. log_group.logGroupName
-      .. "/"
-      .. log_stream.logStreamName
-  )
-  vim.fn.system({ "open", url }) -- macOS; adjust for other OS if you add support later
+	log.info("Opening AWS CloudWatch console for " .. log_group.logGroupName .. "/" .. log_stream.logStreamName)
+	vim.fn.system({ "open", url }) -- macOS; adjust for other OS if you add support later
 end
 
 -- use this as an example
@@ -112,32 +109,39 @@ parse_form_and_query_logs = function(log_group, log_stream)
 			params.logStreamNames = { log_stream.logStreamName }
 		end
 
-		-- Initial log fetch
+		-- 3. Create a utility function that starts calling the filter_logs_events in a recursive loop and prepends (<<< TIMESTAMP: <unix timestamp in ms taken from the first log>) and appends (>>> TIMESTAMP: <unix timestamp in ms taken from the last log>)
 		local res = logs.filter_log_events(params)
 		if not (res and res.success) then
-		  workflows_common.append_buffer(
-		    result_buf,
-		    { "Error fetching logs: " .. (res and res.error or "unknown") }
-		  )
+			workflows_common.append_buffer(result_buf, { "Error fetching logs: " .. (res and res.error or "unknown") })
 		else
-		  local min_ts, max_ts
-		  local lines = {}
-		  for _, ev in ipairs(res.data.events or {}) do
-		    table.insert(lines, "(" .. common.unix_ms_to_local_timestamp_str(ev.timestamp) .. ") " .. ev.message)
-		    min_ts = min_ts and math.min(min_ts, ev.timestamp) or ev.timestamp
-		    max_ts = max_ts and math.max(max_ts, ev.timestamp) or ev.timestamp
-		  end
-		  workflows_common.append_buffer(result_buf, lines)
-		  if min_ts then vim.api.nvim_buf_set_var(result_buf, BUF_VAR_START_TS, min_ts) end
-		  if max_ts then vim.api.nvim_buf_set_var(result_buf, BUF_VAR_END_TS, max_ts) end
+			local min_ts, max_ts
+			local lines = {}
+			for _, log_event in ipairs(res.data.events or {}) do
+				table.insert(
+					lines,
+					"(" .. common.unix_ms_to_local_timestamp_str(log_event.timestamp) .. ") " .. log_event.message
+				)
+				min_ts = min_ts and math.min(min_ts, log_event.timestamp) or log_event.timestamp
+				max_ts = max_ts and math.max(max_ts, log_event.timestamp) or log_event.timestamp
+			end
+			workflows_common.append_buffer(result_buf, lines)
+			if min_ts then
+				vim.api.nvim_buf_set_var(result_buf, BUF_VAR_START_TS, min_ts)
+			end
+			if max_ts then
+				vim.api.nvim_buf_set_var(result_buf, BUF_VAR_END_TS, max_ts)
+			end
 		end
 
+    -- 4. replace the keybindings with one keybinding that will call the new utility function to read the current cursor line and query more logs ai!
+    -- it will either read (<<< TIMESTAMP: <unix timestamp>)
+    -- or it will read (>>> TIMESTAMP: <unix timestamp>)
 		vim.keymap.set("n", "[b", function()
-			query_logs(result_buf, params, { before = true,  max_loops = 1 })
+			query_logs(result_buf, params, { prepend = true, max_loops = 1 })
 		end, { buffer = result_buf, desc = "Fetch logs before current first line" })
 
 		vim.keymap.set("n", "]b", function()
-			query_logs(result_buf, params, { after  = true,  max_loops = 1 })
+			query_logs(result_buf, params, { max_loops = 1 })
 		end, { buffer = result_buf, desc = "Fetch logs after current last line" })
 
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
@@ -145,37 +149,40 @@ parse_form_and_query_logs = function(log_group, log_stream)
 	end
 end
 
+-- 1. refactor this function, so that we now read the buffer where the cursor is located ai
+-- the function should read the contents and delete the line, replacing it with more logs
+-- There will be two types of lines that this function needs to read at the cursor:
+-- - (>>> TIMESTAMP: <unix timestamp in ms>)
+-- - (<<< TIMESTAMP: <unix timestamp in ms>)
+-- the >>> arrows signify that we want to query after the given timestamp and append the logs, if there are more logs to append because we have a nextToken and we have run out of max_loops, the code will add an additional (>>> TIMESTAMP: <unix timestamp in ms>)
+-- the <<< arrows signify that we want to query before the given timestamp and prepend the logs, if there are more logs to append because we have a nextToken and we have run out of max_loops, the code will add an additional (>>> TIMESTAMP: <unix timestamp in ms>)
 query_logs = function(result_buf, params, opts)
 	opts = opts or {}
-	local var_name = opts.before and BUF_VAR_START_TS or BUF_VAR_END_TS
-	local ok, ts_ms = pcall(vim.api.nvim_buf_get_var, result_buf, var_name)
-	if not ok then
-	  -- fall back to the time range that was supplied with the original params
-	  ts_ms = opts.before and params.endTime or params.startTime
-	  vim.api.nvim_buf_set_var(result_buf, var_name, ts_ms or 0)
-	end
 
-	local req = vim.tbl_extend("force", {}, params)
-	req.nextToken = nil
-	req.startTime = nil
-	req.endTime = nil
-	if opts.before then
-		req.endTime = ts_ms - 1
+	local new_params = vim.tbl_extend("force", {}, params)
+	new_params.nextToken = nil
+	new_params.startTime = nil
+	new_params.endTime = nil
+	if opts.prepend then
+		local ts_ms = vim.api.nvim_buf_get_var(result_buf, BUF_VAR_START_TS)
+		new_params.startTime = ts_ms - FETCH_LENGTH_TIME_IN_MS
+		new_params.endTime = ts_ms - 1
 	else -- grab newer logs
-		req.startTime = ts_ms + 1
+		local ts_ms = vim.api.nvim_buf_get_var(result_buf, BUF_VAR_END_TS)
+		new_params.startTime = ts_ms + 1
+		new_params.endTime = ts_ms + FETCH_LENGTH_TIME_IN_MS
 	end
 
-	local loops      = 0
-	local MAX_LOOPS  = opts.max_loops or 5
+	local loops = 0
 	local function page(token)
-		if loops >= MAX_LOOPS then
+		if loops >= opts.max_loops then
 			return
 		end
 		loops = loops + 1
 		if token then
-			req.nextToken = token
+			new_params.nextToken = token
 		end
-		local res = logs.filter_log_events(req)
+		local res = logs.filter_log_events(new_params)
 		if not (res and res.success) then
 			workflows_common.append_buffer(
 				result_buf,
@@ -190,7 +197,7 @@ query_logs = function(result_buf, params, opts)
 
 		-- Only update the relevant timestamp variable based on direction
 		if res.data.events and #res.data.events > 0 then
-			if opts.before then
+			if opts.prepend then
 				-- Find minimum timestamp and update start_ts
 				local min_ts
 				for _, ev in ipairs(res.data.events) do
@@ -215,18 +222,17 @@ query_logs = function(result_buf, params, opts)
 			end
 		end
 
-		if opts.before then
+		if opts.prepend then
 			vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, lines) -- prepend
 		else
 			workflows_common.append_buffer(result_buf, lines) -- append
 		end
-		if res.data.nextToken and loops < MAX_LOOPS then
+		if res.data.nextToken and loops < opts.max_loops then
 			page(res.data.nextToken)
 		end
 	end
 	page(nil)
 end
-
 
 parse_form = function(form_buffer)
 	-- Parse the form
