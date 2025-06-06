@@ -4,11 +4,13 @@ local workflows_common = require("nvim-aws.workflows.common")
 local logs = require("nvim-aws.autogen_wrappers.logs")
 local log = require("nvim-aws.utilities.log")
 
+local parse_form_and_query_logs, parse_form, extend_fetch, fetch_all_log_events
+
 local M = {}
 
-local FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
-
-local parse_form_and_query_logs, parse_form, extend_fetch, fetch_all_log_events
+---------------------------------------------------------------------------------------------------
+------------------------------------ EXPORT FUNCTIONS ---------------------------------------------
+---------------------------------------------------------------------------------------------------
 
 --- Open the AWS console link for a specific log stream
 --- @param log_group  { logGroupName: string, logGroupArn: string }
@@ -119,6 +121,12 @@ parse_form_and_query_logs = function(log_group, log_stream)
 		vim.api.nvim_buf_delete(ev.buf, { force = true })
 	end
 end
+
+---------------------------------------------------------------------------------------------------
+------------------------------------- LOCAL FUNCTIONS ---------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+local FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 
 extend_fetch = function(result_buf, params, opts)
 	opts = opts or {}
@@ -322,7 +330,14 @@ fetch_all_log_events = function(result_buf, params)
 		local prepend_end_time = min_ts - 1
 		local append_start_time = max_ts + 1
 		local append_end_time = max_ts + FETCH_LENGTH_TIME_IN_MS
-		table.insert(lines, 1, string.format("(>>> startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
+		table.insert(lines, 1, string.format("(<<< startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
+		table.insert(lines, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
+	else
+		local prepend_start_time = params.startTime - FETCH_LENGTH_TIME_IN_MS
+		local prepend_end_time = params.startTime - 1
+		local append_start_time = params.endTime + 1
+		local append_end_time = params.endTime + FETCH_LENGTH_TIME_IN_MS
+		table.insert(lines, 1, string.format("(<<< startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
 		table.insert(lines, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
 	end
 
