@@ -6,9 +6,6 @@ local log = require("nvim-aws.utilities.log")
 
 local M = {}
 
--- 2. discard the usage of BUF_VAR_END_TS and BUF_VAR_START_TS
-local BUF_VAR_START_TS = "aws_log_start_ts"
-local BUF_VAR_END_TS = "aws_log_end_ts"
 local FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 
 local parse_form_and_query_logs, parse_form, query_logs
@@ -109,7 +106,6 @@ parse_form_and_query_logs = function(log_group, log_stream)
 			params.logStreamNames = { log_stream.logStreamName }
 		end
 
-		-- 3. Create a utility function that starts calling the filter_logs_events in a recursive loop and prepends (<<< TIMESTAMP: <unix timestamp in ms taken from the first log>) and appends (>>> TIMESTAMP: <unix timestamp in ms taken from the last log>)
 		local res = logs.filter_log_events(params)
 		if not (res and res.success) then
 			workflows_common.append_buffer(result_buf, { "Error fetching logs: " .. (res and res.error or "unknown") })
@@ -124,114 +120,92 @@ parse_form_and_query_logs = function(log_group, log_stream)
 				min_ts = min_ts and math.min(min_ts, log_event.timestamp) or log_event.timestamp
 				max_ts = max_ts and math.max(max_ts, log_event.timestamp) or log_event.timestamp
 			end
-			workflows_common.append_buffer(result_buf, lines)
 			if min_ts then
-				vim.api.nvim_buf_set_var(result_buf, BUF_VAR_START_TS, min_ts)
+				table.insert(lines, 1,  string.format("(<<< TIMESTAMP: %d)", min_ts))
+				table.insert(lines,     string.format("(>>> TIMESTAMP: %d)", max_ts))
 			end
-			if max_ts then
-				vim.api.nvim_buf_set_var(result_buf, BUF_VAR_END_TS, max_ts)
-			end
+			workflows_common.append_buffer(result_buf, lines)
 		end
 
-    -- 4. replace the keybindings with one keybinding that will call the new utility function to read the current cursor line and query more logs ai!
-    -- it will either read (<<< TIMESTAMP: <unix timestamp>)
-    -- or it will read (>>> TIMESTAMP: <unix timestamp>)
-		vim.keymap.set("n", "[b", function()
-			query_logs(result_buf, params, { prepend = true, max_loops = 1 })
-		end, { buffer = result_buf, desc = "Fetch logs before current first line" })
-
-		vim.keymap.set("n", "]b", function()
-			query_logs(result_buf, params, { max_loops = 1 })
-		end, { buffer = result_buf, desc = "Fetch logs after current last line" })
+		vim.keymap.set("n", "gl", function()
+			query_logs(result_buf, params, { max_loops = 3 })
+		end, { buffer = result_buf, desc = "Fetch more logs at cursor line" })
 
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
 		vim.api.nvim_buf_delete(ev.buf, { force = true })
 	end
 end
 
--- 1. refactor this function, so that we now read the buffer where the cursor is located ai
--- the function should read the contents and delete the line, replacing it with more logs
--- There will be two types of lines that this function needs to read at the cursor:
--- - (>>> TIMESTAMP: <unix timestamp in ms>)
--- - (<<< TIMESTAMP: <unix timestamp in ms>)
--- the >>> arrows signify that we want to query after the given timestamp and append the logs, if there are more logs to append because we have a nextToken and we have run out of max_loops, the code will add an additional (>>> TIMESTAMP: <unix timestamp in ms>)
--- the <<< arrows signify that we want to query before the given timestamp and prepend the logs, if there are more logs to append because we have a nextToken and we have run out of max_loops, the code will add an additional (>>> TIMESTAMP: <unix timestamp in ms>)
 query_logs = function(result_buf, params, opts)
-	opts = opts or {}
+	opts         = opts or {}
+	local max_lp = opts.max_loops or 1
 
-	local new_params = vim.tbl_extend("force", {}, params)
-	new_params.nextToken = nil
-	new_params.startTime = nil
-	new_params.endTime = nil
-	if opts.prepend then
-		local ts_ms = vim.api.nvim_buf_get_var(result_buf, BUF_VAR_START_TS)
-		new_params.startTime = ts_ms - FETCH_LENGTH_TIME_IN_MS
-		new_params.endTime = ts_ms - 1
-	else -- grab newer logs
-		local ts_ms = vim.api.nvim_buf_get_var(result_buf, BUF_VAR_END_TS)
-		new_params.startTime = ts_ms + 1
-		new_params.endTime = ts_ms + FETCH_LENGTH_TIME_IN_MS
+	-- 4.1 read cursor line & decide direction
+	local cur    = vim.api.nvim_win_get_cursor(0)
+	local row    = cur[1] - 1
+	local line   = vim.api.nvim_buf_get_lines(result_buf, row, row + 1, false)[1] or ""
+	local arrow, ts_str = line:match("^%(%s*([<>]{3})%s+TIMESTAMP:%s+(%d+)")
+	if not arrow then return end
+	local prepend   = arrow == "<<<"
+	local ts_ms     = tonumber(ts_str)
+
+	-- delete the marker line
+	vim.api.nvim_buf_set_lines(result_buf, row, row + 1, false, {})
+
+	-- 4.2 build request window
+	local rq        = vim.tbl_extend("force", {}, params)
+	rq.nextToken    = nil
+	if prepend then
+		rq.startTime = ts_ms - FETCH_LENGTH_TIME_IN_MS
+		rq.endTime   = ts_ms - 1
+	else
+		rq.startTime = ts_ms + 1
+		rq.endTime   = ts_ms + FETCH_LENGTH_TIME_IN_MS
 	end
 
-	local loops = 0
+	-- 4.3 loop through pages
+	local loops, oldest, newest = 0, nil, nil
 	local function page(token)
-		if loops >= opts.max_loops then
-			return
-		end
+		if loops >= max_lp then return end
 		loops = loops + 1
-		if token then
-			new_params.nextToken = token
-		end
-		local res = logs.filter_log_events(new_params)
+		if token then rq.nextToken = token end
+
+		local res = logs.filter_log_events(rq)
 		if not (res and res.success) then
-			workflows_common.append_buffer(
-				result_buf,
-				{ "Error fetching additional logs: " .. (res and res.error or "unknown") }
-			)
+			workflows_common.append_buffer(result_buf,
+				{ "Error fetching logs: " .. (res and res.error or "unknown") })
 			return
-		end
-		local lines = {}
-		for _, ev in ipairs(res.data.events or {}) do
-			table.insert(lines, "(" .. common.unix_ms_to_local_timestamp_str(ev.timestamp) .. ") " .. ev.message)
 		end
 
-		-- Only update the relevant timestamp variable based on direction
-		if res.data.events and #res.data.events > 0 then
-			if opts.prepend then
-				-- Find minimum timestamp and update start_ts
-				local min_ts
-				for _, ev in ipairs(res.data.events) do
-					if not min_ts or ev.timestamp < min_ts then
-						min_ts = ev.timestamp
-					end
-				end
-				if min_ts then
-					vim.api.nvim_buf_set_var(result_buf, BUF_VAR_START_TS, min_ts)
-				end
+		local batch = {}
+		for _, ev in ipairs(res.data.events or {}) do
+			table.insert(batch,
+				"(" .. common.unix_ms_to_local_timestamp_str(ev.timestamp) .. ") " .. ev.message)
+			oldest = oldest and math.min(oldest, ev.timestamp) or ev.timestamp
+			newest = newest and math.max(newest, ev.timestamp) or ev.timestamp
+		end
+
+		if prepend then
+			vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, batch)  -- prepend
+		else
+			workflows_common.append_buffer(result_buf, batch)           -- append
+		end
+
+		if res.data.nextToken and loops < max_lp then
+			page(res.data.nextToken)
+		elseif res.data.nextToken then
+			-- ran out of loops, leave a new marker line
+			local marker_ts = prepend and oldest or newest
+			local marker    = string.format("(%s TIMESTAMP: %d)",
+				prepend and "<<<" or ">>>", marker_ts)
+			if prepend then
+				vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, { marker })
 			else
-				-- Find maximum timestamp and update end_ts
-				local max_ts
-				for _, ev in ipairs(res.data.events) do
-					if not max_ts or ev.timestamp > max_ts then
-						max_ts = ev.timestamp
-					end
-				end
-				if max_ts then
-					vim.api.nvim_buf_set_var(result_buf, BUF_VAR_END_TS, max_ts)
-				end
+				workflows_common.append_buffer(result_buf, { marker })
 			end
 		end
-
-		if opts.prepend then
-			vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, lines) -- prepend
-		else
-			workflows_common.append_buffer(result_buf, lines) -- append
-		end
-		if res.data.nextToken and loops < opts.max_loops then
-			page(res.data.nextToken)
-		end
 	end
-	page(nil)
+	page()
 end
 
 parse_form = function(form_buffer)
