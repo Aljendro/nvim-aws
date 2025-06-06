@@ -4,7 +4,7 @@ local workflows_common = require("nvim-aws.workflows.common")
 local logs = require("nvim-aws.autogen_wrappers.logs")
 local log = require("nvim-aws.utilities.log")
 
-local parse_form_and_query_logs, parse_form, extend_fetch, fetch_all_log_events
+local parse_form_and_query_logs, parse_form, extend_fetch, query_logs
 
 local M = {}
 
@@ -91,6 +91,18 @@ function M.open_filter_form(log_group, log_stream)
 	})
 end
 
+---------------------------------------------------------------------------------------------------
+------------------------------------- LOCAL FUNCTIONS ---------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+local FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
+
+--- Creates a callback function for the BufWriteCmd autocmd to process a log filtering form
+--- The returned function parses the form values, queries CloudWatch logs with the specified filters,
+--- displays the results in a new buffer, and sets up keybindings for extending log fetches.
+--- @param log_group { logGroupName: string, logGroupArn: string } The CloudWatch log group to query
+--- @param log_stream? { logStreamName: string } Optional log stream to filter by
+--- @return function Callback function for the BufWriteCmd autocmd
 parse_form_and_query_logs = function(log_group, log_stream)
 	return function(ev)
 		local result_buf = workflows_common.gen_result_buffer()
@@ -108,7 +120,7 @@ parse_form_and_query_logs = function(log_group, log_stream)
 			params.logStreamNames = { log_stream.logStreamName }
 		end
 
-		local success = fetch_all_log_events(result_buf, params)
+		local success = query_logs(result_buf, params)
 		if not success then
 			return -- Error already handled in fetch_all_log_events
 		end
@@ -122,15 +134,139 @@ parse_form_and_query_logs = function(log_group, log_stream)
 	end
 end
 
----------------------------------------------------------------------------------------------------
-------------------------------------- LOCAL FUNCTIONS ---------------------------------------------
----------------------------------------------------------------------------------------------------
+--- Parses the AWS CloudWatch Logs filter form buffer content
+--- Extracts filter patterns and time ranges from the form sections:
+--- - [FILTER PATTERN]: CloudWatch Logs filter syntax
+--- - [RELATIVE TIME]: Time offsets like "30m", "2h", "1d"
+--- - [SPECIFIC TIME RANGE]: Explicit timestamps in format "YYYY-MM-DDTHH:MM:SS"
+--- If no time range is specified, defaults to the last 10 minutes
+--- @param form_buffer number Buffer ID containing the form content
+--- @return table Table containing:
+---   - filterPattern: string - The CloudWatch Logs filter pattern
+---   - startTime: number - Start time in Unix milliseconds
+---   - endTime: number - End time in Unix milliseconds
+parse_form = function(form_buffer)
+	-- Parse the form
+	local form_values = {
+		filterPattern = "",
+		startTime = "",
+		endTime = "",
+	}
 
-local FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
+	local content = vim.api.nvim_buf_get_lines(form_buffer, 0, -1, false)
 
-extend_fetch = function(result_buf, params, opts)
-	opts = opts or {}
+	local current_section = ""
+	for _, line in ipairs(content) do
+		-- Skip comments and empty lines
+		if not line:match("^#") and line:match("%S") then
+			-- Check for section headers
+			if line:match("%[.+%]") then
+				current_section = line
+			elseif current_section == "[FILTER PATTERN]" then
+				if line ~= "" then
+					form_values.filterPattern = line
+				end
+			elseif current_section == "[RELATIVE TIME]" then
+				if line ~= "" then
+					local now_ms = os.time() * 1000
+					local start_time_ms = common.parse_relative_time(line, now_ms)
 
+					form_values.startTime = start_time_ms
+					form_values.endTime = now_ms
+				end
+			elseif current_section == "[SPECIFIC TIME RANGE]" then
+				if form_values.startTime == "" and line ~= "" then
+					local start_time_ms = common.local_timestamp_str_to_unix_ms(line)
+					form_values.startTime = start_time_ms
+					form_values.endTime = os.time() * 1000
+				elseif form_values.endTime == "" and line ~= "" then
+					local end_time_ms = common.local_timestamp_str_to_unix_ms(line)
+					form_values.endTime = end_time_ms
+				end
+			end
+		end
+	end
+
+	-- Default to 10 minutes ago if startTime or endTime is missing
+	if form_values.startTime ~= "" or form_values.endTime ~= "" then
+		local end_time_ms = os.time() * 1000
+		local start_time_ms = common.parse_relative_time("10m", end_time_ms)
+		form_values.startTime = start_time_ms
+		form_values.endTime = end_time_ms
+	end
+
+	return form_values
+end
+
+--- Fetch all log events with pagination and add timestamp markers
+--- @param result_buf number Buffer to append results to
+--- @param params table Parameters for filter_log_events API call
+--- @return boolean success Whether the operation was successful
+query_logs = function(result_buf, params)
+	local all_events = {}
+	local next_token = nil
+	local min_ts, max_ts = nil, nil
+
+	repeat
+		local request_params = vim.tbl_extend("force", {}, params)
+		if next_token then
+			request_params.nextToken = next_token
+		end
+
+		local res = logs.filter_log_events(request_params)
+		if not (res and res.success) then
+			workflows_common.append_buffer(result_buf, { "Error fetching logs: " .. (res and res.error or "unknown") })
+			return false
+		end
+
+		-- Collect events from this page
+		for _, log_event in ipairs(res.data.events or {}) do
+			table.insert(all_events, log_event)
+			min_ts = min_ts and math.min(min_ts, log_event.timestamp) or log_event.timestamp
+			max_ts = max_ts and math.max(max_ts, log_event.timestamp) or log_event.timestamp
+		end
+
+		next_token = res.data.nextToken
+	until not next_token
+
+	-- Format all events into lines
+	local lines = {}
+	for _, log_event in ipairs(all_events) do
+		table.insert(
+			lines,
+			"(" .. common.unix_ms_to_local_timestamp_str(log_event.timestamp) .. ") " .. log_event.message
+		)
+	end
+
+	-- Add timestamp markers if we have events
+	if min_ts then
+		local prepend_start_time = min_ts - FETCH_LENGTH_TIME_IN_MS
+		local prepend_end_time = min_ts - 1
+		local append_start_time = max_ts + 1
+		local append_end_time = max_ts + FETCH_LENGTH_TIME_IN_MS
+		table.insert(lines, 1, string.format("(<<< startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
+		table.insert(lines, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
+	else
+		local prepend_start_time = params.startTime - FETCH_LENGTH_TIME_IN_MS
+		local prepend_end_time = params.startTime - 1
+		local append_start_time = params.endTime + 1
+		local append_end_time = params.endTime + FETCH_LENGTH_TIME_IN_MS
+		table.insert(lines, 1, string.format("(<<< startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
+		table.insert(lines, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
+	end
+
+	workflows_common.append_buffer(result_buf, lines)
+	return true
+end
+
+--- Extends the log fetch in either direction based on the timestamp markers
+--- Reads the timestamp information from the current cursor line and fetches additional
+--- log events either before or after the current results. Updates the buffer
+--- with the new events and maintains navigation markers for further extensions.
+--- @param result_buf number Buffer ID containing the log results
+--- @param params table Base parameters for the filter_log_events API call
+--- @return nil
+extend_fetch = function(result_buf, params)
 	-- 1 read cursor line & decide direction
 	local cur = vim.api.nvim_win_get_cursor(0)
 	local row = cur[1] - 1
@@ -229,120 +365,6 @@ extend_fetch = function(result_buf, params, opts)
 		vim.api.nvim_buf_set_lines(result_buf, row, row + 1, false, batch)
 	end
 	vim.print(string.format("[extend_fetch] Completed: added %d lines to buffer", #batch))
-end
-
-parse_form = function(form_buffer)
-	-- Parse the form
-	local form_values = {
-		filterPattern = "",
-		startTime = "",
-		endTime = "",
-	}
-
-	local content = vim.api.nvim_buf_get_lines(form_buffer, 0, -1, false)
-
-	local current_section = ""
-	for _, line in ipairs(content) do
-		-- Skip comments and empty lines
-		if not line:match("^#") and line:match("%S") then
-			-- Check for section headers
-			if line:match("%[.+%]") then
-				current_section = line
-			elseif current_section == "[FILTER PATTERN]" then
-				if line ~= "" then
-					form_values.filterPattern = line
-				end
-			elseif current_section == "[RELATIVE TIME]" then
-				if line ~= "" then
-					local now_ms = os.time() * 1000
-					local start_time_ms = common.parse_relative_time(line, now_ms)
-
-					form_values.startTime = start_time_ms
-					form_values.endTime = now_ms
-				end
-			elseif current_section == "[SPECIFIC TIME RANGE]" then
-				if form_values.startTime == "" and line ~= "" then
-					local start_time_ms = common.local_timestamp_str_to_unix_ms(line)
-					form_values.startTime = start_time_ms
-					form_values.endTime = os.time() * 1000
-				elseif form_values.endTime == "" and line ~= "" then
-					local end_time_ms = common.local_timestamp_str_to_unix_ms(line)
-					form_values.endTime = end_time_ms
-				end
-			end
-		end
-	end
-
-	-- Default to 10 minutes ago if startTime or endTime is missing
-	if form_values.startTime ~= "" or form_values.endTime ~= "" then
-		local end_time_ms = os.time() * 1000
-		local start_time_ms = common.parse_relative_time("10m", end_time_ms)
-		form_values.startTime = start_time_ms
-		form_values.endTime = end_time_ms
-	end
-
-	return form_values
-end
-
---- Fetch all log events with pagination and add timestamp markers
---- @param result_buf number Buffer to append results to
---- @param params table Parameters for filter_log_events API call
---- @return boolean success Whether the operation was successful
-fetch_all_log_events = function(result_buf, params)
-	local all_events = {}
-	local next_token = nil
-	local min_ts, max_ts = nil, nil
-
-	repeat
-		local request_params = vim.tbl_extend("force", {}, params)
-		if next_token then
-			request_params.nextToken = next_token
-		end
-
-		local res = logs.filter_log_events(request_params)
-		if not (res and res.success) then
-			workflows_common.append_buffer(result_buf, { "Error fetching logs: " .. (res and res.error or "unknown") })
-			return false
-		end
-
-		-- Collect events from this page
-		for _, log_event in ipairs(res.data.events or {}) do
-			table.insert(all_events, log_event)
-			min_ts = min_ts and math.min(min_ts, log_event.timestamp) or log_event.timestamp
-			max_ts = max_ts and math.max(max_ts, log_event.timestamp) or log_event.timestamp
-		end
-
-		next_token = res.data.nextToken
-	until not next_token
-
-	-- Format all events into lines
-	local lines = {}
-	for _, log_event in ipairs(all_events) do
-		table.insert(
-			lines,
-			"(" .. common.unix_ms_to_local_timestamp_str(log_event.timestamp) .. ") " .. log_event.message
-		)
-	end
-
-	-- Add timestamp markers if we have events
-	if min_ts then
-		local prepend_start_time = min_ts - FETCH_LENGTH_TIME_IN_MS
-		local prepend_end_time = min_ts - 1
-		local append_start_time = max_ts + 1
-		local append_end_time = max_ts + FETCH_LENGTH_TIME_IN_MS
-		table.insert(lines, 1, string.format("(<<< startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
-		table.insert(lines, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
-	else
-		local prepend_start_time = params.startTime - FETCH_LENGTH_TIME_IN_MS
-		local prepend_end_time = params.startTime - 1
-		local append_start_time = params.endTime + 1
-		local append_end_time = params.endTime + FETCH_LENGTH_TIME_IN_MS
-		table.insert(lines, 1, string.format("(<<< startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
-		table.insert(lines, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
-	end
-
-	workflows_common.append_buffer(result_buf, lines)
-	return true
 end
 
 return M
