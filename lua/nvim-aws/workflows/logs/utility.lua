@@ -8,7 +8,7 @@ local M = {}
 
 local FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 
-local parse_form_and_query_logs, parse_form, query_logs
+local parse_form_and_query_logs, parse_form, extend_fetch, fetch_all_log_events
 
 --- Open the AWS console link for a specific log stream
 --- @param log_group  { logGroupName: string, logGroupArn: string }
@@ -106,57 +106,42 @@ parse_form_and_query_logs = function(log_group, log_stream)
 			params.logStreamNames = { log_stream.logStreamName }
 		end
 
-		local res = logs.filter_log_events(params)
-		if not (res and res.success) then
-			workflows_common.append_buffer(result_buf, { "Error fetching logs: " .. (res and res.error or "unknown") })
-		else
-			local min_ts, max_ts
-			local lines = {}
-			for _, log_event in ipairs(res.data.events or {}) do
-				table.insert(
-					lines,
-					"(" .. common.unix_ms_to_local_timestamp_str(log_event.timestamp) .. ") " .. log_event.message
-				)
-				min_ts = min_ts and math.min(min_ts, log_event.timestamp) or log_event.timestamp
-				max_ts = max_ts and math.max(max_ts, log_event.timestamp) or log_event.timestamp
-			end
-			if min_ts then
-				table.insert(lines, 1, string.format("(<<< TIMESTAMP: %d)", min_ts))
-				table.insert(lines, string.format("(>>> TIMESTAMP: %d)", max_ts))
-			end
-			workflows_common.append_buffer(result_buf, lines)
+		local success = fetch_all_log_events(result_buf, params)
+		if not success then
+			return -- Error already handled in fetch_all_log_events
 		end
 
 		vim.keymap.set("n", "gl", function()
-			query_logs(result_buf, params, { max_loops = 3 })
-		end, { buffer = result_buf, desc = "Fetch more logs at cursor line" })
+			extend_fetch(result_buf, params)
+		end, { buffer = result_buf, desc = "Extend logs at cursor line" })
 
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
 		vim.api.nvim_buf_delete(ev.buf, { force = true })
 	end
 end
 
-query_logs = function(result_buf, params, opts)
+extend_fetch = function(result_buf, params, opts)
 	opts = opts or {}
-	local max_lp = opts.max_loops or 1
 
-	-- 4.1 read cursor line & decide direction
+	-- 1 read cursor line & decide direction
 	local cur = vim.api.nvim_win_get_cursor(0)
 	local row = cur[1] - 1
 	local line = vim.api.nvim_buf_get_lines(result_buf, row, row + 1, false)[1] or ""
-	local arrow, ts_str = line:match("^%(%s*([<>]{3})%s+TIMESTAMP:%s+(%d+)")
+	vim.print(string.format("[extend_fetch] Cursor at row %d, line: %s", row, line))
+
+	local arrow, ts_str = line:match("^%(([<>][<>][<>]) TIMESTAMP: (%d+)")
+	vim.print(string.format("[extend_fetch] arrow: %s, ts_str: %s", arrow, ts_str))
+
 	if not arrow then
+		vim.print("[extend_fetch] No arrow/timestamp pattern found, returning early")
 		return
 	end
 	local prepend = arrow == "<<<"
 	local ts_ms = tonumber(ts_str)
+	vim.print(string.format("[extend_fetch] Direction: %s, timestamp: %d", prepend and "prepend" or "append", ts_ms))
 
-	-- delete the marker line
-	vim.api.nvim_buf_set_lines(result_buf, row, row + 1, false, {})
-
-	-- 4.2 build request window
+	-- 2 build request window
 	local rq = vim.tbl_extend("force", {}, params)
-	rq.nextToken = nil
 	if prepend then
 		rq.startTime = ts_ms - FETCH_LENGTH_TIME_IN_MS
 		rq.endTime = ts_ms - 1
@@ -164,51 +149,50 @@ query_logs = function(result_buf, params, opts)
 		rq.startTime = ts_ms + 1
 		rq.endTime = ts_ms + FETCH_LENGTH_TIME_IN_MS
 	end
+	vim.print(string.format("[extend_fetch] Request window: startTime=%d, endTime=%d", rq.startTime, rq.endTime))
 
-	-- 4.3 loop through pages
-	local loops, oldest, newest = 0, nil, nil
-	local function page(token)
-		if loops >= max_lp then
-			return
-		end
-		loops = loops + 1
-		if token then
-			rq.nextToken = token
-		end
-
-		local res = logs.filter_log_events(rq)
-		if not (res and res.success) then
-			workflows_common.append_buffer(result_buf, { "Error fetching logs: " .. (res and res.error or "unknown") })
-			return
-		end
-
-		local batch = {}
-		for _, ev in ipairs(res.data.events or {}) do
-			table.insert(batch, "(" .. common.unix_ms_to_local_timestamp_str(ev.timestamp) .. ") " .. ev.message)
-			oldest = oldest and math.min(oldest, ev.timestamp) or ev.timestamp
-			newest = newest and math.max(newest, ev.timestamp) or ev.timestamp
-		end
-
-		if prepend then
-			vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, batch) -- prepend
-		else
-			workflows_common.append_buffer(result_buf, batch) -- append
-		end
-
-		if res.data.nextToken and loops < max_lp then
-			page(res.data.nextToken)
-		elseif res.data.nextToken then
-			-- ran out of loops, leave a new marker line
-			local marker_ts = prepend and oldest or newest
-			local marker = string.format("(%s TIMESTAMP: %d)", prepend and "<<<" or ">>>", marker_ts)
-			if prepend then
-				vim.api.nvim_buf_set_lines(result_buf, 0, 0, false, { marker })
-			else
-				workflows_common.append_buffer(result_buf, { marker })
-			end
-		end
+	-- 3 loop through pages
+	local res = logs.filter_log_events(rq)
+	if not (res and res.success) then
+		local error_msg = "Error fetching logs: " .. (res and res.error or "unknown")
+		vim.print(string.format("[extend_fetch] %s", error_msg))
+		workflows_common.append_buffer(result_buf, { error_msg })
+		return
 	end
-	page()
+
+	local batch = {}
+	for _, ev in ipairs(res.data.events or {}) do
+		table.insert(batch, "(" .. common.unix_ms_to_local_timestamp_str(ev.timestamp) .. ") " .. ev.message)
+	end
+
+	local events = res.data.events or {}
+	vim.print(string.format("[extend_fetch] Fetched %d events", #events))
+
+	if prepend then
+		if #events > 0 then
+			table.insert(batch, 1, string.format("(<<< TIMESTAMP: %d)", events[1].timestamp))
+      if res.data.nextToken then
+			  table.insert(batch, string.format("(>>> TIMESTAMP: %d)", events[#events].timestamp))
+      end
+			vim.print(
+				string.format(
+					"[extend_fetch] Prepending with timestamp markers: first=%d, last=%d",
+					events[1].timestamp,
+					events[#events].timestamp
+				)
+			)
+		end
+		vim.api.nvim_buf_set_lines(result_buf, row, row + 1, false, batch)
+	else
+		if #events > 0 then
+			table.insert(batch, string.format("(>>> TIMESTAMP: %d)", events[#events].timestamp))
+			vim.print(
+				string.format("[extend_fetch] Appending with timestamp marker: last=%d", events[#events].timestamp)
+			)
+		end
+		vim.api.nvim_buf_set_lines(result_buf, row, row + 1, false, batch)
+	end
+	vim.print(string.format("[extend_fetch] Completed: added %d lines to buffer", #batch))
 end
 
 parse_form = function(form_buffer)
@@ -262,6 +246,56 @@ parse_form = function(form_buffer)
 	end
 
 	return form_values
+end
+
+--- Fetch all log events with pagination and add timestamp markers
+--- @param result_buf number Buffer to append results to
+--- @param params table Parameters for filter_log_events API call
+--- @return boolean success Whether the operation was successful
+fetch_all_log_events = function(result_buf, params)
+	local all_events = {}
+	local next_token = nil
+	local min_ts, max_ts = nil, nil
+
+	repeat
+		local request_params = vim.tbl_extend("force", {}, params)
+		if next_token then
+			request_params.nextToken = next_token
+		end
+
+		local res = logs.filter_log_events(request_params)
+		if not (res and res.success) then
+			workflows_common.append_buffer(result_buf, { "Error fetching logs: " .. (res and res.error or "unknown") })
+			return false
+		end
+
+		-- Collect events from this page
+		for _, log_event in ipairs(res.data.events or {}) do
+			table.insert(all_events, log_event)
+			min_ts = min_ts and math.min(min_ts, log_event.timestamp) or log_event.timestamp
+			max_ts = max_ts and math.max(max_ts, log_event.timestamp) or log_event.timestamp
+		end
+
+		next_token = res.data.nextToken
+	until not next_token
+
+	-- Format all events into lines
+	local lines = {}
+	for _, log_event in ipairs(all_events) do
+		table.insert(
+			lines,
+			"(" .. common.unix_ms_to_local_timestamp_str(log_event.timestamp) .. ") " .. log_event.message
+		)
+	end
+
+	-- Add timestamp markers if we have events
+	if min_ts then
+		table.insert(lines, 1, string.format("(<<< TIMESTAMP: %d)", min_ts))
+		table.insert(lines, string.format("(>>> TIMESTAMP: %d)", max_ts))
+	end
+
+	workflows_common.append_buffer(result_buf, lines)
+	return true
 end
 
 return M
