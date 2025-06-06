@@ -116,10 +116,12 @@ parse_form_and_query_logs = function(log_group, log_stream)
 		fetch_logs_page(result_buf, params)
 
 		vim.keymap.set("n", "[b", function()
+      -- 5. call this function with a limit of one, so that that it only queries once ai
 			query_logs(result_buf, params, { before = true })
 		end, { buffer = result_buf, desc = "Fetch logs before current first line" })
 
 		vim.keymap.set("n", "]b", function()
+      -- 4. call this function with a limit of one, so that ai
 			query_logs(result_buf, params, { after = true })
 		end, { buffer = result_buf, desc = "Fetch logs after current last line" })
 
@@ -128,6 +130,9 @@ parse_form_and_query_logs = function(log_group, log_stream)
 	end
 end
 
+-- 1. I need to refactor this function, so that the BUF_VAR_START_TS or BUF_VAR_END_TS are set ai
+-- everytime the the logs are queried in case the uses Ctrl-C to stop querying (so that you have something to rely on the next time a query starts). ai
+-- 2. It should also take a parameter that limits the amount of times it runs recursively ai
 query_logs = function(result_buf, params, opts)
 	local var_name = opts.before and BUF_VAR_START_TS or BUF_VAR_END_TS
 	local ts_ms = vim.api.nvim_buf_get_var(result_buf, var_name)
@@ -142,7 +147,7 @@ query_logs = function(result_buf, params, opts)
 		req.startTime = ts_ms + 1
 	end
 
-	local loops, MAX_LOOPS = 0, 5 -- stop after 5 pages
+	local loops, MAX_LOOPS = 0, 5 -- max loops should be controlled by the option value ai!
 	local function page(token)
 		if loops >= MAX_LOOPS then
 			return
@@ -203,6 +208,7 @@ query_logs = function(result_buf, params, opts)
 	page(nil)
 end
 
+-- 3. this function should be removed in favor of using query_logs ai
 fetch_logs_page = function(result_buf, params, next_token)
 	if next_token then
 		params.nextToken = next_token
