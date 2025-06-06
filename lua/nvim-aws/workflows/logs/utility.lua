@@ -112,17 +112,32 @@ parse_form_and_query_logs = function(log_group, log_stream)
 			params.logStreamNames = { log_stream.logStreamName }
 		end
 
-		-- Start fetching logs
-		fetch_logs_page(result_buf, params)
+		-- Initial log fetch
+		local res = logs.filter_log_events(params)
+		if not (res and res.success) then
+		  workflows_common.append_buffer(
+		    result_buf,
+		    { "Error fetching logs: " .. (res and res.error or "unknown") }
+		  )
+		else
+		  local min_ts, max_ts
+		  local lines = {}
+		  for _, ev in ipairs(res.data.events or {}) do
+		    table.insert(lines, "(" .. common.unix_ms_to_local_timestamp_str(ev.timestamp) .. ") " .. ev.message)
+		    min_ts = min_ts and math.min(min_ts, ev.timestamp) or ev.timestamp
+		    max_ts = max_ts and math.max(max_ts, ev.timestamp) or ev.timestamp
+		  end
+		  workflows_common.append_buffer(result_buf, lines)
+		  if min_ts then vim.api.nvim_buf_set_var(result_buf, BUF_VAR_START_TS, min_ts) end
+		  if max_ts then vim.api.nvim_buf_set_var(result_buf, BUF_VAR_END_TS, max_ts) end
+		end
 
 		vim.keymap.set("n", "[b", function()
-      -- 5. call this function with a limit of one, so that that it only queries once ai
-			query_logs(result_buf, params, { before = true })
+			query_logs(result_buf, params, { before = true,  max_loops = 1 })
 		end, { buffer = result_buf, desc = "Fetch logs before current first line" })
 
 		vim.keymap.set("n", "]b", function()
-      -- 4. call this function with a limit of one, so that ai
-			query_logs(result_buf, params, { after = true })
+			query_logs(result_buf, params, { after  = true,  max_loops = 1 })
 		end, { buffer = result_buf, desc = "Fetch logs after current last line" })
 
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
@@ -130,12 +145,15 @@ parse_form_and_query_logs = function(log_group, log_stream)
 	end
 end
 
--- 1. I need to refactor this function, so that the BUF_VAR_START_TS or BUF_VAR_END_TS are set ai
--- everytime the the logs are queried in case the uses Ctrl-C to stop querying (so that you have something to rely on the next time a query starts). ai
--- 2. It should also take a parameter that limits the amount of times it runs recursively ai
 query_logs = function(result_buf, params, opts)
+	opts = opts or {}
 	local var_name = opts.before and BUF_VAR_START_TS or BUF_VAR_END_TS
-	local ts_ms = vim.api.nvim_buf_get_var(result_buf, var_name)
+	local ok, ts_ms = pcall(vim.api.nvim_buf_get_var, result_buf, var_name)
+	if not ok then
+	  -- fall back to the time range that was supplied with the original params
+	  ts_ms = opts.before and params.endTime or params.startTime
+	  vim.api.nvim_buf_set_var(result_buf, var_name, ts_ms or 0)
+	end
 
 	local req = vim.tbl_extend("force", {}, params)
 	req.nextToken = nil
@@ -147,7 +165,8 @@ query_logs = function(result_buf, params, opts)
 		req.startTime = ts_ms + 1
 	end
 
-	local loops, MAX_LOOPS = 0, 5 -- max loops should be controlled by the option value ai!
+	local loops      = 0
+	local MAX_LOOPS  = opts.max_loops or 5
 	local function page(token)
 		if loops >= MAX_LOOPS then
 			return
@@ -208,37 +227,6 @@ query_logs = function(result_buf, params, opts)
 	page(nil)
 end
 
--- 3. this function should be removed in favor of using query_logs ai
-fetch_logs_page = function(result_buf, params, next_token)
-	if next_token then
-		params.nextToken = next_token
-	end
-
-	local result = logs.filter_log_events(params)
-
-	if result and result.success then
-		vim.schedule(function()
-			if result.data and result.data.events then
-				local result_lines = {}
-				for _, event in ipairs(result.data.events) do
-					table.insert(
-						result_lines,
-						"(" .. common.unix_ms_to_local_timestamp_str(event.timestamp) .. ")" .. " " .. event.message
-					)
-				end
-				workflows_common.append_buffer(result_buf, result_lines)
-			end
-
-			if result.data and result.data.nextToken then
-				fetch_logs_page(result_buf, params, result.data.nextToken)
-			end
-		end)
-	else
-		vim.schedule(function()
-			workflows_common.append_buffer(result_buf, { "Error fetching logs: " .. (result.error or "Unknown error") })
-		end)
-	end
-end
 
 parse_form = function(form_buffer)
 	-- Parse the form
