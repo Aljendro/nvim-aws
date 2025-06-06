@@ -129,25 +129,40 @@ extend_fetch = function(result_buf, params, opts)
 	local line = vim.api.nvim_buf_get_lines(result_buf, row, row + 1, false)[1] or ""
 	vim.print(string.format("[extend_fetch] Cursor at row %d, line: %s", row, line))
 
-	local arrow, ts_str = line:match("^%(([<>][<>][<>]) TIMESTAMP: (%d+)")
-	vim.print(string.format("[extend_fetch] arrow: %s, ts_str: %s", arrow, ts_str))
+	local arrow, start_time_str, end_time_str = line:match("^%(([<>][<>][<>]) startTime: (%d+), endTime: (%d+)")
+	vim.print(
+		string.format(
+			"[extend_fetch] arrow: %s, start_time_str: %s, end_time_str: %s",
+			arrow,
+			start_time_str,
+			end_time_str
+		)
+	)
 
 	if not arrow then
-		vim.print("[extend_fetch] No arrow/timestamp pattern found, returning early")
+		vim.print("[extend_fetch] No arrow/startTime/endTime pattern found, returning early")
 		return
 	end
 	local prepend = arrow == "<<<"
-	local ts_ms = tonumber(ts_str)
-	vim.print(string.format("[extend_fetch] Direction: %s, timestamp: %d", prepend and "prepend" or "append", ts_ms))
+	local start_ts_ms = tonumber(start_time_str)
+	local end_ts_ms = tonumber(end_time_str)
+	vim.print(
+		string.format(
+			"[extend_fetch] Direction: %s, startTime: %d, endTime: %d",
+			prepend and "prepend" or "append",
+			start_ts_ms,
+			end_ts_ms
+		)
+	)
 
 	-- 2 build request window
 	local rq = vim.tbl_extend("force", {}, params)
 	if prepend then
-		rq.startTime = ts_ms - FETCH_LENGTH_TIME_IN_MS
-		rq.endTime = ts_ms - 1
+		rq.startTime = start_ts_ms - FETCH_LENGTH_TIME_IN_MS
+		rq.endTime = start_ts_ms - 1
 	else
-		rq.startTime = ts_ms + 1
-		rq.endTime = ts_ms + FETCH_LENGTH_TIME_IN_MS
+		rq.startTime = end_ts_ms + 1
+		rq.endTime = end_ts_ms + FETCH_LENGTH_TIME_IN_MS
 	end
 	vim.print(string.format("[extend_fetch] Request window: startTime=%d, endTime=%d", rq.startTime, rq.endTime))
 
@@ -170,24 +185,37 @@ extend_fetch = function(result_buf, params, opts)
 
 	if prepend then
 		if #events > 0 then
-			table.insert(batch, 1, string.format("(<<< TIMESTAMP: %d)", events[1].timestamp))
-      if res.data.nextToken then
-			  table.insert(batch, string.format("(>>> TIMESTAMP: %d)", events[#events].timestamp))
-      end
+			local new_start_time = events[1].timestamp - FETCH_LENGTH_TIME_IN_MS
+			local new_end_time = events[1].timestamp - 1
+			table.insert(batch, 1, string.format("(<<< startTime: %d, endTime: %d)", new_start_time, new_end_time))
+			if res.data.nextToken then
+				local append_start_time = events[#events].timestamp + 1
+				local append_end_time = events[#events].timestamp + FETCH_LENGTH_TIME_IN_MS
+				table.insert(
+					batch,
+					string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time)
+				)
+			end
 			vim.print(
 				string.format(
-					"[extend_fetch] Prepending with timestamp markers: first=%d, last=%d",
-					events[1].timestamp,
-					events[#events].timestamp
+					"[extend_fetch] Prepending with timestamp markers: new_start=%d, new_end=%d",
+					new_start_time,
+					new_end_time
 				)
 			)
+			vim.api.nvim_buf_set_lines(result_buf, row, row + 1, false, batch)
 		end
-		vim.api.nvim_buf_set_lines(result_buf, row, row + 1, false, batch)
 	else
 		if #events > 0 then
-			table.insert(batch, string.format("(>>> TIMESTAMP: %d)", events[#events].timestamp))
+			local new_start_time = events[#events].timestamp + 1
+			local new_end_time = events[#events].timestamp + FETCH_LENGTH_TIME_IN_MS
+			table.insert(batch, string.format("(>>> startTime: %d, endTime: %d)", new_start_time, new_end_time))
 			vim.print(
-				string.format("[extend_fetch] Appending with timestamp marker: last=%d", events[#events].timestamp)
+				string.format(
+					"[extend_fetch] Appending with timestamp marker: new_start=%d, new_end=%d",
+					new_start_time,
+					new_end_time
+				)
 			)
 		end
 		vim.api.nvim_buf_set_lines(result_buf, row, row + 1, false, batch)
@@ -290,8 +318,12 @@ fetch_all_log_events = function(result_buf, params)
 
 	-- Add timestamp markers if we have events
 	if min_ts then
-		table.insert(lines, 1, string.format("(<<< TIMESTAMP: %d)", min_ts))
-		table.insert(lines, string.format("(>>> TIMESTAMP: %d)", max_ts))
+		local prepend_start_time = min_ts - FETCH_LENGTH_TIME_IN_MS
+		local prepend_end_time = min_ts - 1
+		local append_start_time = max_ts + 1
+		local append_end_time = max_ts + FETCH_LENGTH_TIME_IN_MS
+		table.insert(lines, 1, string.format("(>>> startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
+		table.insert(lines, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
 	end
 
 	workflows_common.append_buffer(result_buf, lines)
