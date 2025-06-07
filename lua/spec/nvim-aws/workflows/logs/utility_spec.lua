@@ -4,7 +4,6 @@ local stub = require("luassert.stub")
 describe("nvim-aws.workflows.logs.utility", function()
 	local utility = require("nvim-aws.workflows.logs.utility")
 
-  -- can you add debug logs to this test ai!
 	it("open_filter_form creates a filter buffer with correct content", function()
 		local log_group = {
 			logGroupName = "mygroup",
@@ -21,7 +20,11 @@ describe("nvim-aws.workflows.logs.utility", function()
 			end
 		end
 		assert.is_truthy(filter_buf)
+		print("DEBUG: filter_buf ID:", filter_buf)
 		local lines = vim.api.nvim_buf_get_lines(filter_buf, 0, 3, false)
+		for i, line in ipairs(lines) do
+			print(string.format("DEBUG: lines[%d] = %s", i, line))
+		end
 		assert.equals("# AWS CloudWatch Logs Filter Form", lines[1])
 		assert.equals("# Log Group: mygroup", lines[2])
 		assert.equals("# Stream: mystream", lines[3])
