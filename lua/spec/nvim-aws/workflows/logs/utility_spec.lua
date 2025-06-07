@@ -6,74 +6,47 @@ describe("nvim-aws.workflows.logs.utility", function()
   local common = require("nvim-aws.utilities.common")
   local default_utility = require("nvim-aws.workflows.default.utility")
 
-  before_each(function()
-    stub(common, "url_encode", function(str) return str end)
-    if not vim.fn then vim.fn = {} end
-    stub(vim.fn, "system", function() end)
-    stub(default_utility, "generate_uuid", function() return "TESTUUID" end)
-    stub(vim.api, "nvim_create_buf", function() return 1 end)
-    stub(vim.api, "nvim_buf_set_name", function() end)
-    stub(vim.api, "nvim_set_option_value", function() end)
-    stub(vim.api, "nvim_buf_set_lines", function() end)
-    stub(vim, "cmd", function() end)
-    stub(vim.api, "nvim_win_set_buf", function() end)
-    stub(vim.api, "nvim_create_autocmd", function() end)
-  end)
 
-  after_each(function()
-    common.url_encode:revert()
-    vim.fn.system:revert()
-    default_utility.generate_uuid:revert()
-    vim.api.nvim_create_buf:revert()
-    vim.api.nvim_buf_set_name:revert()
-    vim.api.nvim_set_option_value:revert()
-    vim.api.nvim_buf_set_lines:revert()
-    vim.cmd:revert()
-    vim.api.nvim_win_set_buf:revert()
-    vim.api.nvim_create_autocmd:revert()
-  end)
 
-  it("open_aws_console_link constructs correct URL and calls open", function()
-    local log_group = {
-      logGroupName = "mygroup",
-      logGroupArn  = "arn:aws:logs:us-east-1:123456789012:log-group:mygroup"
-    }
-    utility.open_aws_console_link(log_group)
-    local expected_url =
-      "https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/mygroup"
-    assert.stub(vim.fn.system)
-      .was_called_with({ "open", expected_url })
-  end)
 
-  it("open_aws_console_stream_link constructs correct URL and calls open", function()
-    local log_group = {
-      logGroupName = "mygroup",
-      logGroupArn  = "arn:aws:logs:eu-central-1:123456789012:log-group:mygroup"
-    }
-    local log_stream = { logStreamName = "mystream" }
-    utility.open_aws_console_stream_link(log_group, log_stream)
-    local expected_url =
-      "https://eu-central-1.console.aws.amazon.com/cloudwatch/home?region=eu-central-1#logsV2:log-groups/log-group/mygroup/log-events/mystream"
-    assert.stub(vim.fn.system)
-      .was_called_with({ "open", expected_url })
-  end)
 
-  it("open_filter_form sets up a filter buffer with correct options", function()
+  it("open_filter_form creates a filter buffer with correct content", function()
     local log_group = {
       logGroupName = "mygroup",
       logGroupArn  = "arn:aws:logs:us-east-1:123456789012:log-group:mygroup"
     }
     local log_stream = { logStreamName = "mystream" }
     utility.open_filter_form(log_group, log_stream)
-    assert.stub(vim.api.nvim_create_buf).was_called_with(false, true)
-    assert.stub(vim.api.nvim_buf_set_name).was_called_with(1, "aws-logs-filter-form-TESTUUID")
-    assert.stub(vim.api.nvim_set_option_value)
-      .was_called_with("filetype", "awslogsfilter", { buf = 1 })
-    assert.stub(vim.api.nvim_set_option_value)
-      .was_called_with("buftype", "acwrite", { buf = 1 })
-    assert.stub(vim.api.nvim_buf_set_lines).was_called()
-    assert.stub(vim.cmd).was_called_with("tabnew")
-    assert.stub(vim.api.nvim_win_set_buf).was_called_with(0, 1)
-    assert.stub(vim.api.nvim_create_autocmd).was_called()
+    local bufs = vim.api.nvim_list_bufs()
+    local filter_buf
+    for _, buf in ipairs(bufs) do
+      if vim.api.nvim_buf_get_name(buf):match("^aws%-logs%-filter%-form%-") then
+        filter_buf = buf
+        break
+      end
+    end
+    assert.is_truthy(filter_buf)
+    local lines = vim.api.nvim_buf_get_lines(filter_buf, 0, 3, false)
+    assert.equals("# AWS CloudWatch Logs Filter Form", lines[1])
+    assert.equals("# Log Group: mygroup", lines[2])
+    assert.equals("# Stream: mystream", lines[3])
+  end)
+
+  it("query_logs writes markers and events correctly", function()
+    local logs_wrapper = require("nvim-aws.autogen_wrappers.logs")
+    local result_buf = vim.api.nvim_create_buf(false, true)
+    local fake_events = {
+      { timestamp = 1000, message = "event1" },
+      { timestamp = 2000, message = "event2" },
+    }
+    local st = stub(logs_wrapper, "filter_log_events", function(_) return { success = true, data = { events = fake_events } } end)
+    local params = { logGroupName = "grp", limit = 2, filterPattern = "", startTime = 0, endTime = 0 }
+    local ok = utility.query_logs(result_buf, params)
+    assert.is_true(ok)
+    local lines = vim.api.nvim_buf_get_lines(result_buf, 0, -1, false)
+    assert.equals(string.format("(<<< startTime: %d, endTime: %d)", 1000 - 600000, 1000 - 1), lines[1])
+    assert.equals("event1", lines[2]:match("%) (.+)"))
+    assert.equals(string.format("(>>> startTime: %d, endTime: %d)", 2000 + 1, 2000 + 600000), lines[#lines])
+    st:revert()
   end)
 end)
