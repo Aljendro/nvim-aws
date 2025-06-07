@@ -28,25 +28,54 @@ describe("nvim-aws.workflows.logs.utility", function()
 		assert.equals("# Stream: mystream", lines[3])
 	end)
 
-  -- I need this test to open up the form with open_filter_form, input 10m, stub out the filter_log_events, 
-  -- then check that the logs returns are in the buffer with the correct (<<< startTime: <unix ts>, endTime: <unix ts>) and (>>> startTime: <unix ts>, endTime: <unix ts>) ai!
-	it("query_logs writes markers and events correctly", function()
+	it("open_filter_form and query logs writes markers and events correctly", function()
+		local workflows_common = require("nvim-aws.workflows.common")
 		local logs_wrapper = require("nvim-aws.autogen_wrappers.logs")
+		-- Prepare a result buffer and stub the generator
 		local result_buf = vim.api.nvim_create_buf(false, true)
+		stub(workflows_common, "gen_result_buffer", function() return result_buf end)
+		-- Stub AWS logs API
 		local fake_events = {
 			{ timestamp = 1000, message = "event1" },
 			{ timestamp = 2000, message = "event2" },
 		}
-		local st = stub(logs_wrapper, "filter_log_events", function(_)
+		local st_logs = stub(logs_wrapper, "filter_log_events", function(_) 
 			return { success = true, data = { events = fake_events } }
 		end)
-		local params = { logGroupName = "grp", limit = 2, filterPattern = "", startTime = 0, endTime = 0 }
-		local ok = utility._query_logs(result_buf, params)
-		assert.is_true(ok)
-		local lines = vim.api.nvim_buf_get_lines(result_buf, 0, -1, false)
-		assert.equals(string.format("(<<< startTime: %d, endTime: %d)", 1000 - 600000, 1000 - 1), lines[1])
-		assert.equals("event1", lines[2]:match("%) (.+)"))
-		assert.equals(string.format("(>>> startTime: %d, endTime: %d)", 2000 + 1, 2000 + 600000), lines[#lines])
-		st:revert()
+		-- Open the filter form
+		local log_group = { logGroupName = "mygroup", logGroupArn = "arn:aws:logs:us-east-1:123456789012:log-group:mygroup" }
+		local log_stream = { logStreamName = "mystream" }
+		utility.open_filter_form(log_group, log_stream)
+		-- Locate the form buffer
+		local form_buf
+		for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+			if vim.api.nvim_buf_get_name(buf):match("aws%-logs%-filter%-form%-") then
+				form_buf = buf
+				break
+			end
+		end
+		assert.is_truthy(form_buf)
+		-- Input a 10m relative time
+		local lines = vim.api.nvim_buf_get_lines(form_buf, 0, -1, false)
+		local rel_idx
+		for i, line in ipairs(lines) do
+			if line == "[RELATIVE TIME]" then
+				rel_idx = i
+				break
+			end
+		end
+		assert.is_truthy(rel_idx)
+		vim.api.nvim_buf_set_lines(form_buf, rel_idx, rel_idx, false, { "10m" })
+		-- Trigger the BufWriteCmd callback directly
+		local callback = utility._parse_form_and_query_logs(log_group, log_stream)
+		callback({ buf = form_buf })
+		-- Verify results
+		local result_lines = vim.api.nvim_buf_get_lines(result_buf, 0, -1, false)
+		assert.equals(string.format("(<<< startTime: %d, endTime: %d)", 1000 - 600000, 1000 - 1), result_lines[1])
+		assert.equals("event1", result_lines[2]:match("%) (.+)"))
+		assert.equals(string.format("(>>> startTime: %d, endTime: %d)", 2000 + 1, 2000 + 600000), result_lines[#result_lines])
+		-- Revert stubs
+		st_logs:revert()
+		workflows_common.gen_result_buffer:revert()
 	end)
 end)
