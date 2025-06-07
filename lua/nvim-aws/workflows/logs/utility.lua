@@ -4,7 +4,7 @@ local workflows_common = require("nvim-aws.workflows.common")
 local logs = require("nvim-aws.autogen_wrappers.logs")
 local log = require("nvim-aws.utilities.log")
 
-local parse_form_and_query_logs, parse_form, extend_fetch, query_logs
+local parse_form_and_query_logs, parse_form, extend_query, query_logs
 
 local M = {}
 
@@ -126,7 +126,7 @@ parse_form_and_query_logs = function(log_group, log_stream)
 		end
 
 		vim.keymap.set("n", "gl", function()
-			extend_fetch(result_buf, params)
+			extend_query(result_buf, params)
 		end, { buffer = result_buf, desc = "Extend logs at cursor line" })
 
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
@@ -259,14 +259,14 @@ query_logs = function(result_buf, params)
 	return true
 end
 
---- Extends the log fetch in either direction based on the timestamp markers
+--- Extends the query in either direction based on the timestamp markers
 --- Reads the timestamp information from the current cursor line and fetches additional
 --- log events either before or after the current results. Updates the buffer
 --- with the new events and maintains navigation markers for further extensions.
 --- @param result_buf number Buffer ID containing the log results
 --- @param params table Base parameters for the filter_log_events API call
 --- @return nil
-extend_fetch = function(result_buf, params)
+extend_query = function(result_buf, params)
 	-- 1 read cursor line & decide direction
 	local cur = vim.api.nvim_win_get_cursor(0)
 	local row = cur[1] - 1
