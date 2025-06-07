@@ -1,4 +1,4 @@
--- Tests for nvim-aws.workflows.logs.utility
+-- refactor these tests to mock correctly ai!
 describe("nvim-aws.workflows.logs.utility", function()
   local utility = require("nvim-aws.workflows.logs.utility")
   local common = require("nvim-aws.utilities.common")
