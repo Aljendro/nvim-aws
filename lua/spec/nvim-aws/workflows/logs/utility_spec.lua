@@ -1,5 +1,6 @@
 require("nvim-aws").setup()
 local stub = require("luassert.stub")
+local log = require("nvim-aws.utilities.log")
 
 describe("nvim-aws.workflows.logs.utility", function()
 	local utility = require("nvim-aws.workflows.logs.utility")
@@ -14,22 +15,21 @@ describe("nvim-aws.workflows.logs.utility", function()
 		local bufs = vim.api.nvim_list_bufs()
 		local filter_buf
 		for _, buf in ipairs(bufs) do
-			if vim.api.nvim_buf_get_name(buf):match("^aws%-logs%-filter%-form%-") then
+			local buffer_name = vim.api.nvim_buf_get_name(buf)
+			if buffer_name:match("aws%-logs%-filter%-form%-") then
 				filter_buf = buf
 				break
 			end
 		end
 		assert.is_truthy(filter_buf)
-		print("DEBUG: filter_buf ID:", filter_buf)
 		local lines = vim.api.nvim_buf_get_lines(filter_buf, 0, 3, false)
-		for i, line in ipairs(lines) do
-			print(string.format("DEBUG: lines[%d] = %s", i, line))
-		end
 		assert.equals("# AWS CloudWatch Logs Filter Form", lines[1])
 		assert.equals("# Log Group: mygroup", lines[2])
 		assert.equals("# Stream: mystream", lines[3])
 	end)
 
+  -- I need this test to open up the form with open_filter_form, input 10m, stub out the filter_log_events, 
+  -- then check that the logs returns are in the buffer with the correct (<<< startTime: <unix ts>, endTime: <unix ts>) and (>>> startTime: <unix ts>, endTime: <unix ts>) ai!
 	it("query_logs writes markers and events correctly", function()
 		local logs_wrapper = require("nvim-aws.autogen_wrappers.logs")
 		local result_buf = vim.api.nvim_create_buf(false, true)
