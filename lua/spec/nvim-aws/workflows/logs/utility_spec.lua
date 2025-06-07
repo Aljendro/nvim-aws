@@ -1,4 +1,3 @@
--- refactor these tests to mock correctly ai!
 describe("nvim-aws.workflows.logs.utility", function()
   local utility = require("nvim-aws.workflows.logs.utility")
   local common = require("nvim-aws.utilities.common")
@@ -6,7 +5,7 @@ describe("nvim-aws.workflows.logs.utility", function()
   before_each(function()
     stub(common, "url_encode", function(str) return str end)
     if not vim.fn then vim.fn = {} end
-    stub(vim.fn, "system")
+    stub(vim.fn, "system", function() end)
   end)
 
   after_each(function()
