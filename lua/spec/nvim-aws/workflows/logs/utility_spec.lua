@@ -40,4 +40,6 @@ describe("nvim-aws.workflows.logs.utility", function()
     assert.stub(vim.fn.system)
       .was_called_with({ "open", expected_url })
   end)
+
+  -- add tests ai!
 end)

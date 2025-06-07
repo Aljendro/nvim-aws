@@ -48,6 +48,7 @@ function M.open_aws_console_link(log_group)
 	vim.fn.system({ "open", url }) -- For macOS
 end
 
+-- I need to add a test for the following open_filter_form ai
 --- Open a form buffer for filtering logs
 --- @param log_group { logGroupName: string, logGroupArn: string }
 --- @param log_stream? { logStreamName: string } Optional log stream to filter by
