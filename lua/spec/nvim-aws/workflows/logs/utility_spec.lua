@@ -33,17 +33,22 @@ describe("nvim-aws.workflows.logs.utility", function()
 		local logs_wrapper = require("nvim-aws.autogen_wrappers.logs")
 		-- Prepare a result buffer and stub the generator
 		local result_buf = vim.api.nvim_create_buf(false, true)
-		stub(workflows_common, "gen_result_buffer", function() return result_buf end)
+		stub(workflows_common, "gen_result_buffer", function()
+			return result_buf
+		end)
 		-- Stub AWS logs API
+    local firstLogTS = 1749327258558
+    local lastLogTS = 1749327263373
 		local fake_events = {
-			{ timestamp = 1000, message = "event1" },
-			{ timestamp = 2000, message = "event2" },
+			{ timestamp = firstLogTS, message = "event1" },
+			{ timestamp = lastLogTS, message = "event2" },
 		}
-		local st_logs = stub(logs_wrapper, "filter_log_events", function(_) 
+		local st_logs = stub(logs_wrapper, "filter_log_events", function(_)
 			return { success = true, data = { events = fake_events } }
 		end)
 		-- Open the filter form
-		local log_group = { logGroupName = "mygroup", logGroupArn = "arn:aws:logs:us-east-1:123456789012:log-group:mygroup" }
+		local log_group =
+			{ logGroupName = "mygroup", logGroupArn = "arn:aws:logs:us-east-1:123456789012:log-group:mygroup" }
 		local log_stream = { logStreamName = "mystream" }
 		utility.open_filter_form(log_group, log_stream)
 		-- Locate the form buffer
@@ -71,9 +76,12 @@ describe("nvim-aws.workflows.logs.utility", function()
 		callback({ buf = form_buf })
 		-- Verify results
 		local result_lines = vim.api.nvim_buf_get_lines(result_buf, 0, -1, false)
-		assert.equals(string.format("(<<< startTime: %d, endTime: %d)", 1000 - 600000, 1000 - 1), result_lines[1])
-		assert.equals("event1", result_lines[2]:match("%) (.+)"))
-		assert.equals(string.format("(>>> startTime: %d, endTime: %d)", 2000 + 1, 2000 + 600000), result_lines[#result_lines])
+		assert.equals(string.format("(<<< startTime: %d, endTime: %d)", firstLogTS - 600000, firstLogTS - 1), result_lines[2])
+		assert.equals("event1", result_lines[3]:match("%) (.+)"))
+		assert.equals(
+			string.format("(>>> startTime: %d, endTime: %d)", lastLogTS + 1, lastLogTS + 600000),
+			result_lines[#result_lines]
+		)
 		-- Revert stubs
 		st_logs:revert()
 		workflows_common.gen_result_buffer:revert()
