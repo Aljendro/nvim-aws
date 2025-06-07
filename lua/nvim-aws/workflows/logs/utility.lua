@@ -4,8 +4,6 @@ local workflows_common = require("nvim-aws.workflows.common")
 local logs = require("nvim-aws.autogen_wrappers.logs")
 local log = require("nvim-aws.utilities.log")
 
-local parse_form_and_query_logs, parse_form, extend_query, query_logs
-
 local M = {}
 
 ---------------------------------------------------------------------------------------------------
@@ -52,13 +50,22 @@ end
 --- @param log_group { logGroupName: string, logGroupArn: string }
 --- @param log_stream? { logStreamName: string } Optional log stream to filter by
 function M.open_filter_form(log_group, log_stream)
+	log.debug(
+		"Opening filter form for log group: "
+			.. log_group.logGroupName
+			.. (log_stream and (", stream: " .. log_stream.logStreamName) or ", all streams")
+	)
+
 	-- Create a new buffer for the filter form
 	local buf = vim.api.nvim_create_buf(false, true)
+	log.debug("Created filter form buffer: " .. buf)
+
 	vim.api.nvim_buf_set_name(buf, "aws-logs-filter-form-" .. default_utility.generate_uuid())
 	vim.api.nvim_set_option_value("filetype", "awslogsfilter", { buf = buf })
 	vim.api.nvim_set_option_value("buftype", "acwrite", { buf = buf })
 
 	local stream_info = log_stream and ("Stream: " .. log_stream.logStreamName) or "All streams"
+	log.debug("Filter form stream info: " .. stream_info)
 
 	local lines = {
 		"# AWS CloudWatch Logs Filter Form",
@@ -81,14 +88,17 @@ function M.open_filter_form(log_group, log_stream)
 	}
 
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+	log.debug("Set filter form content with " .. #lines .. " lines")
 
 	vim.cmd("tabnew")
 	vim.api.nvim_win_set_buf(0, buf)
+	log.debug("Opened filter form in new tab")
 
 	vim.api.nvim_create_autocmd("BufWriteCmd", {
 		buffer = buf,
-		callback = parse_form_and_query_logs(log_group, log_stream),
+		callback = M._parse_form_and_query_logs(log_group, log_stream),
 	})
+	log.debug("Registered BufWriteCmd autocmd for buffer " .. buf)
 end
 
 ---------------------------------------------------------------------------------------------------
@@ -103,11 +113,11 @@ local FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 --- @param log_group { logGroupName: string, logGroupArn: string } The CloudWatch log group to query
 --- @param log_stream? { logStreamName: string } Optional log stream to filter by
 --- @return function Callback function for the BufWriteCmd autocmd
-parse_form_and_query_logs = function(log_group, log_stream)
+function M._parse_form_and_query_logs(log_group, log_stream)
 	return function(ev)
 		local result_buf = workflows_common.gen_result_buffer()
 
-		local form_values = parse_form(ev.buf)
+		local form_values = M._parse_form(ev.buf)
 
 		local params = {
 			logGroupName = log_group.logGroupName,
@@ -120,13 +130,13 @@ parse_form_and_query_logs = function(log_group, log_stream)
 			params.logStreamNames = { log_stream.logStreamName }
 		end
 
-		local success = query_logs(result_buf, params)
+		local success = M._query_logs(result_buf, params)
 		if not success then
 			return -- Error already handled in fetch_all_log_events
 		end
 
 		vim.keymap.set("n", "gl", function()
-			extend_query(result_buf, params)
+			M._extend_query(result_buf, params)
 		end, { buffer = result_buf, desc = "Extend logs at cursor line" })
 
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
@@ -145,7 +155,7 @@ end
 ---   - filterPattern: string - The CloudWatch Logs filter pattern
 ---   - startTime: number - Start time in Unix milliseconds
 ---   - endTime: number - End time in Unix milliseconds
-parse_form = function(form_buffer)
+function M._parse_form(form_buffer)
 	-- Parse the form
 	local form_values = {
 		filterPattern = "",
@@ -202,7 +212,7 @@ end
 --- @param result_buf number Buffer to append results to
 --- @param params table Parameters for filter_log_events API call
 --- @return boolean success Whether the operation was successful
-query_logs = function(result_buf, params)
+function M._query_logs(result_buf, params)
 	local all_events = {}
 	local next_token = nil
 	local min_ts, max_ts = nil, nil
@@ -266,7 +276,7 @@ end
 --- @param result_buf number Buffer ID containing the log results
 --- @param params table Base parameters for the filter_log_events API call
 --- @return nil
-extend_query = function(result_buf, params)
+function M._extend_query(result_buf, params)
 	-- 1 read cursor line & decide direction
 	local cur = vim.api.nvim_win_get_cursor(0)
 	local row = cur[1] - 1
