@@ -1,3 +1,4 @@
+local stub = require("luassert.stub")
 require("nvim-aws").setup()
 
 describe("nvim-aws.workflows.logs.utility", function()
