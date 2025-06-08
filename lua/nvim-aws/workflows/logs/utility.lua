@@ -131,6 +131,7 @@ function M._parse_form_and_query_logs(log_group, log_stream)
 		local form_values = M._parse_form(ev.buf)
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
 		vim.api.nvim_buf_delete(ev.buf, { force = true })
+    -- after parsing the form, I need to close the floating window ai!
 
 		local params = {
 			logGroupName = log_group.logGroupName,
