@@ -20,7 +20,7 @@ function M.start()
     actions = {
       ["default"] = function(selected)
         local table_name = selected[1]
-        -- TODO: implement query functionality
+        -- TODO: implement query functionality ai!
         print("Selected table: " .. table_name)
       end,
     },
