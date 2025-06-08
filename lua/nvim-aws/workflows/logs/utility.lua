@@ -277,10 +277,10 @@ end
 --- @param params table Base parameters for the filter_log_events API call
 --- @return nil
 function M._extend_query(result_buf, params)
-	-- 1 read cursor line & decide direction
 	local cur = vim.api.nvim_win_get_cursor(0)
 	local row = cur[1] - 1
 	local line = vim.api.nvim_buf_get_lines(result_buf, row, row + 1, false)[1] or ""
+  -- replace all the vim.print with log.debug messages ai!
 	vim.print(string.format("[extend_fetch] Cursor at row %d, line: %s", row, line))
 
 	local arrow, start_time_str, end_time_str = line:match("^%(([<>][<>][<>]) startTime: (%d+), endTime: (%d+)")
