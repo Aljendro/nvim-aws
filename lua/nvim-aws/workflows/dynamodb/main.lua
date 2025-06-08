@@ -2,29 +2,29 @@ local common = require("nvim-aws.workflows.dynamodb.utility")
 local dynamodb = require("nvim-aws.autogen_wrappers.dynamodb")
 local fzf = require("fzf-lua")
 local log = require("nvim-aws.utilities.log")
-local workflows_common = require("nvim-aws.workflows.common")
 
 local M = {}
 
 function M.start()
-  log.debug("Entering DynamoDB workflow")
-  local result = dynamodb.list_tables({})
-  if not result.success then
-    log.error("Error: " .. (result.error or "Failed to fetch tables"))
-    return
-  end
+	log.debug("Entering DynamoDB workflow")
+	local result = dynamodb.list_tables({})
+	if not result.success then
+		log.error("Error: " .. (result.error or "Failed to fetch tables"))
+		return
+	end
 
-  local tables = result.data.TableNames
+	local tables = result.data.TableNames
 
-  fzf.fzf_exec(tables, {
-    prompt = "Select DynamoDB Table> ",
-    actions = {
-      ["default"] = function(selected)
-        local table_name = selected[1]
-        common.scan_table(table_name)
-      end,
-    },
-  })
+	fzf.fzf_exec(tables, {
+		prompt = "Select DynamoDB Table> ",
+		actions = {
+			["default"] = function(selected)
+				local table_name = selected[1]
+				common.scan_table(table_name)
+			end,
+      -- add a keybind to query a table using a form, which allows to select the GSI table, input the hashKey and rangeKey and input add additional filters ai
+		},
+	})
 end
 
 return M
