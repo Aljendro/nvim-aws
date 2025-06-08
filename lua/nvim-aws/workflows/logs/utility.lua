@@ -217,7 +217,6 @@ end
 function M._query_logs(result_buf, params)
 	local all_events = {}
 	local next_token = nil
-	local min_ts, max_ts = nil, nil
 
 	repeat
 		local request_params = vim.tbl_extend("force", {}, params)
@@ -234,8 +233,6 @@ function M._query_logs(result_buf, params)
 		-- Collect events from this page
 		for _, log_event in ipairs(res.data.events or {}) do
 			table.insert(all_events, log_event)
-			min_ts = min_ts and math.min(min_ts, log_event.timestamp) or log_event.timestamp
-			max_ts = max_ts and math.max(max_ts, log_event.timestamp) or log_event.timestamp
 		end
 
 		next_token = res.data.nextToken
