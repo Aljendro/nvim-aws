@@ -35,6 +35,7 @@ function M.scan_table(table_name)
 	scan_batch()
 end
 
+-- refator this query_table utility file, so that it is similar to the logs form to get input ai!
 --- Prompt for query parameters and execute a DynamoDB query.
 --- @param table_name string The name of the DynamoDB table to query.
 function M.query_table(table_name)
