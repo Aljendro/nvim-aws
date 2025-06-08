@@ -280,11 +280,10 @@ function M._extend_query(result_buf, params)
 	local cur = vim.api.nvim_win_get_cursor(0)
 	local row = cur[1] - 1
 	local line = vim.api.nvim_buf_get_lines(result_buf, row, row + 1, false)[1] or ""
-  -- replace all the vim.print with log.debug messages ai!
 	vim.print(string.format("[extend_fetch] Cursor at row %d, line: %s", row, line))
 
 	local arrow, start_time_str, end_time_str = line:match("^%(([<>][<>][<>]) startTime: (%d+), endTime: (%d+)")
-	vim.print(
+	log.debug(
 		string.format(
 			"[extend_fetch] arrow: %s, start_time_str: %s, end_time_str: %s",
 			arrow,
