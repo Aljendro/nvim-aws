@@ -20,6 +20,7 @@ function M.start()
     prompt = "Select DynamoDB Table> ",
     actions = {
       ["default"] = function(selected)
+        -- move this function to the utility.lua file for dynamodb, make sure you add documentation ai
         local table_name = selected[1]
         local result_buf = workflows_common.gen_result_buffer()
         local function scan_batch(exclusive_key)
