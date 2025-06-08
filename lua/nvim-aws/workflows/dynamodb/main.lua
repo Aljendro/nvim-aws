@@ -22,7 +22,9 @@ function M.start()
 				local table_name = selected[1]
 				common.scan_table(table_name)
 			end,
-      -- add a keybind to query a table using a form, which allows to select the GSI table, input the hashKey and rangeKey and input add additional filters ai
+      ["ctrl-q"] = function(selected)
+        common.query_table(selected[1])
+      end,
 		},
 	})
 end
