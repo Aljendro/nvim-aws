@@ -280,7 +280,7 @@ function M._extend_query(result_buf, params)
 	local cur = vim.api.nvim_win_get_cursor(0)
 	local row = cur[1] - 1
 	local line = vim.api.nvim_buf_get_lines(result_buf, row, row + 1, false)[1] or ""
-	vim.print(string.format("[extend_fetch] Cursor at row %d, line: %s", row, line))
+	log.debug(string.format("[extend_fetch] Cursor at row %d, line: %s", row, line))
 
 	local arrow, start_time_str, end_time_str = line:match("^%(([<>][<>][<>]) startTime: (%d+), endTime: (%d+)")
 	log.debug(
@@ -293,13 +293,13 @@ function M._extend_query(result_buf, params)
 	)
 
 	if not arrow then
-		vim.print("[extend_fetch] No arrow/startTime/endTime pattern found, returning early")
+		log.debug("[extend_fetch] No arrow/startTime/endTime pattern found, returning early")
 		return
 	end
 	local prepend = arrow == "<<<"
 	local start_ts_ms = tonumber(start_time_str)
 	local end_ts_ms = tonumber(end_time_str)
-	vim.print(
+	log.debug(
 		string.format(
 			"[extend_fetch] Direction: %s, startTime: %d, endTime: %d",
 			prepend and "prepend" or "append",
@@ -317,13 +317,13 @@ function M._extend_query(result_buf, params)
 		rq.startTime = end_ts_ms + 1
 		rq.endTime = end_ts_ms + FETCH_LENGTH_TIME_IN_MS
 	end
-	vim.print(string.format("[extend_fetch] Request window: startTime=%d, endTime=%d", rq.startTime, rq.endTime))
+	log.debug(string.format("[extend_fetch] Request window: startTime=%d, endTime=%d", rq.startTime, rq.endTime))
 
 	-- 3 loop through pages
 	local res = logs.filter_log_events(rq)
 	if not (res and res.success) then
 		local error_msg = "Error fetching logs: " .. (res and res.error or "unknown")
-		vim.print(string.format("[extend_fetch] %s", error_msg))
+		log.debug(string.format("[extend_fetch] %s", error_msg))
 		workflows_common.append_buffer(result_buf, { error_msg })
 		return
 	end
@@ -334,7 +334,7 @@ function M._extend_query(result_buf, params)
 	end
 
 	local events = res.data.events or {}
-	vim.print(string.format("[extend_fetch] Fetched %d events", #events))
+	log.debug(string.format("[extend_fetch] Fetched %d events", #events))
 
 	if prepend then
 		if #events > 0 then
@@ -344,9 +344,12 @@ function M._extend_query(result_buf, params)
 			if res.data.nextToken then
 				local append_start_time = events[#events].timestamp + 1
 				local append_end_time = events[#events].timestamp + FETCH_LENGTH_TIME_IN_MS
-				table.insert(batch, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
+				table.insert(
+					batch,
+					string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time)
+				)
 			end
-			vim.print(
+			log.debug(
 				string.format(
 					"[extend_fetch] Prepending with timestamp markers: new_start=%d, new_end=%d",
 					new_start_time,
@@ -360,7 +363,7 @@ function M._extend_query(result_buf, params)
 			local new_start_time = events[#events].timestamp + 1
 			local new_end_time = events[#events].timestamp + FETCH_LENGTH_TIME_IN_MS
 			table.insert(batch, string.format("(>>> startTime: %d, endTime: %d)", new_start_time, new_end_time))
-			vim.print(
+			log.debug(
 				string.format(
 					"[extend_fetch] Appending with timestamp marker: new_start=%d, new_end=%d",
 					new_start_time,
@@ -370,7 +373,7 @@ function M._extend_query(result_buf, params)
 		end
 		vim.api.nvim_buf_set_lines(result_buf, row, row + 1, false, batch)
 	end
-	vim.print(string.format("[extend_fetch] Completed: added %d lines to buffer", #batch))
+	log.debug(string.format("[extend_fetch] Completed: added %d lines to buffer", #batch))
 end
 
 return M
