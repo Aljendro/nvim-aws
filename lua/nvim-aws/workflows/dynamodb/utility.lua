@@ -1,6 +1,7 @@
 local workflows_common = require("nvim-aws.workflows.common")
 local log = require("nvim-aws.utilities.log")
 local dynamodb = require("nvim-aws.autogen_wrappers.dynamodb")
+local default_utility = require("nvim-aws.workflows.default.utility")
 
 local M = {}
 
@@ -35,54 +36,50 @@ function M.scan_table(table_name)
 	scan_batch()
 end
 
--- refator this query_table utility file, so that it is similar to the logs form to get input ai!
---- Prompt for query parameters and execute a DynamoDB query.
+--- Open a form buffer to query a DynamoDB table via JSON template.
 --- @param table_name string The name of the DynamoDB table to query.
 function M.query_table(table_name)
-  vim.ui.input({prompt = "Index name (optional): "}, function(index_name)
-    vim.ui.input({prompt = "Hash key name: "}, function(hash_key_name)
-      vim.ui.input({prompt = "Hash key value: "}, function(hash_key_value)
-        vim.ui.input({prompt = "Range key name (optional): "}, function(range_key_name)
-          vim.ui.input({prompt = "Range key value (optional): "}, function(range_key_value)
-            vim.ui.input({prompt = "Filter expression (optional): "}, function(filter_expr)
-              local params = { TableName = table_name }
-              if index_name and index_name ~= "" then params.IndexName = index_name end
-              local conds = {}
-              local expr_names = {}
-              local expr_vals = {}
-              if hash_key_name and hash_key_name ~= "" then
-                table.insert(conds, "#hk = :hv")
-                expr_names["#hk"] = hash_key_name
-                expr_vals[":hv"] = hash_key_value
-              end
-              if range_key_name and range_key_name ~= "" then
-                table.insert(conds, "#rk = :rv")
-                expr_names["#rk"] = range_key_name
-                expr_vals[":rv"] = range_key_value
-              end
-              if #conds > 0 then
-                params.KeyConditionExpression = table.concat(conds, " AND ")
-                params.ExpressionAttributeNames = expr_names
-                params.ExpressionAttributeValues = expr_vals
-              end
-              if filter_expr and filter_expr ~= "" then params.FilterExpression = filter_expr end
-              local res = dynamodb.query(params)
-              if not res.success then
-                log.error("Error querying table: " .. (res.error or "unknown"))
-                return
-              end
-              local result_buf = workflows_common.gen_result_buffer()
-              local lines = {}
-              for _, item in ipairs(res.data.Items or {}) do
-                table.insert(lines, vim.inspect(item))
-              end
-              workflows_common.append_buffer(result_buf, lines)
-            end)
-          end)
-        end)
-      end)
-    end)
-  end)
+	M._open_query_form(table_name)
+end
+
+--- Internal: open a DynamoDB query form for the given table.
+--- @param table_name string
+function M._open_query_form(table_name)
+	local template = vim.fn.json_encode({ TableName = table_name, Limit = 25 })
+	local buf = default_utility.create_template_buffer("dynamodb", "query", template)
+	vim.cmd("tabnew")
+	vim.api.nvim_win_set_buf(0, buf)
+	vim.api.nvim_create_autocmd("BufWriteCmd", {
+		buffer = buf,
+		callback = M._parse_and_query(table_name),
+	})
+end
+
+--- Internal: parse the DynamoDB query form and execute the query.
+--- @param table_name string
+function M._parse_and_query(table_name)
+	return function(ev)
+		local content = vim.api.nvim_buf_get_lines(ev.buf, 0, -1, false)
+		local input_json = table.concat(content, "\n")
+		local ok, params = pcall(vim.fn.json_decode, input_json)
+		if not ok then
+			log.error("Invalid JSON query: " .. input_json)
+			return
+		end
+		local res = dynamodb.query(params)
+		local result_buf = workflows_common.gen_result_buffer()
+		if not res.success then
+			workflows_common.append_buffer(result_buf, { "Error querying table: " .. (res.error or "unknown") })
+		else
+			local lines_out = {}
+			for _, item in ipairs(res.data.Items or {}) do
+				table.insert(lines_out, vim.inspect(item))
+			end
+			workflows_common.append_buffer(result_buf, lines_out)
+		end
+		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
+		vim.api.nvim_buf_delete(ev.buf, { force = true })
+	end
 end
 
 return M
