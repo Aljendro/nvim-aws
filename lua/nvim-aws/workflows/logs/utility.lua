@@ -57,7 +57,6 @@ function M.open_filter_form(log_group, log_stream)
 	)
 
 	-- Create a new buffer for the filter form
-  -- can you open this buffer into a floating window instead ai!
 	local buf = vim.api.nvim_create_buf(false, true)
 	log.debug("Created filter form buffer: " .. buf)
 
@@ -91,9 +90,22 @@ function M.open_filter_form(log_group, log_stream)
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
 	log.debug("Set filter form content with " .. #lines .. " lines")
 
-	vim.cmd("tabnew")
-	vim.api.nvim_win_set_buf(0, buf)
-	log.debug("Opened filter form in new tab")
+	-- Open filter form in floating window
+	local width = math.floor(vim.o.columns * 0.8)
+	local height = math.floor(vim.o.lines * 0.8)
+	local row = math.floor((vim.o.lines - height) / 2)
+	local col = math.floor((vim.o.columns - width) / 2)
+	local win_opts = {
+		relative = "editor",
+		width = width,
+		height = height,
+		row = row,
+		col = col,
+		style = "minimal",
+		border = "rounded",
+	}
+	vim.api.nvim_open_win(buf, true, win_opts)
+	log.debug("Opened filter form in floating window")
 
 	vim.api.nvim_create_autocmd("BufWriteCmd", {
 		buffer = buf,
