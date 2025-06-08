@@ -56,6 +56,7 @@ function M._open_query_form(table_name)
 	local template = vim.fn.json_encode({ TableName = table_name, Limit = 25 })
 	local buf = default_utility.create_template_buffer("dynamodb", "query", template)
 	vim.cmd("tabnew")
+  -- can you open up this buffer in a floatin window to get user input ai!
 	vim.api.nvim_win_set_buf(0, buf)
 	vim.api.nvim_create_autocmd("BufWriteCmd", {
 		buffer = buf,
