@@ -5,6 +5,10 @@ local default_utility = require("nvim-aws.workflows.default.utility")
 
 local M = {}
 
+---------------------------------------------------------------------------------------------------
+------------------------------------ EXPORT FUNCTIONS ---------------------------------------------
+---------------------------------------------------------------------------------------------------
+
 --- Scan a DynamoDB table and display items in a result buffer with pagination.
 --- @param table_name string The name of the DynamoDB table to scan.
 function M.scan_table(table_name)
@@ -41,6 +45,10 @@ end
 function M.query_table(table_name)
 	M._open_query_form(table_name)
 end
+
+---------------------------------------------------------------------------------------------------
+------------------------------------- LOCAL FUNCTIONS ---------------------------------------------
+---------------------------------------------------------------------------------------------------
 
 --- Internal: open a DynamoDB query form for the given table.
 --- @param table_name string
