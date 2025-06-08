@@ -90,7 +90,6 @@ describe("nvim-aws.workflows.logs.utility", function()
 		workflows_common.gen_result_buffer:revert()
 	end)
 
-  -- update this test ai
 	it("should test the extend query functionality - Scenario 1 (prepend)", function()
 		local workflows_common = require("nvim-aws.workflows.common")
 		local logs_wrapper = require("nvim-aws.autogen_wrappers.logs")
