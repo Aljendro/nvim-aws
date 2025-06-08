@@ -200,7 +200,7 @@ function M._parse_form(form_buffer)
 	end
 
 	-- Default to 10 minutes ago if startTime or endTime is missing
-	if form_values.startTime ~= "" or form_values.endTime ~= "" then
+	if form_values.startTime == "" or form_values.endTime == "" then
 		local end_time_ms = os.time() * 1000
 		local start_time_ms = common.parse_relative_time("10m", end_time_ms)
 		form_values.startTime = start_time_ms

@@ -49,7 +49,7 @@ describe("testing default workflow", function()
 	end)
 
 	it("should execute valid commands for available services", function()
-		local result = default_utility.execute_command("cloudwatch", "list_metrics", { '{"Namespace": "AWS/EC2"}' })
+		local result = default_utility.execute_command("cloudwatch", "list_metrics", '{"Namespace": "AWS/EC2"}')
 
 		assert.is_true(result.success)
 	end)
