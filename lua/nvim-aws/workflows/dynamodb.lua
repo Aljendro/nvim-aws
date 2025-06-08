@@ -1,3 +1,4 @@
+-- this module needs to be moved to /Users/alejandroalvarado/Documents/Projects/nvim-aws/lua/nvim-aws/workflows/dynamodb/main.lua ai
 local dynamodb = require("nvim-aws.autogen_wrappers.dynamodb")
 local fzf = require("fzf-lua")
 local log = require("nvim-aws.utilities.log")

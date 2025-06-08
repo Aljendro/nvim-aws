@@ -1,0 +1,8 @@
+-- please implement the following ai!
+-- this module should have the top level functions the user can use to navigate around dynamodb
+-- it should be able to find tables in the account
+-- it should be able to query data and display the data in a buffer, the buffer should allow the user to "continue" by hitting a keybind to continue the next batch of data
+-- the query should be able to set the global secondary indexes and also set the filters for data
+-- if a user hits a keybind on an item, it should be able to update data by setting a paritial set of data in a buffer and saving it
+-- if a user hits a keybind on an item, it should be able to delete data
+-- it should be able to create data by setting json data in a buffer and saving it
