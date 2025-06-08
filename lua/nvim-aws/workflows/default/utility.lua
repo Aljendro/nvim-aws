@@ -66,8 +66,8 @@ end
 --- Execute the command with the user provided input
 --- @param service_name string
 --- @param command_name string
---- @param input_json string[] the json string of input to the command
---- @param callbacks {stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @param input_json string[]|string the json string of input to the command
+--- @param callbacks? {stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
 --- @return {success: boolean, job: vim.SystemObj}
 function M.execute_command(service_name, command_name, input_json, callbacks)
 	log.info("execute_command(" .. service_name .. ", " .. command_name .. ")")
