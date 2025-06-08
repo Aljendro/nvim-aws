@@ -90,6 +90,7 @@ function M.open_filter_form(log_group, log_stream)
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
 	log.debug("Set filter form content with " .. #lines .. " lines")
 
+	-- I have opened this floating window here ai
 	-- Open filter form in floating window
 	local width = math.floor(vim.o.columns * 0.8)
 	local height = math.floor(vim.o.lines * 0.8)
@@ -128,9 +129,10 @@ M.FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 --- @return function Callback function for the BufWriteCmd autocmd
 function M._parse_form_and_query_logs(log_group, log_stream)
 	return function(ev)
-		local result_buf = workflows_common.gen_result_buffer()
-
 		local form_values = M._parse_form(ev.buf)
+		-- I need to close the floating window here ai!
+		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
+		vim.api.nvim_buf_delete(ev.buf, { force = true })
 
 		local params = {
 			logGroupName = log_group.logGroupName,
@@ -143,6 +145,7 @@ function M._parse_form_and_query_logs(log_group, log_stream)
 			params.logStreamNames = { log_stream.logStreamName }
 		end
 
+		local result_buf = workflows_common.gen_result_buffer()
 		local success = M._query_logs(result_buf, params)
 		if not success then
 			return -- Error already handled in fetch_all_log_events
@@ -151,9 +154,6 @@ function M._parse_form_and_query_logs(log_group, log_stream)
 		vim.keymap.set("n", "gl", function()
 			M._extend_query(result_buf, params)
 		end, { buffer = result_buf, desc = "Extend logs at cursor line" })
-
-		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
-		vim.api.nvim_buf_delete(ev.buf, { force = true })
 
 		return params
 	end
