@@ -6,9 +6,16 @@ local logs_utility = require("nvim-aws.workflows.logs.utility")
 
 local M = {}
 
-function M.start()
-	log.debug("Entering CloudWatch Logs workflow")
-	local result = logs.describe_log_groups({})
+function M.start(log_group_name_prefix)
+	log.debug(
+		"Entering CloudWatch Logs workflow"
+			.. (log_group_name_prefix ~= "" and ": logGroupName = " .. log_group_name_prefix or "")
+	)
+	local params = {}
+	if log_group_name_prefix and log_group_name_prefix ~= "" then
+		params.logGroupNamePrefix = log_group_name_prefix
+	end
+	local result = logs.describe_log_groups(params)
 	if not result.success then
 		log.error("Error: " .. (result.error or "Failed to fetch log groups"))
 		return
@@ -79,7 +86,7 @@ function M.handle_select_log_stream(log_group)
 			end,
 			["ctrl-l"] = function(selected)
 				local stream_name = selected[1]
-				local stream      = keyed_streams[stream_name]
+				local stream = keyed_streams[stream_name]
 				logs_utility.open_aws_console_stream_link(log_group, stream)
 			end,
 		},

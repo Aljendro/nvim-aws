@@ -3,9 +3,9 @@ if vim.g.loaded_nvim_aws == 1 then
 end
 vim.g.loaded_nvim_aws = 1
 
-vim.api.nvim_create_user_command("AWSLogs", function()
-	require("nvim-aws.workflows.logs.main").start()
-end, {})
+vim.api.nvim_create_user_command("AWSLogs", function(opts)
+	require("nvim-aws.workflows.logs.main").start(opts.args)
+end, { nargs = "?" })
 
 vim.api.nvim_create_user_command("AWSDynamodb", function()
 	require("nvim-aws.workflows.dynamodb").start()

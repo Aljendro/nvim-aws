@@ -77,12 +77,20 @@ describe("nvim-aws.workflows.logs.utility", function()
 		-- Verify results
 		local result_lines = vim.api.nvim_buf_get_lines(result_buf, 0, -1, false)
 		assert.equals(
-			string.format("(<<< startTime: %d, endTime: %d)", params.startTime - utility.FETCH_LENGTH_TIME_IN_MS, params.startTime - 1),
+			string.format(
+				"(<<< startTime: %d, endTime: %d)",
+				params.startTime - utility.FETCH_LENGTH_TIME_IN_MS,
+				params.startTime - 1
+			),
 			result_lines[2]
 		)
 		assert.equals("event1", result_lines[3]:match("%) (.+)"))
 		assert.equals(
-			string.format("(>>> startTime: %d, endTime: %d)", params.endTime + 1, params.endTime + utility.FETCH_LENGTH_TIME_IN_MS),
+			string.format(
+				"(>>> startTime: %d, endTime: %d)",
+				params.endTime + 1,
+				params.endTime + utility.FETCH_LENGTH_TIME_IN_MS
+			),
 			result_lines[#result_lines]
 		)
 		-- Revert stubs
