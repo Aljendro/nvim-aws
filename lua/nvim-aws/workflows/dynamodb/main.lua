@@ -25,8 +25,7 @@ function M.start()
         local function scan_batch(exclusive_key)
           local params = { TableName = table_name, Limit = 25 }
           if exclusive_key then params.ExclusiveStartKey = exclusive_key end
-          -- this operation should be list_tables not scan ai!
-          local res = dynamodb.scan(params)
+          local res = dynamodb.list_tables(params)
           if not res.success then
             log.error("Error scanning table: " .. (res.error or "unknown"))
             return
