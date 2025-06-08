@@ -30,6 +30,7 @@ function M.start()
             log.error("Error scanning table: " .. (res.error or "unknown"))
             return
           end
+          -- the return values are not correct ai!
           local items = res.data.Items or {}
           local lines = {}
           for _, item in ipairs(items) do
