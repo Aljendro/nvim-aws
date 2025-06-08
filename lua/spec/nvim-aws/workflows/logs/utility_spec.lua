@@ -73,16 +73,16 @@ describe("nvim-aws.workflows.logs.utility", function()
 		vim.api.nvim_buf_set_lines(form_buf, rel_idx, rel_idx, false, { "10m" })
 		-- Trigger the BufWriteCmd callback directly
 		local callback = utility._parse_form_and_query_logs(log_group, log_stream)
-		callback({ buf = form_buf })
+		local params = callback({ buf = form_buf })
 		-- Verify results
 		local result_lines = vim.api.nvim_buf_get_lines(result_buf, 0, -1, false)
 		assert.equals(
-			string.format("(<<< startTime: %d, endTime: %d)", firstLogTS - 600000, firstLogTS - 1),
+			string.format("(<<< startTime: %d, endTime: %d)", params.startTime - utility.FETCH_LENGTH_TIME_IN_MS, params.startTime - 1),
 			result_lines[2]
 		)
 		assert.equals("event1", result_lines[3]:match("%) (.+)"))
 		assert.equals(
-			string.format("(>>> startTime: %d, endTime: %d)", lastLogTS + 1, lastLogTS + 600000),
+			string.format("(>>> startTime: %d, endTime: %d)", params.endTime + 1, params.endTime + utility.FETCH_LENGTH_TIME_IN_MS),
 			result_lines[#result_lines]
 		)
 		-- Revert stubs
@@ -91,7 +91,6 @@ describe("nvim-aws.workflows.logs.utility", function()
 	end)
 
 	it("should test the extend query functionality - Scenario 1 (prepend)", function()
-		local workflows_common = require("nvim-aws.workflows.common")
 		local logs_wrapper = require("nvim-aws.autogen_wrappers.logs")
 		local result_buf = vim.api.nvim_create_buf(false, true)
 
@@ -164,7 +163,6 @@ describe("nvim-aws.workflows.logs.utility", function()
 	end)
 
 	it("should test the extend query functionality - Scenario 2 (append)", function()
-		local workflows_common = require("nvim-aws.workflows.common")
 		local logs_wrapper = require("nvim-aws.autogen_wrappers.logs")
 		local result_buf = vim.api.nvim_create_buf(false, true)
 

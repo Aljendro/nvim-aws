@@ -105,7 +105,7 @@ end
 ------------------------------------- LOCAL FUNCTIONS ---------------------------------------------
 ---------------------------------------------------------------------------------------------------
 
-local FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
+M.FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 
 --- Creates a callback function for the BufWriteCmd autocmd to process a log filtering form
 --- The returned function parses the form values, queries CloudWatch logs with the specified filters,
@@ -141,6 +141,8 @@ function M._parse_form_and_query_logs(log_group, log_stream)
 
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
 		vim.api.nvim_buf_delete(ev.buf, { force = true })
+
+		return params
 	end
 end
 
@@ -249,21 +251,12 @@ function M._query_logs(result_buf, params)
 	end
 
 	-- Add timestamp markers if we have events
-	if min_ts then
-		local prepend_start_time = min_ts - FETCH_LENGTH_TIME_IN_MS
-		local prepend_end_time = min_ts - 1
-		local append_start_time = max_ts + 1
-		local append_end_time = max_ts + FETCH_LENGTH_TIME_IN_MS
-		table.insert(lines, 1, string.format("(<<< startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
-		table.insert(lines, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
-	else
-		local prepend_start_time = params.startTime - FETCH_LENGTH_TIME_IN_MS
-		local prepend_end_time = params.startTime - 1
-		local append_start_time = params.endTime + 1
-		local append_end_time = params.endTime + FETCH_LENGTH_TIME_IN_MS
-		table.insert(lines, 1, string.format("(<<< startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
-		table.insert(lines, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
-	end
+	local prepend_start_time = params.startTime - M.FETCH_LENGTH_TIME_IN_MS
+	local prepend_end_time = params.startTime - 1
+	local append_start_time = params.endTime + 1
+	local append_end_time = params.endTime + M.FETCH_LENGTH_TIME_IN_MS
+	table.insert(lines, 1, string.format("(<<< startTime: %d, endTime: %d)", prepend_start_time, prepend_end_time))
+	table.insert(lines, string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time))
 
 	workflows_common.append_buffer(result_buf, lines)
 	return true
@@ -310,13 +303,8 @@ function M._extend_query(result_buf, params)
 
 	-- 2 build request window
 	local rq = vim.tbl_extend("force", {}, params)
-	if prepend then
-		rq.startTime = start_ts_ms - FETCH_LENGTH_TIME_IN_MS
-		rq.endTime = start_ts_ms - 1
-	else
-		rq.startTime = end_ts_ms + 1
-		rq.endTime = end_ts_ms + FETCH_LENGTH_TIME_IN_MS
-	end
+	rq.startTime = start_ts_ms
+	rq.endTime = end_ts_ms
 	log.debug(string.format("[extend_fetch] Request window: startTime=%d, endTime=%d", rq.startTime, rq.endTime))
 
 	-- 3 loop through pages
@@ -338,7 +326,7 @@ function M._extend_query(result_buf, params)
 
 	if prepend then
 		if #events > 0 then
-			local new_start_time = events[1].timestamp - FETCH_LENGTH_TIME_IN_MS
+			local new_start_time = events[1].timestamp - M.FETCH_LENGTH_TIME_IN_MS
 			local new_end_time = events[1].timestamp - 1
 			table.insert(batch, 1, string.format("(<<< startTime: %d, endTime: %d)", new_start_time, new_end_time))
 			if res.data.nextToken then
@@ -361,7 +349,7 @@ function M._extend_query(result_buf, params)
 	else
 		if #events > 0 then
 			local new_start_time = events[#events].timestamp + 1
-			local new_end_time = events[#events].timestamp + FETCH_LENGTH_TIME_IN_MS
+			local new_end_time = events[#events].timestamp + M.FETCH_LENGTH_TIME_IN_MS
 			table.insert(batch, string.format("(>>> startTime: %d, endTime: %d)", new_start_time, new_end_time))
 			log.debug(
 				string.format(
