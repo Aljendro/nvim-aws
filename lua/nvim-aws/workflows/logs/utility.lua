@@ -130,7 +130,6 @@ M.FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 function M._parse_form_and_query_logs(log_group, log_stream)
 	return function(ev)
 		local form_values = M._parse_form(ev.buf)
-		-- I need to close the floating window here ai!
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
 		vim.api.nvim_buf_delete(ev.buf, { force = true })
 
