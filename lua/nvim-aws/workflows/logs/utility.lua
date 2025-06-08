@@ -90,7 +90,6 @@ function M.open_filter_form(log_group, log_stream)
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
 	log.debug("Set filter form content with " .. #lines .. " lines")
 
-	-- I have opened this floating window here ai
 	-- Open filter form in floating window
 	local width = math.floor(vim.o.columns * 0.8)
 	local height = math.floor(vim.o.lines * 0.8)
