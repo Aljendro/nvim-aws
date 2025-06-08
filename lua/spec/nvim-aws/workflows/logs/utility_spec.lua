@@ -90,15 +90,6 @@ describe("nvim-aws.workflows.logs.utility", function()
 		workflows_common.gen_result_buffer:revert()
 	end)
 
-	-- Scenario 1:
-	-- pressing the extend keybinding on (<<< startTime: <unix ts A>, endTime: <unix ts B>)
-	-- we want the the code to query between those two timestamps and replace it with another (<<< startTime: <unix ms>, endTime: <unix ms>) at the top of the file and the contents of the logs from the query
-	-- the new startTime will be 10 minutes before the the old startTime <unix ts A> and the new endTime will be 1 ms before the old endTime <unix ts B>
-	-- IF the query results in a nextToken, it will produce a (>>> startTime: <unix ts>, endTime: <unix ts>) after the new logs just above the previous contents of the existing logs in the buffer. The startTime and endTime of this (>>> startTime: <unix ts>, endTime: <unix ts>) will not exceed the original <unix ts A>
-	-- Scenario 2:
-	-- pressing the extend keybinding on (>>> startTime: <unix ts C>, endTime: <unix ts D>)
-	-- we want the the code to query between those two timestamps and produce another (>>> startTime: <unix ms>, endTime: <unix ms>) at the bottom of the file
-	-- the new startTime should be 1 ms after the previous endTime <unix ts D> and the new endTime should be 10 minutes after the endTime <unix ts D>
 	it("should test the extend query functionality - Scenario 1 (prepend)", function()
 		local workflows_common = require("nvim-aws.workflows.common")
 		local logs_wrapper = require("nvim-aws.autogen_wrappers.logs")
