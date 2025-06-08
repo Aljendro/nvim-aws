@@ -57,6 +57,7 @@ function M.open_filter_form(log_group, log_stream)
 	)
 
 	-- Create a new buffer for the filter form
+  -- can you open this buffer into a floating window instead ai!
 	local buf = vim.api.nvim_create_buf(false, true)
 	log.debug("Created filter form buffer: " .. buf)
 
