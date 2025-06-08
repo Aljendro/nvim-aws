@@ -344,7 +344,7 @@ function M._extend_query(result_buf, params)
 			table.insert(batch, 1, string.format("(<<< startTime: %d, endTime: %d)", new_start_time, new_end_time))
 			if res.data.nextToken then
 				local append_start_time = events[#events].timestamp + 1
-				local append_end_time = events[#events].timestamp + FETCH_LENGTH_TIME_IN_MS
+				local append_end_time = math.min(events[#events].timestamp + FETCH_LENGTH_TIME_IN_MS, start_ts_ms)
 				table.insert(
 					batch,
 					string.format("(>>> startTime: %d, endTime: %d)", append_start_time, append_end_time)

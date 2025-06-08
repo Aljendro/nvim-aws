@@ -90,7 +90,6 @@ describe("nvim-aws.workflows.logs.utility", function()
 		workflows_common.gen_result_buffer:revert()
 	end)
 
-	-- Can you check these tests and make sure they are working properly ai!
 	-- Scenario 1:
 	-- pressing the extend keybinding on (<<< startTime: <unix ts A>, endTime: <unix ts B>)
 	-- we want the the code to query between those two timestamps and replace it with another (<<< startTime: <unix ms>, endTime: <unix ms>) at the top of the file and the contents of the logs from the query
