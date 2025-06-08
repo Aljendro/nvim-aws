@@ -343,6 +343,7 @@ function M._extend_query(result_buf, params)
 			table.insert(batch, 1, string.format("(<<< startTime: %d, endTime: %d)", new_start_time, new_end_time))
 			if res.data.nextToken then
 				local append_start_time = events[#events].timestamp + 1
+        -- there might be a problem here, this timestamp cannot exceed the original endTime timestamp that was parsed from the string (end_time_str) ai!
 				local append_end_time = events[#events].timestamp + FETCH_LENGTH_TIME_IN_MS
 				table.insert(
 					batch,
