@@ -1,1 +1,5 @@
--- any function that is not UI centric, but serves as utility functions should go here ai
+local M = {}
+
+-- Add DynamoDB workflow utility functions here
+
+return M

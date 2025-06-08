@@ -1,8 +1,30 @@
--- please implement the following ai!
--- this module should have the top level functions the user can use to navigate around dynamodb
--- it should be able to find tables in the account
--- it should be able to query data and display the data in a buffer, the buffer should allow the user to "continue" by hitting a keybind to continue the next batch of data
--- the query should be able to set the global secondary indexes and also set the filters for data
--- if a user hits a keybind on an item, it should be able to update data by setting a paritial set of data in a buffer and saving it
--- if a user hits a keybind on an item, it should be able to delete data
--- it should be able to create data by setting json data in a buffer and saving it
+local common = require("nvim-aws.workflows.dynamodb.utility")
+local dynamodb = require("nvim-aws.autogen_wrappers.dynamodb")
+local fzf = require("fzf-lua")
+local log = require("nvim-aws.utilities.log")
+
+local M = {}
+
+function M.start()
+  log.debug("Entering DynamoDB workflow")
+  local result = dynamodb.list_tables({})
+  if not result.success then
+    log.error("Error: " .. (result.error or "Failed to fetch tables"))
+    return
+  end
+
+  local tables = result.data.TableNames
+
+  fzf.fzf_exec(tables, {
+    prompt = "Select DynamoDB Table> ",
+    actions = {
+      ["default"] = function(selected)
+        local table_name = selected[1]
+        -- TODO: implement query functionality
+        print("Selected table: " .. table_name)
+      end,
+    },
+  })
+end
+
+return M
