@@ -90,7 +90,6 @@ describe("nvim-aws.workflows.logs.utility", function()
 		workflows_common.gen_result_buffer:revert()
 	end)
 
-  -- update this test as well ai
 	it("should test the extend query functionality - Scenario 1 (prepend)", function()
 		local workflows_common = require("nvim-aws.workflows.common")
 		local logs_wrapper = require("nvim-aws.autogen_wrappers.logs")
@@ -156,7 +155,7 @@ describe("nvim-aws.workflows.logs.utility", function()
 
 		-- Should have >>> marker since nextToken was present
 		local append_start = eventsTimestamps[2] + 1
-		local append_end = eventsTimestamps[2] + 600000
+		local append_end = endTimeB
 		assert.equals(string.format("(>>> startTime: %d, endTime: %d)", append_start, append_end), result_lines[4])
 
 		-- Clean up stubs
