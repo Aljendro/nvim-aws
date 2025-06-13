@@ -58,7 +58,10 @@ end
 --- @param table_name string
 function M._open_query_form(table_name)
 	log.debug("_open_query_form()", { table_name = table_name })
-  -- I need you to create a nice form for the user and take as input the following data ai!
+  -- I DO NOT want to show the user the following table in the buffer,
+  -- I need you to create a nice output from this table, where each row has the field and the user
+  -- is able to add their output. I do not want to show them json to update. I have to 
+  -- make it really nice for the user to add their input ai!
 	local template_tbl = {
 		TableName = table_name,
 		KeyConditionExpression = "",

@@ -177,7 +177,7 @@ function M._parse_form(form_buffer)
 		endTime = "",
 	}
 
-  -- this is an example of parsing the log from ai
+  -- this is an example of parsing the log from ai 
 	local content = vim.api.nvim_buf_get_lines(form_buffer, 0, -1, false)
 
 	local current_section = ""
