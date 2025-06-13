@@ -28,8 +28,9 @@ function M.scan_table(table_name)
 		local items = res.data.Items or {}
 		local lines = {}
 		for _, item in ipairs(items) do
-      --  i need to remove the newlines from item before putting them into the lines table ai!
-      table.insert(lines, vim.inspect(item))
+			-- Produce a single-line string for each item.
+			local item_str = vim.inspect(item):gsub("\n%s*", " ")
+			table.insert(lines, item_str)
 		end
 		log.debug("lines: " .. vim.inspect(lines))
 		workflows_common.append_buffer(result_buf, lines)
