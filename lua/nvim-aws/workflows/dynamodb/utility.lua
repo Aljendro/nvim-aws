@@ -58,67 +58,21 @@ end
 --- @param table_name string
 function M._open_query_form(table_name)
 	log.debug("_open_query_form()", { table_name = table_name })
-	local template = vim.json.encode(dynamodb.query().data)
-
-	-- this is the payload that is returned, is shown below
-	--{
-	--  "FilterExpression": "",
-	--  "KeyConditionExpression": "",
-	--  "ExpressionAttributeNames": {
-	--    "KeyName": ""
-	--  },
-	--  "ExpressionAttributeValues": {
-	--    "KeyName": {
-	--      "M": {
-	--        "KeyName": {}
-	--      },
-	--      "SS": [
-	--        ""
-	--      ],
-	--      "NS": [
-	--        ""
-	--      ],
-	--      "NULL": true,
-	--      "BOOL": true,
-	--      "L": [
-	--        {}
-	--      ],
-	--      "S": "",
-	--      "N": "",
-	--      "BS": []
-	--    }
-	--  },
-	--  "IndexName": "",
-	--  "ConsistentRead": true,
-	--  "TableName": "",
-	--  "Limit": 0,
-	--  "ExclusiveStartKey": {
-	--    "KeyName": {
-	--      "M": {
-	--        "KeyName": {}
-	--      },
-	--      "SS": [
-	--        ""
-	--      ],
-	--      "NS": [
-	--        ""
-	--      ],
-	--      "NULL": true,
-	--      "BOOL": true,
-	--      "L": [
-	--        {}
-	--      ],
-	--      "S": "",
-	--      "N": "",
-	--      "BS": []
-	--    }
-	--  },
-	--  "ScanIndexForward": true,
-	--  "ReturnConsumedCapacity": "INDEXES",
-	--  "Select": "ALL_ATTRIBUTES",
-	--  "ProjectionExpression": ""
-	--}
-	--  I need to make a nice form for the user, so that they don't have to type as much ai!
+	-- Build a concise template so the user only fills the essentials
+	local template_tbl = {
+	  TableName = table_name,
+	  KeyConditionExpression = "",
+	  FilterExpression = "",
+	  ExpressionAttributeNames = {},
+	  ExpressionAttributeValues = {},
+	  IndexName = "",
+	  Limit = 25,
+	  ConsistentRead = false,
+	  ScanIndexForward = true,
+	  ProjectionExpression = "",
+	  Select = "ALL_ATTRIBUTES",
+	}
+	local template = vim.fn.json_encode(template_tbl)
 	local buf = default_utility.create_template_buffer("dynamodb", "query", template)
 	-- Open buffer in a floating window for user input
 	local width = math.floor(vim.o.columns * 0.8)
