@@ -28,11 +28,9 @@ function M.scan_table(table_name)
 		local items = res.data.Items or {}
 		local lines = {}
 		for _, item in ipairs(items) do
-			-- Produce a single-line string for each item.
-			local item_str = vim.inspect(item):gsub("\n%s*", " ")
-			table.insert(lines, item_str)
+			local json_input = vim.fn.json_encode(item)
+			table.insert(lines, json_input)
 		end
-		log.debug("lines: " .. vim.inspect(lines))
 		workflows_common.append_buffer(result_buf, lines)
 		local last_key = res.data.LastEvaluatedKey
 		if last_key then
@@ -60,7 +58,67 @@ end
 --- @param table_name string
 function M._open_query_form(table_name)
 	log.debug("_open_query_form()", { table_name = table_name })
-	local template = vim.fn.json_encode({ TableName = table_name, Limit = 25 })
+	local template = vim.json.encode(dynamodb.query().data)
+
+	-- this is the payload that is returned, is shown below
+	--{
+	--  "FilterExpression": "",
+	--  "KeyConditionExpression": "",
+	--  "ExpressionAttributeNames": {
+	--    "KeyName": ""
+	--  },
+	--  "ExpressionAttributeValues": {
+	--    "KeyName": {
+	--      "M": {
+	--        "KeyName": {}
+	--      },
+	--      "SS": [
+	--        ""
+	--      ],
+	--      "NS": [
+	--        ""
+	--      ],
+	--      "NULL": true,
+	--      "BOOL": true,
+	--      "L": [
+	--        {}
+	--      ],
+	--      "S": "",
+	--      "N": "",
+	--      "BS": []
+	--    }
+	--  },
+	--  "IndexName": "",
+	--  "ConsistentRead": true,
+	--  "TableName": "",
+	--  "Limit": 0,
+	--  "ExclusiveStartKey": {
+	--    "KeyName": {
+	--      "M": {
+	--        "KeyName": {}
+	--      },
+	--      "SS": [
+	--        ""
+	--      ],
+	--      "NS": [
+	--        ""
+	--      ],
+	--      "NULL": true,
+	--      "BOOL": true,
+	--      "L": [
+	--        {}
+	--      ],
+	--      "S": "",
+	--      "N": "",
+	--      "BS": []
+	--    }
+	--  },
+	--  "ScanIndexForward": true,
+	--  "ReturnConsumedCapacity": "INDEXES",
+	--  "Select": "ALL_ATTRIBUTES",
+	--  "ProjectionExpression": ""
+	--}
+	--  I need to make a nice form for the user, so that they don't have to type as much ai!
 	local buf = default_utility.create_template_buffer("dynamodb", "query", template)
 	-- Open buffer in a floating window for user input
 	local width = math.floor(vim.o.columns * 0.8)
@@ -102,7 +160,8 @@ function M._parse_and_query(table_name)
 		else
 			local lines_out = {}
 			for _, item in ipairs(res.data.Items or {}) do
-				table.insert(lines_out, vim.inspect(item))
+				local json_input = vim.fn.json_encode(item)
+				table.insert(lines_out, json_input)
 			end
 			workflows_common.append_buffer(result_buf, lines_out)
 		end
