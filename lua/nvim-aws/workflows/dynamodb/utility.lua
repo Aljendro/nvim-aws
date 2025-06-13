@@ -5,8 +5,6 @@ local default_utility = require("nvim-aws.workflows.default.utility")
 
 local M = {}
 
--- I need to add debug logs to all the functions in this file ai!
-
 ---------------------------------------------------------------------------------------------------
 ------------------------------------ EXPORT FUNCTIONS ---------------------------------------------
 ---------------------------------------------------------------------------------------------------
@@ -14,8 +12,10 @@ local M = {}
 --- Scan a DynamoDB table and display items in a result buffer with pagination.
 --- @param table_name string The name of the DynamoDB table to scan.
 function M.scan_table(table_name)
+	log.debug("scan_table()", { table_name = table_name })
 	local result_buf = workflows_common.gen_result_buffer()
 	local function scan_batch(exclusive_key)
+		log.debug("scan_batch()", { exclusive_key = vim.inspect(exclusive_key) })
 		local params = { TableName = table_name, Limit = 25 }
 		if exclusive_key then
 			params.ExclusiveStartKey = exclusive_key
@@ -45,6 +45,7 @@ end
 --- Open a form buffer to query a DynamoDB table via JSON template.
 --- @param table_name string The name of the DynamoDB table to query.
 function M.query_table(table_name)
+	log.debug("query_table()", { table_name = table_name })
 	M._open_query_form(table_name)
 end
 
@@ -55,6 +56,7 @@ end
 --- Internal: open a DynamoDB query form for the given table.
 --- @param table_name string
 function M._open_query_form(table_name)
+	log.debug("_open_query_form()", { table_name = table_name })
 	local template = vim.fn.json_encode({ TableName = table_name, Limit = 25 })
 	local buf = default_utility.create_template_buffer("dynamodb", "query", template)
 	-- Open buffer in a floating window for user input
@@ -81,6 +83,7 @@ end
 --- Internal: parse the DynamoDB query form and execute the query.
 --- @param table_name string
 function M._parse_and_query(table_name)
+	log.debug("_parse_and_query()", { table_name = table_name })
 	return function(ev)
 		local content = vim.api.nvim_buf_get_lines(ev.buf, 0, -1, false)
 		local input_json = table.concat(content, "\n")
