@@ -58,7 +58,7 @@ end
 --- @param table_name string
 function M._open_query_form(table_name)
 	log.debug("_open_query_form()", { table_name = table_name })
--- Build a readable form instead of raw JSON
+
 local lines = {
   "# DynamoDB Query Form",
   "# Table: " .. table_name,
@@ -72,11 +72,11 @@ local lines = {
   "",
   "[EXPRESSION ATTRIBUTE NAMES]",
   "# JSON  e.g. {\"#pk\": \"PK\"}",
-  "{}",
+  "{}", -- I don't want to use json input here. Let the user input one entry per line here ai
   "",
   "[EXPRESSION ATTRIBUTE VALUES]",
   "# JSON  e.g. {\":pk\": {\"S\": \"value\"}}",
-  "{}",
+  "{}", -- I don't want to use json input here. Let the user input one entry per line here ai
 }
 local template = table.concat(lines, "\n")
 local buf = default_utility.create_template_buffer("dynamodb", "query", template)
@@ -135,10 +135,10 @@ return function(ev)
     return ok and obj or nil
   end
   local ean = decode_json(sections["[EXPRESSION ATTRIBUTE NAMES]"])
-  if ean then params.ExpressionAttributeNames  = ean end
+  if ean then params.ExpressionAttributeNames  = ean end -- please parse the values from all the lines here ai
 
   local eav = decode_json(sections["[EXPRESSION ATTRIBUTE VALUES]"])
-  if eav then params.ExpressionAttributeValues = eav end
+  if eav then params.ExpressionAttributeValues = eav end-- please parse the values from all the lines here ai!
 
   -- Execute the query
   local res = dynamodb.query(params)
