@@ -58,19 +58,13 @@ end
 --- @param table_name string
 function M._open_query_form(table_name)
 	log.debug("_open_query_form()", { table_name = table_name })
-	-- Build a concise template so the user only fills the essentials
+  -- I need you to create a nice form for the user and take as input the following data ai!
 	local template_tbl = {
-	  TableName = table_name,
-	  KeyConditionExpression = "",
-	  FilterExpression = "",
-	  ExpressionAttributeNames = {},
-	  ExpressionAttributeValues = {},
-	  IndexName = "",
-	  Limit = 25,
-	  ConsistentRead = false,
-	  ScanIndexForward = true,
-	  ProjectionExpression = "",
-	  Select = "ALL_ATTRIBUTES",
+		TableName = table_name,
+		KeyConditionExpression = "",
+		FilterExpression = "",
+		ExpressionAttributeNames = {},
+		ExpressionAttributeValues = {},
 	}
 	local template = vim.fn.json_encode(template_tbl)
 	local buf = default_utility.create_template_buffer("dynamodb", "query", template)
@@ -108,6 +102,7 @@ function M._parse_and_query(table_name)
 			return
 		end
 		local res = dynamodb.query(params)
+    log.debug("res: " .. vim.inspect(res))
 		local result_buf = workflows_common.gen_result_buffer()
 		if not res.success then
 			workflows_common.append_buffer(result_buf, { "Error querying table: " .. (res.error or "unknown") })
