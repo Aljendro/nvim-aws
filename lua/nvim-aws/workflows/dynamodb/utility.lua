@@ -58,19 +58,28 @@ end
 --- @param table_name string
 function M._open_query_form(table_name)
 	log.debug("_open_query_form()", { table_name = table_name })
-  -- I DO NOT want to show the user the following table in the buffer,
-  -- I need you to create a nice output from this table, where each row has the field and the user
-  -- is able to add their output. I do not want to show them json to update. I have to 
-  -- make it really nice for the user to add their input ai!
-	local template_tbl = {
-		TableName = table_name,
-		KeyConditionExpression = "",
-		FilterExpression = "",
-		ExpressionAttributeNames = {},
-		ExpressionAttributeValues = {},
-	}
-	local template = vim.fn.json_encode(template_tbl)
-	local buf = default_utility.create_template_buffer("dynamodb", "query", template)
+-- Build a readable form instead of raw JSON
+local lines = {
+  "# DynamoDB Query Form",
+  "# Table: " .. table_name,
+  "# Save (:w) to execute the query",
+  "#",
+  "[KEY CONDITION EXPRESSION]",
+  "# e.g. PK = :pk",
+  "",
+  "[FILTER EXPRESSION]",
+  "# optional",
+  "",
+  "[EXPRESSION ATTRIBUTE NAMES]",
+  "# JSON  e.g. {\"#pk\": \"PK\"}",
+  "{}",
+  "",
+  "[EXPRESSION ATTRIBUTE VALUES]",
+  "# JSON  e.g. {\":pk\": {\"S\": \"value\"}}",
+  "{}",
+}
+local template = table.concat(lines, "\n")
+local buf = default_utility.create_template_buffer("dynamodb", "query", template)
 	-- Open buffer in a floating window for user input
 	local width = math.floor(vim.o.columns * 0.8)
 	local height = math.floor(vim.o.lines * 0.8)
@@ -96,30 +105,58 @@ end
 --- @param table_name string
 function M._parse_and_query(table_name)
 	log.debug("_parse_and_query()", { table_name = table_name })
-	return function(ev)
-		local content = vim.api.nvim_buf_get_lines(ev.buf, 0, -1, false)
-		local input_json = table.concat(content, "\n")
-		local ok, params = pcall(vim.fn.json_decode, input_json)
-		if not ok then
-			log.error("Invalid JSON query: " .. input_json)
-			return
-		end
-		local res = dynamodb.query(params)
-    log.debug("res: " .. vim.inspect(res))
-		local result_buf = workflows_common.gen_result_buffer()
-		if not res.success then
-			workflows_common.append_buffer(result_buf, { "Error querying table: " .. (res.error or "unknown") })
-		else
-			local lines_out = {}
-			for _, item in ipairs(res.data.Items or {}) do
-				local json_input = vim.fn.json_encode(item)
-				table.insert(lines_out, json_input)
-			end
-			workflows_common.append_buffer(result_buf, lines_out)
-		end
-		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
-		vim.api.nvim_buf_delete(ev.buf, { force = true })
-	end
+return function(ev)
+  local content = vim.api.nvim_buf_get_lines(ev.buf, 0, -1, false)
+
+  -- Gather section text
+  local section, sections = "", {}
+  for _, line in ipairs(content) do
+    if line:match("^%[.+%]") then
+      section = line
+      sections[section] = {}
+    elseif not line:match("^#") then
+      table.insert(sections[section] or {}, line)
+    end
+  end
+
+  -- Build params
+  local params = { TableName = table_name }
+
+  local kce = table.concat(sections["[KEY CONDITION EXPRESSION]"] or {}, " "):match("^%s*(.-)%s*$")
+  if kce ~= "" then params.KeyConditionExpression = kce end
+
+  local fe  = table.concat(sections["[FILTER EXPRESSION]"] or {}, " "):match("^%s*(.-)%s*$")
+  if fe ~= "" then params.FilterExpression = fe end
+
+  local function decode_json(sec)
+    local txt = table.concat(sec or {}, "\n")
+    if txt == "" or txt == "{}" then return nil end
+    local ok, obj = pcall(vim.fn.json_decode, txt)
+    return ok and obj or nil
+  end
+  local ean = decode_json(sections["[EXPRESSION ATTRIBUTE NAMES]"])
+  if ean then params.ExpressionAttributeNames  = ean end
+
+  local eav = decode_json(sections["[EXPRESSION ATTRIBUTE VALUES]"])
+  if eav then params.ExpressionAttributeValues = eav end
+
+  -- Execute the query
+  local res = dynamodb.query(params)
+  local result_buf = workflows_common.gen_result_buffer()
+  if not res.success then
+    workflows_common.append_buffer(result_buf,
+      { "Error querying table: " .. (res.error or "unknown") })
+  else
+    local out = {}
+    for _, item in ipairs(res.data.Items or {}) do
+      table.insert(out, vim.fn.json_encode(item))
+    end
+    workflows_common.append_buffer(result_buf, out)
+  end
+
+  vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
+  vim.api.nvim_buf_delete(ev.buf, { force = true })
+end
 end
 
 return M
