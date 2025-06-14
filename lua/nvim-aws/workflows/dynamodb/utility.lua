@@ -58,55 +58,55 @@ function M._parse_form_and_query_dynamodb(table_name)
 end
 
 function M._parse_form_and_scan_dynamodb(table_name)
-  return function(ev)
-    -- gather form values & close the form window
-    local form_values = M._parse_form(table_name, ev.buf)
-    vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
-    for _, win in ipairs(vim.api.nvim_list_wins()) do
-      if vim.api.nvim_win_get_buf(win) == ev.buf then
-        vim.api.nvim_win_close(win, true)
-      end
-    end
+	return function(ev)
+		-- gather form values & close the form window
+		local form_values = M._parse_form(table_name, ev.buf)
+		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
+		for _, win in ipairs(vim.api.nvim_list_wins()) do
+			if vim.api.nvim_win_get_buf(win) == ev.buf then
+				vim.api.nvim_win_close(win, true)
+			end
+		end
 
-    local result_buf = workflows_common.gen_result_buffer()
+		local result_buf = workflows_common.gen_result_buffer()
 
-    -- helper to fetch one Scan page
-    local function scan_batch(exclusive_key)
-      local params = {
-        TableName = table_name,
-        Limit = 25,
-        FilterExpression           = form_values.FilterExpression,
-        ExpressionAttributeNames   = form_values.ExpressionAttributeNames,
-        ExpressionAttributeValues  = form_values.ExpressionAttributeValues,
-      }
-      if exclusive_key then
-        params.ExclusiveStartKey = exclusive_key
-      end
+		-- helper to fetch one Scan page
+		local function scan_batch(exclusive_key)
+			local params = {
+				TableName = table_name,
+				Limit = 25,
+				FilterExpression = form_values.FilterExpression,
+				ExpressionAttributeNames = form_values.ExpressionAttributeNames,
+				ExpressionAttributeValues = form_values.ExpressionAttributeValues,
+			}
+			if exclusive_key then
+				params.ExclusiveStartKey = exclusive_key
+			end
 
-      local res = dynamodb.scan(params)
-      if not res.success then
-        local err = (res.error or "unknown"):gsub("[\r\n]+", "")
-        log.error("Error scanning table: " .. err)
-        workflows_common.append_buffer(result_buf, { "Error scanning table: " .. err })
-        return
-      end
+			local res = dynamodb.scan(params)
+			if not res.success then
+				local err = (res.error or "unknown"):gsub("[\r\n]+", "")
+				log.error("Error scanning table: " .. err)
+				workflows_common.append_buffer(result_buf, { "Error scanning table: " .. err })
+				return
+			end
 
-      local batch_lines = {}
-      for _, item in ipairs(res.data.Items or {}) do
-        table.insert(batch_lines, vim.fn.json_encode(item))
-      end
-      workflows_common.append_buffer(result_buf, batch_lines)
+			local batch_lines = {}
+			for _, item in ipairs(res.data.Items or {}) do
+				table.insert(batch_lines, vim.fn.json_encode(item))
+			end
+			workflows_common.append_buffer(result_buf, batch_lines)
 
-      local last_key = res.data.LastEvaluatedKey
-      if last_key then
-        vim.keymap.set("n", "cn", function()
-          scan_batch(last_key)
-        end, { buffer = result_buf, desc = "Continue scan" })
-      end
-    end
+			local last_key = res.data.LastEvaluatedKey
+			if last_key then
+				vim.keymap.set("n", "cn", function()
+					scan_batch(last_key)
+				end, { buffer = result_buf, desc = "Continue scan" })
+			end
+		end
 
-    scan_batch()
-  end
+		scan_batch()
+	end
 end
 
 --- Internal: build DynamoDB query-api params from the query-form buffer
@@ -260,44 +260,44 @@ end
 --- Internal: open a DynamoDB query form for the given table.
 --- @param table_name string
 function M._open_scan_form(table_name)
-  log.debug("_open_query_form()", { table_name = table_name })
+	log.debug("_open_query_form()", { table_name = table_name })
 
-  local lines = {
-    "-- DynamoDB Scan Form",
-    "-- Table: " .. table_name,
-    "-- Save (:w) to execute the scan",
-    "--",
-    "[FILTER EXPRESSION]",
-    "-- optional",
-    "",
-    "[EXPRESSION ATTRIBUTE NAMES]",
-    "-- One attribute name per line – placeholder (#n1, #n2, …) is auto-generated",
-    "userId",
-    "[EXPRESSION ATTRIBUTE VALUES]",
-    "-- One value per line – placeholder (:v1, :v2, …) is auto-generated",
-    '"user123"',
-  }
-  local template = table.concat(lines, "\n")
-  local buf = default_utility.create_template_buffer("dynamodb", "scan", template)
-  -- Open buffer in a floating window for user input
-  local width = math.floor(vim.o.columns * 0.8)
-  local height = math.floor(vim.o.lines * 0.8)
-  local row = math.floor((vim.o.lines - height) / 2)
-  local col = math.floor((vim.o.columns - width) / 2)
-  local win_opts = {
-    relative = "editor",
-    width = width,
-    height = height,
-    row = row,
-    col = col,
-    style = "minimal",
-    border = "rounded",
-  }
-  vim.api.nvim_open_win(buf, true, win_opts)
-  vim.api.nvim_create_autocmd("BufWriteCmd", {
-    buffer = buf,
-    callback = M._parse_form_and_scan_dynamodb(table_name),
-  })
+	local lines = {
+		"-- DynamoDB Scan Form",
+		"-- Table: " .. table_name,
+		"-- Save (:w) to execute the scan",
+		"--",
+		"[FILTER EXPRESSION]",
+		"-- optional",
+		"",
+		"[EXPRESSION ATTRIBUTE NAMES]",
+		"-- One attribute name per line – placeholder (#n1, #n2, …) is auto-generated",
+		"userId",
+		"[EXPRESSION ATTRIBUTE VALUES]",
+		"-- One value per line – placeholder (:v1, :v2, …) is auto-generated",
+		'"user123"',
+	}
+	local template = table.concat(lines, "\n")
+	local buf = default_utility.create_template_buffer("dynamodb", "scan", template)
+	-- Open buffer in a floating window for user input
+	local width = math.floor(vim.o.columns * 0.8)
+	local height = math.floor(vim.o.lines * 0.8)
+	local row = math.floor((vim.o.lines - height) / 2)
+	local col = math.floor((vim.o.columns - width) / 2)
+	local win_opts = {
+		relative = "editor",
+		width = width,
+		height = height,
+		row = row,
+		col = col,
+		style = "minimal",
+		border = "rounded",
+	}
+	vim.api.nvim_open_win(buf, true, win_opts)
+	vim.api.nvim_create_autocmd("BufWriteCmd", {
+		buffer = buf,
+		callback = M._parse_form_and_scan_dynamodb(table_name),
+	})
 end
 
 return M
