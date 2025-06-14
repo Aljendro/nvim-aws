@@ -100,13 +100,13 @@ local buf = default_utility.create_template_buffer("dynamodb", "query", template
 	})
 end
 
--- can you add debug logs for all the parsing, I need to understand everything that is going wrong ai!
 --- Internal: parse the DynamoDB query form and execute the query.
 --- @param table_name string
 function M._parse_and_query(table_name)
 	log.debug("_parse_and_query()", { table_name = table_name })
   return function(ev)
     local content = vim.api.nvim_buf_get_lines(ev.buf, 0, -1, false)
+    log.debug("RAW FORM CONTENT", { content = content })
 
     -- Gather section text
     local section, sections = "", {}
@@ -119,6 +119,8 @@ function M._parse_and_query(table_name)
       end
     end
 
+    log.debug("SECTIONS", { sections = sections })
+
     local function parse_attr_names(lines)
       local t, idx = {}, 1
       for _, l in ipairs(lines) do
@@ -126,9 +128,11 @@ function M._parse_and_query(table_name)
         if s ~= "" then
           local placeholder = ("#n%d"):format(idx)
           t[placeholder] = s
+          log.debug("ATTR-NAME PARSED", { line = s, placeholder = placeholder })
           idx = idx + 1
         end
       end
+      log.debug("ATTR-NAMES TABLE", { attr_names = t })
       return next(t) and t or nil
     end
 
@@ -163,11 +167,14 @@ function M._parse_and_query(table_name)
           end
           if attr then
             local placeholder = (":v%d"):format(idx)    -- :v1, :v2, ...
+            log.debug("ATTR-VALUE PARSED",
+              { line = s, placeholder = placeholder, attr = attr })
             t[placeholder] = attr
             idx = idx + 1
           end
         end
       end
+      log.debug("ATTR-VALUES TABLE", { attr_values = t })
       return next(t) and t or nil
     end
 
@@ -186,8 +193,11 @@ function M._parse_and_query(table_name)
     local eav = parse_attr_values(sections["[EXPRESSION ATTRIBUTE VALUES]"] or {})
     if eav then params.ExpressionAttributeValues = eav end
 
+    log.debug("QUERY PARAMS", { params = params })
+
     -- Execute the query
     local res = dynamodb.query(params)
+    log.debug("QUERY RESULT", { result = res })
     local result_buf = workflows_common.gen_result_buffer()
     if not res.success then
       workflows_common.append_buffer(result_buf,
