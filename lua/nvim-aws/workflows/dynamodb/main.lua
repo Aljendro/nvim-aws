@@ -25,6 +25,7 @@ function M.start()
 				local table_name = selected[1]
 				common.scan_table(table_name)
 			end,
+      -- create a keybinding that uses the utility function and goes to the UI ai!
 		},
 	})
 end
