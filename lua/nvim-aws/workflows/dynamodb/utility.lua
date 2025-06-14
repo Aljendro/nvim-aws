@@ -125,6 +125,9 @@ function M._parse_and_query(table_name)
       for _, l in ipairs(lines) do
         local s = vim.trim(l)
         if s ~= "" then
+          -- I DO NOT want to have a complicated parser here ai
+          -- I only want to parse a single line where the line can be > userId
+          -- This will be parsed as #n1 = "userId", get rid of all other parsing logic ai!
           -- explicit   #alias = AttrName   or  #alias: AttrName
           local k, v = s:match("^([^=:]+)[:=]%s*(.+)$")
           if k and v then
@@ -149,7 +152,7 @@ function M._parse_and_query(table_name)
     local function parse_attr_values(lines)
       local t, idx = {}, 1
 
-      local function to_ddb(val)        -- convert Lua scalar to DynamoDB AttributeValue
+      local function to_ddb(val)
         if type(val) == "boolean" then
           return { BOOL = val }
         elseif type(val) == "number" then
