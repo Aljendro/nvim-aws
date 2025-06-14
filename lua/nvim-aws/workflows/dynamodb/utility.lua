@@ -60,23 +60,21 @@ function M._open_query_form(table_name)
 	log.debug("_open_query_form()", { table_name = table_name })
 
 local lines = {
-  "// DynamoDB Query Form",
-  "// Table: " .. table_name,
-  "// Save (:w) to execute the query",
-  "//",
+  "-- DynamoDB Query Form",
+  "-- Table: " .. table_name,
+  "-- Save (:w) to execute the query",
+  "--",
   "[KEY CONDITION EXPRESSION]",
-  "// e.g. PK = :pk",
+  "-- e.g. #n1 = :v1",
   "",
   "[FILTER EXPRESSION]",
-  "// optional",
+  "-- optional",
   "",
   "[EXPRESSION ATTRIBUTE NAMES]",
-  "// One attribute name per line – placeholder (#n1, #n2, …) is auto-generated",
-  "// Key → AttributeName (one per line)  e.g.  #pk = PK",
+  "-- One attribute name per line – placeholder (#n1, #n2, …) is auto-generated",
   "",
   "[EXPRESSION ATTRIBUTE VALUES]",
-  "// One value per line – placeholder (:v1, :v2, …) is auto-generated",
-  "// Attribute value per line  e.g.  :pk = {\"S\": \"value\"}",
+  "-- One value per line – placeholder (:v1, :v2, …) is auto-generated",
   "",
 }
 local template = table.concat(lines, "\n")
@@ -102,6 +100,7 @@ local buf = default_utility.create_template_buffer("dynamodb", "query", template
 	})
 end
 
+-- can you add debug logs for all the parsing, I need to understand everything that is going wrong ai!
 --- Internal: parse the DynamoDB query form and execute the query.
 --- @param table_name string
 function M._parse_and_query(table_name)
@@ -115,7 +114,7 @@ function M._parse_and_query(table_name)
       if line:match("^%[.+%]") then
         section = line
         sections[section] = {}
-      elseif not line:match("^//") then
+      elseif not line:match("^--") then
         table.insert(sections[section] or {}, line)
       end
     end
