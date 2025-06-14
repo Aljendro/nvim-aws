@@ -67,11 +67,14 @@ end
 --- Generate a buffer to output the results of running a aws command
 --- @return integer
 function M.gen_result_buffer()
-  -- create a window in a new tab for this new buffer ai!
+	-- open results in a fresh tab
 	local result_buf = vim.api.nvim_create_buf(true, true)
 	local uuid = default_utility.generate_uuid()
 	vim.api.nvim_buf_set_name(result_buf, "aws-result-" .. uuid)
 	vim.api.nvim_set_option_value("filetype", "json", { buf = result_buf })
+
+	-- create a new tabpage and display the buffer there
+	vim.cmd("tabnew")
 	vim.api.nvim_win_set_buf(0, result_buf)
 
 	return result_buf
