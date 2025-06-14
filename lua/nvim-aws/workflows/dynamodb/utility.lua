@@ -42,19 +42,38 @@ function M._parse_form_and_query_dynamodb(table_name)
 		end
 
 		local result_buf = workflows_common.gen_result_buffer()
-    -- can you make sure the next token is taken care of for queries ai!
-		local res = dynamodb.query(form_values)
-		log.debug("QUERY RESULT", { result = res })
-		if not res.success then
-			local error_str = string.gsub(res.error or "", "[\r\n]+", "")
-			workflows_common.append_buffer(result_buf, { "Error querying table: " .. (error_str or "unknown") })
-		else
-			local out = {}
-			for _, item in ipairs(res.data.Items or {}) do
-				table.insert(out, vim.fn.json_encode(item))
+
+		-- paginated query
+		local function query_batch(exclusive_key)
+			local params = vim.tbl_extend("force", {}, form_values)
+			if exclusive_key then
+				params.ExclusiveStartKey = exclusive_key
 			end
-			workflows_common.append_buffer(result_buf, out)
+
+			local res = dynamodb.query(params)
+			log.debug("QUERY RESULT", { result = res })
+
+			if not res.success then
+				local err = (res.error or "unknown"):gsub("[\r\n]+", "")
+				workflows_common.append_buffer(result_buf, { "Error querying table: " .. err })
+				return
+			end
+
+			local lines = {}
+			for _, item in ipairs(res.data.Items or {}) do
+				table.insert(lines, vim.fn.json_encode(item))
+			end
+			workflows_common.append_buffer(result_buf, lines)
+
+			local last_key = res.data.LastEvaluatedKey
+			if last_key then
+				vim.keymap.set("n", "cn", function()
+					query_batch(last_key)
+				end, { buffer = result_buf, desc = "Continue query" })
+			end
 		end
+
+		query_batch()
 	end
 end
 
