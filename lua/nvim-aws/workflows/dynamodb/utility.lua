@@ -60,6 +60,7 @@ end
 function M._parse_form_and_query_dynamodb(table_name)
 	log.debug("_parse_form_and_query()", { table_name = table_name })
 	return function(ev)
+    -- the window that has the form is not being removed, can you fix that ai!
 		local form_values = M._parse_form(table_name, ev.buf)
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
 		vim.api.nvim_buf_delete(ev.buf, { force = true })
