@@ -135,70 +135,37 @@ function M._parse_and_query(table_name)
 
     local function parse_attr_values(lines)
       local t, idx = {}, 1
-
-      -- remove this function if not necessary ai
-      local function to_ddb(val)
-        if type(val) == "boolean" then
-          return { BOOL = val }
-        elseif type(val) == "number" then
-          return { N = tostring(val) }
-        else
-          return { S = tostring(val) }
-        end
-      end
-
-      local function decode_or_wrap(str) -- tries JSON first, then scalar inference
-        local ok, obj = pcall(vim.fn.json_decode, str)
-        if ok and type(obj) == "table" then
-          return obj
-        end
-        if str == "true" or str == "false" then
-          return { BOOL = str == "true" }
-        end
-        local num = tonumber(str)
-        if num ~= nil then
-          return { N = tostring(num) }
-        end
-        -- strip optional quotes for string values
-        return { S = str:gsub('^"(.*)"$', '%1') }
-      end
-
       for _, l in ipairs(lines) do
         local s = vim.trim(l)
         if s ~= "" then
-          -- I DO NOT want a complicated logic here, please parse the following scenarios as simple as possible ai!
-          -- please only parse the line > "user123" ai
-          -- which will convert the line to :v1 = { "S": "user123" } ai
-          -- please only parse the line > true ai
-          -- which will convert the line to :v2 = { "BOOL": "true" } ai
-          -- please only parse the line > false ai
-          -- which will convert the line to :v3 = { "BOOL": false } ai
-          -- please only parse the line > 256456.465 ai
-          -- which will convert the line to :v4 = { "N": "256456.465" } ai
-          -- please only parse the line > b"65498465adfoi" ai
-          -- which will convert the line to :v5 = { "B": "65498465adfoi" } ai
-          -- please only parse the line > {"Location": {"S": "Bost"}, "Language": {"S": "FR"}} ai
-          -- which will convert the line to :v6 = { "M": {"Location": {"S": "Bost"}, "Language": {"S": "FR"}} } ai
-          -- please only parse the line > true ai
-          -- which will convert the line to :v7 = { "BOOL": true } ai
-          -- please only parse the line > false ai
-          -- which will convert the line to :v8 = { "BOOL": false } ai
-          -- please only parse the line > ["hello", "what"] ai
-          -- which will convert the line to :v9 = { "SS": ["hello", "what"]} ai
-          local k, v = s:match("^([^=:]+)[:=]%s*(.+)$") -- explicit :val = something
-          if k and v then
-            t[k] = decode_or_wrap(v)
+          local attr
+          local quoted = s:match('^"(.*)"$')           -- "string" → S
+          if quoted then
+            attr = { S = quoted }
+          elseif s == "true" or s == "false" then       -- booleans → BOOL
+            attr = { BOOL = s == "true" }
+          elseif s:match('^b".*"') then                 -- b"blob" → B
+            attr = { B = s:match('^b"(.*)"$') }
           else
-            -- JSON object line?
-            local ok, obj = pcall(vim.fn.json_decode, s)
-            if ok and type(obj) == "table" then
-              for kk, vv in pairs(obj) do t[kk] = vv end
-            else
-              -- bare scalar → auto placeholder :v1, :v2 …
-              local placeholder = (":v%d"):format(idx)
-              t[placeholder] = decode_or_wrap(s)
-              idx = idx + 1
+            local num = tonumber(s)                     -- number → N
+            if num then
+              attr = { N = s }
+            elseif s:sub(1, 1) == "{" then              -- JSON object → M
+              local ok, obj = pcall(vim.fn.json_decode, s)
+              if ok and type(obj) == "table" then
+                attr = { M = obj }
+              end
+            elseif s:sub(1, 1) == "[" then              -- JSON array → SS
+              local ok, arr = pcall(vim.fn.json_decode, s)
+              if ok and type(arr) == "table" then
+                attr = { SS = arr }
+              end
             end
+          end
+          if attr then
+            local placeholder = (":v%d"):format(idx)    -- :v1, :v2, ...
+            t[placeholder] = attr
+            idx = idx + 1
           end
         end
       end
