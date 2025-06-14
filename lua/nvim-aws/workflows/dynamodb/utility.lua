@@ -42,6 +42,7 @@ function M._parse_form_and_query_dynamodb(table_name)
 		end
 
 		local result_buf = workflows_common.gen_result_buffer()
+    -- can you make sure the next token is taken care of for queries ai!
 		local res = dynamodb.query(form_values)
 		log.debug("QUERY RESULT", { result = res })
 		if not res.success then
@@ -229,10 +230,10 @@ function M._open_query_form(table_name)
 		"",
 		"[EXPRESSION ATTRIBUTE NAMES]",
 		"-- One attribute name per line – placeholder (#n1, #n2, …) is auto-generated",
-		"userId",
+		"",
 		"[EXPRESSION ATTRIBUTE VALUES]",
 		"-- One value per line – placeholder (:v1, :v2, …) is auto-generated",
-		'"user123"',
+		"",
 	}
 	local template = table.concat(lines, "\n")
 	local buf = default_utility.create_template_buffer("dynamodb", "query", template)
@@ -272,10 +273,10 @@ function M._open_scan_form(table_name)
 		"",
 		"[EXPRESSION ATTRIBUTE NAMES]",
 		"-- One attribute name per line – placeholder (#n1, #n2, …) is auto-generated",
-		"userId",
+		"",
 		"[EXPRESSION ATTRIBUTE VALUES]",
 		"-- One value per line – placeholder (:v1, :v2, …) is auto-generated",
-		'"user123"',
+		"",
 	}
 	local template = table.concat(lines, "\n")
 	local buf = default_utility.create_template_buffer("dynamodb", "scan", template)
