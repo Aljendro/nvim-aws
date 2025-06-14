@@ -54,6 +54,33 @@ end
 ------------------------------------- LOCAL FUNCTIONS ---------------------------------------------
 ---------------------------------------------------------------------------------------------------
 
+--- Internal: parse the DynamoDB query form and execute the query.
+--- @param table_name string
+function M._parse_and_query(table_name)
+	log.debug("_parse_and_query()", { table_name = table_name })
+  return function(ev)
+    local params = M._parse_query_form(table_name, ev.buf)
+
+    local res = dynamodb.query(params)
+    log.debug("QUERY RESULT", { result = res })
+
+    local result_buf = workflows_common.gen_result_buffer()
+    if not res.success then
+      workflows_common.append_buffer(result_buf,
+        { "Error querying table: " .. (res.error or "unknown") })
+    else
+      local out = {}
+      for _, item in ipairs(res.data.Items or {}) do
+        table.insert(out, vim.fn.json_encode(item))
+      end
+      workflows_common.append_buffer(result_buf, out)
+    end
+
+    vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
+    vim.api.nvim_buf_delete(ev.buf, { force = true })
+  end
+end
+
 --- Internal: build DynamoDB query-api params from the query-form buffer
 --- @param table_name string
 --- @param form_buf   number
@@ -192,33 +219,6 @@ local buf = default_utility.create_template_buffer("dynamodb", "query", template
 		buffer = buf,
 		callback = M._parse_and_query(table_name),
 	})
-end
-
---- Internal: parse the DynamoDB query form and execute the query.
---- @param table_name string
-function M._parse_and_query(table_name)
-	log.debug("_parse_and_query()", { table_name = table_name })
-  return function(ev)
-    local params = M._parse_query_form(table_name, ev.buf)
-
-    local res = dynamodb.query(params)
-    log.debug("QUERY RESULT", { result = res })
-
-    local result_buf = workflows_common.gen_result_buffer()
-    if not res.success then
-      workflows_common.append_buffer(result_buf,
-        { "Error querying table: " .. (res.error or "unknown") })
-    else
-      local out = {}
-      for _, item in ipairs(res.data.Items or {}) do
-        table.insert(out, vim.fn.json_encode(item))
-      end
-      workflows_common.append_buffer(result_buf, out)
-    end
-
-    vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
-    vim.api.nvim_buf_delete(ev.buf, { force = true })
-  end
 end
 
 return M
