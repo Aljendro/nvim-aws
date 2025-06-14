@@ -124,9 +124,9 @@ function M._parse_and_query(table_name)
       local t, idx = {}, 1
       for _, l in ipairs(lines) do
         local s = vim.trim(l)
-        if s ~= "" then                       -- non-blank line
+        if s ~= "" then
           local placeholder = ("#n%d"):format(idx)
-          t[placeholder] = s                  -- always map #nX → attribute name
+          t[placeholder] = s
           idx = idx + 1
         end
       end
@@ -136,6 +136,7 @@ function M._parse_and_query(table_name)
     local function parse_attr_values(lines)
       local t, idx = {}, 1
 
+      -- remove this function if not necessary ai
       local function to_ddb(val)
         if type(val) == "boolean" then
           return { BOOL = val }
@@ -165,6 +166,25 @@ function M._parse_and_query(table_name)
       for _, l in ipairs(lines) do
         local s = vim.trim(l)
         if s ~= "" then
+          -- I DO NOT want a complicated logic here, please parse the following scenarios as simple as possible ai!
+          -- please only parse the line > "user123" ai
+          -- which will convert the line to :v1 = { "S": "user123" } ai
+          -- please only parse the line > true ai
+          -- which will convert the line to :v2 = { "BOOL": "true" } ai
+          -- please only parse the line > false ai
+          -- which will convert the line to :v3 = { "BOOL": false } ai
+          -- please only parse the line > 256456.465 ai
+          -- which will convert the line to :v4 = { "N": "256456.465" } ai
+          -- please only parse the line > b"65498465adfoi" ai
+          -- which will convert the line to :v5 = { "B": "65498465adfoi" } ai
+          -- please only parse the line > {"Location": {"S": "Bost"}, "Language": {"S": "FR"}} ai
+          -- which will convert the line to :v6 = { "M": {"Location": {"S": "Bost"}, "Language": {"S": "FR"}} } ai
+          -- please only parse the line > true ai
+          -- which will convert the line to :v7 = { "BOOL": true } ai
+          -- please only parse the line > false ai
+          -- which will convert the line to :v8 = { "BOOL": false } ai
+          -- please only parse the line > ["hello", "what"] ai
+          -- which will convert the line to :v9 = { "SS": ["hello", "what"]} ai
           local k, v = s:match("^([^=:]+)[:=]%s*(.+)$") -- explicit :val = something
           if k and v then
             t[k] = decode_or_wrap(v)
