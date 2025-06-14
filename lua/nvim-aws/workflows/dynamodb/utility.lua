@@ -13,6 +13,53 @@ local M = {}
 --- @param table_name string The name of the DynamoDB table to scan.
 function M.scan_table(table_name)
 	log.debug("scan_table()", { table_name = table_name })
+	M._open_scan_form(table_name)
+end
+
+--- Open a form buffer to query a DynamoDB table via JSON template.
+--- @param table_name string The name of the DynamoDB table to query.
+function M.query_table(table_name)
+	log.debug("query_table()", { table_name = table_name })
+	M._open_query_form(table_name)
+end
+
+---------------------------------------------------------------------------------------------------
+------------------------------------- LOCAL FUNCTIONS ---------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+--- Internal: parse the DynamoDB query form and execute the query.
+--- @param table_name string
+function M._parse_form_and_query_dynamodb(table_name)
+	log.debug("_parse_form_and_query()", { table_name = table_name })
+	return function(ev)
+		-- close every window that is currently showing this buffer
+		local form_values = M._parse_form(table_name, ev.buf)
+		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
+		for _, win in ipairs(vim.api.nvim_list_wins()) do
+			if vim.api.nvim_win_get_buf(win) == ev.buf then
+				vim.api.nvim_win_close(win, true)
+			end
+		end
+
+		local result_buf = workflows_common.gen_result_buffer()
+		local res = dynamodb.query(form_values)
+		log.debug("QUERY RESULT", { result = res })
+		if not res.success then
+			local error_str = string.gsub(res.error or "", "[\r\n]+", "")
+			workflows_common.append_buffer(result_buf, { "Error querying table: " .. (error_str or "unknown") })
+		else
+			local out = {}
+			for _, item in ipairs(res.data.Items or {}) do
+				table.insert(out, vim.fn.json_encode(item))
+			end
+			workflows_common.append_buffer(result_buf, out)
+		end
+	end
+end
+
+--- Internal: parse the DynamoDB query form and execute the query.
+--- @param table_name string
+function M._parse_form_and_scan_dynamodb(table_name)
 	local result_buf = workflows_common.gen_result_buffer()
 	local function scan_batch(exclusive_key)
 		log.debug("scan_batch()", { exclusive_key = vim.inspect(exclusive_key) })
@@ -42,48 +89,6 @@ function M.scan_table(table_name)
 	end
 
 	scan_batch()
-end
-
---- Open a form buffer to query a DynamoDB table via JSON template.
---- @param table_name string The name of the DynamoDB table to query.
-function M.query_table(table_name)
-	log.debug("query_table()", { table_name = table_name })
-	M._open_query_form(table_name)
-end
-
----------------------------------------------------------------------------------------------------
-------------------------------------- LOCAL FUNCTIONS ---------------------------------------------
----------------------------------------------------------------------------------------------------
-
---- Internal: parse the DynamoDB query form and execute the query.
---- @param table_name string
-function M._parse_form_and_query_dynamodb(table_name)
-	log.debug("_parse_form_and_query()", { table_name = table_name })
-	return function(ev)
-		-- close every window that is currently showing this buffer
-		for _, win in ipairs(vim.api.nvim_list_wins()) do
-		  if vim.api.nvim_win_get_buf(win) == ev.buf then
-		    vim.api.nvim_win_close(win, true)
-		  end
-		end
-		local form_values = M._parse_form(table_name, ev.buf)
-		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
-		vim.api.nvim_buf_delete(ev.buf, { force = true })
-
-		local result_buf = workflows_common.gen_result_buffer()
-		local res = dynamodb.query(form_values)
-		log.debug("QUERY RESULT", { result = res })
-		if not res.success then
-			local error_str = string.gsub(res.error or "", "[\r\n]+", "")
-			workflows_common.append_buffer(result_buf, { "Error querying table: " .. (error_str or "unknown") })
-		else
-			local out = {}
-			for _, item in ipairs(res.data.Items or {}) do
-				table.insert(out, vim.fn.json_encode(item))
-			end
-			workflows_common.append_buffer(result_buf, out)
-		end
-	end
 end
 
 --- Internal: build DynamoDB query-api params from the query-form buffer
@@ -231,6 +236,53 @@ function M._open_query_form(table_name)
 	vim.api.nvim_create_autocmd("BufWriteCmd", {
 		buffer = buf,
 		callback = M._parse_form_and_query_dynamodb(table_name),
+	})
+end
+
+-- can you make sure this is working properly, it should work similar to the query functionality ai!
+--- Internal: open a DynamoDB query form for the given table.
+--- @param table_name string
+function M._open_scan_form(table_name)
+	log.debug("_open_query_form()", { table_name = table_name })
+
+	local lines = {
+		"-- DynamoDB Scan Form",
+		"-- Table: " .. table_name,
+		"-- Save (:w) to execute the query",
+		"--",
+		"[KEY CONDITION EXPRESSION]",
+		"-- e.g. #n1 = :v1",
+		"#n1 = :v1",
+		"[FILTER EXPRESSION]",
+		"-- optional",
+		"",
+		"[EXPRESSION ATTRIBUTE NAMES]",
+		"-- One attribute name per line – placeholder (#n1, #n2, …) is auto-generated",
+		"userId",
+		"[EXPRESSION ATTRIBUTE VALUES]",
+		"-- One value per line – placeholder (:v1, :v2, …) is auto-generated",
+		'"user123"',
+	}
+	local template = table.concat(lines, "\n")
+	local buf = default_utility.create_template_buffer("dynamodb", "query", template)
+	-- Open buffer in a floating window for user input
+	local width = math.floor(vim.o.columns * 0.8)
+	local height = math.floor(vim.o.lines * 0.8)
+	local row = math.floor((vim.o.lines - height) / 2)
+	local col = math.floor((vim.o.columns - width) / 2)
+	local win_opts = {
+		relative = "editor",
+		width = width,
+		height = height,
+		row = row,
+		col = col,
+		style = "minimal",
+		border = "rounded",
+	}
+	vim.api.nvim_open_win(buf, true, win_opts)
+	vim.api.nvim_create_autocmd("BufWriteCmd", {
+		buffer = buf,
+		callback = M._parse_form_and_scan_dynamodb(table_name),
 	})
 end
 
