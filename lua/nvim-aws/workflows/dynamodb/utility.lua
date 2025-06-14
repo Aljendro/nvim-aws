@@ -60,21 +60,24 @@ function M._open_query_form(table_name)
 	log.debug("_open_query_form()", { table_name = table_name })
 
 local lines = {
-  "# DynamoDB Query Form",
-  "# Table: " .. table_name,
-  "# Save (:w) to execute the query",
-  "#",
+  "// DynamoDB Query Form",
+  "// Table: " .. table_name,
+  "// Save (:w) to execute the query",
+  "//",
   "[KEY CONDITION EXPRESSION]",
-  "# e.g. PK = :pk",
+  "// e.g. PK = :pk",
   "",
   "[FILTER EXPRESSION]",
-  "# optional",
+  "// optional",
   "",
   "[EXPRESSION ATTRIBUTE NAMES]",
-  "# Key → AttributeName (one per line)  e.g.  #pk = PK",
+    -- I need each line to automatically set :n1, the next line to :n2 and so on ai
+  "// Key → AttributeName (one per line)  e.g.  #pk = PK",
   "",
   "[EXPRESSION ATTRIBUTE VALUES]",
-  "# Attribute value per line  e.g.  :pk = {\"S\": \"value\"}",
+    -- I need each line to automatically set :v1, the next line to :v2 and so on ai
+    -- string will be wrapped in "", booleans will either be true or false, numbers will only be integers or decimals ai
+  "// Attribute value per line  e.g.  :pk = {\"S\": \"value\"}",
   "",
 }
 local template = table.concat(lines, "\n")
@@ -113,11 +116,12 @@ function M._parse_and_query(table_name)
       if line:match("^%[.+%]") then
         section = line
         sections[section] = {}
-      elseif not line:match("^#") then
+      elseif not line:match("^//") then
         table.insert(sections[section] or {}, line)
       end
     end
 
+    -- this needs to parse the new formats ai
     local function parse_attr_names(lines)
       local t = {}
       for _, l in ipairs(lines) do
@@ -138,6 +142,7 @@ function M._parse_and_query(table_name)
       return next(t) and t or nil
     end
 
+    -- this needs to parse the new formats ai!
     local function parse_attr_values(lines)
       local t = {}
       for _, l in ipairs(lines) do
