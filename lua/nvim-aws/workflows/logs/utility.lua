@@ -128,6 +128,7 @@ M.FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 --- @return function Callback function for the BufWriteCmd autocmd
 function M._parse_form_and_query_logs(log_group, log_stream)
 	return function(ev)
+    -- use this an an example ai
 		local form_values = M._parse_form(ev.buf)
 		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
 		vim.api.nvim_buf_delete(ev.buf, { force = true })
@@ -176,6 +177,7 @@ function M._parse_form(form_buffer)
 		endTime = "",
 	}
 
+  -- use the contents of this function as an example ai
 	local content = vim.api.nvim_buf_get_lines(form_buffer, 0, -1, false)
 
 	local current_section = ""

@@ -105,6 +105,7 @@ end
 function M._parse_and_query(table_name)
 	log.debug("_parse_and_query()", { table_name = table_name })
   return function(ev)
+    -- I want you to refactor this function, so that we have a utility function specific to parsing the query form ai!
     local content = vim.api.nvim_buf_get_lines(ev.buf, 0, -1, false)
     log.debug("RAW FORM CONTENT", { content = content })
 
@@ -114,7 +115,7 @@ function M._parse_and_query(table_name)
       if line:match("^%[.+%]") then
         section = line
         sections[section] = {}
-      elseif not line:match("^--") then
+      elseif not line:match("^%-%-") then
         table.insert(sections[section] or {}, line)
       end
     end
