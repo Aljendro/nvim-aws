@@ -25,7 +25,10 @@ function M.start()
 				local table_name = selected[1]
 				common.scan_table(table_name)
 			end,
-      -- create a keybinding that uses the utility function and goes to the UI ai!
+      ["ctrl-o"] = function(selected)
+        local table_name = selected[1]
+        common.open_aws_console_table_link(table_name)
+      end,
 		},
 	})
 end

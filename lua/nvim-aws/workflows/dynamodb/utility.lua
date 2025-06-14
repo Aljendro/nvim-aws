@@ -2,6 +2,7 @@ local workflows_common = require("nvim-aws.workflows.common")
 local log = require("nvim-aws.utilities.log")
 local dynamodb = require("nvim-aws.autogen_wrappers.dynamodb")
 local default_utility = require("nvim-aws.workflows.default.utility")
+local common = require("nvim-aws.utilities.common")
 
 local M = {}
 
@@ -23,7 +24,31 @@ function M.query_table(table_name)
 	M._open_query_form(table_name)
 end
 
--- create a helper function that links to the table in dynamodb aws ui ai
+--- Open the AWS console page for the given DynamoDB table
+--- @param table_name string
+function M.open_aws_console_table_link(table_name)
+  log.debug("open_aws_console_table_link()", { table_name = table_name })
+
+  -- try to discover region from the table’s ARN
+  local region
+  local res = dynamodb.describe_table({ TableName = table_name })
+  if res and res.success then
+    local arn = res.data.Table.TableArn or ""
+    region = arn:match("arn:aws:dynamodb:([^:]+):")
+  end
+  -- fallback to env / default
+  region = region or os.getenv("AWS_REGION") or os.getenv("AWS_DEFAULT_REGION") or "us-east-1"
+
+  local url = string.format(
+    "https://%s.console.aws.amazon.com/dynamodb/home?region=%s#table?name=%s",
+    region,
+    region,
+    common.url_encode(table_name)
+  )
+
+  log.info("Opening AWS DynamoDB console for table " .. table_name)
+  vim.fn.system({ "open", url })   -- macOS; adjust if you add other OS support
+end
 
 ---------------------------------------------------------------------------------------------------
 ------------------------------------- LOCAL FUNCTIONS ---------------------------------------------
