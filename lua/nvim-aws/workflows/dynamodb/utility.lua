@@ -71,12 +71,11 @@ local lines = {
   "// optional",
   "",
   "[EXPRESSION ATTRIBUTE NAMES]",
-    -- I need each line to automatically set :n1, the next line to :n2 and so on ai
+  "// One attribute name per line – placeholder (#n1, #n2, …) is auto-generated",
   "// Key → AttributeName (one per line)  e.g.  #pk = PK",
   "",
   "[EXPRESSION ATTRIBUTE VALUES]",
-    -- I need each line to automatically set :v1, the next line to :v2 and so on ai
-    -- string will be wrapped in "", booleans will either be true or false, numbers will only be integers or decimals ai
+  "// One value per line – placeholder (:v1, :v2, …) is auto-generated",
   "// Attribute value per line  e.g.  :pk = {\"S\": \"value\"}",
   "",
 }
@@ -121,20 +120,25 @@ function M._parse_and_query(table_name)
       end
     end
 
-    -- this needs to parse the new formats ai
     local function parse_attr_names(lines)
-      local t = {}
+      local t, idx = {}, 1
       for _, l in ipairs(lines) do
-        l = vim.trim(l)
-        if l ~= "" then
-          local k, v = l:match("^([^=:]+)[:=]%s*(.+)$")
+        local s = vim.trim(l)
+        if s ~= "" then
+          -- explicit   #alias = AttrName   or  #alias: AttrName
+          local k, v = s:match("^([^=:]+)[:=]%s*(.+)$")
           if k and v then
             t[k] = v
           else
-            -- allow a whole-line JSON object
-            local ok, obj = pcall(vim.fn.json_decode, l)
+            -- JSON object on a single line
+            local ok, obj = pcall(vim.fn.json_decode, s)
             if ok and type(obj) == "table" then
               for kk, vv in pairs(obj) do t[kk] = vv end
+            else
+              -- bare attr-name → auto placeholder  #n1, #n2 …
+              local placeholder = ("#n%d"):format(idx)
+              t[placeholder] = s
+              idx = idx + 1
             end
           end
         end
@@ -142,21 +146,51 @@ function M._parse_and_query(table_name)
       return next(t) and t or nil
     end
 
-    -- this needs to parse the new formats ai!
     local function parse_attr_values(lines)
-      local t = {}
+      local t, idx = {}, 1
+
+      local function to_ddb(val)        -- convert Lua scalar to DynamoDB AttributeValue
+        if type(val) == "boolean" then
+          return { BOOL = val }
+        elseif type(val) == "number" then
+          return { N = tostring(val) }
+        else
+          return { S = tostring(val) }
+        end
+      end
+
+      local function decode_or_wrap(str) -- tries JSON first, then scalar inference
+        local ok, obj = pcall(vim.fn.json_decode, str)
+        if ok and type(obj) == "table" then
+          return obj
+        end
+        if str == "true" or str == "false" then
+          return { BOOL = str == "true" }
+        end
+        local num = tonumber(str)
+        if num ~= nil then
+          return { N = tostring(num) }
+        end
+        -- strip optional quotes for string values
+        return { S = str:gsub('^"(.*)"$', '%1') }
+      end
+
       for _, l in ipairs(lines) do
-        l = vim.trim(l)
-        if l ~= "" then
-          local k, v = l:match("^([^=:]+)[:=]%s*(.+)$")
+        local s = vim.trim(l)
+        if s ~= "" then
+          local k, v = s:match("^([^=:]+)[:=]%s*(.+)$") -- explicit :val = something
           if k and v then
-            -- if user supplied a raw DynamoDB JSON value, keep it, otherwise wrap as a simple string attribute
-            local ok, obj = pcall(vim.fn.json_decode, v)
-            t[k] = ok and obj or { S = v }
+            t[k] = decode_or_wrap(v)
           else
-            local ok, obj = pcall(vim.fn.json_decode, l)
+            -- JSON object line?
+            local ok, obj = pcall(vim.fn.json_decode, s)
             if ok and type(obj) == "table" then
               for kk, vv in pairs(obj) do t[kk] = vv end
+            else
+              -- bare scalar → auto placeholder :v1, :v2 …
+              local placeholder = (":v%d"):format(idx)
+              t[placeholder] = decode_or_wrap(s)
+              idx = idx + 1
             end
           end
         end
