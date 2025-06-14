@@ -124,26 +124,10 @@ function M._parse_and_query(table_name)
       local t, idx = {}, 1
       for _, l in ipairs(lines) do
         local s = vim.trim(l)
-        if s ~= "" then
-          -- I DO NOT want to have a complicated parser here ai
-          -- I only want to parse a single line where the line can be > userId
-          -- This will be parsed as #n1 = "userId", get rid of all other parsing logic ai!
-          -- explicit   #alias = AttrName   or  #alias: AttrName
-          local k, v = s:match("^([^=:]+)[:=]%s*(.+)$")
-          if k and v then
-            t[k] = v
-          else
-            -- JSON object on a single line
-            local ok, obj = pcall(vim.fn.json_decode, s)
-            if ok and type(obj) == "table" then
-              for kk, vv in pairs(obj) do t[kk] = vv end
-            else
-              -- bare attr-name → auto placeholder  #n1, #n2 …
-              local placeholder = ("#n%d"):format(idx)
-              t[placeholder] = s
-              idx = idx + 1
-            end
-          end
+        if s ~= "" then                       -- non-blank line
+          local placeholder = ("#n%d"):format(idx)
+          t[placeholder] = s                  -- always map #nX → attribute name
+          idx = idx + 1
         end
       end
       return next(t) and t or nil
