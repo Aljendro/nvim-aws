@@ -19,12 +19,12 @@ function M.start()
 		prompt = "Select DynamoDB Table> ",
 		actions = {
 			["default"] = function(selected)
+				common.query_table(selected[1])
+			end,
+			["ctrl-s"] = function(selected)
 				local table_name = selected[1]
 				common.scan_table(table_name)
 			end,
-      ["ctrl-q"] = function(selected)
-        common.query_table(selected[1])
-      end,
 		},
 	})
 end
