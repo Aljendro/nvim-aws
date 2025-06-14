@@ -22,7 +22,7 @@ function M.scan_table(table_name)
 		end
 		local res = dynamodb.scan(params)
 		if not res.success then
-      local error_str = string.gsub(res.error or "", "[\r\n]+", "")
+			local error_str = string.gsub(res.error or "", "[\r\n]+", "")
 			log.error("Error scanning table: " .. (error_str or "unknown"))
 			return
 		end
@@ -57,15 +57,16 @@ end
 
 --- Internal: parse the DynamoDB query form and execute the query.
 --- @param table_name string
-function M._parse_and_query(table_name)
-	log.debug("_parse_and_query()", { table_name = table_name })
+function M._parse_form_and_query_dynamodb(table_name)
+	log.debug("_parse_form_and_query()", { table_name = table_name })
 	return function(ev)
-		local params = M._parse_query_form(table_name, ev.buf)
-
-		local res = dynamodb.query(params)
-		log.debug("QUERY RESULT", { result = res })
+		local form_values = M._parse_form(table_name, ev.buf)
+		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
+		vim.api.nvim_buf_delete(ev.buf, { force = true })
 
 		local result_buf = workflows_common.gen_result_buffer()
+		local res = dynamodb.query(form_values)
+		log.debug("QUERY RESULT", { result = res })
 		if not res.success then
 			local error_str = string.gsub(res.error or "", "[\r\n]+", "")
 			workflows_common.append_buffer(result_buf, { "Error querying table: " .. (error_str or "unknown") })
@@ -76,9 +77,6 @@ function M._parse_and_query(table_name)
 			end
 			workflows_common.append_buffer(result_buf, out)
 		end
-
-		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
-		vim.api.nvim_buf_delete(ev.buf, { force = true })
 	end
 end
 
@@ -86,14 +84,11 @@ end
 --- @param table_name string
 --- @param form_buf   number
 --- @return table params  -- ready for dynamodb.query()
-function M._parse_query_form(table_name, form_buf)
+function M._parse_form(table_name, form_buf)
 	log.debug("_parse_query_form()", { table_name = table_name, form_buf = form_buf })
 
-	-- 1. read buffer
 	local content = vim.api.nvim_buf_get_lines(form_buf, 0, -1, false)
-	log.debug("RAW FORM CONTENT", { content = content })
 
-	-- 2. split into sections
 	local current, sections = "", {}
 	for _, l in ipairs(content) do
 		if l:match("^%[.+%]") then
@@ -105,7 +100,6 @@ function M._parse_query_form(table_name, form_buf)
 	end
 	log.debug("SECTIONS", { sections = sections })
 
-	-- 3. helpers ---------------------------------------------------------------
 	local function parse_attr_names(lines)
 		local t, n = {}, 1
 		for _, l in ipairs(lines) do
@@ -161,31 +155,31 @@ function M._parse_query_form(table_name, form_buf)
 		log.debug("ATTR-VALUES TABLE", { attr_values = t })
 		return next(t) and t or nil
 	end
-	-- 4. build param table -----------------------------------------------------
-	local params = { TableName = table_name }
+
+	local form_values = { TableName = table_name }
 
 	local kce = table.concat(sections["[KEY CONDITION EXPRESSION]"] or {}, " "):gsub("^%s*(.-)%s*$", "%1")
 	if kce ~= "" then
-		params.KeyConditionExpression = kce
+		form_values.KeyConditionExpression = kce
 	end
 
 	local fe = table.concat(sections["[FILTER EXPRESSION]"] or {}, " "):gsub("^%s*(.-)%s*$", "%1")
 	if fe ~= "" then
-		params.FilterExpression = fe
+		form_values.FilterExpression = fe
 	end
 
 	local ean = parse_attr_names(sections["[EXPRESSION ATTRIBUTE NAMES]"] or {})
 	if ean then
-		params.ExpressionAttributeNames = ean
+		form_values.ExpressionAttributeNames = ean
 	end
 
 	local eav = parse_attr_values(sections["[EXPRESSION ATTRIBUTE VALUES]"] or {})
 	if eav then
-		params.ExpressionAttributeValues = eav
+		form_values.ExpressionAttributeValues = eav
 	end
 
-	log.debug("QUERY PARAMS", { params = params })
-	return params
+	log.debug("QUERY PARAMS", { params = form_values })
+	return form_values
 end
 
 --- Internal: open a DynamoDB query form for the given table.
@@ -230,7 +224,7 @@ function M._open_query_form(table_name)
 	vim.api.nvim_open_win(buf, true, win_opts)
 	vim.api.nvim_create_autocmd("BufWriteCmd", {
 		buffer = buf,
-		callback = M._parse_and_query(table_name),
+		callback = M._parse_form_and_query_dynamodb(table_name),
 	})
 end
 
