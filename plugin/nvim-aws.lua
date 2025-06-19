@@ -11,6 +11,10 @@ vim.api.nvim_create_user_command("AWSDynamodb", function()
 	require("nvim-aws.workflows.dynamodb").start()
 end, {})
 
+vim.api.nvim_create_user_command("AWSDynamodbHistory", function()
+	require("nvim-aws.workflows.dynamodb.utility").browse_query_history()
+end, {})
+
 vim.api.nvim_create_user_command("AWSS3", function()
 	require("nvim-aws.workflows.s3").start()
 end, {})

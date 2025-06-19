@@ -6,6 +6,9 @@ local common = require("nvim-aws.utilities.common")
 
 local M = {}
 
+-- History configuration
+local HISTORY_FILE = vim.fn.stdpath("data") .. "/nvim-aws-dynamodb-history.json"
+
 ---------------------------------------------------------------------------------------------------
 ------------------------------------ EXPORT FUNCTIONS ---------------------------------------------
 ---------------------------------------------------------------------------------------------------
@@ -22,6 +25,13 @@ end
 function M.query_table(table_name)
 	log.debug("query_table()", { table_name = table_name })
 	M._open_query_form(table_name)
+end
+
+--- Browse query history for DynamoDB
+--- @param table_name string|nil Optional table name to filter by
+function M.browse_query_history(table_name)
+	log.debug("browse_query_history()", { table_name = table_name })
+	M._open_history_browser(table_name)
 end
 
 --- Open the AWS console page for the given DynamoDB table
@@ -49,6 +59,167 @@ function M.open_aws_console_table_link(table_name)
 	log.info("Opening AWS DynamoDB console for table " .. table_name)
 	local console_command = vim.fn.has("mac") == 1 and "open" or "xdg-open"
 	vim.fn.system({ console_command, url })
+end
+
+---------------------------------------------------------------------------------------------------
+------------------------------------- HISTORY FUNCTIONS -------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+--- Internal: Load query history from file
+--- @return table Query history array
+function M._load_query_history()
+	local history_file = HISTORY_FILE
+	local file = io.open(history_file, "r")
+	if not file then
+		return {}
+	end
+
+	local content = file:read("*a")
+	file:close()
+
+	if content == "" then
+		return {}
+	end
+
+	local ok, history = pcall(vim.fn.json_decode, content)
+	if not ok or type(history) ~= "table" then
+		log.warn("Failed to parse query history file, starting fresh")
+		return {}
+	end
+
+	return history
+end
+
+--- Internal: Save query history to file
+--- @param history table Query history array
+function M._save_query_history(history)
+	local history_file = HISTORY_FILE
+
+	-- Ensure directory exists
+	local dir = vim.fn.fnamemodify(history_file, ":h")
+	vim.fn.mkdir(dir, "p")
+
+	local file = io.open(history_file, "w")
+	if not file then
+		log.error("Failed to open history file for writing: " .. history_file)
+		return false
+	end
+
+	local content = vim.fn.json_encode(history)
+	file:write(content)
+	file:close()
+
+	log.debug("Saved query history with " .. #history .. " entries")
+	return true
+end
+
+--- Internal: Add query to history
+--- @param table_name string DynamoDB table name
+--- @param operation_type string "query" or "scan"
+--- @param query_name string User-provided name for the query
+--- @param form_values table Parsed form values
+function M._add_to_history(table_name, operation_type, query_name, form_values)
+	local history = M._load_query_history()
+
+	local entry = {
+		id = tostring(os.time() .. math.random(1000, 9999)),
+		timestamp = os.time(),
+		date_string = os.date("%Y-%m-%d %H:%M:%S"),
+		table_name = table_name,
+		operation_type = operation_type,
+		query_name = query_name and query_name ~= "" and query_name or nil,
+		form_values = form_values,
+	}
+
+	-- Check if updating existing named query
+	if query_name and query_name ~= "" then
+		for i, existing in ipairs(history) do
+			if
+				existing.query_name == query_name
+				and existing.table_name == table_name
+				and existing.operation_type == operation_type
+			then
+				-- Update existing entry
+				entry.id = existing.id
+				history[i] = entry
+				log.info("Updated existing query: " .. query_name)
+				M._save_query_history(history)
+				return
+			end
+		end
+	end
+
+	-- Add new entry at beginning
+	table.insert(history, 1, entry)
+
+	-- Limit history size to 100 entries
+	if #history > 100 then
+		for i = 101, #history do
+			history[i] = nil
+		end
+	end
+
+	M._save_query_history(history)
+	log.info("Added query to history" .. (query_name and (" as '" .. query_name .. "'") or ""))
+end
+
+--- Internal: Search query history
+--- @param search_term string Optional search term
+--- @param table_name string Optional table name filter
+--- @param operation_type string Optional operation type filter
+--- @return table Filtered history entries
+function M._search_history(search_term, table_name, operation_type)
+	local history = M._load_query_history()
+	local results = {}
+
+	for _, entry in ipairs(history) do
+		local matches = true
+
+		-- Filter by table name
+		if table_name and entry.table_name ~= table_name then
+			matches = false
+		end
+
+		-- Filter by operation type
+		if operation_type and entry.operation_type ~= operation_type then
+			matches = false
+		end
+
+		-- Filter by search term
+		if search_term and search_term ~= "" then
+			local search_lower = string.lower(search_term)
+			local name_match = entry.query_name and string.find(string.lower(entry.query_name), search_lower, 1, true)
+			local table_match = string.find(string.lower(entry.table_name), search_lower, 1, true)
+
+			if not (name_match or table_match) then
+				matches = false
+			end
+		end
+
+		if matches then
+			table.insert(results, entry)
+		end
+	end
+
+	return results
+end
+
+--- Internal: Delete query from history
+--- @param query_id string Query ID to delete
+--- @return boolean Success status
+function M._delete_from_history(query_id)
+	local history = M._load_query_history()
+
+	for i, entry in ipairs(history) do
+		if entry.id == query_id then
+			table.remove(history, i)
+			M._save_query_history(history)
+			log.info("Deleted query from history: " .. (entry.query_name or entry.id))
+			return true
+		end
+	end
+
+	return false
 end
 
 ---------------------------------------------------------------------------------------------------
@@ -174,8 +345,11 @@ end
 --- @return function Form submission handler
 function M._create_form_handler(table_name, operation_type)
 	return function(ev)
-		local form_values = M._parse_form(table_name, ev.buf)
+		local form_values, query_name = M._parse_form(table_name, ev.buf)
 		M._close_form_windows(ev.buf)
+
+		-- Save to history before executing
+		M._add_to_history(table_name, operation_type, query_name, form_values)
 
 		local result_buf = workflows_common.gen_result_buffer()
 		M._setup_result_buffer_keymaps(result_buf, table_name)
@@ -321,9 +495,12 @@ end
 --- Internal: Build query parameters from parsed sections
 --- @param table_name string DynamoDB table name
 --- @param sections table Parsed form sections
---- @return table DynamoDB operation parameters
+--- @return table, string DynamoDB operation parameters and query name
 function M._build_query_params(table_name, sections)
 	local form_values = { TableName = table_name }
+
+	-- Extract query name
+	local query_name = table.concat(sections["[QUERY NAME]"] or {}, " "):gsub("^%s*(.-)%s*$", "%1")
 
 	local kce = table.concat(sections["[KEY CONDITION EXPRESSION]"] or {}, " "):gsub("^%s*(.-)%s*$", "%1")
 	if kce ~= "" then
@@ -345,14 +522,14 @@ function M._build_query_params(table_name, sections)
 		form_values.ExpressionAttributeValues = eav
 	end
 
-	log.debug("QUERY PARAMS", { params = form_values })
-	return form_values
+	log.debug("QUERY PARAMS", { params = form_values, query_name = query_name })
+	return form_values, query_name
 end
 
 --- Internal: build DynamoDB query-api params from the query-form buffer
 --- @param table_name string
 --- @param form_buf   number
---- @return table params  -- ready for dynamodb.query()
+--- @return table, string params and query name
 function M._parse_form(table_name, form_buf)
 	log.debug("_parse_query_form()", { table_name = table_name, form_buf = form_buf })
 
@@ -366,6 +543,7 @@ end
 --- @return string Help text for the section
 function M._get_section_help(section)
 	local help_text = {
+		["QUERY NAME"] = "Optional name to save this query for future use",
 		["KEY CONDITION EXPRESSION"] = "e.g. #n1 = :v1",
 		["FILTER EXPRESSION"] = "optional",
 		["EXPRESSION ATTRIBUTE NAMES"] = "One attribute name per line – placeholder (#n1, #n2, …) is auto-generated",
@@ -377,12 +555,14 @@ end
 --- Internal: Generate form template for DynamoDB operations
 --- @param table_name string DynamoDB table name
 --- @param operation_type string "query" or "scan"
+--- @param existing_query table|nil Existing query to populate form with
 --- @return string Generated template
-function M._generate_form_template(table_name, operation_type)
+function M._generate_form_template(table_name, operation_type, existing_query)
 	local templates = {
 		query = {
 			title = "DynamoDB Query Form",
 			sections = {
+				"QUERY NAME",
 				"KEY CONDITION EXPRESSION",
 				"FILTER EXPRESSION",
 				"EXPRESSION ATTRIBUTE NAMES",
@@ -394,7 +574,12 @@ function M._generate_form_template(table_name, operation_type)
 		},
 		scan = {
 			title = "DynamoDB Scan Form",
-			sections = { "FILTER EXPRESSION", "EXPRESSION ATTRIBUTE NAMES", "EXPRESSION ATTRIBUTE VALUES" },
+			sections = {
+				"QUERY NAME",
+				"FILTER EXPRESSION",
+				"EXPRESSION ATTRIBUTE NAMES",
+				"EXPRESSION ATTRIBUTE VALUES",
+			},
 		},
 	}
 
@@ -403,6 +588,7 @@ function M._generate_form_template(table_name, operation_type)
 		"-- " .. template.title,
 		"-- Table: " .. table_name,
 		"-- Save (:w) to execute the " .. operation_type,
+		"-- Press <c-h> to browse query history",
 		"--",
 	}
 
@@ -410,27 +596,229 @@ function M._generate_form_template(table_name, operation_type)
 		table.insert(lines, "[" .. section .. "]")
 		table.insert(lines, "-- " .. M._get_section_help(section))
 
-		-- Add default content if available
-		if template.default_content and template.default_content[section] then
-			table.insert(lines, template.default_content[section])
-		else
-			table.insert(lines, "")
+		-- Add content from existing query or default
+		local content = ""
+		if existing_query then
+			if section == "QUERY NAME" then
+				content = existing_query.query_name or ""
+			elseif section == "KEY CONDITION EXPRESSION" then
+				content = existing_query.form_values.KeyConditionExpression or ""
+			elseif section == "FILTER EXPRESSION" then
+				content = existing_query.form_values.FilterExpression or ""
+			elseif section == "EXPRESSION ATTRIBUTE NAMES" then
+				local names = existing_query.form_values.ExpressionAttributeNames or {}
+				local name_lines = {}
+				for _, name in pairs(names) do
+					table.insert(name_lines, name)
+				end
+				content = table.concat(name_lines, "\n")
+			elseif section == "EXPRESSION ATTRIBUTE VALUES" then
+				local values = existing_query.form_values.ExpressionAttributeValues or {}
+				local value_lines = {}
+				for _, attr in pairs(values) do
+					if attr.S then
+						table.insert(value_lines, '"' .. attr.S .. '"')
+					elseif attr.N then
+						table.insert(value_lines, attr.N)
+					elseif attr.BOOL ~= nil then
+						table.insert(value_lines, tostring(attr.BOOL))
+					elseif attr.B then
+						table.insert(value_lines, 'b"' .. attr.B .. '"')
+					elseif attr.M then
+						table.insert(value_lines, vim.fn.json_encode(attr.M))
+					elseif attr.SS then
+						table.insert(value_lines, vim.fn.json_encode(attr.SS))
+					end
+				end
+				content = table.concat(value_lines, "\n")
+			end
+		elseif template.default_content and template.default_content[section] then
+			content = template.default_content[section]
 		end
+
+		table.insert(lines, content)
 	end
 
 	return table.concat(lines, "\n")
 end
 
---- Internal: Open form for DynamoDB operation
+--- Internal: Open query history browser with fzf
+--- @param filter_table_name string|nil Optional table name to filter by
+function M._open_history_browser(filter_table_name)
+	local fzf = require("fzf-lua")
+	local history = M._search_history(nil, filter_table_name, nil)
+
+	if #history == 0 then
+		vim.notify(
+			"No query history found" .. (filter_table_name and (" for table " .. filter_table_name) or ""),
+			vim.log.levels.INFO
+		)
+		return
+	end
+
+	-- Create display lines for fzf
+	local fzf_lines = {}
+	for i, entry in ipairs(history) do
+		local display_name = entry.query_name or ("Unnamed " .. entry.operation_type)
+		local line = string.format(
+			"[%s] %s - %s (%s)",
+			string.upper(entry.operation_type),
+			display_name,
+			entry.table_name,
+			entry.date_string
+		)
+		fzf_lines[line] = i -- Map display line to history index
+	end
+
+	fzf.fzf_exec(function(cb)
+		for line, _ in pairs(fzf_lines) do
+			cb(line)
+		end
+		cb()
+	end, {
+		prompt = "DynamoDB History> ",
+		header = "Enter: Run | Ctrl-E: Edit | Ctrl-D: Delete",
+		actions = {
+			["default"] = function(selected)
+				if #selected > 0 then
+					local idx = fzf_lines[selected[1]]
+					M._run_history_entry_direct(history[idx])
+				end
+			end,
+			["ctrl-e"] = function(selected)
+				if #selected > 0 then
+					local idx = fzf_lines[selected[1]]
+					M._edit_history_entry_direct(history[idx])
+				end
+			end,
+			["ctrl-d"] = function(selected)
+				if #selected > 0 then
+					local idx = fzf_lines[selected[1]]
+					M._delete_history_entry_direct(history[idx])
+				end
+			end,
+		},
+		preview = {
+			type = "cmd",
+			fn = function(items)
+				if #items > 0 then
+					local idx = fzf_lines[items[1]]
+					return M._generate_history_preview(history[idx])
+				end
+				return ""
+			end,
+		},
+	})
+end
+
+--- Internal: Generate preview content for history entry
+--- @param entry table History entry
+--- @return string Preview content
+function M._generate_history_preview(entry)
+	local preview_lines = {
+		"Query Details:",
+		"==============",
+		"Name: " .. (entry.query_name or "Unnamed"),
+		"Type: " .. string.upper(entry.operation_type),
+		"Table: " .. entry.table_name,
+		"Date: " .. entry.date_string,
+		"",
+		"Parameters:",
+		"===========",
+	}
+
+	-- Add query parameters
+	if entry.form_values.KeyConditionExpression then
+		table.insert(preview_lines, "Key Condition: " .. entry.form_values.KeyConditionExpression)
+	end
+	if entry.form_values.FilterExpression then
+		table.insert(preview_lines, "Filter: " .. entry.form_values.FilterExpression)
+	end
+	if entry.form_values.ExpressionAttributeNames then
+		table.insert(preview_lines, "")
+		table.insert(preview_lines, "Attribute Names:")
+		for placeholder, name in pairs(entry.form_values.ExpressionAttributeNames) do
+			table.insert(preview_lines, "  " .. placeholder .. " = " .. name)
+		end
+	end
+	if entry.form_values.ExpressionAttributeValues then
+		table.insert(preview_lines, "")
+		table.insert(preview_lines, "Attribute Values:")
+		for placeholder, attr in pairs(entry.form_values.ExpressionAttributeValues) do
+			local value_str = ""
+			if attr.S then
+				value_str = '"' .. attr.S .. '"'
+			elseif attr.N then
+				value_str = attr.N
+			elseif attr.BOOL ~= nil then
+				value_str = tostring(attr.BOOL)
+			elseif attr.B then
+				value_str = 'b"' .. attr.B .. '"'
+			elseif attr.M then
+				value_str = vim.fn.json_encode(attr.M)
+			elseif attr.SS then
+				value_str = vim.fn.json_encode(attr.SS)
+			end
+			table.insert(preview_lines, "  " .. placeholder .. " = " .. value_str)
+		end
+	end
+
+	return table.concat(preview_lines, "\n")
+end
+
+--- Internal: Run history entry directly (for fzf callback)
+--- @param entry table History entry
+function M._run_history_entry_direct(entry)
+	-- Execute the query directly
+	local result_buf = workflows_common.gen_result_buffer()
+	M._setup_result_buffer_keymaps(result_buf, entry.table_name)
+
+	local paginate = M._create_pagination_handler(result_buf, entry.operation_type, entry.form_values)
+	paginate()
+end
+
+--- Internal: Edit history entry directly (for fzf callback)
+--- @param entry table History entry
+function M._edit_history_entry_direct(entry)
+	-- Open form with existing query data
+	M._open_form_with_data(entry.table_name, entry.operation_type, entry)
+end
+
+--- Internal: Delete history entry directly (for fzf callback)
+--- @param entry table History entry
+function M._delete_history_entry_direct(entry)
+	local name = entry.query_name or ("Unnamed " .. entry.operation_type)
+
+	-- Confirm deletion
+	local confirm = vim.fn.confirm("Delete query '" .. name .. "'?", "&Yes\n&No", 2)
+	if confirm == 1 then
+		if M._delete_from_history(entry.id) then
+			vim.notify("Deleted query: " .. name, vim.log.levels.INFO)
+			-- Reopen the browser to refresh
+			M._open_history_browser(nil)
+		else
+			vim.notify("Failed to delete query", vim.log.levels.ERROR)
+		end
+	end
+end
+
+--- Internal: Open form for DynamoDB operation with existing data
 --- @param table_name string DynamoDB table name
 --- @param operation_type string "query" or "scan"
-function M._open_form(table_name, operation_type)
-	log.debug("_open_" .. operation_type .. "_form()", { table_name = table_name })
+--- @param existing_query table|nil Existing query data
+function M._open_form_with_data(table_name, operation_type, existing_query)
+	log.debug("_open_" .. operation_type .. "_form_with_data()", { table_name = table_name })
 
-	local template = M._generate_form_template(table_name, operation_type)
+	local template = M._generate_form_template(table_name, operation_type, existing_query)
 	local buf = default_utility.create_template_buffer("dynamodb", operation_type, template)
 
-	M._create_floating_window(buf)
+	local win = M._create_floating_window(buf)
+
+	-- Add history browser keymap
+	vim.keymap.set("n", "<c-h>", function()
+		vim.api.nvim_win_close(win, true)
+		M._open_history_browser(table_name)
+	end, { buffer = buf, desc = "Browse query history" })
 
 	local callback = operation_type == "query" and M._parse_form_and_query_dynamodb(table_name)
 		or M._parse_form_and_scan_dynamodb(table_name)
@@ -439,6 +827,13 @@ function M._open_form(table_name, operation_type)
 		buffer = buf,
 		callback = callback,
 	})
+end
+
+--- Internal: Open form for DynamoDB operation
+--- @param table_name string DynamoDB table name
+--- @param operation_type string "query" or "scan"
+function M._open_form(table_name, operation_type)
+	M._open_form_with_data(table_name, operation_type, nil)
 end
 
 --- Internal: open a DynamoDB query form for the given table.

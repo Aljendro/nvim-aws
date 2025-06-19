@@ -25,10 +25,14 @@ function M.start()
 				local table_name = selected[1]
 				common.scan_table(table_name)
 			end,
-      ["ctrl-l"] = function(selected)
-        local table_name = selected[1]
-        common.open_aws_console_table_link(table_name)
-      end,
+			["ctrl-l"] = function(selected)
+				local table_name = selected[1]
+				common.open_aws_console_table_link(table_name)
+			end,
+			["ctrl-h"] = function(selected)
+				local table_name = selected[1]
+				common.browse_query_history(table_name)
+			end,
 		},
 	})
 end
