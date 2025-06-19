@@ -25,7 +25,7 @@ function M.start()
 				local table_name = selected[1]
 				common.scan_table(table_name)
 			end,
-      ["ctrl-o"] = function(selected)
+      ["ctrl-l"] = function(selected)
         local table_name = selected[1]
         common.open_aws_console_table_link(table_name)
       end,
