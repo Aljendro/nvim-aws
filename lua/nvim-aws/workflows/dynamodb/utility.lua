@@ -70,6 +70,11 @@ function M._parse_form_and_query_dynamodb(table_name)
 
 		local result_buf = workflows_common.gen_result_buffer()
 
+		-- Add keymap to edit current item
+		vim.keymap.set("n", "ge", function()
+			M._edit_current_item(result_buf, table_name)
+		end, { buffer = result_buf, desc = "Edit current item" })
+
 		-- paginated query
 		local function query_batch(exclusive_key)
 			local params = vim.tbl_extend("force", { Limit = 500 }, form_values)
@@ -91,11 +96,6 @@ function M._parse_form_and_query_dynamodb(table_name)
 				table.insert(lines, vim.fn.json_encode(item))
 			end
 			workflows_common.append_buffer(result_buf, lines)
-
-			-- Add keymap to edit current item
-			vim.keymap.set("n", "ge", function()
-				M._edit_current_item(result_buf, table_name)
-			end, { buffer = result_buf, desc = "Edit current item" })
 
 			local last_key = res.data.LastEvaluatedKey
 			if last_key then
@@ -387,9 +387,11 @@ function M._edit_current_item(result_buf, table_name)
 	local pretty_json = M._pretty_print_json(formatted_json)
 
 	local edit_buf = vim.api.nvim_create_buf(false, true)
+	local uuid = default_utility.generate_uuid()
+	vim.api.nvim_buf_set_name(edit_buf, "dynamodb-edit-" .. uuid)
 	vim.api.nvim_buf_set_lines(edit_buf, 0, -1, false, vim.split(pretty_json, "\n"))
 	vim.api.nvim_set_option_value("filetype", "json", { buf = edit_buf })
-	vim.api.nvim_set_option_value("buftype", "acwrite", { buf = edit_buf })
+	vim.api.nvim_set_option_value("buftype", "", { buf = edit_buf })
 
 	-- Open in floating window
 	local width = math.floor(vim.o.columns * 0.8)
@@ -409,19 +411,11 @@ function M._edit_current_item(result_buf, table_name)
 	}
 	local edit_win = vim.api.nvim_open_win(edit_buf, true, win_opts)
 
-	-- Set buffer name for reference
-	vim.api.nvim_buf_set_name(edit_buf, "DynamoDB Edit: " .. table_name)
-
-	-- Create autocmd to handle save
-	vim.api.nvim_create_autocmd("BufWriteCmd", {
-		buffer = edit_buf,
-		callback = function()
-			M._save_edited_item(edit_buf, result_buf, table_name, line_num)
-		end,
-	})
-
 	-- Add helpful keymaps
-	vim.keymap.set("n", "q", function()
+	vim.keymap.set("n", "<c-e>", function()
+		M._save_edited_item(edit_buf, result_buf, table_name, line_num)
+	end, { buffer = edit_buf, desc = "Close edit window" })
+	vim.keymap.set("n", "<c-q>", function()
 		vim.api.nvim_win_close(edit_win, true)
 	end, { buffer = edit_buf, desc = "Close edit window" })
 end
