@@ -33,32 +33,75 @@ aws dynamodb create-table \
 echo "Waiting for table to become active..."
 aws dynamodb wait table-exists --table-name "$TEST_TABLE_NAME"
 
-# Insert test item
-echo "Inserting test item..."
-aws dynamodb put-item \
-  --table-name "$TEST_TABLE_NAME" \
-  --no-cli-pager \
-  --item '{
-    "userId": {"S": "user123"},
-    "timestamp": {"N": "1623456789"},
-    "email": {"S": "test@example.com"},
-    "name": {"S": "Test User"},
-    "active": {"BOOL": true}
-  }'
+# Insert test items in batches
+echo "Inserting 1000 test items..."
 
-# Insert PartiQL test item
-echo "Inserting PartiQL test item..."
-aws dynamodb execute-statement \
-  --no-cli-pager \
-  --statement "INSERT INTO \"$TEST_TABLE_NAME\" VALUE {
-    'userId': 'partiql_user',
-    'timestamp': 1623456790,
-    'name': 'PartiQL User',
-    'email': 'partiql@example.com',
-    'active': true
-  }"
+# Function to generate batch write items
+generate_batch_items() {
+  local start=$1
+  local end=$2
+  local items=""
 
-echo "Table created and populated successfully: $TEST_TABLE_NAME"
+  for i in $(seq $start $end); do
+    local timestamp=$((1623456789 + i))
+    local user_id="user$(printf "%04d" $i)"
+    local email="user${i}@example.com"
+    local name="Test User ${i}"
+    local active=$([ $((i % 3)) -eq 0 ] && echo "false" || echo "true")
+    local department_num=$((i % 5 + 1))
+    local department="dept${department_num}"
+    local score=$((RANDOM % 100 + 1))
+
+    if [ -n "$items" ]; then
+      items="${items},"
+    fi
+
+    items="${items}{
+      \"PutRequest\": {
+        \"Item\": {
+          \"userId\": {\"S\": \"${user_id}\"},
+          \"timestamp\": {\"N\": \"${timestamp}\"},
+          \"email\": {\"S\": \"${email}\"},
+          \"name\": {\"S\": \"${name}\"},
+          \"active\": {\"BOOL\": ${active}},
+          \"department\": {\"S\": \"${department}\"},
+          \"score\": {\"N\": \"${score}\"}
+        }
+      }
+    }"
+  done
+
+  echo "$items"
+}
+
+# Insert items in batches of 25 (DynamoDB limit)
+for batch_start in $(seq 1 25 1000); do
+  batch_end=$((batch_start + 24))
+  if [ $batch_end -gt 1000 ]; then
+    batch_end=1000
+  fi
+
+  echo "Inserting batch: items ${batch_start}-${batch_end}"
+
+  batch_items=$(generate_batch_items $batch_start $batch_end)
+
+  aws dynamodb batch-write-item \
+    --no-cli-pager \
+    --request-items "{
+      \"${TEST_TABLE_NAME}\": [
+        ${batch_items}
+      ]
+    }"
+
+  # Small delay to avoid throttling
+  sleep 0.1
+done
+
+echo "Table created and populated with 1000 items successfully: $TEST_TABLE_NAME"
+echo ""
+echo "Sample queries you can run:"
+echo "aws dynamodb scan --table-name $TEST_TABLE_NAME --max-items 10 --no-cli-pager"
+echo "aws dynamodb query --table-name $TEST_TABLE_NAME --key-condition-expression \"userId = :uid\" --expression-attribute-values '{\":uid\":{\"S\":\"user0001\"}}' --no-cli-pager"
 echo ""
 echo "To clean up when finished testing, run:"
 echo "aws dynamodb delete-table --table-name $TEST_TABLE_NAME --profile nvim-aws --no-cli-pager"
