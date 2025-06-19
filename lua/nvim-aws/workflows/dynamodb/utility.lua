@@ -27,27 +27,27 @@ end
 --- Open the AWS console page for the given DynamoDB table
 --- @param table_name string
 function M.open_aws_console_table_link(table_name)
-  log.debug("open_aws_console_table_link()", { table_name = table_name })
+	log.debug("open_aws_console_table_link()", { table_name = table_name })
 
-  -- try to discover region from the table’s ARN
-  local region
-  local res = dynamodb.describe_table({ TableName = table_name })
-  if res and res.success then
-    local arn = res.data.Table.TableArn or ""
-    region = arn:match("arn:aws:dynamodb:([^:]+):")
-  end
-  -- fallback to env / default
-  region = region or os.getenv("AWS_REGION") or os.getenv("AWS_DEFAULT_REGION") or "us-east-1"
+	-- try to discover region from the table’s ARN
+	local region
+	local res = dynamodb.describe_table({ TableName = table_name })
+	if res and res.success then
+		local arn = res.data.Table.TableArn or ""
+		region = arn:match("arn:aws:dynamodb:([^:]+):")
+	end
+	-- fallback to env / default
+	region = region or os.getenv("AWS_REGION") or os.getenv("AWS_DEFAULT_REGION") or "us-east-1"
 
-  local url = string.format(
-    "https://%s.console.aws.amazon.com/dynamodb/home?region=%s#table?name=%s",
-    region,
-    region,
-    common.url_encode(table_name)
-  )
+	local url = string.format(
+		"https://%s.console.aws.amazon.com/dynamodbv2/home?region=%s#item-explorer?maximize=true&table=%s",
+		region,
+		region,
+		common.url_encode(table_name)
+	)
 
-  log.info("Opening AWS DynamoDB console for table " .. table_name)
-  vim.fn.system({ "open", url })   -- macOS; adjust if you add other OS support
+	log.info("Opening AWS DynamoDB console for table " .. table_name)
+	vim.fn.system({ "open", url }) -- macOS; adjust if you add other OS support
 end
 
 ---------------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ function M._parse_form_and_query_dynamodb(table_name)
 
 		-- paginated query
 		local function query_batch(exclusive_key)
-			local params = vim.tbl_extend("force", {}, form_values)
+			local params = vim.tbl_extend("force", { Limit = 500 }, form_values)
 			if exclusive_key then
 				params.ExclusiveStartKey = exclusive_key
 			end
@@ -92,9 +92,14 @@ function M._parse_form_and_query_dynamodb(table_name)
 			end
 			workflows_common.append_buffer(result_buf, lines)
 
+			-- Add keymap to edit current item
+			vim.keymap.set("n", "ge", function()
+				M._edit_current_item(result_buf, table_name)
+			end, { buffer = result_buf, desc = "Edit current item" })
+
 			local last_key = res.data.LastEvaluatedKey
 			if last_key then
-				vim.keymap.set("n", "cn", function()
+				vim.keymap.set("n", "gl", function()
 					query_batch(last_key)
 				end, { buffer = result_buf, desc = "Continue query" })
 			end
@@ -121,7 +126,7 @@ function M._parse_form_and_scan_dynamodb(table_name)
 		local function scan_batch(exclusive_key)
 			local params = {
 				TableName = table_name,
-				Limit = 25,
+				Limit = 500,
 				FilterExpression = form_values.FilterExpression,
 				ExpressionAttributeNames = form_values.ExpressionAttributeNames,
 				ExpressionAttributeValues = form_values.ExpressionAttributeValues,
@@ -144,9 +149,14 @@ function M._parse_form_and_scan_dynamodb(table_name)
 			end
 			workflows_common.append_buffer(result_buf, batch_lines)
 
+			-- Add keymap to edit current item
+			vim.keymap.set("n", "ge", function()
+				M._edit_current_item(result_buf, table_name)
+			end, { buffer = result_buf, desc = "Edit current item" })
+
 			local last_key = res.data.LastEvaluatedKey
 			if last_key then
-				vim.keymap.set("n", "cn", function()
+				vim.keymap.set("n", "gl", function()
 					scan_batch(last_key)
 				end, { buffer = result_buf, desc = "Continue scan" })
 			end
@@ -345,6 +355,141 @@ function M._open_scan_form(table_name)
 		buffer = buf,
 		callback = M._parse_form_and_scan_dynamodb(table_name),
 	})
+end
+
+--- Internal: Edit the current DynamoDB item under cursor
+--- @param result_buf number The result buffer containing the items
+--- @param table_name string The DynamoDB table name
+function M._edit_current_item(result_buf, table_name)
+	log.debug("_edit_current_item()", { result_buf = result_buf, table_name = table_name })
+
+	-- Get current line content
+	local cursor_pos = vim.api.nvim_win_get_cursor(0)
+	local line_num = cursor_pos[1]
+	local lines = vim.api.nvim_buf_get_lines(result_buf, line_num - 1, line_num, false)
+
+	if #lines == 0 or lines[1] == "" then
+		log.info("No item found on current line")
+		return
+	end
+
+	-- Parse the JSON item
+	local item_json = lines[1]
+	local ok, item = pcall(vim.fn.json_decode, item_json)
+	if not ok or type(item) ~= "table" then
+		log.error("Failed to parse item JSON: " .. item_json)
+		return
+	end
+
+	-- Create edit buffer with formatted JSON
+	local formatted_json = vim.fn.json_encode(item)
+	-- Pretty print the JSON for better editing
+	local pretty_json = M._pretty_print_json(formatted_json)
+
+	local edit_buf = vim.api.nvim_create_buf(false, true)
+	vim.api.nvim_buf_set_lines(edit_buf, 0, -1, false, vim.split(pretty_json, "\n"))
+	vim.api.nvim_set_option_value("filetype", "json", { buf = edit_buf })
+	vim.api.nvim_set_option_value("buftype", "acwrite", { buf = edit_buf })
+
+	-- Open in floating window
+	local width = math.floor(vim.o.columns * 0.8)
+	local height = math.floor(vim.o.lines * 0.8)
+	local row = math.floor((vim.o.lines - height) / 2)
+	local col = math.floor((vim.o.columns - width) / 2)
+	local win_opts = {
+		relative = "editor",
+		width = width,
+		height = height,
+		row = row,
+		col = col,
+		style = "minimal",
+		border = "rounded",
+		title = " Edit DynamoDB Item ",
+		title_pos = "center",
+	}
+	local edit_win = vim.api.nvim_open_win(edit_buf, true, win_opts)
+
+	-- Set buffer name for reference
+	vim.api.nvim_buf_set_name(edit_buf, "DynamoDB Edit: " .. table_name)
+
+	-- Create autocmd to handle save
+	vim.api.nvim_create_autocmd("BufWriteCmd", {
+		buffer = edit_buf,
+		callback = function()
+			M._save_edited_item(edit_buf, result_buf, table_name, line_num)
+		end,
+	})
+
+	-- Add helpful keymaps
+	vim.keymap.set("n", "q", function()
+		vim.api.nvim_win_close(edit_win, true)
+	end, { buffer = edit_buf, desc = "Close edit window" })
+end
+
+--- Internal: Save the edited DynamoDB item back to the database
+--- @param edit_buf number The edit buffer
+--- @param result_buf number The original result buffer
+--- @param table_name string The DynamoDB table name
+--- @param line_num number The line number in the result buffer
+function M._save_edited_item(edit_buf, result_buf, table_name, line_num)
+	log.debug("_save_edited_item()", { edit_buf = edit_buf, table_name = table_name, line_num = line_num })
+
+	-- Get edited content
+	local content = table.concat(vim.api.nvim_buf_get_lines(edit_buf, 0, -1, false), "\n")
+
+	-- Parse the edited JSON
+	local ok, edited_item = pcall(vim.fn.json_decode, content)
+	if not ok or type(edited_item) ~= "table" then
+		log.error("Invalid JSON format in edited item")
+		vim.notify("Error: Invalid JSON format", vim.log.levels.ERROR)
+		return
+	end
+
+	-- Update the item in DynamoDB using put_item
+	local params = {
+		TableName = table_name,
+		Item = edited_item,
+	}
+
+	local result = dynamodb.put_item(params)
+	if not result.success then
+		local err = result.error or "Unknown error"
+		log.error("Failed to update item: " .. err)
+		vim.notify("Error updating item: " .. err, vim.log.levels.ERROR)
+		return
+	end
+
+	-- Update the result buffer with the new item
+	local updated_json = vim.fn.json_encode(edited_item)
+	vim.api.nvim_buf_set_lines(result_buf, line_num - 1, line_num, false, { updated_json })
+
+	-- Mark edit buffer as unmodified and close
+	vim.api.nvim_set_option_value("modified", false, { buf = edit_buf })
+
+	-- Close edit window
+	for _, win in ipairs(vim.api.nvim_list_wins()) do
+		if vim.api.nvim_win_get_buf(win) == edit_buf then
+			vim.api.nvim_win_close(win, true)
+			break
+		end
+	end
+
+	log.info("Item updated successfully in DynamoDB")
+	vim.notify("Item updated successfully", vim.log.levels.INFO)
+end
+
+--- Internal: Pretty print JSON for better editing
+--- @param json_str string
+--- @return string
+function M._pretty_print_json(json_str)
+	-- Use jq for pretty printing if available, otherwise return as-is
+	local result = vim.fn.system("jq .", json_str)
+	if vim.v.shell_error == 0 then
+		return result
+	else
+		-- Fallback: basic formatting
+		return json_str:gsub(",", ",\n"):gsub("{", "{\n"):gsub("}", "\n}")
+	end
 end
 
 return M
