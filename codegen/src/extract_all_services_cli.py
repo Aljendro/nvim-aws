@@ -11,7 +11,6 @@ import re
 ONLY_SERVICES = [
     "cloudwatch",
     "dynamodb",
-    "ec2",
     "lambda",
     "logs",
     "s3",
