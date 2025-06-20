@@ -470,6 +470,14 @@ function M.list_log_anomaly_detectors(input, callbacks)
 	return common.execute_aws_command_skeleton({ "logs", "list-log-anomaly-detectors" }, input, callbacks)
 end
 
+--- AWS logs list-log-groups operation
+--- @param input nil|table the input table
+--- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
+--- @return {success: boolean, data?: table, error?: string }|{success: boolean, job: vim.SystemObj}
+function M.list_log_groups(input, callbacks)
+	return common.execute_aws_command_skeleton({ "logs", "list-log-groups" }, input, callbacks)
+end
+
 --- AWS logs list-log-groups-for-query operation
 --- @param input nil|table the input table
 --- @param callbacks nil|{stdout?: fun(err: string, data: string), stderr?: fun(err: string, data: string), on_exit?: fun(out: vim.SystemCompleted)}
