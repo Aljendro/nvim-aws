@@ -5,7 +5,7 @@ describe("testing default workflow", function()
 	it("should return sorted list of available services", function()
 		local services = default_utility.get_available_services()
 
-		assert.are_equal(#services, 9)
+		assert.are_equal(#services, 8)
 	end)
 
 	it("should get commands for a valid service", function()
