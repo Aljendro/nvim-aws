@@ -45,21 +45,16 @@ function M.open_aws_console_table_link(table_name)
 	local res = dynamodb.describe_table({ TableName = table_name })
 	if res and res.success then
 		local arn = res.data.Table.TableArn or ""
-		region = arn:match("arn:aws:dynamodb:([^:]+):")
+		region = workflows_common.extract_region_from_arn(arn)
 	end
 	-- fallback to env / default
-	region = region or os.getenv("AWS_REGION") or os.getenv("AWS_DEFAULT_REGION") or "us-east-1"
+	region = region or workflows_common.extract_region_from_arn("", nil)
 
-	local url = string.format(
-		"https://%s.console.aws.amazon.com/dynamodbv2/home?region=%s#item-explorer?maximize=true&table=%s",
-		region,
-		region,
-		common.url_encode(table_name)
-	)
+	local resource_path = string.format("#item-explorer?maximize=true&table=%s", common.url_encode(table_name))
+	local url = workflows_common.build_console_url("dynamodbv2", region, resource_path)
 
 	log.info("Opening AWS DynamoDB console for table " .. table_name)
-	local console_command = vim.fn.has("mac") == 1 and "open" or "xdg-open"
-	vim.fn.system({ console_command, url })
+	workflows_common.open_aws_console_url(url)
 end
 
 ---------------------------------------------------------------------------------------------------
@@ -227,55 +222,26 @@ end
 ------------------------------------- LOCAL FUNCTIONS ---------------------------------------------
 ---------------------------------------------------------------------------------------------------
 
---- Internal: Handle AWS operation errors consistently
+--- Internal: Handle AWS operation errors consistently (deprecated - use workflows_common.handle_aws_error)
 --- @param result table AWS operation result
 --- @param context string Context for error message
 --- @return string Formatted error message
 function M._handle_aws_error(result, context)
-	local err = result.error or "Unknown error"
-	err = err:gsub("[\r\n]+", " ") -- Normalize line breaks
-
-	log.error(context .. ": " .. err)
-	return err
+	return workflows_common.handle_aws_error(result, context)
 end
 
---- Internal: Create a floating window with standard configuration
+--- Internal: Create a floating window with standard configuration (deprecated - use workflows_common.create_floating_window)
 --- @param buf number Buffer to display
 --- @param title string Window title
 --- @return number Window handle
 function M._create_floating_window(buf, title)
-	local width = math.floor(vim.o.columns * 0.8)
-	local height = math.floor(vim.o.lines * 0.8)
-	local row = math.floor((vim.o.lines - height) / 2)
-	local col = math.floor((vim.o.columns - width) / 2)
-
-	local win_opts = {
-		relative = "editor",
-		width = width,
-		height = height,
-		row = row,
-		col = col,
-		style = "minimal",
-		border = "rounded",
-	}
-
-	if title then
-		win_opts.title = " " .. title .. " "
-		win_opts.title_pos = "center"
-	end
-
-	return vim.api.nvim_open_win(buf, true, win_opts)
+	return workflows_common.create_floating_window(buf, title)
 end
 
---- Internal: Close all windows showing a buffer
+--- Internal: Close all windows showing a buffer (deprecated - use workflows_common.close_form_windows)
 --- @param buf number Buffer to close windows for
 function M._close_form_windows(buf)
-	vim.api.nvim_set_option_value("modified", false, { buf = buf })
-	for _, win in ipairs(vim.api.nvim_list_wins()) do
-		if vim.api.nvim_win_get_buf(win) == buf then
-			vim.api.nvim_win_close(win, true)
-		end
-	end
+	workflows_common.close_form_windows(buf)
 end
 
 --- Internal: Append items to result buffer
@@ -373,21 +339,11 @@ function M._parse_form_and_scan_dynamodb(table_name)
 	return M._create_form_handler(table_name, "scan")
 end
 
---- Internal: Parse form sections from buffer content
+--- Internal: Parse form sections from buffer content (deprecated - use workflows_common.parse_form_sections)
 --- @param content table Array of lines from form buffer
 --- @return table sections Parsed form sections
 function M._parse_form_sections(content)
-	local current, sections = "", {}
-	for _, l in ipairs(content) do
-		if l:match("^%[.+%]") then
-			current = l
-			sections[current] = {}
-		elseif not l:match("^%-%-") then -- ignore comments
-			table.insert(sections[current] or {}, l)
-		end
-	end
-	log.debug("SECTIONS", { sections = sections })
-	return sections
+	return workflows_common.parse_form_sections(content, { "--" })
 end
 
 --- Internal: Parse attribute names from form lines

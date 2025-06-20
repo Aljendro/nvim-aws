@@ -1,6 +1,5 @@
 require("nvim-aws").setup()
 local stub = require("luassert.stub")
-local log = require("nvim-aws.utilities.log")
 
 describe("nvim-aws.workflows.logs.utility", function()
 	local utility = require("nvim-aws.workflows.logs.utility")
@@ -23,9 +22,9 @@ describe("nvim-aws.workflows.logs.utility", function()
 		end
 		assert.is_truthy(filter_buf)
 		local lines = vim.api.nvim_buf_get_lines(filter_buf, 0, 3, false)
-		assert.equals("# AWS CloudWatch Logs Filter Form", lines[1])
-		assert.equals("# Log Group: mygroup", lines[2])
-		assert.equals("# Stream: mystream", lines[3])
+		assert.equals("-- AWS CloudWatch Logs Filter Form", lines[1])
+		assert.equals("-- Log Group: mygroup", lines[2])
+		assert.equals("-- Stream: mystream", lines[3])
 	end)
 
 	it("open_filter_form and query logs writes markers and events correctly", function()
