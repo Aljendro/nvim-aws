@@ -569,7 +569,7 @@ function M._generate_form_template(table_name, operation_type, existing_query)
 				"EXPRESSION ATTRIBUTE VALUES",
 			},
 			default_content = {
-				["KEY CONDITION EXPRESSION"] = "#n1 = :v1",
+				["KEY CONDITION EXPRESSION"] = "",
 			},
 		},
 		scan = {
