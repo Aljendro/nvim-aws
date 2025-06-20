@@ -22,3 +22,7 @@ end, {})
 vim.api.nvim_create_user_command("AWSSQS", function()
 	require("nvim-aws.workflows.sqs.main").start()
 end, {})
+
+vim.api.nvim_create_user_command("AWS", function()
+	require("nvim-aws.workflows.selector").start()
+end, {})
