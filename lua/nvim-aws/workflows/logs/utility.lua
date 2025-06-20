@@ -90,9 +90,22 @@ function M.open_filter_form(log_group, log_stream)
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
 	log.debug("Set filter form content with " .. #lines .. " lines")
 
-	vim.cmd("tabnew")
-	vim.api.nvim_win_set_buf(0, buf)
-	log.debug("Opened filter form in new tab")
+	-- Open filter form in floating window
+	local width = math.floor(vim.o.columns * 0.8)
+	local height = math.floor(vim.o.lines * 0.8)
+	local row = math.floor((vim.o.lines - height) / 2)
+	local col = math.floor((vim.o.columns - width) / 2)
+	local win_opts = {
+		relative = "editor",
+		width = width,
+		height = height,
+		row = row,
+		col = col,
+		style = "minimal",
+		border = "rounded",
+	}
+	vim.api.nvim_open_win(buf, true, win_opts)
+	log.debug("Opened filter form in floating window")
 
 	vim.api.nvim_create_autocmd("BufWriteCmd", {
 		buffer = buf,
@@ -115,9 +128,9 @@ M.FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 --- @return function Callback function for the BufWriteCmd autocmd
 function M._parse_form_and_query_logs(log_group, log_stream)
 	return function(ev)
-		local result_buf = workflows_common.gen_result_buffer()
-
 		local form_values = M._parse_form(ev.buf)
+		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
+		vim.api.nvim_buf_delete(ev.buf, { force = true })
 
 		local params = {
 			logGroupName = log_group.logGroupName,
@@ -130,6 +143,7 @@ function M._parse_form_and_query_logs(log_group, log_stream)
 			params.logStreamNames = { log_stream.logStreamName }
 		end
 
+		local result_buf = workflows_common.gen_result_buffer()
 		local success = M._query_logs(result_buf, params)
 		if not success then
 			return -- Error already handled in fetch_all_log_events
@@ -138,9 +152,6 @@ function M._parse_form_and_query_logs(log_group, log_stream)
 		vim.keymap.set("n", "gl", function()
 			M._extend_query(result_buf, params)
 		end, { buffer = result_buf, desc = "Extend logs at cursor line" })
-
-		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
-		vim.api.nvim_buf_delete(ev.buf, { force = true })
 
 		return params
 	end
