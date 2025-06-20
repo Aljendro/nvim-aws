@@ -1,5 +1,4 @@
 local common = require("nvim-aws.utilities.common")
-local default_utility = require("nvim-aws.workflows.default.utility")
 local workflows_common = require("nvim-aws.workflows.common")
 local logs = require("nvim-aws.autogen_wrappers.logs")
 local log = require("nvim-aws.utilities.log")
@@ -14,36 +13,26 @@ local M = {}
 --- @param log_group  { logGroupName: string, logGroupArn: string }
 --- @param log_stream { logStreamName: string }
 function M.open_aws_console_stream_link(log_group, log_stream)
-	local region = log_group.logGroupArn:match("arn:aws:logs:([^:]+)")
+	local region = workflows_common.extract_region_from_arn(log_group.logGroupArn)
 	local encoded_group = common.url_encode(log_group.logGroupName)
 	local encoded_stream = common.url_encode(log_stream.logStreamName)
-	local url = string.format(
-		"https://%s.console.aws.amazon.com/cloudwatch/home?region=%s#logsV2:log-groups/log-group/%s/log-events/%s",
-		region,
-		region,
-		encoded_group,
-		encoded_stream
-	)
+	local resource_path = string.format("#logsV2:log-groups/log-group/%s/log-events/%s", encoded_group, encoded_stream)
+	local url = workflows_common.build_console_url("cloudwatch", region, resource_path)
 
 	log.info("Opening AWS CloudWatch console for " .. log_group.logGroupName .. "/" .. log_stream.logStreamName)
-	vim.fn.system({ "open", url }) -- macOS; adjust for other OS if you add support later
+	workflows_common.open_aws_console_url(url)
 end
 
--- use this as an example
 --- Open the AWS console link for the log group
 --- @param log_group { logGroupName: string, logGroupArn: string }
 function M.open_aws_console_link(log_group)
-	local region = log_group.logGroupArn:match("arn:aws:logs:([^:]+)")
+	local region = workflows_common.extract_region_from_arn(log_group.logGroupArn)
 	local encoded_name = common.url_encode(log_group.logGroupName)
-	local url = string.format(
-		"https://%s.console.aws.amazon.com/cloudwatch/home?region=%s#logsV2:log-groups/log-group/%s",
-		region,
-		region,
-		encoded_name
-	)
+	local resource_path = string.format("#logsV2:log-groups/log-group/%s", encoded_name)
+	local url = workflows_common.build_console_url("cloudwatch", region, resource_path)
 
 	log.info("Opening AWS CloudWatch console for " .. log_group.logGroupName)
-	vim.fn.system({ "open", url }) -- For macOS
+	workflows_common.open_aws_console_url(url)
 end
 
 --- Open a form buffer for filtering logs
@@ -56,61 +45,39 @@ function M.open_filter_form(log_group, log_stream)
 			.. (log_stream and (", stream: " .. log_stream.logStreamName) or ", all streams")
 	)
 
-	-- Create a new buffer for the filter form
-	local buf = vim.api.nvim_create_buf(false, true)
-	log.debug("Created filter form buffer: " .. buf)
-
-	vim.api.nvim_buf_set_name(buf, "aws-logs-filter-form-" .. default_utility.generate_uuid())
-	vim.api.nvim_set_option_value("filetype", "awslogsfilter", { buf = buf })
-	vim.api.nvim_set_option_value("buftype", "acwrite", { buf = buf })
-
 	local stream_info = log_stream and ("Stream: " .. log_stream.logStreamName) or "All streams"
 	log.debug("Filter form stream info: " .. stream_info)
 
 	local lines = {
-		"# AWS CloudWatch Logs Filter Form",
-		"# Log Group: " .. log_group.logGroupName,
-		"# " .. stream_info,
-		"# Save this buffer with :w to execute the filter",
-		"#",
+		"-- AWS CloudWatch Logs Filter Form",
+		"-- Log Group: " .. log_group.logGroupName,
+		"-- " .. stream_info,
+		"-- Save this buffer with :w to execute the filter",
+		"--",
 		"[FILTER PATTERN]",
-		"# Enter your CloudWatch Logs filter pattern here",
+		"-- Enter your CloudWatch Logs filter pattern here",
 		"",
 		"[RELATIVE TIME]",
-		"# Format: 30m, 2h, 1d (minutes, hours, days)",
+		"-- Format: 30m, 2h, 1d (minutes, hours, days)",
 		"",
 		"[SPECIFIC TIME RANGE]",
-		"# Start time (Parses local format: 2025-01-01T00:00:00)",
-		"# " .. os.date("%Y-%m-%dT%H:%M:%S", os.time() - 3600), -- 1 hour ago
+		"-- Start time (Parses local format: 2025-01-01T00:00:00)",
+		"-- " .. os.date("%Y-%m-%dT%H:%M:%S", os.time() - 3600), -- 1 hour ago
 		"",
-		"# End time (Parses local format: 2025-01-01T00:00:00)",
-		"# " .. os.date("%Y-%m-%dT%H:%M:%S"),
+		"-- End time (Parses local format: 2025-01-01T00:00:00)",
+		"-- " .. os.date("%Y-%m-%dT%H:%M:%S"),
 	}
 
-	vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
-	log.debug("Set filter form content with " .. #lines .. " lines")
+	-- Create form buffer using shared utility
+	local buf = workflows_common.create_form_buffer("aws-logs-filter-form", lines, "awslogsfilter")
+	log.debug("Created filter form buffer: " .. buf)
 
-	-- Open filter form in floating window
-	local width = math.floor(vim.o.columns * 0.8)
-	local height = math.floor(vim.o.lines * 0.8)
-	local row = math.floor((vim.o.lines - height) / 2)
-	local col = math.floor((vim.o.columns - width) / 2)
-	local win_opts = {
-		relative = "editor",
-		width = width,
-		height = height,
-		row = row,
-		col = col,
-		style = "minimal",
-		border = "rounded",
-	}
-	vim.api.nvim_open_win(buf, true, win_opts)
+	-- Open filter form in floating window using shared utility
+	workflows_common.create_floating_window(buf, "AWS CloudWatch Logs Filter")
 	log.debug("Opened filter form in floating window")
 
-	vim.api.nvim_create_autocmd("BufWriteCmd", {
-		buffer = buf,
-		callback = M._parse_form_and_query_logs(log_group, log_stream),
-	})
+	-- Setup form submission using shared utility
+	workflows_common.setup_form_autocmd(buf, M._parse_form_and_query_logs(log_group, log_stream))
 	log.debug("Registered BufWriteCmd autocmd for buffer " .. buf)
 end
 
@@ -129,8 +96,7 @@ M.FETCH_LENGTH_TIME_IN_MS = 600000 -- 10 minutes
 function M._parse_form_and_query_logs(log_group, log_stream)
 	return function(ev)
 		local form_values = M._parse_form(ev.buf)
-		vim.api.nvim_set_option_value("modified", false, { buf = ev.buf })
-		vim.api.nvim_buf_delete(ev.buf, { force = true })
+		workflows_common.close_form_windows(ev.buf)
 
 		local params = {
 			logGroupName = log_group.logGroupName,
@@ -169,7 +135,6 @@ end
 ---   - startTime: number - Start time in Unix milliseconds
 ---   - endTime: number - End time in Unix milliseconds
 function M._parse_form(form_buffer)
-	-- Parse the form
 	local form_values = {
 		filterPattern = "",
 		startTime = "",
@@ -177,35 +142,31 @@ function M._parse_form(form_buffer)
 	}
 
 	local content = vim.api.nvim_buf_get_lines(form_buffer, 0, -1, false)
+	local sections = workflows_common.parse_form_sections(content, { "--" })
 
-	local current_section = ""
-	for _, line in ipairs(content) do
-		-- Skip comments and empty lines
-		if not line:match("^#") and line:match("%S") then
-			-- Check for section headers
-			if line:match("%[.+%]") then
-				current_section = line
-			elseif current_section == "[FILTER PATTERN]" then
-				if line ~= "" then
-					form_values.filterPattern = line
-				end
-			elseif current_section == "[RELATIVE TIME]" then
-				if line ~= "" then
-					local now_ms = os.time() * 1000
-					local start_time_ms = common.parse_relative_time(line, now_ms)
+	-- Extract filter pattern
+	form_values.filterPattern = workflows_common.extract_section_content(sections, "[FILTER PATTERN]")
 
-					form_values.startTime = start_time_ms
-					form_values.endTime = now_ms
-				end
-			elseif current_section == "[SPECIFIC TIME RANGE]" then
-				if form_values.startTime == "" and line ~= "" then
-					local start_time_ms = common.local_timestamp_str_to_unix_ms(line)
-					form_values.startTime = start_time_ms
-					form_values.endTime = os.time() * 1000
-				elseif form_values.endTime == "" and line ~= "" then
-					local end_time_ms = common.local_timestamp_str_to_unix_ms(line)
-					form_values.endTime = end_time_ms
-				end
+	-- Handle relative time
+	local relative_time = workflows_common.extract_section_content(sections, "[RELATIVE TIME]")
+	if relative_time ~= "" then
+		local now_ms = os.time() * 1000
+		local start_time_ms = common.parse_relative_time(relative_time, now_ms)
+		form_values.startTime = start_time_ms
+		form_values.endTime = now_ms
+	end
+
+	-- Handle specific time range
+	local time_range_lines = sections["[SPECIFIC TIME RANGE]"] or {}
+	for _, line in ipairs(time_range_lines) do
+		if line ~= "" then
+			if form_values.startTime == "" then
+				local start_time_ms = common.local_timestamp_str_to_unix_ms(line)
+				form_values.startTime = start_time_ms
+				form_values.endTime = os.time() * 1000
+			elseif form_values.endTime == "" then
+				local end_time_ms = common.local_timestamp_str_to_unix_ms(line)
+				form_values.endTime = end_time_ms
 			end
 		end
 	end
@@ -236,8 +197,11 @@ function M._query_logs(result_buf, params)
 		end
 
 		local res = logs.filter_log_events(request_params)
-		if not (res and res.success) then
-			workflows_common.append_buffer(result_buf, { "Error fetching logs: " .. (res and res.error or "unknown") })
+		if not workflows_common.check_aws_success(res, "Error fetching logs") then
+			workflows_common.append_buffer(
+				result_buf,
+				{ "Error fetching logs: " .. workflows_common.handle_aws_error(res, "Logs query") }
+			)
 			return false
 		end
 
@@ -317,8 +281,8 @@ function M._extend_query(result_buf, params)
 
 	-- 3 loop through pages
 	local res = logs.filter_log_events(rq)
-	if not (res and res.success) then
-		local error_msg = "Error fetching logs: " .. (res and res.error or "unknown")
+	if not workflows_common.check_aws_success(res, "Error extending logs") then
+		local error_msg = "Error fetching logs: " .. workflows_common.handle_aws_error(res, "Logs extend")
 		log.debug(string.format("[extend_fetch] %s", error_msg))
 		workflows_common.append_buffer(result_buf, { error_msg })
 		return
