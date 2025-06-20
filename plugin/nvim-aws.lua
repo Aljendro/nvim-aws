@@ -8,7 +8,7 @@ vim.api.nvim_create_user_command("AWSLogs", function(opts)
 end, { nargs = "?" })
 
 vim.api.nvim_create_user_command("AWSDynamodb", function()
-	require("nvim-aws.workflows.dynamodb").start()
+	require("nvim-aws.workflows.dynamodb.main").start()
 end, {})
 
 vim.api.nvim_create_user_command("AWSDynamodbHistory", function()
