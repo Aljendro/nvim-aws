@@ -18,3 +18,7 @@ end, {})
 vim.api.nvim_create_user_command("AWSS3", function()
 	require("nvim-aws.workflows.s3").start()
 end, {})
+
+vim.api.nvim_create_user_command("AWSSQS", function()
+	require("nvim-aws.workflows.sqs.main").start()
+end, {})
