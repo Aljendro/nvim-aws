@@ -51,6 +51,29 @@ require('nvim-aws').setup({
 
 Run `:help nvim-aws` for the complete command list.
 
+## Development
+
+### Regenerating Auto-generated Wrappers
+
+The plugin includes auto-generated thin wrappers around AWS CLI services. To regenerate these wrappers:
+
+1. Set up Python virtual environment:
+   ```bash
+   cd codegen
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -e .
+   ```
+
+2. Run the code generation script:
+   ```bash
+   python src/extract_all_services_cli.py
+   ```
+
+This will regenerate all Lua wrappers in `lua/nvim-aws/autogen_wrappers/` and their corresponding tests in `lua/spec/nvim-aws/autogen_wrappers/`.
+
+**Requirements**: Python 3.13+, AWS CLI installed and configured
+
 ## Contributing
 
 Pull requests and issues are welcome.  
