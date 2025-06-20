@@ -24,10 +24,7 @@ function M.display_messages(result_buf, messages, queue)
 		table.insert(lines, "  Receipt Handle: " .. (message.ReceiptHandle or "N/A"))
 
 		local body = message.Body or ""
-		if #body > 200 then
-			body = body:sub(1, 200) .. "... (truncated)"
-		end
-		table.insert(lines, "  Body: " .. body)
+		table.insert(lines, "  Body: " .. body:gsub("[\r\n]+", " "))
 
 		if message.Attributes then
 			table.insert(lines, "  Attributes:")
@@ -143,7 +140,7 @@ function M.receive_more_messages(result_buf)
 		QueueUrl = queue.url,
 		MaxNumberOfMessages = 10,
 		WaitTimeSeconds = 1,
-		VisibilityTimeoutSeconds = 30,
+		VisibilityTimeout = 30,
 		MessageAttributeNames = { "All" },
 		AttributeNames = { "All" },
 	}
@@ -311,4 +308,3 @@ function M.show_queue_attributes(queue)
 end
 
 return M
-

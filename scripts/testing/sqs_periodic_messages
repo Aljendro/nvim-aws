@@ -1,0 +1,106 @@
+#!/bin/bash
+
+# Configuration
+INTERVAL_SECONDS=${1:-5}
+DURATION_MINUTES=${2:-60}
+QUEUE_NAME=${3:-"test-queue-$(date +%Y%m%d%H%M%S)"}
+MESSAGE_COUNT=${4:-100}
+
+echo "Starting SQS Message Generator"
+echo "AWS Profile: $AWS_PROFILE"
+echo "Interval: $INTERVAL_SECONDS seconds"
+echo "Duration: $DURATION_MINUTES minutes"
+echo "Queue Name: $QUEUE_NAME"
+echo "Max Messages: $MESSAGE_COUNT"
+
+# Create queue if it doesn't exist
+echo "Creating SQS queue $QUEUE_NAME..."
+QUEUE_URL=$(aws sqs create-queue --queue-name "$QUEUE_NAME" --query 'QueueUrl' --output text)
+
+if [ $? -ne 0 ]; then
+  echo "Failed to create queue. Trying to get existing queue..."
+  QUEUE_URL=$(aws sqs get-queue-url --queue-name "$QUEUE_NAME" --query 'QueueUrl' --output text)
+fi
+
+echo "Queue URL: $QUEUE_URL"
+
+# Set queue attributes for testing
+echo "Setting queue attributes..."
+aws sqs set-queue-attributes --queue-url "$QUEUE_URL" --attributes '{
+  "MessageRetentionPeriod": "86400",
+  "VisibilityTimeout": "30"
+}'
+
+# Calculate end time
+END_TIME=$(($(date +%s) + DURATION_MINUTES * 60))
+
+# Message types for random selection
+MESSAGE_TYPES=("order" "user_action" "system_event" "notification")
+PRIORITIES=("high" "medium" "low")
+STATUSES=("pending" "processing" "completed" "failed")
+
+# Generate and send messages
+MESSAGE_COUNTER=0
+while [ $(date +%s) -lt $END_TIME ] && [ $MESSAGE_COUNTER -lt $MESSAGE_COUNT ]; do
+  # Generate random message content
+  MESSAGE_TYPE=${MESSAGE_TYPES[$RANDOM % ${#MESSAGE_TYPES[@]}]}
+  PRIORITY=${PRIORITIES[$RANDOM % ${#PRIORITIES[@]}]}
+  STATUS=${STATUSES[$RANDOM % ${#STATUSES[@]}]}
+  TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+  USER_ID=$((RANDOM % 1000 + 1))
+
+  # Create JSON message body
+  MESSAGE_BODY=$(
+    cat <<EOF
+{
+  "id": "$MESSAGE_COUNTER",
+  "type": "$MESSAGE_TYPE",
+  "priority": "$PRIORITY",
+  "status": "$STATUS",
+  "timestamp": "$TIMESTAMP",
+  "user_id": $USER_ID,
+  "data": {
+    "action": "${MESSAGE_TYPE}_action_$RANDOM",
+    "value": $((RANDOM % 100)),
+    "description": "Test message generated at $TIMESTAMP"
+  }
+}
+EOF
+  )
+
+  # Send message to SQS
+  RESPONSE=$(aws sqs send-message \
+    --queue-url "$QUEUE_URL" \
+    --message-body "$MESSAGE_BODY" \
+    --message-attributes '{
+      "Priority": {
+        "StringValue": "'$PRIORITY'",
+        "DataType": "String"
+      },
+      "MessageType": {
+        "StringValue": "'$MESSAGE_TYPE'",
+        "DataType": "String"
+      }
+    }')
+
+  if [ $? -eq 0 ]; then
+    MESSAGE_ID=$(echo $RESPONSE | grep -o 'MessageId": "[^"]*' | cut -d'"' -f3)
+    echo "Message $MESSAGE_COUNTER sent successfully (ID: $MESSAGE_ID) - Type: $MESSAGE_TYPE, Priority: $PRIORITY"
+  else
+    echo "Failed to send message $MESSAGE_COUNTER"
+  fi
+
+  MESSAGE_COUNTER=$((MESSAGE_COUNTER + 1))
+  sleep $INTERVAL_SECONDS
+done
+
+echo "Message generation completed"
+echo "Total messages sent: $MESSAGE_COUNTER"
+echo "Queue URL: $QUEUE_URL"
+echo ""
+echo "To view messages, use:"
+echo "aws sqs receive-message --queue-url \"$QUEUE_URL\" --max-number-of-messages 10"
+echo ""
+echo "To delete the queue when done testing:"
+echo "aws sqs delete-queue --queue-url \"$QUEUE_URL\""
+

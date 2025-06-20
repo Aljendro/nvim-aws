@@ -64,7 +64,7 @@ function M.handle_receive_messages(queue)
 		QueueUrl = queue.url,
 		MaxNumberOfMessages = 10,
 		WaitTimeSeconds = 1,
-		VisibilityTimeoutSeconds = 30,
+		VisibilityTimeout = 30,
 		MessageAttributeNames = { "All" },
 		AttributeNames = { "All" },
 	}
