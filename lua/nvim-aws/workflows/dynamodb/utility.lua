@@ -235,7 +235,6 @@ function M._handle_aws_error(result, context)
 	err = err:gsub("[\r\n]+", " ") -- Normalize line breaks
 
 	log.error(context .. ": " .. err)
-	vim.notify("Error: " .. err, vim.log.levels.ERROR)
 	return err
 end
 
@@ -649,10 +648,7 @@ function M._open_history_browser(filter_table_name)
 	local history = M._search_history(nil, filter_table_name, nil)
 
 	if #history == 0 then
-		vim.notify(
-			"No query history found" .. (filter_table_name and (" for table " .. filter_table_name) or ""),
-			vim.log.levels.INFO
-		)
+		log.info("No query history found" .. (filter_table_name and (" for table " .. filter_table_name) or ""))
 		return
 	end
 
@@ -793,11 +789,11 @@ function M._delete_history_entry_direct(entry)
 	local confirm = vim.fn.confirm("Delete query '" .. name .. "'?", "&Yes\n&No", 2)
 	if confirm == 1 then
 		if M._delete_from_history(entry.id) then
-			vim.notify("Deleted query: " .. name, vim.log.levels.INFO)
+			log.info("Deleted query: " .. name)
 			-- Reopen the browser to refresh
 			M._open_history_browser(nil)
 		else
-			vim.notify("Failed to delete query", vim.log.levels.ERROR)
+			log.error("Failed to delete query")
 		end
 	end
 end
@@ -911,7 +907,6 @@ function M._save_edited_item(edit_buf, result_buf, table_name, line_num)
 	local ok, edited_item = pcall(vim.fn.json_decode, content)
 	if not ok or type(edited_item) ~= "table" then
 		log.error("Invalid JSON format in edited item")
-		vim.notify("Error: Invalid JSON format", vim.log.levels.ERROR)
 		return
 	end
 
@@ -935,7 +930,6 @@ function M._save_edited_item(edit_buf, result_buf, table_name, line_num)
 	M._close_form_windows(edit_buf)
 
 	log.info("Item updated successfully in DynamoDB")
-	vim.notify("Item updated successfully", vim.log.levels.INFO)
 end
 
 --- Internal: Pretty print JSON for better editing
