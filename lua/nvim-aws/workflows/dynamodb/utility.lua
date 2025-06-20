@@ -1,3 +1,4 @@
+local config = require("nvim-aws").config
 local workflows_common = require("nvim-aws.workflows.common")
 local log = require("nvim-aws.utilities.log")
 local dynamodb = require("nvim-aws.autogen_wrappers.dynamodb")
@@ -7,7 +8,7 @@ local common = require("nvim-aws.utilities.common")
 local M = {}
 
 -- History configuration
-local HISTORY_FILE = vim.fn.stdpath("data") .. "/nvim-aws-dynamodb-history.json"
+local HISTORY_FILE = config.dynamodb.history_file
 
 ---------------------------------------------------------------------------------------------------
 ------------------------------------ EXPORT FUNCTIONS ---------------------------------------------
